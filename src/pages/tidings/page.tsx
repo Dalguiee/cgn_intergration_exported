@@ -1,8 +1,15 @@
+import MainHeader from '@/layouts/mainHeader';
+import MainFooter from '@/layouts/mainFooter';
+import TidingsHeader from '@/components/tidings/header';
+
 const TidingsPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-base-black">
+    <section className='flex h-screen flex-col'>
+      <MainHeader />
+      <TidingsHeader />
       TidingsPage
-    </div>
+      <MainFooter />
+    </section>
   );
 };
 

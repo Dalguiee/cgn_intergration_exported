@@ -1,0 +1,25 @@
+$primary50: #fefaf6;
+$primary100: #f9e8d8;
+$primary200: #ffc8a0;
+$primary300: #ffb178;
+$primary400: #ff8933;
+$primary500: #ff6b00;
+$primary600: #cc5600;
+$primary700: #994000;
+$primary800: #662b00;
+$primary900: #331500;
+
+$grey50: #f8f8f8;
+$grey100: #ebebe9;
+$grey200: #d8d8d5;
+$grey300: #bfbfba;
+$grey400: #8b8b87;
+$grey500: #6e6e69;
+$grey600: #585854;
+
+@mixin Regular18() {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  line-height: 28px;
+}
