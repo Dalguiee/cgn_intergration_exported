@@ -1,7 +1,7 @@
 const MainFooter = () => {
   return (
-    <footer className='flex h-296 w-full items-center justify-center'>
-      <div className={`justify-place-items-center flex h-96 items-center`}>
+    <footer className='flex h-296 w-full items-center justify-center bg-white-solid'>
+      <div className={`flex h-96 w-1560 items-center justify-center`}>
         <div className='flex h-full w-180 items-start justify-start max-lg:absolute max-md:hidden'>
           <img
             src='/public/images/logo/footer_logo.png'
@@ -53,15 +53,19 @@ const MainFooter = () => {
               <div
                 className={`ml-32 flex w-217 items-center justify-between rounded-4 border-1 border-grey-200 px-12 py-12`}
               >
-                <input
-                  className={`text-regular14 text-grey-400`}
-                  placeholder='placeholder'
-                />
-
-                <img src='/public/images/icon/arrow_under_grey900.svg' alt='' />
+                <span className={`text-regular14 text-grey-400`}>
+                  placeholder
+                </span>
+                <button>
+                  <img
+                    src='/public/images/icon/arrow_under_grey900.svg'
+                    alt=''
+                  />
+                </button>
               </div>
             </div>
           </div>
+
           <div className={`flex items-center justify-center gap-8`}>
             <span className={`text-regular14 text-grey-900`}>
               서울특별시 용산구 서빙고로 269(서빙고동)

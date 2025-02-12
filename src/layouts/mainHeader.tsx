@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const TopHeader = () => {
   const [langActive, setLangActive] = useState(false); // 언어 선택 활성화 상태
   return (
-    <div
-      className={`flex h-48 w-full items-center justify-end gap-10 px-180 py-0`}
-    >
+    <div className={`flex h-48 w-1560 items-center justify-end gap-10`}>
       <button>
         <p className='text-regular14 text-grey-400'>퐁당</p>
       </button>
@@ -32,7 +30,7 @@ const TopHeader = () => {
   );
 };
 
-const BottomHeader = () => {
+const BottomHeader = ({ depthActive, setDepthActive }) => {
   const navigate = useNavigate();
   const centerMenu = [
     {
@@ -59,7 +57,7 @@ const BottomHeader = () => {
     },
     {
       text: '소식',
-      link: '/support',
+      link: '/tidings',
     },
     {
       text: '참여',
@@ -70,10 +68,9 @@ const BottomHeader = () => {
       link: '/support',
     },
   ];
-  const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
 
   return (
-    <div className={`relative w-full`}>
+    <div className={`relative w-1560`}>
       <div className={`flex h-80 w-full items-center justify-between`}>
         <button className='h-36 w-76'>
           <img
@@ -88,9 +85,6 @@ const BottomHeader = () => {
           onMouseEnter={() => {
             setDepthActive(true);
           }}
-          onMouseLeave={() => {
-            setDepthActive(false);
-          }}
           className={`flex items-center justify-between gap-88`}
         >
           {centerMenu.map((menu, index) => (
@@ -104,7 +98,7 @@ const BottomHeader = () => {
             </button>
           ))}
         </div>
-        <div>
+        <div className={`flex items-center justify-center`}>
           <button
             className={`h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900`}
           >
@@ -117,7 +111,7 @@ const BottomHeader = () => {
           </button>
         </div>
       </div>
-      <DepthSubMenu depthActive={depthActive} />
+      <DepthSubMenu setDepthActive={setDepthActive} depthActive={depthActive} />
     </div>
   );
 };
@@ -131,13 +125,18 @@ const DepthSubMenu = ({ depthActive }) => {
 };
 
 const MainHeader = () => {
+  const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
+
   return (
     <header
+      onMouseLeave={() => {
+        setDepthActive(false);
+      }}
       className={`flex h-128 w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat`}
       data-comment='메인헤더'
     >
       <TopHeader />
-      <BottomHeader />
+      <BottomHeader setDepthActive={setDepthActive} depthActive={depthActive} />
     </header>
   );
 };
