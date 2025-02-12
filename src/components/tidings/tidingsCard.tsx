@@ -8,7 +8,7 @@ const TidingsCard = ({ item }) => {
       onClick={() => {
         navigator('/tidings/detail', { state: item });
       }}
-      className={`mt-16 flex h-396 w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
+      className={`mt-16 flex min-h-396 w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
     >
       <img
         className='h-240 w-352 rounded-8'
