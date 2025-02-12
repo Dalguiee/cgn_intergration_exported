@@ -1,5 +1,3 @@
-import { twMerge } from 'tailwind-merge';
-
 const pcTagTypes = [
   {
     id: 0,
