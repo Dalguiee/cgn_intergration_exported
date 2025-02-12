@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const TopHeader = () => {
@@ -75,9 +74,7 @@ const BottomHeader = () => {
 
   return (
     <div className={`relative w-full`}>
-      <div
-        className={`flex h-80 w-full items-center justify-between px-180 py-0`}
-      >
+      <div className={`flex h-80 w-full items-center justify-between`}>
         <button className='h-36 w-76'>
           <img
             className='h-full w-full'
@@ -120,10 +117,16 @@ const BottomHeader = () => {
           </button>
         </div>
       </div>
-      <div
-        className={`absolute ${depthActive ? '' : 'hidden'} top-80 h-276 w-full bg-[url('/public/images/bg/header_2depth.svg')]`}
-      ></div>
+      <DepthSubMenu depthActive={depthActive} />
     </div>
+  );
+};
+
+const DepthSubMenu = ({ depthActive }) => {
+  return (
+    <div
+      className={`absolute ${depthActive ? '' : 'hidden'} top-80 h-276 w-full bg-[url('/public/images/bg/header_2depth.svg')]`}
+    ></div>
   );
 };
 

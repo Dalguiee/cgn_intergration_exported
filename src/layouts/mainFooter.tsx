@@ -1,9 +1,7 @@
 const MainFooter = () => {
   return (
-    <footer className='flex h-296 w-full items-center justify-center px-180'>
-      <div
-        className={`justify-place-items-center flex h-96 w-full items-center`}
-      >
+    <footer className='flex h-296 w-full items-center justify-center'>
+      <div className={`justify-place-items-center flex h-96 items-center`}>
         <div className='flex h-full w-180 items-start justify-start max-lg:absolute max-md:hidden'>
           <img
             src='/public/images/logo/footer_logo.png'
@@ -14,8 +12,8 @@ const MainFooter = () => {
           />
         </div>
 
-        <div className={`flex flex-col items-start justify-center`}>
-          <div className={`flex w-full justify-between`}>
+        <div className={`flex flex-col items-start justify-center gap-4`}>
+          <div className={`flex w-1380 justify-between`}>
             <div className={`flex h-48 gap-40`}>
               <button>
                 <span className={`text-bold14`}>공지사항</span>
@@ -35,25 +33,31 @@ const MainFooter = () => {
             </div>
             <div className={`flex items-center justify-center`}>
               <div className={`flex items-center justify-center gap-8`}>
-                <img
-                  src='/public/images/logo/pondang_logo_1.png'
-                  width='40px'
-                  height='40px'
-                  alt=''
-                />
-                <img
-                  src='/public/images/logo/youtube_logo_1.png'
-                  width='40px'
-                  height='40px'
-                  alt=''
-                />
+                <button>
+                  <img
+                    src='/public/images/logo/pondang_logo_1.png'
+                    width='40px'
+                    height='40px'
+                    alt=''
+                  />
+                </button>
+                <button>
+                  <img
+                    src='/public/images/logo/youtube_logo_1.png'
+                    width='40px'
+                    height='40px'
+                    alt=''
+                  />
+                </button>
               </div>
               <div
-                className={`ml-32 flex items-center justify-center rounded-4 border-1 border-grey-200 px-12 py-12`}
+                className={`ml-32 flex w-217 items-center justify-between rounded-4 border-1 border-grey-200 px-12 py-12`}
               >
-                <span className={`text-regular14 text-grey-400`}>
-                  placeholder
-                </span>
+                <input
+                  className={`text-regular14 text-grey-400`}
+                  placeholder='placeholder'
+                />
+
                 <img src='/public/images/icon/arrow_under_grey900.svg' alt='' />
               </div>
             </div>
