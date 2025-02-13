@@ -5,7 +5,6 @@ import Locator from '@/layouts/locator';
 const TidingsPage = () => {
   return (
     <section className='flex flex-col items-center justify-center'>
-      <Locator />
       <TidingsHeader />
       <TidingsMain />
     </section>

@@ -5,7 +5,9 @@ const Locator = () => {
   const [changedPathName, setChangedPathName] = useState([]);
   const location = useLocation();
   const pageData = location.pathname.split('/');
-  const navi = useNavigate();
+  const navigation = useNavigate();
+
+  console.log(location);
 
   useEffect(() => {
     let pathStack = '';
@@ -17,13 +19,19 @@ const Locator = () => {
           if (data === 'tidings') {
             pathBackup = data;
             data = '소식';
-            pathStack += 'tidings/';
+            pathStack = 'tidings/campaign';
+          }
+          if (data === 'campaign') {
+            pathBackup = data;
+            data = '캠페인 / 이벤트';
+            pathStack = 'tidings/campaign';
           }
           if (data === 'detail') {
-            pathBackup = data;
-            data = '자세히';
-            pathStack += 'detail/';
+            pathBackup = '';
+            data = '';
+            pathStack = '';
           }
+
           return { bPath: pathBackup, name: data, path: pathStack };
         })
       );
@@ -33,7 +41,11 @@ const Locator = () => {
   return (
     <section className='flex w-full items-center justify-center'>
       <div className={`flex w-1560 items-center justify-start gap-6`}>
-        <button>
+        <button
+          onClick={() => {
+            navigation('/');
+          }}
+        >
           <img src='/public/images/icon/home_locator_grey300.svg' alt='' />
         </button>
         {changedPathName.map((item, index) => {
@@ -44,7 +56,7 @@ const Locator = () => {
                 <button
                   className={`text-grey-400 ${item.bPath === changedPathName[changedPathName.length - 1].bPath ? 'text-grey-900' : ''} text-regular14`}
                   onClick={() => {
-                    navi(`/${item.path}`);
+                    navigation(`/${item.path}`);
                   }}
                 >
                   {item.name}

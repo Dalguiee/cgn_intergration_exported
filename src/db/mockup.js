@@ -1,3 +1,10 @@
+export const tidingsList = [
+  { id: 1, type: '진행중' },
+  { id: 2, type: '종료' },
+  { id: 3, type: '캠페인' },
+  { id: 4, type: '이벤트' },
+];
+
 export const tidingsMockup = [
   {
     id: 1,

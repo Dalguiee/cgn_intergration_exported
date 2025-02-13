@@ -1,23 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TidingsCard from './tidingsCard';
 // import { dataContext } from '@/contexts/Context';
 
 import { tidingsMockup } from '@/db/mockup';
+import { tidingsList } from '@/db/mockup';
+import TabBtn from '../common/tabBtn';
 
 const TidingsMain = () => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    setData(tidingsMockup);
+  }, []);
   // const { cardData } = React.useContext(dataContext);
   // console.log(cardData);
 
+  if (!data) return <></>;
   return (
-    <section className={`flex w-full items-center justify-center pb-160 pt-80`}>
-      <div
-        className={`flex w-1560 flex-wrap items-start justify-center gap-24`}
+    <>
+      <TabBtn category={tidingsList} setData={setData} />
+      <section
+        className={`flex w-full items-center justify-center pb-160 pt-80`}
       >
-        {tidingsMockup.map(item => (
-          <TidingsCard key={item.id} item={item} />
-        ))}
-      </div>
-    </section>
+        <div
+          className={`flex w-1560 flex-wrap items-start justify-center gap-24`}
+        >
+          {data?.map(item => <TidingsCard key={item.id} item={item} />)}
+        </div>
+      </section>
+    </>
   );
 };
 

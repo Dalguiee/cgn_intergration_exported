@@ -6,7 +6,6 @@ import React from 'react';
 const TidingsDetailPage = () => {
   return (
     <section className='flex flex-col items-center justify-center'>
-      <Locator />
       <TidingsHeader />
       <TidingsDetail />
     </section>

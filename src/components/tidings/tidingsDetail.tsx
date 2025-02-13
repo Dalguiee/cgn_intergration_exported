@@ -41,7 +41,7 @@ const TidingsDetail = () => {
     <section
       className={`flex w-full flex-col items-center justify-center pb-160 pt-40`}
     >
-      <div className='w-1200'>
+      <div className='w-full max-w-1200'>
         <div
           className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24`}
         >
@@ -112,6 +112,22 @@ const TidingsDetail = () => {
                 {afterData[0] ? afterData[0].end_date : ''}
               </span>
             </div>
+          </div>
+        </div>
+        <div
+          className={`flex w-full items-start justify-end max-md:justify-center`}
+        >
+          <div
+            className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500`}
+          >
+            <button
+              onClick={() => {
+                navi('/tidings/campaign');
+              }}
+              className={`text-bold24 text-white-solid`}
+            >
+              목록
+            </button>
           </div>
         </div>
       </div>
