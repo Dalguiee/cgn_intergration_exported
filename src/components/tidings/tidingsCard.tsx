@@ -9,10 +9,10 @@ const TidingsCard = ({ item }) => {
       onClick={() => {
         navigator('/tidings/campaign/detail', { state: item });
       }}
-      className={`mt-16 flex min-h-396 w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
+      className={`mt-16 flex min-h-396 max-w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
     >
       <img
-        className='h-240 w-352 rounded-8'
+        className='h-240 w-full max-w-352 rounded-8'
         src='/public/images/tidings/card_content_small.png'
         width={`352px`}
         height={`240px`}

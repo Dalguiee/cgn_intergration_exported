@@ -1,14 +1,14 @@
 const MainFooter = () => {
   return (
     <>
-      <footer className='flex h-296 w-full items-center justify-center bg-white-solid max-md:hidden'>
+      <footer className='flex h-296 w-full items-center justify-center bg-white-solid px-20 max-md:hidden'>
         <div
           className={`flex h-96 w-full max-w-1560 items-center justify-between`}
         >
-          <div className='flex h-full max-w-180 items-start justify-start max-lg:hidden max-md:hidden'>
+          <div className='flex h-full w-full max-w-180 items-start justify-start max-lg:hidden max-md:hidden'>
             <img
               src='/public/images/logo/footer_logo.png'
-              className='h-36 w-76'
+              className='w-76'
               width='76px'
               height='36px'
               alt=''

@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import TagIcon from '../common/tagBtn';
 
-import { tidingsMockup } from '@/db/mockup';
+import { campaignMockup } from '@/db/mockup';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -32,22 +32,24 @@ const TidingsDetail = () => {
   const detailData = location.state;
   const navi = useNavigate();
 
-  const beforeData = tidingsMockup.filter(item => item.id < detailData.id);
+  const beforeData = campaignMockup.filter(item => item.id < detailData.id);
   beforeData.sort((a, b) => b.id - a.id);
-  const afterData = tidingsMockup.filter(item => item.id > detailData.id);
+  const afterData = campaignMockup.filter(item => item.id > detailData.id);
 
   if (detailData.length === 0) return <></>;
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center pb-160 pt-40`}
+      className={`flex w-full flex-col items-center justify-center pb-160 pt-40 max-md:px-20`}
     >
       <div className='w-full max-w-1200'>
         <div
-          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24`}
+          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-md:flex-col max-md:items-start max-md:gap-20`}
         >
           <div className={`flex items-center justify-center gap-16`}>
             {detailData.tag.map((obj, key) => (
-              <TagIcon text={obj.text} mode={obj.mode} key={key} />
+              <div className={`max-md:hidden`}>
+                <TagIcon text={obj.text} mode={obj.mode} key={key} />
+              </div>
             ))}
             <span className={`text-bold24 text-grey-900`}>
               {detailData.detail_title}
@@ -77,7 +79,7 @@ const TidingsDetail = () => {
           >
             <button
               onClick={() => {
-                navi('/tidings/detail', { state: beforeData[0] });
+                navi('/tidings/campaign/detail', { state: beforeData[0] });
               }}
             >
               <span className={`text-bold16 text-grey-900`}>이전 글</span>
@@ -85,7 +87,7 @@ const TidingsDetail = () => {
                 {beforeData[0] ? beforeData[0].title : ''}
               </span>
             </button>
-            <span className={`text-regular14 text-grey-400`}>
+            <span className={`text-regular14 text-grey-400 max-md:hidden`}>
               {beforeData[0] ? beforeData[0].start_date : ''}~
               {beforeData[0] ? beforeData[0].end_date : ''}
             </span>
@@ -99,7 +101,7 @@ const TidingsDetail = () => {
             >
               <button
                 onClick={() => {
-                  navi('/tidings/detail', { state: afterData[0] });
+                  navi('/tidings/campaign/detail', { state: afterData[0] });
                 }}
               >
                 <span className={`text-bold16 text-grey-900`}>다음 글</span>
@@ -107,7 +109,7 @@ const TidingsDetail = () => {
                   {afterData[0] ? afterData[0].title : ''}
                 </span>
               </button>
-              <span className={`text-regular14 text-grey-400`}>
+              <span className={`text-regular14 text-grey-400 max-md:hidden`}>
                 {afterData[0] ? afterData[0].start_date : ''}~
                 {afterData[0] ? afterData[0].end_date : ''}
               </span>

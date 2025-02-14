@@ -1,30 +1,37 @@
-import { tidingsMockup } from '@/db/mockup';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const TabBtn = ({ category, setData }) => {
+const TabBtn = ({ category, setData, mockData }) => {
   const [highlight, setHighlight] = useState('');
+  const [defaultMock, setDefaultMock] = useState();
 
-  const filtering = selected => {
-    setHighlight(selected.id);
+  const location = useLocation();
+
+  useEffect(() => {
+    setDefaultMock(mockData);
+  }, [mockData, location]);
+
+  const filtering = selectedItem => {
+    setHighlight(selectedItem.id);
     setData(
-      tidingsMockup.filter(item => {
-        return item.tag.some(obj => obj.text === selected.type);
+      mockData.filter(item => {
+        return item.tag.some(obj => obj.id === selectedItem.id);
       })
     );
   };
 
-  const location = useLocation();
   const paramsSearch = new URLSearchParams(location.search);
   const paramsData = Object.fromEntries(paramsSearch);
-  console.log(paramsData);
 
+  if (category === '') return <></>;
   return (
-    <section className={`flex w-full items-center justify-center gap-8`}>
+    <section
+      className={`flex w-full flex-wrap items-center justify-center gap-8 max-md:px-20`}
+    >
       <button
         onClick={() => {
           setHighlight('');
-          setData(tidingsMockup);
+          setData(defaultMock ? defaultMock : mockData);
         }}
         className={`${highlight === '' ? 'border-primary-400 text-primary-500' : ''} text-regular16 h-48 w-120 rounded-999 border-1 border-grey-200 text-grey-300`}
       >

@@ -32,17 +32,25 @@ const TopHeader = () => {
   );
 };
 
-const BottomHeader = ({ centerMenu, setDepthActive, depthActive }) => {
+const BottomHeader = ({
+  centerMenu,
+  setDepthActive,
+  depthActive,
+  burger,
+  setBurger,
+}) => {
   const navigate = useNavigate();
 
   return (
     <div
-      className={`relative z-20 flex w-full max-w-1560 items-center justify-center max-md:w-full`}
+      className={`relative z-20 flex w-full max-w-1560 flex-col items-center justify-center max-md:h-64 max-md:w-full`}
     >
-      <div className={`flex h-80 w-full items-center justify-between`}>
+      <div
+        className={`flex h-80 w-full items-center justify-between max-md:h-full`}
+      >
         <button className='h-36 w-76'>
           <img
-            className='h-full w-full'
+            className={`${burger ? 'hidden' : ''} h-full w-full`}
             src={`/public/images/logo/main_logo.png`}
             alt=''
             width='36px'
@@ -53,7 +61,7 @@ const BottomHeader = ({ centerMenu, setDepthActive, depthActive }) => {
           onMouseEnter={() => {
             setDepthActive(true);
           }}
-          className={`max- absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-88 max-md:hidden`}
+          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-88 max-md:hidden`}
         >
           {centerMenu.map((menu, index) => (
             <div className={`relative flex items-center justify-center`}>
@@ -74,25 +82,58 @@ const BottomHeader = ({ centerMenu, setDepthActive, depthActive }) => {
                     key={key}
                     onClick={() => {}}
                   >
-                    <span className={`text-regular14 text-primary-100`}>
+                    <button
+                      onClick={() => {
+                        navigate(subMenu.link);
+                        setDepthActive(false);
+                      }}
+                      className={`text-regular14 text-primary-100`}
+                    >
                       {subMenu.text}
-                    </span>
+                    </button>
                   </button>
                 ))}
               </div>
             </div>
           ))}
         </div>
-        <div className={`flex items-center justify-center`}>
+        <div className={`flex items-center justify-center gap-8`}>
           <button
-            className={`h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900`}
+            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900 max-md:h-32`}
           >
             On-Air
           </button>
           <button
-            className={`text-regular14 ml-4 h-40 w-89 rounded-4 bg-primary-500 text-white-solid`}
+            className={`${burger ? 'hidden' : ''} text-regular14 h-40 w-89 rounded-4 bg-primary-500 text-white-solid max-md:h-32`}
           >
             후원하기
+          </button>
+          <div
+            className={`flex items-center justify-center gap-12 ${burger ? '' : 'hidden'}`}
+          >
+            <button className={`text-regular16 text-white-solid`}>KN</button>
+            <span className={`border-pirmary-100 h-16 w-1 border-l-2`}></span>
+            <button className={`text-regular16 text-white-solid`}>EN</button>
+          </div>
+          <button
+            onClick={() => {
+              setBurger(item => {
+                return !item;
+              });
+            }}
+            className={`hidden h-32 w-32 items-center justify-center px-6 max-md:block`}
+          >
+            <div className={`flex flex-col items-end justify-center gap-4`}>
+              <span
+                className={`w-full rounded-10 transition ${burger ? 'translate-y-3 rotate-[-45deg] transform border-white-solid' : ''} border-t-3 border-grey-900`}
+              ></span>
+              <span
+                className={`w-[50%] rounded-10 border-t-3 ${burger ? 'hidden' : ''} border-grey-900`}
+              ></span>
+              <span
+                className={`w-full rounded-10 border-t-3 ${burger ? 'translate-y-[-4px] rotate-[45deg] transform border-white-solid' : ''} border-grey-900`}
+              ></span>
+            </div>
           </button>
         </div>
       </div>
@@ -118,8 +159,61 @@ const DepthSubMenu = ({ depthActive, setDepthActive }) => {
   );
 };
 
+const MobileBottom = ({ burger }) => {
+  return (
+    <section
+      className={`flex items-center justify-center ${burger ? '' : 'hidden'} h-64 w-full gap-12`}
+    >
+      <button
+        className={`text-bold14 border-white-so flex h-40 w-174 items-center justify-center rounded-4 border-1 text-white-solid`}
+      >
+        퐁당
+      </button>
+      <button
+        className={`text-bold14 flex h-40 w-174 items-center justify-center rounded-4 bg-white-solid text-grey-900`}
+      >
+        나의 후원 보기
+      </button>
+    </section>
+  );
+};
+
+const BurgerSubMenu = ({ burger, centerMenu, setBurger }) => {
+  const navigate = useNavigate();
+  return (
+    <section
+      className={`justyfy-start fixed top-128 z-10 flex h-full w-full flex-col items-start gap-8 overflow-hidden bg-white-solid px-24 pt-16 md:hidden ${burger ? 'block' : 'hidden'}`}
+    >
+      {centerMenu.map(menu => (
+        <div>
+          <div className={`w-full py-14`}>
+            <span className={`text-bold18 text-grey-900`}>{menu.text}</span>
+          </div>
+          <div className={`flex flex-wrap items-center justify-start`}>
+            {menu.subMenu.map(subMenu => (
+              <div className={`[&:nth-child(1)]:text-bold14 h-32 w-115`}>
+                <button
+                  onClick={() => {
+                    navigate(subMenu.link);
+                    setBurger(false);
+                  }}
+                  className={`text-regular14 text-grey-600`}
+                >
+                  {subMenu.text}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+  );
+};
+
 const MainHeader = () => {
   const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
+  const [burger, setBurger] = useState(false);
+
   const centerMenu = [
     {
       key: 0,
@@ -186,11 +280,11 @@ const MainHeader = () => {
       subMenu: [
         {
           text: '캠페인/이벤트',
-          link: '/support',
+          link: '/tidings/campaign',
         },
         {
           text: '선교 스토리',
-          link: '/support',
+          link: '/tidings/mission',
         },
         {
           text: '후원 스토리',
@@ -256,16 +350,24 @@ const MainHeader = () => {
 
   return (
     <header
-      className={`flex h-128 w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat`}
+      className={`px-20 ${burger ? 'fixed top-0 max-md:bg-primary-500' : ''} z-10 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-md:border-b-2 max-md:border-grey-100 max-md:px-20`}
       data-comment='메인헤더'
     >
       <TopHeader />
       <BottomHeader
+        burger={burger}
+        setBurger={setBurger}
         centerMenu={centerMenu}
         depthActive={depthActive}
         setDepthActive={setDepthActive}
       />
+      <MobileBottom burger={burger} />
       <DepthSubMenu setDepthActive={setDepthActive} depthActive={depthActive} />
+      <BurgerSubMenu
+        setBurger={setBurger}
+        centerMenu={centerMenu}
+        burger={burger}
+      />
     </header>
   );
 };

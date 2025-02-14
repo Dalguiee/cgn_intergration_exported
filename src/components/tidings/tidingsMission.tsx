@@ -1,15 +1,12 @@
+import { tidingsMissionList, missionMockup } from '@/db/mockup';
 import React, { useEffect, useState } from 'react';
-import TidingsCard from './tidingsCard';
-// import { dataContext } from '@/contexts/Context';
-
-import { campaignMockup } from '@/db/mockup';
-import { tidingsList } from '@/db/mockup';
 import TabBtn from '../common/tabBtn';
+import TidingsCard from './tidingsCard';
 
-const TidingsMain = () => {
+const TidingsMission = () => {
   const [data, setData] = useState();
   useEffect(() => {
-    setData(campaignMockup);
+    setData(missionMockup);
   }, []);
   // const { cardData } = React.useContext(dataContext);
   // console.log(cardData);
@@ -18,8 +15,8 @@ const TidingsMain = () => {
   return (
     <>
       <TabBtn
-        mockData={campaignMockup}
-        category={tidingsList}
+        mockData={missionMockup}
+        category={tidingsMissionList}
         setData={setData}
       />
       <section
@@ -35,4 +32,4 @@ const TidingsMain = () => {
   );
 };
 
-export default TidingsMain;
+export default TidingsMission;

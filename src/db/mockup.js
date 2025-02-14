@@ -5,10 +5,18 @@ export const tidingsList = [
   { id: 4, type: '이벤트' },
 ];
 
-export const tidingsMockup = [
+export const tidingsMissionList = [
+  { id: 1, type: 'CGN' },
+  { id: 2, type: '해외지사' },
+  { id: 3, type: '선교지' },
+  { id: 4, type: '선교사 기도제목' },
+  { id: 5, type: '기타' },
+];
+
+export const campaignMockup = [
   {
     id: 1,
-    tag: [{ text: '이벤트', mode: 'mode1' }],
+    tag: [{ text: '이벤트', id: 4, mode: 'mode1' }],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -27,8 +35,8 @@ export const tidingsMockup = [
   {
     id: 2,
     tag: [
-      { text: '이벤트', mode: 'mode1' },
-      { text: '캠페인', mode: 'mode1' },
+      { text: '이벤트', id: 4, mode: 'mode1' },
+      { text: '캠페인', id: 3, mode: 'mode1' },
     ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
@@ -48,8 +56,8 @@ export const tidingsMockup = [
   {
     id: 3,
     tag: [
-      { text: '이벤트', mode: 'mode1' },
-      { text: '진행중', mode: 'mode1' },
+      { text: '이벤트', id: 4, mode: 'mode1' },
+      { text: '진행중', id: 1, mode: 'mode1' },
     ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
@@ -69,8 +77,8 @@ export const tidingsMockup = [
   {
     id: 4,
     tag: [
-      { text: '이벤트', mode: 'mode1' },
-      { text: '종료', mode: 'mode1' },
+      { text: '이벤트', id: 4, mode: 'mode1' },
+      { text: '종료', id: 2, mode: 'mode1' },
     ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
@@ -89,7 +97,7 @@ export const tidingsMockup = [
   },
   {
     id: 5,
-    tag: [{ text: '이벤트', mode: 'mode1' }],
+    tag: [{ text: '이벤트', id: 4, mode: 'mode1' }],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -107,7 +115,7 @@ export const tidingsMockup = [
   },
   {
     id: 6,
-    tag: [{ text: '이벤트', mode: 'mode1' }],
+    tag: [{ text: '이벤트', id: 4, mode: 'mode1' }],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -125,7 +133,7 @@ export const tidingsMockup = [
   },
   {
     id: 7,
-    tag: [{ text: '이벤트', mode: 'mode1' }],
+    tag: [{ text: '이벤트', id: 4, mode: 'mode1' }],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -143,7 +151,7 @@ export const tidingsMockup = [
   },
   {
     id: 8,
-    tag: [{ text: '이벤트', mode: 'mode1' }],
+    tag: [{ text: '이벤트', id: 4, mode: 'mode1' }],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -161,7 +169,7 @@ export const tidingsMockup = [
   },
   {
     id: 9,
-    tag: [{ text: '이벤트', mode: 'mode1' }],
+    tag: [{ text: '이벤트', id: 4, mode: 'mode1' }],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -171,6 +179,183 @@ export const tidingsMockup = [
       '/public/images/tidings/card_content_big.png',
     ],
     title: '방학 퀴즈 뽀개기 이벤트9',
+    detail_title: '기특하데이9',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+];
+
+export const missionMockup = [
+  {
+    id: 1,
+    tag: [{ text: 'CGN', id: 1, mode: 'mode1' }],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트1',
+    detail_title: '기특하데이1',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 2,
+    tag: [
+      { text: '해외지사', id: 2, mode: 'mode1' },
+      { text: '선교지', id: 3, mode: 'mode1' },
+    ],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트2',
+    detail_title: '기특하데이2',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 3,
+    tag: [
+      { text: '선교사 기도제목', id: 4, mode: 'mode1' },
+      { text: '기타', id: 4, mode: 'mode1' },
+    ],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트3',
+    detail_title: '기특하데이3',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 4,
+    tag: [
+      { text: '선교사 기도제목', id: 4, mode: 'mode1' },
+      { text: '기타', id: 4, mode: 'mode1' },
+    ],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트4',
+    detail_title: '기특하데이4',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 5,
+    tag: [
+      { text: '해외지사', id: 2, mode: 'mode1' },
+      { text: '선교지', id: 3, mode: 'mode1' },
+    ],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트5',
+    detail_title: '기특하데이5',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 6,
+    tag: [{ text: 'CGN', id: 1, mode: 'mode1' }],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트6',
+    detail_title: '기특하데이6',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 7,
+    tag: [{ text: 'CGN', id: 1, mode: 'mode1' }],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트7',
+    detail_title: '기특하데이7',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 8,
+    tag: [{ text: 'CGN', id: 1, mode: 'mode1' }],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트8',
+    detail_title: '기특하데이8',
+    sub_title: '1. 다양한 신규 콘텐츠 공개',
+    content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+    start_date: '2022-01-01',
+    end_date: '2024.11.05',
+  },
+  {
+    id: 9,
+    tag: [{ text: 'CGN', id: 1, mode: 'mode1' }],
+    src: '/public/images/tidings/card_content_small.png',
+    content_src: [
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+      '/public/images/tidings/card_content_big.png',
+    ],
+    title: '미션 데이터 테스트9',
     detail_title: '기특하데이9',
     sub_title: '1. 다양한 신규 콘텐츠 공개',
     content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,

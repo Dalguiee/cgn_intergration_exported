@@ -7,7 +7,7 @@ const TidingsHeader = () => {
     <>
       <Locator />
       <section
-        className={`flex h-216 w-full flex-col items-center justify-center pb-32 pt-80`}
+        className={`flex h-216 w-full flex-col items-center justify-center pb-32 pt-80 max-md:px-20`}
       >
         <div className='text_section flex flex-col items-center justify-center gap-16'>
           <h1 className={`text-bold48 text-grey-900`}>캠페인 / 이벤트</h1>

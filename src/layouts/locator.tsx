@@ -7,8 +7,6 @@ const Locator = () => {
   const pageData = location.pathname.split('/');
   const navigation = useNavigate();
 
-  console.log(location);
-
   useEffect(() => {
     let pathStack = '';
     let pathBackup = '';
@@ -39,7 +37,7 @@ const Locator = () => {
   }, [location]);
 
   return (
-    <section className='flex w-full items-center justify-center'>
+    <section className='flex w-full items-center justify-center px-20 max-md:hidden max-md:px-20'>
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {
