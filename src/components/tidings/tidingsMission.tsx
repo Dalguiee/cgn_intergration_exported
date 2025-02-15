@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import TagIcon from '../common/tagBtn';
+import { twMerge } from 'tailwind-merge';
 
 const Swiper_sec = ({ data }) => {
   return (
@@ -36,8 +37,15 @@ const TidingsMission = () => {
   const [pagingNum, setPagingNum] = useState(0);
 
   useEffect(() => {
-    setData(missionMockup);
+    setData(item => {
+      return missionMockup;
+    });
   }, []);
+
+  useEffect(() => {
+    console.log(data);
+    console.log(pagingNum);
+  }, [data, pagingNum]);
   // const { cardData } = React.useContext(dataContext);
   // console.log(cardData);
 
@@ -47,7 +55,7 @@ const TidingsMission = () => {
         return item + 1;
       });
     } else {
-      console.log('최대치');
+      console.log('최대치도달');
     }
   };
   const pagingDown = () => {
@@ -56,7 +64,7 @@ const TidingsMission = () => {
         return item - 1;
       });
     } else {
-      console.log('최소치');
+      console.log('최소치도달');
     }
   };
 
@@ -143,6 +151,17 @@ const TidingsMission = () => {
             ) : (
               <></>
             )}
+          </div>
+          <div>
+            {data?.map(data => (
+              <div
+                key={data.id}
+                className={twMerge(
+                  data.id == pagingNum + 1 ? 'bg-primary-500' : 'bg-grey-500',
+                  `h-40 w-40`
+                )}
+              ></div>
+            ))}
           </div>
         </div>
       </section>
