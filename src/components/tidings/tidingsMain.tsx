@@ -11,6 +11,7 @@ const TidingsMain = () => {
   useEffect(() => {
     setData(campaignMockup);
   }, []);
+
   // const { cardData } = React.useContext(dataContext);
   // console.log(cardData);
 
@@ -28,7 +29,9 @@ const TidingsMain = () => {
         <div
           className={`flex w-1560 flex-wrap items-start justify-center gap-24`}
         >
-          {data?.map(item => <TidingsCard key={item.id} item={item} />)}
+          {data?.map(item => (
+            <TidingsCard key={item.id} allData={data} item={item} />
+          ))}
         </div>
       </section>
     </>

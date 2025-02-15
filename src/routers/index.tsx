@@ -11,10 +11,14 @@ export default function MainRouter() {
       <Route path='/*' element={<DefaultLayer />}>
         <Route path='tidings/campaign' element={<TidingsPage />}></Route>
         <Route
-          path='tidings/campaign/detail'
+          path='tidings/:subDepth/detail'
           element={<TidingsDetailPage />}
         ></Route>
         <Route path='tidings/mission' element={<TidingsMissionPage />}></Route>
+        <Route
+          path='tidings/:subDepth/detail'
+          element={<TidingsDetailPage />}
+        ></Route>
       </Route>
     </Routes>
   );

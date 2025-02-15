@@ -61,15 +61,17 @@ const BottomHeader = ({
           onMouseEnter={() => {
             setDepthActive(true);
           }}
-          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-88 max-md:hidden`}
+          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-88 max-lg:gap-56 max-md:hidden`}
         >
           {centerMenu.map((menu, index) => (
-            <div className={`relative flex items-center justify-center`}>
+            <div
+              key={index}
+              className={`relative flex items-center justify-center`}
+            >
               <button
                 onClick={() => {
                   navigate(menu.link);
                 }}
-                key={index}
               >
                 <span className={`text-bold18`}>{menu.text}</span>
               </button>
@@ -78,19 +80,14 @@ const BottomHeader = ({
               >
                 {menu.subMenu.map((subMenu, key) => (
                   <button
-                    className={`text-nowrap`}
                     key={key}
-                    onClick={() => {}}
+                    onClick={() => {
+                      navigate(subMenu.link);
+                      setDepthActive(false);
+                    }}
+                    className={`text-regular14 text-nowrap text-primary-100`}
                   >
-                    <button
-                      onClick={() => {
-                        navigate(subMenu.link);
-                        setDepthActive(false);
-                      }}
-                      className={`text-regular14 text-primary-100`}
-                    >
-                      {subMenu.text}
-                    </button>
+                    {subMenu.text}
                   </button>
                 ))}
               </div>
@@ -184,14 +181,17 @@ const BurgerSubMenu = ({ burger, centerMenu, setBurger }) => {
     <section
       className={`justyfy-start fixed top-128 z-10 flex h-full w-full flex-col items-start gap-8 overflow-hidden bg-white-solid px-24 pt-16 md:hidden ${burger ? 'block' : 'hidden'}`}
     >
-      {centerMenu.map(menu => (
-        <div>
+      {centerMenu.map((menu, key) => (
+        <div key={key}>
           <div className={`w-full py-14`}>
             <span className={`text-bold18 text-grey-900`}>{menu.text}</span>
           </div>
           <div className={`flex flex-wrap items-center justify-start`}>
-            {menu.subMenu.map(subMenu => (
-              <div className={`[&:nth-child(1)]:text-bold14 h-32 w-115`}>
+            {menu.subMenu.map((subMenu, key) => (
+              <div
+                key={key}
+                className={`[&:nth-child(1)]:text-bold14 h-32 w-115`}
+              >
                 <button
                   onClick={() => {
                     navigate(subMenu.link);

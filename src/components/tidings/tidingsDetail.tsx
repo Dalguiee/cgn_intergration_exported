@@ -1,18 +1,22 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import TagIcon from '../common/tagBtn';
 
-import { campaignMockup } from '@/db/mockup';
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Swiper_sec = ({ detailData }) => {
   return (
     <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={`mt-16`}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
       spaceBetween={50}
       slidesPerView={1}
       onSlideChange={() => console.log('slide change')}
@@ -29,12 +33,14 @@ const Swiper_sec = ({ detailData }) => {
 
 const TidingsDetail = () => {
   const location = useLocation();
-  const detailData = location.state;
+  const { detailData, allData } = location.state;
   const navi = useNavigate();
 
-  const beforeData = campaignMockup.filter(item => item.id < detailData.id);
+  const { subDepth } = useParams();
+
+  const beforeData = allData.filter(item => item.id < detailData.id);
   beforeData.sort((a, b) => b.id - a.id);
-  const afterData = campaignMockup.filter(item => item.id > detailData.id);
+  const afterData = allData.filter(item => item.id > detailData.id);
 
   if (detailData.length === 0) return <></>;
   return (
@@ -47,7 +53,7 @@ const TidingsDetail = () => {
         >
           <div className={`flex items-center justify-center gap-16`}>
             {detailData.tag.map((obj, key) => (
-              <div className={`max-md:hidden`}>
+              <div key={key} className={`max-md:hidden`}>
                 <TagIcon text={obj.text} mode={obj.mode} key={key} />
               </div>
             ))}
@@ -79,7 +85,9 @@ const TidingsDetail = () => {
           >
             <button
               onClick={() => {
-                navi('/tidings/campaign/detail', { state: beforeData[0] });
+                navi(`/tidings/${subDepth}/detail`, {
+                  state: { detailData: beforeData[0], allData },
+                });
               }}
             >
               <span className={`text-bold16 text-grey-900`}>이전 글</span>
@@ -101,7 +109,9 @@ const TidingsDetail = () => {
             >
               <button
                 onClick={() => {
-                  navi('/tidings/campaign/detail', { state: afterData[0] });
+                  navi(`/tidings/${subDepth}/detail`, {
+                    state: { detailData: afterData[0], allData },
+                  });
                 }}
               >
                 <span className={`text-bold16 text-grey-900`}>다음 글</span>
@@ -124,7 +134,7 @@ const TidingsDetail = () => {
           >
             <button
               onClick={() => {
-                navi('/tidings/campaign');
+                navi(`/tidings/${subDepth}`);
               }}
               className={`text-bold24 text-white-solid`}
             >

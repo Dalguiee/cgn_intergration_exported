@@ -1,13 +1,15 @@
 import { useNavigate } from 'react-router-dom';
 import TagIcon from '../common/tagBtn';
 
-const TidingsCard = ({ item }) => {
+const TidingsCard = ({ item, allData }) => {
   const navigator = useNavigate();
   return (
     <button
       data-aos='fade-up'
       onClick={() => {
-        navigator('/tidings/campaign/detail', { state: item });
+        navigator(`/tidings/campaign/detail`, {
+          state: { detailData: item, allData },
+        });
       }}
       className={`mt-16 flex min-h-396 max-w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
     >
