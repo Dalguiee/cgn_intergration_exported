@@ -10,7 +10,7 @@ const Locator = () => {
   useEffect(() => {
     let pathStack = '';
     let pathBackup = '';
-    // 소식 페이지 로케이팅
+    // 소식 페이지 로케이팅을 담당하는 분기입니다. tidigns 추가기점 20250213
     if (location.pathname.includes('tidings')) {
       setChangedPathName(
         pageData.map(data => {
@@ -23,6 +23,11 @@ const Locator = () => {
             pathBackup = data;
             data = '캠페인 / 이벤트';
             pathStack = 'tidings/campaign';
+          }
+          if (data === 'mission') {
+            pathBackup = data;
+            data = '선교캠페인';
+            pathStack = 'tidings/mission';
           }
           if (data === 'detail') {
             pathBackup = '';

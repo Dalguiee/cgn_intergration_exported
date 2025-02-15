@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import TagIcon from '../common/tagBtn';
 
-const TidingsCard2 = ({ item, allData }) => {
+const TidingsCard2 = ({ item, allData, pageMode }) => {
   const navigator = useNavigate();
   return (
     <button
       data-aos='fade-up'
       onClick={() => {
-        navigator('/tidings/mission/detail', {
+        navigator(`/tidings/${pageMode}/detail`, {
           state: { detailData: item, allData },
         });
       }}
@@ -26,7 +26,7 @@ const TidingsCard2 = ({ item, allData }) => {
         <div className={`flex w-full items-center justify-start gap-16`}>
           <div className={`flex items-center justify-center gap-4`}>
             {item?.tag?.map((obj, key) => (
-              <TagIcon text={obj.text} mode={obj.mode} key={key} />
+              <TagIcon text={obj.text} id={obj.id} mode={obj.mode} key={key} />
             ))}
           </div>
           <div>

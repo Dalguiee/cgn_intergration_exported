@@ -23,7 +23,7 @@ const TidingsCard = ({ item, allData }) => {
       <div className={`mt-24 flex w-full items-center justify-between`}>
         <div className={`flex items-center justify-center gap-4`}>
           {item?.tag?.map((obj, key) => (
-            <TagIcon text={obj.text} mode={obj.mode} key={key} />
+            <TagIcon text={obj.text} id={obj.id} mode={obj.mode} key={key} />
           ))}
         </div>
         <div>

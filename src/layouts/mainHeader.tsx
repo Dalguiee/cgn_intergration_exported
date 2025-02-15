@@ -288,7 +288,7 @@ const MainHeader = () => {
         },
         {
           text: '후원 스토리',
-          link: '/support',
+          link: '/tidings/support',
         },
         {
           text: '보도 자료',

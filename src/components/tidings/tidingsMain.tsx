@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import TidingsCard from './tidingsCard';
 // import { dataContext } from '@/contexts/Context';
 
-import { campaignMockup } from '@/db/mockup';
-import { tidingsList } from '@/db/mockup';
+import { campaignMockup, tidingsList } from '@/db/mockup';
 import TabBtn from '../common/tabBtn';
 
 const TidingsMain = () => {
+  // 전체 데이터를 한번 State 에 담아 사용합니다.
+  // 컨테이너의 데이터 필터링을 연동하기 위함입니다.
   const [data, setData] = useState();
   useEffect(() => {
     setData(campaignMockup);
@@ -30,7 +31,7 @@ const TidingsMain = () => {
           className={`flex w-1560 flex-wrap items-start justify-center gap-24`}
         >
           {data?.map(item => (
-            <TidingsCard key={item.id} allData={data} item={item} />
+            <TidingsCard key={item.id} allData={campaignMockup} item={item} />
           ))}
         </div>
       </section>

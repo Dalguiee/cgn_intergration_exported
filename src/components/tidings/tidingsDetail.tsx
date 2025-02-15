@@ -54,7 +54,12 @@ const TidingsDetail = () => {
           <div className={`flex items-center justify-center gap-16`}>
             {detailData.tag.map((obj, key) => (
               <div key={key} className={`max-md:hidden`}>
-                <TagIcon text={obj.text} mode={obj.mode} key={key} />
+                <TagIcon
+                  text={obj.text}
+                  id={obj.id}
+                  mode={obj.mode}
+                  key={key}
+                />
               </div>
             ))}
             <span className={`text-bold24 text-grey-900`}>
