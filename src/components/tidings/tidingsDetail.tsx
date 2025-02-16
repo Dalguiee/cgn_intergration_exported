@@ -33,11 +33,16 @@ const Swiper_sec = ({ detailData }) => {
 
 const TidingsDetail = () => {
   const location = useLocation();
+  // detailData 는 body 데이터로써 detail 에서 컨텐츠를 보여주기 위해 직접 전송됩니다.
+  // allData 는 detail 에서 해당 페이지의 이전, 이후 페이지를 추적하기 위하여 같이 전송합니다.
   const { detailData, allData } = location.state;
   const navi = useNavigate();
 
+  // params 를 추적하여 tidings 에서 어떠한 데이터의 detail 인지 분기처리를 자동으로 합니다.
+  // 마지막 목록으로 돌아가는 navigate 부분에서도 사용됩니다.
   const { subDepth } = useParams();
 
+  // 이전 이후 페이지를 분기하는 데이터 필터링 부분입니다.
   const beforeData = allData.filter(item => item.id < detailData.id);
   beforeData.sort((a, b) => b.id - a.id);
   const afterData = allData.filter(item => item.id > detailData.id);
@@ -96,7 +101,7 @@ const TidingsDetail = () => {
               }}
             >
               <span className={`text-bold16 text-grey-900`}>이전 글</span>
-              <span className={`text-regular16 ml-16 text-grey-500`}>
+              <span className={`ml-16 text-regular16 text-grey-500`}>
                 {beforeData[0] ? beforeData[0].title : ''}
               </span>
             </button>
@@ -120,7 +125,7 @@ const TidingsDetail = () => {
                 }}
               >
                 <span className={`text-bold16 text-grey-900`}>다음 글</span>
-                <span className={`text-regular16 ml-16 text-grey-500`}>
+                <span className={`ml-16 text-regular16 text-grey-500`}>
                   {afterData[0] ? afterData[0].title : ''}
                 </span>
               </button>

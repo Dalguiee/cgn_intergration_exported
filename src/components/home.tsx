@@ -33,7 +33,7 @@ const Home = () => {
         >
           <div
             style={{ transform: `translateX( calc(-${position}% * 2.8) )` }}
-            className={`flex items-start justify-start gap-30`}
+            className={`duration-600 flex items-start justify-start gap-30 pl-280 transition ease-in-out`}
           >
             <img
               className={``}
