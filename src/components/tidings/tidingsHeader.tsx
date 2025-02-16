@@ -1,6 +1,7 @@
 import Locator from '@/layouts/locator';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
 const TidingsHeader = () => {
   const location = useLocation();
@@ -33,11 +34,13 @@ const TidingsHeader = () => {
     <>
       <Locator />
       <section
-        className={`flex h-216 w-full flex-col items-center justify-center pb-32 pt-80 max-md:px-20`}
+        className={`flex h-216 w-full flex-col items-center justify-center pb-32 pt-80 max-md:h-80 max-md:px-20 max-md:py-24`}
       >
         <div className='text_section flex flex-col items-center justify-center gap-16'>
-          <h1 className={`text-bold48 text-grey-900`}>{curretPath[0].title}</h1>
-          <span className={`text-regular18 text-grey-400`}>
+          <h1 className={`text-bold48 max-md:text-bold24 text-grey-900`}>
+            {curretPath[0].title}
+          </h1>
+          <span className={`text-regular18 text-grey-400 max-md:hidden`}>
             {curretPath[0].subTitle}
           </span>
         </div>

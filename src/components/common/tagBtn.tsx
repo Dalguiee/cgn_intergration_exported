@@ -60,13 +60,13 @@ const pcTagTypes = [
     id: 11,
     text: '후원',
     className:
-      'bg-grey-200 text-white-solid flex justify-center items-center rounded-4',
+      'bg-secondary-pink text-white-solid flex justify-center items-center rounded-4',
   },
   {
     id: 12,
     text: '후원영상',
     className:
-      'bg-grey-200 text-white-solid flex justify-center items-center rounded-4',
+      'bg-secondary-pink text-white-solid flex justify-center items-center rounded-4',
   },
 ];
 

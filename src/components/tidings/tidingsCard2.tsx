@@ -11,7 +11,7 @@ const TidingsCard2 = ({ item, allData, pageMode }) => {
           state: { detailData: item, allData },
         });
       }}
-      className={`mt-16 flex min-h-550 w-full max-w-560 flex-col items-center justify-start rounded-16 shadow-sm`}
+      className={`mt-16 flex min-h-550 w-full max-w-560 flex-col items-center justify-start rounded-16 shadow-sm max-md:min-h-378`}
     >
       <img
         className='h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top'

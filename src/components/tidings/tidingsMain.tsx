@@ -25,7 +25,7 @@ const TidingsMain = () => {
         setData={setData}
       />
       <section
-        className={`flex w-full items-center justify-center pb-160 pt-80 max-md:px-20`}
+        className={`flex w-full items-center justify-center pb-160 pt-80 max-md:px-20 max-md:pt-0`}
       >
         <div
           className={`flex w-1560 flex-wrap items-start justify-center gap-24`}

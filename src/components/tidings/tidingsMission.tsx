@@ -24,9 +24,23 @@ const Swiper_sec = ({ pageMode, data }) => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={``}
       spaceBetween={64}
-      slidesPerView={data.length > 3 ? 3 : data.length}
+      slidesPerView={data.length < 3 ? 2 : ''}
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 64,
+        },
+      }}
     >
       {data.map((item, key) => (
         <SwiperSlide className={`flex items-center justify-center`} key={key}>
@@ -112,14 +126,29 @@ const TidingsMission = () => {
         setData={setData}
       />
       <section
-        className={`flex w-full flex-col items-center justify-center pb-160 pt-80 max-md:px-20`}
+        className={`flex w-full flex-col items-center justify-center pb-160 pt-80 max-md:px-20 max-md:pt-0`}
       >
         <div
-          className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24`}
+          className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-md:flex`}
+        >
+          {data?.map(item => (
+            <TidingsCard2
+              pageMode={pageMode}
+              key={item.id}
+              allData={pageMode === 'mission' ? missionMockup : supportMockup}
+              item={item}
+            />
+          ))}
+        </div>
+
+        <div
+          className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-md:hidden`}
         >
           <Swiper_sec pageMode={pageMode} data={data} />
         </div>
-        <div className={`flex w-full max-w-1200 items-start justify-center`}>
+        <div
+          className={`flex w-full max-w-1200 items-start justify-center max-md:hidden`}
+        >
           <div className={`w-full`}>
             {data[pagingNum] ? (
               <div className={`h-656 w-full max-w-560`}>
