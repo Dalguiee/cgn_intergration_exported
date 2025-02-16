@@ -48,7 +48,12 @@ const BottomHeader = ({
       <div
         className={`flex h-80 w-full items-center justify-between max-md:h-full`}
       >
-        <button className='h-36 w-76'>
+        <button
+          onClick={() => {
+            navigate('/home');
+          }}
+          className='h-36 w-76'
+        >
           <img
             className={`${burger ? 'hidden' : ''} h-full w-full`}
             src={`/public/images/logo/main_logo.png`}
@@ -85,7 +90,7 @@ const BottomHeader = ({
                       navigate(subMenu.link);
                       setDepthActive(false);
                     }}
-                    className={`text-regular14 text-nowrap text-primary-100`}
+                    className={`text-nowrap text-regular14 text-primary-100`}
                   >
                     {subMenu.text}
                   </button>
@@ -101,7 +106,7 @@ const BottomHeader = ({
             On-Air
           </button>
           <button
-            className={`${burger ? 'hidden' : ''} text-regular14 h-40 w-89 rounded-4 bg-primary-500 text-white-solid max-md:h-32`}
+            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-md:h-32`}
           >
             후원하기
           </button>
@@ -162,12 +167,12 @@ const MobileBottom = ({ burger }) => {
       className={`flex items-center justify-center ${burger ? '' : 'hidden'} h-64 w-full gap-12`}
     >
       <button
-        className={`text-bold14 border-white-so flex h-40 w-174 items-center justify-center rounded-4 border-1 text-white-solid`}
+        className={`border-white-so flex h-40 w-174 items-center justify-center rounded-4 border-1 text-bold14 text-white-solid`}
       >
         퐁당
       </button>
       <button
-        className={`text-bold14 flex h-40 w-174 items-center justify-center rounded-4 bg-white-solid text-grey-900`}
+        className={`flex h-40 w-174 items-center justify-center rounded-4 bg-white-solid text-bold14 text-grey-900`}
       >
         나의 후원 보기
       </button>
@@ -190,7 +195,7 @@ const BurgerSubMenu = ({ burger, centerMenu, setBurger }) => {
             {menu.subMenu.map((subMenu, key) => (
               <div
                 key={key}
-                className={`[&:nth-child(1)]:text-bold14 h-32 w-115`}
+                className={`h-32 w-115 [&:nth-child(1)]:text-bold14`}
               >
                 <button
                   onClick={() => {

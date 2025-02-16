@@ -74,7 +74,7 @@ const TidingsMission = () => {
     } else if (location.pathname.includes('tidings/support')) {
       setPageMode('support');
     }
-  }, [location]);
+  }, [pageMode, location]);
 
   useEffect(() => {
     if (pageMode === 'mission') {
@@ -112,7 +112,6 @@ const TidingsMission = () => {
 
   const positionFind = e => {
     setBgBoxPosition(e.target.offsetTop);
-    console.log(e.target.offsetTop);
   };
 
   if (!data) return <></>;

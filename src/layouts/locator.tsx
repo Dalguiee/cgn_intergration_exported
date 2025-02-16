@@ -10,7 +10,7 @@ const Locator = () => {
   useEffect(() => {
     let pathStack = '';
     let pathBackup = '';
-    // 소식 페이지 로케이팅을 담당하는 분기입니다. tidigns 추가기점 20250213
+    // 페이지 로케이팅을 담당하는 분기 데이터 입니다.
     if (location.pathname.includes('tidings')) {
       setChangedPathName(
         pageData.map(data => {
@@ -46,7 +46,7 @@ const Locator = () => {
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {
-            navigation('/');
+            navigation('/home');
           }}
         >
           <img src='/public/images/icon/home_locator_grey300.svg' alt='' />
