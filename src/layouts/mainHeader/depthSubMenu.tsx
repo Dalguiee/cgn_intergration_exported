@@ -8,7 +8,7 @@ const DepthSubMenu = ({ depthActive, setDepthActive }) => {
       }}
       className={`absolute max-lg:hidden ${depthActive ? '' : 'hidden'} top-130 z-10 flex h-276 w-full items-center justify-center gap-20 bg-cover bg-center bg-no-repeat`}
       style={{
-        backgroundImage: `url('/public/images/bg/header_2depth.svg')`,
+        backgroundImage: `url('${import.meta.env.VITE_PUBLIC_URL}images/bg/header_2depth.svg')`,
       }}
     >
       {/* {centerMenu.map(menu => (
