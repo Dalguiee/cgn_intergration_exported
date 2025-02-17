@@ -156,7 +156,7 @@ module.exports = {
             fontFamily: 'Pretendard',
           },
         ],
-        eregular18: [
+        regular18: [
           '18px',
           {
             lineHeight: '28px',

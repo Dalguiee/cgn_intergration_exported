@@ -44,6 +44,6 @@
 
 @layer utilities {
   .separator {
-    @apply h-12 w-2 border-r-1 border-grey-200;
+    @apply h-12 w-1 border-r-1 border-grey-200;
   }
 }

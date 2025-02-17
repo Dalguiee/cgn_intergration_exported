@@ -1,11 +1,6 @@
-import {
-  tidingsMissionList,
-  missionMockup,
-  supportMockup,
-  tidingsSupportList,
-} from '@/db/mockup';
+import { mockupData } from '@/db/mockup';
 import React, { useEffect, useRef, useState } from 'react';
-import TabBtn from '../common/tabBtn';
+import CategoryList from '../common/categoryList';
 import TidingsCard2 from './tidingsCard2';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,13 +13,15 @@ import 'swiper/css/scrollbar';
 import TagIcon from '../common/tagBtn';
 import { useLocation } from 'react-router-dom';
 
-const Swiper_sec = ({ pageMode, data }) => {
+const Swiper_sec = ({ pageMode, findedMockupData }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={``}
       spaceBetween={64}
-      slidesPerView={data && data.length < 3 ? 2 : undefined}
+      slidesPerView={
+        findedMockupData && findedMockupData?.length < 3 ? 2 : undefined
+      }
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
       breakpoints={{
@@ -37,17 +34,18 @@ const Swiper_sec = ({ pageMode, data }) => {
           spaceBetween: 32,
         },
         1024: {
-          slidesPerView: data && data.length >= 3 ? 3 : 1,
+          slidesPerView:
+            findedMockupData && findedMockupData?.length >= 3 ? 3 : 1,
           spaceBetween: 64,
         },
       }}
     >
-      {data.map((item, key) => (
+      {findedMockupData?.map((item, key) => (
         <SwiperSlide className={`flex items-center justify-center`} key={key}>
           <TidingsCard2
             pageMode={pageMode}
             key={item.id}
-            allData={pageMode === 'mission' ? missionMockup : supportMockup}
+            allData={findedMockupData}
             item={item}
           />
         </SwiperSlide>
@@ -60,13 +58,38 @@ const Swiper_sec = ({ pageMode, data }) => {
 // pageMode 에 따라 불러오는 컨텐츠 분기를 걸어놓았습니다.
 
 const TidingsMission = () => {
-  const [data, setData] = useState();
+  const [findedMockupData, setfindedMockupData] = useState();
   const [pageMode, setPageMode] = useState('');
   const [pagingNum, setPagingNum] = useState(0);
   const contentBox = useRef(null);
   const [bgBoxPositon, setBgBoxPosition] = useState(0);
+  const [selectedId, setSelectedId] = useState(0);
 
   const location = useLocation();
+
+  // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
+  const mockupExport = mockupData.filter(item => {
+    return item.path.includes(location.pathname);
+  });
+  const mockupExportedData = mockupExport[0].data;
+
+  // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
+  useEffect(() => {
+    setfindedMockupData(mockupExportedData);
+  }, [location, selectedId]);
+
+  // category list 에서 selectedId 에 따라 filter 연동을 위하여 state 에 update 합니다.
+  useEffect(() => {
+    if (selectedId === 0) {
+      setfindedMockupData(mockupExportedData);
+    } else {
+      setfindedMockupData(
+        mockupExportedData.filter(item => {
+          return item.tag.some(obj => obj.id === Number(selectedId));
+        })
+      );
+    }
+  }, [selectedId]);
 
   useEffect(() => {
     if (location.pathname.includes('tidings/mission')) {
@@ -76,23 +99,8 @@ const TidingsMission = () => {
     }
   }, [pageMode, location]);
 
-  useEffect(() => {
-    if (pageMode === 'mission') {
-      setData(item => {
-        return missionMockup;
-      });
-    } else if (pageMode === 'support') {
-      setData(item => {
-        return supportMockup;
-      });
-    }
-  }, [pageMode, location]);
-
-  // const { cardData } = React.useContext(dataContext);
-  // console.log(cardData);
-
   const pagingUP = () => {
-    if (pagingNum < data.length - 1) {
+    if (pagingNum < findedMockupData?.length - 1) {
       setPagingNum(item => {
         return item + 1;
       });
@@ -114,27 +122,22 @@ const TidingsMission = () => {
     setBgBoxPosition(e.target.offsetTop);
   };
 
-  if (!data) return <></>;
+  if (!findedMockupData) return <></>;
+
   return (
     <>
-      <TabBtn
-        mockData={pageMode === 'mission' ? missionMockup : supportMockup}
-        category={
-          pageMode === 'mission' ? tidingsMissionList : tidingsSupportList
-        }
-        setData={setData}
-      />
+      <CategoryList setSelectedId={setSelectedId} />
       <section
         className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-80 max-md:px-20 max-md:pt-0`}
       >
         <div
           className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-md:flex`}
         >
-          {data?.map(item => (
+          {findedMockupData?.map(item => (
             <TidingsCard2
               pageMode={pageMode}
               key={item.id}
-              allData={pageMode === 'mission' ? missionMockup : supportMockup}
+              allData={mockupExportedData}
               item={item}
             />
           ))}
@@ -143,20 +146,20 @@ const TidingsMission = () => {
         <div
           className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-md:hidden`}
         >
-          <Swiper_sec pageMode={pageMode} data={data} />
+          <Swiper_sec pageMode={pageMode} findedMockupData={findedMockupData} />
         </div>
         <div
           className={`flex w-full max-w-1200 items-start justify-center max-md:hidden`}
         >
           <div className={`w-full`}>
-            {data[pagingNum] ? (
+            {findedMockupData?.[pagingNum] ? (
               <div className={`h-656 w-full max-w-560`}>
                 <div
                   className={`rounded-br-16 rounded-tr-16 border-1 border-grey-400 bg-white-solid pr-32 pt-32`}
                 >
                   <img
                     className={`w-full rounded-br-16 rounded-tr-16`}
-                    src={`${data[pagingNum].src}`}
+                    src={`${findedMockupData?.[pagingNum].src}`}
                     alt=''
                   />
                   <div
@@ -179,7 +182,7 @@ const TidingsMission = () => {
                     </span>
                     <span className={`text-regular16 text-grey-500`}>/</span>
                     <span className={`text-regular16 text-grey-500`}>
-                      {data.length ? data.length : ''}
+                      {findedMockupData?.length ? findedMockupData?.length : ''}
                     </span>
                     <button
                       onClick={() => {
@@ -197,7 +200,7 @@ const TidingsMission = () => {
                   className={`flex flex-col items-start justify-center gap-16 py-24`}
                 >
                   <div className={`flex items-center justify-start gap-16`}>
-                    {data[pagingNum].tag.map((item, key) => (
+                    {findedMockupData?.[pagingNum].tag.map((item, key) => (
                       <TagIcon
                         id={item.id}
                         text={item.text}
@@ -206,12 +209,12 @@ const TidingsMission = () => {
                       />
                     ))}
                     <span className={`text-regular14 text-grey-500`}>
-                      {data[pagingNum].start_date}
+                      {findedMockupData?.[pagingNum].start_date}
                     </span>
                   </div>
                   <div>
                     <span className={`text-bold24 text-grey-900`}>
-                      {data[pagingNum].title}
+                      {findedMockupData?.[pagingNum].title}
                     </span>
                   </div>
                 </div>
@@ -228,7 +231,7 @@ const TidingsMission = () => {
               style={{ top: `${bgBoxPositon}px` }}
               className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm transition`}
             ></div>
-            {data?.slice(0, 7).map(data => (
+            {findedMockupData?.slice(0, 7).map(data => (
               <div
                 onMouseEnter={e => {
                   positionFind(e);

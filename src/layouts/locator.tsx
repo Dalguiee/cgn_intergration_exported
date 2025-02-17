@@ -2,14 +2,14 @@ import React, { useEffect, useState, Fragment } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const Locator = () => {
-  const [changedPathName, setChangedPathName] = useState([]);
   const location = useLocation();
-  const pageData = location.pathname.split('/');
   const navigation = useNavigate();
+  const [changedPathName, setChangedPathName] = useState([]);
 
   useEffect(() => {
     let pathStack = '';
     let pathBackup = '';
+    const pageData = location.pathname.split('/');
     // 페이지 로케이팅을 담당하는 분기 데이터 입니다.
     if (location.pathname.includes('tidings')) {
       setChangedPathName(
@@ -21,7 +21,7 @@ const Locator = () => {
           }
           if (data === 'campaign') {
             pathBackup = data;
-            data = '캠페인 / 이벤트';
+            data = '캠페인/이벤트';
             pathStack = 'tidings/campaign';
           }
           if (data === 'mission') {

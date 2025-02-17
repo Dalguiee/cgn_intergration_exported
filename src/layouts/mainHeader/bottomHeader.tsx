@@ -1,0 +1,119 @@
+import { useLocation, useNavigate } from 'react-router-dom';
+
+const BottomHeader = ({
+  centerMenu,
+  setDepthActive,
+  depthActive,
+  burger,
+  setBurger,
+}) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  return (
+    <div
+      className={`relative z-20 flex w-full max-w-1560 flex-col items-center justify-center max-lg:h-64 max-lg:w-full`}
+    >
+      <div
+        className={`flex h-80 w-full items-center justify-between max-lg:h-full`}
+      >
+        <button
+          onClick={() => {
+            navigate('/home');
+          }}
+          className='h-36 w-76'
+        >
+          <img
+            className={`${burger ? 'hidden' : ''} h-full w-full`}
+            src={`/public/images/logo/main_logo.png`}
+            alt=''
+            width='36px'
+            height='73px'
+          />
+        </button>
+        <div
+          onMouseEnter={() => {
+            setDepthActive(true);
+          }}
+          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between max-lg:hidden max-lg:gap-50 lg:gap-60 xl:gap-80`}
+        >
+          {centerMenu?.map((menu, index) => (
+            <div
+              key={index}
+              className={`relative flex items-center justify-center`}
+            >
+              <button
+                onClick={() => {
+                  navigate(menu.link);
+                }}
+              >
+                <span
+                  className={`${location.pathname.includes(menu.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18`}
+                >
+                  {menu.text}
+                </span>
+              </button>
+              <div
+                className={`absolute gap-8 ${depthActive ? '' : 'hidden'} top-79 flex flex-col items-center justify-center`}
+              >
+                {menu?.subMenu?.map((subMenu, key) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      navigate(subMenu?.link);
+                      setDepthActive(false);
+                    }}
+                    className={`${subMenu?.link?.includes(location.pathname) ? 'text-bold14' : 'text-regular14'} text-nowrap text-primary-100`}
+                  >
+                    {subMenu?.text}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={`flex items-center justify-center gap-8`}>
+          <button
+            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-regular14 text-grey-900 max-lg:h-32 max-lg:w-67`}
+          >
+            On-Air
+          </button>
+          <button
+            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-lg:h-32 max-lg:w-67`}
+          >
+            후원하기
+          </button>
+          <div
+            className={`flex items-center justify-center gap-12 ${burger ? '' : 'hidden'}`}
+          >
+            <button className={`text-regular16 text-white-solid`}>KN</button>
+            <span className={`border-pirmary-100 h-16 w-1 border-l-2`}></span>
+            <button className={`text-regular16 text-white-solid`}>EN</button>
+          </div>
+          <button
+            onClick={() => {
+              setBurger(item => {
+                return !item;
+              });
+            }}
+            className={`hidden h-32 w-32 items-center justify-center px-6 max-lg:block`}
+          >
+            <div className={`flex flex-col items-end justify-center gap-4`}>
+              <span
+                className={`w-full rounded-10 transition ${burger ? 'translate-y-3 rotate-[-45deg] transform border-white-solid' : ''} border-t-3 border-grey-900`}
+              ></span>
+              <span
+                className={`w-[50%] rounded-10 border-t-3 ${burger ? 'hidden' : ''} border-grey-900`}
+              ></span>
+              <span
+                className={`w-full rounded-10 border-t-3 ${burger ? 'translate-y-[-4px] rotate-[45deg] transform border-white-solid' : ''} border-grey-900`}
+              ></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BottomHeader;

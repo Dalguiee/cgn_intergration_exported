@@ -10,10 +10,11 @@ const TidingsCard = ({ item, allData }) => {
           state: { detailData: item, allData },
         });
       }}
-      className={`mt-16 flex min-h-396 max-w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
+      style={{ boxShadow: `0 0 30px 1px #ececec` }}
+      className={`mt-16 flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}
     >
       <img
-        className='h-240 w-full max-w-352 rounded-8'
+        className='aspect-[252/240] w-full rounded-8 object-cover'
         src='/public/images/tidings/card_content_small.png'
         width={`352px`}
         height={`240px`}
@@ -36,7 +37,9 @@ const TidingsCard = ({ item, allData }) => {
         </div>
       </div>
       <div className={`mt-12 flex w-full items-center justify-start`}>
-        <span className={`text-bold24 text-grey-900`}>{item.title}</span>
+        <span className={`text-left text-bold24 text-grey-900`}>
+          {item.title}
+        </span>
       </div>
     </button>
   );

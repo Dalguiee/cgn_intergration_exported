@@ -8,7 +8,7 @@ const MainFooter = () => {
           <div className='flex h-full w-full max-w-180 items-start justify-start max-lg:hidden max-md:hidden'>
             <img
               src='/public/images/logo/footer_logo.png'
-              className='relative top-[-20px] w-76'
+              className='w-76'
               width='76px'
               height='36px'
               alt=''

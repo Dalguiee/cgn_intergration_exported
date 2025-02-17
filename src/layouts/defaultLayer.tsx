@@ -1,4 +1,4 @@
-import MainHeader from '@/layouts/mainHeader';
+import MainHeader from '@/layouts/mainHeader/mainHeader';
 import MainFooter from '@/layouts/mainFooter';
 import { Outlet } from 'react-router-dom';
 
