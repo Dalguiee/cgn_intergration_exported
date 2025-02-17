@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const TopHeader = () => {
   const [langActive, setLangActive] = useState(false); // 언어 선택 활성화 상태
@@ -40,6 +40,7 @@ const BottomHeader = ({
   setBurger,
 }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div
@@ -94,7 +95,7 @@ const BottomHeader = ({
                       navigate(subMenu.link);
                       setDepthActive(false);
                     }}
-                    className={`text-nowrap text-regular14 text-primary-100 max-xl:text-regular12`}
+                    className={`${subMenu.link.includes(location.pathname) ? 'text-bold14 max-lg:text-bold12' : 'text-regular14 max-lg:text-regular12'} text-nowrap text-primary-100`}
                   >
                     {subMenu.text}
                   </button>
@@ -105,12 +106,12 @@ const BottomHeader = ({
         </div>
         <div className={`flex items-center justify-center gap-8`}>
           <button
-            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900 max-md:h-32`}
+            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900 max-md:h-32 max-md:w-67`}
           >
             On-Air
           </button>
           <button
-            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-md:h-32`}
+            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-md:h-32 max-md:w-67`}
           >
             후원하기
           </button>

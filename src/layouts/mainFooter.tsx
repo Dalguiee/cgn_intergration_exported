@@ -8,7 +8,7 @@ const MainFooter = () => {
           <div className='flex h-full w-full max-w-180 items-start justify-start max-lg:hidden max-md:hidden'>
             <img
               src='/public/images/logo/footer_logo.png'
-              className='w-76'
+              className='relative top-[-20px] w-76'
               width='76px'
               height='36px'
               alt=''
@@ -111,21 +111,21 @@ const MainFooter = () => {
         <div
           className={`flex w-full flex-wrap items-start justify-start gap-4`}
         >
-          <span className={`text-bold14 px-12 py-4 text-grey-900`}>
+          <span className={`px-12 py-4 text-bold14 text-grey-900`}>
             공지사항
           </span>
-          <span className={`text-bold14 px-12 py-4 text-grey-900`}>FAQ</span>
-          <span className={`text-bold14 px-12 py-4 text-grey-900`}>채용</span>
-          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
+          <span className={`px-12 py-4 text-bold14 text-grey-900`}>FAQ</span>
+          <span className={`px-12 py-4 text-bold14 text-grey-900`}>채용</span>
+          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
             이용약관
           </span>
-          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
+          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
             이용약관
           </span>
-          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
+          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
             개인정보 처리 방침
           </span>
-          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
+          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
             이메일무단수집거부
           </span>
         </div>
