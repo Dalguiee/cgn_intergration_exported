@@ -11,7 +11,7 @@ const Locator = () => {
     let pathBackup = '';
     const pageData = location.pathname.split('/');
     // 페이지 로케이팅을 담당하는 분기 데이터 입니다.
-    if (location.pathname.includes('tidings')) {
+    if (location.pathname.includes('/tidings/')) {
       setChangedPathName(
         pageData.map(data => {
           if (data === 'tidings') {
@@ -29,10 +29,15 @@ const Locator = () => {
             data = '선교캠페인';
             pathStack = 'tidings/mission';
           }
-          if (data === 'detail') {
-            pathBackup = '';
-            data = '';
-            pathStack = '';
+          if (data === 'mission') {
+            pathBackup = data;
+            data = '선교캠페인';
+            pathStack = 'tidings/mission';
+          }
+          if (data === 'support') {
+            pathBackup = data;
+            data = `후원스토리`;
+            pathStack = `tidings/support`;
           }
 
           return { bPath: pathBackup, name: data, path: pathStack };

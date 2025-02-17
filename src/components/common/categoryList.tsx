@@ -37,6 +37,7 @@ const CategoryList = ({ setSelectedId }) => {
     },
   ];
 
+  // 위의 데이터중 주소가 path 와 맞는 데이터만 걸러내고 단추로 뿌려줍니다
   const tagDataFind = tabListData.filter(item => {
     return item.path.includes(location.pathname);
   });
@@ -51,7 +52,7 @@ const CategoryList = ({ setSelectedId }) => {
           setHighlight(0);
           setSelectedId(0);
         }}
-        className={`${highlight === 0 ? 'border-primary-400 text-primary-500' : ''} h-48 w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300`}
+        className={`${highlight === 0 ? 'border-primary-400 text-primary-500' : ''} h-48 w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:w-96`}
       >
         전체
       </button>
@@ -63,7 +64,7 @@ const CategoryList = ({ setSelectedId }) => {
             setSelectedId(item.id);
           }}
           key={item.id}
-          className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300`}
+          className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:w-96`}
         >
           {item.type}
         </button>

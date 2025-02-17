@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import TagIcon from '../common/tagBtn';
 
+// 캠페인 이벤트에 사용되는 1형 카드 컴포넌트 입니다
+
 const TidingsCard = ({ item, allData }) => {
   const navigator = useNavigate();
   return (

@@ -5,6 +5,11 @@ import DepthSubMenu from './depthSubMenu';
 import MobileBottom from './mobileBottom';
 import BurgerSubMenu from './burgerSubMenu';
 
+// pc 버전일때 사용되는 depthSubmenu, topHeader botomHeader 가 있으며,
+// 모바일 버전에서 사용되는 burderSubMenu 와 mobileBottom 으로 나뉘어 있습니다
+// burger 는 모바일로 노출되는 상단 버거 메뉴를 누를 경우 active 를 전환시키는 역할을 하는 boolean 값입니다.
+// depthActive 는 pc 버전에서 글자뒤의 주황색 박스 배경에 해당합니다. 헤더의 글자를 누르면 on , 하단 2depth 컨테이너에서 마우스가 나올 시 off 됩니다.
+
 const centerMenu = [
   {
     key: 0,
@@ -14,7 +19,7 @@ const centerMenu = [
     subMenu: [
       {
         text: '미디어선교 후원',
-        link: '/introducesupport',
+        link: '/introducesupport/support',
       },
       {
         text: '기념일 후원',

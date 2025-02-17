@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const positionCalc = () => {
       if (verticalBox) {
-        const getPositon = verticalBox.current.getBoundingClientRect();
+        const getPositon = verticalBox?.current.getBoundingClientRect();
         const calcedPosition = (getPositon.top / getPositon.height) * -100;
         if (calcedPosition < 0) {
           console.log('스크롤 준비');
