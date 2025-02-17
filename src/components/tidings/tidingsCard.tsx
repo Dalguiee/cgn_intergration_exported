@@ -1,18 +1,23 @@
 import { useNavigate } from 'react-router-dom';
 import TagIcon from '../common/tagBtn';
 
-const TidingsCard = ({ item }) => {
+// 캠페인 이벤트에 사용되는 1형 카드 컴포넌트 입니다
+
+const TidingsCard = ({ item, allData }) => {
   const navigator = useNavigate();
   return (
     <button
       onClick={() => {
-        navigator('/tidings/detail', { state: item });
+        navigator(`/tidings/campaign/detail`, {
+          state: { detailData: item, allData },
+        });
       }}
-      className={`mt-16 flex h-396 w-384 flex-col items-center justify-start rounded-16 bg-white-solid px-16 py-16 shadow-sm`}
+      style={{ boxShadow: `0 0 30px 1px #ececec` }}
+      className={`mt-16 flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}
     >
       <img
-        className='h-240 w-352 rounded-8'
-        src='/public/images/tidings/card_content_small.png'
+        className='aspect-[252/240] w-full rounded-8 object-cover'
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
         width={`352px`}
         height={`240px`}
         alt='메인카드이미지'
@@ -20,7 +25,7 @@ const TidingsCard = ({ item }) => {
       <div className={`mt-24 flex w-full items-center justify-between`}>
         <div className={`flex items-center justify-center gap-4`}>
           {item?.tag?.map((obj, key) => (
-            <TagIcon text={obj.text} mode={obj.mode} key={key} />
+            <TagIcon text={obj.text} id={obj.id} mode={obj.mode} key={key} />
           ))}
         </div>
         <div>
@@ -34,7 +39,9 @@ const TidingsCard = ({ item }) => {
         </div>
       </div>
       <div className={`mt-12 flex w-full items-center justify-start`}>
-        <span className={`text-bold24 text-grey-900`}>{item.title}</span>
+        <span className={`text-left text-bold24 text-grey-900`}>
+          {item.title}
+        </span>
       </div>
     </button>
   );

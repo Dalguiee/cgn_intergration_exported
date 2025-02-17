@@ -49,7 +49,7 @@
 }
 
 /* fonts */
-.text-bold78 {
+/* .text-bold78 {
   font-size: 78px;
   line-height: 96px;
   letter-spacing: -0.02em;
@@ -181,4 +181,62 @@
   letter-spacing: -0.02em;
   font-weight: 400;
   font-family: 'Pretendard';
+} */
+
+.text-bold78 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold60 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold48 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold40 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold32 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold24 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold18 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold16 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold14 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold12 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-bold10 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular48 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular32 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular24 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-e-regular18 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular18 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular16 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular14 {
+  font-family: 'Pretendard', 'sans-serif';
+}
+.text-regular12 {
+  font-family: 'Pretendard', 'sans-serif';
 }

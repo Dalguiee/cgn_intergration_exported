@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4",
     "env-cmd": "^10.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "react": "^18.3.1",

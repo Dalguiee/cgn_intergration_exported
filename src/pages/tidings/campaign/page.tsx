@@ -1,15 +1,14 @@
 import TidingsHeader from '@/components/tidings/tidingsHeader';
 import TidingsMain from '@/components/tidings/tidingsMain';
-import Locator from '@/layouts/locator';
+import React from 'react';
 
-const TidingsPage = () => {
+const TidingsCampaignPage = () => {
   return (
     <section className='flex flex-col items-center justify-center'>
-      <Locator />
       <TidingsHeader />
       <TidingsMain />
     </section>
   );
 };
 
-export default TidingsPage;
+export default TidingsCampaignPage;

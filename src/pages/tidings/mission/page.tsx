@@ -1,16 +1,14 @@
-import TidingsDetail from '@/components/tidings/tidingsDetail';
 import TidingsHeader from '@/components/tidings/tidingsHeader';
-import Locator from '@/layouts/locator';
+import TidingsMission from '@/components/tidings/tidingsMission';
 import React from 'react';
 
-const TidingsDetailPage = () => {
+const TidingsMissionPage = () => {
   return (
     <section className='flex flex-col items-center justify-center'>
-      <Locator />
       <TidingsHeader />
-      <TidingsDetail />
+      <TidingsMission />
     </section>
   );
 };
 
-export default TidingsDetailPage;
+export default TidingsMissionPage;
