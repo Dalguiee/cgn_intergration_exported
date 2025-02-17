@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Home = () => {
   const verticalBox = useRef();
@@ -7,17 +7,17 @@ const Home = () => {
   useEffect(() => {
     const positionCalc = () => {
       if (verticalBox) {
-        const getPositon = verticalBox?.current.getBoundingClientRect();
-        const calcedPosition = (getPositon.top / getPositon.height) * -100;
-        if (calcedPosition < 0) {
+        const getPositon = verticalBox.current.getBoundingClientRect();
+        const calculatedPosition = (getPositon.top / getPositon.height) * -100;
+        if (calculatedPosition < 0) {
           console.log('스크롤 준비');
-        } else if (calcedPosition > 0 && calcedPosition < 90) {
-          setPosition(calcedPosition);
+        } else if (calculatedPosition > 0 && calculatedPosition < 90) {
+          setPosition(calculatedPosition);
           console.log('스크롤중');
-        } else if (calcedPosition > 90) {
+        } else if (calculatedPosition > 90) {
           console.log('스크롤 끝남');
         }
-        console.log(calcedPosition);
+        console.log(calculatedPosition);
       }
     };
 
