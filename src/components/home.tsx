@@ -37,47 +37,47 @@ const Home = () => {
           >
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
             <img
               className={``}
-              src='/public/images/tidings/card_content_small.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
               alt=''
             />
           </div>

@@ -7,7 +7,7 @@ const MainFooter = () => {
         >
           <div className='flex h-full w-full max-w-180 items-start justify-start max-lg:hidden'>
             <img
-              src='/public/images/logo/footer_logo.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/footer_logo.png`}
               className='w-76'
               width='76px'
               height='36px'
@@ -72,7 +72,7 @@ const MainFooter = () => {
               <div className={`flex items-center justify-center gap-8`}>
                 <button>
                   <img
-                    src='/public/images/logo/pondang_logo_1.png'
+                    src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
                     width='40px'
                     height='40px'
                     alt=''
@@ -80,7 +80,7 @@ const MainFooter = () => {
                 </button>
                 <button>
                   <img
-                    src='/public/images/logo/youtube_logo_1.png'
+                    src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
                     width='40px'
                     height='40px'
                     alt=''
@@ -95,7 +95,7 @@ const MainFooter = () => {
                 </span>
                 <button>
                   <img
-                    src='/public/images/icon/arrow_under_grey900.svg'
+                    src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
                     alt=''
                   />
                 </button>
@@ -133,14 +133,14 @@ const MainFooter = () => {
           <div className={`flex items-center justify-center gap-8`}>
             <img
               className={`h-40 w-40`}
-              src='/public/images/logo/pondang_logo_1.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
               width={`40px`}
               height={`40px`}
               alt=''
             />
             <img
               className={`h-40 w-40`}
-              src='/public/images/logo/youtube_logo_1.png'
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
               width={`40px`}
               height={`40px`}
               alt=''
@@ -153,7 +153,7 @@ const MainFooter = () => {
             <button>
               <img
                 className={`h-24 w-24`}
-                src='/public/images/icon/arrow_under_grey900.svg'
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
                 width={`24px`}
                 height={`24px`}
                 alt=''

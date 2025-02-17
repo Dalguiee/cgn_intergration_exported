@@ -25,7 +25,7 @@ const BottomHeader = ({
         >
           <img
             className={`${burger ? 'hidden' : ''} h-full w-full`}
-            src={`/public/images/logo/main_logo.png`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/main_logo.png`}
             alt=''
             width='36px'
             height='73px'

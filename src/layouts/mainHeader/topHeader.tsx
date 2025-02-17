@@ -26,7 +26,7 @@ const TopHeader = () => {
           <span className={`text-regular14 text-grey-400`}>KOR</span>
           <img
             className={`ml-4 ${langActive ? '' : 'rotate-180'}`}
-            src={`/public/images/icon/orange_tri.svg`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/orange_tri.svg`}
             alt=''
           />
         </button>

@@ -171,7 +171,7 @@ const TidingsMission = () => {
                       }}
                     >
                       <img
-                        src='/public/images/icon/arrow_left_rounded.svg'
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_rounded.svg`}
                         alt=''
                       />
                     </button>
@@ -190,7 +190,7 @@ const TidingsMission = () => {
                       }}
                     >
                       <img
-                        src='/public/images/icon/arrow_right_rounded.svg'
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_rounded.svg`}
                         alt=''
                       />
                     </button>

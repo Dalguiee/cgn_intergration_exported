@@ -17,7 +17,7 @@ const TidingsCard2 = ({ item, allData, pageMode }) => {
     >
       <img
         className='h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top'
-        src='/public/images/tidings/card_content_small_top_rounded.png'
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small_top_rounded.png`}
         width={``}
         height={`382px`}
         alt='메인카드이미지'

@@ -54,13 +54,19 @@ const Locator = () => {
             navigation('/home');
           }}
         >
-          <img src='/public/images/icon/home_locator_grey300.svg' alt='' />
+          <img
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/home_locator_grey300.svg`}
+            alt=''
+          />
         </button>
         {changedPathName.map((item, index) => {
           if (item.name !== '') {
             return (
               <Fragment key={index}>
-                <img src='/public/images/icon/arrow_right_grey200.svg' alt='' />
+                <img
+                  src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey200.svg`}
+                  alt=''
+                />
                 <button
                   className={`text-grey-400 ${item.bPath === changedPathName[changedPathName.length - 1].bPath ? 'text-grey-900' : ''} text-regular14`}
                   onClick={() => {
