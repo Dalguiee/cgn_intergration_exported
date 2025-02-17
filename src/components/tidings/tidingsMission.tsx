@@ -128,10 +128,10 @@ const TidingsMission = () => {
     <>
       <CategoryList setSelectedId={setSelectedId} />
       <section
-        className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-80 max-md:px-20 max-md:pt-0`}
+        className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-80 max-lg:px-20 max-lg:pt-0`}
       >
         <div
-          className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-md:flex`}
+          className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-lg:flex`}
         >
           {findedMockupData?.map(item => (
             <TidingsCard2
@@ -144,12 +144,12 @@ const TidingsMission = () => {
         </div>
 
         <div
-          className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-md:hidden`}
+          className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-lg:hidden`}
         >
           <Swiper_sec pageMode={pageMode} findedMockupData={findedMockupData} />
         </div>
         <div
-          className={`flex w-full max-w-1200 items-start justify-center max-md:hidden`}
+          className={`flex w-full max-w-1200 items-start justify-center max-lg:hidden`}
         >
           <div className={`w-full`}>
             {findedMockupData?.[pagingNum] ? (

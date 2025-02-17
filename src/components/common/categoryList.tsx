@@ -44,7 +44,7 @@ const CategoryList = ({ setSelectedId }) => {
   if (!tagDataFind) return <></>;
   return (
     <section
-      className={`flex w-full flex-wrap items-center justify-center gap-8 max-md:px-20`}
+      className={`flex w-full flex-wrap items-center justify-center gap-8 max-lg:px-20`}
     >
       <button
         onClick={() => {

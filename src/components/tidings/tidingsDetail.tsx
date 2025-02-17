@@ -48,15 +48,15 @@ const TidingsDetail = () => {
   if (detailData.length === 0) return <></>;
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center pb-160 pt-40 max-md:px-20`}
+      className={`flex w-full flex-col items-center justify-center pb-160 pt-40 max-lg:px-20`}
     >
       <div className='w-full max-w-1200'>
         <div
-          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-md:flex-col max-md:items-start max-md:gap-20`}
+          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-20`}
         >
           <div className={`flex items-center justify-center gap-16`}>
             {detailData.tag.map((obj, key) => (
-              <div key={key} className={`max-md:hidden`}>
+              <div key={key} className={`max-lg:hidden`}>
                 <TagIcon
                   text={obj.text}
                   id={obj.id}
@@ -103,7 +103,7 @@ const TidingsDetail = () => {
                 {beforeData[0] ? beforeData[0].title : ''}
               </span>
             </button>
-            <span className={`text-regular14 text-grey-400 max-md:hidden`}>
+            <span className={`text-regular14 text-grey-400 max-lg:hidden`}>
               {beforeData[0] ? beforeData[0].start_date : ''}~
               {beforeData[0] ? beforeData[0].end_date : ''}
             </span>
@@ -127,7 +127,7 @@ const TidingsDetail = () => {
                   {afterData[0] ? afterData[0].title : ''}
                 </span>
               </button>
-              <span className={`text-regular14 text-grey-400 max-md:hidden`}>
+              <span className={`text-regular14 text-grey-400 max-lg:hidden`}>
                 {afterData[0] ? afterData[0].start_date : ''}~
                 {afterData[0] ? afterData[0].end_date : ''}
               </span>
@@ -135,7 +135,7 @@ const TidingsDetail = () => {
           </div>
         </div>
         <div
-          className={`flex w-full items-start justify-end max-md:justify-center`}
+          className={`flex w-full items-start justify-end max-lg:justify-center`}
         >
           <div
             className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500`}

@@ -1,11 +1,11 @@
 const MainFooter = () => {
   return (
     <>
-      <footer className='flex h-296 w-full items-center justify-center bg-white-solid px-20 max-md:hidden'>
+      <footer className='flex h-296 w-full items-center justify-center bg-white-solid px-20 max-lg:hidden'>
         <div
           className={`flex h-96 w-full max-w-1560 items-center justify-between`}
         >
-          <div className='flex h-full w-full max-w-180 items-start justify-start max-lg:hidden max-md:hidden'>
+          <div className='flex h-full w-full max-w-180 items-start justify-start max-lg:hidden'>
             <img
               src='/public/images/logo/footer_logo.png'
               className='w-76'
@@ -106,7 +106,7 @@ const MainFooter = () => {
       </footer>
 
       <footer
-        className={`hidden w-full flex-col items-center justify-center gap-24 bg-grey-50 px-28 py-32 max-md:flex`}
+        className={`hidden w-full flex-col items-center justify-center gap-24 bg-grey-50 px-28 py-32 max-lg:flex`}
       >
         <div
           className={`flex w-full flex-wrap items-start justify-start gap-4`}

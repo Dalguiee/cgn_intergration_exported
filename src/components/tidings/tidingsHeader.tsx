@@ -33,13 +33,13 @@ const TidingsHeader = () => {
     <>
       <Locator />
       <section
-        className={`flex h-176 w-full flex-col items-center justify-center pb-32 pt-40 max-md:h-80 max-md:px-20 max-md:py-24`}
+        className={`flex h-176 w-full flex-col items-center justify-center pb-32 pt-40 max-lg:h-80 max-lg:px-20 max-lg:py-24`}
       >
         <div className='flex flex-col items-center justify-center gap-16'>
-          <h1 className={`text-bold48 text-grey-900 max-md:text-bold24`}>
+          <h1 className={`text-bold48 text-grey-900 max-lg:text-bold24`}>
             {currentPath[0]?.title}
           </h1>
-          <span className={`text-regular18 text-grey-400 max-md:hidden`}>
+          <span className={`text-regular18 text-grey-400 max-lg:hidden`}>
             {currentPath[0]?.subTitle}
           </span>
         </div>

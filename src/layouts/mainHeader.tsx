@@ -139,7 +139,7 @@
 //   const [langActive, setLangActive] = useState(false); // 언어 선택 활성화 상태
 //   return (
 //     <div
-//       className={`flex h-48 w-full max-w-1560 items-center justify-end gap-10 max-md:hidden`}
+//       className={`flex h-48 w-full max-w-1560 items-center justify-end gap-10 max-lg:hidden`}
 //     >
 //       <div className='flex items-center justify-center h-24 gap-12'>
 //         <button className='h-full'>
@@ -182,10 +182,10 @@
 
 //   return (
 //     <div
-//       className={`relative z-20 flex w-full max-w-1560 flex-col items-center justify-center max-md:h-64 max-md:w-full`}
+//       className={`relative z-20 flex w-full max-w-1560 flex-col items-center justify-center max-lg:h-64 max-lg:w-full`}
 //     >
 //       <div
-//         className={`flex h-80 w-full items-center justify-between max-md:h-full`}
+//         className={`flex h-80 w-full items-center justify-between max-lg:h-full`}
 //       >
 //         <button
 //           onClick={() => {
@@ -205,7 +205,7 @@
 //           onMouseEnter={() => {
 //             setDepthActive(true);
 //           }}
-//           className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-80 max-lg:gap-50 max-md:hidden`}
+//           className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-80 max-lg:gap-50 max-lg:hidden`}
 //         >
 //           {centerMenu.map((menu, index) => (
 //             <div
@@ -245,12 +245,12 @@
 //         </div>
 //         <div className={`flex items-center justify-center gap-8`}>
 //           <button
-//             className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-regular14 text-grey-900 max-md:h-32 max-md:w-67`}
+//             className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-regular14 text-grey-900 max-lg:h-32 max-lg:w-67`}
 //           >
 //             On-Air
 //           </button>
 //           <button
-//             className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-md:h-32 max-md:w-67`}
+//             className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-lg:h-32 max-lg:w-67`}
 //           >
 //             후원하기
 //           </button>
@@ -267,7 +267,7 @@
 //                 return !item;
 //               });
 //             }}
-//             className={`hidden h-32 w-32 items-center justify-center px-6 max-md:block`}
+//             className={`hidden h-32 w-32 items-center justify-center px-6 max-lg:block`}
 //           >
 //             <div className={`flex flex-col items-end justify-center gap-4`}>
 //               <span
@@ -295,7 +295,7 @@
 //       onMouseLeave={() => {
 //         setDepthActive(false);
 //       }}
-//       className={`absolute max-md:hidden ${depthActive ? '' : 'hidden'} top-130 z-10 flex h-276 w-full items-center justify-center gap-20 bg-[url('/public/images/bg/header_2depth.svg')] bg-cover bg-center bg-no-repeat`}
+//       className={`absolute max-lg:hidden ${depthActive ? '' : 'hidden'} top-130 z-10 flex h-276 w-full items-center justify-center gap-20 bg-[url('/public/images/bg/header_2depth.svg')] bg-cover bg-center bg-no-repeat`}
 //     >
 //       {/* {centerMenu.map(menu => (
 //         <div
@@ -368,7 +368,7 @@
 
 //   return (
 //     <header
-//       className={`px-20 ${burgerVisible ? 'fixed top-0 max-md:bg-primary-500' : ''} z-10 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-md:border-b-2 max-md:border-grey-100 max-md:px-20`}
+//       className={`px-20 ${burgerVisible ? 'fixed top-0 max-lg:bg-primary-500' : ''} z-10 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:border-b-2 max-lg:border-grey-100 max-lg:px-20`}
 //       data-comment='메인헤더'
 //     >
 //       <TopHeader />
