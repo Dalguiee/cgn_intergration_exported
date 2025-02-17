@@ -1,14 +1,15 @@
 export const tidingsList = [
   { id: 1, type: '진행중' },
   { id: 3, type: '종료' },
-  { id: 2, type: '캠페인' },
-  { id: 7, type: '이벤트' },
 ];
 
 export const campaignMockup = [
   {
     id: 1,
-    tag: [{ text: '이벤트', id: 7, mode: 'mode1' }],
+    tag: [
+      { text: '이벤트', id: 7, mode: 'mode1' },
+      { text: '진행중', id: 1, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -89,7 +90,10 @@ export const campaignMockup = [
   },
   {
     id: 5,
-    tag: [{ text: '이벤트', id: 7, mode: 'mode1' }],
+    tag: [
+      { text: '이벤트', id: 7, mode: 'mode1' },
+      { text: '종료', id: 3, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -107,7 +111,10 @@ export const campaignMockup = [
   },
   {
     id: 6,
-    tag: [{ text: '이벤트', id: 7, mode: 'mode1' }],
+    tag: [
+      { text: '이벤트', id: 7, mode: 'mode1' },
+      { text: '종료', id: 3, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -125,7 +132,10 @@ export const campaignMockup = [
   },
   {
     id: 7,
-    tag: [{ text: '이벤트', id: 7, mode: 'mode1' }],
+    tag: [
+      { text: '이벤트', id: 7, mode: 'mode1' },
+      { text: '진행중', id: 1, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -161,7 +171,10 @@ export const campaignMockup = [
   },
   {
     id: 9,
-    tag: [{ text: '이벤트', id: 7, mode: 'mode1' }],
+    tag: [
+      { text: '이벤트', id: 7, mode: 'mode1' },
+      { text: '진행중', id: 1, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -190,7 +203,10 @@ export const tidingsMissionList = [
 export const missionMockup = [
   {
     id: 1,
-    tag: [{ text: 'CGN', id: 6, mode: 'mode1' }],
+    tag: [
+      { text: 'CGN', id: 6, mode: 'mode1' },
+      { text: '선교지', id: 5, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -292,7 +308,10 @@ export const missionMockup = [
   },
   {
     id: 6,
-    tag: [{ text: 'CGN', id: 6, mode: 'mode1' }],
+    tag: [
+      { text: 'CGN', id: 6, mode: 'mode1' },
+      { text: '해외지사', id: 9, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -310,7 +329,10 @@ export const missionMockup = [
   },
   {
     id: 7,
-    tag: [{ text: 'CGN', id: 6, mode: 'mode1' }],
+    tag: [
+      { text: 'CGN', id: 6, mode: 'mode1' },
+      { text: '선교사기도', id: 4, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',
@@ -328,7 +350,10 @@ export const missionMockup = [
   },
   {
     id: 8,
-    tag: [{ text: 'CGN', id: 6, mode: 'mode1' }],
+    tag: [
+      { text: 'CGN', id: 6, mode: 'mode1' },
+      { text: '기타', id: 10, mode: 'mode1' },
+    ],
     src: '/public/images/tidings/card_content_small.png',
     content_src: [
       '/public/images/tidings/card_content_big.png',

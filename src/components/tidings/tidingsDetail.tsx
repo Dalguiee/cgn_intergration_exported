@@ -14,8 +14,6 @@ const Swiper_sec = ({ detailData }) => {
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={`mt-16`}
-      navigation
-      pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       spaceBetween={50}
       slidesPerView={1}

@@ -25,10 +25,11 @@ const TidingsMain = () => {
         setData={setData}
       />
       <section
+        data-aos='fade-up'
         className={`flex w-full items-center justify-center pb-160 pt-80 max-md:px-20 max-md:pt-0`}
       >
         <div
-          className={`flex w-full max-w-1560 flex-wrap items-start justify-center gap-24`}
+          className={`flex w-1200 max-w-1560 flex-wrap items-start justify-start gap-24`}
         >
           {data?.map(item => (
             <TidingsCard key={item.id} allData={campaignMockup} item={item} />

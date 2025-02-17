@@ -24,7 +24,7 @@ const Swiper_sec = ({ pageMode, data }) => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={``}
       spaceBetween={64}
-      slidesPerView={data.length < 3 ? 2 : ''}
+      slidesPerView={data && data.length < 3 ? 2 : undefined}
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
       breakpoints={{
@@ -37,7 +37,7 @@ const Swiper_sec = ({ pageMode, data }) => {
           spaceBetween: 32,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: data && data.length >= 3 ? 3 : 1,
           spaceBetween: 64,
         },
       }}
@@ -125,7 +125,7 @@ const TidingsMission = () => {
         setData={setData}
       />
       <section
-        className={`flex w-full flex-col items-center justify-center pb-160 pt-80 max-md:px-20 max-md:pt-0`}
+        className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-80 max-md:px-20 max-md:pt-0`}
       >
         <div
           className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-md:flex`}

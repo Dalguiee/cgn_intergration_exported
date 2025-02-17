@@ -5,7 +5,6 @@ const TidingsCard = ({ item, allData }) => {
   const navigator = useNavigate();
   return (
     <button
-      data-aos='fade-up'
       onClick={() => {
         navigator(`/tidings/campaign/detail`, {
           state: { detailData: item, allData },

@@ -66,7 +66,7 @@ const BottomHeader = ({
           onMouseEnter={() => {
             setDepthActive(true);
           }}
-          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-88 max-lg:gap-56 max-md:hidden`}
+          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between gap-80 max-lg:gap-50 max-md:hidden`}
         >
           {centerMenu.map((menu, index) => (
             <div
@@ -78,7 +78,11 @@ const BottomHeader = ({
                   navigate(menu.link);
                 }}
               >
-                <span className={`text-bold18`}>{menu.text}</span>
+                <span
+                  className={`text-bold18 text-grey-900 max-xl:text-bold14`}
+                >
+                  {menu.text}
+                </span>
               </button>
               <div
                 className={`absolute gap-8 ${depthActive ? '' : 'hidden'} top-79 flex flex-col items-center justify-center`}
@@ -90,7 +94,7 @@ const BottomHeader = ({
                       navigate(subMenu.link);
                       setDepthActive(false);
                     }}
-                    className={`text-nowrap text-regular14 text-primary-100`}
+                    className={`text-nowrap text-regular14 text-primary-100 max-xl:text-regular12`}
                   >
                     {subMenu.text}
                   </button>
