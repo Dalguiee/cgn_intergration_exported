@@ -1,4 +1,4 @@
-//개발중
+// 개발중입니다.
 
 import TidingsBroadcast from '@/components/tidings/tidingsBroadcast';
 import TidingsHeader from '@/components/tidings/tidingsHeader';

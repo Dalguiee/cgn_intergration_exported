@@ -1,4 +1,4 @@
-//개발중
+// 개발중인 컴포넌트입니다.
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';

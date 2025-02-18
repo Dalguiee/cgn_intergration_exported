@@ -1,44 +1,31 @@
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+// 개발중입니다.
 
 import React, { useEffect, useRef, useState } from 'react';
 
 const Home = () => {
-  // const verticalBox = useRef();
-  // const [position, setPosition] = useState('0');
+  const verticalBox = useRef();
+  const [position, setPosition] = useState('0');
 
-  // useEffect(() => {
-  //   const positionCalc = () => {
-  //     if (verticalBox) {
-  //       const getPositon = verticalBox.current.getBoundingClientRect();
-  //       const calculatedPosition = (getPositon.top / getPositon.height) * -100;
-  //       if (calculatedPosition < 0) {
-  //         console.log('스크롤 준비');
-  //       } else if (calculatedPosition > 0 && calculatedPosition < 90) {
-  //         setPosition(calculatedPosition);
-  //         console.log('스크롤중');
-  //       } else if (calculatedPosition > 90) {
-  //         console.log('스크롤 끝남');
-  //       }
-  //       console.log(calculatedPosition);
-  //     }
-  //   };
+  useEffect(() => {
+    const positionCalc = () => {
+      if (verticalBox) {
+        const getPositon = verticalBox.current.getBoundingClientRect();
+        const calculatedPosition = (getPositon.top / getPositon.height) * -100;
+        if (calculatedPosition < 0) {
+          console.log('스크롤 준비');
+        } else if (calculatedPosition > 0 && calculatedPosition < 90) {
+          setPosition(calculatedPosition);
+          console.log('스크롤중');
+        } else if (calculatedPosition > 90) {
+          console.log('스크롤 끝남');
+        }
+        console.log(calculatedPosition);
+      }
+    };
 
-  //   window.addEventListener('scroll', positionCalc);
-  //   return () => window.removeEventListener('scroll', positionCalc);
-  // }, []);
-
-  return <>퍼블중</>;
+    window.addEventListener('scroll', positionCalc);
+    return () => window.removeEventListener('scroll', positionCalc);
+  }, []);
 
   return (
     <>

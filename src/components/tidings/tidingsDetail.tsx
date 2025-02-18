@@ -39,7 +39,7 @@ const SwiperSec = ({ currentData }) => {
 const TidingsDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { subDepth } = useParams(); // 소식 상세페이지
+  const { subDepth } = useParams(); // tidings 이후에 붙는 params
   const querySearch = new URLSearchParams(location.search);
   const queryData = Object.fromEntries(querySearch);
   const [allData, setAllData] = useState(null); // 기사 전체 데이터
@@ -47,69 +47,112 @@ const TidingsDetail = () => {
   const [beforeData, setBeforeData] = useState({});
   const [afterData, setAfterData] = useState({});
 
-  // 기사 찾는 함수
-  const articleSearch = id => {
-    console.log(allData);
-    const result = allData?.data?.filter(item => item.id == id);
-    console.log(result);
-    if (result?.length > 0) {
-      return result[0];
-    } else {
-      return null;
-    }
-  };
+  // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
+  // 과장님 코드를 학습하고 재구성한 코드이며 폐기될 예정
+  useEffect(() => {
+    const mockupExport = mockupData?.filter(item => {
+      return location.pathname.includes(item.path);
+    });
+    const mockupExportedData = mockupExport?.[0]?.data;
+    setAllData(mockupExportedData);
+  }, [queryData?.articleId, location]);
+
+  useEffect(() => {
+    const findedArticle = allData?.filter(
+      item => item.id === Number(queryData?.articleId)
+    );
+    const findedBeforeArticle = allData?.filter(
+      item => item.id < Number(queryData?.articleId)
+    );
+    const findedAfterArticle = allData?.filter(
+      item => item.id > Number(queryData?.articleId)
+    );
+
+    setCurrentData(item => {
+      if (queryData?.articleId) {
+        return findedArticle?.[0];
+      } else {
+        return null;
+      }
+    });
+    setBeforeData(item => {
+      if (queryData?.articleId) {
+        return findedBeforeArticle?.[findedBeforeArticle?.length - 1];
+      } else {
+        return null;
+      }
+    });
+    setAfterData(item => {
+      if (queryData?.articleId) {
+        return findedAfterArticle?.[0];
+      } else {
+        return null;
+      }
+    });
+  }, [allData, queryData?.articleId]);
+
+  // 과장님으로부터 안전하게 재구성된 코드
+  // // 기사 찾는 함수
+  // const articleSearch = id => {
+  //   const result = allData?.data?.filter(item => item.id == id);
+  //   if (result?.length > 0) {
+  //     return result[0];
+  //   } else {
+  //     return null;
+  //   }
+  // };
+
+  // // 페이지에 따라 데이터 가져오기
+  // useEffect(() => {
+  //   if (location.pathname) {
+  //     switch (location.pathname) {
+  //       case '/tidings/campaign/detail':
+  //         setAllData(mockupData[0]);
+  //         break;
+  //       case '/tidings/mission/detail':
+  //         setAllData(mockupData[1]);
+  //         break;
+  //       case '/tidings/support/detail':
+  //         setAllData(mockupData[2]);
+  //         break;
+  //       case '/tidings/broadcast/detail':
+  //         setAllData(mockupData[3]);
+  //         break;
+  //       default:
+  //         setAllData(mockupData[0]);
+  //     }
+  //   }
+  // }, [queryData]);
+
+  // // 데이터 셋팅
+  // useEffect(() => {
+  //   if (allData) {
+  //     const articleID = queryData.articleId;
+  //     // 이전데이터
+  //     if (Number(articleID) - 1) {
+  //       setBeforeData(articleSearch(Number(articleID) - 1));
+  //     } else {
+  //       setBeforeData(null);
+  //     }
+  //     // 현재 데이터
+  //     if (Number(articleID)) {
+  //       setCurrentData(articleSearch(Number(articleID)));
+  //     } else {
+  //       setCurrentData(null);
+  //     }
+  //     // 다음 데이터
+  //     if (Number(articleID) + 1) {
+  //       setAfterData(articleSearch(Number(articleID) + 1));
+  //     } else {
+  //       setAfterData(null);
+  //     }
+  //   }
+  // }, [queryData.articleId, allData]);
 
   // 디테일페이지 넘어올 경우 맨 위로 올려줍니다
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-
-  // 페이지에 따라 데이터 가져오기
-  useEffect(() => {
-    if (location.pathname) {
-      switch (location.pathname) {
-        case '/tidings/campaign/detail':
-          setAllData(mockupData[0]);
-          break;
-        case '/tidings/mission/detail':
-          setAllData(mockupData[1]);
-          break;
-        case '/tidings/support/detail':
-          setAllData(mockupData[2]);
-          break;
-        case '/tidings/broadcast/detail':
-          setAllData(mockupData[3]);
-          break;
-        default:
-          setAllData(mockupData[0]);
-      }
-    }
-  }, [queryData]);
-
-  // 데이터 셋팅
-  useEffect(() => {
-    if (allData) {
-      const articleID = queryData.articleId;
-      // 이전데이터
-      if (Number(articleID) - 1) {
-        setBeforeData(articleSearch(Number(articleID) - 1));
-      } else {
-        setBeforeData(null);
-      }
-      // 현재 데이터
-      if (Number(articleID)) {
-        setCurrentData(articleSearch(Number(articleID)));
-      } else {
-        setAfterData(null);
-      }
-      // 다음 데이터
-      if (Number(articleID) + 1) {
-        setAfterData(articleSearch(Number(articleID) + 1));
-      } else {
-        setAfterData(null);
-      }
-    }
-  }, [queryData.articleId, allData]);
 
   return (
     <section
@@ -161,15 +204,12 @@ const TidingsDetail = () => {
             <button
               onClick={() => {
                 navigate(
-                  `/tidings/${subDepth}/detail?articleId=${beforeData?.id}`,
-                  {
-                    state: { currentData: beforeData, allData },
-                  }
+                  `/tidings/${subDepth}/detail?articleId=${beforeData?.id}`
                 );
               }}
             >
               <span className={`text-bold16 text-grey-900`}>이전 글</span>
-              <span className={`ml-16 text-regular16 text-grey-500`}>
+              <span className={`text-regular16 ml-16 text-grey-500`}>
                 {beforeData?.title}
               </span>
             </button>
@@ -190,7 +230,7 @@ const TidingsDetail = () => {
                 }}
               >
                 <span className={`text-bold16 text-grey-900`}>다음 글</span>
-                <span className={`ml-16 text-regular16 text-grey-500`}>
+                <span className={`text-regular16 ml-16 text-grey-500`}>
                   {afterData?.title}
                 </span>
               </button>

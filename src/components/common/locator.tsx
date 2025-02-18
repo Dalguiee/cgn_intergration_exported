@@ -1,3 +1,5 @@
+// 헤더 아래 각 페이지 이동할 수 있는 로케이터 입니다.
+
 import React, { useEffect, useState, Fragment } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 

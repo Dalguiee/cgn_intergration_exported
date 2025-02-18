@@ -1,4 +1,4 @@
-//개발중
+// 개발중인 컴포넌트 입니다.
 
 import { useNavigate } from 'react-router-dom';
 import TagIcon from '@/components/common/tagIcon';
