@@ -8,7 +8,7 @@ const TidingsCard = ({ item, allData }) => {
   return (
     <button
       onClick={() => {
-        navigator(`/tidings/campaign/detail`, {
+        navigator(`/tidings/campaign/detail?id=${item?.id}`, {
           state: { detailData: item, allData },
         });
       }}

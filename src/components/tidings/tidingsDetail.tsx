@@ -1,6 +1,7 @@
 // 훅
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -38,12 +39,14 @@ const TidingsDetail = () => {
   const navi = useNavigate();
   // detailData 는 body 데이터로써 detail 에서 컨텐츠를 보여주기 위해 직접 전송됩니다.
   // allData 는 detail 에서 해당 페이지의 이전, 이후 페이지를 추적하기 위하여 같이 전송합니다.
+
   const { detailData, allData } = location.state;
   // 이전 이후 페이지를 분기하는 데이터 필터링 부분입니다.
   const beforeData = allData.filter(item => item.id < detailData?.id);
   beforeData?.sort((a, b) => b.id - a.id);
   const afterData = allData.filter(item => item.id > detailData?.id);
 
+  // 디테일페이지 넘어올 경우 맨 위로 올려줍니다
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
