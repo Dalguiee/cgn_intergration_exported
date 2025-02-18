@@ -30,12 +30,10 @@ const TidingsCard = ({ item, allData }) => {
         </div>
         <div>
           <span className={`text-regular14 text-grey-400`}>
-            {item.start_date}
+            {item.startDate}
           </span>
           <span className={`text-regular14 text-grey-400`}>~</span>
-          <span className={`text-regular14 text-grey-400`}>
-            {item.end_date}
-          </span>
+          <span className={`text-regular14 text-grey-400`}>{item.endDate}</span>
         </div>
       </div>
       <div className={`mt-12 flex w-full items-center justify-start`}>

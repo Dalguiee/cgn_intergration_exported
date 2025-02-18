@@ -1,10 +1,6 @@
 // 훅
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-
-// 컴포넌트
-import TagIcon from '@/components/common/tagBtn';
-
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -13,7 +9,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const Swiper_sec = ({ detailData }) => {
+// 컴포넌트
+import TagIcon from '@/components/common/tagBtn';
+
+const SwiperSec = ({ detailData }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -24,7 +23,7 @@ const Swiper_sec = ({ detailData }) => {
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
     >
-      {detailData?.content_src.map((obj, key) => (
+      {detailData?.contentSrc.map((obj, key) => (
         <SwiperSlide key={key}>
           <img src={obj} alt='' />
         </SwiperSlide>
@@ -35,23 +34,19 @@ const Swiper_sec = ({ detailData }) => {
 
 const TidingsDetail = () => {
   const location = useLocation();
+  const { subDepth } = useParams(); // 소식 상세페이지
+  const navi = useNavigate();
   // detailData 는 body 데이터로써 detail 에서 컨텐츠를 보여주기 위해 직접 전송됩니다.
   // allData 는 detail 에서 해당 페이지의 이전, 이후 페이지를 추적하기 위하여 같이 전송합니다.
   const { detailData, allData } = location.state;
-  const navi = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
-  // params 를 추적하여 tidings 에서 어떠한 데이터의 detail 인지 분기처리를 자동으로 합니다.
-  // 마지막 목록으로 돌아가는 navigate 부분에서도 사용됩니다.
-  const { subDepth } = useParams();
-
   // 이전 이후 페이지를 분기하는 데이터 필터링 부분입니다.
   const beforeData = allData.filter(item => item.id < detailData?.id);
   beforeData?.sort((a, b) => b.id - a.id);
   const afterData = allData.filter(item => item.id > detailData?.id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   if (detailData?.length === 0) return <></>;
   return (
@@ -74,17 +69,17 @@ const TidingsDetail = () => {
               </div>
             ))}
             <span className={`text-bold24 text-grey-900`}>
-              {detailData?.detail_title}
+              {detailData?.detailTitle}
             </span>
           </div>
           <span className={`text-regular14 text-grey-400`}>
-            {detailData?.start_date}
+            {detailData?.startDate}
           </span>
         </div>
         <div className={`py-60 max-lg:pb-60 max-lg:pt-16`}>
           <div className={`mb-16`}>
             <span className={`text-bold24 text-grey-500`}>
-              {detailData?.sub_title}
+              {detailData?.subTitle}
             </span>
           </div>
           <div>
@@ -92,7 +87,7 @@ const TidingsDetail = () => {
               {detailData?.content}
             </span>
           </div>
-          <Swiper_sec detailData={detailData} />
+          <SwiperSec detailData={detailData} />
         </div>
 
         <div
@@ -114,8 +109,8 @@ const TidingsDetail = () => {
               </span>
             </button>
             <span className={`text-regular14 text-grey-400 max-lg:hidden`}>
-              {beforeData[0] ? beforeData?.[0]?.start_date : ''}~
-              {beforeData[0] ? beforeData?.[0]?.end_date : ''}
+              {beforeData[0] ? beforeData?.[0]?.startDate : ''}~
+              {beforeData[0] ? beforeData?.[0]?.endDate : ''}
             </span>
           </div>
 
@@ -138,8 +133,8 @@ const TidingsDetail = () => {
                 </span>
               </button>
               <span className={`text-regular14 text-grey-400 max-lg:hidden`}>
-                {afterData?.[0] ? afterData?.[0]?.start_date : ''}~
-                {afterData?.[0] ? afterData?.[0]?.end_date : ''}
+                {afterData?.[0] ? afterData?.[0]?.startDate : ''}~
+                {afterData?.[0] ? afterData?.[0]?.endDate : ''}
               </span>
             </div>
           </div>

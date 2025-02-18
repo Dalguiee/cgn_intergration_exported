@@ -25,7 +25,7 @@ export default function MainRouter() {
     </Routes>
   );
 
-  // 개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+  // 개발중
   return (
     <Routes>
       <Route path='/*' element={<DefaultLayer />}>
