@@ -6,7 +6,7 @@ const BurgerSubMenu = ({ burger, centerMenu, setBurger }) => {
 
   return (
     <section
-      className={`fixed top-128 z-10 flex h-full w-full flex-col items-start justify-start gap-8 overflow-hidden bg-white-solid px-24 pt-16 ${burger ? 'block' : 'hidden'}`}
+      className={`fixed top-128 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-hidden bg-white-solid px-24 pt-16 ${burger ? 'block' : 'hidden'}`}
     >
       {centerMenu.map((menu, key) => (
         <div key={key}>

@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useEffect } from 'react';
 
 const Swiper_sec = ({ detailData }) => {
   return (
@@ -36,6 +37,10 @@ const TidingsDetail = () => {
   const { detailData, allData } = location.state;
   const navi = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   // params 를 추적하여 tidings 에서 어떠한 데이터의 detail 인지 분기처리를 자동으로 합니다.
   // 마지막 목록으로 돌아가는 navigate 부분에서도 사용됩니다.
   const { subDepth } = useParams();
@@ -48,11 +53,11 @@ const TidingsDetail = () => {
   if (detailData.length === 0) return <></>;
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center pb-160 pt-40 max-lg:px-20`}
+      className={`flex w-full flex-col items-center justify-center pb-160 pt-40 max-lg:px-20 max-lg:py-0`}
     >
       <div className='w-full max-w-1200'>
         <div
-          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-20`}
+          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-20 max-lg:gap-8 max-lg:border-b-1 max-lg:border-t-0 max-lg:border-b-grey-100`}
         >
           <div className={`flex items-center justify-center gap-16`}>
             {detailData.tag.map((obj, key) => (
@@ -73,7 +78,7 @@ const TidingsDetail = () => {
             {detailData.start_date}
           </span>
         </div>
-        <div className={`py-60`}>
+        <div className={`py-60 max-lg:pb-60 max-lg:pt-16`}>
           <div className={`mb-16`}>
             <span className={`text-bold24 text-grey-500`}>
               {detailData.sub_title}
@@ -87,7 +92,9 @@ const TidingsDetail = () => {
           <Swiper_sec detailData={detailData} />
         </div>
 
-        <div className={`w-full border-b-3 border-t-3 border-grey-900 px-4`}>
+        <div
+          className={`w-full border-b-3 border-t-3 border-grey-900 px-4 max-lg:hidden`}
+        >
           <div
             className={`${beforeData[0] ? '' : 'hidden'} flex h-80 items-center justify-between`}
           >
@@ -141,7 +148,7 @@ const TidingsDetail = () => {
             onClick={() => {
               navi(`/tidings/${subDepth}`);
             }}
-            className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500`}
+            className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-32 max-lg:mt-16 max-lg:h-52 max-lg:w-full`}
           >
             <span className={`text-bold24 text-white-solid`}>목록</span>
           </button>

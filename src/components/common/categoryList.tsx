@@ -48,7 +48,7 @@ const CategoryList = ({ setSelectedId }) => {
       className={`flex w-full flex-col items-start justify-center max-lg:overflow-x-scroll`}
     >
       <div
-        className={`mx-auto flex w-fit items-center justify-center gap-8 py-10 max-lg:px-20`}
+        className={`mx-auto flex w-fit items-center justify-center gap-8 py-10 max-lg:gap-4 max-lg:px-20`}
       >
         <button
           onClick={() => {
@@ -67,7 +67,7 @@ const CategoryList = ({ setSelectedId }) => {
               setSelectedId(item.id);
             }}
             key={item.id}
-            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 min-w-96 text-nowrap rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36`}
+            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
           >
             {item.type}
           </button>

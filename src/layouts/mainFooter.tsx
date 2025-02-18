@@ -67,20 +67,22 @@ const MainFooter = () => {
               </span>
             </div>
           </div>
-          <div className='m h-full'>
+          <div className='h-full w-fit'>
             <div className={`flex items-center justify-center`}>
               <div className={`flex items-center justify-center gap-8`}>
-                <button>
+                <button className={`w-40`}>
                   <img
+                    className={`w-full object-cover`}
                     src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
                     width='40px'
                     height='40px'
                     alt=''
                   />
                 </button>
-                <button>
+                <button className={`w-40`}>
                   <img
                     src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
+                    className={`w-full object-cover`}
                     width='40px'
                     height='40px'
                     alt=''
@@ -111,14 +113,11 @@ const MainFooter = () => {
         <div
           className={`flex w-full flex-wrap items-start justify-start gap-4`}
         >
-          <span className={`px-12 py-4 text-bold14 text-grey-900`}>
+          <span className={`px-12 py-4 pr-12 text-bold14 text-grey-900`}>
             공지사항
           </span>
           <span className={`px-12 py-4 text-bold14 text-grey-900`}>FAQ</span>
           <span className={`px-12 py-4 text-bold14 text-grey-900`}>채용</span>
-          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
-            이용약관
-          </span>
           <span className={`px-12 py-4 text-regular14 text-grey-900`}>
             이용약관
           </span>
@@ -129,7 +128,7 @@ const MainFooter = () => {
             이메일무단수집거부
           </span>
         </div>
-        <div className={`flex w-full items-center justify-between`}>
+        <div className={`flex w-full items-center justify-between px-12`}>
           <div className={`flex items-center justify-center gap-8`}>
             <img
               className={`h-40 w-40`}
@@ -161,7 +160,7 @@ const MainFooter = () => {
             </button>
           </div>
         </div>
-        <div className='flex w-full flex-col items-start justify-center'>
+        <div className='flex w-full flex-col items-start justify-center px-12'>
           <span className={`text-regular14 text-grey-500`}>
             서울특별시 용산구 서빙고로 269(서빙고동)
           </span>
@@ -169,7 +168,9 @@ const MainFooter = () => {
             사업자등록번호 : 106-82-11892     (재)온누리 선교재단
           </span>
         </div>
-        <div className={`flex w-full flex-col items-start justify-center`}>
+        <div
+          className={`flex w-full flex-col items-start justify-center gap-8 px-12`}
+        >
           <span className={`text-bold16 text-grey-900`}>대표자 이재훈</span>
           <span className={`text-bold16 text-grey-900`}>
             대표전화 02-796-9800
@@ -178,7 +179,7 @@ const MainFooter = () => {
             이메일 cs@cgnmail.net
           </span>
         </div>
-        <span className={'h-2 w-full gap-8 border-t-2 border-grey-100'}></span>
+        <span className={'h-1 w-full gap-8 border-t-1 border-grey-100'}></span>
         <div className={`w-full`}>
           <span className={`text-regular12 text-grey-500`}>
             Copyright (C) CGN. All right reserved.

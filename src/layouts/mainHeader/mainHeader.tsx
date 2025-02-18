@@ -154,6 +154,15 @@ const MainHeader = () => {
   const [burger, setBurger] = useState(false);
 
   useEffect(() => {
+    console.log('버거바뀜');
+    if (burger) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [burger]);
+
+  useEffect(() => {
     const resizeSetting = () => {
       if (window.innerWidth >= 1024) {
         setBurger(false);
@@ -167,7 +176,7 @@ const MainHeader = () => {
 
   return (
     <header
-      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} z-10 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:border-b-2 max-lg:border-grey-100 max-lg:px-20`}
+      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} z-10 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
       data-comment='메인헤더'
     >
       <TopHeader />
