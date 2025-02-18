@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 import { mockupData } from '@/db/mockup';
 
 // 컴포넌트
-import TagIcon from '@/components/common/tagBtn';
+import TagIcon from '@/components/common/tagIcon';
 
 const TidingsBroadcast = () => {
   const location = useLocation();

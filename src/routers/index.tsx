@@ -10,20 +10,20 @@ import TidingsMissionPage from '@/pages/tidings/mission';
 import TidingsSupportPage from '@/pages/tidings/support';
 
 export default function MainRouter() {
-  return (
-    <Routes>
-      <Route path='/*' element={<DefaultLayer />}>
-        <Route
-          path='tidings/campaign'
-          element={<TidingsCampaignPage />}
-        ></Route>
-        <Route
-          path='tidings/:subDepth/detail'
-          element={<TidingsDetailPage />}
-        ></Route>
-      </Route>
-    </Routes>
-  );
+  // return (
+  //   <Routes>
+  //     <Route path='/*' element={<DefaultLayer />}>
+  //       <Route
+  //         path='tidings/campaign'
+  //         element={<TidingsCampaignPage />}
+  //       ></Route>
+  //       <Route
+  //         path='tidings/:subDepth/detail'
+  //         element={<TidingsDetailPage />}
+  //       ></Route>
+  //     </Route>
+  //   </Routes>
+  // );
 
   // 개발중
   return (

@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import TextScroll from '@/components/tidings/mission/textScroll';
 import CategoryList from '@/components/common/categoryList';
 import TidingsCard2 from '@/components/tidings/tidingsCard2';
-import TagIcon from '@/components/common/tagBtn';
+import TagIcon from '@/components/common/tagIcon';
 
 import { mockupData } from '@/db/mockup';
 
@@ -63,70 +63,69 @@ const SwiperSec = ({ pageMode, findedMockupData }) => {
 // pageMode 에 따라 불러오는 컨텐츠 분기를 걸어놓았습니다.
 
 const TidingsMission = () => {
-  // const location = useLocation();
-  // const contentBox = useRef(null);
-  // const [findedMockupData, setfindedMockupData] = useState();
-  // const [pageMode, setPageMode] = useState('');
-  // const [pagingNum, setPagingNum] = useState(0);
-  // const [bgBoxPositon, setBgBoxPosition] = useState(0);
-  // const [selectedId, setSelectedId] = useState(0);
+  const location = useLocation();
+  const contentBox = useRef(null);
+  const [findedMockupData, setfindedMockupData] = useState();
+  const [pageMode, setPageMode] = useState('');
+  const [pagingNum, setPagingNum] = useState(0);
+  const [bgBoxPositon, setBgBoxPosition] = useState(0);
+  const [selectedId, setSelectedId] = useState(0);
 
-  // // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
-  // const mockupExport = mockupData.filter(item => {
-  //   return item.path.includes(location.pathname);
-  // });
-  // const mockupExportedData = mockupExport?.[0]?.data;
+  // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
+  const mockupExport = mockupData.filter(item => {
+    return item.path.includes(location.pathname);
+  });
+  const mockupExportedData = mockupExport?.[0]?.data;
 
-  // // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
-  // useEffect(() => {
-  //   setfindedMockupData(mockupExportedData);
-  // }, [location, selectedId]);
+  // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
+  useEffect(() => {
+    setfindedMockupData(mockupExportedData);
+  }, [location, selectedId]);
 
-  // // category list 에서 selectedId 에 따라 filter 연동을 위하여 state 에 update 합니다.
-  // useEffect(() => {
-  //   if (selectedId === 0) {
-  //     setfindedMockupData(mockupExportedData);
-  //   } else {
-  //     setfindedMockupData(
-  //       mockupExportedData.filter(item => {
-  //         return item?.tag?.some(obj => obj.id === Number(selectedId));
-  //       })
-  //     );
-  //   }
-  // }, [selectedId]);
+  // category list 에서 selectedId 에 따라 filter 연동을 위하여 state 에 update 합니다.
+  useEffect(() => {
+    if (selectedId === 0) {
+      setfindedMockupData(mockupExportedData);
+    } else {
+      setfindedMockupData(
+        mockupExportedData.filter(item => {
+          return item?.tag?.some(obj => obj.id === Number(selectedId));
+        })
+      );
+    }
+  }, [selectedId]);
 
-  // useEffect(() => {
-  //   if (location?.pathname?.includes('tidings/mission')) {
-  //     setPageMode('mission');
-  //   } else if (location?.pathname?.includes('tidings/support')) {
-  //     setPageMode('support');
-  //   }
-  // }, [pageMode, location]);
+  useEffect(() => {
+    if (location?.pathname?.includes('tidings/mission')) {
+      setPageMode('mission');
+    } else if (location?.pathname?.includes('tidings/support')) {
+      setPageMode('support');
+    }
+  }, [pageMode, location]);
 
-  // const pagingNext = () => {
-  //   if (pagingNum < findedMockupData?.length - 1) {
-  //     setPagingNum(item => {
-  //       return item + 1;
-  //     });
-  //   } else {
-  //     console.log('최대치도달');
-  //   }
-  // };
-  // const pagingPrev = () => {
-  //   if (pagingNum > 0) {
-  //     setPagingNum(item => {
-  //       return item - 1;
-  //     });
-  //   } else {
-  //     console.log('최소치도달');
-  //   }
-  // };
+  const pagingNext = () => {
+    if (pagingNum < findedMockupData?.length - 1) {
+      setPagingNum(item => {
+        return item + 1;
+      });
+    } else {
+      console.log('최대치도달');
+    }
+  };
+  const pagingPrev = () => {
+    if (pagingNum > 0) {
+      setPagingNum(item => {
+        return item - 1;
+      });
+    } else {
+      console.log('최소치도달');
+    }
+  };
 
-  // const positionFind = e => {
-  //   setBgBoxPosition(e.target.offsetTop);
-  // };
+  const positionFind = e => {
+    setBgBoxPosition(e.target.offsetTop);
+  };
 
-  return <>개발중</>;
   if (!findedMockupData) return <></>;
 
   return (
@@ -215,7 +214,7 @@ const TidingsMission = () => {
                       />
                     ))}
                     <span className={`text-regular14 text-grey-500`}>
-                      {findedMockupData?.[pagingNum]?.start_date}
+                      {findedMockupData?.[pagingNum]?.startDate}
                     </span>
                   </div>
                   <div>
@@ -254,7 +253,7 @@ const TidingsMission = () => {
                   </span>
                 </div>
                 <span className={`text-regular14 text-grey-400`}>
-                  {data.start_date}
+                  {data.startDate}
                 </span>
               </div>
             ))}

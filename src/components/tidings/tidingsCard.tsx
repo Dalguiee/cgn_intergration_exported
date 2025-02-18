@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import TagIcon from '@/components/common/tagBtn';
+import TagIcon from '@/components/common/tagIcon';
 
 // 캠페인 이벤트에 사용되는 1형 카드 컴포넌트 입니다
 
@@ -8,7 +8,7 @@ const TidingsCard = ({ item, allData }) => {
   return (
     <button
       onClick={() => {
-        navigator(`/tidings/campaign/detail?id=${item?.id}`, {
+        navigator(`/tidings/campaign/detail?articleId=${item?.id}`, {
           state: { detailData: item, allData },
         });
       }}

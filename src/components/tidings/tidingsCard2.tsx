@@ -1,19 +1,17 @@
 //개발중
 
 import { useNavigate } from 'react-router-dom';
-import TagIcon from '@/components/common/tagBtn';
+import TagIcon from '@/components/common/tagIcon';
 
 // 미션 및 후원에 사용되는 유형2의 컨텐츠 카드 컴포넌트 입니다
 
 const TidingsCard2 = ({ item, allData, pageMode }) => {
-  // const navigator = useNavigate();
-
-  return <>개발중</>;
+  const navigator = useNavigate();
   return (
     <button
       data-aos='fade-up'
       onClick={() => {
-        navigator(`/tidings/${pageMode}/detail`, {
+        navigator(`/tidings/${pageMode}/detail?id=${item.id}`, {
           state: { detailData: item, allData },
         });
       }}
@@ -37,11 +35,11 @@ const TidingsCard2 = ({ item, allData, pageMode }) => {
           </div>
           <div>
             <span className={`text-regular14 text-grey-400`}>
-              {item.start_date}
+              {item.startDate}
             </span>
             <span className={`text-regular14 text-grey-400`}>~</span>
             <span className={`text-regular14 text-grey-400`}>
-              {item.end_date}
+              {item.endDate}
             </span>
           </div>
         </div>
