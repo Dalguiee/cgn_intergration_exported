@@ -49,9 +49,9 @@ const TidingsDetail = () => {
   const { subDepth } = useParams();
 
   // 이전 이후 페이지를 분기하는 데이터 필터링 부분입니다.
-  const beforeData = allData.filter(item => item.id < detailData.id);
-  beforeData.sort((a, b) => b.id - a.id);
-  const afterData = allData.filter(item => item.id > detailData.id);
+  const beforeData = allData.filter(item => item.id < detailData?.id);
+  beforeData?.sort((a, b) => b.id - a.id);
+  const afterData = allData.filter(item => item.id > detailData?.id);
 
   if (detailData?.length === 0) return <></>;
   return (

@@ -7,7 +7,6 @@ const Locator = () => {
   const [changedPathName, setChangedPathName] = useState([]);
 
   const { subDepth } = useParams();
-  console.log(subDepth);
 
   useEffect(() => {
     let pathStack = '';
