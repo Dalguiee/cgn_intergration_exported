@@ -11,7 +11,7 @@ const TidingsCard2 = ({ item, allData, pageMode }) => {
     <button
       data-aos='fade-up'
       onClick={() => {
-        navigator(`/tidings/${pageMode}/detail?id=${item.id}`, {
+        navigator(`/tidings/${pageMode}/detail?articleId=${item.id}`, {
           state: { detailData: item, allData },
         });
       }}
