@@ -242,18 +242,25 @@ const TidingsMission = () => {
                   positionFind(e);
                 }}
                 className={`relative z-20 flex h-80 w-full items-center justify-between px-24 py-24`}
-                key={data.id}
+                key={data?.id}
               >
                 <div className={`flex items-center justify-center gap-16`}>
-                  {data.tag.slice(0, 1).map((item, key) => (
-                    <TagIcon id={item.id} key={key} text={item.text} />
-                  ))}
+                  {data?.tag
+                    .slice(0, 1)
+                    .map((item, key) => (
+                      <TagIcon
+                        mode={item?.mode}
+                        id={item?.id}
+                        key={key}
+                        text={item?.text}
+                      />
+                    ))}
                   <span className={`text-bold18 text-grey-900`}>
-                    {data.title}
+                    {data?.title}
                   </span>
                 </div>
                 <span className={`text-regular14 text-grey-400`}>
-                  {data.startDate}
+                  {data?.startDate}
                 </span>
               </div>
             ))}
