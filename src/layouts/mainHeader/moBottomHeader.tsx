@@ -1,10 +1,8 @@
 import React from 'react';
 
-const MobileBottom = ({ burger }) => {
+const MoBottomHeader = () => {
   return (
-    <section
-      className={`flex items-center justify-center ${burger ? '' : 'hidden'} h-64 w-full gap-12`}
-    >
+    <section className={`flex h-64 w-full items-center justify-center gap-12`}>
       <button
         className={`border-white-so flex h-40 w-174 items-center justify-center rounded-4 border-1 text-bold14 text-white-solid`}
       >
@@ -19,4 +17,4 @@ const MobileBottom = ({ burger }) => {
   );
 };
 
-export default MobileBottom;
+export default MoBottomHeader;

@@ -74,6 +74,12 @@ const pcTagTypes = [
     className:
       'bg-secondary-pink text-white-solid flex justify-center items-center rounded-4',
   },
+  {
+    id: 13,
+    text: '보도 자료',
+    className:
+      'bg-secondary-pink text-white-solid flex justify-center items-center rounded-4',
+  },
 ];
 
 const tagMode = [

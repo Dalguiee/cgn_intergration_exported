@@ -1,7 +1,8 @@
 const MainFooter = () => {
   return (
     <>
-      <footer className='flex h-296 w-full items-center justify-center bg-white-solid px-20 max-lg:hidden'>
+      {/* pc footer */}
+      <footer className='flex h-296 w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 max-lg:hidden'>
         <div
           className={`flex h-96 w-full max-w-1560 items-center justify-between`}
         >
@@ -106,9 +107,9 @@ const MainFooter = () => {
           </div>
         </div>
       </footer>
-
+      {/* mo footer */}
       <footer
-        className={`hidden w-full flex-col items-center justify-center gap-24 bg-grey-50 px-28 py-32 max-lg:flex`}
+        className={`hidden w-full flex-col items-center justify-center gap-24 bg-grey-50 px-16 py-32 max-lg:flex`}
       >
         <div
           className={`flex w-full flex-wrap items-start justify-start gap-4`}
@@ -164,9 +165,14 @@ const MainFooter = () => {
           <span className={`text-regular14 text-grey-500`}>
             서울특별시 용산구 서빙고로 269(서빙고동)
           </span>
-          <span className={`text-regular14 text-grey-500`}>
-            사업자등록번호 : 106-82-11892     (재)온누리 선교재단
-          </span>
+          <div className='flex'>
+            <span className={`mr-12 text-regular14 text-grey-500`}>
+              사업자등록번호 : 106-82-11892
+            </span>
+            <span className={`text-regular14 text-grey-500`}>
+              (재)온누리 선교재단
+            </span>
+          </div>
         </div>
         <div
           className={`flex w-full flex-col items-start justify-center gap-8 px-12`}
@@ -179,8 +185,12 @@ const MainFooter = () => {
             이메일 cs@cgnmail.net
           </span>
         </div>
-        <span className={'h-1 w-full gap-8 border-t-1 border-grey-100'}></span>
-        <div className={`w-full`}>
+        <div className={`h-1 w-full px-12`}>
+          <span
+            className={'flex h-full w-full gap-8 border-t-1 border-grey-100'}
+          ></span>
+        </div>
+        <div className={`w-full px-12`}>
           <span className={`text-regular12 text-grey-500`}>
             Copyright (C) CGN. All right reserved.
           </span>

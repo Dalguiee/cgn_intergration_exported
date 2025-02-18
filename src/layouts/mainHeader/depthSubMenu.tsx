@@ -10,14 +10,7 @@ const DepthSubMenu = ({ depthActive, setDepthActive }) => {
       style={{
         backgroundImage: `url('${import.meta.env.VITE_PUBLIC_URL}images/bg/header_2depth.svg')`,
       }}
-    >
-      {/* {centerMenu.map(menu => (
-        <div
-          className='flex flex-col items-center justify-start h-full'
-          key={menu.key}
-        ></div>
-      ))} */}
-    </div>
+    ></div>
   );
 };
 

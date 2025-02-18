@@ -1,6 +1,6 @@
-import Locator from '@/layouts/locator';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import Locator from '@/components/common/locator';
 
 const TidingsHeader = () => {
   const location = useLocation();
@@ -21,6 +21,11 @@ const TidingsHeader = () => {
       path: 'tidings/support',
       title: '후원 스토리',
       subTitle: 'CGN의 후원 소식을 확인해 보세요.',
+    },
+    {
+      path: 'tidings/broadcast',
+      title: '보도 자료',
+      subTitle: 'CGN의 보도 자료를 확인해 보세요.',
     },
   ];
 

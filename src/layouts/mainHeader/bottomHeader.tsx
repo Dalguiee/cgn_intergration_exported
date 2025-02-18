@@ -44,13 +44,13 @@ const BottomHeader = ({
             >
               <button
                 onClick={() => {
-                  navigate(menu.link);
+                  navigate(menu?.link);
                 }}
               >
                 <span
-                  className={`${location.pathname.includes(menu.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18`}
+                  className={`${location.pathname.includes(menu?.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18`}
                 >
-                  {menu.text}
+                  {menu?.text}
                 </span>
               </button>
               <div

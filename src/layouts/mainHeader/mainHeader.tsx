@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+
+// 컴포넌트
 import TopHeader from '@/layouts/mainHeader/topHeader';
 import BottomHeader from '@/layouts/mainHeader/bottomHeader';
-import DepthSubMenu from './depthSubMenu';
-import MobileBottom from './mobileBottom';
-import BurgerSubMenu from './burgerSubMenu';
+import DepthSubMenu from '@/layouts/mainHeader/depthSubMenu';
+import MoBottomHeader from '@/layouts/mainHeader/moBottomHeader';
+import MoBurgerSubMenu from '@/layouts/mainHeader/moBurgerSubMenu';
 
 // pc 버전일때 사용되는 depthSubmenu, topHeader botomHeader 가 있으며,
 // 모바일 버전에서 사용되는 burderSubMenu 와 mobileBottom 으로 나뉘어 있습니다
@@ -91,7 +93,7 @@ const centerMenu = [
       },
       {
         text: '보도 자료',
-        link: '/support',
+        link: '/tidings/broadcast',
       },
       {
         text: '외부 소식',
@@ -153,8 +155,8 @@ const MainHeader = () => {
   const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
   const [burger, setBurger] = useState(false);
 
+  // 버거 visible 유무
   useEffect(() => {
-    console.log('버거바뀜');
     if (burger) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -162,6 +164,7 @@ const MainHeader = () => {
     }
   }, [burger]);
 
+  // 2depth 활성화
   useEffect(() => {
     const resizeSetting = () => {
       if (window.innerWidth >= 1024) {
@@ -187,13 +190,14 @@ const MainHeader = () => {
         depthActive={depthActive}
         setDepthActive={setDepthActive}
       />
-      <MobileBottom burger={burger} />
       <DepthSubMenu setDepthActive={setDepthActive} depthActive={depthActive} />
-      <BurgerSubMenu
-        setBurger={setBurger}
-        centerMenu={centerMenu}
-        burger={burger}
-      />
+      {/* 모바일일 경우 버거 */}
+      {burger ? (
+        <>
+          <MoBottomHeader />
+          <MoBurgerSubMenu setBurger={setBurger} centerMenu={centerMenu} />
+        </>
+      ) : null}
     </header>
   );
 };

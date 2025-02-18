@@ -67,7 +67,7 @@ const CategoryList = ({ setSelectedId }) => {
               setSelectedId(item.id);
             }}
             key={item.id}
-            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
+            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 px-20 text-regular16 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
           >
             {item.type}
           </button>

@@ -1,20 +1,35 @@
-import { mockupData } from '@/db/mockup';
-import React, { useEffect, useRef, useState } from 'react';
-import CategoryList from '../common/categoryList';
-import TidingsCard2 from './tidingsCard2';
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
+//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
 
+import React, { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+import TextScroll from '@/components/tidings/mission/textScroll';
+import CategoryList from '@/components/common/categoryList';
+import TidingsCard2 from '@/components/tidings/tidingsCard2';
+import TagIcon from '@/components/common/tagBtn';
+
+import { mockupData } from '@/db/mockup';
+
+// 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import TagIcon from '../common/tagBtn';
-import { useLocation } from 'react-router-dom';
-import TextScroll from './textScroll';
 
-const Swiper_sec = ({ pageMode, findedMockupData }) => {
+const SwiperSec = ({ pageMode, findedMockupData }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -59,77 +74,77 @@ const Swiper_sec = ({ pageMode, findedMockupData }) => {
 // pageMode 에 따라 불러오는 컨텐츠 분기를 걸어놓았습니다.
 
 const TidingsMission = () => {
-  const [findedMockupData, setfindedMockupData] = useState();
-  const [pageMode, setPageMode] = useState('');
-  const [pagingNum, setPagingNum] = useState(0);
-  const contentBox = useRef(null);
-  const [bgBoxPositon, setBgBoxPosition] = useState(0);
-  const [selectedId, setSelectedId] = useState(0);
+  // const location = useLocation();
+  // const contentBox = useRef(null);
+  // const [findedMockupData, setfindedMockupData] = useState();
+  // const [pageMode, setPageMode] = useState('');
+  // const [pagingNum, setPagingNum] = useState(0);
+  // const [bgBoxPositon, setBgBoxPosition] = useState(0);
+  // const [selectedId, setSelectedId] = useState(0);
 
-  const location = useLocation();
+  // // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
+  // const mockupExport = mockupData.filter(item => {
+  //   return item.path.includes(location.pathname);
+  // });
+  // const mockupExportedData = mockupExport?.[0]?.data;
 
-  // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
-  const mockupExport = mockupData.filter(item => {
-    return item.path.includes(location.pathname);
-  });
-  const mockupExportedData = mockupExport[0].data;
+  // // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
+  // useEffect(() => {
+  //   setfindedMockupData(mockupExportedData);
+  // }, [location, selectedId]);
 
-  // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
-  useEffect(() => {
-    setfindedMockupData(mockupExportedData);
-  }, [location, selectedId]);
+  // // category list 에서 selectedId 에 따라 filter 연동을 위하여 state 에 update 합니다.
+  // useEffect(() => {
+  //   if (selectedId === 0) {
+  //     setfindedMockupData(mockupExportedData);
+  //   } else {
+  //     setfindedMockupData(
+  //       mockupExportedData.filter(item => {
+  //         return item?.tag?.some(obj => obj.id === Number(selectedId));
+  //       })
+  //     );
+  //   }
+  // }, [selectedId]);
 
-  // category list 에서 selectedId 에 따라 filter 연동을 위하여 state 에 update 합니다.
-  useEffect(() => {
-    if (selectedId === 0) {
-      setfindedMockupData(mockupExportedData);
-    } else {
-      setfindedMockupData(
-        mockupExportedData.filter(item => {
-          return item.tag.some(obj => obj.id === Number(selectedId));
-        })
-      );
-    }
-  }, [selectedId]);
+  // useEffect(() => {
+  //   if (location?.pathname?.includes('tidings/mission')) {
+  //     setPageMode('mission');
+  //   } else if (location?.pathname?.includes('tidings/support')) {
+  //     setPageMode('support');
+  //   }
+  // }, [pageMode, location]);
 
-  useEffect(() => {
-    if (location.pathname.includes('tidings/mission')) {
-      setPageMode('mission');
-    } else if (location.pathname.includes('tidings/support')) {
-      setPageMode('support');
-    }
-  }, [pageMode, location]);
+  // const pagingNext = () => {
+  //   if (pagingNum < findedMockupData?.length - 1) {
+  //     setPagingNum(item => {
+  //       return item + 1;
+  //     });
+  //   } else {
+  //     console.log('최대치도달');
+  //   }
+  // };
+  // const pagingPrev = () => {
+  //   if (pagingNum > 0) {
+  //     setPagingNum(item => {
+  //       return item - 1;
+  //     });
+  //   } else {
+  //     console.log('최소치도달');
+  //   }
+  // };
 
-  const pagingUP = () => {
-    if (pagingNum < findedMockupData?.length - 1) {
-      setPagingNum(item => {
-        return item + 1;
-      });
-    } else {
-      console.log('최대치도달');
-    }
-  };
-  const pagingDown = () => {
-    if (pagingNum > 0) {
-      setPagingNum(item => {
-        return item - 1;
-      });
-    } else {
-      console.log('최소치도달');
-    }
-  };
+  // const positionFind = e => {
+  //   setBgBoxPosition(e.target.offsetTop);
+  // };
 
-  const positionFind = e => {
-    setBgBoxPosition(e.target.offsetTop);
-  };
-
+  return <>개발중</>;
   if (!findedMockupData) return <></>;
 
   return (
     <>
       <CategoryList setSelectedId={setSelectedId} />
       <section
-        className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:px-20 max-lg:pt-0`}
+        className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:mb-20 max-lg:px-20 max-lg:pb-0 max-lg:pt-0`}
       >
         <div
           className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-lg:flex`}
@@ -147,7 +162,7 @@ const TidingsMission = () => {
         <div
           className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-lg:hidden`}
         >
-          <Swiper_sec pageMode={pageMode} findedMockupData={findedMockupData} />
+          <SwiperSec pageMode={pageMode} findedMockupData={findedMockupData} />
         </div>
         <TextScroll />
         <div
@@ -169,7 +184,7 @@ const TidingsMission = () => {
                   >
                     <button
                       onClick={() => {
-                        pagingDown();
+                        pagingPrev();
                       }}
                     >
                       <img
@@ -188,7 +203,7 @@ const TidingsMission = () => {
                     </span>
                     <button
                       onClick={() => {
-                        pagingUP();
+                        pagingNext();
                       }}
                     >
                       <img
@@ -202,7 +217,7 @@ const TidingsMission = () => {
                   className={`flex flex-col items-start justify-center gap-16 py-24`}
                 >
                   <div className={`flex items-center justify-start gap-16`}>
-                    {findedMockupData?.[pagingNum].tag.map((item, key) => (
+                    {findedMockupData?.[pagingNum]?.tag?.map((item, key) => (
                       <TagIcon
                         id={item.id}
                         text={item.text}
@@ -211,12 +226,12 @@ const TidingsMission = () => {
                       />
                     ))}
                     <span className={`text-regular14 text-grey-500`}>
-                      {findedMockupData?.[pagingNum].start_date}
+                      {findedMockupData?.[pagingNum]?.start_date}
                     </span>
                   </div>
                   <div>
                     <span className={`text-bold24 text-grey-900`}>
-                      {findedMockupData?.[pagingNum].title}
+                      {findedMockupData?.[pagingNum]?.title}
                     </span>
                   </div>
                 </div>

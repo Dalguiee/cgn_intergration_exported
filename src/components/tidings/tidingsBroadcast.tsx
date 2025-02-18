@@ -11,57 +11,49 @@
 //개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
 //개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
 
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+// 데이터
+import { mockupData } from '@/db/mockup';
+
+// 컴포넌트
 import TagIcon from '@/components/common/tagBtn';
 
-// 미션 및 후원에 사용되는 유형2의 컨텐츠 카드 컴포넌트 입니다
+const TidingsBroadcast = () => {
+  // const location = useLocation();
+  // const [findedMockupData, setfindedMockupData] = useState([]);
 
-const TidingsCard2 = ({ item, allData, pageMode }) => {
-  // const navigator = useNavigate();
+  // // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
+  // const mockupExport = mockupData.filter(item => {
+  //   return item.path.includes(location.pathname);
+  // });
+  // const mockupExportedData = mockupExport?.[0]?.data;
+
+  // // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
+  // useEffect(() => {
+  //   setfindedMockupData(mockupExportedData);
+  //   console.log('데이터 로딩');
+  // }, [location]);
 
   return <>개발중</>;
+  if (!findedMockupData) return <></>;
   return (
-    <button
-      data-aos='fade-up'
-      onClick={() => {
-        navigator(`/tidings/${pageMode}/detail`, {
-          state: { detailData: item, allData },
-        });
-      }}
-      className={`mt-16 flex min-h-550 w-full max-w-560 flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378`}
-    >
-      <img
-        className='h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top'
-        src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small_top_rounded.png`}
-        width={``}
-        height={`382px`}
-        alt='메인카드이미지'
-      />
-      <div
-        className={`w-full rounded-bl-16 rounded-br-16 bg-white-solid px-24 py-24`}
-      >
-        <div className={`flex w-full items-center justify-start gap-16`}>
-          <div className={`flex items-center justify-center gap-4`}>
-            {item?.tag?.map((obj, key) => (
-              <TagIcon text={obj.text} id={obj.id} mode={obj.mode} key={key} />
-            ))}
-          </div>
-          <div>
-            <span className={`text-regular14 text-grey-400`}>
-              {item.start_date}
-            </span>
-            <span className={`text-regular14 text-grey-400`}>~</span>
-            <span className={`text-regular14 text-grey-400`}>
-              {item.end_date}
-            </span>
-          </div>
+    <section className={`flex w-full flex-col items-center justify-start`}>
+      <div className={`w-full max-w-1200`}>
+        <div>
+          {findedMockupData?.tag?.map((item, key) => (
+            <TagIcon id={item.id} mode={item.mode} />
+          ))}
         </div>
-        <div className={`mt-12 flex w-full items-center justify-start`}>
-          <span className={`text-bold24 text-grey-900`}>{item.title}</span>
-        </div>
+        {findedMockupData.map(item => (
+          <div className={`border-t-2 border-grey-900`}>
+            <span>{item.title}</span>
+          </div>
+        ))}
       </div>
-    </button>
+    </section>
   );
 };
 
-export default TidingsCard2;
+export default TidingsBroadcast;

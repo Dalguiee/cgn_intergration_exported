@@ -1,11 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 
+// 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
-import TidingsDetailPage from '@/pages/tidings/detail/page';
-import TidingsMissionPage from '@/pages/tidings/mission/page';
-import TidingsSupportPage from '@/pages/tidings/support/page';
-import Home from '@/components/home';
-import TidingsCampaignPage from '@/pages/tidings/campaign/page';
+import Home from '@/components/home/home';
+import TidingsBroadcastPage from '@/pages/tidings/broadcast';
+import TidingsCampaignPage from '@/pages/tidings/campaign';
+import TidingsDetailPage from '@/pages/tidings/detail';
+import TidingsMissionPage from '@/pages/tidings/mission';
+import TidingsSupportPage from '@/pages/tidings/support';
 
 export default function MainRouter() {
   return (
@@ -18,6 +20,10 @@ export default function MainRouter() {
         ></Route>
         <Route path='tidings/mission' element={<TidingsMissionPage />}></Route>
         <Route path='tidings/support' element={<TidingsSupportPage />}></Route>
+        <Route
+          path='tidings/broadcast'
+          element={<TidingsBroadcastPage />}
+        ></Route>
         <Route
           path='tidings/:subDepth/detail'
           element={<TidingsDetailPage />}

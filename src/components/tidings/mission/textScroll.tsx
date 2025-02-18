@@ -2,7 +2,9 @@ import React from 'react';
 
 const TextScroll = () => {
   return (
-    <div className={`animation mb-60 mt-152 w-full overflow-x-hidden`}>
+    <div
+      className={`animation mb-60 mt-152 w-full overflow-x-hidden max-lg:hidden`}
+    >
       <div
         data-comment='text_scroll_box'
         className={`flex items-center justify-center gap-34`}

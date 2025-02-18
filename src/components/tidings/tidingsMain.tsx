@@ -1,8 +1,13 @@
+// 훅
 import React, { useEffect, useState } from 'react';
-import { mockupData } from '@/db/mockup';
-import TidingsCard from './tidingsCard';
-import CategoryList from '../common/categoryList';
 import { useLocation } from 'react-router-dom';
+
+// 컴포넌트
+import TidingsCard from '@/components/tidings/tidingsCard';
+import CategoryList from '@/components/common/categoryList';
+
+// 데이터
+import { mockupData } from '@/db/mockup';
 
 const TidingsMain = () => {
   const location = useLocation();
@@ -13,7 +18,7 @@ const TidingsMain = () => {
   const mockupExport = mockupData.filter(item => {
     return item.path.includes(location.pathname);
   });
-  const mockupExportedData = mockupExport[0].data;
+  const mockupExportedData = mockupExport?.[0]?.data;
 
   // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
   useEffect(() => {
@@ -41,14 +46,14 @@ const TidingsMain = () => {
       <CategoryList setSelectedId={setSelectedId} />
       <section
         data-aos='fade-up'
-        className={`flex w-full items-center justify-center px-20 pb-0 pb-160 pt-80 max-lg:pb-0 max-lg:pt-0`}
+        className={`flex w-full items-center justify-center px-20 pb-0 pb-160 pt-80 max-lg:mb-20 max-lg:pb-0 max-lg:pt-0`}
       >
         <div
           className={`grid w-1200 max-w-1560 grid-cols-3 flex-wrap items-start justify-center gap-24 max-lg:grid-cols-1`}
         >
           {findedMockupData?.map(item => (
             <TidingsCard
-              key={item.id}
+              key={item?.id}
               allData={mockupExportedData}
               item={item}
             />
