@@ -1,46 +1,49 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 const Locator = () => {
   const location = useLocation();
   const navigation = useNavigate();
   const [changedPathName, setChangedPathName] = useState([]);
 
+  const { subDepth } = useParams();
+  console.log(subDepth);
+
   useEffect(() => {
     let pathStack = '';
-    let pathBackup = '';
+    let pathPiece = '';
     const pageData = location.pathname.split('/');
     // 페이지 로케이팅을 담당하는 분기 데이터 입니다.
     if (location.pathname.includes('/tidings/')) {
       setChangedPathName(
         pageData.map(data => {
           if (data === 'tidings') {
-            pathBackup = data;
+            pathPiece = data;
             data = '소식';
             pathStack = 'tidings/campaign';
           }
           if (data === 'campaign') {
-            pathBackup = data;
+            pathPiece = data;
             data = '캠페인/이벤트';
             pathStack = 'tidings/campaign';
           }
           if (data === 'mission') {
-            pathBackup = data;
+            pathPiece = data;
             data = '선교캠페인';
             pathStack = 'tidings/mission';
           }
-          if (data === 'mission') {
-            pathBackup = data;
-            data = '선교캠페인';
-            pathStack = 'tidings/mission';
+          if (data === 'detail') {
+            pathPiece = subDepth;
+            data = '';
+            pathStack = `tidings/${subDepth}`;
           }
           if (data === 'support') {
-            pathBackup = data;
+            pathPiece = data;
             data = `후원스토리`;
             pathStack = `tidings/support`;
           }
 
-          return { bPath: pathBackup, name: data, path: pathStack };
+          return { bPath: pathPiece, name: data, path: pathStack };
         })
       );
     }

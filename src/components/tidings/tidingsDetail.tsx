@@ -137,18 +137,14 @@ const TidingsDetail = () => {
         <div
           className={`flex w-full items-start justify-end max-lg:justify-center`}
         >
-          <div
+          <button
+            onClick={() => {
+              navi(`/tidings/${subDepth}`);
+            }}
             className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500`}
           >
-            <button
-              onClick={() => {
-                navi(`/tidings/${subDepth}`);
-              }}
-              className={`text-bold24 text-white-solid`}
-            >
-              목록
-            </button>
-          </div>
+            <span className={`text-bold24 text-white-solid`}>목록</span>
+          </button>
         </div>
       </div>
     </section>

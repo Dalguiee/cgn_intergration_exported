@@ -45,30 +45,34 @@ const CategoryList = ({ setSelectedId }) => {
   if (!tagDataFind) return <></>;
   return (
     <section
-      className={`flex w-full flex-wrap items-center justify-center gap-8 max-lg:px-20`}
+      className={`flex w-full flex-col items-start justify-center max-lg:overflow-x-scroll`}
     >
-      <button
-        onClick={() => {
-          setHighlight(0);
-          setSelectedId(0);
-        }}
-        className={`${highlight === 0 ? 'border-primary-400 text-primary-500' : ''} h-48 w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:w-96`}
+      <div
+        className={`mx-auto flex w-fit items-center justify-center gap-8 py-10 max-lg:px-20`}
       >
-        전체
-      </button>
-
-      {tagDataFind?.[0]?.tags.map(item => (
         <button
           onClick={() => {
-            setHighlight(item.id);
-            setSelectedId(item.id);
+            setHighlight(0);
+            setSelectedId(0);
           }}
-          key={item.id}
-          className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:w-96`}
+          className={`${highlight === 0 ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
         >
-          {item.type}
+          전체
         </button>
-      ))}
+
+        {tagDataFind?.[0]?.tags.map(item => (
+          <button
+            onClick={() => {
+              setHighlight(item.id);
+              setSelectedId(item.id);
+            }}
+            key={item.id}
+            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 min-w-96 text-nowrap rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36`}
+          >
+            {item.type}
+          </button>
+        ))}
+      </div>
     </section>
   );
 };

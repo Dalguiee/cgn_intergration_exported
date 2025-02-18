@@ -12,12 +12,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import TagIcon from '../common/tagBtn';
 import { useLocation } from 'react-router-dom';
+import TextScroll from './textScroll';
 
 const Swiper_sec = ({ pageMode, findedMockupData }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={``}
+      className={`px-20`}
       spaceBetween={64}
       slidesPerView={
         findedMockupData && findedMockupData?.length < 3 ? 2 : undefined
@@ -128,7 +129,7 @@ const TidingsMission = () => {
     <>
       <CategoryList setSelectedId={setSelectedId} />
       <section
-        className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-80 max-lg:px-20 max-lg:pt-0`}
+        className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:px-20 max-lg:pt-0`}
       >
         <div
           className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-lg:flex`}
@@ -148,8 +149,9 @@ const TidingsMission = () => {
         >
           <Swiper_sec pageMode={pageMode} findedMockupData={findedMockupData} />
         </div>
+        <TextScroll />
         <div
-          className={`flex w-full max-w-1200 items-start justify-center max-lg:hidden`}
+          className={`flex w-full max-w-1200 items-start justify-center px-20 max-lg:hidden`}
         >
           <div className={`w-full`}>
             {findedMockupData?.[pagingNum] ? (
