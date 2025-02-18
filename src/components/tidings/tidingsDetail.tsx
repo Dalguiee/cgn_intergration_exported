@@ -54,7 +54,11 @@ const TidingsDetail = () => {
       return location.pathname.includes(item.path);
     });
     const mockupExportedData = mockupExport?.[0]?.data;
-    setAllData(mockupExportedData);
+    setAllData(item => {
+      if (mockupExport?.length > 0) {
+        return mockupExportedData;
+      }
+    });
   }, [queryData?.articleId, location]);
 
   useEffect(() => {

@@ -1,20 +1,7 @@
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-//개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중개발중
-
+// 개발중입니다.
 import React from 'react';
 
 const TextScroll = () => {
-  return <>개발중</>;
   return (
     <div
       className={`animation mb-60 mt-152 w-full overflow-x-hidden max-lg:hidden`}
@@ -23,7 +10,7 @@ const TextScroll = () => {
         data-comment='text_scroll_box'
         className={`flex items-center justify-center gap-34`}
       >
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -31,7 +18,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -39,7 +26,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -47,7 +34,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -55,7 +42,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -63,7 +50,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -71,7 +58,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -79,7 +66,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -87,7 +74,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -95,7 +82,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -103,7 +90,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -111,7 +98,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -119,7 +106,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -127,7 +114,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
@@ -135,7 +122,7 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
-        <span className={`text-nowrap text-bold78 text-grey-900`}>
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
           CGN Mission Story
         </span>
         <img
