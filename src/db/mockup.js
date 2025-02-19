@@ -198,10 +198,7 @@ export const mockupData = [
     data: [
       {
         id: 1,
-        tag: [
-          { text: 'CGN', id: 6, mode: 'mode1' },
-          { text: '선교지', id: 5, mode: 'mode1' },
-        ],
+        tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -219,10 +216,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        tag: [
-          { text: '해외지사', id: 9, mode: 'mode2' },
-          { text: '선교지', id: 5, mode: 'mode2' },
-        ],
+        tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -240,10 +234,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        tag: [
-          { text: '선교사기도', id: 4, mode: 'mode2' },
-          { text: '기타', id: 10, mode: 'mode1' },
-        ],
+        tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -261,10 +252,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        tag: [
-          { text: '선교사기도', id: 4, mode: 'mode2' },
-          { text: '기타', id: 10, mode: 'mode1' },
-        ],
+        tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -282,10 +270,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        tag: [
-          { text: '해외지사', id: 9, mode: 'mode2' },
-          { text: '선교지', id: 5, mode: 'mode2' },
-        ],
+        tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -303,10 +288,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        tag: [
-          { text: 'CGN', id: 6, mode: 'mode1' },
-          { text: '해외지사', id: 9, mode: 'mode2' },
-        ],
+        tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -324,10 +306,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        tag: [
-          { text: 'CGN', id: 6, mode: 'mode1' },
-          { text: '선교사기도', id: 4, mode: 'mode2' },
-        ],
+        tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -345,10 +324,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        tag: [
-          { text: 'CGN', id: 6, mode: 'mode1' },
-          { text: '기타', id: 10, mode: 'mode1' },
-        ],
+        tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -366,7 +342,115 @@ export const mockupData = [
       },
       {
         id: 9,
-        tag: [{ text: 'CGN', id: 6, mode: 'mode1' }],
+        tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        contentSrc: [
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+        ],
+        title: '미션 데이터 테스트9',
+        detailTitle: '기특하데이9',
+        subTitle: '1. 다양한 신규 콘텐츠 공개',
+        content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+        startDate: '2022-01-01',
+        endDate: '2024.11.05',
+      },
+      {
+        id: 10,
+        tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        contentSrc: [
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+        ],
+        title: '미션 데이터 테스트9',
+        detailTitle: '기특하데이9',
+        subTitle: '1. 다양한 신규 콘텐츠 공개',
+        content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+        startDate: '2022-01-01',
+        endDate: '2024.11.05',
+      },
+      {
+        id: 11,
+        tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        contentSrc: [
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+        ],
+        title: '미션 데이터 테스트9',
+        detailTitle: '기특하데이9',
+        subTitle: '1. 다양한 신규 콘텐츠 공개',
+        content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+        startDate: '2022-01-01',
+        endDate: '2024.11.05',
+      },
+      {
+        id: 12,
+        tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        contentSrc: [
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+        ],
+        title: '미션 데이터 테스트9',
+        detailTitle: '기특하데이9',
+        subTitle: '1. 다양한 신규 콘텐츠 공개',
+        content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+        startDate: '2022-01-01',
+        endDate: '2024.11.05',
+      },
+      {
+        id: 13,
+        tag: [{ text: '기타', id: 10, mode: 'mode1' }],
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        contentSrc: [
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+        ],
+        title: '미션 데이터 테스트9',
+        detailTitle: '기특하데이9',
+        subTitle: '1. 다양한 신규 콘텐츠 공개',
+        content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+        startDate: '2022-01-01',
+        endDate: '2024.11.05',
+      },
+      {
+        id: 14,
+        tag: [{ text: '기타', id: 10, mode: 'mode1' }],
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        contentSrc: [
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+          `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
+        ],
+        title: '미션 데이터 테스트9',
+        detailTitle: '기특하데이9',
+        subTitle: '1. 다양한 신규 콘텐츠 공개',
+        content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
+        startDate: '2022-01-01',
+        endDate: '2024.11.05',
+      },
+      {
+        id: 15,
+        tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -407,10 +491,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        tag: [
-          { text: '후원', id: 11, mode: 'mode2' },
-          { text: '후원영상', id: 12, mode: 'mode2' },
-        ],
+        tag: [{ text: '후원', id: 11, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -446,10 +527,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        tag: [
-          { text: '후원', id: 11, mode: 'mode2' },
-          { text: '후원영상', id: 12, mode: 'mode2' },
-        ],
+        tag: [{ text: '후원', id: 11, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -467,10 +545,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        tag: [
-          { text: '후원', id: 11, mode: 'mode2' },
-          { text: '후원영상', id: 12, mode: 'mode2' },
-        ],
+        tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -488,10 +563,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        tag: [
-          { text: '후원', id: 11, mode: 'mode2' },
-          { text: '후원영상', id: 12, mode: 'mode2' },
-        ],
+        tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -509,7 +581,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        tag: [{ text: '후원', id: 11, mode: 'mode2' }],
+        tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -527,7 +599,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        tag: [{ text: '후원', id: 11, mode: 'mode2' }],
+        tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -545,7 +617,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        tag: [{ text: '후원', id: 11, mode: 'mode2' }],
+        tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,

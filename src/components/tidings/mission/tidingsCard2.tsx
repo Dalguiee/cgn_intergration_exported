@@ -5,15 +5,13 @@ import TagIcon from '@/components/common/tagIcon';
 
 // 미션 및 후원에 사용되는 유형2의 컨텐츠 카드 컴포넌트 입니다
 
-const TidingsCard2 = ({ item, allData, pageMode }) => {
+const TidingsCard2 = ({ item, pageMode }) => {
   const navigator = useNavigate();
   return (
     <button
       data-aos='fade-up'
       onClick={() => {
-        navigator(`/tidings/${pageMode}/detail?articleId=${item.id}`, {
-          state: { detailData: item, allData },
-        });
+        navigator(`/tidings/${pageMode}/detail?articleId=${item.id}`);
       }}
       className={`mt-16 flex min-h-550 w-full max-w-560 flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378`}
     >

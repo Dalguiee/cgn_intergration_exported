@@ -64,14 +64,18 @@ const SwiperSec = ({ pageMode, findedMockupData }) => {
 
 const TidingsMission = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const contentBox = useRef(null);
+  const listAll = useRef([]);
+  // 페이지에서 사용될 컨텐츠 데이터 불러오기
   const [findedMockupData, setfindedMockupData] = useState();
+  // 미션과 후원에서 동시에 사용되므로 해당 모드를 통해 중간 params 값을 전환하여 detail url 을 정합니다.
   const [pageMode, setPageMode] = useState('');
+  // 하단부 양쪽 화살표를 통해 데이터를 전환하는 버튼에 사용되는 번호입니다.
   const [pagingNum, setPagingNum] = useState(0);
+  // 하단부 오른쪽 컨텐츠를 따라다니는 색망상자의 위치입니다.
   const [bgBoxPositon, setBgBoxPosition] = useState(0);
   const [selectedId, setSelectedId] = useState(0);
-
-  const navigate = useNavigate();
 
   // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
   const mockupExport = mockupData.filter(item => {
@@ -84,7 +88,8 @@ const TidingsMission = () => {
     setfindedMockupData(mockupExportedData);
   }, [location, selectedId]);
 
-  // category list 에서 selectedId 에 따라 filter 연동을 위하여 state 에 update 합니다.
+  // tidings 헤더 아래에 존재하는 카테고리 버튼의 기능입니다.
+  //category list 에서 selectedId 를 state 를 통해 받으며, 카테고리에 따라 분류된 데이터를 state 에 update 합니다.
   useEffect(() => {
     if (selectedId === 0) {
       setfindedMockupData(mockupExportedData);
@@ -97,21 +102,23 @@ const TidingsMission = () => {
     }
   }, [selectedId]);
 
+  // 현재 선교스토리 혹은 후원중 어느 페이지로 분기되었는지 사용할 String state 지정
   useEffect(() => {
     if (location?.pathname?.includes('/tidings/mission')) {
       setPageMode('mission');
     } else if (location?.pathname?.includes('/tidings/support')) {
       setPageMode('support');
     }
-  }, [pageMode, location]);
+  }, [location]);
 
+  // 하단부 왼쪽 카드 숫자 양옆 num 을 높이고 내리는 버튼 기능입니다. pageNum 연동
   const pagingNext = () => {
     if (pagingNum < findedMockupData?.length - 1) {
       setPagingNum(item => {
         return item + 1;
       });
     } else {
-      console.log('최대치도달');
+      console.log('페이지 최대치도달');
     }
   };
   const pagingPrev = () => {
@@ -120,16 +127,22 @@ const TidingsMission = () => {
         return item - 1;
       });
     } else {
-      console.log('최소치도달');
+      console.log('페이지 최소치도달');
     }
   };
 
+  // 왼쪽 숫자버튼을 올리고 내렸을 경우 오른쪽 흰색 박스가 해당 항목객체로 따라가는 위치를 잡기위한 함수입니다.
+  useEffect(() => {
+    if (listAll?.current?.[pagingNum]) {
+      positionFind(listAll?.current?.[pagingNum]);
+    }
+  }, [listAll, pagingNum]);
+
   const positionFind = e => {
-    setBgBoxPosition(e.target.offsetTop);
+    setBgBoxPosition(e.offsetTop);
   };
 
   if (!findedMockupData) return <></>;
-
   return (
     <>
       <CategoryList setSelectedId={setSelectedId} />
@@ -139,13 +152,8 @@ const TidingsMission = () => {
         <div
           className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-lg:flex`}
         >
-          {findedMockupData?.map(item => (
-            <TidingsCard2
-              pageMode={pageMode}
-              key={item?.id}
-              allData={mockupExportedData}
-              item={item}
-            />
+          {findedMockupData?.map((item, key) => (
+            <TidingsCard2 pageMode={pageMode} key={key} item={item} />
           ))}
         </div>
 
@@ -167,7 +175,7 @@ const TidingsMission = () => {
                   <button
                     onClick={() => {
                       navigate(
-                        `${pageMode === 'mission' ? `/tidings/mission/detail?articleId=${findedMockupData?.[pagingNum]?.id}` : `/tidings/support/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
+                        `${`/tidings/${pageMode}/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
                       );
                     }}
                   >
@@ -246,14 +254,18 @@ const TidingsMission = () => {
               style={{ top: `${bgBoxPositon}px`, transition: `0.8s` }}
               className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm`}
             ></div>
-            {findedMockupData?.slice(0, 7)?.map(data => (
+            {findedMockupData?.map((data, key) => (
               <button
+                ref={el => {
+                  listAll.current[key] = el;
+                }}
                 onMouseEnter={e => {
-                  positionFind(e);
+                  positionFind(e.target);
+                  setPagingNum(key);
                 }}
                 onClick={() => {
                   navigate(
-                    `${pageMode === 'mission' ? `/tidings/mission/detail?articleId=${data?.id}` : `/tidings/support/detail?articleId=${data?.id}`}`
+                    `${`/tidings/${pageMode}/detail?articleId=${data?.id}`}`
                   );
                 }}
                 className={`relative z-20 flex h-80 w-full items-center justify-between px-24 py-24`}

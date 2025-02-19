@@ -9,8 +9,9 @@ const Home = () => {
   useEffect(() => {
     const positionCalc = () => {
       if (verticalBox) {
-        const getPositon = verticalBox.current.getBoundingClientRect();
-        const calculatedPosition = (getPositon.top / getPositon.height) * -100;
+        const getPositon = verticalBox?.current?.getBoundingClientRect();
+        const calculatedPosition =
+          (getPositon?.top / getPositon?.height) * -100;
         if (calculatedPosition < 0) {
           console.log('스크롤 준비');
         } else if (calculatedPosition > 0 && calculatedPosition < 90) {
@@ -35,7 +36,7 @@ const Home = () => {
           className={`sticky top-0 flex h-[100vh] w-full flex-col items-start justify-center overflow-hidden`}
         >
           <div
-            style={{ transform: `translateX( calc(-${position}% * 2.8) )` }}
+            style={{ transform: `translateX( calc(-${position}% * 6.6) )` }}
             className={`duration-600 flex items-start justify-start gap-30 pl-280 transition ease-in-out`}
           >
             <img

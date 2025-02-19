@@ -81,6 +81,12 @@ const pcTagTypes = [
     className:
       'bg-secondary-blue text-white-solid flex justify-center items-center rounded-4',
   },
+  {
+    id: 14,
+    text: 'CGN 소식',
+    className:
+      'bg-primary-500 text-white-solid flex justify-center items-center rounded-4',
+  },
 ];
 
 const tagMode = [

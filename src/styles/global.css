@@ -231,15 +231,15 @@
   }
 
   [data-comment='text_scroll_box'] {
-    animation: txt 180s forwards infinite;
+    animation: txt 100s linear infinite;
   }
 
   @keyframes txt {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(0%);
+      transform: translateX(-500%);
     }
   }
 }

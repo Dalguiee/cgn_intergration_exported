@@ -164,6 +164,76 @@ const TextScroll = () => {
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
           alt=''
         />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
+        <span className={`text-bold78 text-nowrap text-grey-900`}>
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
+        </span>
+        <img
+          className={`h-45 w-16`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/text_scroll_logo.png`}
+          alt=''
+        />
       </div>
     </div>
   );

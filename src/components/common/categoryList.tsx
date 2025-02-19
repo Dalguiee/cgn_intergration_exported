@@ -20,7 +20,7 @@ const CategoryList = ({ setSelectedId }) => {
       id: 1,
       path: `/tidings/mission`,
       tags: [
-        { id: 6, type: 'CGN' },
+        { id: 14, type: 'CGN 소식' },
         { id: 9, type: '해외지사' },
         { id: 5, type: '선교지' },
         { id: 4, type: '선교사 기도제목' },
@@ -55,7 +55,7 @@ const CategoryList = ({ setSelectedId }) => {
             setHighlight(0);
             setSelectedId(0);
           }}
-          className={`${highlight === 0 ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 rounded-999 border-1 border-grey-200 text-regular16 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
+          className={`${highlight === 0 ? 'border-primary-400 text-primary-500' : ''} text-regular16 h-48 min-w-120 rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
         >
           전체
         </button>
@@ -67,7 +67,7 @@ const CategoryList = ({ setSelectedId }) => {
               setSelectedId(item.id);
             }}
             key={item.id}
-            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 px-20 text-regular16 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
+            className={`${item.id == highlight ? 'border-primary-400 text-primary-500' : ''} text-regular16 h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 px-20 text-grey-300 max-lg:h-36 max-lg:min-w-96`}
           >
             {item.type}
           </button>

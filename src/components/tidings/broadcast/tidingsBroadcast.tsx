@@ -27,7 +27,7 @@ const TidingsBroadcast = () => {
 
   const contentFiltering = e => {
     e.preventDefault();
-    console.log('필터링 작동');
+    // 검색 작동
     const findKeyword = e.target.findKeyword.value.toLowerCase();
     if (findKeyword.length > 0) {
       const filteredData = mockupExportedData?.filter(
@@ -36,6 +36,7 @@ const TidingsBroadcast = () => {
           item?.content?.toLowerCase().includes(findKeyword)
       );
       if (filteredData?.length > 0) {
+        // 검색결과 있다면 아래 state 로 입력
         setSearchedMockupData(filteredData);
       } else {
         // 결과가 없으므로 데이터 초기화
@@ -73,7 +74,10 @@ const TidingsBroadcast = () => {
               type='text'
             />
             <button>
-              <img src={`/public/images/icon/finder.svg`} alt='' />
+              <img
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/finder.svg`}
+                alt=''
+              />
             </button>
           </form>
         </div>
