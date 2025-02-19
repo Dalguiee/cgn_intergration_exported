@@ -51,7 +51,7 @@ module.exports = {
           brown_bg: '#CBC3BB',
           brown_bg_2: '#EFEDEB',
           error: '#FF0000',
-          pink: '#FB69A2',
+          pink: '#FF91A2',
           success: '#20D698',
         },
         white: {

@@ -55,7 +55,7 @@ const pcTagTypes = [
     id: 9,
     text: '해외지사',
     className:
-      'bg-secondary-pink text-white-solid flex justify-center items-center rounded-4',
+      'bg-secondary-brown text-white-solid flex justify-center items-center rounded-4',
   },
   {
     id: 10,

@@ -36,8 +36,10 @@ const Home = () => {
           className={`sticky top-0 flex h-[100vh] w-full flex-col items-start justify-center overflow-hidden`}
         >
           <div
-            style={{ transform: `translateX( calc(-${position}% * 6.6) )` }}
-            className={`duration-600 flex items-start justify-start gap-30 pl-280 transition ease-in-out`}
+            style={{
+              transform: `translateX(calc(-${position}% * 6.6))`,
+            }}
+            className={`duration-600 flex items-start justify-start gap-30 pl-280 transition-all ease-in-out`}
           >
             <img
               className={``}
