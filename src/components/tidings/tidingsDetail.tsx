@@ -47,54 +47,6 @@ const TidingsDetail = () => {
   const [beforeData, setBeforeData] = useState({});
   const [afterData, setAfterData] = useState({});
 
-  // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
-  // 과장님 코드를 학습하고 재구성한 코드이며 폐기될 예정
-  // useEffect(() => {
-  //   const mockupExport = mockupData?.filter(item => {
-  //     return location.pathname.includes(item.path);
-  //   });
-  //   const mockupExportedData = mockupExport?.[0]?.data;
-  //   setAllData(item => {
-  //     if (mockupExport?.length > 0) {
-  //       return mockupExportedData;
-  //     }
-  //   });
-  // }, [queryData?.articleId, location]);
-
-  // useEffect(() => {
-  //   const findedArticle = allData?.filter(
-  //     item => item.id === Number(queryData?.articleId)
-  //   );
-  //   const findedBeforeArticle = allData?.filter(
-  //     item => item.id < Number(queryData?.articleId)
-  //   );
-  //   const findedAfterArticle = allData?.filter(
-  //     item => item.id > Number(queryData?.articleId)
-  //   );
-
-  //   setCurrentData(item => {
-  //     if (queryData?.articleId) {
-  //       return findedArticle?.[0];
-  //     } else {
-  //       return null;
-  //     }
-  //   });
-  //   setBeforeData(item => {
-  //     if (queryData?.articleId) {
-  //       return findedBeforeArticle?.[findedBeforeArticle?.length - 1];
-  //     } else {
-  //       return null;
-  //     }
-  //   });
-  //   setAfterData(item => {
-  //     if (queryData?.articleId) {
-  //       return findedAfterArticle?.[0];
-  //     } else {
-  //       return null;
-  //     }
-  //   });
-  // }, [allData, queryData?.articleId]);
-
   // 기사 찾는 함수
   const articleSearch = id => {
     const result = allData?.data?.filter(item => item.id == id);
@@ -159,7 +111,7 @@ const TidingsDetail = () => {
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center pb-160 pt-40 max-lg:mb-20 max-lg:px-20 max-lg:py-0`}
+      className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:mb-20 max-lg:px-20 max-lg:py-0`}
     >
       <div className='w-full max-w-1200'>
         <div
@@ -233,10 +185,10 @@ const TidingsDetail = () => {
             </span>
           </div>
 
-          <div className={`${beforeData ? 'border-t-1' : ''} border-grey-900`}>
-            <div
-              className={`${afterData ? '' : 'hidden'} flex h-80 items-center justify-between`}
-            >
+          <div
+            className={`${afterData ? '' : 'hidden'} ${beforeData ? 'border-t-1' : ''} border-grey-900`}
+          >
+            <div className={`flex h-80 items-center justify-between`}>
               <button
                 className={`flex items-center justify-start`}
                 onClick={() => {

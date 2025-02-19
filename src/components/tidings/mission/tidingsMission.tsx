@@ -166,7 +166,7 @@ const TidingsMission = () => {
         <div
           className={`flex w-full max-w-1200 items-start justify-center px-20 max-lg:hidden`}
         >
-          <div className={`w-full`}>
+          <div className={`sticky top-80 w-full`}>
             {findedMockupData?.[pagingNum] ? (
               <div className={`h-656 w-full max-w-560`}>
                 <div

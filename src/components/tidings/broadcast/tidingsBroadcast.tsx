@@ -55,7 +55,8 @@ const TidingsBroadcast = () => {
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-start pb-160 max-lg:pb-0`}
+      data-aos='fade-up'
+      className={`flex w-full flex-col items-center justify-start pb-160 max-lg:pb-60`}
     >
       <div className={`w-full max-w-1200`}>
         <div
