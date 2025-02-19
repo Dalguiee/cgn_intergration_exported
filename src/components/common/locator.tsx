@@ -33,15 +33,21 @@ const Locator = () => {
             data = '선교캠페인';
             pathStack = 'tidings/mission';
           }
-          if (data === 'detail') {
-            pathPiece = subDepth;
-            data = '';
-            pathStack = `tidings/${subDepth}`;
-          }
           if (data === 'support') {
             pathPiece = data;
             data = `후원스토리`;
             pathStack = `tidings/support`;
+          }
+          if (data === 'broadcast') {
+            pathPiece = data;
+            data = `보도 자료`;
+            pathStack = `tidings/broadcast`;
+          }
+
+          if (data === 'detail') {
+            pathPiece = subDepth;
+            data = '';
+            pathStack = `tidings/${subDepth}`;
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

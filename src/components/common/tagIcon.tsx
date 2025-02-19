@@ -79,7 +79,7 @@ const pcTagTypes = [
     id: 13,
     text: '보도 자료',
     className:
-      'bg-secondary-pink text-white-solid flex justify-center items-center rounded-4',
+      'bg-secondary-blue text-white-solid flex justify-center items-center rounded-4',
   },
 ];
 
@@ -106,9 +106,9 @@ const TagIcon = ({ id = 1, text = '', mode = 'mode1' }) => {
   return (
     <>
       <span
-        className={`tag-btn ${modeFind && modeFind.className} ${tagFind && tagFind.className} flex items-center justify-center`}
+        className={`tag-btn ${modeFind && modeFind?.className} ${tagFind && tagFind?.className} flex items-center justify-center`}
       >
-        {!text.length ? text : tagFind.text}
+        {text?.length ? text : tagFind?.text}
       </span>
     </>
   );

@@ -29,10 +29,10 @@ const MainFooter = () => {
                   <span className={`text-bold14`}>채용</span>
                 </button>
                 <button>
-                  <span className={`text-regular14`}>이용약관</span>
+                  <span className={`text-regular14`}>이용 약관</span>
                 </button>
                 <button>
-                  <span className={`text-regular14`}>개인정보 처리 방침</span>
+                  <span className={`text-regular14`}>개인정보 처리방침</span>
                 </button>
               </div>
             </div>
@@ -114,18 +114,18 @@ const MainFooter = () => {
         <div
           className={`flex w-full flex-wrap items-start justify-start gap-4`}
         >
-          <span className={`px-12 py-4 pr-12 text-bold14 text-grey-900`}>
+          <span className={`text-bold14 px-12 py-4 pr-12 text-grey-900`}>
             공지사항
           </span>
-          <span className={`px-12 py-4 text-bold14 text-grey-900`}>FAQ</span>
-          <span className={`px-12 py-4 text-bold14 text-grey-900`}>채용</span>
-          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
-            이용약관
+          <span className={`text-bold14 px-12 py-4 text-grey-900`}>FAQ</span>
+          <span className={`text-bold14 px-12 py-4 text-grey-900`}>채용</span>
+          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
+            이용 약관
           </span>
-          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
-            개인정보 처리 방침
+          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
+            개인정보 처리방침
           </span>
-          <span className={`px-12 py-4 text-regular14 text-grey-900`}>
+          <span className={`text-regular14 px-12 py-4 text-grey-900`}>
             이메일무단수집거부
           </span>
         </div>
@@ -166,7 +166,7 @@ const MainFooter = () => {
             서울특별시 용산구 서빙고로 269(서빙고동)
           </span>
           <div className='flex'>
-            <span className={`mr-12 text-regular14 text-grey-500`}>
+            <span className={`text-regular14 mr-12 text-grey-500`}>
               사업자등록번호 : 106-82-11892
             </span>
             <span className={`text-regular14 text-grey-500`}>

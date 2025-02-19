@@ -1,7 +1,7 @@
 //개발중
 
 import TidingsHeader from '@/components/tidings/tidingsHeader';
-import TidingsMission from '@/components/tidings/tidingsMission';
+import TidingsMission from '@/components/tidings/mission/tidingsMission';
 import React from 'react';
 
 const SupportPage = () => {

@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // 컴포넌트
-import TidingsCard from '@/components/tidings/tidingsCard';
+import TidingsCard from '@/components/tidings/campaign/tidingsCard';
 import CategoryList from '@/components/common/categoryList';
 
 // 데이터
 import { mockupData } from '@/db/mockup';
 
-const TidingsMain = () => {
+const TidingsCampaign = () => {
   const location = useLocation();
   const [findedMockupData, setfindedMockupData] = useState([]);
   const [selectedId, setSelectedId] = useState(0);
@@ -64,4 +64,4 @@ const TidingsMain = () => {
   );
 };
 
-export default TidingsMain;
+export default TidingsCampaign;

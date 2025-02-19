@@ -1,11 +1,11 @@
 // 개발중인 컴포넌트입니다.
 
 import React, { useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import TextScroll from '@/components/tidings/mission/textScroll';
 import CategoryList from '@/components/common/categoryList';
-import TidingsCard2 from '@/components/tidings/tidingsCard2';
+import TidingsCard2 from '@/components/tidings/mission/tidingsCard2';
 import TagIcon from '@/components/common/tagIcon';
 
 import { mockupData } from '@/db/mockup';
@@ -71,6 +71,8 @@ const TidingsMission = () => {
   const [bgBoxPositon, setBgBoxPosition] = useState(0);
   const [selectedId, setSelectedId] = useState(0);
 
+  const navigate = useNavigate();
+
   // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
   const mockupExport = mockupData.filter(item => {
     return item.path.includes(location.pathname);
@@ -88,17 +90,17 @@ const TidingsMission = () => {
       setfindedMockupData(mockupExportedData);
     } else {
       setfindedMockupData(
-        mockupExportedData.filter(item => {
-          return item?.tag?.some(obj => obj.id === Number(selectedId));
+        mockupExportedData?.filter(item => {
+          return item?.tag?.some(obj => obj?.id === Number(selectedId));
         })
       );
     }
   }, [selectedId]);
 
   useEffect(() => {
-    if (location?.pathname?.includes('tidings/mission')) {
+    if (location?.pathname?.includes('/tidings/mission')) {
       setPageMode('mission');
-    } else if (location?.pathname?.includes('tidings/support')) {
+    } else if (location?.pathname?.includes('/tidings/support')) {
       setPageMode('support');
     }
   }, [pageMode, location]);
@@ -140,7 +142,7 @@ const TidingsMission = () => {
           {findedMockupData?.map(item => (
             <TidingsCard2
               pageMode={pageMode}
-              key={item.id}
+              key={item?.id}
               allData={mockupExportedData}
               item={item}
             />
@@ -162,11 +164,19 @@ const TidingsMission = () => {
                 <div
                   className={`rounded-br-16 rounded-tr-16 border-1 border-grey-400 bg-white-solid pr-32 pt-32`}
                 >
-                  <img
-                    className={`w-full rounded-br-16 rounded-tr-16`}
-                    src={`${findedMockupData?.[pagingNum].src}`}
-                    alt=''
-                  />
+                  <button
+                    onClick={() => {
+                      navigate(
+                        `${pageMode === 'mission' ? `/tidings/mission/detail?articleId=${findedMockupData?.[pagingNum]?.id}` : `/tidings/support/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
+                      );
+                    }}
+                  >
+                    <img
+                      className={`w-full rounded-br-16 rounded-tr-16`}
+                      src={`${findedMockupData?.[pagingNum]?.src}`}
+                      alt=''
+                    />
+                  </button>
                   <div
                     className={`flex items-center justify-start gap-16 px-24 py-24`}
                   >
@@ -233,13 +243,18 @@ const TidingsMission = () => {
             className={`relative flex w-full max-w-616 flex-col items-center justify-start gap-16`}
           >
             <div
-              style={{ top: `${bgBoxPositon}px` }}
-              className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm transition`}
+              style={{ top: `${bgBoxPositon}px`, transition: `0.8s` }}
+              className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm`}
             ></div>
-            {findedMockupData?.slice(0, 7).map(data => (
-              <div
+            {findedMockupData?.slice(0, 7)?.map(data => (
+              <button
                 onMouseEnter={e => {
                   positionFind(e);
+                }}
+                onClick={() => {
+                  navigate(
+                    `${pageMode === 'mission' ? `/tidings/mission/detail?articleId=${data?.id}` : `/tidings/support/detail?articleId=${data?.id}`}`
+                  );
                 }}
                 className={`relative z-20 flex h-80 w-full items-center justify-between px-24 py-24`}
                 key={data?.id}
@@ -262,7 +277,7 @@ const TidingsMission = () => {
                 <span className={`text-regular14 text-grey-400`}>
                   {data?.startDate}
                 </span>
-              </div>
+              </button>
             ))}
           </div>
         </div>

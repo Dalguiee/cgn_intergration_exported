@@ -8,9 +8,7 @@ const TidingsCard = ({ item, allData }) => {
   return (
     <button
       onClick={() => {
-        navigator(`/tidings/campaign/detail?articleId=${item?.id}`, {
-          state: { detailData: item, allData },
-        });
+        navigator(`/tidings/campaign/detail?articleId=${item?.id}`);
       }}
       style={{ boxShadow: `0 0 30px 1px #ececec` }}
       className={`mt-16 flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}
@@ -37,7 +35,7 @@ const TidingsCard = ({ item, allData }) => {
         </div>
       </div>
       <div className={`mt-12 flex w-full items-center justify-start`}>
-        <span className={`text-left text-bold24 text-grey-900`}>
+        <span className={`text-bold24 text-left text-grey-900`}>
           {item.title}
         </span>
       </div>

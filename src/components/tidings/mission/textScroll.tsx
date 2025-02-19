@@ -1,7 +1,11 @@
 // 개발중입니다.
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
+// 미션과 후원에서 사용되는 페이지 중간 텍스트 애니메이터 입니다.
 const TextScroll = () => {
+  const location = useLocation();
+
   return (
     <div
       className={`animation mb-60 mt-152 w-full overflow-x-hidden max-lg:hidden`}
@@ -11,7 +15,9 @@ const TextScroll = () => {
         className={`flex items-center justify-center gap-34`}
       >
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -19,7 +25,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -27,7 +35,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -35,7 +45,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -43,7 +55,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -51,7 +65,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -59,7 +75,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -67,7 +85,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -75,7 +95,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -83,7 +105,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -91,7 +115,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -99,7 +125,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -107,7 +135,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -115,7 +145,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
@@ -123,7 +155,9 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          CGN Mission Story
+          {location.pathname.includes('/tidings/mission')
+            ? `CGN Mission Story`
+            : `CGN Supporter Story`}
         </span>
         <img
           className={`h-45 w-16`}
