@@ -57,6 +57,7 @@ const FirstSection = () => {
               selectedItem={selectedItem}
               setSelectedItem={setSelectedItem}
               width='290'
+              placeholder=''
             />
             <button
               className={`text-regular24 h-64 w-212 rounded-8 bg-grey-100 text-grey-900`}

@@ -1,5 +1,6 @@
-// 커스텀 select 입니다. 사용하기 위해선 부모컴포넌트에서 selectData 라는 array 데이터와 [selectedItem, setSelectedItem] state 가 필요합니다
+// const [selectedItem, setSelectedItem] = useState([]); 부모에서 해당 state 필요
 // width 도 props 로 받으며, 기본값은 30px 입니다.
+// placeholder 를 부모단에서 String 으로 준다면 먼저 보여줍니다. 없을경우 첫 항목이 선택됩니다.
 
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -8,6 +9,7 @@ const SelectBox = ({
   selectedItem,
   setSelectedItem,
   width = '30',
+  placeholder = '',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
@@ -15,7 +17,15 @@ const SelectBox = ({
 
   // 선택된 데이터를 넣는 항목, 페이지 진입시 첫줄 데이터를 placeholder 로 사용합니다
   useEffect(() => {
-    setSelectedItem(listData?.[0]);
+    if (placeholder !== '') {
+      setSelectedItem({
+        id: '',
+        text: placeholder,
+        value: '',
+      });
+    } else {
+      setSelectedItem(listData?.[0]);
+    }
   }, []);
 
   // 내부에 스크롤 선택지 맨 위로 올려 보이게 합니다.
