@@ -117,9 +117,9 @@ const TidingsDetail = () => {
         <div
           className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-8 max-lg:border-b-1 max-lg:border-t-0 max-lg:border-b-grey-100 max-lg:py-12`}
         >
-          <div className={`flex items-center justify-center gap-16`}>
+          <div className={`flex justify-center gap-16`}>
             {currentData?.tag?.map((obj, key) => (
-              <div key={key} className={`max-lg:hidden`}>
+              <div key={key} className={`h-full max-lg:hidden`}>
                 <TagIcon
                   text={obj?.text}
                   id={obj?.id}
@@ -132,7 +132,9 @@ const TidingsDetail = () => {
               {currentData?.detailTitle}
             </span>
           </div>
-          <span className={`text-regular14 text-grey-400`}>
+          <span
+            className={`text-regular14 ml-40 w-fit whitespace-nowrap text-grey-400`}
+          >
             {currentData?.startDate}
           </span>
         </div>
@@ -173,7 +175,7 @@ const TidingsDetail = () => {
                 이전 글
               </span>
               <span
-                className={`text-regular16 ml-16 line-clamp-1 text-grey-500`}
+                className={`text-regular16 mx-16 line-clamp-1 text-grey-500`}
               >
                 {beforeData?.title}
               </span>
@@ -201,7 +203,7 @@ const TidingsDetail = () => {
                   다음 글
                 </span>
                 <span
-                  className={`text-regular16 ml-16 line-clamp-1 text-grey-500`}
+                  className={`text-regular16 mx-16 line-clamp-1 text-grey-500`}
                 >
                   {afterData?.title}
                 </span>

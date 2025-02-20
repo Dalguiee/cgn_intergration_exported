@@ -14,7 +14,7 @@ const TidingsCard = ({ item, allData }) => {
       className={`mt-16 flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}
     >
       <img
-        className='aspect-[252/240] w-full rounded-8 object-cover'
+        className='aspect-[252/240] min-h-352 w-full rounded-8 object-cover max-lg:min-h-224'
         src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
         width={`352px`}
         height={`240px`}

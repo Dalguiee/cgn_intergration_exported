@@ -55,6 +55,13 @@
 @tailwind utilities;
 
 @layer base {
+  input {
+    outline: none;
+  }
+  input::placeholder {
+    @apply text-grey-400;
+  }
+
   .text-bold78 {
     font-size: 78px;
     line-height: 96px;
@@ -227,11 +234,25 @@
 
 @layer utilities {
   .separator {
-    @apply h-12 w-1 border-r-1 border-grey-200;
+    @apply w-1 h-12 border-r-1 border-grey-200;
   }
 
   [data-comment='text_scroll_box'] {
     animation: txt 100s linear infinite;
+  }
+
+  [data-custom-scroll]::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  [data-custom-scroll]::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  [data-custom-scroll]::-webkit-scrollbar-thumb {
+    padding: 10px 0 10px 0;
+    background: #bbbbbb;
+    border-radius: 16px;
   }
 
   @keyframes txt {

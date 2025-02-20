@@ -1,36 +1,61 @@
-import React, { useState } from 'react';
+// 커스텀 select 입니다. 사용하기 위해선 부모컴포넌트에서 selectData 라는 array 데이터와 [selectedItem, setSelectedItem] state 가 필요합니다
+// width 도 props 로 받으며, 기본값은 30px 입니다.
 
-const SelectBox = ({ listData, width = '30' }) => {
+import React, { useEffect, useRef, useState } from 'react';
+
+const SelectBox = ({
+  listData,
+  selectedItem,
+  setSelectedItem,
+  width = '30',
+}) => {
+  // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
-  const [placeHolder, setPlaceHolder] = useState([]);
-  console.log(width);
+  const selectOpenBox = useRef(null);
+
+  // 선택된 데이터를 넣는 항목, 페이지 진입시 첫줄 데이터를 placeholder 로 사용합니다
+  useEffect(() => {
+    setSelectedItem(listData?.[0]);
+  }, []);
+
+  // 내부에 스크롤 선택지 맨 위로 올려 보이게 합니다.
+  useEffect(() => {
+    selectOpenBox?.current.scrollTo(0, 0);
+  }, [open]);
+
   return (
     <div
       style={{ width: `${width}px` }}
-      className={`relative z-10 flex w-290 items-center ${width === '30' ? `w-30` : ``} ${open ? 'border-transparent' : 'border-grey-200'} justify-between rounded-8 border-1 py-12 pr-16`}
+      className={`${width === '30' ? `w-30` : ``} ${open ? '' : ''} relative z-10 flex h-62 items-center justify-center`}
     >
-      <div></div>
-
       <div
-        className={`border-grey-200 px-16 py-12 ${open ? 'absolute top-0 h-fit rounded-8 border border-1' : 'h-0'} flex w-full flex-col items-start justify-start gap-8 bg-white-solid transition`}
+        ref={selectOpenBox}
+        data-custom-scroll
+        style={{ transition: `0.8s` }}
+        className={`${open ? 'h-300 overflow-y-scroll' : 'h-62 overflow-y-hidden'} absolute left-0 top-0 flex w-full flex-col items-start justify-start gap-12 rounded-8 bg-white-solid py-18 pl-12 outline outline-1 outline-grey-200 transition-all`}
       >
-        <div
-          className={` ${open ? 'hidden' : ''} absolute top-[50%] translate-y-[-50%] transform`}
-        >
-          <button className={`hover:text-bold18 text-regular18 cursor-pointer`}>
-            {listData?.[0]?.value}
+        <div className={`${open ? 'hidden' : 'pointer-events-none flex'}`}>
+          <button
+            className={`hover:text-bold18 text-regular18 cursor-pointer text-grey-400`}
+          >
+            {selectedItem?.text}
           </button>
         </div>
 
-        {listData.map((item, key) => (
-          <div key={key} className={` ${open ? '' : 'hidden'}`}>
+        {listData?.map((item, key) => (
+          <div
+            key={key}
+            style={{ transition: `0.8s` }}
+            className={`${open ? 'h-28 opacity-100' : 'h-0 opacity-0'}`}
+          >
             <button
               onClick={() => {
                 setOpen(false);
+                setSelectedItem(item);
               }}
               className={`hover:text-bold18 text-regular18 cursor-pointer`}
             >
-              {item?.value}
+              {item?.text}
             </button>
           </div>
         ))}
@@ -39,7 +64,7 @@ const SelectBox = ({ listData, width = '30' }) => {
         onClick={() => {
           setOpen(!open);
         }}
-        className={`${open ? 'rotate-180 transform' : ''} transition`}
+        className={`absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
       >
         <img src='/public/images/icon/arrow_under_grey900.svg' alt='' />
       </button>

@@ -13,13 +13,13 @@ const TidingsCard2 = ({ item, pageMode }) => {
       onClick={() => {
         navigator(`/tidings/${pageMode}/detail?articleId=${item.id}`);
       }}
-      className={`mt-16 flex min-h-550 w-full max-w-560 flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378`}
+      className={`mt-16 flex min-h-550 w-full flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378 max-lg:w-full lg:max-w-560`}
     >
       <img
-        className='h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top'
+        className='min-h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top max-lg:aspect-[361/24] max-lg:min-h-361'
         src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small_top_rounded.png`}
-        width={``}
-        height={`382px`}
+        width={361}
+        height={246}
         alt='메인카드이미지'
       />
       <div

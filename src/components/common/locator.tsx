@@ -6,9 +6,8 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 const Locator = () => {
   const location = useLocation();
   const navigation = useNavigate();
-  const [changedPathName, setChangedPathName] = useState([]);
-
   const { subDepth } = useParams();
+  const [changedPathName, setChangedPathName] = useState([]);
 
   useEffect(() => {
     let pathStack = '';
@@ -57,7 +56,7 @@ const Locator = () => {
   }, [location]);
 
   return (
-    <section className='flex w-full items-center justify-center px-20 pt-16 max-lg:hidden max-lg:px-20'>
+    <section className='flex items-center justify-center w-full px-20 pt-16 max-lg:hidden max-lg:px-20'>
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {
@@ -69,8 +68,8 @@ const Locator = () => {
             alt=''
           />
         </button>
-        {changedPathName.map((item, index) => {
-          if (item.name !== '') {
+        {changedPathName?.map((item, index) => {
+          if (item?.name !== '') {
             return (
               <Fragment key={index}>
                 <img

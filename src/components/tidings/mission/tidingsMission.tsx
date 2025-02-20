@@ -1,108 +1,66 @@
-// 개발중인 컴포넌트입니다.
+/*
+ * 개발중인 컴포넌트입니다.
+ */
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import TextScroll from '@/components/tidings/mission/textScroll';
-import CategoryList from '@/components/common/categoryList';
-import TidingsCard2 from '@/components/tidings/mission/tidingsCard2';
-import TagIcon from '@/components/common/tagIcon';
-
 import { mockupData } from '@/db/mockup';
 
-// 스와이퍼 모듈
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import CategoryList from '@/components/common/categoryList';
+import TagIcon from '@/components/common/tagIcon';
+import TextScroll from '@/components/tidings/mission/textScroll';
+import PcTopArticleSwiper from '@/components/tidings/mission/pcTopArticleSwiper';
+import MoTopArticleList from './moTopArticleList';
 
-const SwiperSec = ({ pageMode, findedMockupData }) => {
-  return (
-    <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`px-20`}
-      spaceBetween={64}
-      slidesPerView={
-        findedMockupData && findedMockupData?.length < 3 ? 2 : undefined
-      }
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={swiper => console.log(swiper)}
-      breakpoints={{
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 16,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 32,
-        },
-        1024: {
-          slidesPerView:
-            findedMockupData && findedMockupData?.length >= 3 ? 3 : 1,
-          spaceBetween: 64,
-        },
-      }}
-    >
-      {findedMockupData?.map((item, key) => (
-        <SwiperSlide className={`flex items-center justify-center`} key={key}>
-          <TidingsCard2
-            pageMode={pageMode}
-            key={item.id}
-            allData={findedMockupData}
-            item={item}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-};
-
-// 해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 컨텐츠만 바꿔끼도록 설계되었습니다.
-// pageMode 에 따라 불러오는 컨텐츠 분기를 걸어놓았습니다.
-
+/*
+ *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 컨텐츠만 바꿔끼도록 설계되었습니다.
+ *pageMode 에 따라 불러오는 컨텐츠 분기를 걸어놓았습니다.
+ */
 const TidingsMission = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const contentBox = useRef(null);
   const listAll = useRef([]);
-  // 페이지에서 사용될 컨텐츠 데이터 불러오기
+  /* 페이지에서 사용될 컨텐츠 데이터 불러오기 */
   const [findedMockupData, setfindedMockupData] = useState();
-  // 미션과 후원에서 동시에 사용되므로 해당 모드를 통해 중간 params 값을 전환하여 detail url 을 정합니다.
+  /*  미션과 후원에서 동시에 사용되므로 해당 모드를 통해 중간 params 값을 전환하여 detail url 을 정합니다. */
   const [pageMode, setPageMode] = useState('');
-  // 하단부 양쪽 화살표를 통해 데이터를 전환하는 버튼에 사용되는 번호입니다.
+  /* 하단부 양쪽 화살표를 통해 데이터를 전환하는 버튼에 사용되는 번호입니다. */
+  // 오른쪽 리스트에 마우스를 올리면 해당 데이터의 index 값이 pagingNum 으로 setState 됩니다
   const [pagingNum, setPagingNum] = useState(0);
-  // 하단부 오른쪽 컨텐츠를 따라다니는 색망상자의 위치입니다.
+  /* 하단부 오른쪽 컨텐츠를 따라다니는 색망상자의 위치입니다. */
   const [bgBoxPositon, setBgBoxPosition] = useState(0);
-  const [selectedId, setSelectedId] = useState(0);
+  const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
 
-  // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
+  /* 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다. */
   const mockupExport = mockupData.filter(item => {
     return item.path.includes(location.pathname);
   });
   const mockupExportedData = mockupExport?.[0]?.data;
 
-  // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
+  /* 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다. */
   useEffect(() => {
     setfindedMockupData(mockupExportedData);
-  }, [location, selectedId]);
+  }, [location, selectedCategoryArticleId]);
 
-  // tidings 헤더 아래에 존재하는 카테고리 버튼의 기능입니다.
-  //category list 에서 selectedId 를 state 를 통해 받으며, 카테고리에 따라 분류된 데이터를 state 에 update 합니다.
+  /* tidings 헤더 아래에 존재하는 카테고리 버튼의 기능입니다. */
+  /* category list 에서 selectedCategoryArticleId 를 state 를 통해 받으며, 카테고리에 따라 분류된 데이터를 state 에 update 합니다. */
   useEffect(() => {
-    if (selectedId === 0) {
+    if (selectedCategoryArticleId === 0) {
       setfindedMockupData(mockupExportedData);
     } else {
       setfindedMockupData(
         mockupExportedData?.filter(item => {
-          return item?.tag?.some(obj => obj?.id === Number(selectedId));
+          return item?.tag?.some(
+            obj => obj?.id === Number(selectedCategoryArticleId)
+          );
         })
       );
     }
-  }, [selectedId]);
+  }, [selectedCategoryArticleId]);
 
-  // 현재 선교스토리 혹은 후원중 어느 페이지로 분기되었는지 사용할 String state 지정
+  /* 현재 선교스토리 혹은 후원중 어느 페이지로 분기되었는지 사용할 String state 지정 */
   useEffect(() => {
     if (location?.pathname?.includes('/tidings/mission')) {
       setPageMode('mission');
@@ -111,7 +69,9 @@ const TidingsMission = () => {
     }
   }, [location]);
 
-  // 하단부 왼쪽 카드 숫자 양옆 num 을 높이고 내리는 버튼 기능입니다. pageNum 연동
+  /*
+   * 하단부 왼쪽 카드 숫자 양옆 num 을 높이고 내리는 버튼 기능입니다. pageNum 연동
+   */
   const pagingNext = () => {
     if (pagingNum < findedMockupData?.length - 1) {
       setPagingNum(item => {
@@ -131,7 +91,9 @@ const TidingsMission = () => {
     }
   };
 
-  // 왼쪽 숫자버튼을 올리고 내렸을 경우 오른쪽 흰색 박스가 해당 항목객체로 따라가는 위치를 잡기위한 함수입니다.
+  /*
+   *왼쪽 숫자버튼을 올리고 내렸을 경우 오른쪽 흰색 박스가 해당 항목객체로 따라가는 위치를 잡기위한 함수입니다.
+   */
   useEffect(() => {
     if (listAll?.current?.[pagingNum]) {
       positionFind(listAll?.current?.[pagingNum]);
@@ -142,30 +104,38 @@ const TidingsMission = () => {
     setBgBoxPosition(e.offsetTop);
   };
 
+  // url 변경될 경우 페이지 번호를 0으로 돌립니다
+  useEffect(() => {
+    setPagingNum(0);
+  }, [location]);
+
   if (!findedMockupData) return <></>;
   return (
     <>
-      <CategoryList setSelectedId={setSelectedId} />
+      <CategoryList
+        setSelectedCategoryArticleId={setSelectedCategoryArticleId}
+      />
       <section
         className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:mb-20 max-lg:px-20 max-lg:pb-0 max-lg:pt-0`}
       >
-        <div
-          className={`hidden w-full max-w-1560 flex-wrap items-start justify-center gap-24 max-lg:flex`}
-        >
-          {findedMockupData?.map((item, key) => (
-            <TidingsCard2 pageMode={pageMode} key={key} item={item} />
-          ))}
-        </div>
+        <MoTopArticleList
+          findedMockupData={findedMockupData}
+          pageMode={pageMode}
+        />
 
         <div
           className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-lg:hidden`}
         >
-          <SwiperSec pageMode={pageMode} findedMockupData={findedMockupData} />
+          <PcTopArticleSwiper
+            pageMode={pageMode}
+            findedMockupData={findedMockupData}
+          />
         </div>
         <TextScroll />
         <div
           className={`flex w-full max-w-1200 items-start justify-center px-20 max-lg:hidden`}
         >
+          {/* 텍스트 애니메이션 하단 왼쪽 구역입니다 */}
           <div className={`sticky top-80 w-full`}>
             {findedMockupData?.[pagingNum] ? (
               <div className={`h-656 w-full max-w-560`}>
@@ -246,12 +216,13 @@ const TidingsMission = () => {
               <></>
             )}
           </div>
+          {/* 텍스트 애니메이션 하단 오른쪽 리스트 구역입니다 */}
           <div
             ref={contentBox}
             className={`relative flex w-full max-w-616 flex-col items-center justify-start gap-16`}
           >
             <div
-              style={{ top: `${bgBoxPositon}px`, transition: `0.8s` }}
+              style={{ top: `${bgBoxPositon}px`, transition: `0.25s` }}
               className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm`}
             ></div>
             {findedMockupData?.map((data, key) => (
