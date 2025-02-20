@@ -1,7 +1,7 @@
-// const [searchText, setSearchText] = useState(''); 부모에서 props 전송 필요
-
+// 훅
 import React, { useState } from 'react';
 
+// const [inputText, setInputText] = useState(''); 부모단 필요 props 전송, 검색용 String
 const DefaultInput = ({
   placeholder = '입력해 주세요.',
   searchBtn = true,
@@ -17,7 +17,7 @@ const DefaultInput = ({
     console.log('검색 찾기');
   };
 
-  // 비밀번호 보기 유무
+  // 비밀번호 보기 버튼 및 password 모드 유무
   const handlePwdMode = () => {
     setPwMode(!pwMode);
   };

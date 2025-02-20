@@ -1,10 +1,8 @@
-// 개발중인 컴포넌트 입니다.
-
+// 훅
 import { useNavigate } from 'react-router-dom';
 import TagIcon from '@/components/common/tagIcon';
 
 // 미션 및 후원에 사용되는 유형2의 컨텐츠 카드 컴포넌트 입니다
-
 const TidingsCard2 = ({ item, pageMode }) => {
   const navigator = useNavigate();
   return (

@@ -1,5 +1,8 @@
+// 훅
 import React from 'react';
-import TidingsCard2 from './tidingsCard2';
+
+// 컴포넌트
+import TidingsCard2 from '@/components/tidings/mission/tidingsCard2';
 
 const MoTopArticleList = ({ findedMockupData, pageMode }) => {
   return (

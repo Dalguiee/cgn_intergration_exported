@@ -1,9 +1,10 @@
+// 훅
 import { useNavigate } from 'react-router-dom';
+
+// 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
 
-// 캠페인 이벤트에 사용되는 1형 카드 컴포넌트 입니다
-
-const TidingsCard = ({ item, allData }) => {
+const TidingsCard = ({ item }) => {
   const navigator = useNavigate();
   return (
     <button

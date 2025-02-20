@@ -1,5 +1,4 @@
-// 개발중인 컴포넌트입니다.
-
+// 훅
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -7,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { mockupData } from '@/db/mockup';
 
 // 컴포넌트
-import TidingsBroadcastCard from './tidingsBroadcastCard';
+import TidingsBroadcastCard from '@/components/tidings/broadcast/tidingsBroadcastCard';
 import DefaultInput from '@/components/common/defaultInput';
 
 const TidingsBroadcast = () => {

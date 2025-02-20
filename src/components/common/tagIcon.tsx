@@ -4,6 +4,7 @@
  * mode 와 id 만 props로 받으면 됩니다.
  */
 
+// 데이터
 const pcTagTypes = [
   {
     id: 1,

@@ -1,3 +1,6 @@
+// 개발중입니다
+
+// 훅
 import React, { useEffect, useRef, useState } from 'react';
 
 const VerticalScroller = () => {

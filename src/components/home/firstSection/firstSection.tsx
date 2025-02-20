@@ -1,6 +1,10 @@
-import BigButton from '@/components/common/bigButton';
-import SelectBox from '@/components/common/selectBox';
+// 개발중입니다.
+
+// 훅
 import React, { useState } from 'react';
+
+// 컴포넌트
+import SelectBox from '@/components/common/selectBox';
 
 const FirstSection = () => {
   // 선택지에서 선택된 데이터가 들어있습니다.
@@ -18,6 +22,12 @@ const FirstSection = () => {
     { id: 5, text: '일반후원5', value: 6 },
     { id: 6, text: '일반후원6', value: 7 },
     { id: 7, text: '일반후원7', value: 8 },
+  ];
+
+  const priceData = [
+    {
+      id: 1,
+    },
   ];
 
   return (

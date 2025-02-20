@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+// 컴포넌트
 import TidingsCard2 from '@/components/tidings/mission/tidingsCard2';
 
 const PcTopArticleSwiper = ({ pageMode, findedMockupData }) => {

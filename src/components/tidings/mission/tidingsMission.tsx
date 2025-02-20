@@ -1,21 +1,19 @@
-/*
- * 개발중인 컴포넌트입니다.
- */
-
+// 훅
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+// 데이터
 import { mockupData } from '@/db/mockup';
 
+// 컴포넌트
 import CategoryList from '@/components/common/categoryList';
 import TagIcon from '@/components/common/tagIcon';
 import TextScroll from '@/components/tidings/mission/textScroll';
 import PcTopArticleSwiper from '@/components/tidings/mission/pcTopArticleSwiper';
-import MoTopArticleList from './moTopArticleList';
+import MoTopArticleList from '@/components/tidings/mission/moTopArticleList';
 
 /*
- *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 컨텐츠만 바꿔끼도록 설계되었습니다.
- *pageMode 에 따라 불러오는 컨텐츠 분기를 걸어놓았습니다.
+ *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 받는 데이터만 따로 받도록 퍼블리싱 되었습니다.
  */
 const TidingsMission = () => {
   const location = useLocation();

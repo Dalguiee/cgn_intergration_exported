@@ -1,5 +1,8 @@
+// 훅
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+
+// 컴포넌트
 import Locator from '@/components/common/locator';
 
 const TidingsHeader = () => {
@@ -41,7 +44,7 @@ const TidingsHeader = () => {
         className={`${location.pathname.includes('/detail') ? 'hidden' : ''} flex h-176 w-full flex-col items-center justify-center border-grey-100 pb-32 pt-40 max-lg:h-80 max-lg:border-t-1 max-lg:px-20 max-lg:py-24`}
       >
         <div className='flex flex-col items-center justify-center gap-16'>
-          <h1 className={`text-bold48 text-grey-900 max-lg:text-bold24`}>
+          <h1 className={`text-bold48 max-lg:text-bold24 text-grey-900`}>
             {currentPath[0]?.title}
           </h1>
           <span className={`text-regular18 text-grey-400 max-lg:hidden`}>
