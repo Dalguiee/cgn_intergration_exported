@@ -5,11 +5,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const SelectBox = ({
-  listData,
+  listData = [],
   selectedItem,
   setSelectedItem,
   placeholder = '',
   width = '30',
+  className = '',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
@@ -26,10 +27,11 @@ const SelectBox = ({
     selectOpenBox?.current.scrollTo(0, 0);
   }, [open]);
 
+  useEffect(() => {});
+
   return (
     <div
-      style={{ width: `${width}px` }}
-      className={`${width === '30' ? `w-30` : ``} ${open ? '' : ''} relative z-10 flex h-62 items-center justify-center`}
+      className={`relative z-10 flex h-62 items-center justify-center ${className && className}`}
     >
       <div
         style={{ transition: `0.3s` }}

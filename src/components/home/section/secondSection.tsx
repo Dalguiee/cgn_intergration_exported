@@ -41,7 +41,7 @@ const SecondSection = () => {
 
   return (
     <section
-      className={`flex h-1004 w-full flex-col items-center justify-center gap-40`}
+      className={`flex h-1004 w-full flex-col items-center justify-center gap-40 max-lg:hidden`}
     >
       <div className={`flex w-full max-w-1560 items-center justify-between`}>
         <h2 className={`text-bold48 text-grey-900`}>캠페인/이벤트</h2>
@@ -103,7 +103,7 @@ const SecondSection = () => {
         </div>
         <div className={`relative grid grid-cols-2 grid-rows-2 gap-24`}>
           {campaignData?.slice(startNum, endNum)?.map((item, key) => (
-            <div className={`h-316 max-w-352`} key={key}>
+            <div data-aos='fade-left' className={`h-316 max-w-352`} key={key}>
               <button
                 style={{ backgroundImage: `url("${item?.src}")` }}
                 className={`flex aspect-[352/240] h-240 w-full max-w-352 items-start justify-start rounded-8 bg-cover bg-no-repeat px-12 py-12`}
