@@ -2,12 +2,14 @@
 
 import React from 'react';
 import VerticalScroller from '@/components/home/verticalScroller/verticalScroller';
-import FirstSection from '@/components/home/firstSection/firstSection';
+import FirstSection from '@/components/home/section/firstSection';
+import SecondSection from './section/secondSection';
 
 const Home = () => {
   return (
     <>
       <FirstSection />
+      <SecondSection />
       <VerticalScroller />
     </>
   );

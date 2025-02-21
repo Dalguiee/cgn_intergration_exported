@@ -1,6 +1,6 @@
-// const [selectedItem, setSelectedItem] = useState([]); 부모에서 해당 state 필요
+// 개발중
+// 사용하기 위해선 부모컴포넌트에서 selectData 라는 array 데이터와 [selectedItem, setSelectedItem] state 가 필요합니다
 // width 도 props 로 받으며, 기본값은 30px 입니다.
-// placeholder 를 부모단에서 String 으로 준다면 먼저 보여줍니다. 없을경우 첫 항목이 선택됩니다.
 
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -8,24 +8,17 @@ const SelectBox = ({
   listData,
   selectedItem,
   setSelectedItem,
-  width = '30',
   placeholder = '',
+  width = '30',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
   const selectOpenBox = useRef(null);
+  const [objSelected, setObjSelected] = useState(false);
 
   // 선택된 데이터를 넣는 항목, 페이지 진입시 첫줄 데이터를 placeholder 로 사용합니다
   useEffect(() => {
-    if (placeholder !== '') {
-      setSelectedItem({
-        id: '',
-        text: placeholder,
-        value: '',
-      });
-    } else {
-      setSelectedItem(listData?.[0]);
-    }
+    setSelectedItem(listData?.[0]);
   }, []);
 
   // 내부에 스크롤 선택지 맨 위로 올려 보이게 합니다.
@@ -39,36 +32,44 @@ const SelectBox = ({
       className={`${width === '30' ? `w-30` : ``} ${open ? '' : ''} relative z-10 flex h-62 items-center justify-center`}
     >
       <div
-        ref={selectOpenBox}
-        data-custom-scroll
-        style={{ transition: `0.8s` }}
-        className={`${open ? 'h-300 overflow-y-scroll' : 'h-62 overflow-y-hidden'} absolute left-0 top-0 flex w-full flex-col items-start justify-start gap-12 rounded-8 bg-white-solid py-18 pl-12 outline outline-1 outline-grey-200 transition-all`}
+        style={{ transition: `0.3s` }}
+        className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 ${objSelected ? 'outline-primary-500' : 'outline-grey-200'}`}
       >
-        <div className={`${open ? 'hidden' : 'pointer-events-none flex'}`}>
-          <button
-            className={`hover:text-bold18 text-regular18 cursor-pointer text-grey-400`}
-          >
-            {selectedItem?.text}
-          </button>
-        </div>
-
-        {listData?.map((item, key) => (
-          <div
-            key={key}
-            style={{ transition: `0.8s` }}
-            className={`${open ? 'h-28 opacity-100' : 'h-0 opacity-0'}`}
+        <ul
+          ref={selectOpenBox}
+          data-custom-scroll
+          style={{ transition: `0.3s` }}
+          className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
+        >
+          <li
+            className={`${open ? 'hidden' : 'pointer-events-none flex'} px-12 py-16`}
           >
             <button
-              onClick={() => {
-                setOpen(false);
-                setSelectedItem(item);
-              }}
-              className={`hover:text-bold18 text-regular18 cursor-pointer`}
+              className={`hover:text-bold18 text-regular18 h-full w-full cursor-pointer ${objSelected ? 'text-primary-500' : 'text-grey-400'}`}
             >
-              {item?.text}
+              {selectedItem?.text}
             </button>
-          </div>
-        ))}
+          </li>
+
+          {listData?.map((item, key) => (
+            <li
+              key={key}
+              style={{ transition: `0.3s` }}
+              className={`${open ? 'h-fit opacity-100' : 'h-0 opacity-0'} w-full hover:bg-primary-50`}
+            >
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  setSelectedItem(item);
+                  setObjSelected(true);
+                }}
+                className={`text-regular18 flex h-full w-full items-center justify-start px-12 py-16`}
+              >
+                <span>{item?.text}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
       <button
         onClick={() => {
@@ -76,7 +77,10 @@ const SelectBox = ({
         }}
         className={`absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
       >
-        <img src='/public/images/icon/arrow_under_grey900.svg' alt='' />
+        <img
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
+          alt=''
+        />
       </button>
     </div>
   );

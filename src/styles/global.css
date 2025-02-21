@@ -234,25 +234,31 @@
 
 @layer utilities {
   .separator {
-    @apply w-1 h-12 border-r-1 border-grey-200;
+    @apply h-12 w-1 border-r-1 border-grey-200;
   }
 
   [data-comment='text_scroll_box'] {
     animation: txt 100s linear infinite;
   }
 
+  [data-custom-scroll] {
+  }
   [data-custom-scroll]::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    border-radius: 8px;
+    @apply bg-grey-300;
   }
 
   [data-custom-scroll]::-webkit-scrollbar-track {
-    background: transparent;
+    border-radius: 8px;
+    outline: 1px solid #bfbfba;
+    outline-offset: -0.5px;
+    @apply bg-grey-300;
   }
 
   [data-custom-scroll]::-webkit-scrollbar-thumb {
-    padding: 10px 0 10px 0;
-    background: #bbbbbb;
-    border-radius: 16px;
+    border-radius: 8px;
+    @apply bg-grey-100;
   }
 
   @keyframes txt {
