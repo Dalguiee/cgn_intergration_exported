@@ -6,27 +6,60 @@ import React from 'react';
 // 컴포넌트
 import PaymentBox from '@/components/home/section/paymentBox';
 
+// 스와이퍼 모듈
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+// 데이터
+import { paymentMockupData } from '@/db/mockup';
+
+function SwiperSec({ mockupData }) {
+  return (
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      className={`h-full w-full`}
+      // scrollbar={{ draggable: true }}
+      spaceBetween={0}
+      slidesPerView={1}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={swiper => console.log(swiper)}
+    >
+      {mockupData?.map((obj, key) => (
+        <SwiperSlide
+          style={{ backgroundImage: `url(${obj?.src})` }}
+          className={`flex h-full w-full items-start justify-center bg-cover bg-center bg-no-repeat pt-200`}
+          key={key}
+        >
+          <div className={`h-full w-full max-w-1560 px-16`}>
+            <div className={`mb-200 flex flex-col items-start justify-center`}>
+              <span className={`text-bold78 text-white-solid`}>
+                {obj?.title}
+              </span>
+              <span className={`text-regular32 text-grey-50`}>
+                {obj?.subTitle}
+              </span>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+}
+
 const FirstSection = () => {
   return (
     <>
       <section
-        className={`relative flex h-918 w-full items-start justify-center bg-[url('/public/images/bg/main_first_section_bg.png')] bg-cover bg-center bg-no-repeat pt-200`}
+        className={`relative flex h-918 w-full items-start justify-center`}
       >
-        <div className={`w-full max-w-1560 px-16`}>
-          <div className={`mb-200 flex flex-col items-start justify-center`}>
-            <span className={`text-bold78 text-white-solid`}>
-              세상에 없는 가치와
-              <br />
-              감동을 담다
-            </span>
-            <span className={`text-regular32 text-grey-50`}>
-              CGN이 세상에 없는 가치와 감동을 전합니다.
-            </span>
-          </div>
-        </div>
+        <SwiperSec mockupData={paymentMockupData} />
       </section>
       <div
-        className={`top-777 w-full max-w-1560 px-16 lg:absolute lg:left-1/2 lg:translate-x-[-50%]`}
+        className={`top-777 z-10 w-full max-w-1560 px-16 max-lg:px-0 lg:absolute lg:left-1/2 lg:translate-x-[-50%]`}
       >
         <PaymentBox />
       </div>
