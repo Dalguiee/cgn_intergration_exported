@@ -9,7 +9,9 @@ import Btn from '@/components/common/btn';
 
 const VerticalScroller = () => {
   const verticalBox = useRef();
+  const innerContentAll = useRef([]);
   const [position, setPosition] = useState('0');
+  const contentWidth = innerContentAll?.current?.[0]?.offsetWidth;
 
   useEffect(() => {
     const positionCalc = () => {
@@ -70,14 +72,17 @@ const VerticalScroller = () => {
         <div
           style={{
             transform: `translateX(calc(-${position}%))`,
-            width: `${mediaData?.slice(0, 10).length * 374}px`,
+            width: `${mediaData?.slice(0, 15).length * (contentWidth + 24)}px`,
           }}
           className={`duration-600 flex h-full max-h-544 flex-shrink-0 items-start justify-start gap-24 pl-380 transition-all ease-in-out`}
         >
-          {mediaData?.slice(0, 10)?.map((item, key) => {
+          {mediaData?.slice(0, 15)?.map((item, key) => {
             return (
               <img
                 key={key}
+                ref={el => {
+                  innerContentAll.current[key] = el;
+                }}
                 className={`h-full max-h-448 w-350 object-cover`}
                 src={item?.src}
                 alt=''
