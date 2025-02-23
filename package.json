@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/aos": "^3.0.7",
     "aos": "^2.3.4",
     "env-cmd": "^10.1.0",

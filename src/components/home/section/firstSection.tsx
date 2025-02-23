@@ -20,9 +20,11 @@ import { paymentMockupData } from '@/db/mockup';
 function SwiperSec({ mockupData }) {
   return (
     <Swiper
+      data-main-swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`h-full w-full`}
+      className={`h-full w-full max-lg:h-[calc(100%+48px)]`}
       // scrollbar={{ draggable: true }}
+      pagination={{ clickable: true }}
       spaceBetween={0}
       slidesPerView={1}
       onSlideChange={() => console.log('slide change')}
@@ -31,13 +33,15 @@ function SwiperSec({ mockupData }) {
       {mockupData?.map((obj, key) => (
         <SwiperSlide
           style={{ backgroundImage: `url(${obj?.src})` }}
-          className={`flex h-full w-full items-start justify-center bg-cover bg-center bg-no-repeat pt-200`}
+          className={`flex w-full items-start justify-center bg-cover bg-center bg-no-repeat pt-200 max-lg:h-[calc(100%-48px)]`}
           key={key}
         >
           <div className={`h-full w-full max-w-1560 px-16`}>
             <div className={`mb-200 flex flex-col items-start justify-center`}>
               <span className={`text-bold78 text-white-solid`}>
                 {obj?.title}
+                <br />
+                {obj?.depthTitle !== '' ? obj?.depthTitle : ''}
               </span>
               <span className={`text-regular32 text-grey-50`}>
                 {obj?.subTitle}
@@ -54,7 +58,7 @@ const FirstSection = () => {
   return (
     <>
       <section
-        className={`relative flex h-918 w-full items-start justify-center`}
+        className={`relative flex h-918 w-full items-start justify-center max-lg:mb-58`}
       >
         <SwiperSec mockupData={paymentMockupData} />
       </section>

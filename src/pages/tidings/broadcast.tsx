@@ -6,7 +6,7 @@ import React from 'react';
 
 const BroadcastPage = () => {
   return (
-    <section className='flex flex-col items-center justify-center'>
+    <section className='flex flex-col items-center justify-center bg-primary-50'>
       <TidingsHeader />
       <TidingsBroadcast />
     </section>

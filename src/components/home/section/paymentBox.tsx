@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
+import Btn from '@/components/common/btn';
 
 const PaymentBox = () => {
-  const [selectedItem, setSelectedItem] = useState([]);
+  const [selectedSubscribes, setselectedSubscribes] = useState([]);
+  const [selectedPrice, setSelectedPrice] = useState({});
   const selectData = [
     {
       id: 0,
@@ -21,9 +23,16 @@ const PaymentBox = () => {
     { id: 7, text: '일반후원7', value: 8 },
   ];
 
+  const priceData = [
+    { id: 0, text: '10,000원', value: 1 },
+    { id: 1, text: '30,000원', value: 2 },
+    { id: 2, text: '50,000원', value: 3 },
+    { id: 3, text: '기타', value: 4 },
+  ];
+
   return (
     <div
-      className={`flex min-h-168 flex-col items-start justify-center gap-24 rounded-16 bg-white-solid px-40 py-24 max-lg:items-center max-lg:px-0`}
+      className={`flex min-h-168 flex-col items-start justify-center gap-24 rounded-16 bg-white-solid px-40 py-24 max-lg:items-center max-lg:px-16`}
     >
       <span className={`text-bold24 text-grey-900`}>
         당신의 소중한 후원으로 오늘도 복음은 전해집니다!
@@ -33,39 +42,41 @@ const PaymentBox = () => {
       >
         <SelectBox
           listData={selectData}
-          selectedItem={selectedItem}
-          setSelectedItem={setSelectedItem}
+          selectedItem={selectedSubscribes}
+          setSelectedItem={setselectedSubscribes}
           className='w-290 max-w-290 max-lg:min-w-full'
         />
         <div
           className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:min-w-full max-lg:gap-5 max-md:h-48`}
         >
-          <button
-            className={`text-regular24 max-md:text-regular16 h-full w-full rounded-8 bg-grey-100 text-grey-900`}
-          >
-            10,000원
-          </button>
-          <button
-            className={`text-regular24 max-md:text-regular16 h-full w-full rounded-8 bg-grey-100 text-grey-900`}
-          >
-            30,000원
-          </button>
-          <button
-            className={`text-regular24 max-md:text-regular16 h-full w-full rounded-8 bg-grey-100 text-grey-900`}
-          >
-            50,000원
-          </button>
-          <button
-            className={`text-regular24 max-md:text-regular16 h-full w-full rounded-8 bg-grey-100 text-grey-900`}
-          >
-            기타
-          </button>
+          {priceData?.map((item, key) => {
+            return (
+              <button
+                key={key}
+                onClick={() => {
+                  setSelectedPrice(item);
+                }}
+                className={`${item?.id === selectedPrice?.id ? 'text-bold24 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 text-grey-900'} max-md:text-regular16 h-full w-full rounded-8 bg-grey-100`}
+              >
+                {item?.text}
+              </button>
+            );
+          })}
         </div>
-        <button
+        <div className={`max-lg:w-full lg:w-300`}>
+          <Btn
+            text='후원하기'
+            formMode='mode1'
+            colorMode='mode1'
+            widthFull={true}
+          />
+        </div>
+
+        {/* <button
           className={`text-bold24 flex h-64 w-300 max-w-300 items-center justify-center rounded-8 bg-primary-500 text-white-solid max-lg:min-w-full max-md:h-52`}
         >
           후원하기
-        </button>
+        </button> */}
       </div>
     </div>
   );

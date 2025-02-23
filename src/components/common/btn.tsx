@@ -47,19 +47,20 @@ const colorModeData = [
 ];
 
 const Btn = ({
-  text = '텍스트 필요',
+  text = '텍스트 props 필요',
   formMode = 'mode1',
   colorMode = 'mode1',
   arrowMode = false,
+  widthFull = false,
 }) => {
   const formModeObj = formModeData.find(item => item.mode === formMode);
   const colorModeObj = colorModeData.find(item => item.mode === colorMode);
 
   return (
     <button
-      className={`flex items-center justify-center text-nowrap rounded-8 px-16 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
+      className={`flex items-center justify-center text-nowrap rounded-8 px-16 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
     >
-      <span>{text}</span>
+      <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img
         className={`${arrowMode ? '' : 'hidden'} h-16 w-16`}
         src='/public/images/icon/arrow_right_grey700.svg'

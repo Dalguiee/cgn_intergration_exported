@@ -8,8 +8,9 @@ const SelectBox = ({
   listData = [],
   selectedItem,
   setSelectedItem,
+  // placeholder 는 string 으로 받음
   placeholder = '',
-  width = '30',
+  widthFull = false,
   className = '',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
@@ -31,7 +32,7 @@ const SelectBox = ({
 
   return (
     <div
-      className={`relative z-10 flex h-62 items-center justify-center ${className && className}`}
+      className={`relative z-10 flex h-62 items-center justify-center ${widthFull ? '!w-full' : ''} ${className && className}`}
     >
       <div
         style={{ transition: `0.3s` }}

@@ -818,24 +818,28 @@ export const paymentMockupData = [
     id: 0,
     src: `/public/images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
   {
     id: 1,
     src: `/public/images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
   {
     id: 2,
     src: `/public/images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
   {
     id: 3,
     src: `/public/images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
 ];
