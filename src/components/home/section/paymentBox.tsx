@@ -6,9 +6,11 @@ import SelectBox from '@/components/common/selectBox';
 import Btn from '@/components/common/btn';
 
 const PaymentBox = () => {
+  // select box 와 송신하는 state
   const [selectedSubscribes, setselectedSubscribes] = useState([]);
+  // 버튼항목과 송신하는 state
   const [selectedPrice, setSelectedPrice] = useState({});
-  const selectData = [
+  const subscribesData = [
     {
       id: 0,
       text: '정기후원',
@@ -41,7 +43,7 @@ const PaymentBox = () => {
         className={`flex w-full items-center justify-center gap-8 max-lg:flex-col max-lg:gap-12`}
       >
         <SelectBox
-          listData={selectData}
+          listData={subscribesData}
           selectedItem={selectedSubscribes}
           setSelectedItem={setselectedSubscribes}
           className='w-290 max-w-290 max-lg:min-w-full'

@@ -68,7 +68,11 @@ const SelectBox = ({
                 }}
                 className={`text-regular18 flex h-full w-full items-center justify-start px-12 py-16`}
               >
-                <span>{item?.text}</span>
+                <span
+                  className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}
+                >
+                  {item?.text}
+                </span>
               </button>
             </li>
           ))}
