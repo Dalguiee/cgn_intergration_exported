@@ -4,7 +4,7 @@
 import React from 'react';
 
 // 컴포넌트
-import PaymentBox from '@/components/home/section/paymentBox';
+import PaymentBox from '@/components/home/common/paymentBox';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +22,7 @@ function SwiperSec({ mockupData }) {
     <Swiper
       data-main-swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`h-full w-full max-lg:h-[calc(100%+48px)]`}
+      className={`h-full w-full`}
       // scrollbar={{ draggable: true }}
       pagination={{ clickable: true }}
       spaceBetween={0}
@@ -56,18 +56,18 @@ function SwiperSec({ mockupData }) {
 
 const FirstSection = () => {
   return (
-    <>
-      <section
-        className={`relative flex h-918 w-full items-start justify-center max-lg:mb-58`}
+    <div className={`flex h-fit flex-col items-center justify-start`}>
+      <div
+        className={`relative flex h-918 w-full items-start justify-center max-lg:h-[calc(918px+48px)]`}
       >
         <SwiperSec mockupData={paymentMockupData} />
-      </section>
+      </div>
       <div
-        className={`top-777 z-10 w-full max-w-1560 px-16 max-lg:px-0 lg:absolute lg:left-1/2 lg:translate-x-[-50%]`}
+        className={`z-10 w-full max-w-1560 px-16 max-lg:min-h-361 max-lg:px-0 lg:absolute lg:left-1/2 lg:top-777 lg:translate-x-[-50%]`}
       >
         <PaymentBox />
       </div>
-    </>
+    </div>
   );
 };
 

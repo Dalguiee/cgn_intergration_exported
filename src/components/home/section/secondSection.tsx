@@ -14,7 +14,6 @@ const SecondSection = () => {
   const [endNum, setEndNum] = useState(4);
 
   const pagingNext = () => {
-    console.log(Math.round(campaignData?.length / 4));
     if (endNum < campaignData?.length) {
       setStartNum(item => {
         return item + 4;
@@ -40,12 +39,15 @@ const SecondSection = () => {
   };
 
   return (
-    <section
-      className={`flex h-1004 w-full flex-col items-center justify-center gap-40 max-lg:hidden`}
+    <div
+      className={`flex h-1004 w-full flex-col items-center justify-center gap-40 px-16 max-lg:h-fit max-lg:gap-0`}
     >
-      <div className={`flex w-full max-w-1560 items-center justify-between`}>
+      {/* 컨텐츠 헤더 */}
+      <div
+        className={`flex w-full max-w-1560 items-center justify-between max-lg:hidden`}
+      >
         <h2 className={`text-bold48 text-grey-900`}>캠페인/이벤트</h2>
-        <div className={`items=center flex justify-between`}>
+        <div className={`flex items-center justify-between`}>
           <div className={`flex items-center justify-center gap-8`}>
             <button
               onClick={() => {
@@ -54,7 +56,7 @@ const SecondSection = () => {
               className={`h-40 w-40`}
             >
               <img
-                src='/public/images/icon/arrow_left_rounded.svg'
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_rounded.svg`}
                 width={40}
                 height={40}
                 alt='왼쪽'
@@ -67,7 +69,7 @@ const SecondSection = () => {
               className={`h-40 w-40`}
             >
               <img
-                src='/public/images/icon/arrow_right_rounded.svg'
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_rounded.svg`}
                 width={40}
                 height={40}
                 alt='오른쪽'
@@ -84,13 +86,19 @@ const SecondSection = () => {
           </div>
         </div>
       </div>
-      <div className={`flex items-center justify-between gap-40`}>
-        <div className={`relative`}>
+      {/* 컨텐츠 */}
+      <div
+        className={`flex w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:flex-col max-lg:gap-12`}
+      >
+        {/* 왼쪽 및 반응형 위쪽 */}
+        <div
+          className={`flex aspect-[792/660] h-full max-h-660 w-full max-w-792 items-center justify-center max-lg:aspect-[360/300] max-lg:max-h-[unset] max-lg:max-w-[unset]`}
+        >
           {campaignData?.slice(0, 1)?.map((item, key) => (
             <button
               key={key}
               style={{ backgroundImage: `url("${item?.src}")` }}
-              className={`bg-[url("${item?.src}")] flex aspect-[792/660] h-660 w-full max-w-792 flex-col items-start justify-between rounded-16 px-24 pb-33 pt-24`}
+              className={`bg-[url("${item?.src}")] flex h-full w-full flex-col items-start justify-between rounded-8 bg-cover bg-center bg-no-repeat px-24 pb-33 pt-24`}
             >
               {item?.tag?.map((tag, key) => {
                 if (tag?.id === 2 || tag?.id === 7) {
@@ -101,12 +109,19 @@ const SecondSection = () => {
             </button>
           ))}
         </div>
-        <div className={`relative grid grid-cols-2 grid-rows-2 gap-24`}>
+        {/* 오른쪽 및 반응형 아래쪽 */}
+        <div
+          className={`grid h-full w-full max-w-728 grid-cols-2 grid-rows-2 gap-24 max-lg:w-full max-lg:max-w-[unset] max-lg:grid-rows-1 max-lg:gap-12`}
+        >
           {campaignData?.slice(startNum, endNum)?.map((item, key) => (
-            <div data-aos='fade-left' className={`h-316 max-w-352`} key={key}>
+            <div
+              data-aos='fade-up'
+              className={`h-fit w-full max-w-352 max-lg:min-h-179 max-lg:max-w-[unset]`}
+              key={key}
+            >
               <button
                 style={{ backgroundImage: `url("${item?.src}")` }}
-                className={`flex aspect-[352/240] h-240 w-full max-w-352 items-start justify-start rounded-8 bg-cover bg-no-repeat px-12 py-12`}
+                className={`flex aspect-[352/240] h-full max-h-240 w-full items-start justify-start rounded-8 bg-cover bg-center bg-no-repeat px-12 py-12 max-lg:aspect-[175/119] max-lg:h-fit max-lg:w-full`}
               >
                 {item?.tag?.map((tag, key) => {
                   if (tag?.id === 1 || tag?.id === 3) {
@@ -114,14 +129,16 @@ const SecondSection = () => {
                   }
                 })}
               </button>
-              <p className={`text-regular24 mt-12 line-clamp-2 text-grey-900`}>
+              <p
+                className={`text-regular24 max-lg:text-regular16 mt-12 line-clamp-2 text-grey-900`}
+              >
                 {item?.title}
               </p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

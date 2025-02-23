@@ -816,30 +816,323 @@ export const mockupData = [
 export const paymentMockupData = [
   {
     id: 0,
-    src: `/public/images/bg/main_first_section_bg.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
     depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
   {
     id: 1,
-    src: `/public/images/bg/main_first_section_bg.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
     depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
   {
     id: 2,
-    src: `/public/images/bg/main_first_section_bg.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
     depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
   },
   {
     id: 3,
-    src: `/public/images/bg/main_first_section_bg.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
     title: `세상에 없는 가치와`,
     depthTitle: `감동을 담다`,
     subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+  },
+];
+
+export const mediaData = [
+  {
+    id: 0,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 1,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 2,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 3,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 4,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 5,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 6,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
+  },
+  {
+    id: 7,
+    src: `/public/images/home/media_data.png`,
+    title: `휴먼네컷`,
   },
 ];

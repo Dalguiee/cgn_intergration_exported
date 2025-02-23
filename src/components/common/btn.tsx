@@ -63,7 +63,7 @@ const Btn = ({
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img
         className={`${arrowMode ? '' : 'hidden'} h-16 w-16`}
-        src='/public/images/icon/arrow_right_grey700.svg'
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
         width={16}
         height={16}
         alt='화살표'
