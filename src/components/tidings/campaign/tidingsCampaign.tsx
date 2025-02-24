@@ -16,7 +16,7 @@ const TidingsCampaign = () => {
 
   // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
   const mockupExport = mockupData.filter(item => {
-    return item.path.includes(location.pathname);
+    return item?.path?.includes(location?.pathname);
   });
   const mockupExportedData = mockupExport?.[0]?.data;
 
@@ -33,8 +33,8 @@ const TidingsCampaign = () => {
     } else {
       setfindedMockupData(
         mockupExportedData.filter(item => {
-          return item.tag.some(
-            obj => obj.id === Number(selectedCategoryArticleId)
+          return item?.tag?.some(
+            obj => obj?.id === Number(selectedCategoryArticleId)
           );
         })
       );

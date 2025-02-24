@@ -81,15 +81,18 @@ const pcTagTypes = [
 const tagMode = [
   {
     mode: 'mode1',
-    className: 'w-62 h-32 text-bold14',
+    className:
+      'w-62 h-32 text-bold14 max-lg:w-62 max-lg:h-24 max-lg:text-bold10',
   },
   {
     mode: 'mode2',
-    className: 'w-72 h-32 text-bold14',
+    className:
+      'w-72 h-32 text-bold14 max-lg:w-62 max-lg:h-24 max-lg:text-bold10',
   },
   {
     mode: 'mode3',
-    className: 'w-88 h-48 text-bold18',
+    className:
+      'w-88 h-48 text-bold18 max-lg:w-54 max-lg:h-30 max-lg:text-bold12',
   },
 ];
 

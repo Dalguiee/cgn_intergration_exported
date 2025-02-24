@@ -2,12 +2,12 @@ import { Route, Routes } from 'react-router-dom';
 
 // 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
-import HomePage from '@/pages/home/home';
-import TidingsBroadcastPage from '@/pages/tidings/broadcast';
-import TidingsCampaignPage from '@/pages/tidings/campaign';
-import TidingsDetailPage from '@/pages/tidings/detail';
-import TidingsMissionPage from '@/pages/tidings/mission';
-import TidingsSupportPage from '@/pages/tidings/support';
+import HomePage from '@/pages/home/page';
+import TidingsBroadcastPage from '@/pages/tidings/broadcast/page';
+import TidingsCampaignPage from '@/pages/tidings/campaign/page';
+import TidingsMissionPage from '@/pages/tidings/mission/page';
+import TidingsSupportPage from '@/pages/tidings/support/page';
+import TidingsDetailPage from '@/pages/tidings/detailPage';
 
 export default function MainRouter() {
   return (

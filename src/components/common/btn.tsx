@@ -4,12 +4,12 @@ const formModeData = [
   {
     id: 1,
     mode: 'mode1',
-    className: `min-w-300 h-64  text-bold24 max-lg:h-52 max-lg:text-bold18`,
+    className: `min-w-300 h-64 text-bold24 max-lg:h-52 max-lg:text-bold18`,
   },
   {
     id: 2,
     mode: 'mode2',
-    className: `min-w-98 h-54 text-bold16 max-lg:h-40 max-lg:text-bold14`,
+    className: `min-w-98 h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24`,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const formModeData = [
   {
     id: 5,
     mode: 'mode2-r',
-    className: `min-w-98 h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12`,
+    className: `min-w-98 h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
   },
 ];
 
@@ -58,7 +58,7 @@ const Btn = ({
 
   return (
     <button
-      className={`flex items-center justify-center text-nowrap rounded-8 px-16 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
+      className={`flex items-center justify-center text-nowrap rounded-8 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
     >
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img

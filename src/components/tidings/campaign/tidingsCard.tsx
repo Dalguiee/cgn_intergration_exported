@@ -24,20 +24,22 @@ const TidingsCard = ({ item }) => {
       <div className={`mt-24 flex w-full items-center justify-between`}>
         <div className={`flex items-center justify-center gap-4`}>
           {item?.tag?.map((obj, key) => (
-            <TagIcon text={obj.text} id={obj.id} mode={obj.mode} key={key} />
+            <TagIcon text={obj?.text} id={obj?.id} mode={obj?.mode} key={key} />
           ))}
         </div>
         <div>
           <span className={`text-regular14 text-grey-400`}>
-            {item.startDate}
+            {item?.startDate}
           </span>
           <span className={`text-regular14 text-grey-400`}>~</span>
-          <span className={`text-regular14 text-grey-400`}>{item.endDate}</span>
+          <span className={`text-regular14 text-grey-400`}>
+            {item?.endDate}
+          </span>
         </div>
       </div>
       <div className={`mt-12 flex w-full items-center justify-start`}>
         <span className={`text-bold24 text-left text-grey-900`}>
-          {item.title}
+          {item?.title}
         </span>
       </div>
     </button>
