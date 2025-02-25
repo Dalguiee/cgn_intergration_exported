@@ -13,10 +13,10 @@ const TidingsCard = ({ item, pageMode }) => {
       onClick={() => {
         navigator(`/tidings/${pageMode}/detail?articleId=${item?.id}`);
       }}
-      className={`mt-16 flex min-h-550 w-full flex-col items-center justify-start overflow-hidden rounded-16 bg-white-solid shadow-sm max-lg:min-h-378 max-lg:w-full lg:max-w-560`}
+      className={`flex min-h-550 w-full flex-col items-center justify-start overflow-hidden rounded-16 bg-white-solid shadow-sm max-lg:min-h-309 max-lg:w-full lg:max-w-560`}
     >
       <img
-        className='min-h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top max-lg:aspect-[361/24] max-lg:min-h-361'
+        className='min-h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top max-lg:aspect-[361/24] max-lg:min-h-189'
         src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small_top_rounded.png`}
         width={361}
         height={246}
@@ -43,7 +43,9 @@ const TidingsCard = ({ item, pageMode }) => {
           </div>
         </div>
         <div className={`mt-12 flex w-full items-center justify-start`}>
-          <span className={`text-bold24 line-clamp-2 text-grey-900`}>
+          <span
+            className={`text-bold24 max-lg:text-bold16 line-clamp-2 text-grey-900`}
+          >
             {item?.title}
           </span>
         </div>
@@ -52,7 +54,7 @@ const TidingsCard = ({ item, pageMode }) => {
         className={`absolute bottom-12 right-12 h-38 w-26`}
         width={26}
         height={38}
-        src='/public/images/icon/home_tidings_content_mark.svg'
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/home_tidings_content_mark.svg`}
         alt=''
       />
     </button>

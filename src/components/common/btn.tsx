@@ -4,27 +4,27 @@ const formModeData = [
   {
     id: 1,
     mode: 'mode1',
-    className: `min-w-300 h-64 text-bold24 max-lg:h-52 max-lg:text-bold18`,
+    className: `min-w-fit h-64 text-bold24 max-lg:h-52 max-lg:text-bold18`,
   },
   {
     id: 2,
     mode: 'mode2',
-    className: `min-w-98 h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24`,
+    className: `min-w-fit h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24`,
   },
   {
     id: 3,
     mode: 'mode3',
-    className: `min-w-96 h-40 text-regular14 max-lg:h-32 max-lg:text-regular14`,
+    className: `min-w-fit h-40 text-regular14 max-lg:h-32 max-lg:text-regular14`,
   },
   {
     id: 4,
     mode: 'mode1-r',
-    className: `min-w-300 h-54 rounded-999 text-bold16 max-lg:h-48 max-lg:text-bold16`,
+    className: `min-w-fit h-54 rounded-999 text-bold16 max-lg:h-48 max-lg:text-bold16`,
   },
   {
     id: 5,
     mode: 'mode2-r',
-    className: `min-w-98 h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
+    className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
   },
 ];
 
@@ -44,12 +44,18 @@ const colorModeData = [
     mode: 'mode3',
     className: `bg-white-solid hover:text-grey-500 disabled:border-grey-400 disabled:text-grey-300 border-1 border-grey-900 text-grey-900`,
   },
+  {
+    id: 4,
+    mode: 'mode4',
+    className: `bg-transparent hover:text-grey-500 disabled:border-grey-400 disabled:text-grey-300 border-1 border-grey-900 text-grey-900`,
+  },
 ];
 
 const Btn = ({
   text = '텍스트 props 필요',
   formMode = 'mode1',
   colorMode = 'mode1',
+  className = '',
   arrowMode = false,
   widthFull = false,
 }) => {
@@ -58,7 +64,7 @@ const Btn = ({
 
   return (
     <button
-      className={`flex items-center justify-center text-nowrap rounded-8 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
+      className={`${className} flex items-center justify-center text-nowrap rounded-8 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
     >
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img

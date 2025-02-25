@@ -40,7 +40,7 @@ const Section4PcTopArticleSwiper = ({
     >
       {findedMockupData?.map((item, key) => (
         <SwiperSlide
-          className={`!w-560 max-lg:!w-400 max-md:!w-full`}
+          className={`!w-560 max-lg:!w-277 max-md:!w-full`}
           key={key}
         >
           <TidingsCard pageMode={pageMode} key={item?.id} item={item} />

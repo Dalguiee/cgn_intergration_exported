@@ -29,7 +29,7 @@ const TopBanner = () => {
           className={`h-full w-full`}
           // scrollbar={{ draggable: true }}
           pagination={{ clickable: true }}
-          spaceBetween={0}
+          spaceBetween={24}
           slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}
@@ -37,19 +37,25 @@ const TopBanner = () => {
           {paymentMockupData?.map((obj, key) => (
             <SwiperSlide
               style={{ backgroundImage: `url(${obj?.src})` }}
-              className={`flex w-full items-start justify-center bg-cover bg-center bg-no-repeat pt-200 max-lg:h-[calc(100%-48px)]`}
+              className={`flex w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-48px)] max-lg:justify-end lg:pt-200`}
               key={key}
             >
-              <div className={`h-full w-full max-w-1560 px-16`}>
+              <div
+                className={`w-full max-w-1560 px-16 max-lg:mb-40 max-lg:pl-24`}
+              >
                 <div
-                  className={`mb-200 flex flex-col items-start justify-center`}
+                  className={`flex flex-col items-start justify-start lg:mb-200`}
                 >
-                  <span className={`text-bold78 text-white-solid`}>
+                  <span
+                    className={`text-bold78 max-lg:text-bold32 text-white-solid`}
+                  >
                     {obj?.title}
                     <br />
                     {obj?.depthTitle !== '' ? obj?.depthTitle : ''}
                   </span>
-                  <span className={`text-regular32 text-grey-50`}>
+                  <span
+                    className={`text-regular32 max-lg:text-regular16 text-grey-50`}
+                  >
                     {obj?.subTitle}
                   </span>
                 </div>

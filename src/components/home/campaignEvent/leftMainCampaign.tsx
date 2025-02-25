@@ -19,7 +19,7 @@ const LeftMainCampaign = props => {
             }
           })}
           <p
-            className={`text-bold32 max-lg:text-bold16 ml-19 text-grey-900 max-lg:ml-0`}
+            className={`text-bold32 max-lg:text-bold16 ml-19 text-left text-grey-900 max-lg:ml-0`}
           >
             {item?.title}
           </p>

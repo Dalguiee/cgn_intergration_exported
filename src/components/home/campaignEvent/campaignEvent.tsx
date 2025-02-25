@@ -43,7 +43,13 @@ const CampaignEvent = () => {
       className={`flex h-1004 w-full flex-col items-center justify-center gap-40 px-16 max-lg:h-fit max-lg:gap-0 max-lg:pb-60`}
     >
       {/* 컨텐츠 헤더 */}
-      <CampaignEventHeader pagingNext={pagingNext} pagingPrev={pagingPrev} />
+      <CampaignEventHeader
+        startNum={startNum}
+        endNum={endNum}
+        pagingNext={pagingNext}
+        pagingPrev={pagingPrev}
+        campaignLengthData={campaignData?.length}
+      />
       {/* 컨텐츠 */}
       <div
         className={`flex w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:flex-col max-lg:gap-12`}

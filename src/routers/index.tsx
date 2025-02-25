@@ -8,6 +8,7 @@ import TidingsCampaignPage from '@/pages/tidings/campaign/page';
 import TidingsMissionPage from '@/pages/tidings/mission/page';
 import TidingsSupportPage from '@/pages/tidings/support/page';
 import TidingsDetailPage from '@/pages/tidings/detailPage';
+import IntroducePage from '@/pages/introduce/vision/page';
 
 export default function MainRouter() {
   return (
@@ -28,6 +29,7 @@ export default function MainRouter() {
           path='tidings/:subDepth/detail'
           element={<TidingsDetailPage />}
         ></Route>
+        <Route path='introduce/vision' element={<IntroducePage />}></Route>
       </Route>
     </Routes>
   );

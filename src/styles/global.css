@@ -289,3 +289,8 @@
   width: 24px;
   border-radius: 10px;
 }
+
+/* div::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+} */

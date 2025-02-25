@@ -18,21 +18,27 @@ const HomeMission = () => {
   ];
   return (
     <section
-      className={`flex h-840 w-full items-center justify-center max-lg:h-682`}
+      className={`flex h-840 w-full items-center justify-center px-16 max-lg:h-682 max-lg:px-0 lg:pb-80 lg:pt-160`}
     >
       <div
         className={`flex h-600 w-full max-w-1560 items-center justify-center overflow-hidden rounded-16 max-lg:h-full max-lg:rounded-0`}
       >
         <div
-          className={`flex h-full w-676 items-center justify-center bg-[url(/public/images/home/mission_context_bg.png)] bg-cover bg-center bg-no-repeat max-lg:hidden`}
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/mission_context_bg.png)`,
+          }}
+          className={`flex h-full w-676 items-center justify-center bg-cover bg-center bg-no-repeat max-lg:hidden`}
         >
           <TextBox />
         </div>
         <div
-          className={`flex h-full w-884 flex-col items-center justify-center gap-24 bg-[url(/public/images/home/mission_main_bg.png)] bg-cover bg-center bg-no-repeat max-lg:gap-16 max-lg:px-12`}
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/mission_main_bg.png)`,
+          }}
+          className={`flex h-full w-884 flex-col items-center justify-center gap-24 bg-cover bg-[100%] bg-no-repeat max-lg:gap-12 max-lg:bg-[40%] max-lg:px-12`}
         >
           <div
-            className={`w-full rounded-8 bg-secondary-brown_bg_2 px-32 py-40 lg:hidden`}
+            className={`flex w-full items-center justify-center rounded-8 bg-secondary-brown_bg_2 px-32 py-40 lg:hidden`}
           >
             <TextBox />
           </div>
@@ -40,16 +46,16 @@ const HomeMission = () => {
           {buttonData?.map((item, key) => (
             <button
               key={key}
-              className={`flex h-120 w-440 items-center justify-between rounded-16 ${item?.className} px-40 py-40 max-lg:h-60 max-lg:w-full`}
+              className={`flex h-120 w-440 items-center justify-between rounded-16 max-lg:rounded-8 ${item?.className} px-40 py-40 max-lg:h-60 max-lg:w-full max-lg:px-24 max-lg:py-16`}
             >
               <span
-                className={`text-bold24 max-lg:txt-bold16 text-white-solid`}
+                className={`text-bold24 max-lg:text-bold18 max-lg:txt-bold16 line-clamp-1 text-white-solid`}
               >
                 {item?.text}
               </span>
               <img
                 className={`h-32 w-32`}
-                src={`/public/images/icon/arrow_right_white.svg`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_white.svg`}
                 width={32}
                 height={32}
                 alt=''

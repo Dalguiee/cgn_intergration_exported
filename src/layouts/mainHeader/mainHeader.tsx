@@ -53,7 +53,7 @@ const centerMenu = [
     subMenu: [
       {
         text: '미션&비전',
-        link: '/introduce',
+        link: '/introduce/vision',
       },
       {
         text: '기관 소개',

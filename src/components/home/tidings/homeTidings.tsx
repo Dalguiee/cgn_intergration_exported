@@ -38,15 +38,30 @@ const HomeTidings = () => {
 
   return (
     <section
-      className={`flex h-890 flex-col items-center justify-center gap-40 bg-secondary-brown_bg_2`}
+      className={`flex h-890 flex-col items-start justify-center gap-40 bg-secondary-brown_bg_2 max-lg:h-496 max-lg:gap-0 max-lg:pt-60`}
     >
+      <div
+        className={`flex w-full justify-between px-16 max-lg:mb-11 lg:hidden`}
+      >
+        <span className={`text-bold24 text-grey-900`}>소식</span>
+        <button className={`flex items-center justify-center`}>
+          <span className={`text-regular12 text-grey-900`}>바로가기</span>
+          <img
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
+            alt=''
+          />
+        </button>
+      </div>
       <CategoryList
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
+
       <div
         className={`flex w-full flex-col items-center justify-center max-lg:mb-20 max-lg:px-0 max-lg:pb-0 max-lg:pt-0`}
       >
-        <div className={`w-full flex-shrink-0 overflow-hidden pl-180`}>
+        <div
+          className={`w-full flex-shrink-0 overflow-hidden pl-180 max-lg:px-16`}
+        >
           <Section4PcTopArticleSwiper findedMockupData={findedMockupData} />
         </div>
         <div

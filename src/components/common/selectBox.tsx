@@ -32,23 +32,24 @@ const SelectBox = ({
 
   return (
     <div
-      className={`relative z-10 flex h-62 items-center justify-center ${widthFull ? '!w-full' : ''} ${className && className}`}
+      onClick={() => {
+        setOpen(!open);
+      }}
+      className={`relative z-10 flex h-62 cursor-pointer items-center justify-center ${widthFull ? '!w-full' : ''} ${className && className}`}
     >
       <div
-        style={{ transition: `0.3s` }}
         className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 ${objSelected ? 'outline-primary-500' : 'outline-grey-200'}`}
       >
         <ul
           ref={selectOpenBox}
           data-custom-scroll
-          style={{ transition: `0.3s` }}
           className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
         >
           <li
             className={`${open ? 'hidden' : 'pointer-events-none flex'} px-12 py-16`}
           >
             <button
-              className={`hover:text-bold18 text-regular18 h-full w-full cursor-pointer ${objSelected ? 'text-primary-500' : 'text-grey-400'}`}
+              className={`hover:text-bold18 text-regular18 h-full w-full cursor-pointer select-none ${objSelected ? 'text-primary-500' : 'text-grey-400'}`}
             >
               {selectedItem?.text}
             </button>
@@ -57,7 +58,6 @@ const SelectBox = ({
           {listData?.map((item, key) => (
             <li
               key={key}
-              style={{ transition: `0.3s` }}
               className={`${open ? 'h-fit opacity-100' : 'h-0 opacity-0'} w-full hover:bg-primary-50`}
             >
               <button
@@ -78,17 +78,14 @@ const SelectBox = ({
           ))}
         </ul>
       </div>
-      <button
-        onClick={() => {
-          setOpen(!open);
-        }}
+      <div
         className={`absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
       >
         <img
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
           alt=''
         />
-      </button>
+      </div>
     </div>
   );
 };

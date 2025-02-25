@@ -27,32 +27,34 @@ const Section4CategoryList = ({ setSelectedCategoryArticleId }) => {
 
   return (
     <section
-      className={`mx-auto flex w-full max-w-1560 items-center justify-between gap-24 pb-10 max-lg:overflow-x-scroll`}
+      className={`flex w-full items-center justify-between gap-24 max-lg:mb-24 max-lg:pl-16 lg:px-180`}
     >
-      <div className={`flex items-center justify-start gap-24`}>
-        <span className={`text-bold48 text-grey-900 max-lg:hidden`}>소식</span>
-        <div
-          className={`flex w-fit items-center justify-center gap-8 max-lg:gap-4 max-lg:px-20`}
-        >
-          {categoryTags?.map(item => (
-            <button
-              onClick={() => {
-                setHighlight(item?.id);
-                setSelectedCategoryArticleId(item?.id);
-              }}
-              key={item?.id}
-              className={`${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
-            >
-              {item?.type}
-            </button>
-          ))}
-        </div>
+      <span className={`text-bold48 flex-shrink-0 text-grey-900 max-lg:hidden`}>
+        소식
+      </span>
+
+      <div
+        className={`scrollbar-hide flex w-full items-center justify-start gap-8 overflow-x-scroll max-lg:gap-4`}
+      >
+        {categoryTags?.map(item => (
+          <button
+            onClick={() => {
+              setHighlight(item?.id);
+              setSelectedCategoryArticleId(item?.id);
+            }}
+            key={item?.id}
+            className={`flex-shrink-0 px-24 max-lg:px-18 ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 bg-white-solid text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+          >
+            {item?.type}
+          </button>
+        ))}
       </div>
       <div className={`max-lg:hidden`}>
         <Btn
           text='소식 바로가기'
           formMode='mode2-r'
           colorMode='mode3'
+          className='w-139'
           arrowMode={true}
         />
       </div>

@@ -1,13 +1,13 @@
 // 개발중입니다.
 
 import TidingsBroadcast from '@/components/tidings/broadcast/tidingsBroadcast';
-import TidingsHeader from '@/components/tidings/tidingsHeader';
+import ThemeHeader from '@/components/common/themeHeader';
 import React from 'react';
 
 const BroadcastPage = () => {
   return (
     <section className={`bg-primary-50`}>
-      <TidingsHeader />
+      <ThemeHeader />
       <TidingsBroadcast />
     </section>
   );

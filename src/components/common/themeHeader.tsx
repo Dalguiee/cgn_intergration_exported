@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 // 컴포넌트
 import Locator from '@/components/common/locator';
 
-const TidingsHeader = () => {
+const ThemeHeader = () => {
   const location = useLocation();
 
   // tidigns 페이지의 타이틀과 서브타이틀을 분기하는 데이터 입니다.
@@ -56,4 +56,4 @@ const TidingsHeader = () => {
   );
 };
 
-export default TidingsHeader;
+export default ThemeHeader;

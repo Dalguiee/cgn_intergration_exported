@@ -41,7 +41,10 @@ function SwiperSec({ mockupData }) {
 const MoFondantContents = () => {
   return (
     <div
-      className={`flex h-300 w-full flex-col items-start justify-center bg-[url(/public/images/bg/section3_bg.png)] bg-cover bg-center bg-no-repeat lg:hidden`}
+      style={{
+        backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/bg/section3_bg.png)`,
+      }}
+      className={`flex h-300 w-full flex-col items-start justify-center bg-cover bg-center bg-no-repeat lg:hidden`}
     >
       {/* 컨텐츠 헤더 */}
       <div className={`mb-12 flex w-full items-end justify-between pl-16`}>

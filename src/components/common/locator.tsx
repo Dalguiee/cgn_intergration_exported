@@ -15,9 +15,31 @@ const Locator = () => {
     let pathPiece = '';
     const pageData = location.pathname.split('/');
     // 페이지 로케이팅을 담당하는 분기 데이터 입니다.
+
+    // 소개
+    if (location.pathname.includes('/introduce/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'introduce') {
+            pathPiece = data;
+            data = '소개';
+            pathStack = 'introduce/vision';
+          }
+          if (data === 'vision') {
+            pathPiece = data;
+            data = '미션&비전';
+            pathStack = 'introduce/vision';
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
+    // 소식
     if (location.pathname.includes('/tidings/')) {
       setChangedPathName(
-        pageData.map(data => {
+        pageData?.map(data => {
           if (data === 'tidings') {
             pathPiece = data;
             data = '소식';
@@ -57,7 +79,7 @@ const Locator = () => {
   }, [location]);
 
   return (
-    <section className='flex items-center justify-center w-full px-20 pt-16 max-lg:hidden max-lg:px-20'>
+    <section className='flex w-full items-center justify-center px-20 pt-16 max-lg:hidden max-lg:px-20'>
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {
