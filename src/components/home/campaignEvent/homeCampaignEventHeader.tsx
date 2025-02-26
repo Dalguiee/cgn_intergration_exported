@@ -1,6 +1,7 @@
-import Btn from '@/components/common/btn';
+// 컴포넌트
+import StyledButtons from '@/components/common/styledButtons';
 
-const CampaignEventHeader = ({
+const HomeCampaignEventHeader = ({
   pagingNext,
   pagingPrev,
   campaignLengthData,
@@ -52,7 +53,7 @@ const CampaignEventHeader = ({
           </button>
         </div>
         <div className={`ml-24`}>
-          <Btn
+          <StyledButtons
             className='w-112'
             text='전체보기'
             formMode='mode2-r'
@@ -65,4 +66,4 @@ const CampaignEventHeader = ({
   );
 };
 
-export default CampaignEventHeader;
+export default HomeCampaignEventHeader;

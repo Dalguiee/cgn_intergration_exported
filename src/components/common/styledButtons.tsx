@@ -51,7 +51,7 @@ const colorModeData = [
   },
 ];
 
-const Btn = ({
+const StyledButtons = ({
   text = '텍스트 props 필요',
   formMode = 'mode1',
   colorMode = 'mode1',
@@ -78,4 +78,4 @@ const Btn = ({
   );
 };
 
-export default Btn;
+export default StyledButtons;

@@ -4,11 +4,9 @@ import { useLocation } from 'react-router-dom';
 
 // 데이터
 import { mockupData } from '@/db/mockup';
-import Btn from '@/components/common/btn';
+import StyledButtons from '@/components/common/styledButtons';
 
-// 각 데이터를 카테고리로 나누는 버튼 모음입니다.
-// 데이터는 목업리스트에서 가져오며 id 값이 일치하는 컨텐츠를 걸러내는 기능을 합니다.
-const Section4CategoryList = ({ setSelectedCategoryArticleId }) => {
+const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
   const location = useLocation();
   /* 클릭시 태그버튼의 색이 변하게 하는 state 값 저장 */
   const [highlight, setHighlight] = useState(0);
@@ -34,7 +32,7 @@ const Section4CategoryList = ({ setSelectedCategoryArticleId }) => {
       </span>
 
       <div
-        className={`scrollbar-hide flex w-full items-center justify-start gap-8 overflow-x-scroll max-lg:gap-4`}
+        className={`flex w-full items-center justify-start gap-8 overflow-x-scroll scrollbar-hide max-lg:gap-4`}
       >
         {categoryTags?.map(item => (
           <button
@@ -50,7 +48,7 @@ const Section4CategoryList = ({ setSelectedCategoryArticleId }) => {
         ))}
       </div>
       <div className={`max-lg:hidden`}>
-        <Btn
+        <StyledButtons
           text='소식 바로가기'
           formMode='mode2-r'
           colorMode='mode3'
@@ -58,8 +56,12 @@ const Section4CategoryList = ({ setSelectedCategoryArticleId }) => {
           arrowMode={true}
         />
       </div>
+      <button>
+        <span></span>
+        <img></img>
+      </button>
     </section>
   );
 };
 
-export default Section4CategoryList;
+export default HomeCategoryList;

@@ -1,8 +1,10 @@
+// 훅
 import React from 'react';
 
-import Btn from '@/components/common/btn';
+// 컴포넌트
+import StyledButtons from '@/components/common/styledButtons';
 
-const NoticeHeader = () => {
+const HomeNoticeHeader = () => {
   return (
     <section
       className={`flex w-full max-w-1560 items-center justify-between gap-24 max-lg:px-16`}
@@ -18,7 +20,7 @@ const NoticeHeader = () => {
         ></div>
       </div>
       <div className={`max-lg:hidden`}>
-        <Btn
+        <StyledButtons
           text='바로가기'
           className='w-112'
           formMode='mode2-r'
@@ -30,4 +32,4 @@ const NoticeHeader = () => {
   );
 };
 
-export default NoticeHeader;
+export default HomeNoticeHeader;

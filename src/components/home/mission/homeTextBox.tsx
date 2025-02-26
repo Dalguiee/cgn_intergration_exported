@@ -1,6 +1,7 @@
+// 훅
 import React from 'react';
 
-const TextBox = () => {
+const HomeTextBox = () => {
   return (
     <div className='flex h-396 w-full max-w-440 flex-col items-start justify-center gap-24 pl-40 max-lg:h-338 max-lg:max-w-361 max-lg:gap-16 max-lg:px-35'>
       <h2
@@ -54,4 +55,4 @@ const TextBox = () => {
   );
 };
 
-export default TextBox;
+export default HomeTextBox;

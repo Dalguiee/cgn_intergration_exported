@@ -37,9 +37,9 @@ const DefaultInput = ({
       <div className={`flex items-center justify-center gap-4`}>
         {/* 찾기 버튼 */}
         {searchBtn && (
-          <button className='w-24 h-24' onClick={() => handleSearching()}>
+          <button className='h-24 w-24' onClick={() => handleSearching()}>
             <img
-              className='w-full h-full'
+              className='h-full w-full'
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/finder.svg`}
               alt='찾기 버튼'
               width={24}
@@ -50,14 +50,14 @@ const DefaultInput = ({
         {/* 블라이드 버튼 */}
         {pwdBtn && (
           <button
-            className='w-24 h-24'
+            className='h-24 w-24'
             type='button'
             onClick={() => {
               handlePwdMode();
             }}
           >
             <img
-              className='w-full h-full'
+              className='h-full w-full'
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/input_blind.svg`}
               alt='블라이드 버튼'
               width={24}
@@ -68,14 +68,14 @@ const DefaultInput = ({
         {/* 텍스트 전체 지우기 */}
         {textClearBtn && inputText && (
           <button
-            className='w-24 h-24'
+            className='h-24 w-24'
             type='button'
             onClick={() => {
               setInputText('');
             }}
           >
             <img
-              className='w-full h-full'
+              className='h-full w-full'
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/input_clear.svg`}
               alt='전체 지우기'
               width={24}

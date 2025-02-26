@@ -1,5 +1,8 @@
+// 훅
 import React from 'react';
-import TextBox from './textBox';
+
+// 컴포넌트
+import HomeTextBox from '@/components/home/mission/homeTextBox';
 
 const HomeMission = () => {
   const buttonData = [
@@ -29,7 +32,7 @@ const HomeMission = () => {
           }}
           className={`flex h-full w-676 items-center justify-center bg-cover bg-center bg-no-repeat max-lg:hidden`}
         >
-          <TextBox />
+          <HomeTextBox />
         </div>
         <div
           style={{
@@ -40,7 +43,7 @@ const HomeMission = () => {
           <div
             className={`flex w-full items-center justify-center rounded-8 bg-secondary-brown_bg_2 px-32 py-40 lg:hidden`}
           >
-            <TextBox />
+            <HomeTextBox />
           </div>
 
           {buttonData?.map((item, key) => (

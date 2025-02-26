@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
-import Btn from '@/components/common/btn';
+import StyledButtons from '@/components/common/styledButtons';
 
-const PaymentBox = () => {
+const HomePaymentBox = () => {
   // select box 와 송신하는 state
   const [selectedSubscribes, setselectedSubscribes] = useState([]);
   // 버튼항목과 송신하는 state
@@ -66,7 +66,7 @@ const PaymentBox = () => {
           })}
         </div>
         <div className={`max-lg:w-full lg:w-300`}>
-          <Btn
+          <StyledButtons
             text='후원하기'
             formMode='mode1'
             colorMode='mode1'
@@ -84,4 +84,4 @@ const PaymentBox = () => {
   );
 };
 
-export default PaymentBox;
+export default HomePaymentBox;

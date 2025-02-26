@@ -1,6 +1,7 @@
+// 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
 
-const LeftMainCampaign = props => {
+const HomeLeftMainCampaign = props => {
   return (
     <div
       className={`flex aspect-[792/660] h-full max-h-660 w-full max-w-792 items-center justify-center max-lg:aspect-[360/300] max-lg:max-h-[unset] max-lg:max-w-[unset]`}
@@ -28,4 +29,4 @@ const LeftMainCampaign = props => {
     </div>
   );
 };
-export default LeftMainCampaign;
+export default HomeLeftMainCampaign;

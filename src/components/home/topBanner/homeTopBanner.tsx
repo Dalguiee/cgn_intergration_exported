@@ -4,7 +4,7 @@
 import React from 'react';
 
 // 컴포넌트
-import PaymentBox from '@/components/home/paymentBox';
+import HomePaymentBox from '@/components/home/topBanner/homePaymentBox';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,7 +17,7 @@ import 'swiper/css/scrollbar';
 // 데이터
 import { paymentMockupData } from '@/db/mockup';
 
-const TopBanner = ({ mobile }) => {
+const HomeTopBanner = ({ mobile }) => {
   return (
     <div className={`flex h-fit flex-col items-center justify-start`}>
       <div
@@ -69,10 +69,10 @@ const TopBanner = ({ mobile }) => {
       <div
         className={`z-10 w-full max-w-1560 px-16 max-lg:min-h-361 max-lg:px-0 lg:absolute lg:left-1/2 lg:top-777 lg:translate-x-[-50%]`}
       >
-        <PaymentBox />
+        <HomePaymentBox />
       </div>
     </div>
   );
 };
 
-export default TopBanner;
+export default HomeTopBanner;

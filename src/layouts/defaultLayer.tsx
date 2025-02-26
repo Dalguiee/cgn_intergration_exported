@@ -1,6 +1,9 @@
+// 훅
+import { Outlet } from 'react-router-dom';
+
+// 컴포넌트
 import MainHeader from '@/layouts/mainHeader/mainHeader';
 import MainFooter from '@/layouts/mainFooter';
-import { Outlet } from 'react-router-dom';
 
 const DefaultLayer = () => {
   return (

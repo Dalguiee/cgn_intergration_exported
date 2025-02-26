@@ -2,39 +2,34 @@
 import React, { useEffect, useState } from 'react';
 
 // 데이터
-import { mockupData, paymentMockupData } from '@/db/mockup';
+import { mockupData } from '@/db/mockup';
 
 // 컴포넌트
-import CategoryList from '@/components/home/tidings/tidingsCategoryList';
-import Section4PcTopArticleSwiper from '@/components/home/tidings/tidingsPcTopArticleSwiper';
+import HomeCategoryList from '@/components/home/tidings/homeTidingsCategoryList';
+import Section4PcTopArticleSwiper from '@/components/home/tidings/homeTidingsPcTopArticleSwiper';
 
 /*
  *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 받는 데이터만 따로 받도록 퍼블리싱 되었습니다.
  */
 const HomeTidings = () => {
-  const [findedMockupData, setfindedMockupData] = useState([]);
-  const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
+  const [findedMockupData, setfindedMockupData] = useState([]); //
+  const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0); //
 
+  //
   useEffect(() => {
     if (selectedCategoryArticleId === 0) {
       let allData = [];
       mockupData?.map(item => {
         allData = [...allData, ...item?.data];
       });
-      setfindedMockupData(paymentMockupData);
+      setfindedMockupData(allData);
     } else {
       const allData = mockupData?.filter(item => {
         return item?.id === selectedCategoryArticleId;
       });
       setfindedMockupData(allData?.[0]?.data);
     }
-
-    // setfindedMockupData(allData);
   }, [selectedCategoryArticleId]);
-
-  useEffect(() => {
-    console.log(selectedCategoryArticleId, findedMockupData);
-  }, [selectedCategoryArticleId, findedMockupData]);
 
   return (
     <section
@@ -52,7 +47,7 @@ const HomeTidings = () => {
           />
         </button>
       </div>
-      <CategoryList
+      <HomeCategoryList
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
 

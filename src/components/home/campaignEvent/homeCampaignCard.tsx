@@ -1,6 +1,7 @@
+// 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
 
-const campaignCard = ({ item }) => {
+const HomeCampaignCard = ({ item }) => {
   return (
     <div
       data-aos='fade-up'
@@ -27,4 +28,4 @@ const campaignCard = ({ item }) => {
   );
 };
 
-export default campaignCard;
+export default HomeCampaignCard;

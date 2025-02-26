@@ -1,7 +1,9 @@
+// 훅
 import React from 'react';
-import NoticeHeader from './noticeHeader';
+
+// 컴포넌트
+import HomeNoticeHeader from '@/components/home/notice/homeNoticeHeader';
 import TagIcon from '@/components/common/tagIcon';
-import Btn from '@/components/common/btn';
 
 const noticeData = [
   {
@@ -61,7 +63,7 @@ const noticeData = [
   },
 ];
 
-const NoticeMain = () => {
+const HomeNoticeMain = () => {
   return (
     <section
       className={`flex h-fit w-full items-center justify-center py-120 max-lg:bg-transparent max-lg:py-0 lg:bg-secondary-brown_bg_2`}
@@ -80,7 +82,7 @@ const NoticeMain = () => {
           </button>
         </div>
 
-        <NoticeHeader />
+        <HomeNoticeHeader />
 
         <div
           className={`flex h-fit min-h-420 w-full items-start justify-between gap-24 max-lg:h-fit max-lg:flex-col max-lg:gap-0 max-lg:px-16`}
@@ -132,4 +134,4 @@ const NoticeMain = () => {
   );
 };
 
-export default NoticeMain;
+export default HomeNoticeMain;
