@@ -139,6 +139,13 @@
     font-weight: 700;
     font-family: 'Pretendard';
   }
+  .text-regular60 {
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-family: 'Pretendard';
+  }
   .text-regular48 {
     font-size: 48px;
     line-height: 60px;

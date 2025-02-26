@@ -11,6 +11,11 @@ const ThemeHeader = () => {
   // tidigns 페이지의 타이틀과 서브타이틀을 분기하는 데이터 입니다.
   const currentPageData = [
     {
+      path: 'introduce/vision',
+      title: '미션&비전',
+      subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN',
+    },
+    {
       path: 'tidings/campaign',
       title: '캠페인/이벤트',
       subTitle: 'CGN의 캠페인/이벤트를 확인해 보세요.',

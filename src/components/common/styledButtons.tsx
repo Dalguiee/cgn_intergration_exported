@@ -19,7 +19,7 @@ const formModeData = [
   {
     id: 4,
     mode: 'mode1-r',
-    className: `min-w-fit h-54 rounded-999 text-bold16 max-lg:h-48 max-lg:text-bold16`,
+    className: `min-w-fit h-54 rounded-999 text-bold16 max-lg:h-36 max-lg:text-bold14 px-24 max-lg:px-12`,
   },
   {
     id: 5,
