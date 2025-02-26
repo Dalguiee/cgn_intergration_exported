@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -13,13 +15,19 @@ const Section4PcTopArticleSwiper = ({
   pageMode = ``,
   findedMockupData = [],
 }) => {
+  const swiperRef = useRef(null);
+
   return (
     <Swiper
+      ref={swiperRef}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={`overflow-visible`}
       spaceBetween={40}
-      // slidesPerView={4}
-      onSlideChange={() => console.log('slide change')}
+      loop={true}
+      // freeMode={true}
+      // loopAdditionalSlides={10}
+      slidesPerView={1}
+      onSlideChange={e => console.log('swiperRef ::: ', e)}
       onSwiper={swiper => console.log(swiper)}
       breakpoints={
         {

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 // 데이터
-import { mockupData } from '@/db/mockup';
+import { mockupData, paymentMockupData } from '@/db/mockup';
 
 // 컴포넌트
 import CategoryList from '@/components/home/tidings/tidingsCategoryList';
@@ -21,7 +21,7 @@ const HomeTidings = () => {
       mockupData?.map(item => {
         allData = [...allData, ...item?.data];
       });
-      setfindedMockupData(allData);
+      setfindedMockupData(paymentMockupData);
     } else {
       const allData = mockupData?.filter(item => {
         return item?.id === selectedCategoryArticleId;

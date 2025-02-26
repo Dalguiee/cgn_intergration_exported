@@ -13,15 +13,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 function SwiperSec({ mockupData }) {
+  console.log(mockupData);
   return (
     <Swiper
       data-main-swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={`h-full w-full overflow-visible`}
+      loop={true}
+      // loopAdditionalSlides={10}
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
       spaceBetween={8}
-      // slidesPerView={3}
+      slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
       breakpoints={{
@@ -114,7 +117,7 @@ const FondantContents = () => {
         </div>
       </div>
       {/* 슬라이딩 컨텐츠 */}
-      <div className={`w-full overflow-hidden pl-180 max-lg:pl-16`}>
+      <div className={`w-full overflow-visible pl-180 max-lg:pl-16`}>
         <SwiperSec mockupData={mediaData} />
       </div>
     </div>
