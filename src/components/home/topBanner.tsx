@@ -17,7 +17,7 @@ import 'swiper/css/scrollbar';
 // 데이터
 import { paymentMockupData } from '@/db/mockup';
 
-const TopBanner = () => {
+const TopBanner = ({ mobile }) => {
   return (
     <div className={`flex h-fit flex-col items-center justify-start`}>
       <div
@@ -36,7 +36,9 @@ const TopBanner = () => {
         >
           {paymentMockupData?.map((obj, key) => (
             <SwiperSlide
-              style={{ backgroundImage: `url(${obj?.src})` }}
+              style={{
+                backgroundImage: ` ${mobile ? `url(${obj?.moSrc})` : `url(${obj?.src})`} `,
+              }}
               className={`flex w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-48px)] max-lg:justify-end lg:pt-200`}
               key={key}
             >

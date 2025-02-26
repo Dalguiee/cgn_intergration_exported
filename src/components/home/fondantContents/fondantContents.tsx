@@ -20,7 +20,7 @@ function SwiperSec({ mockupData }) {
       className={`h-full w-full overflow-visible`}
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
-      // spaceBetween={8}
+      spaceBetween={8}
       // slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}

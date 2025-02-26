@@ -14,7 +14,7 @@ import NoticeMain from '@/components/home/notice/noticeMain';
 
 const HomePage = () => {
   const [mobile, setMobile] = useState(false);
-  // 2depth 활성화
+  // 1024 화면 감지
   useEffect(() => {
     const resizeSetting = () => {
       if (window.innerWidth >= 1024) {
@@ -31,13 +31,13 @@ const HomePage = () => {
 
   return (
     <section>
-      <TopBanner />
+      <TopBanner mobile={mobile} />
       <CampaignEvent />
       <FondantContents />
       <HomeTidings />
       <div className='flex w-full items-center justify-center bg-secondary-brown_bg_2 px-16 max-lg:h-[calc(92px+60px)] max-lg:pb-60'>
         <div
-          className={`scrollbar-hide flex aspect-[1560/200] h-full w-full max-w-1560 items-center justify-start gap-24 max-lg:h-92 max-lg:w-fit max-lg:justify-start max-lg:gap-12 max-lg:overflow-x-scroll`}
+          className={`flex aspect-[1560/200] h-full w-full max-w-1560 items-center justify-start gap-24 scrollbar-hide max-lg:h-92 max-lg:w-fit max-lg:justify-start max-lg:gap-12 max-lg:overflow-x-scroll`}
         >
           <button
             style={{
@@ -58,7 +58,7 @@ const HomePage = () => {
         <div
           className={`flex h-200 w-full max-w-1560 items-center justify-center max-lg:h-128`}
         >
-          <button
+          <div
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/banner_2_1.png)`,
             }}
@@ -99,12 +99,12 @@ const HomePage = () => {
                 arrowMode={true}
               />
             </div>
-          </button>
+          </div>
         </div>
       </div>
       <div className='flex h-fit w-full items-start justify-center px-16 pb-120 max-lg:pb-60'>
         <div
-          className={`scrollbar-hide flex aspect-[1560/200] h-full w-full max-w-1560 items-center justify-start gap-24 max-lg:h-92 max-lg:w-fit max-lg:justify-start max-lg:gap-12 max-lg:overflow-x-scroll`}
+          className={`flex aspect-[1560/200] h-full w-full max-w-1560 items-center justify-start gap-24 scrollbar-hide max-lg:h-92 max-lg:w-fit max-lg:justify-start max-lg:gap-12 max-lg:overflow-x-scroll`}
         >
           <button
             style={{

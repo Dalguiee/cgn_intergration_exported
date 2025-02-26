@@ -12,7 +12,7 @@ const TopHeader = () => {
         </button>
         <span className='separator'></span>
         <div className='h-full'>
-          <span className={`flex h-full text-regular14 text-grey-400`}>
+          <span className={`text-regular14 flex h-full text-grey-400`}>
             나의 후원 보기
           </span>
         </div>
@@ -25,7 +25,7 @@ const TopHeader = () => {
         >
           <span className={`text-regular14 text-grey-400`}>KOR</span>
           <img
-            className={`ml-4 ${langActive ? '' : 'rotate-180'}`}
+            className={`ml-4 ${langActive ? '' : 'rotate-180'} transition-all`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/orange_tri.svg`}
             alt=''
           />

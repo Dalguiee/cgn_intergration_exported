@@ -35,7 +35,7 @@ const SelectBox = ({
       onClick={() => {
         setOpen(!open);
       }}
-      className={`relative z-10 flex h-62 cursor-pointer items-center justify-center ${widthFull ? '!w-full' : ''} ${className && className}`}
+      className={`relative z-10 flex h-62 cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className}`}
     >
       <div
         className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 ${objSelected ? 'outline-primary-500' : 'outline-grey-200'}`}
@@ -46,7 +46,7 @@ const SelectBox = ({
           className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
         >
           <li
-            className={`${open ? 'hidden' : 'pointer-events-none flex'} px-12 py-16`}
+            className={`${open ? '' : ''} pointer-events-none flex h-62 items-center justify-start px-12 max-lg:h-48`}
           >
             <button
               className={`hover:text-bold18 text-regular18 h-full w-full cursor-pointer select-none ${objSelected ? 'text-primary-500' : 'text-grey-400'}`}
@@ -58,7 +58,7 @@ const SelectBox = ({
           {listData?.map((item, key) => (
             <li
               key={key}
-              className={`${open ? 'h-fit opacity-100' : 'h-0 opacity-0'} w-full hover:bg-primary-50`}
+              className={`${open ? '' : 'hidden h-0'} flex h-62 w-full items-center justify-start hover:bg-primary-50 max-lg:h-48`}
             >
               <button
                 onClick={() => {
@@ -66,10 +66,10 @@ const SelectBox = ({
                   setSelectedItem(item);
                   setObjSelected(true);
                 }}
-                className={`text-regular18 flex h-full w-full items-center justify-start px-12 py-16`}
+                className={`text-regular18 flex h-full w-full items-center justify-start px-12`}
               >
                 <span
-                  className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}
+                // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}
                 >
                   {item?.text}
                 </span>

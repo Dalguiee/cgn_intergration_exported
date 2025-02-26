@@ -46,7 +46,7 @@ const PaymentBox = () => {
           listData={subscribesData}
           selectedItem={selectedSubscribes}
           setSelectedItem={setselectedSubscribes}
-          className='w-290 max-w-290 max-lg:min-w-full'
+          className='w-full max-w-290 max-lg:min-w-full'
         />
         <div
           className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:min-w-full max-lg:gap-5 max-md:h-48`}
