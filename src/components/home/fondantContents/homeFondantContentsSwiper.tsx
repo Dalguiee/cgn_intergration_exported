@@ -19,7 +19,7 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
       // loopAdditionalSlides={10}
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
-      spaceBetween={8}
+      spaceBetween={20}
       slidesPerView={`auto`}
       onSlideChange={() => {}}
       onSwiper={swiper => {}}

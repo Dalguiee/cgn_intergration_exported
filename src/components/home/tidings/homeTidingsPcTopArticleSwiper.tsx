@@ -22,8 +22,7 @@ const HomeTidingsPcTopArticleSwiper = ({
   return (
     <Swiper
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-      className={`overflow-visible`}
-      spaceBetween={40}
+      className={`select-none overflow-visible`}
       loop={true}
       // autoplay={{
       //   delay: 1000,
@@ -32,6 +31,7 @@ const HomeTidingsPcTopArticleSwiper = ({
       // freeMode={true}
       // loopAdditionalSlides={5}
       // centeredSlides={true}
+      spaceBetween={40}
       slidesPerView={'auto'}
       onSlideChange={swiper => {}}
       onSwiper={swiper => {}}

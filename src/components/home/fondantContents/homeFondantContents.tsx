@@ -27,17 +27,10 @@ const HomeFondantContents = () => {
             4만 여개의 다양한 콘텐츠를 무료로 시청하세요!
           </span>
         </div>
-        <div className={`flex items-center justify-center lg:hidden`}>
-          <span className={`text-regular12 text-grey-900`}>퐁당 바로가기</span>
-          <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
-            alt=''
-          />
-        </div>
 
         <StyledButtons
           text='퐁당 바로가기'
-          className='w-139 max-lg:hidden max-lg:bg-transparent'
+          className='w-139 max-lg:w-81 max-lg:border-none max-lg:bg-transparent max-lg:px-0'
           formMode='mode2-r'
           colorMode='mode3'
           arrowMode={true}

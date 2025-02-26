@@ -9,7 +9,7 @@ import { homeOnePartedBannersData } from '@/db/mockup';
 
 const HomeOnePartedBanner = () => {
   return (
-    <div className='flex h-fit w-full items-start justify-center px-16 max-lg:pb-12 max-lg:pt-60'>
+    <div className='flex h-fit w-full items-start justify-center px-16'>
       <div
         className={`flex h-200 w-full max-w-1560 items-center justify-center max-lg:h-128`}
       >

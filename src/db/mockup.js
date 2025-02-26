@@ -825,41 +825,6 @@ export const mockupData = [
   },
 ];
 
-export const paymentMockupData = [
-  {
-    id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와 1`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
-  },
-  {
-    id: 1,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와 2`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
-  },
-  {
-    id: 2,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와 3`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
-  },
-  {
-    id: 3,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와 4`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
-  },
-];
-
 export const mediaData = [
   {
     id: 0,
@@ -914,13 +879,13 @@ export const mediaData = [
 export const homeTowPartedBannersData = [
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_1.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_1.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_1.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_1.png`,
   },
   {
     id: 1,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_2.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_2.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_2.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_2.png`,
   },
 ];
 

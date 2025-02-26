@@ -15,7 +15,40 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 // 데이터
-import { paymentMockupData } from '@/db/mockup';
+export const paymentMockupData = [
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
+    title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
+    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+  },
+  {
+    id: 1,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
+    title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
+    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+  },
+  {
+    id: 2,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
+    title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
+    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+  },
+  {
+    id: 3,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
+    title: `세상에 없는 가치와`,
+    depthTitle: `감동을 담다`,
+    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+  },
+];
 
 const HomeTopBanner = ({ mobile }) => {
   return (

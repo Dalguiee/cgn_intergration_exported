@@ -36,14 +36,14 @@ const HomePage = () => {
       <HomeCampaignEvent />
       <HomeFondantContents />
       <HomeTidings />
-      <section className={`bg-secondary-brown_bg_2`}>
+      <section className={`bg-secondary-brown_bg_2 max-lg:pb-60`}>
         <HomeTowPartedBanner mobile={mobile} />
       </section>
       <HomeMission />
-      <section className={`pb-80`}>
+      <section className={`pb-80 max-lg:pb-12 max-lg:pt-60`}>
         <HomeOnePartedBanner />
       </section>
-      <section className={`pb-120`}>
+      <section className={`pb-120 max-lg:pb-60`}>
         <HomeTowPartedBanner mobile={mobile} />
       </section>
       <HomeNoticeMain />
