@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DepthSubMenu = ({ depthActive, setDepthActive }) => {
+const DepthBackground = ({ depthActive, setDepthActive }) => {
   return (
     <div
       onMouseLeave={() => {
@@ -14,4 +14,4 @@ const DepthSubMenu = ({ depthActive, setDepthActive }) => {
   );
 };
 
-export default DepthSubMenu;
+export default DepthBackground;

@@ -12,6 +12,18 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
   const tabListData = [
     {
       id: 0,
+      path: `/introduce/organization`,
+      tags: [
+        { id: 0, type: '이사장 인사' },
+        { id: 1, type: '대표 인사' },
+        { id: 2, type: '섬기는 분들' },
+        { id: 3, type: '연혁' },
+        { id: 4, type: '오시는 길' },
+      ],
+    },
+
+    {
+      id: 1,
       path: `/tidings/campaign`,
       tags: [
         { id: 1, type: '진행중' },
@@ -19,7 +31,7 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
       ],
     },
     {
-      id: 1,
+      id: 2,
       path: `/tidings/mission`,
       tags: [
         { id: 14, type: 'CGN 소식' },
@@ -30,7 +42,7 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       path: `/tidings/support`,
       tags: [
         { id: 11, type: '후원' },
@@ -49,7 +61,11 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
         id: 0,
         type: '전체',
       };
-      setCategoryTags([totalTag, ...tagDataFind?.[0]?.tags]);
+      if (location?.pathname?.includes(`/tidings/`)) {
+        setCategoryTags([totalTag, ...tagDataFind?.[0]?.tags]);
+      } else {
+        setCategoryTags([...tagDataFind?.[0]?.tags]);
+      }
     }
   }, [location.pathname]);
 

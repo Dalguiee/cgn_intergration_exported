@@ -9,12 +9,15 @@ import TidingsMissionPage from '@/pages/tidings/mission/page';
 import TidingsSupportPage from '@/pages/tidings/support/page';
 import TidingsDetailPage from '@/pages/tidings/detailPage';
 import IntroducePage from '@/pages/introduce/vision/page';
+import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
 
 export default function MainRouter() {
   return (
     <Routes>
       <Route path='/*' element={<DefaultLayer />}>
+        {/* 홈 */}
         <Route path='home' element={<HomePage />}></Route>
+        {/* 소식 */}
         <Route
           path='tidings/campaign'
           element={<TidingsCampaignPage />}
@@ -29,7 +32,12 @@ export default function MainRouter() {
           path='tidings/:subDepth/detail'
           element={<TidingsDetailPage />}
         ></Route>
+        {/* 소개 */}
         <Route path='introduce/vision' element={<IntroducePage />}></Route>
+        <Route
+          path='introduce/organization'
+          element={<IntroduceOrganizationPage />}
+        ></Route>
       </Route>
     </Routes>
   );

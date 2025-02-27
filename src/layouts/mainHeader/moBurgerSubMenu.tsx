@@ -6,7 +6,7 @@ const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
 
   return (
     <section
-      className={`fixed top-128 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-hidden bg-white-solid px-24 pt-16`}
+      className={`fixed top-128 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-y-scroll bg-white-solid px-24 pb-200 pt-16`}
     >
       {centerMenu?.map((menu, key) => (
         <div key={key}>
@@ -17,7 +17,7 @@ const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
             {menu?.subMenu?.map((subMenu, key) => (
               <div
                 key={key}
-                className={`h-32 w-115 [&:nth-child(1)]:text-bold14`}
+                className={`[&:nth-child(1)]:text-bold14 h-32 w-115`}
               >
                 <button
                   onClick={() => {

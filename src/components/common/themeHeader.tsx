@@ -16,6 +16,12 @@ const ThemeHeader = () => {
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN',
     },
     {
+      path: 'introduce/organization',
+      title: '기관 소개',
+      subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN을 소개합니다.',
+    },
+
+    {
       path: 'tidings/campaign',
       title: '캠페인/이벤트',
       subTitle: 'CGN의 캠페인/이벤트를 확인해 보세요.',

@@ -30,6 +30,11 @@ const Locator = () => {
             data = '미션&비전';
             pathStack = 'introduce/vision';
           }
+          if (data === 'organization') {
+            pathPiece = data;
+            data = '기관 소개';
+            pathStack = 'introduce/organization?articleId=1';
+          }
 
           return { bPath: pathPiece, name: data, path: pathStack };
         })
