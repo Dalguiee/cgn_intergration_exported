@@ -26,12 +26,14 @@ const HomePage = () => {
     };
     window.addEventListener('resize', resizeSetting);
     window.addEventListener(`load`, resizeSetting);
+    window.addEventListener(`popstate`, resizeSetting);
 
     return () => {
       window.removeEventListener('resize', resizeSetting);
       window.removeEventListener(`load`, resizeSetting);
+      window.removeEventListener(`popstate`, resizeSetting);
     };
-  }, []);
+  }, [location]);
 
   return (
     <section>
