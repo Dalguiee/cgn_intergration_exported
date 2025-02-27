@@ -41,7 +41,7 @@ const HomeCampaignEvent = () => {
 
   return (
     <main
-      className={`flex h-1004 w-full flex-col items-center justify-center gap-40 px-16 max-lg:h-fit max-lg:gap-0 max-lg:pb-60`}
+      className={`flex h-1004 w-full flex-col items-center justify-center gap-40 px-16 max-lg:h-fit max-lg:gap-0 max-lg:pb-60 max-lg:pt-60`}
     >
       {/* 컨텐츠 헤더 */}
       <HomeCampaignEventHeader
@@ -61,6 +61,7 @@ const HomeCampaignEvent = () => {
         ></HomeLeftMainCampaign>
         {/* 오른쪽 및 반응형 아래쪽 */}
         <div
+          data-aos='fade-up'
           className={`grid h-full w-full max-w-728 grid-cols-2 grid-rows-2 gap-24 max-lg:w-full max-lg:max-w-[unset] max-lg:grid-rows-1 max-lg:gap-12`}
         >
           {campaignData

@@ -22,7 +22,7 @@ const HomeTidingsPcTopArticleSwiper = ({
   return (
     <Swiper
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-      className={`select-none overflow-visible`}
+      className={`h-full w-full select-none overflow-visible`}
       loop={true}
       // autoplay={{
       //   delay: 1000,
@@ -31,32 +31,27 @@ const HomeTidingsPcTopArticleSwiper = ({
       // freeMode={true}
       // loopAdditionalSlides={5}
       // centeredSlides={true}
-      spaceBetween={40}
+      spaceBetween={12}
       slidesPerView={'auto'}
-      onSlideChange={swiper => {}}
+      onSlideChange={() => {}}
       onSwiper={swiper => {}}
-      breakpoints={
-        {
-          // 640: {
-          //   slidesPerView: 1,
-          //   spaceBetween: 16,
-          // },
-          // 768: {
-          //   slidesPerView: 2,
-          //   spaceBetween: 32,
-          // },
-          // 1024: {
-          //   slidesPerView: 4,
-          //   spaceBetween: 64,
-          // },
-        }
-      }
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 12,
+        },
+        1024: {
+          // slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      }}
     >
       {findedMockupData?.map((item, key) => (
-        <SwiperSlide
-          className={`!w-560 max-lg:!w-277 max-md:!w-full`}
-          key={key}
-        >
+        <SwiperSlide className={`!w-560 max-lg:!w-277`} key={key}>
           <HomeTidingsCard pageMode={pageMode} key={item?.id} item={item} />
         </SwiperSlide>
       ))}

@@ -38,7 +38,7 @@ const SelectBox = ({
       className={`relative z-10 flex h-62 cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className}`}
     >
       <div
-        className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 ${objSelected ? 'outline-primary-500' : 'outline-grey-200'}`}
+        className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 max-lg:rounded-4 ${objSelected ? 'outline-primary-500' : 'outline-grey-200'}`}
       >
         <ul
           ref={selectOpenBox}

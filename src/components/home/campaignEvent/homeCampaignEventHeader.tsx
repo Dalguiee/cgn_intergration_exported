@@ -1,5 +1,6 @@
 // 컴포넌트
 import StyledButtons from '@/components/common/styledButtons';
+import { useNavigate } from 'react-router-dom';
 
 const HomeCampaignEventHeader = ({
   pagingNext,
@@ -8,6 +9,7 @@ const HomeCampaignEventHeader = ({
   startNum,
   endNum,
 }) => {
+  const navigate = useNavigate();
   return (
     <section
       className={`flex w-full max-w-1560 items-center justify-between max-lg:mb-16`}
@@ -52,6 +54,9 @@ const HomeCampaignEventHeader = ({
             formMode='mode2-r'
             colorMode='mode3'
             arrowMode={true}
+            onClick={() => {
+              navigate(`/tidings/campaign`);
+            }}
           />
         </div>
       </div>

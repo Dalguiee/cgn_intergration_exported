@@ -11,11 +11,11 @@ const HomeFondantContents = () => {
       style={{
         backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/bg/section3_bg.png)`,
       }}
-      className={`flex h-906 w-full flex-col items-start justify-center overflow-hidden bg-cover bg-center bg-no-repeat max-lg:h-300`}
+      className={`flex h-906 w-full flex-col items-start justify-center overflow-hidden bg-cover bg-center bg-no-repeat pr-16 max-lg:h-300 lg:pl-180`}
     >
       {/* 컨텐츠 헤더 */}
       <div
-        className={`mb-40 flex w-full items-end justify-between px-16 max-lg:mb-12 max-lg:pl-16 lg:px-180`}
+        className={`mb-40 flex w-full max-w-1560 items-end justify-between max-lg:mb-12 max-lg:pl-16`}
       >
         <div className={`flex flex-col items-start justify-start`}>
           <span
@@ -33,11 +33,14 @@ const HomeFondantContents = () => {
           className='w-139 max-lg:w-81 max-lg:border-none max-lg:bg-transparent max-lg:px-0'
           formMode='mode2-r'
           colorMode='mode3'
+          onClick={() => {
+            window.location.href = `https://www.fondant.kr/`;
+          }}
           arrowMode={true}
         />
       </div>
       {/* 슬라이딩 컨텐츠 */}
-      <div className={`w-full overflow-visible pl-180 max-lg:pl-16`}>
+      <div className={`w-full overflow-visible max-lg:pl-16`}>
         <HomeFondantContentsSwiper mediaData={mediaData} />
       </div>
     </div>

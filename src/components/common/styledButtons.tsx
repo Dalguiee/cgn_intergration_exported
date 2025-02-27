@@ -58,12 +58,16 @@ const StyledButtons = ({
   className = '',
   arrowMode = false,
   widthFull = false,
+  onClick = () => {},
 }) => {
   const formModeObj = formModeData.find(item => item.mode === formMode);
   const colorModeObj = colorModeData.find(item => item.mode === colorMode);
 
   return (
     <button
+      onClick={() => {
+        onClick();
+      }}
       className={`${className} flex items-center justify-center text-nowrap rounded-8 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
     >
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>

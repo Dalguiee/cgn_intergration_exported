@@ -4,12 +4,13 @@ import React from 'react';
 // 컴포넌트
 import HomeTextBox from '@/components/home/mission/homeTextBox';
 
-const HomeMission = () => {
+const HomeMission = ({ mobile }) => {
   const buttonData = [
     {
       id: 1,
       text: `선교 미디어 사역`,
       className: `bg-primary-500`,
+      blackArrow: true,
       link: `/`,
     },
     {
@@ -41,7 +42,7 @@ const HomeMission = () => {
           className={`flex h-full w-884 flex-col items-center justify-center gap-24 bg-cover bg-[100%] bg-no-repeat max-lg:gap-12 max-lg:bg-[40%] max-lg:px-12`}
         >
           <div
-            className={`flex w-full items-center justify-center rounded-8 bg-secondary-brown_bg_2 px-32 py-40 lg:hidden`}
+            className={`flex w-full items-center justify-center rounded-8 bg-secondary-brown_bg_2 px-38 py-40 lg:hidden`}
           >
             <HomeTextBox />
           </div>
@@ -52,13 +53,13 @@ const HomeMission = () => {
               className={`flex h-120 w-440 items-center justify-between rounded-16 max-lg:rounded-8 ${item?.className} px-40 py-40 max-lg:h-60 max-lg:w-full max-lg:px-24 max-lg:py-16`}
             >
               <span
-                className={`text-bold24 max-lg:text-bold18 max-lg:txt-bold16 line-clamp-1 text-white-solid`}
+                className={`text-bold24 max-lg:text-bold16 line-clamp-1 text-white-solid`}
               >
                 {item?.text}
               </span>
               <img
-                className={`h-32 w-32`}
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_white.svg`}
+                className={`h-32 w-32 max-lg:h-17 max-lg:w-17`}
+                src={`${item?.blackArrow && mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_black.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_white.svg`}`}
                 width={32}
                 height={32}
                 alt=''

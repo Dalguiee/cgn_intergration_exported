@@ -25,8 +25,11 @@ const HomePage = () => {
       }
     };
     window.addEventListener('resize', resizeSetting);
+    window.addEventListener(`load`, resizeSetting);
+
     return () => {
       window.removeEventListener('resize', resizeSetting);
+      window.removeEventListener(`load`, resizeSetting);
     };
   }, []);
 
@@ -39,9 +42,9 @@ const HomePage = () => {
       <section className={`bg-secondary-brown_bg_2 max-lg:pb-60`}>
         <HomeTowPartedBanner mobile={mobile} />
       </section>
-      <HomeMission />
+      <HomeMission mobile={mobile} />
       <section className={`pb-80 max-lg:pb-12 max-lg:pt-60`}>
-        <HomeOnePartedBanner />
+        <HomeOnePartedBanner mobile={mobile} />
       </section>
       <section className={`pb-120 max-lg:pb-60`}>
         <HomeTowPartedBanner mobile={mobile} />

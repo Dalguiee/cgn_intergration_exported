@@ -34,9 +34,9 @@ const HomePaymentBox = () => {
 
   return (
     <div
-      className={`flex min-h-168 flex-col items-start justify-center gap-24 rounded-16 bg-white-solid px-40 py-24 max-lg:items-center max-lg:px-16`}
+      className={`flex min-h-168 w-full flex-shrink-0 flex-col items-start justify-center gap-24 rounded-16 bg-white-solid px-40 max-lg:items-center max-lg:gap-16 max-lg:px-16`}
     >
-      <span className={`text-bold24 text-grey-900`}>
+      <span className={`text-bold24 max-lg:text-bold18 text-grey-900`}>
         당신의 소중한 후원으로 오늘도 복음은 전해집니다!
       </span>
       <div
@@ -49,7 +49,7 @@ const HomePaymentBox = () => {
           className='w-full max-w-290 max-lg:min-w-full'
         />
         <div
-          className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:min-w-full max-lg:gap-5 max-md:h-48`}
+          className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:h-48 max-lg:min-w-full max-lg:gap-5`}
         >
           {priceData?.map((item, key) => {
             return (
@@ -58,7 +58,7 @@ const HomePaymentBox = () => {
                 onClick={() => {
                   setSelectedPrice(item);
                 }}
-                className={`${item?.id === selectedPrice?.id ? 'text-bold24 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 text-grey-900'} max-md:text-regular16 h-full w-full rounded-8 bg-grey-100`}
+                className={`${item?.id === selectedPrice?.id ? 'text-bold24 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 text-grey-900'} max-lg:text-regular16 h-full w-full rounded-8 bg-grey-100 max-lg:rounded-4`}
               >
                 {item?.text}
               </button>

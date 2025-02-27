@@ -4,7 +4,6 @@ import TagIcon from '@/components/common/tagIcon';
 const HomeCampaignCard = ({ item }) => {
   return (
     <div
-      data-aos='fade-up'
       className={`h-fit w-full max-w-352 max-lg:min-h-179 max-lg:max-w-[unset]`}
     >
       <button

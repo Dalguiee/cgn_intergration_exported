@@ -25,7 +25,7 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
 
   return (
     <section
-      className={`flex w-full items-center justify-between gap-24 max-lg:mb-24 max-lg:pl-16 lg:px-180`}
+      className={`flex w-full max-w-1560 items-center justify-between gap-24 max-lg:mb-24`}
     >
       <span className={`text-bold48 flex-shrink-0 text-grey-900 max-lg:hidden`}>
         소식
@@ -41,7 +41,7 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
               setSelectedCategoryArticleId(item?.id);
             }}
             key={item?.id}
-            className={`flex-shrink-0 px-24 max-lg:px-18 ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 bg-white-solid text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+            className={`${item?.id === 1 ? `hidden` : ``} flex-shrink-0 px-24 max-lg:px-18 ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} max-lg:text-regular14 h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 bg-white-solid text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.type}
           </button>
@@ -56,10 +56,6 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
           arrowMode={true}
         />
       </div>
-      <button>
-        <span></span>
-        <img></img>
-      </button>
     </section>
   );
 };

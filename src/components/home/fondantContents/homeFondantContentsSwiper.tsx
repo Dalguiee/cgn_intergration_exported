@@ -19,7 +19,7 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
       // loopAdditionalSlides={10}
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
-      spaceBetween={20}
+      spaceBetween={8}
       slidesPerView={`auto`}
       onSlideChange={() => {}}
       onSwiper={swiper => {}}
@@ -58,7 +58,7 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
             <div
               className={`flex flex-col items-start justify-center py-16 max-lg:hidden`}
             >
-              <p className={`text-regular14 text-grey-400`}>{item?.subtitle}</p>
+              {/* <p className={`text-regular14 text-grey-400`}>{item?.subtitle}</p> */}
               <p
                 className={`text-bold24 line-clamp-1 text-grey-900 max-lg:hidden`}
               >

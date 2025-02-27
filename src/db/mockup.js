@@ -23,7 +23,7 @@ export const mockupData = [
         detailTitle: '기특하데이1',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -44,7 +44,7 @@ export const mockupData = [
         detailTitle: '기특하데이2',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -65,7 +65,7 @@ export const mockupData = [
         detailTitle: '기특하데이3',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -86,7 +86,7 @@ export const mockupData = [
         detailTitle: '기특하데이4',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -107,7 +107,7 @@ export const mockupData = [
         detailTitle: '기특하데이5',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -128,7 +128,7 @@ export const mockupData = [
         detailTitle: '기특하데이6',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -149,7 +149,7 @@ export const mockupData = [
         detailTitle: '기특하데이7',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -170,7 +170,7 @@ export const mockupData = [
         detailTitle: '기특하데이8',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -191,7 +191,7 @@ export const mockupData = [
         detailTitle: '기특하데이9',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
     ],
@@ -217,7 +217,7 @@ export const mockupData = [
         detailTitle: '기특하데이1',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -235,7 +235,7 @@ export const mockupData = [
         detailTitle: '기특하데이2',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -253,7 +253,7 @@ export const mockupData = [
         detailTitle: '기특하데이3',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -271,7 +271,7 @@ export const mockupData = [
         detailTitle: '기특하데이4',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -289,7 +289,7 @@ export const mockupData = [
         detailTitle: '기특하데이5',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -307,7 +307,7 @@ export const mockupData = [
         detailTitle: '기특하데이6',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -325,7 +325,7 @@ export const mockupData = [
         detailTitle: '기특하데이7',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -343,7 +343,7 @@ export const mockupData = [
         detailTitle: '기특하데이8',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -361,7 +361,7 @@ export const mockupData = [
         detailTitle: '기특하데이9',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -379,7 +379,7 @@ export const mockupData = [
         detailTitle: '기특하데이10',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -397,7 +397,7 @@ export const mockupData = [
         detailTitle: '기특하데이11',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -415,7 +415,7 @@ export const mockupData = [
         detailTitle: '기특하데이12',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -433,7 +433,7 @@ export const mockupData = [
         detailTitle: '기특하데이13',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -451,7 +451,7 @@ export const mockupData = [
         detailTitle: '기특하데이14',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -469,7 +469,7 @@ export const mockupData = [
         detailTitle: '기특하데이15',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
     ],
@@ -495,7 +495,7 @@ export const mockupData = [
         detailTitle: '기특하데이1',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -513,7 +513,7 @@ export const mockupData = [
         detailTitle: '기특하데이2',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -531,7 +531,7 @@ export const mockupData = [
         detailTitle: '기특하데이3',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -549,7 +549,7 @@ export const mockupData = [
         detailTitle: '기특하데이4',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -567,7 +567,7 @@ export const mockupData = [
         detailTitle: '기특하데이5',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -585,7 +585,7 @@ export const mockupData = [
         detailTitle: '기특하데이6',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -603,7 +603,7 @@ export const mockupData = [
         detailTitle: '기특하데이7',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -621,7 +621,7 @@ export const mockupData = [
         detailTitle: '기특하데이8',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -639,7 +639,7 @@ export const mockupData = [
         detailTitle: '기특하데이9',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
     ],
@@ -666,7 +666,7 @@ export const mockupData = [
         detailTitle: '기특하데이1',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -685,7 +685,7 @@ export const mockupData = [
         detailTitle: '기특하데이2',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -704,7 +704,7 @@ export const mockupData = [
         detailTitle: '기특하데이3',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -723,7 +723,7 @@ export const mockupData = [
         detailTitle: '기특하데이4',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -742,7 +742,7 @@ export const mockupData = [
         detailTitle: '기특하데이5',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -761,7 +761,7 @@ export const mockupData = [
         detailTitle: '기특하데이6',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -780,7 +780,7 @@ export const mockupData = [
         detailTitle: '기특하데이7',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -799,7 +799,7 @@ export const mockupData = [
         detailTitle: '기특하데이8',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
       {
@@ -818,7 +818,7 @@ export const mockupData = [
         detailTitle: '기특하데이9',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `2022년 9월 첫선을 보인 이후 책을 사랑하는 시청자들에게 큰 사랑을 받은 <잇쉬의 서재>가 독서의 계절에 선물처럼 ‘시즌2’로 돌아왔습니다. 시즌 2에서도 세 명의 텔러가 기독 저자들의 ‘저서’와 ‘저자들의 삶’을 흥미롭게 들려줄 텐데요. 그중 첫 번째 텔러로 출연한 배우 한혜진을 만났습니다. 첫 촬영을 마친 그녀에게 <잇쉬의 서재 시즌2>는 어떻게 다가왔을까요?`,
-        startDate: '2022-01-01',
+        startDate: '2022.01.01',
         endDate: '2024.11.05',
       },
     ],
@@ -874,6 +874,270 @@ export const mediaData = [
     title: `휴먼네컷`,
     subtitle: `오리지널`,
   },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/media_data.png`,
+    title: `휴먼네컷`,
+    subtitle: `오리지널`,
+  },
 ];
 
 export const homeTowPartedBannersData = [
@@ -893,6 +1157,6 @@ export const homeOnePartedBannersData = [
   {
     id: 0,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_2_1.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_2_1.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_2_1.png`,
   },
 ];

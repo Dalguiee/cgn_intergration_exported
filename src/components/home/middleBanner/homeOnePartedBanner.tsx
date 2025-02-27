@@ -7,7 +7,7 @@ import StyledButtons from '@/components/common/styledButtons';
 // 데이터
 import { homeOnePartedBannersData } from '@/db/mockup';
 
-const HomeOnePartedBanner = () => {
+const HomeOnePartedBanner = ({ mobile }) => {
   return (
     <div className='flex h-fit w-full items-start justify-center px-16'>
       <div
@@ -15,7 +15,7 @@ const HomeOnePartedBanner = () => {
       >
         <div
           style={{
-            backgroundImage: `url(${homeOnePartedBannersData?.[0]?.src})`,
+            backgroundImage: `${mobile ? `url(${homeOnePartedBannersData?.[0]?.moSrc})` : `url(${homeOnePartedBannersData?.[0]?.src})`} `,
           }}
           className={`flex h-full w-full items-center justify-center rounded-16 bg-cover bg-center bg-no-repeat px-80 max-lg:rounded-8 max-lg:pl-22 max-lg:pr-18`}
         >

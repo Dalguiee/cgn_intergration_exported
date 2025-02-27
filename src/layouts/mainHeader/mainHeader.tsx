@@ -172,8 +172,10 @@ const MainHeader = () => {
       }
     };
     window.addEventListener('resize', resizeSetting);
+    window.addEventListener(`load`, resizeSetting);
     return () => {
       window.removeEventListener('resize', resizeSetting);
+      window.removeEventListener(`load`, resizeSetting);
     };
   }, []);
 

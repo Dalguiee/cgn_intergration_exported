@@ -54,7 +54,7 @@ const HomeTopBanner = ({ mobile }) => {
   return (
     <div className={`flex h-fit flex-col items-center justify-start`}>
       <div
-        className={`relative flex h-918 w-full items-start justify-center max-lg:h-[calc(918px+48px)]`}
+        className={`relative flex h-918 w-full items-start justify-center max-lg:h-[calc(453px+48px)]`}
       >
         <Swiper
           data-main-swiper
@@ -72,7 +72,7 @@ const HomeTopBanner = ({ mobile }) => {
               style={{
                 backgroundImage: ` ${mobile ? `url(${obj?.moSrc})` : `url(${obj?.src})`} `,
               }}
-              className={`flex w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-48px)] max-lg:justify-end lg:pt-200`}
+              className={`flex w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-36px)] max-lg:justify-end lg:pt-200`}
               key={key}
             >
               <div
@@ -100,7 +100,7 @@ const HomeTopBanner = ({ mobile }) => {
         </Swiper>
       </div>
       <div
-        className={`z-10 w-full max-w-1560 px-16 max-lg:min-h-361 max-lg:px-0 lg:absolute lg:left-1/2 lg:top-777 lg:translate-x-[-50%]`}
+        className={`z-10 flex w-full max-w-1560 flex-col items-center justify-end px-16 max-lg:min-h-240 max-lg:px-0 lg:absolute lg:left-1/2 lg:top-777 lg:translate-x-[-50%]`}
       >
         <HomePaymentBox />
       </div>
