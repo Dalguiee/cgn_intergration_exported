@@ -39,14 +39,18 @@ const HomePage = () => {
       <HomeCampaignEvent />
       <HomeFondantContents />
       <HomeTidings />
-      <section className={`bg-secondary-brown_bg_2 max-lg:pb-60`}>
+      <section
+        className={`overflow-x-scroll bg-secondary-brown_bg_2 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
+      >
         <HomeTowPartedBanner mobile={mobile} />
       </section>
       <HomeMission mobile={mobile} />
       <section className={`pb-80 max-lg:pb-12 max-lg:pt-60`}>
         <HomeOnePartedBanner mobile={mobile} />
       </section>
-      <section className={`pb-120 max-lg:pb-60`}>
+      <section
+        className={`overflow-x-scroll pb-120 scrollbar-hide max-lg:pb-60 max-lg:pl-16`}
+      >
         <HomeTowPartedBanner mobile={mobile} />
       </section>
       <HomeNoticeMain />

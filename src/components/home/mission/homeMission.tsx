@@ -22,7 +22,7 @@ const HomeMission = ({ mobile }) => {
   ];
   return (
     <section
-      className={`flex h-840 w-full items-center justify-center px-16 max-lg:h-682 max-lg:px-0 lg:pb-80 lg:pt-160`}
+      className={`flex h-840 w-full items-start justify-center px-16 max-lg:h-682 max-lg:px-0 lg:pb-80 lg:pt-160`}
     >
       <div
         className={`flex h-600 w-full max-w-1560 items-center justify-center overflow-hidden rounded-16 max-lg:h-full max-lg:rounded-0`}
