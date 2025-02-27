@@ -12,9 +12,11 @@ import HomeMission from '@/components/home/mission/homeMission';
 import HomeNoticeMain from '@/components/home/notice/homeNoticeMain';
 import HomeTowPartedBanner from '@/components/home/middleBanner/homeTowPartedBanner';
 import HomeOnePartedBanner from '@/components/home/middleBanner/homeOnePartedBanner';
+import { useLocation } from 'react-router-dom';
 
 const HomePage = () => {
   const [mobile, setMobile] = useState(false);
+  const location = useLocation();
   // 1024 화면 감지
   useEffect(() => {
     const resizeSetting = () => {
@@ -26,14 +28,14 @@ const HomePage = () => {
     };
     window.addEventListener('resize', resizeSetting);
     window.addEventListener(`load`, resizeSetting);
-    window.addEventListener(`popstate`, resizeSetting);
+    window.addEventListener('popstate', resizeSetting);
 
     return () => {
       window.removeEventListener('resize', resizeSetting);
       window.removeEventListener(`load`, resizeSetting);
       window.removeEventListener(`popstate`, resizeSetting);
     };
-  }, [location]);
+  }, [location.pathname]);
 
   return (
     <section>
