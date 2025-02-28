@@ -1,9 +1,14 @@
 // 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
+import { useNavigate } from 'react-router-dom';
 
 const HomeCampaignCard = ({ item }) => {
+  const navigate = useNavigate();
   return (
     <div
+      onClick={() => {
+        navigate(`/tidings/${item?.category}/detail?articleId=${item?.id}`);
+      }}
       className={`h-fit w-full max-w-352 max-lg:min-h-179 max-lg:max-w-[unset]`}
     >
       <button

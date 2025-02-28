@@ -1,13 +1,18 @@
 // 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
+import { useNavigate } from 'react-router-dom';
 
 const HomeLeftMainCampaign = props => {
+  const navigate = useNavigate();
   return (
     <div
       className={`flex aspect-[792/660] h-full max-h-660 w-full max-w-792 items-center justify-center max-lg:aspect-[360/300] max-lg:max-h-[unset] max-lg:max-w-[unset]`}
     >
       {props.campaignData?.slice(0, 1)?.map((item, key) => (
         <button
+          onClick={() => {
+            navigate(`/tidings/${item?.category}/detail?articleId=${item?.id}`);
+          }}
           key={key}
           style={{
             backgroundImage: `url("${item?.src}")`,

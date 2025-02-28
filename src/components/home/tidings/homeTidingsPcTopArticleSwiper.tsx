@@ -52,7 +52,11 @@ const HomeTidingsPcTopArticleSwiper = ({
     >
       {findedMockupData?.map((item, key) => (
         <SwiperSlide className={`!w-560 max-lg:!w-277`} key={key}>
-          <HomeTidingsCard pageMode={pageMode} key={item?.id} item={item} />
+          <HomeTidingsCard
+            pageMode={item?.category}
+            key={item?.id}
+            item={item}
+          />
         </SwiperSlide>
       ))}
     </Swiper>

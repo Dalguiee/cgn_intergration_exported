@@ -1,6 +1,6 @@
 // 훅
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 // 데이터
 import { mockupData } from '@/db/mockup';
@@ -8,6 +8,7 @@ import StyledButtons from '@/components/common/styledButtons';
 
 const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   /* 클릭시 태그버튼의 색이 변하게 하는 state 값 저장 */
   const [highlight, setHighlight] = useState(0);
   const [categoryTags, setCategoryTags] = useState([]);
@@ -54,6 +55,9 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
           colorMode='mode3'
           className='w-139'
           arrowMode={true}
+          onClick={() => {
+            navigate(`/tidings/mission`);
+          }}
         />
       </div>
     </section>
