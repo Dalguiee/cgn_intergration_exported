@@ -58,7 +58,7 @@ const HomePaymentBox = () => {
                 onClick={() => {
                   setSelectedPrice(item);
                 }}
-                className={`${item?.id === selectedPrice?.id ? 'text-bold24 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 text-grey-900'} max-lg:text-regular16 h-full w-full rounded-8 bg-grey-100 max-lg:rounded-4`}
+                className={`${item?.id === selectedPrice?.id ? 'text-bold24 max-lg:text-bold16 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 max-lg:text-regular16 text-grey-900'} h-full w-full rounded-8 bg-grey-100 max-lg:rounded-4`}
               >
                 {item?.text}
               </button>

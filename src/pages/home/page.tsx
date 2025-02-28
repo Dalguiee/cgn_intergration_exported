@@ -1,7 +1,7 @@
 //개발중
 
 // 훅
-import React, { useEffect, useState } from 'react';
+import React, { useSyncExternalStore } from 'react';
 
 // 컴포넌트
 import TopBanner from '@/components/home/topBanner/homeTopBanner';
@@ -12,30 +12,18 @@ import HomeMission from '@/components/home/mission/homeMission';
 import HomeNoticeMain from '@/components/home/notice/homeNoticeMain';
 import HomeTowPartedBanner from '@/components/home/middleBanner/homeTowPartedBanner';
 import HomeOnePartedBanner from '@/components/home/middleBanner/homeOnePartedBanner';
-import { useLocation } from 'react-router-dom';
+
+const resizing = (callback: () => void) => {
+  const media = window.matchMedia('(max-width: 1024px)');
+  media.addEventListener('change', callback);
+
+  return () => media.removeEventListener('change', callback);
+};
+
+const matchBoolean = () => window.matchMedia('(max-width: 1024px)').matches;
 
 const HomePage = () => {
-  const [mobile, setMobile] = useState(false);
-  const location = useLocation();
-  // 1024 화면 감지
-  useEffect(() => {
-    const resizeSetting = () => {
-      if (window.innerWidth >= 1024) {
-        setMobile(false);
-      } else {
-        setMobile(true);
-      }
-    };
-    window.addEventListener('resize', resizeSetting);
-    window.addEventListener(`load`, resizeSetting);
-    window.addEventListener('popstate', resizeSetting);
-
-    return () => {
-      window.removeEventListener('resize', resizeSetting);
-      window.removeEventListener(`load`, resizeSetting);
-      window.removeEventListener(`popstate`, resizeSetting);
-    };
-  }, [location.pathname]);
+  const mobile = useSyncExternalStore(resizing, matchBoolean);
 
   return (
     <section>

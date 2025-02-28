@@ -20,7 +20,10 @@ const HomeTidings = () => {
     if (selectedCategoryArticleId === 0) {
       let allData = [];
       mockupData?.map(item => {
-        allData = [...allData, ...item?.data];
+        // 캠페인 이벤트 데이터만 뺍니다
+        if (item?.id !== 1) {
+          allData = [...allData, ...item?.data];
+        }
       });
       setfindedMockupData(allData);
     } else {
