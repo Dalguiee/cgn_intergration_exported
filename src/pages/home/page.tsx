@@ -41,7 +41,7 @@ const HomePage = () => {
         <HomeOnePartedBanner mobile={mobile} />
       </section>
       <section
-        className={`overflow-x-scroll pb-120 scrollbar-hide max-lg:pb-60 max-lg:pl-16`}
+        className={`overflow-x-scroll pb-120 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
         <HomeTowPartedBanner mobile={mobile} />
       </section>
