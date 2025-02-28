@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const BottomHeader = ({
@@ -9,14 +10,13 @@ const BottomHeader = ({
 }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [languageActiveIdx, setLanguageActiveIdx] = useState(0); // 활성화된 언어 인덱스
 
   return (
     <div
-      className={`relative z-20 flex w-full max-w-1560 flex-col items-center justify-center max-lg:h-64 max-lg:w-full`}
+      className={`relative z-20 flex w-full max-w-1560 flex-col items-center justify-center max-lg:h-56 max-lg:w-full`}
     >
-      <div
-        className={`flex h-80 w-full items-center justify-between max-lg:h-full`}
-      >
+      <div className={`flex h-full w-full items-center justify-between`}>
         <button
           onClick={() => {
             navigate('/home');
@@ -72,7 +72,7 @@ const BottomHeader = ({
             </div>
           ))}
         </div>
-        <div className={`flex items-center justify-center gap-8`}>
+        <div className={`flex items-center justify-center gap-12`}>
           <button
             className={`${burger ? 'hidden' : ''} text-regular14 max-lg:text-bold14 h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900 max-lg:h-32 max-lg:w-67`}
           >
@@ -86,9 +86,23 @@ const BottomHeader = ({
           <div
             className={`flex items-center justify-center gap-12 ${burger ? '' : 'hidden'}`}
           >
-            <button className={`text-regular16 text-white-solid`}>KN</button>
-            <span className={`border-pirmary-100 h-16 w-1 border-l-2`}></span>
-            <button className={`text-regular16 text-white-solid`}>EN</button>
+            <button
+              className={`text-white-solid ${languageActiveIdx === 0 ? 'text-bold16 underline decoration-[1.5px] underline-offset-[2px]' : 'text-regular16'}`}
+              onClick={() => {
+                setLanguageActiveIdx(0);
+              }}
+            >
+              KR
+            </button>
+            <span className={`border-pirmary-100 h-12 w-1 border-l-1`}></span>
+            <button
+              className={`text-white-solid ${languageActiveIdx === 1 ? 'text-bold16 underline decoration-[1.5px] underline-offset-[2px]' : 'text-regular16'}`}
+              onClick={() => {
+                setLanguageActiveIdx(1);
+              }}
+            >
+              EN
+            </button>
           </div>
           <button
             onClick={() => {

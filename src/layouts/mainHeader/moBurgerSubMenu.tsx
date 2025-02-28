@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
@@ -6,33 +7,35 @@ const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
 
   return (
     <section
-      className={`fixed top-128 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-y-scroll bg-white-solid px-24 pb-200 pt-16`}
+      className={`fixed top-120 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-y-scroll bg-white-solid pb-200 pt-16`}
     >
-      {centerMenu?.map((menu, key) => (
-        <div key={key}>
-          <div className={`w-full py-14`}>
-            <span className={`text-bold18 text-grey-900`}>{menu?.text}</span>
+      {centerMenu?.map((menu, key) => {
+        const [subMenuActiveIdx, setSubMenuActiveIdx] = useState(0);
+        return (
+          <div key={key} className='border-b-1 px-24'>
+            <div className={`w-full py-14`}>
+              <span className={`text-bold18 text-grey-900`}>{menu?.text}</span>
+            </div>
+            <div
+              className={`mb-16 flex flex-wrap items-center justify-start gap-x-12 gap-y-8`}
+            >
+              {menu?.subMenu?.map((subMenu, key) => (
+                <div key={key} className={`h-32 w-115`}>
+                  <button
+                    onClick={() => {
+                      navigate(subMenu?.link);
+                      setBurger(false);
+                    }}
+                    className={`${subMenuActiveIdx === key ? 'text-bold14 text-primary-900' : 'text-regular14 text-grey-600'}`}
+                  >
+                    {subMenu?.text}
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className={`flex flex-wrap items-center justify-start`}>
-            {menu?.subMenu?.map((subMenu, key) => (
-              <div
-                key={key}
-                className={`[&:nth-child(1)]:text-bold14 h-32 w-115`}
-              >
-                <button
-                  onClick={() => {
-                    navigate(subMenu?.link);
-                    setBurger(false);
-                  }}
-                  className={`text-regular14 text-grey-600`}
-                >
-                  {subMenu?.text}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </section>
   );
 };

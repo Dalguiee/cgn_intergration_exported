@@ -82,7 +82,7 @@ const HomeTopBanner = ({ mobile }) => {
                   className={`flex flex-col items-start justify-start lg:mb-200`}
                 >
                   <span
-                    className={`text-bold78 max-lg:text-bold32 text-white-solid`}
+                    className={`text-bold78 max-lg:text-bold32 mb-12 text-white-solid max-lg:mb-8`}
                   >
                     {obj?.title}
                     <br />

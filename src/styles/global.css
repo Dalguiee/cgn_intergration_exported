@@ -243,6 +243,9 @@
 }
 
 @layer components {
+  .under-white-gradient {
+    @apply after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:h-[30%] after:w-full after:bg-gradient-to-t after:from-white-solid after:content-[""];
+  }
 }
 
 @layer utilities {

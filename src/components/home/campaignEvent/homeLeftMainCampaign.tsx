@@ -18,7 +18,7 @@ const HomeLeftMainCampaign = props => {
             backgroundImage: `url("${item?.src}")`,
             filter: `opacity(0.9999)`,
           }}
-          className={`relative after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:h-[30%] after:w-full after:bg-gradient-to-t after:from-white-solid after:content-[""] bg-[url("${item?.src}")] flex h-full w-full flex-col items-start justify-between rounded-16 bg-cover bg-center bg-no-repeat px-24 pb-33 pt-24 max-lg:rounded-8 max-lg:px-16 max-lg:py-16`}
+          className={`relative bg-[url("${item?.src}")] flex h-full w-full flex-col items-start justify-between rounded-16 bg-cover bg-center bg-no-repeat px-24 pb-33 pt-24 max-lg:rounded-8 max-lg:px-16 max-lg:py-16`}
         >
           {item?.tag?.map((tag, key) => {
             if (tag?.id === 1 || tag?.id === 3) {
