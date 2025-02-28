@@ -108,7 +108,7 @@ const TagIcon = ({ id = 1, text = '', mode = 'mode1' }) => {
   return (
     <>
       <span
-        className={`tag-btn ${modeFind && modeFind?.className} ${tagFind && tagFind?.className} flex items-center justify-center rounded-4`}
+        className={`tag-btn flex-shrink-0 ${modeFind && modeFind?.className} ${tagFind && tagFind?.className} flex items-center justify-center rounded-4`}
       >
         {text?.length ? text : tagFind?.text}
       </span>

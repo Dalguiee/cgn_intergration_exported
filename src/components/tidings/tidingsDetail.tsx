@@ -118,16 +118,20 @@ const TidingsDetail = () => {
           className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-8 max-lg:border-b-1 max-lg:border-t-0 max-lg:border-b-grey-100 max-lg:py-12`}
         >
           <div className={`flex justify-center gap-16`}>
-            {currentData?.tag?.map((obj, key) => (
-              <div key={key} className={`h-full max-lg:hidden`}>
-                <TagIcon
-                  text={obj?.text}
-                  id={obj?.id}
-                  mode={obj?.mode}
-                  key={key}
-                />
-              </div>
-            ))}
+            {currentData?.tag?.map((obj, key) => {
+              if (obj?.id !== 1 && obj?.id !== 3) {
+                return (
+                  <div key={key} className={`h-full max-lg:hidden`}>
+                    <TagIcon
+                      text={obj?.text}
+                      id={obj?.id}
+                      mode={obj?.mode}
+                      key={key}
+                    />
+                  </div>
+                );
+              }
+            })}
             <span className={`text-bold24 text-grey-900`}>
               {currentData?.detailTitle}
             </span>
@@ -160,6 +164,7 @@ const TidingsDetail = () => {
         <div
           className={`w-full border-b-3 border-t-3 border-grey-900 px-4 max-lg:hidden`}
         >
+          {/* 이전글 창 */}
           <div
             className={`${beforeData ? '' : 'hidden'} flex h-80 items-center justify-between`}
           >
@@ -175,7 +180,7 @@ const TidingsDetail = () => {
                 이전 글
               </span>
               <span
-                className={`text-regular16 mx-16 line-clamp-1 text-grey-500`}
+                className={`text-regular16 ml-16 mr-31 line-clamp-1 text-grey-500`}
               >
                 {beforeData?.title}
               </span>
@@ -187,6 +192,7 @@ const TidingsDetail = () => {
             </span>
           </div>
 
+          {/* 다음글 창 */}
           <div
             className={`${afterData ? '' : 'hidden'} ${beforeData ? 'border-t-1' : ''} border-grey-900`}
           >
@@ -203,7 +209,7 @@ const TidingsDetail = () => {
                   다음 글
                 </span>
                 <span
-                  className={`text-regular16 mx-16 line-clamp-1 text-grey-500`}
+                  className={`text-regular16 ml-16 mr-31 line-clamp-1 text-grey-500`}
                 >
                   {afterData?.title}
                 </span>

@@ -74,12 +74,12 @@ const BottomHeader = ({
         </div>
         <div className={`flex items-center justify-center gap-8`}>
           <button
-            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 border-1 border-grey-900 text-regular14 text-grey-900 max-lg:h-32 max-lg:w-67`}
+            className={`${burger ? 'hidden' : ''} text-regular14 max-lg:text-bold14 h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900 max-lg:h-32 max-lg:w-67`}
           >
             On-Air
           </button>
           <button
-            className={`${burger ? 'hidden' : ''} h-40 w-89 rounded-4 bg-primary-500 text-regular14 text-white-solid max-lg:h-32 max-lg:w-67`}
+            className={`${burger ? 'hidden' : ''} text-regular14 max-lg:text-bold14 h-40 w-89 rounded-4 bg-primary-500 text-white-solid max-lg:h-32 max-lg:w-67`}
           >
             후원하기
           </button>

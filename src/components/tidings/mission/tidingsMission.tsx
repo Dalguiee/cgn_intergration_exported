@@ -199,12 +199,14 @@ const TidingsMission = () => {
                         key={key}
                       />
                     ))}
-                    <span className={`text-regular14 text-grey-500`}>
+                    <span
+                      className={`text-regular14 line-clamp-1 max-w-65 text-grey-500`}
+                    >
                       {findedMockupData?.[pagingNum]?.startDate}
                     </span>
                   </div>
                   <div>
-                    <span className={`text-bold24 text-grey-900`}>
+                    <span className={`text-bold24 line-clamp-3 text-grey-900`}>
                       {findedMockupData?.[pagingNum]?.title}
                     </span>
                   </div>
@@ -251,11 +253,13 @@ const TidingsMission = () => {
                         text={item?.text}
                       />
                     ))}
-                  <span className={`text-bold18 text-grey-900`}>
+                  <span className={`text-bold18 line-clamp-1 text-grey-900`}>
                     {data?.title}
                   </span>
                 </div>
-                <span className={`text-regular14 text-grey-400`}>
+                <span
+                  className={`text-regular14 ml-16 w-full max-w-65 overflow-hidden text-grey-400`}
+                >
                   {data?.startDate}
                 </span>
               </button>

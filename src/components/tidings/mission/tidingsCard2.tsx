@@ -31,7 +31,7 @@ const TidingsCard2 = ({ item, pageMode }) => {
               <TagIcon text={obj.text} id={obj.id} mode={obj.mode} key={key} />
             ))}
           </div>
-          <div>
+          <div className={`line-clamp-1`}>
             <span className={`text-regular14 text-grey-400`}>
               {item.startDate}
             </span>
@@ -42,7 +42,9 @@ const TidingsCard2 = ({ item, pageMode }) => {
           </div>
         </div>
         <div className={`mt-12 flex w-full items-center justify-start`}>
-          <span className={`text-bold24 text-grey-900`}>{item.title}</span>
+          <span className={`text-bold24 line-clamp-2 text-grey-900`}>
+            {item.title}
+          </span>
         </div>
       </div>
     </button>

@@ -223,7 +223,8 @@ export const mockupData = [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
         ],
-        title: '미션 데이터 테스트1',
+        title:
+          '미션 데이터 테스트1 미션 데이터 테스트1 미션 데이터 테스트1 미션 데이터 테스트1 미션 데이터 테스트1 미션 데이터 테스트1 미션 데이터 테스트1 미션 데이터 테스트1',
         detailTitle: '기특하데이1',
         subTitle: '1. 다양한 신규 콘텐츠 공개',
         content: `▶ 1월 1일 공개된  <CGN과 함께 일-일 통독>은 새롭게 론칭한 성경 통독 프로그램입니다. 기존 <하루 20분 공동체 성경읽기>의 업그레이드 버전으로 새로운 삽화와 1인 낭독으로 성경 통독에 대한 흥미를 북돋습니다. 하루 15분이면 1년 1독을 완성하도록 구성했죠. 특히 아름답고 풍성한 삽화로 눈과 귀가 즐거운 성경읽기를 할 수 있답니다. 현재 CGN TV를 통해 방송되고 있으며, 퐁당과 유튜브에도 매일 업로드됩니다. (tip! OTT '퐁당'에서 시청하면 자동 진도체크가 되어 편리하게 통독할 수 있답니다.)`,
