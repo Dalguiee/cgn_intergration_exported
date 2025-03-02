@@ -1,7 +1,5 @@
-//개발중
-
 // 훅
-import React, { useSyncExternalStore } from 'react';
+import React from 'react';
 
 // 컴포넌트
 import TopBanner from '@/components/home/topBanner/homeTopBanner';
@@ -12,18 +10,10 @@ import HomeMission from '@/components/home/mission/homeMission';
 import HomeNoticeMain from '@/components/home/notice/homeNoticeMain';
 import HomeTowPartedBanner from '@/components/home/middleBanner/homeTowPartedBanner';
 import HomeOnePartedBanner from '@/components/home/middleBanner/homeOnePartedBanner';
-
-const resizing = (callback: () => void) => {
-  const media = window.matchMedia('(max-width: 1024px)');
-  media.addEventListener('change', callback);
-
-  return () => media.removeEventListener('change', callback);
-};
-
-const matchBoolean = () => window.matchMedia('(max-width: 1024px)').matches;
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const HomePage = () => {
-  const mobile = useSyncExternalStore(resizing, matchBoolean);
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
 
   return (
     <section>
