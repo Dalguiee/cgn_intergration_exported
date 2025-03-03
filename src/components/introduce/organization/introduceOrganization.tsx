@@ -7,6 +7,7 @@ import CategoryList from '@/components/common/categoryList';
 import IntroduceChairman from '@/components/introduce/organization/introduceChairman';
 import IntroduceCEO from '@/components/introduce/organization/introduceCEO';
 import IntroduceFollowers from '@/components/introduce/organization/introduceFollowers';
+import IntroduceHistory from './introduceHistory';
 
 const IntroduceOrganization = () => {
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
@@ -33,7 +34,7 @@ const IntroduceOrganization = () => {
         {queryNumber === 0 ? <IntroduceChairman /> : ''}
         {queryNumber === 1 ? <IntroduceCEO /> : ''}
         {queryNumber === 2 ? <IntroduceFollowers /> : ''}
-        {queryNumber === 3 ? <IntroduceChairman /> : ''}
+        {queryNumber === 3 ? <IntroduceHistory /> : ''}
         {queryNumber === 4 ? <IntroduceChairman /> : ''}
       </section>
     </>

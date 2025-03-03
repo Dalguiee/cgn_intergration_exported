@@ -1,6 +1,8 @@
+// 훅
+import { useNavigate } from 'react-router-dom';
+
 // 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
-import { useNavigate } from 'react-router-dom';
 
 const HomeLeftMainCampaign = props => {
   const navigate = useNavigate();

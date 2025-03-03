@@ -1,6 +1,8 @@
+// 훅
+import { useNavigate } from 'react-router-dom';
+
 // 컴포넌트
 import StyledButtons from '@/components/common/styledButtons';
-import { useNavigate } from 'react-router-dom';
 
 const HomeCampaignEventHeader = ({
   pagingNext,

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useSyncExternalStore } from 'react';
 
 // 컴포넌트
 import TopHeader from '@/layouts/mainHeader/topHeader';
@@ -6,6 +6,7 @@ import BottomHeader from '@/layouts/mainHeader/bottomHeader';
 import DepthBackground from '@/layouts/mainHeader/depthBackground';
 import MoBottomHeader from '@/layouts/mainHeader/moBottomHeader';
 import MoBurgerSubMenu from '@/layouts/mainHeader/moBurgerSubMenu';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 // pc 버전일때 사용되는 DepthBackground, topHeader botomHeader 가 있으며,
 // 모바일 버전에서 사용되는 burderSubMenu 와 mobileBottom 으로 나뉘어 있습니다
@@ -154,6 +155,14 @@ const centerMenu = [
 const MainHeader = () => {
   const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
   const [burger, setBurger] = useState(false);
+  const mobile = ResponsiveScanner(`(max-width: 1024px)`);
+
+  // 2depth 활성화
+  useEffect(() => {
+    if (mobile === false) {
+      setBurger(false);
+    }
+  }, [mobile]);
 
   // 버거 visible 유무
   useEffect(() => {
@@ -163,21 +172,6 @@ const MainHeader = () => {
       document.body.style.overflow = 'auto';
     }
   }, [burger]);
-
-  // 2depth 활성화
-  useEffect(() => {
-    const resizeSetting = () => {
-      if (window.innerWidth >= 1024) {
-        setBurger(false);
-      }
-    };
-    window.addEventListener('resize', resizeSetting);
-    window.addEventListener(`load`, resizeSetting);
-    return () => {
-      window.removeEventListener('resize', resizeSetting);
-      window.removeEventListener(`load`, resizeSetting);
-    };
-  }, []);
 
   return (
     <header
