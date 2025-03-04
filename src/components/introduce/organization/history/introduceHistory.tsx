@@ -690,25 +690,42 @@ const IntroduceHistory = () => {
 
   return (
     <section className={`flex w-full flex-col items-center justify-start`}>
-      <div className={`h-1229 w-full`}></div>
-      <HistoryList
-        selectedDataIdx={topSelectedDataIdx}
-        setSelectedDataIdx={setTopSelectedDataIdx}
-        historyDataYears={topHistoryDataYears}
-        historyData={topHistoryData}
-      />
-      <HistoryList
-        selectedDataIdx={middleSelectedDataIdx}
-        setSelectedDataIdx={setMiddleSelectedDataIdx}
-        historyDataYears={middleHistoryDataYears}
-        historyData={middleHistoryData}
-      />
-      <HistoryList
-        selectedDataIdx={bottomSelectedDataIdx}
-        setSelectedDataIdx={setBottomSelectedDataIdx}
-        historyDataYears={bottomHistoryDataYears}
-        historyData={bottomHistoryData}
-      />
+      <div
+        style={{
+          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/history_background.png)`,
+        }}
+        className={`flex h-1230 w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat pt-457`}
+      >
+        <div className={`flex flex-col items-center justify-start gap-40`}>
+          <p className={`text-bold78 text-grey900`}>CGN History</p>
+          <p className={`text-bold48 text-grey-900`}>2005년~현재</p>
+          <p className={`text-bold24 text-grey900`}>
+            선교미디어 CGN의 지난 발자취를 소개합니다.
+          </p>
+        </div>
+      </div>
+      <section
+        className={`flex w-full max-w-1200 flex-col items-center justify-start gap-120 pb-311`}
+      >
+        <HistoryList
+          selectedDataIdx={topSelectedDataIdx}
+          setSelectedDataIdx={setTopSelectedDataIdx}
+          historyDataYears={topHistoryDataYears}
+          historyData={topHistoryData}
+        />
+        <HistoryList
+          selectedDataIdx={middleSelectedDataIdx}
+          setSelectedDataIdx={setMiddleSelectedDataIdx}
+          historyDataYears={middleHistoryDataYears}
+          historyData={middleHistoryData}
+        />
+        <HistoryList
+          selectedDataIdx={bottomSelectedDataIdx}
+          setSelectedDataIdx={setBottomSelectedDataIdx}
+          historyDataYears={bottomHistoryDataYears}
+          historyData={bottomHistoryData}
+        />
+      </section>
     </section>
   );
 };

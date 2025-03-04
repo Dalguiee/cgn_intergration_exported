@@ -1,7 +1,7 @@
 // 훅
 import React, { useState } from 'react';
 
-// const [inputText, setInputText] = useState(''); 부모단 필요 props 전송, 검색용 String
+// const [inputText, setInputText] = useState(''); 부모에서 props 전송필요, 검색용 String
 const DefaultInput = ({
   placeholder = '입력해 주세요.',
   searchBtn = true,
@@ -37,9 +37,9 @@ const DefaultInput = ({
       <div className={`flex items-center justify-center gap-4`}>
         {/* 찾기 버튼 */}
         {searchBtn && (
-          <button className='h-24 w-24' onClick={() => handleSearching()}>
+          <button className='w-24 h-24' onClick={() => handleSearching()}>
             <img
-              className='h-full w-full'
+              className='w-full h-full'
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/finder.svg`}
               alt='찾기 버튼'
               width={24}
@@ -50,14 +50,14 @@ const DefaultInput = ({
         {/* 블라이드 버튼 */}
         {pwdBtn && (
           <button
-            className='h-24 w-24'
+            className='w-24 h-24'
             type='button'
             onClick={() => {
               handlePwdMode();
             }}
           >
             <img
-              className='h-full w-full'
+              className='w-full h-full'
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/input_blind.svg`}
               alt='블라이드 버튼'
               width={24}
@@ -68,14 +68,14 @@ const DefaultInput = ({
         {/* 텍스트 전체 지우기 */}
         {textClearBtn && inputText && (
           <button
-            className='h-24 w-24'
+            className='w-24 h-24'
             type='button'
             onClick={() => {
               setInputText('');
             }}
           >
             <img
-              className='h-full w-full'
+              className='w-full h-full'
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/input_clear.svg`}
               alt='전체 지우기'
               width={24}

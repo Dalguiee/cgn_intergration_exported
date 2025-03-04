@@ -1,6 +1,5 @@
-// 개발중
-// 사용하기 위해선 부모컴포넌트에서 selectData 라는 array 데이터와 [selectedItem, setSelectedItem] state 가 필요합니다
-// width 도 props 로 받으며, 기본값은 30px 입니다.
+// props 로 받는 listData 라는 array 데이터, [selectedItem, setSelectedItem] state 가 필요합니다.
+// tailwind className props 로 받음, 기본값은 30px 입니다.
 
 import React, { useEffect, useRef, useState } from 'react';
 

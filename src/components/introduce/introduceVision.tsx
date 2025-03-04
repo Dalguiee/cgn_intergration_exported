@@ -1,4 +1,7 @@
+// 훅
 import React from 'react';
+
+// 컴포넌트
 import StyledButtons from '../common/styledButtons';
 
 const IntroduceVision = () => {
@@ -57,7 +60,10 @@ const IntroduceVision = () => {
         </div>
         {/* 상단 주황색 색망 상자컨텐츠 */}
         <div
-          className={`flex h-660 w-full max-w-1200 flex-col items-center justify-start rounded-16 bg-[url(/public/images/introduce/vision_content_bg_1.png)] bg-cover bg-center bg-no-repeat pt-105 max-lg:h-220 max-lg:rounded-0 max-lg:pt-35`}
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/vision_content_bg_1.png)`,
+          }}
+          className={`flex h-660 w-full max-w-1200 flex-col items-center justify-start rounded-16 bg-cover bg-center bg-no-repeat pt-105 max-lg:h-220 max-lg:rounded-0 max-lg:pt-35`}
         >
           <div
             className={`flex w-full flex-shrink-0 items-center justify-center lg:h-96`}

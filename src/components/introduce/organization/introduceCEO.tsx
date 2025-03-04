@@ -1,3 +1,4 @@
+// 훅
 import React from 'react';
 
 const IntroduceCEO = () => {
@@ -60,7 +61,10 @@ const IntroduceCEO = () => {
         className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120`}
       >
         <div
-          className={`flex h-full max-h-570 w-full max-w-1200 flex-col items-start justify-start gap-40 bg-[url(/public/images/introduce/ceo_background.png)] bg-cover bg-center bg-no-repeat pb-98 pr-265 pt-60`}
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/ceo_background.png)`,
+          }}
+          className={`flex h-full max-h-570 w-full max-w-1200 flex-col items-start justify-start gap-40 bg-cover bg-center bg-no-repeat pb-98 pr-265 pt-60`}
         >
           <div className={`pr-100`}>
             <p className={`text-bold40 line-clamp-1 text-grey-900`}>

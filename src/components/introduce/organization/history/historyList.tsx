@@ -9,7 +9,7 @@ const HistoryList = ({
   historyData,
 }) => {
   return (
-    <div className={`flex w-1200 items-start justify-start pb-120`}>
+    <div className={`flex w-full items-start justify-start`}>
       <div className={`h-fit w-full max-w-181`}>
         <div className={`flex flex-col items-end justify-start`}>
           {historyDataYears?.map((item, key) => (
@@ -34,7 +34,7 @@ const HistoryList = ({
         </div>
       </div>
       <div
-        className={`ml-240 flex w-full flex-col items-start justify-start gap-24 px-66`}
+        className={`ml-240 flex w-full flex-col items-start justify-start gap-24 px-66 pt-15`}
       >
         {historyData?.[selectedDataIdx]?.map((item, key) => (
           <div className={`flex items-start justify-start`} key={key}>
