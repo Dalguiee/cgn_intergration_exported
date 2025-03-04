@@ -26,7 +26,7 @@ const IntroduceDirections = () => {
         style={{
           backgroundImage: `url(/public/images/introduce/directions_background.png)`,
         }}
-        className={`h-843 w-full bg-cover bg-center bg-no-repeat pt-600`}
+        className={`mt-80 h-843 w-full bg-cover bg-center bg-no-repeat pt-600`}
       >
         <div
           className={`mx-auto h-500 w-full max-w-1200 flex-shrink-0 rounded-16 bg-white-solid shadow-lg`}
