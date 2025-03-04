@@ -7,7 +7,7 @@ import CategoryList from '@/components/common/categoryList';
 import IntroduceChairman from '@/components/introduce/organization/introduceChairman';
 import IntroduceCEO from '@/components/introduce/organization/introduceCEO';
 import IntroduceFollowers from '@/components/introduce/organization/introduceFollowers';
-import IntroduceHistory from './introduceHistory';
+import IntroduceHistory from './history/introduceHistory';
 
 const IntroduceOrganization = () => {
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
