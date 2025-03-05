@@ -1,7 +1,13 @@
+// 훅
 import React, { useState } from 'react';
+
+// 컴포넌트
 import HistoryList from './historyList';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const IntroduceHistory = () => {
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
+
   const [topSelectedDataIdx, setTopSelectedDataIdx] = useState(0);
 
   const topHistoryDataYears = [
@@ -689,23 +695,43 @@ const IntroduceHistory = () => {
   ];
 
   return (
-    <section className={`flex w-full flex-col items-center justify-start`}>
+    <section
+      className={`flex w-full flex-col items-center justify-start max-lg:px-16`}
+    >
       <div
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/history_background.png)`,
+          backgroundImage: `url(${mobile ? `` : `${import.meta.env.VITE_PUBLIC_URL}images/introduce/history_background.png`})`,
         }}
-        className={`flex h-1230 w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat pt-457`}
+        className={`flex h-1230 w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat pt-457 max-lg:mb-24 max-lg:mt-24 max-lg:h-fit max-lg:gap-40 max-lg:pt-0`}
       >
-        <div className={`flex flex-col items-center justify-start gap-40`}>
-          <p className={`text-bold78 text-grey900`}>CGN History</p>
-          <p className={`text-bold48 text-grey-900`}>2005년~현재</p>
-          <p className={`text-bold24 text-grey900`}>
+        <div
+          className={`flex flex-col items-center justify-start gap-40 max-lg:w-full max-lg:items-start max-lg:gap-8`}
+        >
+          <p className={`text-bold78 max-lg:text-bold48 text-grey900`}>
+            CGN History
+          </p>
+          <p className={`text-bold48 max-lg:text-bold32 text-grey-900`}>
+            2005년~현재
+          </p>
+          <p className={`text-bold24 max-lg:text-bold16 text-grey900`}>
             선교미디어 CGN의 지난 발자취를 소개합니다.
           </p>
         </div>
+        <div className={`flex aspect-[361/130] h-full w-full gap-16 lg:hidden`}>
+          <img
+            className={`h-full w-full rounded-8 object-cover`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/mo_history_title_1.png`}
+            alt=''
+          />
+          <img
+            className={`h-full w-full rounded-8 object-cover`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/mo_history_title_2.png`}
+            alt=''
+          />
+        </div>
       </div>
       <section
-        className={`flex w-full max-w-1200 flex-col items-center justify-start gap-120 pb-311`}
+        className={`flex w-full max-w-1200 flex-col items-center justify-start gap-120 pb-311 max-lg:gap-60 max-lg:pb-40 max-lg:pt-40`}
       >
         <HistoryList
           selectedDataIdx={topSelectedDataIdx}

@@ -74,7 +74,7 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
       className={`flex w-full flex-col items-start justify-center scrollbar-hide max-lg:overflow-x-scroll`}
     >
       <div
-        className={`mx-auto flex w-fit items-center justify-center gap-8 py-10 max-lg:gap-4 max-lg:px-20`}
+        className={`mx-auto flex w-fit items-center justify-center gap-8 py-10 max-lg:gap-4 max-lg:px-20 max-lg:py-0 max-lg:pb-24`}
       >
         {categoryTags?.map(item => (
           <button

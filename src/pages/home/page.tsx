@@ -1,5 +1,5 @@
 // 훅
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // 컴포넌트
 import TopBanner from '@/components/home/topBanner/homeTopBanner';
@@ -11,9 +11,15 @@ import HomeNoticeMain from '@/components/home/notice/homeNoticeMain';
 import HomeTowPartedBanner from '@/components/home/middleBanner/homeTowPartedBanner';
 import HomeOnePartedBanner from '@/components/home/middleBanner/homeOnePartedBanner';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
+import { useLocation } from 'react-router-dom';
 
 const HomePage = () => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
+  const location = useLocation();
+
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, [location?.pathname]);
 
   return (
     <section>

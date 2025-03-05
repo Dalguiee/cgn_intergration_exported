@@ -15,7 +15,6 @@ const HomeTidings = () => {
   const [findedMockupData, setfindedMockupData] = useState([]); //
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0); //
 
-  //
   useEffect(() => {
     if (selectedCategoryArticleId === 0) {
       let allData = [];

@@ -48,7 +48,7 @@ const SelectBox = ({
             className={`${open ? '' : ''} pointer-events-none flex h-62 w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4`}
           >
             <button
-              className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start ${objSelected ? 'text-primary-500' : 'text-grey-400'}`}
+              className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start`}
             >
               {selectedItem?.text}
             </button>

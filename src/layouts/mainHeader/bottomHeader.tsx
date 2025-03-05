@@ -19,7 +19,7 @@ const BottomHeader = ({
       <div className={`flex h-full w-full items-center justify-between`}>
         <button
           onClick={() => {
-            navigate('/home');
+            navigate('/');
           }}
           className='h-36 w-76'
         >

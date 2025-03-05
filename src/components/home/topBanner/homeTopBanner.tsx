@@ -60,6 +60,8 @@ const HomeTopBanner = ({ mobile }) => {
           data-main-swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           className={`h-full w-full`}
+          navigation={true}
+          speed={1300}
           // scrollbar={{ draggable: true }}
           pagination={{ clickable: true }}
           spaceBetween={24}

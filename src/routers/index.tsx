@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 // 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
@@ -10,8 +10,18 @@ import TidingsSupportPage from '@/pages/tidings/support/page';
 import TidingsDetailPage from '@/pages/tidings/detailPage';
 import IntroducePage from '@/pages/introduce/vision/page';
 import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
+import { useEffect } from 'react';
 
 export default function MainRouter() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location?.pathname === `` || location.pathname === `/`) {
+      navigate(`/home`);
+    }
+  }, [location?.pathname]);
+
   return (
     <Routes>
       <Route path='/*' element={<DefaultLayer />}>

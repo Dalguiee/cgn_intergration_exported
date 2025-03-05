@@ -7,7 +7,6 @@ import TagIcon from '@/components/common/tagIcon';
 // 미션 및 후원에 사용되는 유형2의 컨텐츠 카드 컴포넌트 입니다
 const HomeTidingsCard = ({ item, pageMode }) => {
   const navigator = useNavigate();
-  console.log(pageMode);
   return (
     <button
       // data-aos='fade-up'

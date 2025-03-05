@@ -175,7 +175,7 @@ const MainHeader = () => {
 
   return (
     <header
-      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
+      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : 'bg-primary-50'} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
       data-comment='메인헤더'
     >
       <TopHeader />

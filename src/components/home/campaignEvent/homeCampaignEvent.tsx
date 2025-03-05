@@ -61,7 +61,6 @@ const HomeCampaignEvent = () => {
         ></HomeLeftMainCampaign>
         {/* 오른쪽 및 반응형 아래쪽 */}
         <div
-          data-aos='fade-up'
           className={`grid h-full w-full max-w-728 grid-cols-2 grid-rows-2 gap-24 max-lg:w-full max-lg:max-w-[unset] max-lg:grid-rows-1 max-lg:gap-12`}
         >
           {campaignData

@@ -250,14 +250,17 @@
 }
 
 @layer components {
-  .under-white-gradient {
+  [data-under-white-gradient] {
     @apply after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:h-[30%] after:w-full after:bg-gradient-to-t after:from-white-solid after:content-[""];
+  }
+  [data-under-dark-gradient] {
+    @apply after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:h-[30%] after:w-full after:bg-gradient-to-t after:from-grey-900 after:content-[""];
   }
 }
 
 @layer utilities {
   .separator {
-    @apply w-1 h-12 border-r-1 border-grey-200;
+    @apply h-12 w-1 border-r-1 border-grey-200;
   }
 
   [data-comment='text_scroll_box'] {
@@ -295,23 +298,55 @@
 }
 
 @media (max-width: 1024px) {
-  .swiper-pagination {
+  [data-main-swiper] .swiper-pagination {
     bottom: 0px !important;
   }
 }
 
-.swiper-pagination {
+[data-main-swiper] .swiper-button-next {
+  right: 3%;
+  @apply text-white-solid;
+}
+[data-main-swiper] .swiper-button-next::after {
+  opacity: 0.75;
+  content: url(/public/images/icon/slide_arrow_right.svg);
+  @apply max-lg:hidden;
+}
+
+[data-main-swiper] .swiper-button-prev {
+  left: 3%;
+  @apply text-white-solid;
+}
+[data-main-swiper] .swiper-button-prev::after {
+  opacity: 0.75;
+  content: url(/public/images/icon/slide_arrow_left.svg);
+  @apply max-lg:hidden;
+}
+[data-main-swiper] .swiper-button-disabled {
+  opacity: 0.1;
+}
+
+[data-main-swiper] .swiper-pagination {
   bottom: 40px;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
+[data-main-swiper]
+  .swiper-pagination
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   transition: 0.3s;
+  background-color: white;
+  opacity: 0.75;
+  margin: 0 3px;
 }
 
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+[data-main-swiper]
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  transition: 0.3s;
   background-color: #ff6b00;
   width: 24px;
   border-radius: 10px;
+  opacity: 1;
 }
 
 /* div::-webkit-scrollbar {
