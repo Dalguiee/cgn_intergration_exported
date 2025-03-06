@@ -3,13 +3,18 @@ import { Route, Routes } from 'react-router-dom';
 // 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
 import HomePage from '@/pages/home/page';
+// 소식
 import TidingsBroadcastPage from '@/pages/tidings/broadcast/page';
 import TidingsCampaignPage from '@/pages/tidings/campaign/page';
 import TidingsMissionPage from '@/pages/tidings/mission/page';
 import TidingsSupportPage from '@/pages/tidings/support/page';
 import TidingsDetailPage from '@/pages/tidings/detailPage';
+// 소개
 import IntroducePage from '@/pages/introduce/vision/page';
 import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
+// 후원
+import SponsorPage from '@/pages/sponsor/main/page';
+import SponsorAnniversaryPage from '@/pages/sponsor/anniversary/page';
 
 export default function MainRouter() {
   return (
@@ -37,6 +42,16 @@ export default function MainRouter() {
         <Route
           path='introduce/organization'
           element={<IntroduceOrganizationPage />}
+        ></Route>
+        {/* 후원 */}
+        <Route path='sponsor/main' element={<SponsorPage />}></Route>
+        {/* <Route
+          path='introduce/organization'
+          element={<IntroduceOrganizationPage />}
+          ></Route> */}
+        <Route
+          path='sponsor/anniversary'
+          element={<SponsorAnniversaryPage />}
         ></Route>
       </Route>
     </Routes>
