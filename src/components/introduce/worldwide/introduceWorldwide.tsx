@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // 컴포넌트
 import MapIcon from './mapIcon';
-import CategoryList from '@/components/common/categoryList';
+import IntroduceWorldwideContext from './introduceWorldwideContext';
 
 const IntroduceWorldwide = () => {
   const [selectedCategoryId, setSelectedCategoryArticleId] = useState(0);
@@ -14,55 +14,23 @@ const IntroduceWorldwide = () => {
       >
         <div
           className={`relative h-full max-h-546 w-full max-w-1200 rounded-16 bg-cover bg-center bg-no-repeat`}
-          style={{ backgroundImage: `url(/public/images/worldwide/map.png)` }}
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/worldwide/map.png)`,
+          }}
         >
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={1}
-          />
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={0}
-          />
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={2}
-          />
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={3}
-          />
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={4}
-          />
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={5}
-          />
-          <MapIcon
-            selectedCategoryId={selectedCategoryId}
-            className={``}
-            dataId={6}
-          />
+          {[...Array(7)]?.map((item, key) => (
+            <MapIcon
+              selectedCategoryId={selectedCategoryId}
+              className={``}
+              dataId={key}
+            />
+          ))}
         </div>
       </div>
-      <div
-        className={`h-852 w-full`}
-        style={{
-          backgroundImage: `url(/public/images/worldwide/under_content_area_background.png)`,
-        }}
-      >
-        <CategoryList
-          setSelectedCategoryArticleId={setSelectedCategoryArticleId}
-        />
-      </div>
+      <IntroduceWorldwideContext
+        selectedCategoryId={selectedCategoryId}
+        setSelectedCategoryArticleId={setSelectedCategoryArticleId}
+      />
     </section>
   );
 };

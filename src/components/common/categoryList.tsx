@@ -53,12 +53,12 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
       path: `/introduce/worldwide`,
       tags: [
         { id: 0, type: '한국' },
-        { id: 1, type: '일본' },
-        { id: 2, type: '대만' },
-        { id: 3, type: '태국' },
-        { id: 4, type: '인도네시아' },
-        { id: 5, type: '프랑스' },
-        { id: 6, type: '미주' },
+        { id: 1, type: '미주' },
+        { id: 2, type: '일본' },
+        { id: 3, type: '대만' },
+        { id: 4, type: '태국' },
+        { id: 5, type: '인도네시아' },
+        { id: 6, type: '프랑스' },
       ],
     },
   ];
@@ -67,7 +67,7 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
   useEffect(() => {
     if (location.pathname) {
       const tagDataFind = tabListData.filter(item => {
-        return item?.path.includes(location.pathname);
+        return item?.path?.includes(location?.pathname);
       });
       const totalTag = {
         id: 0,
@@ -79,14 +79,14 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
         setCategoryTags([...tagDataFind?.[0]?.tags]);
       }
     }
-  }, [location.pathname]);
+  }, [location?.pathname]);
 
   return (
     <section
-      className={`flex w-full flex-col items-start justify-center scrollbar-hide max-lg:overflow-x-scroll`}
+      className={`flex w-full flex-col items-start justify-center scrollbar-hide max-lg:overflow-x-scroll max-lg:px-16`}
     >
       <div
-        className={`mx-auto flex w-fit items-center justify-center gap-8 py-10 max-lg:gap-4 max-lg:px-20 max-lg:py-0 max-lg:pb-24`}
+        className={`mx-auto flex w-fit items-center justify-center gap-8 max-lg:gap-4`}
       >
         {categoryTags?.map(item => (
           <button

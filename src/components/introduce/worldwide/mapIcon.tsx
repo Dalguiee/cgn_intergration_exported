@@ -7,64 +7,57 @@ const mapData = [
     id: 0,
     name: `한국`,
     rightSide: false,
-    src: `/public/images/worldwide/korea.png`,
-    selectedSrc: `/public/images/worldwide/korea_selected.png`,
-    position: ` absolute left-431 top-184`,
-    selectedPosition: ` absolute left-0 top-0`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea_selected.png`,
+    position: ` absolute left-411 top-162`,
   },
   {
     id: 1,
-    name: `일본`,
-    rightSide: true,
-    src: `/public/images/worldwide/japan.png`,
-    selectedSrc: `/public/images/worldwide/japan_selected.png`,
-    position: `absolute left-502 top-183`,
-    selectedPosition: `absolute left-502 top-183`,
+    name: ` 미주`,
+    rightSide: false,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/america.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/america_selected.png`,
+    position: `absolute left-835 top-150`,
   },
   {
     id: 2,
-    name: `대만`,
-    rightSide: false,
-    src: `/public/images/worldwide/taiwan.png`,
-    selectedSrc: `/public/images/worldwide/taiwan_selected.png`,
-    position: `absolute left-411 top-224`,
-    selectedPosition: `absolute left-411 top-224`,
+    name: `일본`,
+    rightSide: true,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/japan.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/japan_selected.png`,
+    position: `absolute left-482 top-146`,
   },
   {
     id: 3,
-    name: `태국`,
+    name: `대만`,
     rightSide: false,
-    src: `/public/images/worldwide/thailand.png`,
-    selectedSrc: `/public/images/worldwide/thailand_selected.png`,
-    position: `absolute left-351 top-255`,
-    selectedPosition: `absolute left-351 top-255`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/taiwan.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/taiwan_selected.png`,
+    position: `absolute left-382 top-210`,
   },
   {
     id: 4,
-    name: `인도네시아`,
-    rightSide: true,
-    src: `/public/images/worldwide/indonesia.png`,
-    selectedSrc: `/public/images/worldwide/indonesia_selected.png`,
-    position: `absolute left-423 top-306`,
-    selectedPosition: `absolute left-423 top-306`,
+    name: `태국`,
+    rightSide: false,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/thailand.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/thailand_selected.png`,
+    position: `absolute left-325 top-229`,
   },
   {
     id: 5,
-    name: ` 프랑스`,
+    name: `인도네시아`,
     rightSide: true,
-    src: `/public/images/worldwide/france.png`,
-    selectedSrc: `/public/images/worldwide/france_selected.png`,
-    position: `absolute left-70 top-144`,
-    selectedPosition: `absolute left-70 top-144`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/indonesia.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/indonesia_selected.png`,
+    position: `absolute left-405 top-284`,
   },
   {
     id: 6,
-    name: ` 미주`,
-    rightSide: false,
-    src: `/public/images/worldwide/america.png`,
-    selectedSrc: `/public/images/worldwide/america_selected.png`,
-    position: `absolute left-835 top-150`,
-    selectedPosition: `absolute left-835 top-150`,
+    name: ` 프랑스`,
+    rightSide: true,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/france.png`,
+    selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/france_selected.png`,
+    position: `absolute left-38 top-124`,
   },
 ];
 
@@ -74,12 +67,18 @@ const MapIcon = ({ dataId = 999, className = ``, selectedCategoryId = 0 }) => {
 
   return (
     <div
-      className={`${className && className} ${selectedCategoryId === dataFind?.id ? dataFind?.selectedPosition : dataFind?.position} ${dataFind?.rightSide ? `flex-row-reverse` : ``} flex gap-2`}
+      className={`${className && className} ${dataFind?.position} ${dataFind?.rightSide ? `flex-row-reverse` : ``} flex h-66 w-120 items-end justify-center gap-2`}
     >
       <div
-        className={`flex h-16 min-w-27 items-center justify-center rounded-4 bg-grey-900 px-4`}
+        className={`${selectedCategoryId === dataFind?.id ? `h-66` : `h-44`}`}
       >
-        <span className={`text-bold10 text-white-solid`}>{dataFind?.name}</span>
+        <div
+          className={`flex h-16 min-w-27 items-center justify-center rounded-4 bg-grey-900 px-4`}
+        >
+          <span className={`text-bold10 text-nowrap text-white-solid`}>
+            {dataFind?.name}
+          </span>
+        </div>
       </div>
 
       <img

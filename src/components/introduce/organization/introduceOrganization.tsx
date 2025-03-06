@@ -28,9 +28,11 @@ const IntroduceOrganization = () => {
 
   return (
     <>
-      <CategoryList
-        setSelectedCategoryArticleId={setSelectedCategoryArticleId}
-      />
+      <div className={`mb-24 w-full`}>
+        <CategoryList
+          setSelectedCategoryArticleId={setSelectedCategoryArticleId}
+        />
+      </div>
       <section className={`flex flex-col items-center justify-start`}>
         {queryNumber === 0 ? <IntroduceChairman /> : ''}
         {queryNumber === 1 ? <IntroduceCEO /> : ''}

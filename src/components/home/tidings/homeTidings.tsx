@@ -35,10 +35,10 @@ const HomeTidings = () => {
 
   return (
     <section
-      className={`flex h-890 flex-col items-start justify-center gap-40 overflow-hidden bg-secondary-brown_bg_2 pl-180 max-lg:h-496 max-lg:gap-0 max-lg:pl-16 max-lg:pt-60 lg:pr-16`}
+      className={`flex h-890 flex-col items-start justify-center gap-40 overflow-hidden bg-secondary-brown_bg_2 pl-180 max-lg:h-496 max-lg:gap-0 max-lg:pl-0 max-lg:pt-60 lg:pr-16`}
     >
       <div
-        className={`flex w-full justify-between pr-16 max-lg:mb-11 lg:hidden`}
+        className={`flex w-full justify-between px-16 pr-16 max-lg:mb-11 lg:hidden`}
       >
         <span className={`text-bold24 text-grey-900`}>소식</span>
         <button className={`flex items-center justify-center`}>
@@ -49,12 +49,14 @@ const HomeTidings = () => {
           />
         </button>
       </div>
-      <HomeCategoryList
-        setSelectedCategoryArticleId={setSelectedCategoryArticleId}
-      />
+      <div className={`w-full overflow-visible`}>
+        <HomeCategoryList
+          setSelectedCategoryArticleId={setSelectedCategoryArticleId}
+        />
+      </div>
 
       <div
-        className={`w-full overflow-visible max-lg:mb-20 max-lg:px-0 max-lg:pb-0 max-lg:pt-0`}
+        className={`w-full overflow-visible max-lg:mb-20 max-lg:px-0 max-lg:pb-0 max-lg:pl-16 max-lg:pt-0`}
       >
         <Section4PcTopArticleSwiper findedMockupData={findedMockupData} />
       </div>

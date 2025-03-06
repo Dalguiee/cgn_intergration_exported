@@ -26,14 +26,14 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
 
   return (
     <section
-      className={`flex w-full max-w-1560 items-center justify-between gap-24 max-lg:mb-24`}
+      className={`flex w-full max-w-1560 items-center justify-between gap-24 overflow-visible max-lg:mb-24`}
     >
       <span className={`text-bold48 flex-shrink-0 text-grey-900 max-lg:hidden`}>
         소식
       </span>
 
       <div
-        className={`flex w-full items-center justify-start gap-8 overflow-x-scroll scrollbar-hide max-lg:gap-4`}
+        className={`flex w-full items-center justify-start gap-8 overflow-x-scroll scrollbar-hide max-lg:gap-4 max-lg:px-16`}
       >
         {categoryTags?.map(item => (
           <button
