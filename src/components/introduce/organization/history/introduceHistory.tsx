@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // 컴포넌트
-import HistoryList from './historyList';
+import HistoryList from '@/components/introduce/organization/history/historyList';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const IntroduceHistory = () => {

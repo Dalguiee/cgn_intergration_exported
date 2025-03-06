@@ -111,6 +111,7 @@ const TidingsMission = () => {
   return (
     <>
       <CategoryList
+        selectedCategoryArticleId={selectedCategoryArticleId}
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
       <section

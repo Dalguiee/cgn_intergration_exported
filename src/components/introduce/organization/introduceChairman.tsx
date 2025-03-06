@@ -1,5 +1,8 @@
-import ResponsiveScanner from '@/components/common/responsiveScanner';
+// 훅
 import React from 'react';
+
+// 컴포넌트
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const IntroduceChairman = () => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);

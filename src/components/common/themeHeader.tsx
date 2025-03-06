@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 // 컴포넌트
 import Locator from '@/components/common/locator';
 
-const ThemeHeader = () => {
+const ThemeHeader = ({ className = `` }) => {
   const location = useLocation();
 
   // tidigns 페이지의 타이틀과 서브타이틀을 분기하는 데이터 입니다.
@@ -18,7 +18,17 @@ const ThemeHeader = () => {
     {
       path: 'introduce/organization',
       title: '기관 소개',
+      subTitle: 'CGN의 해외지사를 소개합니다.',
+    },
+    {
+      path: 'introduce/worldwide',
+      title: '해외지사 소개',
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN을 소개합니다.',
+    },
+    {
+      path: 'introduce/recruit',
+      title: '채용',
+      subTitle: 'CGN에서 함께할 인재를 찾습니다.',
     },
 
     {
@@ -50,9 +60,9 @@ const ThemeHeader = () => {
 
   return (
     <>
-      <Locator />
+      <Locator className={className} />
       <section
-        className={`${location.pathname.includes('/detail') ? 'hidden' : ''} flex h-176 w-full flex-col items-center justify-center border-grey-100 pb-32 pt-40 max-lg:h-80 max-lg:border-t-1 max-lg:px-20 max-lg:py-24`}
+        className={`${className && className} ${location.pathname.includes('/detail') ? 'hidden' : ''} flex h-176 w-full flex-col items-center justify-center border-grey-100 pb-32 pt-40 max-lg:h-80 max-lg:border-t-1 max-lg:px-20 max-lg:py-24`}
       >
         <div className='flex flex-col items-center justify-center gap-16'>
           <h1 className={`text-bold48 max-lg:text-bold24 text-grey-900`}>

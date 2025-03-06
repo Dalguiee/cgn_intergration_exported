@@ -1,6 +1,6 @@
 // 훅
-import HTMLReactParser from 'html-react-parser';
 import React from 'react';
+import HTMLReactParser from 'html-react-parser';
 
 const HistoryList = ({
   selectedDataIdx,

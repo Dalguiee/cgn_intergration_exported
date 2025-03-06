@@ -4,7 +4,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-const Locator = () => {
+const Locator = ({ className = `` }) => {
   const location = useLocation();
   const navigation = useNavigate();
   const { subDepth } = useParams();
@@ -34,6 +34,16 @@ const Locator = () => {
             pathPiece = data;
             data = '기관 소개';
             pathStack = 'introduce/organization?articleId=1';
+          }
+          if (data === 'worldwide') {
+            pathPiece = data;
+            data = '해외지사 소개';
+            pathStack = 'introduce/worldwide';
+          }
+          if (data === 'recruit') {
+            pathPiece = data;
+            data = '채용';
+            pathStack = 'introduce/recruit';
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };
@@ -84,7 +94,9 @@ const Locator = () => {
   }, [location]);
 
   return (
-    <section className='flex w-full items-center justify-center px-20 pt-16 max-lg:hidden max-lg:px-20'>
+    <section
+      className={`${className && className} flex w-full items-center justify-center px-20 pt-16 max-lg:hidden max-lg:px-20`}
+    >
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {

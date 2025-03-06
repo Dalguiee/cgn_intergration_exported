@@ -1,5 +1,7 @@
+// 훅
 import React from 'react';
 
+// 컴포넌트
 import parse from 'html-react-parser';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
 

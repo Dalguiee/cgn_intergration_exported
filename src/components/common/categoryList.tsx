@@ -4,10 +4,12 @@ import { useLocation } from 'react-router-dom';
 
 // 각 데이터를 카테고리로 나누는 버튼 모음입니다.
 // 데이터는 목업리스트에서 가져오며 id 값이 일치하는 컨텐츠를 걸러내는 기능을 합니다.
-const CategoryList = ({ setSelectedCategoryArticleId }) => {
+const CategoryList = ({
+  selectedCategoryArticleId,
+  setSelectedCategoryArticleId,
+}) => {
   const location = useLocation();
   /* 클릭시 태그버튼의 색이 변하게 하는 state 값 저장 */
-  const [highlight, setHighlight] = useState(0);
   const [categoryTags, setCategoryTags] = useState([]);
   const tabListData = [
     {
@@ -91,11 +93,10 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
         {categoryTags?.map(item => (
           <button
             onClick={() => {
-              setHighlight(item?.id);
               setSelectedCategoryArticleId(item?.id);
             }}
             key={item?.id}
-            className={`bg-white-solid ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+            className={`bg-white-solid ${item?.id == selectedCategoryArticleId ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.type}
           </button>

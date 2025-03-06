@@ -1,9 +1,10 @@
 // 훅
 import React from 'react';
+import HTMLReactParser from 'html-react-parser';
 
 // 컴포넌트
 import CategoryList from '@/components/common/categoryList';
-import HTMLReactParser from 'html-react-parser';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 // 데이터
 const contextData = [
@@ -242,115 +243,155 @@ const contextData = [
 ];
 
 const IntroduceWorldwideContext = ({
-  selectedCategoryId,
+  selectedCategoryArticleId,
   setSelectedCategoryArticleId,
 }) => {
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
   const contextFind = contextData?.find(
-    item => item?.id === selectedCategoryId
+    item => item?.id === selectedCategoryArticleId
   );
 
   return (
     <div
-      className={`relative flex h-1431 w-full flex-col items-center justify-start bg-primary-50`}
+      className={`relative flex h-fit w-full flex-col items-center justify-start bg-primary-50`}
     >
       <div
-        className={`z-5 t-0 absolute left-0 flex h-852 w-full flex-shrink-0 flex-col items-center justify-start`}
+        className={`z-5 t-0 absolute left-0 flex h-852 w-full flex-shrink-0 flex-col items-center justify-start max-lg:h-439`}
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/worldwide/under_content_area_background.png)`,
+          backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/mo_under_content_area_background.png` : `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/under_content_area_background.png`})`,
         }}
       ></div>
-      <div className={`z-10 mb-24 mt-70 w-full`}>
+      <div className={`z-10 mb-24 mt-70 w-full max-lg:mt-24`}>
         <CategoryList
+          selectedCategoryArticleId={selectedCategoryArticleId}
           setSelectedCategoryArticleId={setSelectedCategoryArticleId}
         />
       </div>
       <div
-        className={`z-10 flex w-full max-w-1200 flex-shrink-0 flex-col items-start justify-start overflow-hidden rounded-16 bg-white-solid pb-60`}
+        className={`z-10 flex w-full max-w-1200 flex-shrink-0 flex-col items-start justify-start rounded-16 pb-160 max-lg:px-16 max-lg:pb-96`}
       >
         <div
-          className={`flex w-full flex-col items-start justify-start gap-40 bg-primary-50 px-40 pb-40 pt-40`}
+          className={`flex w-full flex-col items-start justify-start overflow-hidden rounded-16 bg-white-solid`}
         >
-          <div className={`flex flex-col items-start justify-start gap-12`}>
-            <p className={`text-bold40 text-grey-900`}>{contextFind?.land}</p>
-            <p className={`text-bold24 text-grey-900`}>
-              {contextFind?.subtitle}
+          <div
+            className={`flex w-full flex-col items-start justify-start gap-40 bg-primary-50 px-40 pb-40 pt-40 max-lg:gap-24 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
+          >
+            <div className={`flex flex-col items-start justify-start gap-12`}>
+              <p className={`text-bold40 max-lg:text-bold24 text-grey-900`}>
+                {contextFind?.land}
+              </p>
+              <p className={`text-bold24 max-lg:text-bold16 text-grey-900`}>
+                {contextFind?.subtitle}
+              </p>
+              <p className={`flex flex-col items-start justify-start`}>
+                {contextFind?.titleSubscription?.map((item, idx) => (
+                  <span
+                    className={`text-bold18 max-lg:text-bold14 text-grey-900`}
+                    key={idx}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </p>
+            </div>
+            <div>
+              <p
+                className={`text-regular18 max-lg:text-regular14 text-grey-500`}
+              >
+                {contextFind?.mainText}
+              </p>
+            </div>
+          </div>
+          <div
+            className={`${contextFind?.programs?.length ? `` : `hidden`} flex flex-col items-start justify-start gap-24 px-40 pb-40 pt-40 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
+          >
+            <p className={`text-bold24 max-lg:text-bold18 text-grey-900`}>
+              주요 프로그램
             </p>
             <p className={`flex flex-col items-start justify-start`}>
-              {contextFind?.titleSubscription?.map((item, idx) => (
-                <span className={`text-bold18 text-grey-900`} key={idx}>
-                  {item}
+              {contextFind?.programs?.map((item, idx) => (
+                <span
+                  key={idx}
+                  className={`text-regular18 max-lg:text-regular14 text-grey-500`}
+                >
+                  - {item}
                 </span>
               ))}
             </p>
           </div>
-          <div>
-            <p className={`text-regular18 text-grey-500`}>
-              {contextFind?.mainText}
-            </p>
+          <div
+            className={`flex w-full items-center justify-center px-40 max-lg:px-16`}
+          >
+            <span
+              className={`inline-block h-3 w-full border-t-3 border-grey-900 max-lg:border-t-1`}
+            ></span>
           </div>
-        </div>
-        <div
-          className={`${contextFind?.programs?.length ? `` : `hidden`} flex flex-col items-start justify-start gap-24 px-40 pb-40 pt-40`}
-        >
-          <p className={`text-bold24 text-grey-900`}>주요 프로그램</p>
-          <p className={`flex flex-col items-start justify-start`}>
-            {contextFind?.programs?.map((item, idx) => (
-              <p key={idx} className={`text-regular18 text-grey-500`}>
-                - {item}
+          <div
+            className={`flex flex-col items-start justify-start px-40 pt-40 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
+          >
+            {selectedCategoryArticleId === 2 ? (
+              <p
+                className={`text-bold24 max-lg:text-bold18 mb-24 text-grey-900`}
+              >
+                동경 지사
               </p>
-            ))}
-          </p>
-        </div>
-        <div className={`flex w-full items-center justify-center px-40`}>
-          <span
-            className={`inline-block h-3 w-full border-t-3 border-grey-900`}
-          ></span>
-        </div>
-        <div
-          className={`flex flex-col items-start justify-start gap-24 px-40 pt-40`}
-        >
-          {selectedCategoryId === 2 ? (
-            <p className={`text-bold24 mb-24 text-grey-900`}>동경 지사</p>
-          ) : (
-            ``
-          )}
-          <div className={`flex flex-col items-start justify-start gap-8`}>
-            {contextFind?.locationData?.map((item, idx) => (
-              <p key={idx} className={`flex items-start justify-start`}>
-                <span className={`text-bold18 w-120 text-grey-900`}>
-                  {item?.name}
-                </span>
-                {item?.name === '홈페이지' ? (
-                  <a href={item?.value}>
+            ) : (
+              ``
+            )}
+            <div className={`flex flex-col items-start justify-start gap-8`}>
+              {contextFind?.locationData?.map((item, idx) => (
+                <p key={idx} className={`flex items-start justify-start`}>
+                  <span
+                    className={`text-bold18 max-lg:text-bold14 w-120 flex-shrink-0 text-grey-900 max-lg:w-72`}
+                  >
+                    {item?.name}
+                  </span>
+                  {item?.name === '홈페이지' ? (
+                    <a href={item?.value}>
+                      <span
+                        className={`text-regular18 max-lg:text-regular14 text-grey-500 underline underline-offset-4`}
+                      >
+                        {HTMLReactParser(item?.value)}
+                      </span>
+                    </a>
+                  ) : (
                     <span
-                      className={`text-regular18 text-grey-500 underline underline-offset-4`}
+                      className={`text-regular18 max-lg:text-regular14 text-grey-500`}
                     >
                       {HTMLReactParser(item?.value)}
                     </span>
-                  </a>
-                ) : (
-                  <span className={`text-regular18 text-grey-500`}>
-                    {HTMLReactParser(item?.value)}
-                  </span>
-                )}
+                  )}
+                </p>
+              ))}
+            </div>
+          </div>
+          {selectedCategoryArticleId === 2 ? (
+            <div
+              className={`mb-60 mt-40 px-40 max-lg:mb-24 max-lg:mt-24 max-lg:px-16`}
+            >
+              <p
+                className={`text-bold24 max-lg:text-bold18 mb-24 text-grey-900`}
+              >
+                오사카 지사
               </p>
-            ))}
-          </div>
+              <p className={`flex items-start justify-start`}>
+                <span
+                  className={`text-bold18 max-lg:text-bold14 w-120 flex-shrink-0 text-grey-900 max-lg:w-72`}
+                >
+                  주소
+                </span>
+                <span
+                  className={`text-regular18 max-lg:text-regular14 text-grey-500`}
+                >
+                  542-0062 Daisun B/D 7F CGN 3 Chome-1-1 Uehonmachinishi,
+                  Chuo-ku, Osaka-shi, Osaka-fu, Japan
+                </span>
+              </p>
+            </div>
+          ) : (
+            ``
+          )}
         </div>
-        {selectedCategoryId === 2 ? (
-          <div className={`mt-40 px-40`}>
-            <p className={`text-bold24 mb-24 text-grey-900`}>오사카 지사</p>
-            <p className={`flex items-center justify-start`}>
-              <span className={`text-bold18 w-120 text-grey-900`}>주소</span>
-              <span className={`text-regular18 text-grey-500`}>
-                542-0062 Daisun B/D 7F CGN 3 Chome-1-1 Uehonmachinishi, Chuo-ku,
-                Osaka-shi, Osaka-fu, Japan
-              </span>
-            </p>
-          </div>
-        ) : (
-          ``
-        )}
       </div>
     </div>
   );

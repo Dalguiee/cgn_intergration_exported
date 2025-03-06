@@ -2,7 +2,7 @@
 import React from 'react';
 
 // 컴포넌트
-import StyledButtons from '../common/styledButtons';
+import StyledButtons from '@/components/common/styledButtons';
 
 const IntroduceVision = () => {
   const missionsData = [
@@ -49,7 +49,7 @@ const IntroduceVision = () => {
       >
         {/* 오른쪽 버튼 */}
         <div
-          className={`mb-40 flex w-full items-center justify-end max-lg:mb-24`}
+          className={`mb-40 flex w-full items-center justify-end max-lg:mb-24 max-lg:px-16`}
         >
           <StyledButtons
             text={`CGN 브랜드 소개`}

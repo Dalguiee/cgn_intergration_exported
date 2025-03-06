@@ -13,6 +13,7 @@ import TidingsDetailPage from '@/pages/tidings/detailPage';
 import IntroduceVisionPage from '@/pages/introduce/vision/page';
 import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
 import IntroduceWorldwidePage from '@/pages/introduce/worldwide/page';
+import IntroduceRecruitPage from '@/pages/introduce/recruit/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -57,6 +58,10 @@ export default function MainRouter() {
         <Route
           path='introduce/worldwide'
           element={<IntroduceWorldwidePage />}
+        ></Route>
+        <Route
+          path='introduce/recruit'
+          element={<IntroduceRecruitPage />}
         ></Route>
       </Route>
     </Routes>

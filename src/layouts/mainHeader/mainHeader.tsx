@@ -1,4 +1,4 @@
-import { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useState } from 'react';
 
 // 컴포넌트
 import TopHeader from '@/layouts/mainHeader/topHeader';
@@ -58,7 +58,7 @@ const centerMenu = [
       },
       {
         text: '기관 소개',
-        link: '/introduce/organization?articleId=0',
+        link: '/introduce/organization',
       },
       {
         text: '해외지사 소개',
@@ -70,7 +70,7 @@ const centerMenu = [
       },
       {
         text: '채용',
-        link: '/introduce',
+        link: '/introduce/recruit',
       },
     ],
   },
