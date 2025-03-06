@@ -62,7 +62,7 @@ const centerMenu = [
       },
       {
         text: '해외지사 소개',
-        link: '/introduce',
+        link: '/introduce/worldwide',
       },
       {
         text: '홍보 대사',

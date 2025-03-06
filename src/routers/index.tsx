@@ -1,4 +1,6 @@
+// 훅
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
@@ -8,14 +10,15 @@ import TidingsCampaignPage from '@/pages/tidings/campaign/page';
 import TidingsMissionPage from '@/pages/tidings/mission/page';
 import TidingsSupportPage from '@/pages/tidings/support/page';
 import TidingsDetailPage from '@/pages/tidings/detailPage';
-import IntroducePage from '@/pages/introduce/vision/page';
+import IntroduceVisionPage from '@/pages/introduce/vision/page';
 import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
-import { useEffect } from 'react';
+import IntroduceWorldwidePage from '@/pages/introduce/worldwide/page';
 
 export default function MainRouter() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // 홈으로 바인딩
   useEffect(() => {
     if (location?.pathname === `` || location.pathname === `/`) {
       navigate(`/home`);
@@ -43,10 +46,17 @@ export default function MainRouter() {
           element={<TidingsDetailPage />}
         ></Route>
         {/* 소개 */}
-        <Route path='introduce/vision' element={<IntroducePage />}></Route>
+        <Route
+          path='introduce/vision'
+          element={<IntroduceVisionPage />}
+        ></Route>
         <Route
           path='introduce/organization'
           element={<IntroduceOrganizationPage />}
+        ></Route>
+        <Route
+          path='introduce/worldwide'
+          element={<IntroduceWorldwidePage />}
         ></Route>
       </Route>
     </Routes>

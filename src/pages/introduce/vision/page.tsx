@@ -5,7 +5,7 @@ import React from 'react';
 import ThemeHeader from '@/components/common/themeHeader';
 import IntroduceVision from '@/components/introduce/introduceVision';
 
-const IntroducePage = () => {
+const IntroduceVisionPage = () => {
   return (
     <section className={`bg-primary-50`}>
       <ThemeHeader />
@@ -14,4 +14,4 @@ const IntroducePage = () => {
   );
 };
 
-export default IntroducePage;
+export default IntroduceVisionPage;

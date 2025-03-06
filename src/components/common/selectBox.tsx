@@ -65,7 +65,7 @@ const SelectBox = ({
                   setSelectedItem(item);
                   setObjSelected(true);
                 }}
-                className={`text-regular18 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12`}
+                className={`text-regular18 max-lg:text-regular14 flex h-full w-full select-none items-center justify-start px-12`}
               >
                 <span
                 // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}
@@ -78,7 +78,7 @@ const SelectBox = ({
         </ul>
       </div>
       <div
-        className={`absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
+        className={`absolute right-10 select-none ${open ? 'rotate-180 transform' : ''} transition`}
       >
         <img
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}

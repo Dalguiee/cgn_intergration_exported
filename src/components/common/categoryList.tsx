@@ -21,7 +21,6 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
         { id: 4, type: '오시는 길' },
       ],
     },
-
     {
       id: 1,
       path: `/tidings/campaign`,
@@ -47,6 +46,19 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
       tags: [
         { id: 11, type: '후원' },
         { id: 12, type: '후원영상' },
+      ],
+    },
+    {
+      id: 4,
+      path: `/introduce/worldwide`,
+      tags: [
+        { id: 0, type: '한국' },
+        { id: 1, type: '일본' },
+        { id: 2, type: '대만' },
+        { id: 3, type: '태국' },
+        { id: 4, type: '인도네시아' },
+        { id: 5, type: '프랑스' },
+        { id: 6, type: '미주' },
       ],
     },
   ];
@@ -83,7 +95,7 @@ const CategoryList = ({ setSelectedCategoryArticleId }) => {
               setSelectedCategoryArticleId(item?.id);
             }}
             key={item?.id}
-            className={`${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+            className={`bg-white-solid ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.type}
           </button>
