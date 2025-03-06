@@ -327,7 +327,7 @@ const IntroduceWorldwideContext = ({
             ></span>
           </div>
           <div
-            className={`flex flex-col items-start justify-start px-40 pt-40 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
+            className={`flex flex-col items-start justify-start px-40 pb-60 pt-40 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
           >
             {selectedCategoryArticleId === 2 ? (
               <p

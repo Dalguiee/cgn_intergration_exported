@@ -14,7 +14,7 @@ import 'swiper/css/scrollbar';
 import TagIcon from '@/components/common/tagIcon';
 
 // 데이터
-import { mockupData } from '@/db/mockup';
+import { recruitData } from '@/db/mockup';
 
 const SwiperSec = ({ currentData }) => {
   return (
@@ -36,73 +36,22 @@ const SwiperSec = ({ currentData }) => {
   );
 };
 
-const TidingsDetail = () => {
+const RecruitDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { subDepth } = useParams(); // tidings 이후에 붙는 params
   const querySearch = new URLSearchParams(location.search);
   const queryData = Object.fromEntries(querySearch);
-  const [allData, setAllData] = useState(null); // 기사 전체 데이터
-  const [currentData, setCurrentData] = useState({}); //
-  const [beforeData, setBeforeData] = useState({});
-  const [afterData, setAfterData] = useState({});
+  const [currentData, setCurrentData] = useState([]);
 
   // 기사 찾는 함수
   const articleSearch = id => {
-    const result = allData?.data?.filter(item => item.id == id);
+    const result = recruitData?.filter(
+      item => item?.id == queryData?.articleId
+    );
     if (result?.length > 0) {
-      return result[0];
-    } else {
-      return null;
+      setCurrentData(result?.[0]);
     }
   };
-
-  // 페이지에 따라 데이터 가져오기
-  useEffect(() => {
-    if (location.pathname) {
-      switch (location.pathname) {
-        case '/tidings/campaign/detail':
-          setAllData(mockupData[0]);
-          break;
-        case '/tidings/mission/detail':
-          setAllData(mockupData[1]);
-          break;
-        case '/tidings/support/detail':
-          setAllData(mockupData[2]);
-          break;
-        case '/tidings/broadcast/detail':
-          setAllData(mockupData[3]);
-          break;
-        default:
-          setAllData(mockupData[0]);
-      }
-    }
-  }, [queryData]);
-
-  // 데이터 셋팅
-  useEffect(() => {
-    if (allData) {
-      const articleID = queryData.articleId;
-      // 이전데이터
-      if (Number(articleID) - 1) {
-        setBeforeData(articleSearch(Number(articleID) - 1));
-      } else {
-        setBeforeData(null);
-      }
-      // 현재 데이터
-      if (Number(articleID)) {
-        setCurrentData(articleSearch(Number(articleID)));
-      } else {
-        setCurrentData(null);
-      }
-      // 다음 데이터
-      if (Number(articleID) + 1) {
-        setAfterData(articleSearch(Number(articleID) + 1));
-      } else {
-        setAfterData(null);
-      }
-    }
-  }, [queryData.articleId, allData]);
 
   // 디테일페이지 넘어올 경우 맨 위로 올려줍니다
   useEffect(() => {
@@ -133,7 +82,7 @@ const TidingsDetail = () => {
               }
             })}
             <span className={`text-bold24 text-grey-900`}>
-              {currentData?.detailTitle}
+              {currentData?.title}
             </span>
           </div>
           <span
@@ -163,71 +112,13 @@ const TidingsDetail = () => {
         </div>
         <div
           className={`w-full border-b-3 border-t-3 border-grey-900 px-4 max-lg:hidden`}
-        >
-          {/* 이전글 창 */}
-          <div
-            className={`${beforeData ? '' : 'hidden'} flex h-80 items-center justify-between`}
-          >
-            <button
-              className={`flex items-center justify-start`}
-              onClick={() => {
-                navigate(
-                  `/tidings/${subDepth}/detail?articleId=${beforeData?.id}`
-                );
-              }}
-            >
-              <span className={`text-bold16 text-nowrap text-grey-900`}>
-                이전 글
-              </span>
-              <span
-                className={`text-regular16 ml-16 mr-31 line-clamp-1 text-grey-500`}
-              >
-                {beforeData?.title}
-              </span>
-            </button>
-            <span
-              className={`text-regular14 text-nowrap text-grey-400 max-lg:hidden`}
-            >
-              {beforeData?.startDate}~{beforeData?.endDate}
-            </span>
-          </div>
-
-          {/* 다음글 창 */}
-          <div
-            className={`${afterData ? '' : 'hidden'} ${beforeData ? 'border-t-1' : ''} border-grey-900`}
-          >
-            <div className={`flex h-80 items-center justify-between`}>
-              <button
-                className={`flex items-center justify-start`}
-                onClick={() => {
-                  navigate(
-                    `/tidings/${subDepth}/detail?articleId=${afterData?.id}`
-                  );
-                }}
-              >
-                <span className={`text-bold16 text-nowrap text-grey-900`}>
-                  다음 글
-                </span>
-                <span
-                  className={`text-regular16 ml-16 mr-31 line-clamp-1 text-grey-500`}
-                >
-                  {afterData?.title}
-                </span>
-              </button>
-              <span
-                className={`text-regular14 text-nowrap text-grey-400 max-lg:hidden`}
-              >
-                {afterData?.startDate}~{afterData?.endDate}
-              </span>
-            </div>
-          </div>
-        </div>
+        ></div>
         <div
           className={`flex w-full items-start justify-end max-lg:justify-center`}
         >
           <button
             onClick={() => {
-              navigate(`/tidings/${subDepth}`);
+              navigate(`/introduce/recruit`);
             }}
             className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-32 max-lg:mt-16 max-lg:h-52 max-lg:w-full`}
           >
@@ -239,4 +130,4 @@ const TidingsDetail = () => {
   );
 };
 
-export default TidingsDetail;
+export default RecruitDetail;

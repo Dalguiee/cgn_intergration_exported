@@ -14,6 +14,7 @@ import IntroduceVisionPage from '@/pages/introduce/vision/page';
 import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
 import IntroduceWorldwidePage from '@/pages/introduce/worldwide/page';
 import IntroduceRecruitPage from '@/pages/introduce/recruit/page';
+import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -62,6 +63,10 @@ export default function MainRouter() {
         <Route
           path='introduce/recruit'
           element={<IntroduceRecruitPage />}
+        ></Route>
+        <Route
+          path='introduce/recruit/detail'
+          element={<RecruitDetailPage />}
         ></Route>
       </Route>
     </Routes>

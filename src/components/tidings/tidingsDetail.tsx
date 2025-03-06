@@ -49,7 +49,7 @@ const TidingsDetail = () => {
 
   // 기사 찾는 함수
   const articleSearch = id => {
-    const result = allData?.data?.filter(item => item.id == id);
+    const result = allData?.data?.filter(item => item?.id == id);
     if (result?.length > 0) {
       return result[0];
     } else {
