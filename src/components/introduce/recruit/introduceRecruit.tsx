@@ -52,32 +52,40 @@ const IntroduceRecruit = () => {
   return (
     <section className={`flex w-full flex-col items-center justify-start`}>
       <div
-        className={`flex w-1200 flex-col items-center justify-start gap-60 pb-120 pt-40`}
+        className={`flex w-full max-w-1200 flex-col items-center justify-start gap-60 pb-120 pt-40 max-lg:pb-60 max-lg:pt-0`}
       >
         <img
           className={`w-full object-cover`}
-          src='/public/images/introduce/recruit_banner.png'
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/recruit_banner.png`}
           width={1200}
           height={540}
           alt=''
         />
-        <span className={`text-bold40 text-grey-900`}>인재상</span>
+        <span className={`text-bold40 text-grey-900 max-lg:hidden`}>
+          인재상
+        </span>
         <div
-          className={`flex h-360 w-full max-w-1200 items-center justify-center gap-120`}
+          className={`flex h-360 w-full max-w-1200 items-center justify-center gap-120 max-lg:max-w-455 max-lg:flex-wrap max-lg:gap-24`}
         >
+          <span className={`text-bold32 absolute text-grey-900 lg:hidden`}>
+            인재상
+          </span>
+
           {textData?.map((item, idx) => (
             <div
               key={item?.id}
-              className={`relative flex h-144 w-170 flex-shrink-0 flex-col items-center justify-start gap-24 before:absolute before:left-[50%] before:top-[50%] before:z-[1] before:h-360 before:w-360 before:translate-x-[-50%] before:translate-y-[-50%] before:transform before:rounded-999 before:mix-blend-multiply ${idx === 0 ? `before:bg-primary-100` : ``} ${idx === 1 ? `before:bg-primary-200` : ``} ${idx === 2 ? `before:bg-primary-300` : ``} ${idx === 3 ? `before:bg-primary-400` : ``} before:content-[""]`}
+              className={`relative flex h-144 w-170 flex-shrink-0 flex-col items-center justify-start gap-24 before:absolute before:left-[50%] before:top-[50%] before:z-[1] before:h-360 before:w-360 before:translate-x-[-50%] before:translate-y-[-50%] before:transform before:rounded-999 before:mix-blend-multiply max-lg:h-160 max-lg:w-160 max-lg:gap-8 max-lg:pt-36 before:max-lg:h-160 before:max-lg:w-160 ${idx === 0 ? `before:bg-primary-100` : ``} ${idx === 1 ? `before:bg-primary-200` : ``} ${idx === 2 ? `before:bg-primary-300` : ``} ${idx === 3 ? `before:bg-primary-400` : ``} before:content-[""]`}
             >
-              <span className={`text-bold32 text-grey-900`}>
+              <span className={`text-bold32 max-lg:text-bold16 text-grey-900`}>
                 {item?.number}
               </span>
-              <span className={`text-bold32 text-center text-grey-900`}>
+              <span
+                className={`text-bold32 max-lg:text-bold16 text-center text-grey-900`}
+              >
                 {HTMLReactParser?.(item?.text)}
               </span>
               <span
-                className={`${idx === 3 ? `hidden` : ``} text-bold32 absolute right-[-40%] top-[43%] text-grey-900`}
+                className={`${idx === 3 ? `hidden` : ``} text-bold32 absolute right-[-40%] top-[43%] text-grey-900 max-lg:hidden`}
               >
                 +
               </span>
@@ -86,11 +94,19 @@ const IntroduceRecruit = () => {
         </div>
       </div>
       <div
-        className={`flex w-full flex-col items-center justify-start bg-white-solid pb-120 pt-120`}
+        className={`flex w-full flex-col items-center justify-start bg-white-solid pb-120 pt-120 max-lg:pt-60`}
       >
-        <div className={`flex w-1200 flex-col items-center justify-start`}>
-          <p className={`text-bold40 mb-40 text-grey-900`}>채용 공고</p>
-          <div className={`flex w-full items-start justify-center gap-16`}>
+        <div
+          className={`flex w-full max-w-1200 flex-col items-center justify-start`}
+        >
+          <p
+            className={`text-bold40 max-lg:text-bold24 mb-40 text-grey-900 max-lg:mb-24`}
+          >
+            채용 공고
+          </p>
+          <div
+            className={`flex w-full items-start justify-center gap-16 max-lg:flex-col max-lg:items-center max-lg:justify-start`}
+          >
             <div
               className={`flex w-full flex-col items-center justify-start gap-16`}
             >

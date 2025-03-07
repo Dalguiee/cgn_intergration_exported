@@ -3,8 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const BottomHeader = ({
   centerMenu,
-  setDepthActive,
   depthActive,
+  setDepthActive,
   burger,
   setBurger,
 }) => {
@@ -35,7 +35,8 @@ const BottomHeader = ({
           onMouseEnter={() => {
             setDepthActive(true);
           }}
-          className={`absolute right-[50%] flex translate-x-[50%] transform items-center justify-between max-lg:hidden max-lg:gap-50 lg:gap-60 xl:gap-80`}
+          style={{ transition: `0.5s` }}
+          className={`${depthActive ? `lg:gap-90 xl:gap-120` : `lg:gap-60 xl:gap-80`} absolute right-[50%] flex translate-x-[50%] transform items-center justify-between max-lg:hidden max-lg:gap-50`}
         >
           {centerMenu?.map((menu, index) => (
             <div
@@ -54,16 +55,18 @@ const BottomHeader = ({
                 </span>
               </button>
               <div
-                className={`absolute gap-8 ${depthActive ? '' : 'hidden'} top-79 flex flex-col items-center justify-center`}
+                style={{ transition: `0.5s` }}
+                className={`absolute gap-8 ${depthActive ? 'opacity-100' : 'pointer-events-none select-none opacity-0'} top-79 flex flex-col items-center justify-center`}
               >
                 {menu?.subMenu?.map((subMenu, key) => (
                   <button
+                    style={{ transition: `0.5s` }}
                     key={key}
                     onClick={() => {
                       navigate(subMenu?.link);
                       setDepthActive(false);
                     }}
-                    className={`${subMenu?.link?.includes(location.pathname) ? 'text-bold14' : 'text-regular14'} text-nowrap text-primary-100`}
+                    className={`${subMenu?.link?.includes(location.pathname) ? 'text-bold16' : 'text-regular16'} text-nowrap text-primary-100`}
                   >
                     {subMenu?.text}
                   </button>

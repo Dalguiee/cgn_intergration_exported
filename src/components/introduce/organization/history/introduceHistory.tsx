@@ -696,7 +696,7 @@ const IntroduceHistory = () => {
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-start max-lg:px-16`}
+      className={`flex w-full flex-col items-center justify-start max-lg:mb-120 max-lg:px-16`}
     >
       <div
         style={{

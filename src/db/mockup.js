@@ -1210,7 +1210,7 @@ export const recruitData = [
     category: `recruit`,
     recruitType: `신입/경력`,
     tag: [{ id: 1, mode: 'mode2' }],
-    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)',
+    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)1',
     details: [
       {
         id: 0,
@@ -1226,6 +1226,55 @@ export const recruitData = [
         amount: 2,
         qualifications: `테스트 데이터`,
       },
+      {
+        id: 2,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
+      {
+        id: 1,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
+      {
+        id: 1,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
+      {
+        id: 1,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
+      {
+        id: 1,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
+      {
+        id: 1,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
+      {
+        id: 1,
+        center: [`테스트`, `(테스트)`],
+        workType: `테스트`,
+        amount: 2,
+        qualifications: `테스트 데이터`,
+      },
     ],
     startDate: '2022.01.01',
     endDate: '2024.11.05',
@@ -1235,7 +1284,7 @@ export const recruitData = [
     category: `recruit`,
     recruitType: `신입/경력`,
     tag: [{ id: 3, mode: 'mode2' }],
-    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)',
+    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)2',
     details: [
       {
         id: 0,
@@ -1260,7 +1309,7 @@ export const recruitData = [
     category: `recruit`,
     recruitType: `신입/경력`,
     tag: [{ id: 1, mode: 'mode2' }],
-    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)',
+    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)3',
     details: [
       {
         id: 0,
@@ -1285,7 +1334,7 @@ export const recruitData = [
     category: `recruit`,
     recruitType: `신입/경력`,
     tag: [{ id: 3, mode: 'mode2' }],
-    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)',
+    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)4',
     details: [
       {
         id: 0,
@@ -1310,7 +1359,7 @@ export const recruitData = [
     category: `recruit`,
     recruitType: `신입/경력`,
     tag: [{ id: 1, mode: 'mode2' }],
-    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)',
+    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)5',
     details: [
       {
         id: 0,
@@ -1335,7 +1384,7 @@ export const recruitData = [
     category: `recruit`,
     recruitType: `신입/경력`,
     tag: [{ id: 3, mode: 'mode2' }],
-    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)',
+    title: '크로스미디어팀 풀타임외주(동영상편집, 업로드)6',
     details: [
       {
         id: 0,

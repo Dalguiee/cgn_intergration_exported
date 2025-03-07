@@ -45,6 +45,11 @@ const Locator = ({ className = `` }) => {
             data = '채용';
             pathStack = 'introduce/recruit';
           }
+          if (data === 'detail') {
+            pathPiece = subDepth;
+            data = '';
+            pathStack = `tidings/${subDepth}`;
+          }
 
           return { bPath: pathPiece, name: data, path: pathStack };
         })
