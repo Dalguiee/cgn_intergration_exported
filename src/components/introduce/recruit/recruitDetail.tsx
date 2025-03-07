@@ -70,7 +70,7 @@ const RecruitDetail = () => {
   // 기사 찾는 함수
   useEffect(() => {
     const result = recruitData?.filter(
-      item => item?.id == queryData?.articleId
+      item => item?.id == Number(queryData?.articleId)
     );
     if (result?.length > 0) {
       setCurrentData(result?.[0]);

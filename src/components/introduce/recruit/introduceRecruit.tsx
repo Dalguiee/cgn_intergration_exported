@@ -74,7 +74,7 @@ const IntroduceRecruit = () => {
           {textData?.map((item, idx) => (
             <div
               key={item?.id}
-              className={`relative flex h-144 w-170 flex-shrink-0 flex-col items-center justify-start gap-24 before:absolute before:left-[50%] before:top-[50%] before:z-[1] before:h-360 before:w-360 before:translate-x-[-50%] before:translate-y-[-50%] before:transform before:rounded-999 before:mix-blend-multiply max-lg:h-160 max-lg:w-160 max-lg:gap-8 max-lg:pt-36 before:max-lg:h-160 before:max-lg:w-160 ${idx === 0 ? `before:bg-primary-100` : ``} ${idx === 1 ? `before:bg-primary-200` : ``} ${idx === 2 ? `before:bg-primary-300` : ``} ${idx === 3 ? `before:bg-primary-400` : ``} before:content-[""]`}
+              className={`relative flex h-144 w-170 flex-shrink-0 flex-col items-center justify-start gap-24 before:pointer-events-none before:absolute before:left-[50%] before:top-[50%] before:z-[1] before:h-360 before:w-360 before:translate-x-[-50%] before:translate-y-[-50%] before:transform before:select-none before:rounded-999 before:mix-blend-multiply max-lg:h-160 max-lg:w-160 max-lg:gap-8 max-lg:pt-36 before:max-lg:h-160 before:max-lg:w-160 ${idx === 0 ? `before:bg-primary-100` : ``} ${idx === 1 ? `before:bg-primary-200` : ``} ${idx === 2 ? `before:bg-primary-300` : ``} ${idx === 3 ? `before:bg-primary-400` : ``} before:content-[""]`}
             >
               <span className={`text-bold32 max-lg:text-bold16 text-grey-900`}>
                 {item?.number}

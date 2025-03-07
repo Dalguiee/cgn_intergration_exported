@@ -66,7 +66,7 @@ const centerMenu = [
       },
       {
         text: '홍보 대사',
-        link: '/introduce',
+        link: '/introduce/ambassador',
       },
       {
         text: '채용',

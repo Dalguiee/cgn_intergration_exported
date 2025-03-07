@@ -30,6 +30,17 @@ const ThemeHeader = ({ className = `` }) => {
       title: '채용',
       subTitle: 'CGN에서 함께할 인재를 찾습니다.',
     },
+    {
+      path: 'introduce/ambassador',
+      title: '홍보대사',
+      subTitle: 'CGN의 홍보대사를 소개합니다.',
+    },
+
+    {
+      path: 'introduce/recruit',
+      title: '채용',
+      subTitle: 'CGN에서 함께할 인재를 찾습니다.',
+    },
 
     {
       path: 'tidings/campaign',

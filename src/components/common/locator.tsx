@@ -45,10 +45,16 @@ const Locator = ({ className = `` }) => {
             data = '채용';
             pathStack = 'introduce/recruit';
           }
+          if (data === 'ambassador') {
+            pathPiece = data;
+            data = '홍보대사';
+            pathStack = 'introduce/ambassador';
+          }
+
           if (data === 'detail') {
-            pathPiece = subDepth;
+            pathPiece = `recruit`;
             data = '';
-            pathStack = `tidings/${subDepth}`;
+            pathStack = `introduce/recruit`;
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

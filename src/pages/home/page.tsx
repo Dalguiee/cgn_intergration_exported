@@ -1,5 +1,6 @@
 // 훅
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // 컴포넌트
 import TopBanner from '@/components/home/topBanner/homeTopBanner';
@@ -11,10 +12,11 @@ import HomeNoticeMain from '@/components/home/notice/homeNoticeMain';
 import HomeTowPartedBanner from '@/components/home/middleBanner/homeTowPartedBanner';
 import HomeOnePartedBanner from '@/components/home/middleBanner/homeOnePartedBanner';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
-import { useLocation } from 'react-router-dom';
+import Popup from '@/components/home/popup/popup';
 
 const HomePage = () => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
+  const [popupOpen, setPopupOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,6 +25,7 @@ const HomePage = () => {
 
   return (
     <section>
+      <Popup popupOpen={popupOpen} setPopupOpen={setPopupOpen} />
       <TopBanner mobile={mobile} />
       <HomeCampaignEvent />
       <HomeFondantContents />

@@ -303,6 +303,7 @@
   }
 }
 
+/* 메인 탑배너 스와이퍼 설정 */
 [data-main-swiper] .swiper-button-next {
   right: 3%;
   @apply text-white-solid;
@@ -340,6 +341,53 @@
 }
 
 [data-main-swiper]
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  transition: 0.3s;
+  background-color: #ff6b00;
+  width: 24px;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+/* 메인 팝업 스와이퍼 설정 */
+[data-popup-swiper] .swiper-button-next {
+  right: 3%;
+  @apply text-white-solid;
+}
+[data-popup-swiper] .swiper-button-next::after {
+  opacity: 0.75;
+  content: url(/public/images/icon/slide_arrow_right.svg);
+  @apply max-lg:hidden;
+}
+
+[data-popup-swiper] .swiper-button-prev {
+  left: 3%;
+  @apply text-white-solid;
+}
+[data-popup-swiper] .swiper-button-prev::after {
+  opacity: 0.75;
+  content: url(/public/images/icon/slide_arrow_left.svg);
+  @apply max-lg:hidden;
+}
+[data-popup-swiper] .swiper-button-disabled {
+  opacity: 0.1;
+}
+
+[data-popup-swiper] .swiper-pagination {
+  bottom: 10px;
+}
+
+[data-popup-swiper]
+  .swiper-pagination
+  .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  transition: 0.3s;
+  background-color: white;
+  opacity: 0.75;
+  margin: 0 3px;
+}
+
+[data-popup-swiper]
   .swiper-pagination
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
   transition: 0.3s;
