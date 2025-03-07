@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+// 훅
+import React, { useEffect } from 'react';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,38 +9,40 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+
+// 컴포넌트
 import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const popupData = [
   {
     id: 0,
-    src: `/public/images/popup/test_content.png`,
-    moSrc: `/public/images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
   },
   {
     id: 0,
-    src: `/public/images/popup/test_content.png`,
-    moSrc: `/public/images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
   },
   {
     id: 0,
-    src: `/public/images/popup/test_content.png`,
-    moSrc: `/public/images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
   },
   {
     id: 0,
-    src: `/public/images/popup/test_content.png`,
-    moSrc: `/public/images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
   },
   {
     id: 0,
-    src: `/public/images/popup/test_content.png`,
-    moSrc: `/public/images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
   },
   {
     id: 0,
-    src: `/public/images/popup/test_content.png`,
-    moSrc: `/public/images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
   },
 ];
 
