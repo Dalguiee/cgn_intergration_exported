@@ -16,6 +16,8 @@ import IntroduceWorldwidePage from '@/pages/introduce/worldwide/page';
 import IntroduceRecruitPage from '@/pages/introduce/recruit/page';
 import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
 import IntroduceAmbassadorPage from '@/pages/introduce/ambassador/page';
+import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotice/page';
+import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -72,6 +74,15 @@ export default function MainRouter() {
         <Route
           path='introduce/recruit/detail'
           element={<RecruitDetailPage />}
+        ></Route>
+
+        <Route
+          path='customercenter/notice'
+          element={<CustomerCenterNoticePage />}
+        ></Route>
+        <Route
+          path='customercenter/notice/detail'
+          element={<CustomerCenterNoticeDetailPage />}
         ></Route>
       </Route>
     </Routes>

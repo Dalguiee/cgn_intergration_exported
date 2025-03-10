@@ -260,7 +260,7 @@
 
 @layer utilities {
   .separator {
-    @apply w-1 h-12 border-r-1 border-grey-200;
+    @apply h-12 w-1 border-r-1 border-grey-200;
   }
 
   [data-comment='text_scroll_box'] {
@@ -329,9 +329,10 @@
   .swiper-pagination
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   transition: 0.3s;
-  background-color: white;
+
   opacity: 0.75;
   margin: 0 3px;
+  @apply bg-primary-100;
 }
 
 [data-main-swiper]
@@ -382,9 +383,9 @@
   .swiper-pagination
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   transition: 0.3s;
-  background-color: white;
   opacity: 0.75;
   margin: 0 3px;
+  @apply bg-primary-100;
 }
 
 [data-popup-swiper]

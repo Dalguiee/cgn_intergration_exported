@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 const MainFooter = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* pc footer */}
@@ -19,7 +23,11 @@ const MainFooter = () => {
           <div className={`flex flex-col items-start justify-center gap-4`}>
             <div className={`flex justify-between`}>
               <div className={`flex h-48 gap-40`}>
-                <button>
+                <button
+                  onClick={() => {
+                    navigate(`/customercenter/notice`);
+                  }}
+                >
                   <span className={`text-bold14`}>공지사항</span>
                 </button>
                 <button>

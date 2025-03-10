@@ -47,7 +47,7 @@ const HomeTidingsCard = ({ item, pageMode }) => {
           </div>
         </div>
         <div
-          className={`mt-12 flex w-full flex-shrink-0 items-center justify-start`}
+          className={`mt-12 flex w-full flex-shrink-0 items-center justify-start pr-16 max-lg:pr-10`}
         >
           <p
             className={`text-bold24 max-lg:text-bold16 z-10 line-clamp-2 text-left text-grey-900`}

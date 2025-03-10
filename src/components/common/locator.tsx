@@ -102,6 +102,26 @@ const Locator = ({ className = `` }) => {
         })
       );
     }
+
+    if (location.pathname.includes('/customercenter/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'customercenter') {
+            pathPiece = data;
+            data = '고객 센터';
+            pathStack = 'customercenter/notice';
+          }
+
+          if (data === 'notice') {
+            pathPiece = data;
+            data = '공지사항';
+            pathStack = `customercenter/notice`;
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
   }, [location]);
 
   return (

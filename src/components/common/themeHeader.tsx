@@ -63,6 +63,13 @@ const ThemeHeader = ({ className = `` }) => {
       title: '보도 자료',
       subTitle: 'CGN의 보도 자료를 확인해 보세요.',
     },
+
+    {
+      path: 'customercenter/',
+      title: '고객 센터',
+      subTitle:
+        'CGN에 관련된 다양한 공지사항과 자주 묻는 질문들을 확인해 보세요.',
+    },
   ];
 
   // 주소값을 스캔하여 자동으로 타이틀을 추가합니다. 위의 데이터를 기반으로 합니다.

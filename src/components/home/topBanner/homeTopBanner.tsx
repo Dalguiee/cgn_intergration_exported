@@ -61,13 +61,22 @@ const HomeTopBanner = ({ mobile }) => {
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           className={`h-full w-full`}
           navigation={true}
-          speed={1300}
           // scrollbar={{ draggable: true }}
+          speed={mobile ? 500 : 1300}
           pagination={{ clickable: true }}
           spaceBetween={24}
           slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}
+          // breakpoints={{
+          //   640: { speed: 500 },
+          //   768: {
+          //     speed: 500,
+          //   },
+          //   1024: {
+          //     speed: 1300,
+          //   },
+          // }}
         >
           {paymentMockupData?.map((obj, key) => (
             <SwiperSlide
