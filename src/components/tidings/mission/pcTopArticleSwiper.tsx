@@ -13,7 +13,7 @@ const PcTopArticleSwiper = ({ pageMode, findedMockupData }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`px-20`}
+      className={`px-56 pb-40`}
       spaceBetween={64}
       slidesPerView={
         findedMockupData && findedMockupData?.length < 3 ? 2 : undefined

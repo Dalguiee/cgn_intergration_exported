@@ -123,7 +123,7 @@ const TidingsMission = () => {
         />
 
         <div
-          className={`flex w-full max-w-1808 flex-wrap items-start justify-center gap-24 max-lg:hidden`}
+          className={`flex w-full flex-wrap items-start justify-center gap-24 overflow-visible max-lg:hidden`}
         >
           <PcTopArticleSwiper
             pageMode={pageMode}
