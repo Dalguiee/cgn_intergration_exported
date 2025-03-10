@@ -61,6 +61,7 @@ const IntroduceRecruit = () => {
           인재상
         </span>
         <div
+          data-recruit-vision-box
           className={`flex h-360 w-full max-w-1200 items-center justify-center gap-120 max-lg:max-w-455 max-lg:flex-wrap max-lg:gap-24`}
         >
           <span className={`text-bold32 absolute text-grey-900 lg:hidden`}>

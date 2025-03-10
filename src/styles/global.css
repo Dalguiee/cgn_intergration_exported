@@ -297,12 +297,6 @@
   }
 }
 
-@media (max-width: 1024px) {
-  [data-main-swiper] .swiper-pagination {
-    bottom: 0px !important;
-  }
-}
-
 /* 메인 탑배너 스와이퍼 설정 */
 [data-main-swiper] .swiper-button-next {
   right: 3%;
@@ -348,6 +342,12 @@
   width: 24px;
   border-radius: 10px;
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  [data-main-swiper] .swiper-pagination {
+    bottom: 0px !important;
+  }
 }
 
 /* 메인 팝업 스와이퍼 설정 */
@@ -401,3 +401,9 @@
   height: 0px;
   width: 0px;
 } */
+
+@media (max-width: 360px) {
+  [data-recruit-vision-box] {
+    display: none;
+  }
+}
