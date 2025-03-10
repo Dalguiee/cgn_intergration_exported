@@ -8,10 +8,11 @@ const SelectBox = ({
   listData = [],
   selectedItem,
   setSelectedItem,
-  // placeholder 는 string 으로 받음
-  placeholder = '',
+  defultValue = '',
   widthFull = false,
   className = '',
+  height = '62',
+  selectedColor = 'primary-500',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
@@ -20,7 +21,13 @@ const SelectBox = ({
 
   // 선택된 데이터를 넣는 항목, 페이지 진입시 첫줄 데이터를 placeholder 로 사용합니다
   useEffect(() => {
-    setSelectedItem(listData?.[0]);
+    if (!defultValue) {
+      setSelectedItem(listData?.[0]);
+    }
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
   }, []);
 
   // 내부에 스크롤 선택지 맨 위로 올려 보이게 합니다.
@@ -28,58 +35,66 @@ const SelectBox = ({
     selectOpenBox?.current.scrollTo(0, 0);
   }, [open]);
 
-  useEffect(() => {});
+  //외부 클릭 감지 시 setOpen(false)
+  const handleClickOutside = event => {
+    if (
+      selectOpenBox.current &&
+      !selectOpenBox.current.contains(event.target)
+    ) {
+      setOpen(false);
+    }
+  };
 
   return (
     <div
       onClick={() => {
         setOpen(!open);
       }}
-      className={`relative z-10 flex h-62 cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className}`}
+      className={`relative z-10 flex h-${height} cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className}`}
     >
       <div
         className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 outline-grey-200 max-lg:rounded-4`}
       >
         <ul
           ref={selectOpenBox}
-          data-custom-scroll
           className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
         >
           <li
-            className={`${open ? '' : ''} pointer-events-none flex h-62 w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4`}
+            className={`${open ? '' : ''} pointer-events-none flex h-${height} w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4`}
           >
             <button
-              className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start ${objSelected ? 'text-primary-500' : 'text-grey-400'}`}
+              className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start ${objSelected ? `text-${selectedColor}` : 'text-grey-400'}`}
             >
-              {selectedItem?.text}
+              {selectedItem?.text ? selectedItem?.text : defultValue}
             </button>
           </li>
-
-          {listData?.map((item, key) => (
-            <li
-              key={key}
-              className={`${open ? '' : 'hidden h-0'} flex h-62 w-full items-center justify-start hover:bg-primary-50 max-lg:h-48`}
-            >
-              <button
-                onClick={() => {
-                  setOpen(false);
-                  setSelectedItem(item);
-                  setObjSelected(true);
-                }}
-                className={`text-regular18 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12`}
+          <li className='max-h-300 w-full overflow-auto' data-custom-scroll>
+            {listData?.map((item, key) => (
+              <div
+                key={key}
+                className={`${open ? '' : 'hidden h-0'} \ h-${height} flex w-full items-center justify-start max-lg:h-48`}
               >
-                <span
-                // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    setSelectedItem(item);
+                    setObjSelected(true);
+                  }}
+                  className={`text-regular18 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12`}
                 >
-                  {item?.text}
-                </span>
-              </button>
-            </li>
-          ))}
+                  <span
+                  // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}
+                  >
+                    {item?.text}
+                  </span>
+                </button>
+              </div>
+            ))}
+          </li>
         </ul>
       </div>
       <div
-        className={`absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
+        className={`pointer-events-none absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
       >
         <img
           src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
