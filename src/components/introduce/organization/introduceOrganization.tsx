@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // 컴포넌트
 import CategoryList from '@/components/common/categoryList';
@@ -8,13 +8,18 @@ import IntroduceCEO from '@/components/introduce/organization/introduceCEO';
 import IntroduceFollowers from '@/components/introduce/organization/introduceFollowers';
 import IntroduceDirections from '@/components/introduce/organization/introduceDirections';
 import IntroduceHistory from '@/components/introduce/organization/history/introduceHistory';
+import IntroduceThemeHeader from './introduceThemeHeader';
 
 const IntroduceOrganization = () => {
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
 
   return (
     <>
-      <div className={`mb-24 w-full`}>
+      <IntroduceThemeHeader
+        className={`lg:hidden`}
+        selectedCategoryArticleId={selectedCategoryArticleId}
+      />
+      <div className={`w-full max-lg:mb-24`}>
         <CategoryList
           selectedCategoryArticleId={selectedCategoryArticleId}
           setSelectedCategoryArticleId={setSelectedCategoryArticleId}

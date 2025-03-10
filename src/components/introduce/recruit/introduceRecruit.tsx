@@ -45,10 +45,6 @@ const IntroduceRecruit = () => {
     setEndedItem(filteredEndedItem);
   }, []);
 
-  useEffect(() => {
-    console.log(whileItem, endedItem);
-  }, [whileItem, endedItem]);
-
   return (
     <section className={`flex w-full flex-col items-center justify-start`}>
       <div

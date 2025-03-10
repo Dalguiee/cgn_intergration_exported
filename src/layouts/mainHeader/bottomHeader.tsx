@@ -49,7 +49,7 @@ const BottomHeader = ({
                 }}
               >
                 <span
-                  className={`${location.pathname.includes(menu?.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18`}
+                  className={`${location.pathname.includes(menu?.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18 text-nowrap`}
                 >
                   {menu?.text}
                 </span>
@@ -66,7 +66,7 @@ const BottomHeader = ({
                       navigate(subMenu?.link);
                       setDepthActive(false);
                     }}
-                    className={`${subMenu?.link?.includes(location.pathname) ? 'text-bold16' : 'text-regular16'} text-nowrap text-primary-100`}
+                    className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold16' : 'text-regular16'} text-nowrap text-primary-100`}
                   >
                     {subMenu?.text}
                   </button>

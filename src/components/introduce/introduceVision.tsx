@@ -55,7 +55,7 @@ const IntroduceVision = () => {
             text={`CGN 브랜드 소개`}
             formMode={`mode1-r`}
             colorMode={`mode4`}
-            className={`border-primary-500 text-primary-500`}
+            className={`!h-48 border-primary-500 text-primary-500 max-lg:!h-36`}
           />
         </div>
         {/* 상단 주황색 색망 상자컨텐츠 */}

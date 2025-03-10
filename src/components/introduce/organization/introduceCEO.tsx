@@ -3,9 +3,9 @@ import React from 'react';
 
 const IntroduceCEO = () => {
   return (
-    <>
+    <section className={`w-full max-lg:pb-120`}>
       <div
-        className={`mt-80 flex h-663 w-full flex-col items-center justify-center bg-secondary-brown max-lg:mt-0 max-lg:h-795 max-lg:justify-start max-lg:px-16 max-lg:pt-16`}
+        className={`mt-80 flex h-663 w-full flex-col items-center justify-center bg-secondary-brown px-16 max-lg:mt-0 max-lg:h-795 max-lg:justify-start max-lg:px-16 max-lg:pt-16`}
       >
         <div
           className={`flex w-full max-w-1200 gap-80 max-lg:flex-col max-lg:items-center max-lg:gap-40`}
@@ -70,13 +70,13 @@ const IntroduceCEO = () => {
         </div>
       </div>
       <div
-        className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
+        className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120 max-lg:bg-white-solid max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
       >
         <div
           style={{
             backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/ceo_background.png)`,
           }}
-          className={`flex h-full max-h-570 w-full max-w-1200 flex-col items-start justify-start gap-40 bg-cover bg-center bg-no-repeat pb-98 pr-265 pt-60 max-lg:max-h-708 max-lg:gap-32 max-lg:!bg-[url()] max-lg:pb-0 max-lg:pr-0 max-lg:pt-0`}
+          className={`flex h-full max-h-570 w-full max-w-1200 flex-col items-start justify-start gap-40 bg-cover bg-center bg-no-repeat px-16 pb-98 pr-265 pt-60 max-lg:max-h-708 max-lg:gap-32 max-lg:!bg-[url()] max-lg:pb-0 max-lg:pr-0 max-lg:pt-0`}
         >
           <div className={`pr-100 max-lg:pr-0`}>
             <p
@@ -121,7 +121,7 @@ const IntroduceCEO = () => {
           </p>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -20,6 +20,7 @@ const ThemeHeader = ({ className = `` }) => {
       title: '기관 소개',
       subTitle: 'CGN의 해외지사를 소개합니다.',
     },
+
     {
       path: 'introduce/worldwide',
       title: '해외지사 소개',

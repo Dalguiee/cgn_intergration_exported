@@ -38,7 +38,7 @@ const IntroduceFollowers = () => {
     },
     {
       id: 3,
-      reverse: false,
+      reverse: true,
       src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/followers_card_4.png`,
       title: `드림온맘`,
       subTitle: `기도로 CGN을 돕는 중보기도팀입니다.`,
@@ -63,11 +63,11 @@ const IntroduceFollowers = () => {
         {oddDatas?.map((item, key) => (
           <div
             key={key}
-            className={`flex w-full items-end justify-start max-lg:flex-col max-lg:items-center`}
+            className={`flex w-full items-end justify-start gap-16 max-lg:flex-col max-lg:items-center`}
           >
             <div
               key={key}
-              className={`${item?.exception ? `flex-col-reverse` : ``} flex w-full items-start justify-center gap-60 max-lg:flex-col max-lg:items-center max-lg:gap-0`}
+              className={`${item?.exception ? `flex-col-reverse` : ``} ${item?.reverse ? `flex-row-reverse` : ``} flex w-full items-start justify-center gap-60 max-lg:flex-col max-lg:items-center max-lg:gap-0`}
             >
               <img
                 className={`h-400 w-600 rounded-16 object-cover max-lg:h-full max-lg:max-h-240 max-lg:w-full max-lg:max-w-361`}
@@ -89,7 +89,7 @@ const IntroduceFollowers = () => {
               )}
 
               <div
-                className={`w-full max-w-361 max-lg:mt-40 ${item?.exception ? `max-w-600 max-lg:max-w-361` : ``}`}
+                className={`w-full max-lg:mt-40 max-lg:max-w-361 ${item?.exception ? `max-w-600 max-lg:max-w-361` : ``}`}
               >
                 <p
                   className={`text-bold48 max-lg:text-bold24 mb-40 text-grey-900 max-lg:mb-8`}
@@ -110,7 +110,7 @@ const IntroduceFollowers = () => {
             </div>
             {item?.exception ? (
               <img
-                className={`h-592 w-454 rounded-16 max-lg:hidden max-lg:h-full max-lg:max-h-240 max-lg:w-full max-lg:max-w-361`}
+                className={`h-full max-h-592 w-full max-w-454 rounded-16 object-cover max-lg:hidden max-lg:h-full max-lg:max-h-240 max-lg:w-full max-lg:max-w-361`}
                 src={mobile ? item?.exceptionMoSrc : item?.exceptionSrc}
                 width={454}
                 height={592}

@@ -256,7 +256,7 @@ const IntroduceWorldwideContext = ({
       className={`relative flex h-fit w-full flex-col items-center justify-start bg-primary-50`}
     >
       <div
-        className={`z-5 t-0 absolute left-0 flex h-852 w-full flex-shrink-0 flex-col items-center justify-start max-lg:h-439`}
+        className={`z-5 t-0 absolute left-0 flex h-852 w-full flex-shrink-0 flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-439`}
         style={{
           backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/mo_under_content_area_background.png` : `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/under_content_area_background.png`})`,
         }}

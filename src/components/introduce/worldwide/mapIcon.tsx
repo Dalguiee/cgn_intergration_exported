@@ -9,7 +9,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea_selected.png`,
-    position: ` absolute left-411 top-162 max-lg:top-65 max-lg:left-189`,
+    position: ` absolute left-411 top-162 max-lg:top-[30%] max-lg:left-[49%]`,
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/america.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/america_selected.png`,
-    position: `absolute left-835 top-150 max-lg:top-60 max-lg:left-365`,
+    position: `absolute left-835 top-150 max-lg:top-[28%] max-lg:left-[93%]`,
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const mapData = [
     rightSide: true,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/japan.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/japan_selected.png`,
-    position: `absolute left-482 top-146 max-lg:top-64 max-lg:left-207`,
+    position: `absolute left-482 top-146 max-lg:top-[32.2%] max-lg:left-[53.1%]`,
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/taiwan.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/taiwan_selected.png`,
-    position: `absolute left-382 top-210 max-lg:top-84 max-lg:left-179`,
+    position: `absolute left-382 top-210 max-lg:top-[40.1%] max-lg:left-[46.8%]`,
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/thailand.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/thailand_selected.png`,
-    position: `absolute left-325 top-229 max-lg:top-90 max-lg:left-144`,
+    position: `absolute left-325 top-229 max-lg:top-[45.7%] max-lg:left-[39.5%]`,
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const mapData = [
     rightSide: true,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/indonesia.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/indonesia_selected.png`,
-    position: `absolute left-405 top-284 max-lg:top-121 max-lg:left-170`,
+    position: `absolute left-405 top-284 max-lg:top-[56.1%] max-lg:left-[44.1%]`,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const mapData = [
     rightSide: true,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/france.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/france_selected.png`,
-    position: `absolute left-38 top-124 max-lg:top-48 max-lg:left-1`,
+    position: `absolute left-38 top-124 max-lg:top-[25%] max-lg:left-[2.5%]`,
   },
 ];
 
@@ -68,7 +68,7 @@ const MapIcon = ({
   return mapData?.map((item, idx) => (
     <div
       key={idx}
-      className={`${item?.position} ${item?.rightSide ? `flex-row-reverse` : ``} flex h-66 w-120 items-end justify-center gap-2 max-lg:h-32 max-lg:w-26`}
+      className={`${item?.position} ${item?.rightSide ? `flex-row-reverse` : ``} flex h-66 w-120 items-end justify-center gap-2 max-lg:h-[8%] max-lg:w-[5%] max-lg:gap-0`}
     >
       <div
         className={`max-lg:hidden ${selectedCategoryArticleId === item?.id ? `h-66` : `h-44`}`}
@@ -83,14 +83,14 @@ const MapIcon = ({
       </div>
 
       <button
-        className={`max-lg:pointer-events-none`}
+        className={`h-fit w-fit max-lg:pointer-events-none`}
         onClick={() => {
           setSelectedCategoryArticleId(item?.id);
         }}
       >
         <img
           src={`${selectedCategoryArticleId === item?.id ? item?.selectedSrc : item?.src}`}
-          className={` ${selectedCategoryArticleId === item?.id ? `h-66 w-54 max-lg:h-32 max-lg:w-26` : `h-44 w-36 max-lg:h-20 max-lg:w-16`} object-cover`}
+          className={` ${selectedCategoryArticleId === item?.id ? `h-66 w-54 max-lg:h-32 max-lg:w-26` : `h-44 w-36 max-lg:h-20 max-lg:w-16`} object-contain`}
           width={36}
           height={44}
           alt=''

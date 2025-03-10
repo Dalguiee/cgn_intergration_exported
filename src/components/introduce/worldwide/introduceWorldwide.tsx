@@ -16,10 +16,10 @@ const IntroduceWorldwide = () => {
       className={`flex w-full flex-col items-center justify-start overflow-hidden bg-primary-50`}
     >
       <div
-        className={`flex h-666 w-1200 flex-col items-center justify-start pb-80 pt-40 max-lg:h-240 max-lg:pb-0 max-lg:pt-0`}
+        className={`flex h-666 w-1200 flex-shrink-0 flex-col items-center justify-start pb-80 pt-40 max-lg:aspect-[393/240] max-lg:h-full max-lg:w-full max-lg:pb-0 max-lg:pt-0`}
       >
         <div
-          className={`relative h-full max-h-546 w-full rounded-16 bg-cover bg-center bg-no-repeat max-lg:aspect-[390/240] max-lg:h-240 max-lg:w-393 max-lg:rounded-0`}
+          className={`relative h-full max-h-546 w-full flex-shrink-0 rounded-16 bg-cover bg-center bg-no-repeat max-lg:h-full max-lg:max-h-[unset] max-lg:w-full max-lg:max-w-[unset] max-lg:rounded-0 max-lg:bg-contain`}
           style={{
             backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/mo_map.png` : `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/map.png`})`,
           }}

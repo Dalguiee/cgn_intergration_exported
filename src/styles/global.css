@@ -260,7 +260,7 @@
 
 @layer utilities {
   .separator {
-    @apply h-12 w-1 border-r-1 border-grey-200;
+    @apply w-1 h-12 border-r-1 border-grey-200;
   }
 
   [data-comment='text_scroll_box'] {
