@@ -72,10 +72,10 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
   return (
     <>
       <div
-        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-0 top-0 z-20 flex h-screen w-screen items-center justify-center bg-grey-900 opacity-95`}
+        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-0 top-0 z-[100] flex h-screen w-screen items-center justify-center bg-grey-900 opacity-95`}
       ></div>
       <div
-        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-[50%] top-[50%] z-20 h-600 w-600 translate-x-[-50%] translate-y-[-50%] transform rounded-8 bg-white-solid px-18 pt-18`}
+        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-[50%] top-[50%] z-[110] h-600 w-600 translate-x-[-50%] translate-y-[-50%] transform rounded-8 bg-white-solid px-18 pt-18`}
       >
         <div
           className={`mb-24 flex h-478 w-564 flex-col items-center justify-start`}

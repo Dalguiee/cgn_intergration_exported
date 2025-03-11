@@ -96,6 +96,7 @@ export default function MainRouter() {
           path='introduce/organization'
           element={<IntroduceOrganizationPage />}
           ></Route> */}
+
         <Route
           path='introducesupport/anniversary'
           element={<IntroducesupportAnniversaryPage />}

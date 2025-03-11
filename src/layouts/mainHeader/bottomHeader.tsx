@@ -14,7 +14,7 @@ const BottomHeader = ({
 
   return (
     <div
-      className={`relative z-20 flex h-80 w-full max-w-1560 flex-col items-center justify-center max-lg:h-56 max-lg:w-full`}
+      className={`relative z-30 flex h-80 w-full max-w-1560 flex-col items-center justify-center max-lg:h-56 max-lg:w-full`}
     >
       <div className={`flex h-full w-full items-center justify-between`}>
         <button
