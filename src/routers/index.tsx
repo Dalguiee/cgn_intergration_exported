@@ -87,28 +87,6 @@ export default function MainRouter() {
           path='introduce/organization'
           element={<IntroduceOrganizationPage />}
         ></Route>
-        {/* 후원 */}
-        <Route
-          path='introducesupport/main'
-          element={<IntroducesupportPage />}
-        ></Route>
-        {/* <Route
-          path='introduce/organization'
-          element={<IntroduceOrganizationPage />}
-          ></Route> */}
-
-        <Route
-          path='introducesupport/anniversary'
-          element={<IntroducesupportAnniversaryPage />}
-        ></Route>
-        <Route
-          path='introducesupport/overseas'
-          element={<IntroducesupportOverseasPage />}
-        ></Route>
-        <Route
-          path='introducesupport/report'
-          element={<IntroducesupportReportPage />}
-        ></Route>
         <Route
           path='introduce/worldwide'
           element={<IntroduceWorldwidePage />}
@@ -124,6 +102,24 @@ export default function MainRouter() {
         <Route
           path='introduce/recruit/detail'
           element={<RecruitDetailPage />}
+        ></Route>
+
+        {/* 후원 */}
+        <Route
+          path='introducesupport/main'
+          element={<IntroducesupportPage />}
+        ></Route>
+        <Route
+          path='introducesupport/anniversary'
+          element={<IntroducesupportAnniversaryPage />}
+        ></Route>
+        <Route
+          path='introducesupport/overseas'
+          element={<IntroducesupportOverseasPage />}
+        ></Route>
+        <Route
+          path='introducesupport/report'
+          element={<IntroducesupportReportPage />}
         ></Route>
 
         <Route

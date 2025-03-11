@@ -27,7 +27,7 @@ const centerMenu = [
       },
       {
         text: '기념일 후원',
-        link: '/introducesupport',
+        link: '/introducesupport/anniversary',
       },
       {
         text: '교회/기업 후원',
@@ -39,11 +39,11 @@ const centerMenu = [
       },
       {
         text: '해외지사 후원',
-        link: '/introducesupport',
+        link: '/introducesupport/overseas',
       },
       {
         text: '후원내역보고',
-        link: '/introducesupport',
+        link: '/introducesupport/report',
       },
     ],
   },
