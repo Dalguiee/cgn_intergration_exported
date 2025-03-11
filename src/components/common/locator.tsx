@@ -4,7 +4,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-const Locator = () => {
+const Locator = ({ className = `` }) => {
   const location = useLocation();
   const navigation = useNavigate();
   const { subDepth } = useParams();
@@ -34,6 +34,27 @@ const Locator = () => {
             pathPiece = data;
             data = '기관 소개';
             pathStack = 'introduce/organization?articleId=1';
+          }
+          if (data === 'worldwide') {
+            pathPiece = data;
+            data = '해외지사 소개';
+            pathStack = 'introduce/worldwide';
+          }
+          if (data === 'recruit') {
+            pathPiece = data;
+            data = '채용';
+            pathStack = 'introduce/recruit';
+          }
+          if (data === 'ambassador') {
+            pathPiece = data;
+            data = '홍보대사';
+            pathStack = 'introduce/ambassador';
+          }
+
+          if (data === 'detail') {
+            pathPiece = `recruit`;
+            data = '';
+            pathStack = `introduce/recruit`;
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };
@@ -101,6 +122,51 @@ const Locator = () => {
             data = '후원내역 보고';
             pathStack = 'introducesupport/report';
           }
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
+    // 고객센터
+    if (location.pathname.includes('/customercenter/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'customercenter') {
+            pathPiece = data;
+            data = '고객 센터';
+            pathStack = 'customercenter/notice';
+          }
+          if (data === 'questions') {
+            pathPiece = data;
+            data = '자주 묻는 질문';
+            pathStack = 'customercenter/questions';
+          }
+
+          if (data === 'notice') {
+            pathPiece = data;
+            data = '공지사항';
+            pathStack = `customercenter/notice`;
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
+    // 시청 안내
+    if (location.pathname.includes('/mediacenter/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'mediacenter') {
+            pathPiece = data;
+            data = '시청 안내';
+            pathStack = 'mediacenter/description';
+          }
+          if (data === 'description') {
+            pathPiece = data;
+            data = '퐁당 웹/앱/스마트TV';
+            pathStack = 'mediacenter/description';
+          }
 
           return { bPath: pathPiece, name: data, path: pathStack };
         })
@@ -109,7 +175,9 @@ const Locator = () => {
   }, [location]);
 
   return (
-    <section className='flex w-full items-center justify-center px-20 pt-16 max-lg:hidden max-lg:px-20'>
+    <section
+      className={`${className && className} flex w-full items-center justify-center px-20 pt-16 max-lg:hidden max-lg:px-20`}
+    >
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {

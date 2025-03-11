@@ -4,12 +4,12 @@ const formModeData = [
   {
     id: 1,
     mode: 'mode1',
-    className: `min-w-fit h-64 text-bold24 max-lg:h-52 max-lg:text-bold18`,
+    className: `min-w-fit h-64 text-bold24 max-lg:h-52 max-lg:text-bold18 px-24 max-lg:px-16`,
   },
   {
     id: 2,
     mode: 'mode2',
-    className: `min-w-fit h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24`,
+    className: `min-w-fit h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24 max-lg:px-16`,
   },
   {
     id: 3,
@@ -24,6 +24,11 @@ const formModeData = [
   {
     id: 5,
     mode: 'mode2-r',
+    className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
+  },
+  {
+    id: 6,
+    mode: 'mode3-r',
     className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
   },
 ];
@@ -57,7 +62,10 @@ const StyledButtons = ({
   colorMode = 'mode1',
   className = '',
   arrowMode = false,
-  widthFull = false,
+  playStoreMode = false,
+  appStoreMode = false,
+  downloadMode = false,
+  downloadItem = null,
   onClick = () => {},
 }) => {
   const formModeObj = formModeData.find(item => item.mode === formMode);
@@ -68,15 +76,36 @@ const StyledButtons = ({
       onClick={() => {
         onClick();
       }}
-      className={`${className} flex items-center justify-center text-nowrap rounded-8 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
+      className={`${className} flex items-center justify-center gap-8 text-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
     >
+      <img
+        src={`/public/images/icon/play_store.svg`}
+        className={`${playStoreMode ? `` : `hidden`} h-24 w-24 object-cover`}
+        width={24}
+        height={24}
+        alt=''
+      />
+      <img
+        src={`/public/images/icon/app_store.svg`}
+        className={`${appStoreMode ? `` : `hidden`} h-24 w-24 object-cover`}
+        width={24}
+        height={24}
+        alt=''
+      />
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img
-        className={`${arrowMode ? '' : 'hidden'} h-16 w-16`}
+        className={`${arrowMode ? '' : 'hidden'} h-24 w-24 max-lg:h-16 max-lg:w-16`}
         src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
-        width={16}
-        height={16}
+        width={24}
+        height={24}
         alt='화살표'
+      />
+      <img
+        className={`${downloadMode ? '' : 'hidden'} h-24 w-24 max-lg:h-16 max-lg:w-16`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/download_arrow_grey_900.svg`}
+        width={24}
+        height={24}
+        alt='다운로드화살표'
       />
     </button>
   );

@@ -1,4 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
+// 훅
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 // 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
@@ -18,7 +20,44 @@ import IntroducesupportAnniversaryPage from '@/pages/introducesupport/anniversar
 import IntroducesupportOverseasPage from '@/pages/introducesupport/overseas/page';
 import IntroducesupportReportPage from '@/pages/introducesupport/report/page';
 
+import IntroduceVisionPage from '@/pages/introduce/vision/page';
+import IntroduceWorldwidePage from '@/pages/introduce/worldwide/page';
+import IntroduceRecruitPage from '@/pages/introduce/recruit/page';
+import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
+import IntroduceAmbassadorPage from '@/pages/introduce/ambassador/page';
+import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotice/page';
+import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
+import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQuestions/page';
+import SubscribePaymentPage from '@/pages/subscribePayment/page';
+import MediaDescriptionPage from '@/pages/mediaCenter/mediaDescription/page';
+
 export default function MainRouter() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // 홈으로 바인딩
+  useEffect(() => {
+    if (location?.pathname === `` || location.pathname === `/`) {
+      navigate(`/home`);
+    }
+  }, [location?.pathname]);
+
+  // 팝업에 의한 스크롤 잠김 풀기
+  useEffect(() => {
+    const scrollRetore = () => {
+      document.body.style.overflow = 'auto';
+    };
+
+    window?.addEventListener('popstate', scrollRetore);
+
+    return () => window?.removeEventListener('popstate', scrollRetore);
+  }, [window?.PopStateEvent]);
+
+  // 페이지 변환시 맨 위로
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location?.pathname]);
+
   return (
     <Routes>
       <Route path='/*' element={<DefaultLayer />}>
@@ -40,7 +79,10 @@ export default function MainRouter() {
           element={<TidingsDetailPage />}
         ></Route>
         {/* 소개 */}
-        <Route path='introduce/vision' element={<IntroducePage />}></Route>
+        <Route
+          path='introduce/vision'
+          element={<IntroduceVisionPage />}
+        ></Route>
         <Route
           path='introduce/organization'
           element={<IntroduceOrganizationPage />}
@@ -65,6 +107,46 @@ export default function MainRouter() {
         <Route
           path='introducesupport/report'
           element={<IntroducesupportReportPage />}
+        ></Route>
+        <Route
+          path='introduce/worldwide'
+          element={<IntroduceWorldwidePage />}
+        ></Route>
+        <Route
+          path='introduce/ambassador'
+          element={<IntroduceAmbassadorPage />}
+        ></Route>
+        <Route
+          path='introduce/recruit'
+          element={<IntroduceRecruitPage />}
+        ></Route>
+        <Route
+          path='introduce/recruit/detail'
+          element={<RecruitDetailPage />}
+        ></Route>
+
+        <Route
+          path='customercenter/notice'
+          element={<CustomerCenterNoticePage />}
+        ></Route>
+        <Route
+          path='customercenter/questions'
+          element={<CustomerCenterQuestionsPage />}
+        ></Route>
+
+        <Route
+          path='customercenter/notice/detail'
+          element={<CustomerCenterNoticeDetailPage />}
+        ></Route>
+
+        <Route
+          path='subscribepayment'
+          element={<SubscribePaymentPage />}
+        ></Route>
+
+        <Route
+          path='mediacenter/description'
+          element={<MediaDescriptionPage />}
         ></Route>
       </Route>
     </Routes>

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
+  const location = useLocation();
   const navigate = useNavigate();
 
   return (
@@ -10,9 +10,8 @@ const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
       className={`fixed top-120 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-y-scroll bg-white-solid pb-200 pt-16`}
     >
       {centerMenu?.map((menu, key) => {
-        const [subMenuActiveIdx, setSubMenuActiveIdx] = useState(0);
         return (
-          <div key={key} className='border-b-1 px-24'>
+          <div key={key} className='px-24 border-b-1'>
             <div className={`w-full py-14`}>
               <span className={`text-bold18 text-grey-900`}>{menu?.text}</span>
             </div>
@@ -26,7 +25,7 @@ const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
                       navigate(subMenu?.link);
                       setBurger(false);
                     }}
-                    className={`${subMenuActiveIdx === key ? 'text-bold14 text-primary-900' : 'text-regular14 text-grey-600'}`}
+                    className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold14 text-primary-900' : 'text-regular14 text-grey-600'}`}
                   >
                     {subMenu?.text}
                   </button>

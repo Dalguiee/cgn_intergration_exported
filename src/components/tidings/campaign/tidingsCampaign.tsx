@@ -23,7 +23,6 @@ const TidingsCampaign = () => {
   // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.
   useEffect(() => {
     setfindedMockupData(mockupExportedData);
-    console.log('데이터 로딩');
   }, [location, selectedCategoryArticleId]);
 
   // category list 에서 selectedCategoryArticleId 에 따라 filter 연동을 위하여 state 에 update 합니다.
@@ -39,13 +38,13 @@ const TidingsCampaign = () => {
         })
       );
     }
-    console.log('카테고리 데이터 로딩 필터링');
   }, [selectedCategoryArticleId]);
 
   if (!findedMockupData) return <></>;
   return (
     <>
       <CategoryList
+        selectedCategoryArticleId={selectedCategoryArticleId}
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
       <section
@@ -56,11 +55,7 @@ const TidingsCampaign = () => {
           className={`grid w-1200 max-w-1560 grid-cols-3 flex-wrap items-start justify-center gap-24 max-lg:grid-cols-1`}
         >
           {findedMockupData?.map(item => (
-            <TidingsCard
-              key={item?.id}
-              allData={mockupExportedData}
-              item={item}
-            />
+            <TidingsCard key={item?.id} item={item} />
           ))}
         </div>
       </section>

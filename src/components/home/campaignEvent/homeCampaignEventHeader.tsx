@@ -25,10 +25,10 @@ const HomeCampaignEventHeader = ({
             onClick={() => {
               pagingPrev();
             }}
-            className={`max-lg:hidden ${startNum > 0 ? '' : 'pointer-events-none bg-grey-50'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
+            className={`max-lg:hidden ${startNum > 0 ? '' : 'pointer-events-none border-grey-200'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
           >
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg`}
+              src={`${startNum > 0 ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey200.svg`} `}
               width={24}
               height={24}
               alt='왼쪽'
@@ -38,11 +38,11 @@ const HomeCampaignEventHeader = ({
             onClick={() => {
               pagingNext();
             }}
-            className={`max-lg:hidden ${endNum < campaignLengthData ? '' : 'pointer-events-none bg-grey-50'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
+            className={`max-lg:hidden ${endNum < campaignLengthData ? '' : 'pointer-events-none border-grey-200'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
           >
             <img
               className={`h-24 w-24`}
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey900.svg`}
+              src={`${endNum < campaignLengthData ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey900.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey200.svg`}`}
               width={24}
               height={24}
               alt='오른쪽'

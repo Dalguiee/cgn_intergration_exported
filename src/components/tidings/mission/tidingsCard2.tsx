@@ -10,10 +10,11 @@ const TidingsCard2 = ({ item, pageMode }) => {
   return (
     <button
       data-aos='fade-up'
+      style={{ boxShadow: `0 0 30px 1px #ececec` }}
       onClick={() => {
         navigator(`/tidings/${pageMode}/detail?articleId=${item.id}`);
       }}
-      className={`mt-16 flex min-h-550 w-full flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378 max-lg:w-full lg:max-w-560`}
+      className={`flex min-h-550 w-full flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378 max-lg:w-full lg:max-w-560`}
     >
       <img
         className='min-h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top max-lg:aspect-[361/24] max-lg:min-h-361'

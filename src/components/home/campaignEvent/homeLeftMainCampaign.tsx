@@ -13,6 +13,7 @@ const HomeLeftMainCampaign = props => {
     >
       {props.campaignData?.slice(0, 1)?.map((item, key) => (
         <button
+          data-under-dark-gradient
           onClick={() => {
             navigate(`/tidings/${item?.category}/detail?articleId=${item?.id}`);
           }}
@@ -21,7 +22,7 @@ const HomeLeftMainCampaign = props => {
             backgroundImage: `url("${item?.src}")`,
             filter: `opacity(0.9999)`,
           }}
-          className={`relative bg-[url("${item?.src}")] flex h-full w-full flex-col items-start justify-between rounded-16 bg-cover bg-center bg-no-repeat px-24 pb-33 pt-24 max-lg:rounded-8 max-lg:px-16 max-lg:py-16`}
+          className={`relative overflow-hidden bg-[url("${item?.src}")] flex h-full w-full flex-col items-start justify-between rounded-16 bg-cover bg-center bg-no-repeat px-24 pb-33 pt-24 max-lg:rounded-8 max-lg:px-16 max-lg:py-16`}
         >
           {item?.tag?.map((tag, key) => {
             if (tag?.id === 1 || tag?.id === 3) {
@@ -29,7 +30,7 @@ const HomeLeftMainCampaign = props => {
             }
           })}
           <p
-            className={`text-bold32 max-lg:text-bold16 z-10 ml-19 text-left text-grey-900 max-lg:ml-0`}
+            className={`text-bold32 max-lg:text-bold16 z-10 ml-19 text-left text-white-solid max-lg:ml-0`}
           >
             {item?.title}
           </p>

@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import svgrPlugin from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: './',
+  // base: process.env.VITE_SITE_URL + '/',
   plugins: [react(), svgrPlugin()],
   resolve: {
     alias: [
@@ -12,5 +12,8 @@ export default defineConfig({
         replacement: '/src',
       },
     ],
+  },
+  server: {
+    // historyApiFallback: true,
   },
 });

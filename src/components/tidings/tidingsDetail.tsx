@@ -49,7 +49,7 @@ const TidingsDetail = () => {
 
   // 기사 찾는 함수
   const articleSearch = id => {
-    const result = allData?.data?.filter(item => item.id == id);
+    const result = allData?.data?.filter(item => item?.id == id);
     if (result?.length > 0) {
       return result[0];
     } else {
@@ -103,11 +103,6 @@ const TidingsDetail = () => {
       }
     }
   }, [queryData.articleId, allData]);
-
-  // 디테일페이지 넘어올 경우 맨 위로 올려줍니다
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
 
   return (
     <section

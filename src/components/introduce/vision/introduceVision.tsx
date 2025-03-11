@@ -2,9 +2,9 @@
 import React from 'react';
 
 // 컴포넌트
-import StyledButtons from '../common/styledButtons';
+import StyledButtons from '@/components/common/styledButtons';
 
-const IntroduceVision = () => {
+const IntroduceVision = ({ setPopupOpen }) => {
   const missionsData = [
     { id: 1, title: `MISSION`, text: `온 세상을 위한`, subText: `복음의 통로` },
     {
@@ -41,6 +41,7 @@ const IntroduceVision = () => {
 
   return (
     <section
+      data-aos='fade-up'
       className={`flex h-fit w-full flex-col items-center justify-start`}
     >
       {/* 상단 영역 */}
@@ -49,13 +50,16 @@ const IntroduceVision = () => {
       >
         {/* 오른쪽 버튼 */}
         <div
-          className={`mb-40 flex w-full items-center justify-end max-lg:mb-24`}
+          className={`mb-40 flex w-full items-center justify-end max-lg:mb-24 max-lg:px-16`}
         >
           <StyledButtons
             text={`CGN 브랜드 소개`}
             formMode={`mode1-r`}
             colorMode={`mode4`}
-            className={`border-primary-500 text-primary-500`}
+            className={`!h-48 border-primary-500 text-primary-500 max-lg:!h-36`}
+            onClick={() => {
+              setPopupOpen(true);
+            }}
           />
         </div>
         {/* 상단 주황색 색망 상자컨텐츠 */}

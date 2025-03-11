@@ -1,6 +1,9 @@
+// 훅
+import React from 'react';
+
+// 컴포넌트
 import TidingsDetail from '@/components/tidings/tidingsDetail';
 import ThemeHeader from '@/components/common/themeHeader';
-import React from 'react';
 
 const DetailPage = () => {
   return (

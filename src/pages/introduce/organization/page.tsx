@@ -8,7 +8,7 @@ import IntroduceOrganization from '@/components/introduce/organization/introduce
 const IntroduceOrganizationPage = () => {
   return (
     <section className={`bg-primary-50`}>
-      <ThemeHeader />
+      <ThemeHeader className={`max-lg:hidden`} />
       <IntroduceOrganization />
     </section>
   );

@@ -1,4 +1,4 @@
-import { useEffect, useState, useSyncExternalStore } from 'react';
+import { useEffect, useState } from 'react';
 
 // 컴포넌트
 import TopHeader from '@/layouts/mainHeader/topHeader';
@@ -7,6 +7,7 @@ import DepthBackground from '@/layouts/mainHeader/depthBackground';
 import MoBottomHeader from '@/layouts/mainHeader/moBottomHeader';
 import MoBurgerSubMenu from '@/layouts/mainHeader/moBurgerSubMenu';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
+import { useLocation } from 'react-router-dom';
 
 // pc 버전일때 사용되는 DepthBackground, topHeader botomHeader 가 있으며,
 // 모바일 버전에서 사용되는 burderSubMenu 와 mobileBottom 으로 나뉘어 있습니다
@@ -58,19 +59,19 @@ const centerMenu = [
       },
       {
         text: '기관 소개',
-        link: '/introduce/organization?articleId=0',
+        link: '/introduce/organization',
       },
       {
         text: '해외지사 소개',
-        link: '/introduce',
+        link: '/introduce/worldwide',
       },
       {
         text: '홍보 대사',
-        link: '/introduce',
+        link: '/introduce/ambassador',
       },
       {
         text: '채용',
-        link: '/introduce',
+        link: '/introduce/recruit',
       },
     ],
   },
@@ -129,33 +130,50 @@ const centerMenu = [
   {
     key: 4,
     text: '시청 안내',
-    path: '/media/',
-    link: '/media',
+    path: '/mediacenter/',
+    link: '/mediacenter/description',
     subMenu: [
       {
         text: '퐁당 웹/앱/스마트TV',
-        link: '/support',
+        link: '/mediacenter/description',
       },
       {
         text: '케이블/IPTV',
-        link: '/support',
+        link: '/mediacenter/description',
       },
       {
         text: '위성',
-        link: '/support',
+        link: '/mediacenter/description',
       },
       {
         text: '소셜&오픈 플랫폼',
-        link: '/support',
+        link: '/mediacenter/description',
       },
     ],
   },
 ];
 
+const whiteModeList = [
+  `/customercenter/questions`,
+  `/subscribepayment`,
+  `/mediacenter/description`,
+];
+
 const MainHeader = () => {
+  const location = useLocation();
   const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
   const [burger, setBurger] = useState(false);
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
+  const [whiteMode, setWhiteMode] = useState(false);
+
+  useEffect(() => {
+    setWhiteMode(false);
+    whiteModeList?.forEach(list => {
+      if (location?.pathname?.includes(list)) {
+        setWhiteMode(true);
+      }
+    });
+  }, [location?.pathname]);
 
   // 2depth 활성화
   useEffect(() => {
@@ -175,7 +193,7 @@ const MainHeader = () => {
 
   return (
     <header
-      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat pb-16 max-lg:px-20 max-lg:pb-0`}
+      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
       data-comment='메인헤더'
     >
       <TopHeader />
