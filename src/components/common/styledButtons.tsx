@@ -79,14 +79,14 @@ const StyledButtons = ({
       className={`${className} flex items-center justify-center gap-8 text-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
     >
       <img
-        src={`/public/images/icon/play_store.svg`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/play_store.svg`}
         className={`${playStoreMode ? `` : `hidden`} h-24 w-24 object-cover`}
         width={24}
         height={24}
         alt=''
       />
       <img
-        src={`/public/images/icon/app_store.svg`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/app_store.svg`}
         className={`${appStoreMode ? `` : `hidden`} h-24 w-24 object-cover`}
         width={24}
         height={24}

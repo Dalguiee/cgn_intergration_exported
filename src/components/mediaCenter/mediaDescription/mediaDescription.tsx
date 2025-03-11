@@ -1,48 +1,45 @@
 // 훅
 import React from 'react';
-import HTMLReactParser from 'html-react-parser';
 
 // 컴포넌트
 import MediaDescriptionSection1 from '@/components/mediaCenter/mediaDescription/mediaDescriptionSection1';
 import MediaDescriptionSection2 from '@/components/mediaCenter/mediaDescription/mediaDescriptionSection2';
 import MediaDescriptionSection3 from '@/components/mediaCenter/mediaDescription/mediaDescriptionSection3';
+import MediaDescriptionSection4 from '@/components/mediaCenter/mediaDescription/mediaDescriptionSection4';
+import StyledButtons from '@/components/common/styledButtons';
 
-// 데이터
-const cableData = [
+const linkData = [
   {
-    title: `IPTV`,
-    subTitle: `CGN 방송을 국내 모든 IPTV에서<br />실시간으로 시청하실 수 있습니다.`,
+    src: `/public/images/mediacenter/cgn_rounded.png`,
     data: [
       {
-        src: `/public/images/mediacenter/cable_icon_1_1.svg`,
-
-        value: `237번`,
+        title: `CGN 공식 유튜브`,
+        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
       },
       {
-        src: `/public/images/mediacenter/cable_icon_1_2.svg`,
-        value: `292번`,
+        title: `CGN 공식 인스타그램`,
+        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
       },
       {
-        src: `/public/images/mediacenter/cable_icon_1_3.svg`,
-        value: `271번`,
+        title: `CGN 공식 카카오채널`,
+        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
       },
     ],
   },
   {
-    title: `케이블`,
-    subTitle: `CGN 방송을 LG헬로비전, 딜라이브 등을 통해<br />전국 122개 지역에서 실시간으로 시청하실 수 있습니다.`,
+    src: `/public/images/mediacenter/fondant_rounded.png`,
     data: [
       {
-        src: `/public/images/mediacenter/cable_icon_2_1.svg`,
-        value: `288번`,
+        title: `Fondant 공식 유튜브`,
+        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
       },
       {
-        src: `/public/images/mediacenter/cable_icon_2_2.svg`,
-        value: `304번`,
+        title: `Fondant 공식 인스타그램`,
+        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
       },
       {
-        src: `/public/images/mediacenter/cable_icon_2_3.svg`,
-        value: `550번`,
+        title: `Fondant 공식 카카오채널`,
+        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
       },
     ],
   },
@@ -54,57 +51,63 @@ const MediaDescription = () => {
       <MediaDescriptionSection1 />
       <MediaDescriptionSection2 />
       <MediaDescriptionSection3 />
+      <MediaDescriptionSection4 />
       <section
-        className={`flex w-full flex-col items-center justify-start pb-120 pt-120`}
+        className={`flex w-full flex-col items-center justify-start bg-secondary-blue pb-120 pt-120`}
       >
         <div
           className={`flex w-full max-w-1200 flex-col items-center justify-start`}
         >
-          <p className={`text-bold32 mb-40 w-full text-grey-900`}>
-            케이블/IPTV
-          </p>
-          <div className={`flex w-full items-start justify-center gap-38`}>
-            {cableData?.map((item, idx) => (
+          <div className={`mb-40 text-center`}>
+            <p className={`text-bold48 mb-16 text-white-solid`}>
+              소셜&오픈 플랫폼
+            </p>
+            <p className={`text-regular18 text-grey-50`}>
+              유튜브, 인스타그램, 카카오톡 채널을 통해
+              <br />
+              CGN과 퐁당 소식을 쉽게 접하실 수 있습니다.
+            </p>
+          </div>
+
+          <div
+            className={`flex w-full flex-col items-center justify-center gap-24`}
+          >
+            {linkData?.map((item, idx) => (
               <div
                 key={idx}
-                className={`flex h-534 w-full flex-col items-center justify-center rounded-16 bg-grey-50`}
+                className={`flex w-full items-center justify-start rounded-16 bg-white-solid px-40 py-40`}
               >
+                <img
+                  className={`mr-60 h-120 w-120 object-cover`}
+                  src={item.src}
+                  width={120}
+                  height={120}
+                  alt=''
+                />
                 <div
-                  className={`mb-60 flex w-full max-w-448 flex-col items-center justify-center gap-12`}
+                  className={`flex w-full items-center justify-start gap-40`}
                 >
-                  {item?.data?.map((item, idx) => (
+                  {item.data?.map((item, idx) => (
                     <div
-                      key={idx}
-                      className={`flex h-52 w-full items-center justify-between rounded-12 bg-white-solid px-41`}
+                      className={`flex w-full max-w-300 flex-col items-start justify-start gap-16`}
                     >
-                      <img
-                        src={item?.src}
-                        className={`h-24 w-115`}
-                        width={115}
-                        height={24}
-                        alt=''
+                      <p className={`text-bold24 text-grey-900`}>
+                        {item?.title}
+                      </p>
+                      <StyledButtons
+                        text={`바로가기`}
+                        formMode={`mode2-r`}
+                        colorMode={`mode2`}
+                        onClick={() => {
+                          window.open(item?.link, '_blank');
+                        }}
                       />
-                      <span className={`text-bold18 text-grey-900`}>
-                        {item?.value}
-                      </span>
                     </div>
                   ))}
-                </div>
-                <div className={`text-center`}>
-                  <p className={`text-bold40 mb-26 text-grey-900`}>
-                    {item?.title}
-                  </p>
-                  <p className={`text-regular18 text-grey-500`}>
-                    {HTMLReactParser(item?.subTitle)}
-                  </p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        <div className={`w-full max-w-1200`}>
-          <p className={`text-bold32 w-full`}></p>
         </div>
       </section>
     </section>

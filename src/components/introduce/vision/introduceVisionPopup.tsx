@@ -49,10 +49,10 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
   return (
     <>
       <div
-        className={`${popupOpen ? `` : `hidden`} fixed left-0 top-0 z-20 h-screen w-screen bg-grey-900 opacity-95`}
+        className={`${popupOpen ? `` : `hidden`} fixed left-0 top-0 z-[100] h-screen w-screen bg-grey-900 opacity-95`}
       ></div>
       <div
-        className={`${popupOpen ? `` : `hidden`} fixed left-[50%] top-[50%] z-20 flex h-787 w-full max-w-960 translate-x-[-50%] translate-y-[-50%] transform flex-col items-center justify-start bg-white-solid pt-24 max-lg:h-[calc(100%-10px)] max-lg:w-[calc(100%-10px)]`}
+        className={`${popupOpen ? `` : `hidden`} fixed left-[50%] top-[50%] z-[110] flex h-787 w-full max-w-960 translate-x-[-50%] translate-y-[-50%] transform flex-col items-center justify-start bg-white-solid pt-24 max-lg:h-[calc(100%-10px)] max-lg:w-[calc(100%-10px)]`}
       >
         <div
           className={`mb-60 flex w-full flex-col items-start justify-center px-40 max-lg:px-16`}

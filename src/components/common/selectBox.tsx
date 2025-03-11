@@ -1,5 +1,4 @@
-// props 로 받는 listData 라는 array 데이터, [selectedItem, setSelectedItem] state 가 필요합니다.
-// tailwind className props 로 받음, 기본값은 30px 입니다.
+// props 로 받는 listData 로써 array 데이터수급, [selectedItem, setSelectedItem] state 필요.
 
 import React, { useEffect, useRef, useState } from 'react';
 
@@ -70,7 +69,7 @@ const SelectBox = ({
             {listData?.map((item, key) => (
               <div
                 key={key}
-                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full items-center justify-start max-lg:h-48`}
+                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full items-center justify-start pt-1 max-lg:h-48`}
               >
                 <button
                   onClick={() => {

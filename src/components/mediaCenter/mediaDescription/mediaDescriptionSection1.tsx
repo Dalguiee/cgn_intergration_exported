@@ -8,19 +8,19 @@ const MediaDescriptionSection1 = () => {
       <div
         className={`absolute left-0 top-0 z-10 h-460 w-full bg-cover bg-center bg-no-repeat`}
         style={{
-          backgroundImage: `url(/public/images/mediacenter/title_background.png)`,
+          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_background.png)`,
         }}
       ></div>
       <img
         className={`z-20 mt-54 h-50 w-226 object-cover`}
-        src={`/public/images/mediacenter/fondant_logo.png`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/fondant_logo.png`}
         width={226}
         height={50}
         alt=''
       />
       <img
         className={`z-20 mt-36 h-529 w-257 object-cover`}
-        src={`/public/images/mediacenter/title_phone.png`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_phone.png`}
         width={257}
         height={529}
         alt=''
