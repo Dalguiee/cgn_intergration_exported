@@ -55,6 +55,7 @@ const IntroduceFollowers = () => {
   ];
   return (
     <div
+      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-60 max-lg:px-16 max-lg:pb-60 max-lg:pt-0`}
     >
       <div

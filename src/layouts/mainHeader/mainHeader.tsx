@@ -7,6 +7,7 @@ import DepthBackground from '@/layouts/mainHeader/depthBackground';
 import MoBottomHeader from '@/layouts/mainHeader/moBottomHeader';
 import MoBurgerSubMenu from '@/layouts/mainHeader/moBurgerSubMenu';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
+import { useLocation } from 'react-router-dom';
 
 // pc 버전일때 사용되는 DepthBackground, topHeader botomHeader 가 있으며,
 // 모바일 버전에서 사용되는 burderSubMenu 와 mobileBottom 으로 나뉘어 있습니다
@@ -152,10 +153,24 @@ const centerMenu = [
   },
 ];
 
+const whiteModeList = [`/customercenter/questions`];
+
 const MainHeader = () => {
+  const location = useLocation();
   const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
   const [burger, setBurger] = useState(false);
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
+  const [whiteMode, setWhiteMode] = useState(false);
+
+  useEffect(() => {
+    whiteModeList?.forEach(list => {
+      if (location?.pathname?.includes(list)) {
+        setWhiteMode(true);
+      } else {
+        setWhiteMode(false);
+      }
+    });
+  }, [location?.pathname]);
 
   // 2depth 활성화
   useEffect(() => {
@@ -175,7 +190,7 @@ const MainHeader = () => {
 
   return (
     <header
-      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : 'bg-primary-50'} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
+      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
       data-comment='메인헤더'
     >
       <TopHeader />

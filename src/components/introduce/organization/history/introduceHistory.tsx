@@ -696,6 +696,7 @@ const IntroduceHistory = () => {
 
   return (
     <section
+      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start max-lg:mb-120 max-lg:px-16`}
     >
       <div

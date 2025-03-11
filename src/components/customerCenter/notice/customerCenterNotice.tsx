@@ -26,11 +26,11 @@ const CustomerCenterNotice = () => {
   return (
     <section
       data-aos='fade-up'
-      className={`flex w-full flex-col items-center justify-start pb-160 max-lg:pb-60`}
+      className={`flex w-full flex-col items-center justify-start pb-160 max-lg:px-16 max-lg:pb-60`}
     >
       <div className={`w-full max-w-1200`}>
         <div
-          className={`flex w-full items-center justify-end pb-24 pt-40 max-lg:px-16 max-lg:py-0`}
+          className={`flex w-full items-center justify-end pb-24 pt-40 max-lg:mt-24 max-lg:py-10`}
         >
           <DefaultInput
             placeholder='검색어를 입력해 주세요.'
@@ -42,25 +42,25 @@ const CustomerCenterNotice = () => {
         <div className={`mb-60 w-full border-t-3 border-grey-900`}>
           <table className={`w-full table-fixed`}>
             <colgroup>
-              <col className={`w-80`} />
+              <col className={`w-80 max-lg:w-24`} />
               <col className={`w-full`} />
-              <col className={`w-120`} />
+              <col className={`w-120 max-lg:w-59`} />
             </colgroup>
-            <thead className={`border-b-2 border-grey-200`}>
+            <thead className={`border-b-2 border-grey-200 max-lg:hidden`}>
               <tr className={`h-80`}>
                 <th>
                   <div>
-                    <span>번호</span>
+                    <span className={`text-bold18 text-grey-900`}>번호</span>
                   </div>
                 </th>
                 <th>
                   <div>
-                    <span>제목</span>
+                    <span className={`text-bold18 text-grey-900`}>제목</span>
                   </div>
                 </th>
                 <th>
                   <div>
-                    <span>날짜</span>
+                    <span className={`text-bold18 text-grey-900`}>날짜</span>
                   </div>
                 </th>
               </tr>
@@ -72,13 +72,17 @@ const CustomerCenterNotice = () => {
                   <tr key={key} className={`h-80 border-b-2 border-grey-200`}>
                     <td>
                       <div className={`flex items-center justify-center`}>
-                        <span className={`text-regular16 text-grey-500`}>
+                        <span
+                          className={`text-regular16 max-lg:text-regular12 text-grey-500`}
+                        >
                           {item?.id}
                         </span>
                       </div>
                     </td>
                     <td>
-                      <div className={`flex items-center justify-center`}>
+                      <div
+                        className={`flex items-center justify-start pl-40 max-lg:pl-16`}
+                      >
                         <button
                           onClick={() => {
                             navigate(
@@ -94,7 +98,9 @@ const CustomerCenterNotice = () => {
                     </td>
                     <td>
                       <div className={`flex items-center justify-center`}>
-                        <span className={`text-regular16 text-grey-400`}>
+                        <span
+                          className={`text-regular16 max-lg:text-regular12 text-grey-400`}
+                        >
                           {item?.date}
                         </span>
                       </div>
@@ -105,6 +111,7 @@ const CustomerCenterNotice = () => {
           </table>
         </div>
         <Pagination
+          className={`max-lg:hidden`}
           listData={findedMockupData}
           setListStartNum={setListStartNum}
           setListEndNum={setListEndNum}

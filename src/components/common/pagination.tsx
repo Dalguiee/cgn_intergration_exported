@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 
-const Pagination = ({ listData, setListStartNum, setListEndNum }) => {
+const Pagination = ({
+  listData,
+  setListStartNum,
+  setListEndNum,
+  className = ``,
+}) => {
   // 좌우 페이징용 state
   const [pagingCategoryStartNum, setPagingCategoryStartNum] = useState(0);
   const [pagingCategoryEndNum, setPagingCategoryEndNum] = useState(10);
@@ -30,7 +35,9 @@ const Pagination = ({ listData, setListStartNum, setListEndNum }) => {
   };
 
   return (
-    <div className={`flex items-center justify-center gap-12`}>
+    <div
+      className={`flex items-center justify-center gap-12 ${className && className}`}
+    >
       <div className={`flex items-center justify-center gap-14`}>
         <span className={`text-regular16 text-grey-400`}>이전</span>
         <button
@@ -40,7 +47,7 @@ const Pagination = ({ listData, setListStartNum, setListEndNum }) => {
           }}
         >
           <img
-            src='/public/images/icon/arrow_left_grey900.svg'
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg`}
             className={`h-24 w-24`}
             width={24}
             height={24}
@@ -79,7 +86,7 @@ const Pagination = ({ listData, setListStartNum, setListEndNum }) => {
           }}
         >
           <img
-            src='/public/images/icon/arrow_right_grey900.svg'
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey900.svg`}
             className={`h-24 w-24`}
             width={24}
             height={24}

@@ -41,6 +41,7 @@ const IntroduceVision = ({ popupOpen, setPopupOpen }) => {
 
   return (
     <section
+      data-aos='fade-up'
       className={`flex h-fit w-full flex-col items-center justify-start`}
     >
       {/* 상단 영역 */}

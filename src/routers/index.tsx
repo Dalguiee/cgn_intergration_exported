@@ -18,6 +18,7 @@ import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
 import IntroduceAmbassadorPage from '@/pages/introduce/ambassador/page';
 import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotice/page';
 import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
+import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQuestions/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -80,6 +81,11 @@ export default function MainRouter() {
           path='customercenter/notice'
           element={<CustomerCenterNoticePage />}
         ></Route>
+        <Route
+          path='customercenter/questions'
+          element={<CustomerCenterQuestionsPage />}
+        ></Route>
+
         <Route
           path='customercenter/notice/detail'
           element={<CustomerCenterNoticeDetailPage />}

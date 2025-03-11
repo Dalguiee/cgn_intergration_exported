@@ -27,7 +27,7 @@ const IntroduceDirections = () => {
   ];
 
   return (
-    <section className={`w-full`}>
+    <section data-aos='fade-up' className={`w-full`}>
       <div
         style={{
           backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/directions_background.png)`,

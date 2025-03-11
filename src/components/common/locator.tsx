@@ -111,6 +111,11 @@ const Locator = ({ className = `` }) => {
             data = '고객 센터';
             pathStack = 'customercenter/notice';
           }
+          if (data === 'questions') {
+            pathPiece = data;
+            data = '자주 묻는 질문';
+            pathStack = 'customercenter/questions';
+          }
 
           if (data === 'notice') {
             pathPiece = data;

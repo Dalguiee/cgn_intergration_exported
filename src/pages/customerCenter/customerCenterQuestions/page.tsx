@@ -2,18 +2,18 @@
 import React from 'react';
 
 // 컴포넌트
-import CustomerCenterNotice from '@/components/customerCenter/notice/customerCenterNotice';
 import ThemeHeader from '@/components/common/themeHeader';
 import CustomerCenterCategoryList from '@/components/customerCenter/customerCentercategoryList';
+import CustomerCenterQuestions from '@/components/customerCenter/questions/customerCenterQuestions';
 
-const CustomerCenterNoticePage = () => {
+const CustomerCenterQuestionsPage = () => {
   return (
-    <section className={`bg-primary-50`}>
+    <section className={``}>
       <ThemeHeader />
       <CustomerCenterCategoryList />
-      <CustomerCenterNotice />
+      <CustomerCenterQuestions />
     </section>
   );
 };
 
-export default CustomerCenterNoticePage;
+export default CustomerCenterQuestionsPage;

@@ -3,7 +3,7 @@ import React from 'react';
 
 const IntroduceCEO = () => {
   return (
-    <section className={`w-full max-lg:pb-120`}>
+    <section data-aos='fade-up' className={`w-full max-lg:pb-120`}>
       <div
         className={`mt-80 flex h-663 w-full flex-col items-center justify-center bg-secondary-brown px-16 max-lg:mt-0 max-lg:h-795 max-lg:justify-start max-lg:px-16 max-lg:pt-16`}
       >

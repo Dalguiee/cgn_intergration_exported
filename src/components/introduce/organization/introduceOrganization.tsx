@@ -1,5 +1,5 @@
 // 훅
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // 컴포넌트
 import CategoryList from '@/components/common/categoryList';
