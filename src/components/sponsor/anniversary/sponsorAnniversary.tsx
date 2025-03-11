@@ -35,6 +35,7 @@ const SponsorAnniversary = () => {
     {
       img: 'anniversary_list5.png',
       title: '입사',
+
       text: ['직장생활,', '주님과 함께 첫 시작!'],
     },
     {
