@@ -1,6 +1,6 @@
 import React from 'react';
 
-const sponsorDetail = () => {
+const IntroducesupportDetail = () => {
   return (
     <div className=''>
       <div className=''></div>
@@ -8,4 +8,4 @@ const sponsorDetail = () => {
   );
 };
 
-export default sponsorDetail;
+export default IntroducesupportDetail;

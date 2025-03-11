@@ -13,10 +13,10 @@ import TidingsDetailPage from '@/pages/tidings/detailPage';
 import IntroducePage from '@/pages/introduce/vision/page';
 import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
 // 후원
-import SponsorPage from '@/pages/sponsor/main/page';
-import SponsorAnniversaryPage from '@/pages/sponsor/anniversary/page';
-import SponsorOverseasPage from '@/pages/sponsor/overseas/page';
-import SponsoReportPage from '@/pages/sponsor/report/page';
+import IntroducesupportPage from '@/pages/introducesupport/main/page';
+import IntroducesupportAnniversaryPage from '@/pages/introducesupport/anniversary/page';
+import IntroducesupportOverseasPage from '@/pages/introducesupport/overseas/page';
+import IntroducesupportReportPage from '@/pages/introducesupport/report/page';
 
 export default function MainRouter() {
   return (
@@ -46,20 +46,26 @@ export default function MainRouter() {
           element={<IntroduceOrganizationPage />}
         ></Route>
         {/* 후원 */}
-        <Route path='sponsor/main' element={<SponsorPage />}></Route>
+        <Route
+          path='introducesupport/main'
+          element={<IntroducesupportPage />}
+        ></Route>
         {/* <Route
           path='introduce/organization'
           element={<IntroduceOrganizationPage />}
           ></Route> */}
         <Route
-          path='sponsor/anniversary'
-          element={<SponsorAnniversaryPage />}
+          path='introducesupport/anniversary'
+          element={<IntroducesupportAnniversaryPage />}
         ></Route>
         <Route
-          path='sponsor/overseas'
-          element={<SponsorOverseasPage />}
+          path='introducesupport/overseas'
+          element={<IntroducesupportOverseasPage />}
         ></Route>
-        <Route path='sponsor/report' element={<SponsoReportPage />}></Route>
+        <Route
+          path='introducesupport/report'
+          element={<IntroducesupportReportPage />}
+        ></Route>
       </Route>
     </Routes>
   );

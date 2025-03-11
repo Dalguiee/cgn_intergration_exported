@@ -7,7 +7,7 @@ const BranchesCard = props => {
       className={`relative w-[calc(50%-30px)] rounded-16 bg-white-solid pb-24 pl-32 pt-24 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] ${donate ? 'pb-88' : ''} pe-24 max-lg:w-full`}
     >
       <img
-        src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/branches_card_bar.png`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/branches_card_bar.png`}
         alt=''
         className='absolute left-0 h-155 w-20 max-lg:w-14'
       />

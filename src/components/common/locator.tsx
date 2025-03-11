@@ -83,23 +83,23 @@ const Locator = () => {
     }
 
     // 후원
-    if (location.pathname.includes('/sponsor/')) {
+    if (location.pathname.includes('/introducesupport/')) {
       setChangedPathName(
         pageData?.map(data => {
-          if (data === 'sponsor') {
+          if (data === 'introducesupport') {
             pathPiece = data;
             data = '후원안내';
-            pathStack = 'sponsor/';
+            pathStack = 'introducesupport/';
           }
           if (data === 'overseas') {
             pathPiece = data;
             data = '해외지사 후원';
-            pathStack = 'sponsor/overseas';
+            pathStack = 'introducesupport/overseas';
           }
           if (data === 'report') {
             pathPiece = data;
             data = '후원내역 보고';
-            pathStack = 'sponsor/report';
+            pathStack = 'introducesupport/report';
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

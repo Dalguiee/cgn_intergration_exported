@@ -80,7 +80,7 @@ const SelectBox = ({
                     setSelectedItem(item);
                     setObjSelected(true);
                   }}
-                  className={`text-regular18 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12`}
+                  className={`text-regular18 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12 hover:bg-primary-50`}
                 >
                   <span
                   // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}

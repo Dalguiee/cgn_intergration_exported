@@ -9,7 +9,7 @@ import DefaultInput from '@/components/common/defaultInput';
 import CheckBox from '@/components/common/checkBox';
 
 // 기념일 후원 페이지
-const SponsorAnniversary = () => {
+const IntroducesupportAnniversary = () => {
   // 선교 후원으로 더 특별하게 기념하세요
   const anniversarylist = [
     {
@@ -205,12 +205,12 @@ const SponsorAnniversary = () => {
       {/* 메인 배너 */}
       <div className='w-full'>
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/pc_anniversary_banner.jpg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_anniversary_banner.jpg`}
           alt=''
           className='hidden w-full lg:block'
         />
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/mo_anniversary_banner.jpg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_anniversary_banner.jpg`}
           alt=''
           className='hidden w-full max-lg:block'
         />
@@ -237,7 +237,7 @@ const SponsorAnniversary = () => {
                 key={index}
               >
                 <img
-                  src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/${item.img}`}
+                  src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/${item.img}`}
                   alt=''
                   className='mb-40 aspect-square w-full max-w-300 max-lg:mb-0 max-lg:max-w-120'
                 />
@@ -278,7 +278,7 @@ const SponsorAnniversary = () => {
               내가 만든 나만의 기념일
             </span>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/pc_anniversary_text_deco.png`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_anniversary_text_deco.png`}
               alt=''
               className='w-546 max-lg:hidden'
             />
@@ -303,12 +303,12 @@ const SponsorAnniversary = () => {
                       style={{ background: item.color }}
                     >
                       <img
-                        src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/${item.img}`}
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/${item.img}`}
                         alt=''
                         className='w-[60%] max-w-683 max-lg:hidden'
                       />
                       <img
-                        src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/mo_${item.img}`}
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_${item.img}`}
                         alt=''
                         className='hidden w-full max-w-360 max-lg:block'
                       />
@@ -332,8 +332,8 @@ const SponsorAnniversary = () => {
                 );
               })}
             </Swiper>
-            <button className='swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-[url(/public/images/sponsor/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40'></button>
-            <button className='swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-[url(/public/images/sponsor/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40'></button>
+            <button className='swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-[url(/public/images/introducesupport/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40'></button>
+            <button className='swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-[url(/public/images/introducesupport/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40'></button>
           </div>
         </div>
       </div>
@@ -354,7 +354,7 @@ const SponsorAnniversary = () => {
               기념일 후원증서 & 굿즈
             </span>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/pc_anniversary_text_deco.png`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_anniversary_text_deco.png`}
               alt=''
               className='w-546 max-lg:hidden'
             />
@@ -362,7 +362,7 @@ const SponsorAnniversary = () => {
           <div className='relative flex w-full max-w-1200 gap-24 max-lg:flex-col'>
             <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
               <img
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/anniversary_goods1.png`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_goods1.png`}
                 alt=''
                 className='mb-40 ml-24 h-336 w-336 max-lg:mb-0 max-lg:h-120 max-lg:w-120'
               />
@@ -381,7 +381,7 @@ const SponsorAnniversary = () => {
             </div>
             <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
               <img
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/anniversary_goods2.png`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_goods2.png`}
                 alt=''
                 className='mb-40 ml-24 h-336 w-336 max-lg:mb-0 max-lg:h-120 max-lg:w-120'
               />
@@ -527,7 +527,7 @@ const SponsorAnniversary = () => {
           <div className='flex h-800 w-1/2 flex-col items-center rounded-16 bg-white-solid px-120 pt-80 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:rounded-0 max-lg:px-40 max-lg:pb-60'>
             <div className='flex flex-col items-center max-lg:max-w-393'>
               <img
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/oath_title.svg`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/oath_title.svg`}
                 alt=''
                 className='mb-60 h-86 w-269 max-lg:h-64 max-lg:w-200'
               />
@@ -620,7 +620,7 @@ const SponsorAnniversary = () => {
                 <SwiperSlide key={index}>
                   <div className={`flex w-full flex-col items-center`}>
                     <img
-                      src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/${item.img}`}
+                      src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/${item.img}`}
                       alt=''
                       className='mb-12 w-full'
                     />
@@ -647,4 +647,4 @@ const SponsorAnniversary = () => {
   );
 };
 
-export default SponsorAnniversary;
+export default IntroducesupportAnniversary;

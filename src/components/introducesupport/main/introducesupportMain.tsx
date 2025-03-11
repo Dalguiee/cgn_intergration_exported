@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SponsorMain = () => {
+const IntroducesupportMain = () => {
   return (
     <>
       <section
@@ -8,7 +8,7 @@ const SponsorMain = () => {
         data-comment='후원페이지'
       >
         {/* ---------- MO ---------- */}
-        <div className='flex w-full flex-col items-center bg-[url(/public/images/sponsor/sponsor_main_bg_mo.jpg)] bg-cover bg-top bg-repeat pb-120 pt-60'>
+        <div className='flex w-full flex-col items-center bg-[url(/public/images/introducesupport/sponsor_main_bg_mo.jpg)] bg-cover bg-top bg-repeat pb-120 pt-60'>
           <div className='text-bold32 mb-60 break-keep text-center text-white-solid'>
             CGN 모든 사역은
             <br />
@@ -16,7 +16,7 @@ const SponsorMain = () => {
           </div>
           <button className='aspect-320/180 relative mb-24 w-[calc(100%_-_80px)]'>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/mo_main_sponsor1.jpg`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_sponsor1.jpg`}
               alt=''
               className='h-full w-full'
             />
@@ -28,7 +28,7 @@ const SponsorMain = () => {
           </button>
           <button className='aspect-320/180 relative mb-24 w-[calc(100%_-_80px)]'>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/mo_main_sponsor2.jpg`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_sponsor2.jpg`}
               alt=''
               className='h-full w-full'
             />
@@ -40,7 +40,7 @@ const SponsorMain = () => {
           </button>
           <button className='aspect-320/180 relative w-[calc(100%_-_80px)]'>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/mo_main_sponsor3.jpg`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_sponsor3.jpg`}
               alt=''
               className='h-full w-full'
             />
@@ -70,4 +70,4 @@ const SponsorMain = () => {
   );
 };
 
-export default SponsorMain;
+export default IntroducesupportMain;

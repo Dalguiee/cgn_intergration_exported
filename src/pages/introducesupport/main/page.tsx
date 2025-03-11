@@ -1,11 +1,11 @@
 import React from 'react';
 
-import SponsorMain from '@/components/sponsor/main/sponsorMain';
+import IntroducesupportMain from '@/components/introducesupport/main/introducesupportMain';
 
 const SponsorPage = () => {
   return (
     <section className={`bg-primary-50`}>
-      <SponsorMain />
+      <IntroducesupportMain />
     </section>
   );
 };

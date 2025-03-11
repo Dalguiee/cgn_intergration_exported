@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SelectBox from '@/components/common/selectBox';
 
 //후원내역 보고 페이지
-const sponsorReport = () => {
+const introducesupportReport = () => {
   const [dateYear, setDateYear] = useState({ text: '' });
   const dateYearOption = [
     {
@@ -27,4 +27,4 @@ const sponsorReport = () => {
   );
 };
 
-export default sponsorReport;
+export default introducesupportReport;

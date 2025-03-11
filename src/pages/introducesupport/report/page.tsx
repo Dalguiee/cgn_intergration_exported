@@ -1,6 +1,6 @@
 // 개발중입니다.
 
-import SponsorReport from '@/components/sponsor/report/sponsorReport';
+import SponsorReport from '@/components/introducesupport/report/introducesupportReport';
 import ThemeHeader from '@/components/common/themeHeader';
 import React from 'react';
 

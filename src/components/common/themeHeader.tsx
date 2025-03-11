@@ -42,12 +42,12 @@ const ThemeHeader = () => {
       subTitle: 'CGN의 보도 자료를 확인해 보세요.',
     },
     {
-      path: 'sponsor/overseas',
+      path: 'introducesupport/overseas',
       title: '해외지사 후원',
       subTitle: 'Please join CGN’s media mission to spread His love and Word.',
     },
     {
-      path: 'sponsor/report',
+      path: 'introducesupport/report',
       title: '후원내역 보고',
       subTitle: '소중한 후원금 사용 내역을 확인해 보세요',
     },
