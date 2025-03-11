@@ -417,7 +417,7 @@ const IntroducesupportAnniversary = () => {
                   searchBtn={false}
                   inputText={name}
                   setInputText={setName}
-                  width='full'
+                  className='w-full'
                 />
               </div>
               <div className='flex w-1/2 flex-col max-lg:w-full'>
@@ -430,7 +430,7 @@ const IntroducesupportAnniversary = () => {
                   searchBtn={false}
                   inputText={anniversary}
                   setInputText={setAnniversary}
-                  width='full'
+                  className='w-full'
                 />
               </div>
             </div>
@@ -487,7 +487,7 @@ const IntroducesupportAnniversary = () => {
                     searchBtn={false}
                     inputText={phoneNum1}
                     setInputText={setPhoneNum1}
-                    width='full'
+                    className='w-full'
                   />
                 </div>
                 <span className='text-regular14 shrink-0'>-</span>
@@ -497,7 +497,7 @@ const IntroducesupportAnniversary = () => {
                     searchBtn={false}
                     inputText={phoneNum2}
                     setInputText={setPhoneNum2}
-                    width='full'
+                    className='w-full'
                   />
                 </div>
                 <span className='text-regular14 shrink-0'>-</span>
@@ -507,7 +507,7 @@ const IntroducesupportAnniversary = () => {
                     searchBtn={false}
                     inputText={phoneNum3}
                     setInputText={setPhoneNum3}
-                    width='full'
+                    className='w-full'
                   />
                 </div>
               </div>
