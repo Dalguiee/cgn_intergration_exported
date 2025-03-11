@@ -9,6 +9,7 @@ const DefaultInput = ({
   textClearBtn = false,
   inputText = '',
   setInputText,
+  width = '320',
 }) => {
   const [pwMode, setPwMode] = useState(false); // 비밀번호 보여주기 유무
 
@@ -24,7 +25,7 @@ const DefaultInput = ({
 
   return (
     <div
-      className={`flex h-56 w-320 items-center justify-between gap-8 rounded-8 border-1 border-grey-200 bg-white-solid pl-16 pr-12 max-lg:h-48 max-lg:w-full`}
+      className={`flex h-56 w-${width} items-center justify-between gap-8 rounded-8 border-1 border-grey-200 bg-white-solid pl-16 pr-12 max-lg:h-48 max-lg:w-full`}
     >
       <input
         className={`text-regular16 w-full text-grey-900`}

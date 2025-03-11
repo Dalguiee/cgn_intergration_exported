@@ -41,6 +41,16 @@ const ThemeHeader = () => {
       title: '보도 자료',
       subTitle: 'CGN의 보도 자료를 확인해 보세요.',
     },
+    {
+      path: 'introducesupport/overseas',
+      title: '해외지사 후원',
+      subTitle: 'Please join CGN’s media mission to spread His love and Word.',
+    },
+    {
+      path: 'introducesupport/report',
+      title: '후원내역 보고',
+      subTitle: '소중한 후원금 사용 내역을 확인해 보세요',
+    },
   ];
 
   // 주소값을 스캔하여 자동으로 타이틀을 추가합니다. 위의 데이터를 기반으로 합니다.
