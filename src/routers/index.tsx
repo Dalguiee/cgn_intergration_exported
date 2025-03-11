@@ -15,6 +15,8 @@ import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
 // 후원
 import SponsorPage from '@/pages/sponsor/main/page';
 import SponsorAnniversaryPage from '@/pages/sponsor/anniversary/page';
+import SponsorOverseasPage from '@/pages/sponsor/overseas/page';
+import SponsoReportPage from '@/pages/sponsor/report/page';
 
 export default function MainRouter() {
   return (
@@ -53,6 +55,11 @@ export default function MainRouter() {
           path='sponsor/anniversary'
           element={<SponsorAnniversaryPage />}
         ></Route>
+        <Route
+          path='sponsor/overseas'
+          element={<SponsorOverseasPage />}
+        ></Route>
+        <Route path='sponsor/report' element={<SponsoReportPage />}></Route>
       </Route>
     </Routes>
   );

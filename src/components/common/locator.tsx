@@ -81,6 +81,31 @@ const Locator = () => {
         })
       );
     }
+
+    // 후원
+    if (location.pathname.includes('/sponsor/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'sponsor') {
+            pathPiece = data;
+            data = '후원안내';
+            pathStack = 'sponsor/';
+          }
+          if (data === 'overseas') {
+            pathPiece = data;
+            data = '해외지사 후원';
+            pathStack = 'sponsor/overseas';
+          }
+          if (data === 'report') {
+            pathPiece = data;
+            data = '후원내역 보고';
+            pathStack = 'sponsor/report';
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
   }, [location]);
 
   return (

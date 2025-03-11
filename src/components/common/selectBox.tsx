@@ -11,7 +11,7 @@ const SelectBox = ({
   defultValue = '',
   widthFull = false,
   className = '',
-  height = '62',
+  height = '',
   selectedColor = 'primary-500',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
@@ -50,7 +50,7 @@ const SelectBox = ({
       onClick={() => {
         setOpen(!open);
       }}
-      className={`relative z-10 flex h-${height} cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className}`}
+      className={`relative z-10 flex cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className} ${height ? `h-${height}` : 'h-62'}`}
     >
       <div
         className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 outline-grey-200 max-lg:rounded-4`}
@@ -60,7 +60,7 @@ const SelectBox = ({
           className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
         >
           <li
-            className={`${open ? '' : ''} pointer-events-none flex h-${height} w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4`}
+            className={`${open ? '' : ''} pointer-events-none flex w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4 ${height ? `h-${height}` : 'h-62'}`}
           >
             <button
               className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start ${objSelected ? `text-${selectedColor}` : 'text-grey-400'}`}
@@ -72,7 +72,7 @@ const SelectBox = ({
             {listData?.map((item, key) => (
               <div
                 key={key}
-                className={`${open ? '' : 'hidden h-0'} \ h-${height} flex w-full items-center justify-start max-lg:h-48`}
+                className={`${open ? '' : 'hidden h-0'} \ ${height ? `h-${height}` : 'h-62'} flex w-full items-center justify-start max-lg:h-48`}
               >
                 <button
                   onClick={() => {

@@ -8,39 +8,39 @@ import SelectBox from '@/components/common/selectBox';
 import DefaultInput from '@/components/common/defaultInput';
 import CheckBox from '@/components/common/checkBox';
 
-// 기특하데이 페이지
+// 기념일 후원 페이지
 const SponsorAnniversary = () => {
   // 선교 후원으로 더 특별하게 기념하세요
   const anniversarylist = [
     {
       img: 'anniversary_list1.png',
       title: '생일',
-      text: '소중한 사람이 이 세상에 태어난 날',
+      text: ['소중한 사람이', '이 세상에 태어난 날'],
     },
     {
       img: 'anniversary_list2.png',
       title: '결혼 기념일',
-      text: '배우자와 함께 맞이하는 감사의 날',
+      text: ['배우자와 함께', '맞이하는 감사의 날'],
     },
     {
       img: 'anniversary_list3.png',
       title: '백일 ・첫돌 ',
-      text: '하나님이 주신 축복, 우리 자녀의 특별한 날',
+      text: ['하나님이 주신 축복,', '우리 자녀의 특별한 날'],
     },
     {
       img: 'anniversary_list4.png',
       title: '입학 ・졸업',
-      text: '학업을 시작하고 마치는 의미 깊은 날',
+      text: ['학업을 시작하고', '마치는 의미 깊은 날'],
     },
     {
       img: 'anniversary_list5.png',
       title: '입사',
-      text: '직장생활, 주님과 함께 첫 시작!',
+      text: ['직장생활,', '주님과 함께 첫 시작!'],
     },
     {
       img: 'anniversary_list6.png',
       title: '임직',
-      text: '예수님께 충성과 헌신을 다짐하는 귀한 날',
+      text: ['예수님께 충성과 헌신을', '다짐하는 귀한 날'],
     },
   ];
 
@@ -50,37 +50,61 @@ const SponsorAnniversary = () => {
       img: 'anniversary_slide1.png',
       color: '#ffe1e8',
       title: '세례 받은 날',
-      text: '주님을 영접하고 새롭게 거듭난 두번째 생일, 선교 후원으로 주님께 제 마음을 드리며 소중한 이 날을 기념합니다.',
+      text: [
+        '주님을 영접하고 새롭게 거듭난 두번째 생일,',
+        '선교 후원으로 주님께 제 마음을 드리며',
+        '소중한 이 날을 기념합니다',
+      ],
     },
     {
       img: 'anniversary_slide2.png',
       color: '#c3d8ff',
       title: '반려견을 입양한 날',
-      text: '새로운 식구 ‘마리’가 내게 온 날, 주님이 창조하신 세상이 더욱 행복하게 느껴졌어요. 반려동물을 키울 수 있음에 감사하며 이 날을 기념해요! ',
+      text: [
+        '새로운 식구 ‘마리’가 내게 온 날, 주님이 창조하신 세상이',
+        '더욱 행복하게 느껴졌어요. 반려동물을 키울 수 있음에',
+        '감사하며 이 날을 기념해요!',
+      ],
     },
     {
       img: 'anniversary_slide3.png',
       color: '#caedff',
       title: '사랑하는 손주의 첫돌',
-      text: '얼마 전 귀여운 손주를 품에 안게 되었습니다. 어릴 때부터 선교에 동참하는 자녀가 되길 바라는 마음으로 기념일 후원을 시작합니다.',
+      text: [
+        '얼마 전 귀여운 손주를 품에 안게 되었습니다.',
+        '어릴 때부터 선교에 동참하는 자녀가 되길 바라는 마음으로',
+        '기념일 후원을 시작합니다.',
+      ],
     },
     {
       img: 'anniversary_slide4.png',
       color: '#fff3bd',
       title: '5년 근속한 날',
-      text: '회사에서 근무한지 5년이 되었습니다. ‘하나님의 은혜로 여기까지 왔구나’ 감사한 생각이 들어 이 날을 선교 후원으로 기념합니다.',
+      text: [
+        '회사에서 근무한지 5년이 되었습니다. ‘하나님의 은혜로',
+        '여기까지 왔구나’ 감사한 생각이 들어 이 날을',
+        '선교 후원으로 기념합니다.',
+      ],
     },
     {
       img: 'anniversary_slide5.png',
       color: '#ffd2e9',
       title: '보육원에서 J를 만난 날',
-      text: '베이비박스를 거쳐 우리 곁에 온 J, 하나님 손에 J의 인생을 의탁하는 마음을 담아 기념일 후원을 신청합니다.',
+      text: [
+        '베이비박스를 거쳐 우리 곁에 온 J,',
+        '하나님 손에 J의 인생을 의탁하는 마음을 담아',
+        '기념일 후원을 신청합니다.',
+      ],
     },
     {
       img: 'anniversary_slide6.png',
       color: '#c3ffc6',
       title: '공모전에서 수상한 날',
-      text: '공모전에서 수상을 했습니다. 하나님이 주신 지혜의 결과인 것 같아서 상금의 일부를 후원하며 이 기쁜 날을 기념하고자 합니다.',
+      text: [
+        '공모전에서 수상을 했습니다. 하나님이 주신 지혜의',
+        '결과인 것 같아서 상금의 일부를 후원하며 이 기쁜 날을',
+        '기념하고자 합니다.',
+      ],
     },
   ];
 
@@ -208,7 +232,7 @@ const SponsorAnniversary = () => {
           {anniversarylist.map((item, index) => {
             return (
               <li
-                className='flex w-[calc((100%_-_48px)/3)] flex-col items-center rounded-16 bg-white-solid px-20 py-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.05)] max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between'
+                className='flex w-[calc((100%_-_48px)/3)] flex-col items-center rounded-16 bg-white-solid px-20 py-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.05)] max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:py-16'
                 key={index}
               >
                 <img
@@ -220,8 +244,14 @@ const SponsorAnniversary = () => {
                   <div className='text-bold18 max-lg:text-bold14 mb-16 flex h-48 min-w-88 items-center justify-center break-keep rounded-100 bg-secondary-pink px-12 text-center text-white-solid max-lg:h-32'>
                     {item.title}
                   </div>
-                  <div className='text-bold24 max-lg:text-bold18 break-keep text-center text-grey-900 max-lg:text-start'>
-                    {item.text}
+                  <div className='text-bold24 max-lg:text-bold18 flex flex-wrap justify-center text-grey-900 max-lg:justify-start max-lg:text-start'>
+                    {item.text.map((item2, index2) => {
+                      return (
+                        <div className='me-8' key={index2}>
+                          {item2}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </li>
@@ -230,7 +260,7 @@ const SponsorAnniversary = () => {
         </ul>
       </div>
       {/* 기념일 후원 슬라이드 영역 */}
-      <div className='flex w-full flex-col items-center bg-white-solid px-16'>
+      <div className='flex w-full flex-col items-center bg-white-solid px-16 max-lg:px-0'>
         <div className='relative mb-80 mt-160 flex flex-col items-center break-keep text-center max-lg:mb-32 max-lg:mt-60'>
           <div className='text-regular32 max-lg:text-regular18 mb-8'>
             나만의 오늘을 더욱 의미 있게 기억할 수 있도록
@@ -241,8 +271,8 @@ const SponsorAnniversary = () => {
             후원해 주세요
           </div>
         </div>
-        <div className='mb-200 flex h-618 w-full max-w-1560 flex-col items-center rounded-16 bg-secondary-pink px-140 pt-60 max-lg:px-16'>
-          <div className='mb-50 flex flex-col items-center'>
+        <div className='mb-200 flex h-618 w-full max-w-1560 flex-col items-center rounded-16 bg-secondary-pink px-140 pt-60 max-lg:h-354 max-lg:rounded-0 max-lg:px-16 max-lg:pt-40'>
+          <div className='max-lg:text mb-50 flex flex-col items-center decoration-2 max-lg:mb-35 max-lg:border-b-2'>
             <span className='text-bold60 max-lg:text-bold24 text-white-solid'>
               내가 만든 나만의 기념일
             </span>
@@ -268,20 +298,32 @@ const SponsorAnniversary = () => {
                 return (
                   <SwiperSlide key={index}>
                     <div
-                      className={`flex min-h-560 w-full items-center rounded-16 px-18 max-lg:flex-col`}
+                      className='flex min-h-560 w-full items-center rounded-16 px-18 max-lg:min-h-374 max-lg:flex-col max-lg:px-0'
                       style={{ background: item.color }}
                     >
                       <img
                         src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/${item.img}`}
                         alt=''
-                        className='w-[60%] max-w-683 max-lg:w-full max-lg:pt-20'
+                        className='w-[60%] max-w-683 max-lg:hidden'
                       />
-                      <div className='w-1/2 break-keep pr-40 max-lg:w-full max-lg:pr-0'>
-                        <div className='text-bold32 max-lg:text-bold24 mb-24 max-lg:text-center'>
+                      <img
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/mo_${item.img}`}
+                        alt=''
+                        className='hidden w-full max-w-360 max-lg:block'
+                      />
+                      <div className='w-1/2 pr-56 max-lg:absolute max-lg:top-236 max-lg:w-full max-lg:pe-0 max-lg:pr-0'>
+                        <div className='text-bold32 max-lg:text-bold24 mb-24 max-lg:mb-10 max-lg:text-center'>
                           {item.title}
                         </div>
                         <div className='text-regular24 max-lg:text-regular14 max-lg:text-center'>
-                          {item.text}
+                          {item.text.map((item2, index2) => {
+                            return (
+                              <span key={index2} className='me-8 max-lg:me-0'>
+                                {item2}
+                                <br className='hidden max-lg:block' />
+                              </span>
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
@@ -289,8 +331,8 @@ const SponsorAnniversary = () => {
                 );
               })}
             </Swiper>
-            <button className='swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-[url(/public/images/sponsor/anniversary_slide_btn.svg)] bg-cover bg-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40'></button>
-            <button className='swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-[url(/public/images/sponsor/anniversary_slide_btn.svg)] bg-cover bg-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40'></button>
+            <button className='swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-[url(/public/images/sponsor/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40'></button>
+            <button className='swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-[url(/public/images/sponsor/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40'></button>
           </div>
         </div>
       </div>
@@ -305,8 +347,8 @@ const SponsorAnniversary = () => {
             ‘기념 굿즈'를 보내드립니다.
           </div>
         </div>
-        <div className='mb-200 flex h-618 w-full max-w-1560 flex-col items-center rounded-16 bg-secondary-pink px-40 pt-60 max-lg:w-full max-lg:rounded-0 max-lg:px-16 max-lg:pt-40'>
-          <div className='after mb-50 flex flex-col items-center max-lg:mb-40'>
+        <div className='mb-200 flex h-618 w-full max-w-1560 flex-col items-center rounded-16 bg-secondary-pink px-40 pt-60 max-lg:h-354 max-lg:w-full max-lg:rounded-0 max-lg:px-16 max-lg:pt-40'>
+          <div className='max-lg:text mb-50 flex flex-col items-center decoration-2 max-lg:mb-35 max-lg:border-b-2'>
             <span className='text-bold60 max-lg:text-bold24 text-white-solid'>
               기념일 후원증서 & 굿즈
             </span>
@@ -317,7 +359,7 @@ const SponsorAnniversary = () => {
             />
           </div>
           <div className='relative flex w-full max-w-1200 gap-24 max-lg:flex-col'>
-            <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
+            <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
               <img
                 src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/anniversary_goods1.png`}
                 alt=''
@@ -327,7 +369,7 @@ const SponsorAnniversary = () => {
                 후원증서
               </div>
               <div className='flex flex-col'>
-                <div className='text-bold32 max-lg:text-bold18 mb-16'>
+                <div className='text-bold32 max-lg:text-bold18 mb-16 text-center max-lg:text-start'>
                   기념일 후원증서
                 </div>
                 <div className='text-regular18 max-lg:text-regular12 text-center text-grey-500 max-lg:text-start'>
@@ -336,7 +378,7 @@ const SponsorAnniversary = () => {
                 </div>
               </div>
             </div>
-            <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
+            <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
               <img
                 src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/anniversary_goods2.png`}
                 alt=''
@@ -346,7 +388,7 @@ const SponsorAnniversary = () => {
                 굿즈
               </div>
               <div className='flex flex-col'>
-                <div className='text-bold32 max-lg:text-bold18 mb-16'>
+                <div className='text-bold32 max-lg:text-bold18 mb-16 text-center max-lg:text-start'>
                   기념 굿즈
                 </div>
                 <div className='text-regular18 max-lg:text-regular12 text-center text-grey-500 max-lg:text-start'>
@@ -360,14 +402,14 @@ const SponsorAnniversary = () => {
         </div>
       </div>
       {/* 후원 증서 */}
-      <div className='flex w-full flex-col items-center bg-[#FFF3F3] px-16 pb-120 pt-120'>
-        <div className='flex w-full max-w-1200'>
-          <div className='flex h-800 w-1/2 flex-col items-center rounded-16 bg-secondary-pink px-60 pt-95'>
-            <div className='text-bold32 mb-60'>
+      <div className='flex w-full flex-col items-center bg-[#FFF3F3] px-16 pb-120 pt-120 max-lg:px-0 max-lg:pb-0 max-lg:pt-0'>
+        <div className='flex w-full max-w-1200 max-lg:flex-col'>
+          <div className='flex h-800 w-1/2 flex-col items-center rounded-16 bg-secondary-pink px-60 pt-95 max-lg:h-auto max-lg:w-full max-lg:rounded-0 max-lg:px-24 max-lg:pb-60 max-lg:pt-60'>
+            <div className='text-bold32 max-lg:text-bold24 mb-60 max-lg:mb-40'>
               기념일 후원증서를 신청하세요!
             </div>
-            <div className='mb-24 flex gap-12'>
-              <div className='flex w-1/2 flex-col'>
+            <div className='mb-24 flex gap-12 max-lg:w-full max-lg:flex-col'>
+              <div className='flex w-1/2 flex-col max-lg:w-full'>
                 <div className='text-regular14 mb-8 ml-4'>성명</div>
                 <DefaultInput
                   placeholder=''
@@ -377,7 +419,7 @@ const SponsorAnniversary = () => {
                   width='full'
                 />
               </div>
-              <div className='flex w-1/2 flex-col'>
+              <div className='flex w-1/2 flex-col max-lg:w-full'>
                 <div className='text-regular14 mb-8 ml-4'>
                   기념일 명칭{' '}
                   <span className='text-regular12'>(10자 이내)</span>
@@ -394,7 +436,7 @@ const SponsorAnniversary = () => {
             <div className='mb-24 flex w-full flex-col'>
               <div className='text-regular14 mb-8 ml-4'>기념일 날짜</div>
               <div className='flex w-full gap-12'>
-                <div className='flex w-1/3 items-center'>
+                <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
                     defultValue='년도 선택'
                     listData={dateYearOption}
@@ -406,7 +448,7 @@ const SponsorAnniversary = () => {
                   />
                   <span className='text-regular14 ml-12 shrink-0'>년</span>
                 </div>
-                <div className='flex w-1/3 items-center'>
+                <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
                     defultValue='월 선택'
                     listData={dateMonthOption}
@@ -418,7 +460,7 @@ const SponsorAnniversary = () => {
                   />
                   <span className='text-regular14 ml-12 shrink-0'>월</span>
                 </div>
-                <div className='flex w-1/3 items-center'>
+                <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
                     defultValue='일 선택'
                     listData={dateDayOption}
@@ -433,7 +475,7 @@ const SponsorAnniversary = () => {
               </div>
             </div>
             <div className='mb-24 flex w-full flex-col'>
-              <div className='text-regular14 mb-8 ml-4'>
+              <div className='text-regular14 mb-8 ml-4 flex items-center'>
                 연락처{' '}
                 <span className='text-regular12 ml-8'>(예: 010-***-***)</span>
               </div>
@@ -469,7 +511,7 @@ const SponsorAnniversary = () => {
                 </div>
               </div>
             </div>
-            <div className='mb-60 flex w-full items-center'>
+            <div className='mb-60 flex w-full items-center max-lg:mb-40'>
               <CheckBox
                 label='개인정보 처리방침 동의'
                 isChecked={policyCheck}
@@ -477,79 +519,101 @@ const SponsorAnniversary = () => {
               />
               <button className='text-bold14 ml-8'>[전문보기]</button>
             </div>
-            <button className='text-bold24 flex h-64 w-full items-center justify-center rounded-8 bg-gray-900 text-white-solid'>
+            <button className='text-bold24 max-lg:text-bold18 flex h-64 w-full items-center justify-center rounded-8 bg-gray-900 text-white-solid'>
               증서 신청하기
             </button>
           </div>
-          <div className='flex h-800 w-1/2 flex-col items-center rounded-16 bg-white-solid px-120 pt-80 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)]'>
-            <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/oath_title.svg`}
-              alt=''
-              className='mb-60 h-86 w-269'
-            />
-            <div className='mb-16 flex w-full items-center justify-between'>
-              <div className='text-bold24'>{name ? name : '성명'}</div>
-              <div className='text-regular18 text-gray-900'>후원자님</div>
+          <div className='flex h-800 w-1/2 flex-col items-center rounded-16 bg-white-solid px-120 pt-80 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:rounded-0 max-lg:px-40 max-lg:pb-60'>
+            <div className='flex flex-col items-center max-lg:max-w-393'>
+              <img
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/sponsor/oath_title.svg`}
+                alt=''
+                className='mb-60 h-86 w-269 max-lg:h-64 max-lg:w-200'
+              />
+              <div className='mb-16 flex w-full items-center justify-between'>
+                <div className='text-bold24 max-lg:text-bold18'>
+                  {name ? name : '성명'}
+                </div>
+                <div className='text-regular18 max-lg:text-regular14 text-gray-900'>
+                  후원자님
+                </div>
+              </div>
+              <div className='mb-16 flex w-full items-center justify-between'>
+                <div className='text-bold24 max-lg:text-bold18'>
+                  {anniversary ? anniversary : '기념일 명칭'}
+                </div>
+                <div className='text-regular18 max-lg:text-regular14 text-gray-900'>
+                  후원
+                </div>
+              </div>
+              <div className='text-bold24 max-lg:text-bold18 mb-60 flex w-full justify-end'>
+                <div className='flex w-1/3 justify-end'>
+                  {dateYear && dateYear?.text}
+                </div>
+                <div className='ml-12 shrink-0'>년</div>
+                <div className='flex w-1/3 justify-end'>
+                  {dateMonth && dateMonth?.text}
+                </div>
+                <div className='ml-12 shrink-0'>월</div>
+                <div className='flex w-1/3 justify-end'>
+                  {dateDay && dateDay?.text}
+                </div>
+                <div className='ml-12 shrink-0'>일</div>
+              </div>
+              <div className='text-regular18 max-lg:text-regular14 mb-60 whitespace-nowrap text-gray-500 max-lg:w-full'>
+                <div className='flex justify-end'>
+                  <div className='w-112'>{name && name}</div>
+                  <div>후원자님의 </div>
+                  <div className='w-112'>{anniversary && anniversary}</div>
+                  <div> 을(를)</div>
+                </div>
+                <div>
+                  ‘기특하데이' 선교 후원으로 기념해 주셔서 감사합니다.
+                  <br />
+                  <br />
+                  후원자님의 귀한 후원을 통해 복음이 필요한 곳마다
+                  <br />
+                  하나님의 사랑이 전해지길 소망합니다.
+                  <br />
+                  <br />
+                  소중하고 특별한 날,
+                  <br />
+                  하나님의 은혜가 충만하시길 기도합니다.
+                </div>
+              </div>
+              <img
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/cgn_logo_black.png`}
+                alt=''
+                className='h-29 w-60'
+              />
             </div>
-            <div className='mb-16 flex w-full items-center justify-between'>
-              <div className='text-bold24'>
-                {anniversary ? anniversary : '기념일 명칭'}
-              </div>
-              <div className='text-regular18 text-gray-900'>후원</div>
-            </div>
-            <div className='text-bold24 mb-60 flex w-full justify-end'>
-              <div className='flex w-1/3 justify-end'>
-                {dateYear && dateYear?.text}
-              </div>
-              <div className='ml-12 shrink-0'>년</div>
-              <div className='flex w-1/3 justify-end'>
-                {dateMonth && dateMonth?.text}
-              </div>
-              <div className='ml-12 shrink-0'>월</div>
-              <div className='flex w-1/3 justify-end'>
-                {dateDay && dateDay?.text}
-              </div>
-              <div className='ml-12 shrink-0'>일</div>
-            </div>
-            <div className='text-regular18 mb-60 whitespace-nowrap text-gray-500'>
-              <div className='flex justify-end'>
-                <div className='w-112'>{name && name}</div>
-                <div>후원자님의 </div>
-                <div className='w-112'>{anniversary && anniversary}</div>
-                <div> 을(를)</div>
-              </div>
-              <div>
-                ‘기특하데이' 선교 후원으로 기념해 주셔서 감사합니다.
-                <br />
-                <br />
-                후원자님의 귀한 후원을 통해 복음이 필요한 곳마다
-                <br />
-                하나님의 사랑이 전해지길 소망합니다.
-                <br />
-                <br />
-                소중하고 특별한 날,
-                <br />
-                하나님의 은혜가 충만하시길 기도합니다.
-              </div>
-            </div>
-            <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/cgn_logo_black.png`}
-              alt=''
-              className='h-29 w-60'
-            />
           </div>
         </div>
       </div>
       {/* 후원금 사용처 */}
-      <div className='flex w-full flex-col items-center bg-white-solid pb-120 pt-160'>
-        <div className='text-bold48 mb-8 text-center'>후원금 사용처</div>
-        <div className='text-regular32 mb-80 text-center'>
+      <div className='flex w-full flex-col items-center bg-white-solid px-16 pb-120 pt-160 max-lg:px-0 max-lg:pb-36 max-lg:pt-36'>
+        <div className='text-bold48 max-lg:text-bold24 mb-8 text-center'>
+          후원금 사용처
+        </div>
+        <div className='text-regular32 max-lg:text-regular14 mb-80 text-center max-lg:mb-70 max-lg:text-gray-500'>
           ‘기특하데이'에 참여하여 보내주신 기념일 후원금은
           <br />
           미디어 선교에 사용됩니다.
         </div>
-        <div className='mb-90 w-full max-w-1528'>
-          <Swiper slidesPerView={4} spaceBetween={40} loop>
+        <div className='mb-90 w-full max-w-1528 max-lg:mb-70'>
+          <Swiper
+            slidesPerView={1.33}
+            centeredSlides={true}
+            spaceBetween={16}
+            loop
+            breakpoints={{
+              1024: {
+                slidesPerView: 4, // 3개 슬라이드
+                centeredSlides: false,
+                spaceBetween: 40,
+              },
+            }}
+          >
             {expenditureSlide.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
@@ -559,20 +623,22 @@ const SponsorAnniversary = () => {
                       alt=''
                       className='mb-12 w-full'
                     />
-                    <div className='text-bold24 mb-12 text-center'>
+                    <div className='text-bold24 max-lg:text-bold18 mb-12 text-center'>
                       {item.title}
                     </div>
-                    <div className='text-regular24'>{item.text}</div>
+                    <div className='text-regular24 max-lg:text-regular14 max-lg:px-18 max-lg:text-center'>
+                      {item.text}
+                    </div>
                   </div>
                 </SwiperSlide>
               );
             })}
           </Swiper>
         </div>
-        <div className='text-regular24 text-center text-gray-500'>
+        <div className='text-regular24 max-lg:text-regular14 text-center text-gray-500 max-lg:mb-10'>
           '기특하데이' 후원은 기부금 영수증 발급이 가능합니다.
         </div>
-        <div className='text-bold24 text-center text-gray-500'>
+        <div className='text-bold24 max-lg:text-bold16 text-center text-gray-500'>
           문의 02-796-2243
         </div>
       </div>
