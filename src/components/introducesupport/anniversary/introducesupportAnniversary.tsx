@@ -1,8 +1,12 @@
+// 훅
 import React, { useEffect, useState } from 'react';
+
+// 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+
 // input
 import SelectBox from '@/components/common/selectBox';
 import DefaultInput from '@/components/common/defaultInput';

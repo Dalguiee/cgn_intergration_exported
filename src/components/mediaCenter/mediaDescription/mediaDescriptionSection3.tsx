@@ -45,7 +45,7 @@ const MediaDescriptionSection3 = () => {
           </div>
           <img
             className={`h-370 w-373`}
-            src={`/public/images/mediacenter/fondant_app_logo.png`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/fondant_app_logo.png`}
             width={373}
             height={370}
             alt=''

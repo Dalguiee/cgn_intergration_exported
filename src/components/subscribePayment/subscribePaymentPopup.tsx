@@ -16,10 +16,10 @@ const SubscribePaymentPopup = ({ popupOpen, setPopupOpen }) => {
   return (
     <>
       <div
-        className={`${popupOpen ? `` : `hidden`} fixed left-0 top-0 z-20 h-screen w-screen bg-grey-900 opacity-95`}
+        className={`${popupOpen ? `` : `hidden`} fixed left-0 top-0 z-[100] h-screen w-screen bg-grey-900 opacity-95`}
       ></div>
       <div
-        className={`${popupOpen ? `` : `hidden`} fixed left-[50%] top-[50%] z-20 flex h-634 w-full max-w-600 translate-x-[-50%] translate-y-[-50%] transform flex-col items-center justify-start bg-white-solid px-16 py-16 max-lg:h-[calc(100%-100px)] max-lg:w-[calc(100%-10px)] max-lg:px-16 max-lg:pt-24 lg:rounded-8`}
+        className={`${popupOpen ? `` : `hidden`} fixed left-[50%] top-[50%] z-[110] flex h-634 w-full max-w-600 translate-x-[-50%] translate-y-[-50%] transform flex-col items-center justify-start bg-white-solid px-16 py-16 max-lg:h-[calc(100%-100px)] max-lg:w-[calc(100%-10px)] max-lg:px-16 max-lg:pt-24 lg:rounded-8`}
       >
         <div
           className={`flex h-full w-full flex-col items-start justify-start gap-24 overflow-y-auto pl-4 pr-20 pt-16 max-lg:px-0 max-lg:py-0`}
