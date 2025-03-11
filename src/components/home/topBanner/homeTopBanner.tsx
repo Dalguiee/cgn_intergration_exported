@@ -1,5 +1,3 @@
-// 개발중입니다.
-
 // 훅
 import React from 'react';
 

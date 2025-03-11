@@ -20,7 +20,7 @@ const HomePage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, [location?.pathname]);
 
   return (

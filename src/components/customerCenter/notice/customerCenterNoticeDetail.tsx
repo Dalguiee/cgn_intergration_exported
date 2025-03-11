@@ -1,38 +1,9 @@
 // 훅
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-
-// 스와이퍼 모듈
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 // 데이터
 import { noticeData } from '@/db/mockup';
-import HTMLReactParser from 'html-react-parser';
-
-const SwiperSec = ({ currentData }) => {
-  return (
-    <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`mt-16`}
-      // scrollbar={{ draggable: true }}
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={swiper => console.log(swiper)}
-    >
-      {currentData?.contentSrc?.map((obj, key) => (
-        <SwiperSlide key={key}>
-          <img src={obj} alt='' />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-};
 
 const CustomerCenterNoticeDetail = () => {
   const location = useLocation();
@@ -76,11 +47,6 @@ const CustomerCenterNoticeDetail = () => {
       }
     });
   }, [queryData?.articleId]);
-
-  // 디테일페이지 넘어올 경우 맨 위로 올려줍니다
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
 
   return (
     <section

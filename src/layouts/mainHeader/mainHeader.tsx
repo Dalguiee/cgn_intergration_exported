@@ -153,7 +153,7 @@ const centerMenu = [
   },
 ];
 
-const whiteModeList = [`/customercenter/questions`];
+const whiteModeList = [`/customercenter/questions`, `/subscribepayment`];
 
 const MainHeader = () => {
   const location = useLocation();
@@ -163,11 +163,10 @@ const MainHeader = () => {
   const [whiteMode, setWhiteMode] = useState(false);
 
   useEffect(() => {
+    setWhiteMode(false);
     whiteModeList?.forEach(list => {
       if (location?.pathname?.includes(list)) {
         setWhiteMode(true);
-      } else {
-        setWhiteMode(false);
       }
     });
   }, [location?.pathname]);

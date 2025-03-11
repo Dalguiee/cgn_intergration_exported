@@ -19,6 +19,7 @@ import IntroduceAmbassadorPage from '@/pages/introduce/ambassador/page';
 import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotice/page';
 import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
 import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQuestions/page';
+import SubscribePaymentPage from '@/pages/subscribePayment/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -30,6 +31,17 @@ export default function MainRouter() {
       navigate(`/home`);
     }
   }, [location?.pathname]);
+
+  // 팝업에 의한 스크롤 잠김 풀기
+  useEffect(() => {
+    const scrollRetore = () => {
+      document.body.style.overflow = 'auto';
+    };
+
+    window?.addEventListener('popstate', scrollRetore);
+
+    return () => window?.removeEventListener('popstate', scrollRetore);
+  }, [window?.PopStateEvent]);
 
   return (
     <Routes>
@@ -89,6 +101,11 @@ export default function MainRouter() {
         <Route
           path='customercenter/notice/detail'
           element={<CustomerCenterNoticeDetailPage />}
+        ></Route>
+
+        <Route
+          path='subscribepayment'
+          element={<SubscribePaymentPage />}
         ></Route>
       </Route>
     </Routes>

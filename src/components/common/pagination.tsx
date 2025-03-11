@@ -41,13 +41,13 @@ const Pagination = ({
       <div className={`flex items-center justify-center gap-14`}>
         <span className={`text-regular16 text-grey-400`}>이전</span>
         <button
-          className={`flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
+          className={`${pagingCategoryStartNum > 0 ? `` : `pointer-events-none select-none`} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
           onClick={() => {
             pagingCategoryDecrement();
           }}
         >
           <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg`}
+            src={`${pagingCategoryStartNum > 0 ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey200.svg`} `}
             className={`h-24 w-24`}
             width={24}
             height={24}
@@ -80,13 +80,13 @@ const Pagination = ({
 
       <div className={`flex items-center justify-center gap-14`}>
         <button
-          className={`flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
+          className={`${pagingCategoryEndNum < Math.ceil(listData?.length / 10) ? `` : `pointer-events-none select-none`} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200`}
           onClick={() => {
             pagingCategoryIncrement();
           }}
         >
           <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey900.svg`}
+            src={`${pagingCategoryEndNum < Math.ceil(listData?.length / 10) ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey900.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey200.svg`} `}
             className={`h-24 w-24`}
             width={24}
             height={24}

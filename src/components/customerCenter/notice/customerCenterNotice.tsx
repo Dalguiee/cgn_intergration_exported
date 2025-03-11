@@ -90,7 +90,9 @@ const CustomerCenterNotice = () => {
                             );
                           }}
                         >
-                          <span className={`text-regular16 text-grey-900`}>
+                          <span
+                            className={`text-regular16 line-clamp-1 text-grey-900`}
+                          >
                             {item?.title}
                           </span>
                         </button>

@@ -77,11 +77,6 @@ const RecruitDetail = () => {
     }
   }, [location?.pathname]);
 
-  // 디테일페이지 넘어올 경우 맨 위로 올려줍니다
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
   return (
     <section
       className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:mb-0 max-lg:px-20 max-lg:py-0`}

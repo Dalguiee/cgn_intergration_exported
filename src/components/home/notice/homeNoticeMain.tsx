@@ -4,6 +4,7 @@ import React from 'react';
 // 컴포넌트
 import HomeNoticeHeader from '@/components/home/notice/homeNoticeHeader';
 import TagIcon from '@/components/common/tagIcon';
+import { useNavigate } from 'react-router-dom';
 
 const noticeData = [
   {
@@ -64,6 +65,7 @@ const noticeData = [
 ];
 
 const HomeNoticeMain = () => {
+  const navigate = useNavigate();
   return (
     <section
       className={`flex h-fit w-full items-center justify-center py-120 max-lg:mb-40 max-lg:bg-transparent max-lg:py-0 lg:bg-secondary-brown_bg_2 lg:px-16`}
@@ -71,17 +73,6 @@ const HomeNoticeMain = () => {
       <div
         className={`flex w-full max-w-1560 flex-col items-center justify-start gap-40 max-lg:gap-0`}
       >
-        <div className={`mb-16 flex w-full justify-between px-16 lg:hidden`}>
-          <span className={`text-bold24 text-grey-900`}>공지사항</span>
-          <button className={`flex items-center justify-center`}>
-            <span className={`text-regular12 text-grey-900`}>바로가기</span>
-            <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
-              alt=''
-            />
-          </button>
-        </div>
-
         <HomeNoticeHeader />
 
         <div
@@ -125,6 +116,9 @@ const HomeNoticeMain = () => {
               인재를 기다립니다.
             </span>
             <button
+              onClick={() => {
+                navigate(`/introduce/recruit`);
+              }}
               className={`text-bold16 max-lg:text-bold14 flex h-54 w-162 items-center justify-center rounded-8 border-1 border-white-solid text-white-solid max-lg:h-40 max-lg:w-130 max-lg:rounded-8`}
             >
               채용공고 바로가기

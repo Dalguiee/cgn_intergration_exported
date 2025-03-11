@@ -70,6 +70,13 @@ const ThemeHeader = ({ className = `` }) => {
       subTitle:
         'CGN에 관련된 다양한 공지사항과 자주 묻는 질문들을 확인해 보세요.',
     },
+
+    {
+      path: 'subscribepayment',
+      title: `증액후원을 통해
+              CGN에 대한 사랑을 더해주세요.`,
+      subTitle: '',
+    },
   ];
 
   // 주소값을 스캔하여 자동으로 타이틀을 추가합니다. 위의 데이터를 기반으로 합니다.
@@ -84,7 +91,9 @@ const ThemeHeader = ({ className = `` }) => {
         className={`${className && className} flex h-176 w-full flex-col items-center justify-center border-grey-100 pb-32 pt-40 max-lg:h-80 max-lg:border-t-1 max-lg:px-20 max-lg:py-24`}
       >
         <div className='flex flex-col items-center justify-center gap-16'>
-          <h1 className={`text-bold48 max-lg:text-bold24 text-grey-900`}>
+          <h1
+            className={`text-bold48 max-lg:text-bold24 whitespace-pre-line text-center text-grey-900`}
+          >
             {currentPath[0]?.title}
           </h1>
           <span className={`text-regular18 text-grey-400 max-lg:hidden`}>

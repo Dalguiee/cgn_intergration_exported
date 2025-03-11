@@ -7,6 +7,8 @@ const DefaultInput = ({
   searchBtn = true,
   pwdBtn = false,
   textClearBtn = false,
+  paymentMode = false,
+  maxLength = undefined,
   inputText = '',
   setInputText,
   className = ``,
@@ -28,9 +30,10 @@ const DefaultInput = ({
       className={`${className && className} flex h-56 w-320 items-center justify-between gap-8 rounded-8 bg-white-solid pl-16 pr-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:w-full`}
     >
       <input
-        className={`text-regular16 w-full text-grey-900`}
+        className={`text-regular16 max-lg:text-regular14 w-full text-grey-900`}
         type={`${pwMode ? 'password' : 'text'}`}
         name={`findKeyword`}
+        maxLength={maxLength}
         onChange={e => setInputText(e.target.value)}
         placeholder={placeholder}
         value={inputText}
@@ -83,6 +86,14 @@ const DefaultInput = ({
               height={24}
             />
           </button>
+        )}
+        {/* 원 추가 */}
+        {paymentMode && (
+          <span
+            className={`text-regular18 max-lg:text-regular14 text-grey-900 max-lg:text-grey-400`}
+          >
+            원
+          </span>
         )}
       </div>
     </div>

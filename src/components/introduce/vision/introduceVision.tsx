@@ -4,7 +4,7 @@ import React from 'react';
 // 컴포넌트
 import StyledButtons from '@/components/common/styledButtons';
 
-const IntroduceVision = ({ popupOpen, setPopupOpen }) => {
+const IntroduceVision = ({ setPopupOpen }) => {
   const missionsData = [
     { id: 1, title: `MISSION`, text: `온 세상을 위한`, subText: `복음의 통로` },
     {

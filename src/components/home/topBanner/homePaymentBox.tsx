@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
 import StyledButtons from '@/components/common/styledButtons';
+import { useNavigate } from 'react-router-dom';
 
 const HomePaymentBox = () => {
+  const navigate = useNavigate();
   // select box 와 송신하는 state
   const [selectedSubscribes, setselectedSubscribes] = useState([]);
   // 버튼항목과 송신하는 state
@@ -70,7 +72,10 @@ const HomePaymentBox = () => {
             text='후원하기'
             formMode='mode1'
             colorMode='mode1'
-            widthFull={true}
+            className={`w-full`}
+            onClick={() => {
+              navigate(`/subscribepayment`, { state: { selectedPrice } });
+            }}
           />
         </div>
 

@@ -1,6 +1,6 @@
 // 훅
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 // 데이터
 import { questionsData } from '@/db/mockup';
@@ -78,7 +78,9 @@ const CustomerCenterQuestions = () => {
             className={`max-lg:w-full max-lg:rounded-4`}
           />
         </div>
-        <div className={`mb-60 w-full border-t-3 border-grey-900`}>
+        <div
+          className={`mb-60 w-full border-t-3 border-grey-900 max-lg:border-t-1`}
+        >
           <table className={`w-full table-fixed`}>
             <colgroup>
               <col className={`w-80 max-lg:w-24`} />
@@ -104,6 +106,7 @@ const CustomerCenterQuestions = () => {
                 ?.map((item, idx) => (
                   <>
                     <tr
+                      style={{ transition: `0.5s` }}
                       onClick={() => {
                         if (listOpen === idx) {
                           setListOpen(null);
@@ -112,11 +115,12 @@ const CustomerCenterQuestions = () => {
                         }
                       }}
                       key={idx}
-                      className={`h-80 cursor-pointer`}
+                      className={`h-fit cursor-pointer`}
                     >
                       <td>
                         <div
-                          className={`flex w-full items-center justify-center`}
+                          style={{ transition: `0.5s` }}
+                          className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-center py-24 max-lg:py-16`}
                         >
                           <span
                             className={`text-regular16 max-lg:text-bold12 text-grey-500`}
@@ -129,16 +133,19 @@ const CustomerCenterQuestions = () => {
                       </td>
                       <td>
                         <div
-                          className={`flex w-full items-center justify-between pl-40 pr-24 max-lg:pl-16 max-lg:pr-0`}
+                          style={{ transition: `0.5s` }}
+                          className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-between py-24 pl-40 pr-24 max-lg:py-16 max-lg:pl-16 max-lg:pr-0`}
                         >
-                          <span className={`text-regular16 text-grey-900`}>
+                          <span
+                            className={`text-regular16 line-clamp-1 text-grey-900`}
+                          >
                             {item?.title}
                           </span>
                           <img
                             width={32}
                             height={32}
                             style={{ transition: `0.5s` }}
-                            className={`${listOpen === idx ? `rotate-[-180deg]` : `rotate-0`} pointer-events-none h-32 w-32 transform select-none object-contain`}
+                            className={`${listOpen === idx ? `rotate-[-180deg]` : `rotate-0`} pointer-events-none h-32 w-32 transform select-none object-contain max-lg:h-24 max-lg:w-24`}
                             src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
                             alt=''
                           />
@@ -147,12 +154,12 @@ const CustomerCenterQuestions = () => {
                     </tr>
                     <tr
                       style={{ transition: `0.5s` }}
-                      className={`${listOpen === idx ? `h-152` : `pointer-events-none h-0 select-none`} border-b-2 border-grey-100 bg-grey-50`}
+                      className={`${listOpen === idx ? `` : `pointer-events-none select-none`} h-fit border-b-2 border-grey-100`}
                     >
                       <td colSpan={2}>
                         <div
                           style={{ transition: `0.5s` }}
-                          className={`${listOpen === idx ? `h-152 max-lg:h-144` : `pointer-events-none h-0 select-none`} flex w-full items-center justify-start overflow-hidden pl-120 max-lg:px-16`}
+                          className={`${listOpen === idx ? `py-40 max-lg:mb-16 max-lg:py-24` : `pointer-events-none h-0 select-none py-0`} flex w-full items-center justify-start overflow-hidden bg-grey-50 pl-120 scrollbar-hide max-lg:px-16`}
                         >
                           <span
                             style={{ transition: `0.5s` }}

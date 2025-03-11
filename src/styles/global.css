@@ -267,24 +267,20 @@
     animation: txt 100s linear infinite;
   }
 
-  [data-custom-scroll] {
-  }
-  [data-custom-scroll]::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
     border-radius: 8px;
     @apply bg-grey-300;
   }
 
-  [data-custom-scroll]::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    outline: 1px solid #bfbfba;
-    outline-offset: -0.5px;
-    @apply bg-grey-300;
-  }
-
-  [data-custom-scroll]::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    @apply bg-grey-100;
+    border: 1px solid transparent;
+    background-clip: padding-box; /* 내부 색상 유지 */
+    @apply bg-grey-50;
   }
 
   @keyframes txt {

@@ -2,21 +2,23 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const CustomerCenterCategoryList = ({}) => {
+// 데이터
+const tabListData = [
+  {
+    id: 0,
+    name: `공지사항`,
+    path: `/customercenter/notice`,
+  },
+  {
+    id: 1,
+    name: `자주 묻는 질문`,
+    path: `/customercenter/questions`,
+  },
+];
+
+const CustomerCenterCategoryList = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const tabListData = [
-    {
-      id: 0,
-      name: `공지사항`,
-      path: `/customercenter/notice`,
-    },
-    {
-      id: 1,
-      name: `자주 묻는 질문`,
-      path: `/customercenter/questions`,
-    },
-  ];
 
   return (
     <section

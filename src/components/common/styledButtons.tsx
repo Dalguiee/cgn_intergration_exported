@@ -59,7 +59,6 @@ const StyledButtons = ({
   arrowMode = false,
   downloadMode = false,
   downloadItem = null,
-  widthFull = false,
   onClick = () => {},
 }) => {
   const formModeObj = formModeData.find(item => item.mode === formMode);
@@ -70,7 +69,7 @@ const StyledButtons = ({
       onClick={() => {
         onClick();
       }}
-      className={`${className} flex items-center justify-center gap-8 text-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${widthFull ? '!w-full' : ''} ${colorModeObj && colorModeObj?.className}`}
+      className={`${className} flex items-center justify-center gap-8 text-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
     >
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img

@@ -15,7 +15,6 @@ const SelectBox = ({
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
   const selectOpenBox = useRef(null);
-  const [objSelected, setObjSelected] = useState(false);
 
   // 선택된 데이터를 넣는 항목, 페이지 진입시 첫줄 데이터를 placeholder 로 사용합니다
   useEffect(() => {
@@ -45,6 +44,7 @@ const SelectBox = ({
           className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
         >
           <li
+            style={{}}
             className={`${open ? '' : ''} pointer-events-none flex h-62 w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4`}
           >
             <button
@@ -57,13 +57,12 @@ const SelectBox = ({
           {listData?.map((item, key) => (
             <li
               key={key}
-              className={`${open ? '' : 'hidden h-0'} flex h-62 w-full items-center justify-start hover:bg-primary-50 max-lg:h-48`}
+              className={`${open ? '' : 'hidden h-0'} mt-1 flex h-62 w-full items-center justify-start hover:bg-primary-50 max-lg:h-48`}
             >
               <button
                 onClick={() => {
                   setOpen(false);
                   setSelectedItem(item);
-                  setObjSelected(true);
                 }}
                 className={`text-regular18 max-lg:text-regular14 flex h-full w-full select-none items-center justify-start px-12`}
               >
