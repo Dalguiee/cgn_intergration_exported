@@ -6,7 +6,7 @@ import StyledButtons from '@/components/common/styledButtons';
 
 const linkData = [
   {
-    src: `/public/images/mediacenter/cgn_rounded.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/cgn_rounded.png`,
     data: [
       {
         title: `CGN 공식 유튜브`,
@@ -23,7 +23,7 @@ const linkData = [
     ],
   },
   {
-    src: `/public/images/mediacenter/fondant_rounded.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/fondant_rounded.png`,
     data: [
       {
         title: `Fondant 공식 유튜브`,
