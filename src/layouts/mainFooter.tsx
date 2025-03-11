@@ -122,9 +122,15 @@ const MainFooter = () => {
         <div
           className={`flex w-full flex-wrap items-start justify-start gap-4`}
         >
-          <span className={`text-bold14 px-12 py-4 pr-12 text-grey-900`}>
-            공지사항
-          </span>
+          <button
+            onClick={() => {
+              navigate(`/customercenter/notice`);
+            }}
+          >
+            <span className={`text-bold14 px-12 py-4 pr-12 text-grey-900`}>
+              공지사항
+            </span>
+          </button>
           <span className={`text-bold14 px-12 py-4 text-grey-900`}>FAQ</span>
           <span className={`text-bold14 px-12 py-4 text-grey-900`}>채용</span>
           <span className={`text-regular14 px-12 py-4 text-grey-900`}>

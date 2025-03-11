@@ -20,6 +20,7 @@ import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotic
 import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
 import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQuestions/page';
 import SubscribePaymentPage from '@/pages/subscribePayment/page';
+import MediaDescriptionPage from '@/pages/mediaCenter/mediaDescription/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -42,6 +43,11 @@ export default function MainRouter() {
 
     return () => window?.removeEventListener('popstate', scrollRetore);
   }, [window?.PopStateEvent]);
+
+  // 페이지 변환시 맨 위로
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location?.pathname]);
 
   return (
     <Routes>
@@ -106,6 +112,11 @@ export default function MainRouter() {
         <Route
           path='subscribepayment'
           element={<SubscribePaymentPage />}
+        ></Route>
+
+        <Route
+          path='mediacenter/description'
+          element={<MediaDescriptionPage />}
         ></Route>
       </Route>
     </Routes>

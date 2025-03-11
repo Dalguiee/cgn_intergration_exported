@@ -72,10 +72,9 @@ const ThemeHeader = ({ className = `` }) => {
     },
 
     {
-      path: 'subscribepayment',
-      title: `증액후원을 통해
-              CGN에 대한 사랑을 더해주세요.`,
-      subTitle: '',
+      path: 'mediacenter/description',
+      title: `퐁당 웹/앱/스마트TV`,
+      subTitle: '기독 OTT, 퐁당',
     },
   ];
 

@@ -130,30 +130,34 @@ const centerMenu = [
   {
     key: 4,
     text: '시청 안내',
-    path: '/media/',
-    link: '/media',
+    path: '/mediacenter/',
+    link: '/mediacenter/description',
     subMenu: [
       {
         text: '퐁당 웹/앱/스마트TV',
-        link: '/support',
+        link: '/mediacenter/description',
       },
       {
         text: '케이블/IPTV',
-        link: '/support',
+        link: '/mediacenter/description',
       },
       {
         text: '위성',
-        link: '/support',
+        link: '/mediacenter/description',
       },
       {
         text: '소셜&오픈 플랫폼',
-        link: '/support',
+        link: '/mediacenter/description',
       },
     ],
   },
 ];
 
-const whiteModeList = [`/customercenter/questions`, `/subscribepayment`];
+const whiteModeList = [
+  `/customercenter/questions`,
+  `/subscribepayment`,
+  `/mediacenter/description`,
+];
 
 const MainHeader = () => {
   const location = useLocation();

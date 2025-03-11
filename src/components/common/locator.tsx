@@ -103,6 +103,7 @@ const Locator = ({ className = `` }) => {
       );
     }
 
+    // 고객센터
     if (location.pathname.includes('/customercenter/')) {
       setChangedPathName(
         pageData?.map(data => {
@@ -121,6 +122,26 @@ const Locator = ({ className = `` }) => {
             pathPiece = data;
             data = '공지사항';
             pathStack = `customercenter/notice`;
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
+    // 시청 안내
+    if (location.pathname.includes('/mediacenter/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'mediacenter') {
+            pathPiece = data;
+            data = '시청 안내';
+            pathStack = 'mediacenter/description';
+          }
+          if (data === 'description') {
+            pathPiece = data;
+            data = '퐁당 웹/앱/스마트TV';
+            pathStack = 'mediacenter/description';
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

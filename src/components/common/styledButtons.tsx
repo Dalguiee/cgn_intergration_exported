@@ -26,6 +26,11 @@ const formModeData = [
     mode: 'mode2-r',
     className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
   },
+  {
+    id: 6,
+    mode: 'mode3-r',
+    className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
+  },
 ];
 
 const colorModeData = [
@@ -57,6 +62,8 @@ const StyledButtons = ({
   colorMode = 'mode1',
   className = '',
   arrowMode = false,
+  playStoreMode = false,
+  appStoreMode = false,
   downloadMode = false,
   downloadItem = null,
   onClick = () => {},
@@ -71,6 +78,20 @@ const StyledButtons = ({
       }}
       className={`${className} flex items-center justify-center gap-8 text-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
     >
+      <img
+        src={`/public/images/icon/play_store.svg`}
+        className={`${playStoreMode ? `` : `hidden`} h-24 w-24 object-cover`}
+        width={24}
+        height={24}
+        alt=''
+      />
+      <img
+        src={`/public/images/icon/app_store.svg`}
+        className={`${appStoreMode ? `` : `hidden`} h-24 w-24 object-cover`}
+        width={24}
+        height={24}
+        alt=''
+      />
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img
         className={`${arrowMode ? '' : 'hidden'} h-24 w-24 max-lg:h-16 max-lg:w-16`}
