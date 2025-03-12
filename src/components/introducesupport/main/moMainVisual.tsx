@@ -5,12 +5,12 @@ const MoMainVisual = props => {
   const { setSupportTab } = props;
   // 애니메이션을 순차적으로 시작하려면 `variants`를 설정합니다.
   const itemVariants = {
-    hidden: { opacity: 0, y: -50 }, // 초기 상태 (위에서 내려오지 않음, 투명도 0)
+    hidden: { opacity: 0, y: -30 }, // 초기 상태 (위에서 내려오지 않음, 투명도 0)
     visible: {
       opacity: 1,
       y: 0, // y축 이동을 통해 slide down 효과
       transition: {
-        duration: 0.8, // 애니메이션의 시간
+        duration: 0.5, // 애니메이션의 시간
       },
     },
   };
@@ -19,7 +19,7 @@ const MoMainVisual = props => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.4, // 자식 요소들이 순차적으로 애니메이션 시작
+        staggerChildren: 0.3, // 자식 요소들이 순차적으로 애니메이션 시작
       },
     },
   };
