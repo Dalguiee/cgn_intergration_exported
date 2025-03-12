@@ -44,7 +44,7 @@ const linkData = [
 const MediaDescriptionSection5 = () => {
   return (
     <section
-      className={`flex w-full flex-col items-center justify-start bg-secondary-blue pb-120 pt-120 max-lg:pb-60 max-lg:pt-60`}
+      className={`flex w-full flex-col items-center justify-start bg-secondary-blue pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div
         className={`flex w-full max-w-1200 flex-col items-center justify-start`}
@@ -80,19 +80,19 @@ const MediaDescriptionSection5 = () => {
               <div
                 className={`flex w-full items-center justify-start gap-40 max-lg:flex-col`}
               >
-                {item.data?.map((item, idx, all) => (
+                {item.data?.map((obj, idx, all) => (
                   <div
                     key={idx}
-                    className={`${idx === all.length - 1 ? 'max-lg:border-b-0' : 'max-lg:border-b-1'} flex w-full max-w-300 flex-col items-start justify-start gap-16 max-lg:items-center max-lg:gap-12 max-lg:border-grey-100 max-lg:pb-40`}
+                    className={`${idx === all?.length - 1 ? 'max-lg:border-b-0' : 'max-lg:border-b-1 max-lg:pb-40'} flex w-full max-w-300 flex-col items-start justify-start gap-16 max-lg:items-center max-lg:gap-12 max-lg:border-grey-100`}
                   >
-                    <p className={`text-bold24 text-grey-900`}>{item?.title}</p>
+                    <p className={`text-bold24 text-grey-900`}>{obj?.title}</p>
                     <StyledButtons
                       text={`바로가기`}
                       className={`max-lg:h-32 max-lg:px-16`}
                       formMode={`mode2-r`}
                       colorMode={`mode2`}
                       onClick={() => {
-                        window.open(item?.link, '_blank');
+                        window.open(obj?.link, '_blank');
                       }}
                     ></StyledButtons>
                   </div>
