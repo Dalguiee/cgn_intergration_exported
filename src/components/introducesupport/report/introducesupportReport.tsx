@@ -22,7 +22,13 @@ const introducesupportReport = () => {
         setSelectedItem={setDateYear}
         className='w-full max-w-320'
       />
-      <div className='mt-60 min-h-713 w-full max-w-1200 rounded-16 bg-white-solid max-lg:mt-24'></div>
+      <div className='mt-60 w-full max-w-1200 rounded-16 bg-white-solid max-lg:mt-24'>
+        <img
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/report_test.jpg`}
+          alt=''
+          className='w-full'
+        />
+      </div>
     </div>
   );
 };
