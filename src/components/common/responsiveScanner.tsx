@@ -1,4 +1,4 @@
-// 반응형 감지기, 매개변수로 들어온 matchMedia 정규식에 대한 boolean 을 return 합니다.
+// 반응형 감지기, 매개변수로 들어온 matchMedia 정규식에 대한 boolean 을 return.
 import { useSyncExternalStore } from 'react';
 
 const ResponsiveScanner = query => {
@@ -15,6 +15,7 @@ const ResponsiveScanner = query => {
   return useSyncExternalStore(subscribe, getSnapshot);
 };
 
+// 이전버전 참고용
 // const ResponsiveScanner = query => {
 //   const subscribe = callback => {
 //     window.addEventListener('resize', callback);

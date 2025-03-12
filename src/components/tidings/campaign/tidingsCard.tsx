@@ -12,7 +12,7 @@ const TidingsCard = ({ item }) => {
         navigator(`/tidings/campaign/detail?articleId=${item?.id}`);
       }}
       style={{ boxShadow: `0 0 30px 1px #ececec` }}
-      className={`mt-16 flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}
+      className={`flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}
     >
       <img
         className='aspect-[252/240] min-h-352 w-full rounded-8 object-cover max-lg:min-h-224'

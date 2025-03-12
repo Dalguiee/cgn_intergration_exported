@@ -1,4 +1,6 @@
+// 훅
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // 컴포넌트
 import TopHeader from '@/layouts/mainHeader/topHeader';
@@ -7,13 +9,15 @@ import DepthBackground from '@/layouts/mainHeader/depthBackground';
 import MoBottomHeader from '@/layouts/mainHeader/moBottomHeader';
 import MoBurgerSubMenu from '@/layouts/mainHeader/moBurgerSubMenu';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
-import { useLocation } from 'react-router-dom';
+import ScrollTopScanner from '@/components/common/scrollTopScanner';
+import ScrollDirectionScanner from '@/components/common/scrollDirectionScanner';
 
 // pc 버전일때 사용되는 DepthBackground, topHeader botomHeader 가 있으며,
 // 모바일 버전에서 사용되는 burderSubMenu 와 mobileBottom 으로 나뉘어 있습니다
 // burger 는 모바일로 노출되는 상단 버거 메뉴를 누를 경우 active 를 전환시키는 역할을 하는 boolean 값입니다.
 // depthActive 는 pc 버전에서 글자뒤의 주황색 박스 배경에 해당합니다. 헤더의 글자를 누르면 on , 하단 2depth 컨테이너에서 마우스가 나올 시 off 됩니다.
 
+// 데이터
 const centerMenu = [
   {
     key: 0,
@@ -163,8 +167,20 @@ const MainHeader = () => {
   const location = useLocation();
   const [depthActive, setDepthActive] = useState(false); // 2depth 활성여부
   const [burger, setBurger] = useState(false);
-  const mobile = ResponsiveScanner(`(max-width: 1024px)`);
   const [whiteMode, setWhiteMode] = useState(false);
+  const mobile = ResponsiveScanner(`(max-width: 1024px)`);
+  const scroll = ScrollTopScanner();
+  const scrollDirection = ScrollDirectionScanner();
+
+  useEffect(() => {
+    const aaa = () => {
+      console.log(scrollDirection);
+    };
+    window.addEventListener('scroll', aaa);
+    return () => {
+      window.removeEventListener('scroll', aaa);
+    };
+  }, []);
 
   useEffect(() => {
     setWhiteMode(false);
@@ -193,7 +209,8 @@ const MainHeader = () => {
 
   return (
     <header
-      className={`px-20 ${burger ? 'fixed top-0 max-lg:bg-primary-500' : ''} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat max-lg:px-20`}
+      style={{ transition: `1s` }}
+      className={`${burger ? 'max-lg:bg-primary-500' : ''} ${scrollDirection ? `top-[0px]` : `top-[-128px] max-lg:top-[-58px]`} ${scroll ? `fixed` : ``} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} z-20 flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-20 max-lg:px-20`}
       data-comment='메인헤더'
     >
       <TopHeader />

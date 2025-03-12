@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import StyledButtons from '../common/styledButtons';
 
 const SubscribePaymentPopup = ({ popupOpen, setPopupOpen }) => {
+  // 팝업 열릴시 스크롤 잠금
   useEffect(() => {
     if (popupOpen) {
       document.body.style.overflow = 'hidden';

@@ -1,5 +1,5 @@
 // 훅
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';

@@ -115,7 +115,7 @@ const TidingsMission = () => {
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
       <section
-        className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:mb-20 max-lg:px-20 max-lg:pb-0 max-lg:pt-0`}
+        className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:mb-20 max-lg:mt-24 max-lg:px-20 max-lg:pb-0 max-lg:pt-0`}
       >
         <MoTopArticleList
           findedMockupData={findedMockupData}

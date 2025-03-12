@@ -1,22 +1,14 @@
 // 훅
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Fragment, useEffect, useState } from 'react';
-
-// 스와이퍼 모듈
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import HTMLReactParser from 'html-react-parser';
 
 // 컴포넌트
 import TagIcon from '@/components/common/tagIcon';
+import StyledButtons from '@/components/common/styledButtons';
 
 // 데이터
 import { recruitData } from '@/db/mockup';
-import HTMLReactParser from 'html-react-parser';
-import StyledButtons from '@/components/common/styledButtons';
 const recruitStepData = [
   {
     id: 0,
@@ -40,26 +32,6 @@ const recruitStepData = [
   },
 ];
 
-const SwiperSec = ({ currentData }) => {
-  return (
-    <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`mt-16`}
-      // scrollbar={{ draggable: true }}
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={swiper => console.log(swiper)}
-    >
-      {currentData?.contentSrc?.map((obj, key) => (
-        <SwiperSlide key={key}>
-          <img src={obj} alt='' />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-};
-
 const RecruitDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -67,7 +39,7 @@ const RecruitDetail = () => {
   const queryData = Object.fromEntries(querySearch);
   const [currentData, setCurrentData] = useState([]);
 
-  // 기사 찾는 함수
+  // query 추적하여 기사 load
   useEffect(() => {
     const result = recruitData?.filter(
       item => item?.id == Number(queryData?.articleId)
@@ -222,6 +194,7 @@ const RecruitDetail = () => {
                 </tbody>
               </table>
             </section>
+
             {/* 테이블 영역 모바일 */}
             <section className={`w-full lg:hidden`}>
               {currentData?.details?.map((item, idx) => (
@@ -299,6 +272,7 @@ const RecruitDetail = () => {
                 </div>
               ))}
             </section>
+
             {/* 하단 텍스트 영역 */}
             <div className={`w-full`}>
               <div className={`mb-40 max-lg:mb-24`}>
@@ -448,7 +422,8 @@ const RecruitDetail = () => {
             </div>
           </div>
         </div>
-        {/* 하단부 */}
+
+        {/* 돌아가기 버튼영역 */}
         <div
           className={`flex w-full items-start justify-center max-lg:justify-center`}
         >
