@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // 컴포넌트
 import CategoryList from '@/components/common/categoryList';
@@ -8,10 +8,36 @@ import IntroduceCEO from '@/components/introduce/organization/introduceCEO';
 import IntroduceFollowers from '@/components/introduce/organization/introduceFollowers';
 import IntroduceDirections from '@/components/introduce/organization/introduceDirections';
 import IntroduceHistory from '@/components/introduce/organization/history/introduceHistory';
-import IntroduceThemeHeader from './introduceThemeHeader';
+import IntroduceThemeHeader from '@/components/introduce/organization/introduceThemeHeader';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const IntroduceOrganization = () => {
+  const navigate = useNavigate();
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
+  const { subDepth } = useParams();
+
+  // 재 라우팅 영역, categoryList 의 state id 에 따라 라우팅 합니다.
+  useEffect(() => {
+    switch (selectedCategoryArticleId) {
+      case 0:
+        navigate('/introduce/organization/chairman');
+        break;
+      case 1:
+        navigate('/introduce/organization/ceo');
+        break;
+      case 2:
+        navigate('/introduce/organization/followers');
+        break;
+      case 3:
+        navigate('/introduce/organization/history');
+        break;
+      case 4:
+        navigate('/introduce/organization/directions');
+        break;
+      default:
+        navigate('/introduce/organization/chairman');
+    }
+  }, [location?.pathname, selectedCategoryArticleId]);
 
   return (
     <>
@@ -26,11 +52,11 @@ const IntroduceOrganization = () => {
         />
       </div>
       <section className={`flex flex-col items-center justify-start`}>
-        {selectedCategoryArticleId === 0 ? <IntroduceChairman /> : ''}
-        {selectedCategoryArticleId === 1 ? <IntroduceCEO /> : ''}
-        {selectedCategoryArticleId === 2 ? <IntroduceFollowers /> : ''}
-        {selectedCategoryArticleId === 3 ? <IntroduceHistory /> : ''}
-        {selectedCategoryArticleId === 4 ? <IntroduceDirections /> : ''}
+        {subDepth === `chairman` ? <IntroduceChairman /> : ''}
+        {subDepth === `ceo` ? <IntroduceCEO /> : ''}
+        {subDepth === `followers` ? <IntroduceFollowers /> : ''}
+        {subDepth === `history` ? <IntroduceHistory /> : ''}
+        {subDepth === `directions` ? <IntroduceDirections /> : ''}
       </section>
     </>
   );

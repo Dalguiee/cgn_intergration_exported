@@ -1,12 +1,49 @@
+import SelectBox from '@/components/common/selectBox';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+const linkData = [
+  {
+    text: `USA`,
+    link: `http://www.cgnfoundation.com/`,
+  },
+  {
+    text: `Japan`,
+    link: `http://japan.cgntv.net/`,
+  },
+  {
+    text: `Indonesia`,
+    link: `https://www.naver.com/`,
+  },
+  {
+    text: `Taiwan`,
+    link: `http://chinese.cgntv.net/`,
+  },
+  {
+    text: `Thailand`,
+    link: `https://cgnthai.net/`,
+  },
+  {
+    text: `France`,
+    link: `https://www.youtube.com/@cgn_francophone`,
+  },
+];
 
 const MainFooter = () => {
   const navigate = useNavigate();
+  const [selectedLand, setSelectedLand] = useState(undefined);
+
+  // 하단부 링크 선택시 이동
+  useEffect(() => {
+    if (selectedLand !== undefined) {
+      window.open(selectedLand?.link, '_blank');
+    }
+  }, [selectedLand]);
 
   return (
     <>
       {/* pc footer */}
-      <footer className='flex h-296 w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 max-lg:hidden'>
+      <footer className='flex h-fit w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 py-70 max-lg:hidden'>
         <div
           className={`flex h-96 w-full max-w-1560 items-center justify-between`}
         >
@@ -98,18 +135,16 @@ const MainFooter = () => {
                   />
                 </button>
               </div>
-              <div
-                className={`ml-32 flex w-217 items-center justify-between rounded-4 border-1 border-grey-200 px-12 py-12`}
-              >
-                <span className={`text-regular14 text-grey-400`}>
-                  placeholder
-                </span>
-                <button>
-                  <img
-                    src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
-                    alt=''
-                  />
-                </button>
+              <div className={`ml-32 flex w-217 items-center justify-between`}>
+                <SelectBox
+                  selectedItem={selectedLand}
+                  setSelectedItem={setSelectedLand}
+                  listData={linkData}
+                  defaultValue={`해외지사 바로가기`}
+                  className={`w-full`}
+                  height={`48`}
+                  upMode={true}
+                />
               </div>
             </div>
           </div>

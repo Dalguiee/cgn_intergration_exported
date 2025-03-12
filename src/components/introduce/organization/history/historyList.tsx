@@ -35,6 +35,7 @@ const HistoryList = ({
         </div>
       </div>
       <div
+        data-aos='fade-up'
         className={`ml-240 flex w-full flex-col items-start justify-start gap-24 px-66 pt-15 max-lg:ml-24 max-lg:px-0 max-lg:py-6`}
       >
         {historyData?.[selectedDataIdx]?.map((item, key) => (

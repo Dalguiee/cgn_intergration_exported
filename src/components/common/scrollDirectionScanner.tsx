@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const ScrollDirectionScanner = () => {
-  const [scrollDirection, setScrollDirection] = useState(null);
+  const [scrollDirection, setScrollDirection] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {

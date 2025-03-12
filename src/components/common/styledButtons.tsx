@@ -74,6 +74,7 @@ const StyledButtons = ({
 
   return (
     <button
+      style={{ transition: `0.5s` }}
       onClick={() => {
         onClick();
       }}
