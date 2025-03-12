@@ -116,7 +116,12 @@ const MainFooter = () => {
           <div className='h-full w-fit'>
             <div className={`flex items-center justify-center`}>
               <div className={`flex items-center justify-center gap-8`}>
-                <button className={`w-40`}>
+                <button
+                  onClick={() => {
+                    window.open(`https://www.fondant.kr`, `_blank`);
+                  }}
+                  className={`w-40`}
+                >
                   <img
                     className={`w-full object-cover`}
                     src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
@@ -125,7 +130,12 @@ const MainFooter = () => {
                     alt=''
                   />
                 </button>
-                <button className={`w-40`}>
+                <button
+                  onClick={() => {
+                    window.open(`https://www.youtube.com/@cgn`, `_blank`);
+                  }}
+                  className={`w-40`}
+                >
                   <img
                     src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
                     className={`w-full object-cover`}
@@ -180,20 +190,32 @@ const MainFooter = () => {
         </div>
         <div className={`flex w-full items-center justify-between px-12`}>
           <div className={`flex items-center justify-center gap-8`}>
-            <img
-              className={`h-40 w-40`}
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
-              width={`40px`}
-              height={`40px`}
-              alt=''
-            />
-            <img
-              className={`h-40 w-40`}
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
-              width={`40px`}
-              height={`40px`}
-              alt=''
-            />
+            <button
+              onClick={() => {
+                window.open(`https://www.fondant.kr`, `_blank`);
+              }}
+            >
+              <img
+                className={`h-40 w-40`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
+                width={`40px`}
+                height={`40px`}
+                alt=''
+              />
+            </button>
+            <button
+              onClick={() => {
+                window.open(`https://www.youtube.com/@cgn`, `_blank`);
+              }}
+            >
+              <img
+                className={`h-40 w-40`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
+                width={`40px`}
+                height={`40px`}
+                alt=''
+              />
+            </button>
           </div>
           <div
             className={`ml-32 flex h-48 w-217 items-center justify-between rounded-4 border-1 border-grey-200 px-12 py-12`}

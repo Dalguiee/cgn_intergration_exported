@@ -32,8 +32,10 @@ const MainHeaderTopBanner = ({
 
   return (
     <div
-      style={{ backgroundImage: `url(/public/images/banner/content_1.png` }}
-      className={`${headerTopBannerAvailable ? `top-0` : `top-[calc(-140px)] max-lg:top-[-88px]`} fixed z-[21] flex h-140 h-full w-full flex-col items-end justify-end bg-primary-500 bg-cover bg-center bg-no-repeat px-360 pb-20 max-lg:h-88`}
+      style={{
+        backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/banner/content_1.png`,
+      }}
+      className={`${headerTopBannerAvailable ? `top-0` : `top-[calc(-140px)] max-lg:top-[-88px]`} fixed z-[21] flex h-140 w-full flex-col items-end justify-end bg-primary-500 bg-cover bg-center bg-no-repeat px-360 pb-20 max-lg:h-88`}
     >
       <div className={`flex items-center justify-start`}>
         <div className={`flex items-center justify-center`}>
