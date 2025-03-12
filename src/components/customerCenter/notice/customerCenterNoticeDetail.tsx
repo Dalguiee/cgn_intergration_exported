@@ -10,7 +10,7 @@ const CustomerCenterNoticeDetail = () => {
   const navigate = useNavigate();
   const querySearch = new URLSearchParams(location.search);
   const queryData = Object.fromEntries(querySearch);
-  const [currentData, setCurrentData] = useState({}); //
+  const [currentData, setCurrentData] = useState({});
   const [beforeData, setBeforeData] = useState({});
   const [afterData, setAfterData] = useState({});
 
@@ -142,6 +142,7 @@ const CustomerCenterNoticeDetail = () => {
             </div>
           </div>
         </div>
+        {/* 돌아가기 버튼 */}
         <div
           className={`flex w-full items-start justify-end max-lg:justify-center`}
         >

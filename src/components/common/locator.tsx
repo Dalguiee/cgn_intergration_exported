@@ -17,7 +17,7 @@ const Locator = ({ className = `` }) => {
     // 페이지 로케이팅을 담당하는 분기 데이터 입니다.
 
     // 소개
-    if (location.pathname.includes('/introduce/')) {
+    if (location?.pathname?.includes('/introduce/')) {
       setChangedPathName(
         pageData?.map(data => {
           if (data === 'introduce') {
@@ -33,22 +33,49 @@ const Locator = ({ className = `` }) => {
           if (data === 'organization') {
             pathPiece = data;
             data = '기관 소개';
-            pathStack = 'introduce/organization?articleId=1';
+            pathStack = 'introduce/organization/chairman';
           }
+          if (data === 'chairman') {
+            pathPiece = data;
+            data = `이사장 인사`;
+            pathStack = 'introduce/organization/chairman';
+          }
+          if (data === 'ceo') {
+            pathPiece = data;
+            data = `대표 인사`;
+            pathStack = 'introduce/organization/ceo';
+          }
+          if (data === `followers`) {
+            pathPiece = data;
+            data = `섬기는 분들`;
+            pathStack = 'introduce/organization/followers';
+          }
+          if (data === `history`) {
+            pathPiece = data;
+            data = `연혁`;
+            pathStack = 'introduce/organization/history';
+          }
+          if (data === `directions`) {
+            pathPiece = data;
+            data = `오시는 길`;
+            pathStack = 'introduce/organization/directions';
+          }
+
           if (data === 'worldwide') {
             pathPiece = data;
             data = '해외지사 소개';
             pathStack = 'introduce/worldwide';
           }
-          if (data === 'recruit') {
-            pathPiece = data;
-            data = '채용';
-            pathStack = 'introduce/recruit';
-          }
           if (data === 'ambassador') {
             pathPiece = data;
             data = '홍보대사';
             pathStack = 'introduce/ambassador';
+          }
+
+          if (data === 'recruit') {
+            pathPiece = data;
+            data = '채용';
+            pathStack = 'introduce/recruit';
           }
 
           if (data === 'detail') {
@@ -63,7 +90,7 @@ const Locator = ({ className = `` }) => {
     }
 
     // 소식
-    if (location.pathname.includes('/tidings/')) {
+    if (location?.pathname?.includes('/tidings/')) {
       setChangedPathName(
         pageData?.map(data => {
           if (data === 'tidings') {
@@ -104,7 +131,7 @@ const Locator = ({ className = `` }) => {
     }
 
     // 후원
-    if (location.pathname.includes('/introducesupport/')) {
+    if (location?.pathname?.includes('/introducesupport/')) {
       setChangedPathName(
         pageData?.map(data => {
           if (data === 'introducesupport') {
@@ -128,7 +155,7 @@ const Locator = ({ className = `` }) => {
     }
 
     // 고객센터
-    if (location.pathname.includes('/customercenter/')) {
+    if (location?.pathname?.includes('/customercenter/')) {
       setChangedPathName(
         pageData?.map(data => {
           if (data === 'customercenter') {
@@ -153,8 +180,28 @@ const Locator = ({ className = `` }) => {
       );
     }
 
+    // 참여
+    if (location?.pathname?.includes('/activity/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'activity') {
+            pathPiece = data;
+            data = '참여';
+            pathStack = 'activity/visit';
+          }
+          if (data === 'visit') {
+            pathPiece = data;
+            data = '행사/견학 신청';
+            pathStack = 'activity/visit';
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
     // 시청 안내
-    if (location.pathname.includes('/mediacenter/')) {
+    if (location?.pathname?.includes('/mediacenter/')) {
       setChangedPathName(
         pageData?.map(data => {
           if (data === 'mediacenter') {
@@ -172,7 +219,7 @@ const Locator = ({ className = `` }) => {
         })
       );
     }
-  }, [location]);
+  }, [location?.pathname]);
 
   return (
     <section

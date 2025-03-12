@@ -4,7 +4,14 @@ import { useEffect } from 'react';
 
 // 페이지
 import DefaultLayer from '@/layouts/defaultLayer';
+// 홈
 import HomePage from '@/pages/home/page';
+import SubscribePaymentPage from '@/pages/subscribePayment/page';
+// 후원
+import IntroducesupportPage from '@/pages/introducesupport/main/page';
+import IntroducesupportAnniversaryPage from '@/pages/introducesupport/anniversary/page';
+import IntroducesupportOverseasPage from '@/pages/introducesupport/overseas/page';
+import IntroducesupportReportPage from '@/pages/introducesupport/report/page';
 // 소식
 import TidingsBroadcastPage from '@/pages/tidings/broadcast/page';
 import TidingsCampaignPage from '@/pages/tidings/campaign/page';
@@ -12,23 +19,19 @@ import TidingsMissionPage from '@/pages/tidings/mission/page';
 import TidingsSupportPage from '@/pages/tidings/support/page';
 import TidingsDetailPage from '@/pages/tidings/detailPage';
 // 소개
-import IntroducePage from '@/pages/introduce/vision/page';
-import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
-// 후원
-import IntroducesupportPage from '@/pages/introducesupport/main/page';
-import IntroducesupportAnniversaryPage from '@/pages/introducesupport/anniversary/page';
-import IntroducesupportOverseasPage from '@/pages/introducesupport/overseas/page';
-import IntroducesupportReportPage from '@/pages/introducesupport/report/page';
-
 import IntroduceVisionPage from '@/pages/introduce/vision/page';
+import IntroduceOrganizationPage from '@/pages/introduce/organization/page';
 import IntroduceWorldwidePage from '@/pages/introduce/worldwide/page';
 import IntroduceRecruitPage from '@/pages/introduce/recruit/page';
-import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
 import IntroduceAmbassadorPage from '@/pages/introduce/ambassador/page';
+import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
+// 참여
+import ActivityVisitPage from '@/pages/activity/visit/page';
+// 고객센터
 import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotice/page';
 import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
 import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQuestions/page';
-import SubscribePaymentPage from '@/pages/subscribePayment/page';
+// 시청 안내
 import MediaDescriptionPage from '@/pages/mediaCenter/mediaDescription/page';
 
 export default function MainRouter() {
@@ -63,45 +66,9 @@ export default function MainRouter() {
       <Route path='/*' element={<DefaultLayer />}>
         {/* 홈 */}
         <Route path='home' element={<HomePage />}></Route>
-        {/* 소식 */}
         <Route
-          path='tidings/campaign'
-          element={<TidingsCampaignPage />}
-        ></Route>
-        <Route path='tidings/mission' element={<TidingsMissionPage />}></Route>
-        <Route path='tidings/support' element={<TidingsSupportPage />}></Route>
-        <Route
-          path='tidings/broadcast'
-          element={<TidingsBroadcastPage />}
-        ></Route>
-        <Route
-          path='tidings/:subDepth/detail'
-          element={<TidingsDetailPage />}
-        ></Route>
-        {/* 소개 */}
-        <Route
-          path='introduce/vision'
-          element={<IntroduceVisionPage />}
-        ></Route>
-        <Route
-          path='introduce/organization'
-          element={<IntroduceOrganizationPage />}
-        ></Route>
-        <Route
-          path='introduce/worldwide'
-          element={<IntroduceWorldwidePage />}
-        ></Route>
-        <Route
-          path='introduce/ambassador'
-          element={<IntroduceAmbassadorPage />}
-        ></Route>
-        <Route
-          path='introduce/recruit'
-          element={<IntroduceRecruitPage />}
-        ></Route>
-        <Route
-          path='introduce/recruit/detail'
-          element={<RecruitDetailPage />}
+          path='subscribepayment'
+          element={<SubscribePaymentPage />}
         ></Route>
 
         {/* 후원 */}
@@ -122,6 +89,52 @@ export default function MainRouter() {
           element={<IntroducesupportReportPage />}
         ></Route>
 
+        {/* 소식 */}
+        <Route
+          path='tidings/campaign'
+          element={<TidingsCampaignPage />}
+        ></Route>
+        <Route path='tidings/mission' element={<TidingsMissionPage />}></Route>
+        <Route path='tidings/support' element={<TidingsSupportPage />}></Route>
+        <Route
+          path='tidings/broadcast'
+          element={<TidingsBroadcastPage />}
+        ></Route>
+        <Route
+          path='tidings/:subDepth/detail'
+          element={<TidingsDetailPage />}
+        ></Route>
+
+        {/* 소개 */}
+        <Route
+          path='introduce/vision'
+          element={<IntroduceVisionPage />}
+        ></Route>
+        <Route
+          path='introduce/organization/:subDepth'
+          element={<IntroduceOrganizationPage />}
+        ></Route>
+        <Route
+          path='introduce/worldwide'
+          element={<IntroduceWorldwidePage />}
+        ></Route>
+        <Route
+          path='introduce/ambassador'
+          element={<IntroduceAmbassadorPage />}
+        ></Route>
+        <Route
+          path='introduce/recruit'
+          element={<IntroduceRecruitPage />}
+        ></Route>
+        <Route
+          path='introduce/recruit/detail'
+          element={<RecruitDetailPage />}
+        ></Route>
+
+        {/* 참여 */}
+        <Route path='activity/visit' element={<ActivityVisitPage />}></Route>
+
+        {/* 고객센터 */}
         <Route
           path='customercenter/notice'
           element={<CustomerCenterNoticePage />}
@@ -130,17 +143,12 @@ export default function MainRouter() {
           path='customercenter/questions'
           element={<CustomerCenterQuestionsPage />}
         ></Route>
-
         <Route
           path='customercenter/notice/detail'
           element={<CustomerCenterNoticeDetailPage />}
         ></Route>
 
-        <Route
-          path='subscribepayment'
-          element={<SubscribePaymentPage />}
-        ></Route>
-
+        {/* 시청안내 */}
         <Route
           path='mediacenter/description'
           element={<MediaDescriptionPage />}

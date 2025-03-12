@@ -50,7 +50,7 @@ export const paymentMockupData = [
 
 const HomeTopBanner = ({ mobile }) => {
   return (
-    <div className={`flex h-fit flex-col items-center justify-start`}>
+    <div className={`relative flex h-fit flex-col items-center justify-start`}>
       <div
         className={`relative flex h-918 w-full items-start justify-center max-lg:h-[calc(453px+48px)]`}
       >
@@ -109,7 +109,7 @@ const HomeTopBanner = ({ mobile }) => {
         </Swiper>
       </div>
       <div
-        className={`z-10 flex w-full max-w-1560 flex-col items-center justify-end px-16 max-lg:min-h-240 max-lg:px-0 lg:absolute lg:left-1/2 lg:top-777 lg:translate-x-[-50%]`}
+        className={`z-10 flex h-fit w-full max-w-1560 flex-col items-center justify-end px-16 max-lg:min-h-240 max-lg:px-0 lg:absolute lg:bottom-101 lg:left-1/2 lg:translate-x-[-50%]`}
       >
         <HomePaymentBox />
       </div>

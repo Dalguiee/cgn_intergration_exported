@@ -27,12 +27,12 @@ const CustomerCenterCategoryList = () => {
       <div
         className={`mx-auto flex w-fit items-center justify-center gap-8 max-lg:gap-4`}
       >
-        {tabListData?.map(item => (
+        {tabListData?.map((item, idx) => (
           <button
             onClick={() => {
               navigate(item?.path);
             }}
-            key={item?.id}
+            key={idx}
             className={`bg-white-solid ${location?.pathname?.includes(item?.path) ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.name}

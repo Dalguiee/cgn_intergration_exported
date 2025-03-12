@@ -69,7 +69,7 @@ const CategoryList = ({
   useEffect(() => {
     if (location.pathname) {
       const tagDataFind = tabListData.filter(item => {
-        return item?.path?.includes(location?.pathname);
+        return location?.pathname?.includes(item?.path);
       });
       const totalTag = {
         id: 0,

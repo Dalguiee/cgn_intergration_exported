@@ -3,11 +3,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const SelectBox = ({
-  listData = [],
+  listData = {},
   selectedItem,
   setSelectedItem,
-  defultValue = '',
+  defaultValue = '',
   widthFull = false,
+  upMode = false,
   className = '',
   height = '',
   selectedColor = 'primary-500',
@@ -18,7 +19,7 @@ const SelectBox = ({
 
   // 선택된 데이터를 넣는 항목, 페이지 진입시 첫줄 데이터를 placeholder 로 사용합니다
   useEffect(() => {
-    if (!defultValue) {
+    if (!defaultValue) {
       setSelectedItem(listData?.[0]);
     }
     document.addEventListener('click', handleClickOutside);
@@ -29,7 +30,11 @@ const SelectBox = ({
 
   // 내부에 스크롤 선택지 맨 위로 올려 보이게 합니다.
   useEffect(() => {
-    selectOpenBox?.current.scrollTo(0, 0);
+    if (upMode) {
+      selectOpenBox?.current.scrollTo(999, 0);
+    } else {
+      selectOpenBox?.current.scrollTo(0, 0);
+    }
   }, [open]);
 
   //외부 클릭 감지 시 setOpen(false)
@@ -50,11 +55,11 @@ const SelectBox = ({
       className={`relative z-10 flex cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className} ${height ? `h-${height}` : 'h-62'}`}
     >
       <div
-        className={`${open ? `h-fit` : 'h-full'} absolute left-0 top-0 flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 outline-grey-200 max-lg:rounded-4`}
+        className={`${open ? `h-fit` : 'h-full'} absolute left-0 ${upMode ? `bottom-0` : `top-0`} flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 outline-grey-200 max-lg:rounded-4`}
       >
         <ul
           ref={selectOpenBox}
-          className={`${open ? `h-fit` : 'h-full'} flex w-full flex-col items-start justify-start overflow-y-hidden`}
+          className={`${open ? `h-fit` : 'h-full'} flex w-full ${upMode ? `flex-col-reverse` : `flex-col`} items-start justify-start overflow-y-hidden`}
         >
           <li
             className={`${open ? '' : ''} pointer-events-none flex w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4 ${height ? `h-${height}` : 'h-62'}`}
@@ -62,14 +67,14 @@ const SelectBox = ({
             <button
               className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start`}
             >
-              {selectedItem?.text ? selectedItem?.text : defultValue}
+              {selectedItem?.text ? selectedItem?.text : defaultValue}
             </button>
           </li>
           <li className='max-h-300 w-full overflow-auto' data-custom-scroll>
             {listData?.map((item, key) => (
               <div
                 key={key}
-                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full items-center justify-start pt-1 max-lg:h-48`}
+                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full select-none items-center justify-start pt-1 max-lg:h-48`}
               >
                 <button
                   onClick={() => {
@@ -90,10 +95,10 @@ const SelectBox = ({
         </ul>
       </div>
       <div
-        className={`pointer-events-none absolute right-10 ${open ? 'rotate-180 transform' : ''} transition`}
+        className={`pointer-events-none absolute right-10 select-none ${open ? 'rotate-180 transform' : ''} transition`}
       >
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
+          src={`${upMode ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_up_grey900.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`} `}
           alt=''
         />
       </div>

@@ -11,6 +11,16 @@ const ThemeHeader = ({ className = `` }) => {
   // tidigns 페이지의 타이틀과 서브타이틀을 분기하는 데이터 입니다.
   const currentPageData = [
     {
+      path: 'introducesupport/overseas',
+      title: '해외지사 후원',
+      subTitle: 'Please join CGN’s media mission to spread His love and Word.',
+    },
+    {
+      path: 'introducesupport/report',
+      title: '후원내역 보고',
+      subTitle: '소중한 후원금 사용 내역을 확인해 보세요',
+    },
+    {
       path: 'introduce/vision',
       title: '미션&비전',
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN',
@@ -18,13 +28,12 @@ const ThemeHeader = ({ className = `` }) => {
     {
       path: 'introduce/organization',
       title: '기관 소개',
-      subTitle: 'CGN의 해외지사를 소개합니다.',
+      subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN을 소개합니다.',
     },
-
     {
       path: 'introduce/worldwide',
       title: '해외지사 소개',
-      subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN을 소개합니다.',
+      subTitle: 'CGN의 해외지사를 소개합니다.',
     },
     {
       path: 'introduce/recruit',
@@ -36,7 +45,6 @@ const ThemeHeader = ({ className = `` }) => {
       title: '홍보대사',
       subTitle: 'CGN의 홍보대사를 소개합니다.',
     },
-
     {
       path: 'introduce/recruit',
       title: '채용',
@@ -63,15 +71,17 @@ const ThemeHeader = ({ className = `` }) => {
       title: '보도 자료',
       subTitle: 'CGN의 보도 자료를 확인해 보세요.',
     },
+
     {
-      path: 'introducesupport/overseas',
-      title: '해외지사 후원',
-      subTitle: 'Please join CGN’s media mission to spread His love and Word.',
+      path: 'activity/visit',
+      title: '행사/견학 신청',
+      subTitle: '행사와 견학 신청을 안내합니다.',
     },
+
     {
-      path: 'introducesupport/report',
-      title: '후원내역 보고',
-      subTitle: '소중한 후원금 사용 내역을 확인해 보세요',
+      path: 'mediacenter/description',
+      title: `퐁당 웹/앱/스마트TV`,
+      subTitle: '기독 OTT, 퐁당',
     },
 
     {
@@ -79,12 +89,6 @@ const ThemeHeader = ({ className = `` }) => {
       title: '고객 센터',
       subTitle:
         'CGN에 관련된 다양한 공지사항과 자주 묻는 질문들을 확인해 보세요.',
-    },
-
-    {
-      path: 'mediacenter/description',
-      title: `퐁당 웹/앱/스마트TV`,
-      subTitle: '기독 OTT, 퐁당',
     },
   ];
 

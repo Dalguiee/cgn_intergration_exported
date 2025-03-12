@@ -23,6 +23,8 @@ const phoneNumberData = [
 
 const SubscribePayment = ({ setPopupOpen }) => {
   const location = useLocation();
+
+  // 홈에서 선택된 데이터 가져옴
   const state = location.state;
 
   // 금액입력
@@ -60,6 +62,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
       <section
         className={`flex w-full max-w-720 flex-col items-center justify-start gap-24 pb-120 pt-40 max-lg:pb-60`}
       >
+        {/* 후원 버튼모음 */}
         <div
           className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:h-48 max-lg:min-w-full max-lg:gap-5`}
         >
@@ -77,6 +80,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             );
           })}
         </div>
+        {/* 가격 직접입력 input */}
         <div className={`w-full`}>
           <DefaultInput
             searchBtn={false}
@@ -87,6 +91,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             setInputText={setWritedPrice}
           />
         </div>
+        {/* 이름 */}
         <div className={`w-full`}>
           <p className={`text-regular14 mb-8 pl-4 text-grey-900`}>이름</p>
           <div>
@@ -99,6 +104,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             />
           </div>
         </div>
+        {/* 연락처 */}
         <div className={`w-full`}>
           <p className={`text-regular14 mb-8 pl-4 text-grey-900`}>연락처</p>
           <div className={`flex items-center justify-between gap-12`}>
@@ -128,6 +134,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             />
           </div>
         </div>
+        {/* 체크박스 및 개인정보 처리방침 팝업열기버튼 */}
         <div
           className={`flex w-full items-center justify-center gap-8 max-lg:justify-start`}
         >
@@ -156,6 +163,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             <span className={`text-bold14 text-grey-900`}>[전문보기]</span>
           </button>
         </div>
+        {/* 신청하기 버튼 */}
         <div className={`mt-16 w-full`}>
           <StyledButtons
             className={`${agree ? `` : `!bg-primary-600 !text-grey-300`} w-full`}

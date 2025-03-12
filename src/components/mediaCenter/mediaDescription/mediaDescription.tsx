@@ -14,10 +14,10 @@ const MediaDescription = () => {
   return (
     <section className={`w-full`}>
       <MediaDescriptionSection1 mobile={mobile} />
-      <MediaDescriptionSection2 mobile={mobile} />
-      <MediaDescriptionSection3 mobile={mobile} />
+      <MediaDescriptionSection2 />
+      <MediaDescriptionSection3 />
       <MediaDescriptionSection4 mobile={mobile} />
-      <MediaDescriptionSection5 mobile={mobile} />
+      <MediaDescriptionSection5 />
     </section>
   );
 };

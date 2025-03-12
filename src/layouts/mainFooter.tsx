@@ -1,12 +1,49 @@
+import SelectBox from '@/components/common/selectBox';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+const linkData = [
+  {
+    text: `USA`,
+    link: `http://www.cgnfoundation.com/`,
+  },
+  {
+    text: `Japan`,
+    link: `http://japan.cgntv.net/`,
+  },
+  {
+    text: `Indonesia`,
+    link: `https://www.naver.com/`,
+  },
+  {
+    text: `Taiwan`,
+    link: `http://chinese.cgntv.net/`,
+  },
+  {
+    text: `Thailand`,
+    link: `https://cgnthai.net/`,
+  },
+  {
+    text: `France`,
+    link: `https://www.youtube.com/@cgn_francophone`,
+  },
+];
 
 const MainFooter = () => {
   const navigate = useNavigate();
+  const [selectedLand, setSelectedLand] = useState(undefined);
+
+  // 하단부 링크 선택시 이동
+  useEffect(() => {
+    if (selectedLand !== undefined) {
+      window.open(selectedLand?.link, '_blank');
+    }
+  }, [selectedLand]);
 
   return (
     <>
       {/* pc footer */}
-      <footer className='flex h-296 w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 max-lg:hidden'>
+      <footer className='flex h-fit w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 py-70 max-lg:hidden'>
         <div
           className={`flex h-96 w-full max-w-1560 items-center justify-between`}
         >
@@ -79,7 +116,12 @@ const MainFooter = () => {
           <div className='h-full w-fit'>
             <div className={`flex items-center justify-center`}>
               <div className={`flex items-center justify-center gap-8`}>
-                <button className={`w-40`}>
+                <button
+                  onClick={() => {
+                    window.open(`https://www.fondant.kr`, `_blank`);
+                  }}
+                  className={`w-40`}
+                >
                   <img
                     className={`w-full object-cover`}
                     src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
@@ -88,7 +130,12 @@ const MainFooter = () => {
                     alt=''
                   />
                 </button>
-                <button className={`w-40`}>
+                <button
+                  onClick={() => {
+                    window.open(`https://www.youtube.com/@cgn`, `_blank`);
+                  }}
+                  className={`w-40`}
+                >
                   <img
                     src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
                     className={`w-full object-cover`}
@@ -98,18 +145,16 @@ const MainFooter = () => {
                   />
                 </button>
               </div>
-              <div
-                className={`ml-32 flex w-217 items-center justify-between rounded-4 border-1 border-grey-200 px-12 py-12`}
-              >
-                <span className={`text-regular14 text-grey-400`}>
-                  placeholder
-                </span>
-                <button>
-                  <img
-                    src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
-                    alt=''
-                  />
-                </button>
+              <div className={`ml-32 flex w-217 items-center justify-between`}>
+                <SelectBox
+                  selectedItem={selectedLand}
+                  setSelectedItem={setSelectedLand}
+                  listData={linkData}
+                  defaultValue={`해외지사 바로가기`}
+                  className={`w-full`}
+                  height={`48`}
+                  upMode={true}
+                />
               </div>
             </div>
           </div>
@@ -145,20 +190,32 @@ const MainFooter = () => {
         </div>
         <div className={`flex w-full items-center justify-between px-12`}>
           <div className={`flex items-center justify-center gap-8`}>
-            <img
-              className={`h-40 w-40`}
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
-              width={`40px`}
-              height={`40px`}
-              alt=''
-            />
-            <img
-              className={`h-40 w-40`}
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
-              width={`40px`}
-              height={`40px`}
-              alt=''
-            />
+            <button
+              onClick={() => {
+                window.open(`https://www.fondant.kr`, `_blank`);
+              }}
+            >
+              <img
+                className={`h-40 w-40`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/pondang_logo_1.png`}
+                width={`40px`}
+                height={`40px`}
+                alt=''
+              />
+            </button>
+            <button
+              onClick={() => {
+                window.open(`https://www.youtube.com/@cgn`, `_blank`);
+              }}
+            >
+              <img
+                className={`h-40 w-40`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/youtube_logo_1.png`}
+                width={`40px`}
+                height={`40px`}
+                alt=''
+              />
+            </button>
           </div>
           <div
             className={`ml-32 flex h-48 w-217 items-center justify-between rounded-4 border-1 border-grey-200 px-12 py-12`}
