@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import SelectBox from '@/components/common/selectBox';
 import DefaultInput from '@/components/common/defaultInput';
 import CheckBox from '@/components/common/checkBox';
+import AnniversaryPopup from '@/components/introducesupport/anniversary/anniversaryPopup';
 
 // 기념일 후원 페이지
 const IntroducesupportAnniversary = () => {
@@ -203,6 +204,8 @@ const IntroducesupportAnniversary = () => {
       text: '퐁당 플랫폼을 통한 양육 콘텐츠 제공으로 한국교회의 목회를 돕고, 매해 콘퍼런스를 통해 한국교회 미디어 전략을 제시합니다',
     },
   ];
+
+  const [popup, setPopup] = useState(false);
 
   return (
     <div className='w-full'>
@@ -557,7 +560,12 @@ const IntroducesupportAnniversary = () => {
                 isChecked={policyCheck}
                 setIsChecked={setPolicyCheck}
               />
-              <button className='text-bold14 ml-8'>[전문보기]</button>
+              <button
+                className='text-bold14 ml-8'
+                onClick={() => setPopup(true)}
+              >
+                [전문보기]
+              </button>
             </div>
             <button className='text-bold24 max-lg:text-bold18 flex h-64 w-full items-center justify-center rounded-8 bg-gray-900 text-white-solid'>
               증서 신청하기
@@ -682,6 +690,8 @@ const IntroducesupportAnniversary = () => {
           문의 02-796-2243
         </div>
       </div>
+      {/* 전문보기 팝업 */}
+      {popup && <AnniversaryPopup isOpen={setPopup} />}
     </div>
   );
 };
