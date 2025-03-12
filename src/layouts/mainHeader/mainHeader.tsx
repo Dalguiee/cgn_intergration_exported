@@ -23,7 +23,7 @@ const centerMenu = [
     subMenu: [
       {
         text: '미디어선교 후원',
-        link: '/introducesupport/support',
+        link: '/introducesupport/main',
       },
       {
         text: '기념일 후원',

@@ -1,5 +1,5 @@
 // 훅
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import SelectBox from '@/components/common/selectBox';
 import DefaultInput from '@/components/common/defaultInput';
 import CheckBox from '@/components/common/checkBox';
+//popup
 import AnniversaryPopup from '@/components/introducesupport/anniversary/anniversaryPopup';
 
 // 기념일 후원 페이지
