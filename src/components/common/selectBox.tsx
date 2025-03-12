@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const SelectBox = ({
-  listData = {},
+  listData = [],
   selectedItem,
   setSelectedItem,
   defaultValue = '',

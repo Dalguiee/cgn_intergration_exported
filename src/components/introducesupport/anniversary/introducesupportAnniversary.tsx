@@ -492,7 +492,7 @@ const IntroducesupportAnniversary = () => {
               <div className='flex w-full gap-12'>
                 <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
-                    defultValue='년도 선택'
+                    defaultValue='년도 선택'
                     listData={dateYearOption}
                     selectedItem={dateYear}
                     setSelectedItem={setDateYear}
@@ -504,7 +504,7 @@ const IntroducesupportAnniversary = () => {
                 </div>
                 <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
-                    defultValue='월 선택'
+                    defaultValue='월 선택'
                     listData={dateMonthOption}
                     selectedItem={dateMonth}
                     setSelectedItem={setDateMonth}
@@ -516,7 +516,7 @@ const IntroducesupportAnniversary = () => {
                 </div>
                 <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
-                    defultValue='일 선택'
+                    defaultValue='일 선택'
                     listData={dateDayOption}
                     selectedItem={dateDay}
                     setSelectedItem={setDateDay}
