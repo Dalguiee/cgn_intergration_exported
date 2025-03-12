@@ -125,7 +125,12 @@ const IntroducesupportOverseas = () => {
           className='ml-[-16px] hidden min-w-[calc(100%+32px)] max-lg:block'
         />
         <div className='w-full pt-120 max-lg:pt-0'>
-          <div className='mb-120 aspect-[1200/570] w-full max-w-1200 bg-[url(/public/images/introducesupport/pc_oberseas_bg.png)] bg-cover bg-no-repeat pe-30 pt-60 max-lg:mb-60 max-lg:bg-none max-lg:pe-0'>
+          <div
+            style={{
+              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_oberseas_bg.png)`,
+            }}
+            className={`mb-120 aspect-[1200/570] w-full max-w-1200 bg-cover bg-no-repeat pe-30 pt-60 max-lg:mb-60 max-lg:bg-none max-lg:pe-0`}
+          >
             <div className='text-bold40 max-lg:text-bold24 mb-12'>
               Media Mission Together!
             </div>
