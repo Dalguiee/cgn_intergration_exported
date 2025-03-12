@@ -8,7 +8,12 @@ const IntroducesupportMain = () => {
         data-comment='후원페이지'
       >
         {/* ---------- MO ---------- */}
-        <div className='flex w-full flex-col items-center bg-[url(/public/images/introducesupport/sponsor_main_bg_mo.jpg)] bg-cover bg-top bg-repeat pb-120 pt-60'>
+        <div
+          style={{
+            backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/sponsor_main_bg_mo.jpg)`,
+          }}
+          className={`flex w-full flex-col items-center bg-cover bg-top bg-repeat pb-120 pt-60`}
+        >
           <div className='text-bold32 mb-60 break-keep text-center text-white-solid'>
             CGN 모든 사역은
             <br />

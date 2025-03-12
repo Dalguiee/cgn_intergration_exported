@@ -7,7 +7,7 @@ import HTMLReactParser from 'html-react-parser';
 const mediaCardData = [
   {
     id: 0,
-    title: `국내 최대 순수 기독 콘텐츠 라이브러리`,
+    title: `국내 최대 순수<br className="lg:hidden" />기독 콘텐츠 라이브러리`,
     subTitle: `퐁당 오리지널, 영화, 키즈, 예배, 큐티, 강의 등 4만여 개 이상의<br />검증된 기독 콘텐츠 무료 제공`,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/media_card_content_1.png`,
   },
@@ -43,21 +43,31 @@ const mediaCardData = [
   },
 ];
 
-const MediaDescriptionCard = () => {
+const MediaDescriptionSection2Card = () => {
   return mediaCardData?.map((item, idx) => (
     <div
-      className={`flex h-500 w-590 flex-col items-center justify-between rounded-16 bg-secondary-blue px-32 pb-63 pt-60`}
+      className={`flex h-500 w-590 flex-col items-center justify-between rounded-16 bg-secondary-blue px-32 pb-63 pt-60 max-lg:h-fit max-lg:rounded-8 max-lg:px-32 max-lg:py-24`}
       key={idx}
     >
       <div className={`w-full`}>
-        <p className={`text-bold24 mb-16 text-white-solid`}>{item?.title}</p>
-        <p className={`text-regular16 text-grey-100`}>
+        <p
+          className={`text-bold24 mb-16 text-white-solid max-lg:mb-32 max-lg:text-center`}
+        >
+          {HTMLReactParser(item?.title)}
+        </p>
+        <p className={`text-regular16 text-grey-100 max-lg:hidden`}>
           {HTMLReactParser?.(item?.subTitle)}
         </p>
       </div>
-      <img src={item?.src} alt='' />
+      <img
+        className={`h-248 w-526 object-cover max-lg:h-140 max-lg:w-297`}
+        src={item?.src}
+        width={526}
+        height={248}
+        alt=''
+      />
     </div>
   ));
 };
 
-export default MediaDescriptionCard;
+export default MediaDescriptionSection2Card;

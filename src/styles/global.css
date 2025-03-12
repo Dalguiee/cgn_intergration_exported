@@ -399,6 +399,11 @@
   width: 0px;
 } */
 
+/* 터치 줌 방지 */
+/* body {
+  touch-action: manipulation;
+} */
+
 @media (max-width: 360px) {
   [data-recruit-vision-box] {
     display: none;

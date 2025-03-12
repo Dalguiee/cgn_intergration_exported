@@ -448,9 +448,6 @@ const RecruitDetail = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`w-full border-b-3 border-t-3 border-grey-900 px-4 max-lg:hidden`}
-        ></div>
         {/* 하단부 */}
         <div
           className={`flex w-full items-start justify-center max-lg:justify-center`}

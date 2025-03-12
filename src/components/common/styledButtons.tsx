@@ -66,6 +66,7 @@ const StyledButtons = ({
   appStoreMode = false,
   downloadMode = false,
   downloadItem = null,
+  children = null,
   onClick = () => {},
 }) => {
   const formModeObj = formModeData.find(item => item.mode === formMode);
@@ -107,6 +108,7 @@ const StyledButtons = ({
         height={24}
         alt='다운로드화살표'
       />
+      {children}
     </button>
   );
 };

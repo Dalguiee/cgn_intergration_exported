@@ -359,8 +359,18 @@ const IntroducesupportAnniversary = () => {
                 );
               })}
             </Swiper>
-            <button className='swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-[url(/public/images/introducesupport/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40'></button>
-            <button className='swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-[url(/public/images/introducesupport/anniversary_slide_btn.svg)] bg-cover bg-no-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40'></button>
+            <button
+              style={{
+                backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_slide_btn.svg)`,
+              }}
+              className={`swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-cover bg-no-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40`}
+            ></button>
+            <button
+              style={{
+                backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_slide_btn.svg)`,
+              }}
+              className={`swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-cover bg-no-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40`}
+            ></button>
           </div>
         </div>
       </div>
