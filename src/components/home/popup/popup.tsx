@@ -1,5 +1,6 @@
 // 훅
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -47,6 +48,7 @@ const popupData = [
 ];
 
 const Popup = ({ popupOpen, setPopupOpen }) => {
+  const location = useLocation();
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
 
   const setOneDayPopupDelay = () => {
@@ -57,17 +59,15 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
 
   useEffect(() => {
     const oneDayCheck = () => {
+      console.log('쿠키감지작동');
       if (document.cookie.match('oneDay')) {
         setPopupOpen(false);
       } else {
         setPopupOpen(true);
       }
     };
-
-    window.addEventListener('load', oneDayCheck);
-
-    return () => window.removeEventListener('load', oneDayCheck);
-  }, []);
+    oneDayCheck();
+  }, [location?.pathname]);
 
   return (
     <>

@@ -34,7 +34,7 @@ const HomeFondantContents = () => {
           formMode='mode2-r'
           colorMode='mode3'
           onClick={() => {
-            window.location.href = `https://www.fondant.kr/`;
+            window.open(`https://www.fondant.kr/`, `_blank`);
           }}
           arrowMode={true}
         />

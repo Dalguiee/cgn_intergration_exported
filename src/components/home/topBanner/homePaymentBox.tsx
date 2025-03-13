@@ -1,10 +1,27 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
 import StyledButtons from '@/components/common/styledButtons';
 import { useNavigate } from 'react-router-dom';
+
+// 데이터
+const subscribesData = [
+  {
+    id: 0,
+    text: '정기후원',
+    value: 1,
+  },
+  { id: 1, text: '일시후원', value: 2 },
+  { id: 2, text: '증액후원', value: 3 },
+];
+const priceData = [
+  { id: 0, text: '10,000원', value: 1 },
+  { id: 1, text: '30,000원', value: 2 },
+  { id: 2, text: '50,000원', value: 3 },
+  { id: 3, text: '기타', value: 4 },
+];
 
 const HomePaymentBox = () => {
   const navigate = useNavigate();
@@ -12,27 +29,12 @@ const HomePaymentBox = () => {
   const [selectedSubscribes, setselectedSubscribes] = useState([]);
   // 버튼항목과 송신하는 state
   const [selectedPrice, setSelectedPrice] = useState({});
-  const subscribesData = [
-    {
-      id: 0,
-      text: '정기후원',
-      value: 1,
-    },
-    { id: 1, text: '일반후원1', value: 2 },
-    { id: 2, text: '일반후원2', value: 3 },
-    { id: 3, text: '일반후원3', value: 4 },
-    { id: 4, text: '일반후원4', value: 5 },
-    { id: 5, text: '일반후원5', value: 6 },
-    { id: 6, text: '일반후원6', value: 7 },
-    { id: 7, text: '일반후원7', value: 8 },
-  ];
 
-  const priceData = [
-    { id: 0, text: '10,000원', value: 1 },
-    { id: 1, text: '30,000원', value: 2 },
-    { id: 2, text: '50,000원', value: 3 },
-    { id: 3, text: '기타', value: 4 },
-  ];
+  useEffect(() => {
+    if (selectedSubscribes?.value === 3) {
+      navigate(`/subscribepayment`);
+    }
+  }, [selectedSubscribes]);
 
   return (
     <div

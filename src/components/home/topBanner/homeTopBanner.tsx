@@ -6,7 +6,13 @@ import HomePaymentBox from '@/components/home/topBanner/homePaymentBox';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -56,7 +62,7 @@ const HomeTopBanner = ({ mobile }) => {
       >
         <Swiper
           data-main-swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
           className={`h-full w-full`}
           navigation={true}
           // scrollbar={{ draggable: true }}
@@ -64,6 +70,10 @@ const HomeTopBanner = ({ mobile }) => {
           pagination={{ clickable: true }}
           spaceBetween={24}
           slidesPerView={1}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}
           // breakpoints={{

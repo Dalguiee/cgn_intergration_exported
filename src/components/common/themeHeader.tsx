@@ -90,6 +90,17 @@ const ThemeHeader = ({ className = `` }) => {
       subTitle:
         'CGN에 관련된 다양한 공지사항과 자주 묻는 질문들을 확인해 보세요.',
     },
+
+    {
+      path: 'policy/terms',
+      title: '이용 약관',
+      subTitle: 'CGN의 이용 약관을 안내드립니다.',
+    },
+    {
+      path: 'policy/privacy',
+      title: '개인정보 처리방침',
+      subTitle: 'CGN의 개인정보 처리방침을 안내드립니다.',
+    },
   ];
 
   // 주소값을 스캔하여 자동으로 타이틀을 추가합니다. 위의 데이터를 기반으로 합니다.

@@ -271,13 +271,17 @@
     width: 8px;
   }
 
+  /* body::-webkit-scrollbar-track {
+    @apply bg-grey-300;
+  } */
+
   ::-webkit-scrollbar-track {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     @apply bg-grey-300;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 8px;
+    /* border-radius: 8px; */
     border: 1px solid transparent;
     background-clip: padding-box; /* 내부 색상 유지 */
     @apply bg-grey-50;

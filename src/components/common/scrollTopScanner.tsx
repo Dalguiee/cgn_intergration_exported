@@ -8,7 +8,7 @@ const ScrollTopScanner = () => {
     return () => window.removeEventListener(`scroll`, callback);
   };
   const getSnapshot = () => {
-    return window.scrollY > 0;
+    return !(window.scrollY > 0);
   };
 
   return useSyncExternalStore(subscribe, getSnapshot);

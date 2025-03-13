@@ -1,5 +1,5 @@
 // 훅
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // 각 데이터를 카테고리로 나누는 버튼 모음입니다.
@@ -11,6 +11,8 @@ const CategoryList = ({
   const location = useLocation();
   /* 클릭시 태그버튼의 색이 변하게 하는 state 값 저장 */
   const [categoryTags, setCategoryTags] = useState([]);
+  const scrollContainer = useRef();
+  const scrollObjects = useRef([]);
   const tabListData = [
     {
       id: 0,
@@ -63,6 +65,14 @@ const CategoryList = ({
         { id: 6, type: '프랑스' },
       ],
     },
+    {
+      id: 3,
+      path: `/policy/`,
+      tags: [
+        { id: 0, type: '후원' },
+        { id: 1, type: '후원영상' },
+      ],
+    },
   ];
 
   // 태그 데이터 정리
@@ -85,15 +95,23 @@ const CategoryList = ({
 
   return (
     <section
+      ref={scrollContainer}
       className={`flex w-full flex-col items-start justify-center scrollbar-hide max-lg:overflow-x-scroll max-lg:px-16`}
     >
       <div
         className={`mx-auto flex w-fit items-center justify-center gap-8 max-lg:gap-4`}
       >
-        {categoryTags?.map(item => (
+        {categoryTags?.map((item, idx) => (
           <button
+            ref={el => (scrollObjects.current[idx] = el)}
             onClick={() => {
               setSelectedCategoryArticleId(item?.id);
+              console.log(scrollObjects?.current[idx].offsetLeft);
+              scrollObjects?.current[idx]?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'start',
+              });
             }}
             key={item?.id}
             className={`bg-white-solid ${item?.id == selectedCategoryArticleId ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
