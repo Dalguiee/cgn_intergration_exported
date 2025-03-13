@@ -4,7 +4,6 @@ import React from 'react';
 // 컴포넌트
 import parse from 'html-react-parser';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
-import { Exception } from 'sass';
 
 // 데이터
 const oddDatas = [
@@ -34,6 +33,8 @@ const oddDatas = [
     title: `견학 신청`,
     subTitle: `문의) 커뮤니케이션실 cgnpr@cgnmail.net 02)3275-9321`,
     text: `CGN의 미디어 선교 사역 현장을 직접 방문해 보세요.<br />제작 스튜디오, 본사 라운딩 등 다양한 체험을 통해 CGN의<br />미디어 선교 사역을 배우고 느끼는 시간을 가질 수 있습니다.<br/ >방문 일자, 인원, 참여 연령을 알려주시면 맞춤형 견학을<br />진행해드립니다.`,
+    moText1: `CGN의 미디어 선교 사역 현장을 직접 방문해 보세요.`,
+    moText2: `제작 스튜디오, 본사 라운딩 등 다양한 체험을 통해 CGN의 미디어<br />선교 사역을 배우고 느끼는 시간을 가질 수 있습니다.<br/ >방문 일자, 인원, 참여 연령을 알려주시면 맞춤형 견학을<br />진행해드립니다.`,
   },
 ];
 
@@ -44,7 +45,7 @@ const ActivityVisit = () => {
     <section className={`w-full flex-col items-center justify-start`}>
       <div
         data-aos='fade-up'
-        className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-60 max-lg:px-16 max-lg:pb-60 max-lg:pt-0`}
+        className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-0 max-lg:px-16 max-lg:pb-120 max-lg:pt-0`}
       >
         <div
           className={`flex w-full max-w-1200 flex-col items-center justify-start gap-160 max-lg:gap-0`}
@@ -81,15 +82,30 @@ const ActivityVisit = () => {
                   className={`w-full max-lg:mt-40 max-lg:max-w-361 ${item?.exception ? `max-w-600 max-lg:max-w-361` : ``}`}
                 >
                   <p
-                    className={`${item?.exception ? `mb-40 max-lg:mb-8` : ``} ${item?.exception2 ? `text-bold32 max-lg:text-bold18 mb-24 text-primary-500 max-lg:mb-8` : `text-bold48`} ${item?.reverse ? `mb-40` : ``} max-lg:text-bold24 text-grey-900`}
+                    className={`${item?.exception ? `mb-40 max-lg:mb-8` : ``} ${item?.exception2 ? `text-bold32 max-lg:text-bold18 mb-24 text-primary-500 max-lg:mb-8` : `text-bold48`} ${item?.reverse ? `mb-40 max-lg:mb-8` : ``} max-lg:text-bold24 text-grey-900`}
                   >
                     {parse(item?.title)}
                   </p>
                   <p
-                    className={`${item?.exception2 ? `text-regular18 max-lg:text-regular14 mb-24 text-grey-500` : `text-bold24 text-grey-900`} ${item?.reverse ? `mb-24` : ``} max-lg:text-regular14`}
+                    className={`${item?.moText1 ? `max-lg:hidden` : ``} ${item?.exception2 ? `text-regular18 max-lg:text-regular14 mb-24 text-grey-500` : `text-bold24 text-grey-900`} ${item?.reverse ? `mb-24` : ``} max-lg:text-regular14`}
                   >
                     {parse(item?.text)}
                   </p>
+                  {item?.moText1 ? (
+                    <p className={`text-bold16 mb-24 text-grey-900 lg:hidden`}>
+                      {parse(item?.moText1)}
+                    </p>
+                  ) : (
+                    ``
+                  )}
+                  {item?.moText2 ? (
+                    <p className={`text-regular14 text-grey-500 lg:hidden`}>
+                      {parse(item?.moText2)}
+                    </p>
+                  ) : (
+                    ``
+                  )}
+
                   <p
                     className={`my-24 h-1 w-full border-t-1 border-grey-200 lg:hidden ${item?.exception ? `hidden` : ``}`}
                   ></p>
