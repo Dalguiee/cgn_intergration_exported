@@ -154,32 +154,6 @@ const Locator = ({ className = `` }) => {
       );
     }
 
-    // 고객센터
-    if (location?.pathname?.includes('/customercenter/')) {
-      setChangedPathName(
-        pageData?.map(data => {
-          if (data === 'customercenter') {
-            pathPiece = data;
-            data = '고객 센터';
-            pathStack = 'customercenter/notice';
-          }
-          if (data === 'questions') {
-            pathPiece = data;
-            data = '자주 묻는 질문';
-            pathStack = 'customercenter/questions';
-          }
-
-          if (data === 'notice') {
-            pathPiece = data;
-            data = '공지사항';
-            pathStack = `customercenter/notice`;
-          }
-
-          return { bPath: pathPiece, name: data, path: pathStack };
-        })
-      );
-    }
-
     // 참여
     if (location?.pathname?.includes('/activity/')) {
       setChangedPathName(
@@ -213,6 +187,58 @@ const Locator = ({ className = `` }) => {
             pathPiece = data;
             data = '퐁당 웹/앱/스마트TV';
             pathStack = 'mediacenter/description';
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
+    // 약관
+    if (location?.pathname?.includes('/policy/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'policy') {
+            pathPiece = data;
+            data = '약관';
+            pathStack = 'policy/terms';
+          }
+          if (data === 'terms') {
+            pathPiece = data;
+            data = '이용 약관';
+            pathStack = 'policy/terms';
+          }
+
+          if (data === 'privacy') {
+            pathPiece = data;
+            data = '개인정보 처리방침';
+            pathStack = `policy/privacy`;
+          }
+
+          return { bPath: pathPiece, name: data, path: pathStack };
+        })
+      );
+    }
+
+    // 약관
+    if (location?.pathname?.includes('/customercenter/')) {
+      setChangedPathName(
+        pageData?.map(data => {
+          if (data === 'customercenter') {
+            pathPiece = data;
+            data = '고객 센터';
+            pathStack = 'customercenter/notice';
+          }
+          if (data === 'notice') {
+            pathPiece = data;
+            data = '공지 사항';
+            pathStack = 'customercenter/notice';
+          }
+
+          if (data === 'questions') {
+            pathPiece = data;
+            data = '자주 묻는 질문';
+            pathStack = `customercenter/questions`;
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

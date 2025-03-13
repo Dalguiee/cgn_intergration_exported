@@ -5,64 +5,7 @@ import React from 'react';
 import HomeNoticeHeader from '@/components/home/notice/homeNoticeHeader';
 import TagIcon from '@/components/common/tagIcon';
 import { useNavigate } from 'react-router-dom';
-
-const noticeData = [
-  {
-    id: 1,
-    tag: [
-      {
-        id: 15,
-        mode: `mode1`,
-      },
-    ],
-    text: '11월 6일 새벽 2시~4시 시스템 점검 안내',
-    startDate: `2024.08.28`,
-  },
-  {
-    id: 2,
-    tag: [
-      {
-        id: 15,
-        mode: `mode1`,
-      },
-    ],
-    text: '11월 6일 새벽 2시~4시 시스템 점검 안내',
-    startDate: `2024.08.28`,
-  },
-  {
-    id: 3,
-    tag: [
-      {
-        id: 15,
-        mode: `mode1`,
-      },
-    ],
-    text: '11월 6일 새벽 2시~4시 시스템 점검 안내',
-    startDate: `2024.08.28`,
-  },
-  {
-    id: 4,
-    tag: [
-      {
-        id: 15,
-        mode: `mode1`,
-      },
-    ],
-    text: '11월 6일 새벽 2시~4시 시스템 점검 안내',
-    startDate: `2024.08.28`,
-  },
-  {
-    id: 5,
-    tag: [
-      {
-        id: 15,
-        mode: `mode1`,
-      },
-    ],
-    text: '11월 6일 새벽 2시~4시 시스템 점검 안내',
-    startDate: `2024.08.28`,
-  },
-];
+import { noticeData } from '@/db/mockup';
 
 const HomeNoticeMain = () => {
   const navigate = useNavigate();
@@ -83,6 +26,11 @@ const HomeNoticeMain = () => {
           >
             {noticeData.map((item, key) => (
               <button
+                onClick={() => {
+                  navigate(
+                    `/customercenter/notice/detail?articleId=${item?.id}`
+                  );
+                }}
                 key={key}
                 className={`flex h-84 w-full items-center justify-between border-t-1 ${key === 0 ? 'lg:border-none' : ''} border-grey-200 max-lg:h-56`}
               >
@@ -95,11 +43,11 @@ const HomeNoticeMain = () => {
                   <p
                     className={`text-regular18 max-lg:text-regular14 line-clamp-1 text-grey-500`}
                   >
-                    {item.text}
+                    {item?.title}
                   </p>
                 </div>
                 <span className={`text-regular14 text-grey-400 max-lg:hidden`}>
-                  {item?.startDate}
+                  {item?.date}
                 </span>
               </button>
             ))}

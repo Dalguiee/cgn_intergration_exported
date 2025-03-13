@@ -33,6 +33,7 @@ import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCente
 import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQuestions/page';
 // 시청 안내
 import MediaDescriptionPage from '@/pages/mediaCenter/mediaDescription/page';
+import PolicyPage from '@/pages/policy/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -134,6 +135,12 @@ export default function MainRouter() {
         {/* 참여 */}
         <Route path='activity/visit' element={<ActivityVisitPage />}></Route>
 
+        {/* 시청안내 */}
+        <Route
+          path='mediacenter/description'
+          element={<MediaDescriptionPage />}
+        ></Route>
+
         {/* 고객센터 */}
         <Route
           path='customercenter/notice'
@@ -148,11 +155,8 @@ export default function MainRouter() {
           element={<CustomerCenterNoticeDetailPage />}
         ></Route>
 
-        {/* 시청안내 */}
-        <Route
-          path='mediacenter/description'
-          element={<MediaDescriptionPage />}
-        ></Route>
+        {/* 이용 약관 */}
+        <Route path='policy/:subDepth' element={<PolicyPage />}></Route>
       </Route>
     </Routes>
   );

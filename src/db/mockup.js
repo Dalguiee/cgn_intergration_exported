@@ -1409,6 +1409,12 @@ export const recruitData = [
 export const noticeData = [
   {
     id: 0,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트1`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1422,6 +1428,12 @@ export const noticeData = [
   },
   {
     id: 1,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트2`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1435,6 +1447,12 @@ export const noticeData = [
   },
   {
     id: 2,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트3`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1448,6 +1466,12 @@ export const noticeData = [
   },
   {
     id: 3,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트4`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1461,6 +1485,12 @@ export const noticeData = [
   },
   {
     id: 4,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트5`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1474,6 +1504,12 @@ export const noticeData = [
   },
   {
     id: 5,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트6`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1487,6 +1523,12 @@ export const noticeData = [
   },
   {
     id: 6,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트7`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1500,6 +1542,12 @@ export const noticeData = [
   },
   {
     id: 7,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트8`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1513,6 +1561,12 @@ export const noticeData = [
   },
   {
     id: 8,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트9`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1526,6 +1580,12 @@ export const noticeData = [
   },
   {
     id: 9,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트10`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1539,6 +1599,12 @@ export const noticeData = [
   },
   {
     id: 10,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트11`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1552,6 +1618,12 @@ export const noticeData = [
   },
   {
     id: 11,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트12`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1565,6 +1637,12 @@ export const noticeData = [
   },
   {
     id: 12,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트13`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로
@@ -1578,6 +1656,12 @@ export const noticeData = [
   },
   {
     id: 13,
+    tag: [
+      {
+        id: 15,
+        mode: `mode1`,
+      },
+    ],
     title: `빙하 퀴즈 뽀개기 이벤트14`,
     subTitle: `시스템 점검 안내`,
     text: `LIVE 시스템 점검 작업으로

@@ -5,7 +5,7 @@ const MoBottomHeader = () => {
     <section className={`flex h-64 w-full items-center justify-center gap-12`}>
       <button
         onClick={() => {
-          window.location.href = `https://www.fondant.kr/`;
+          window.open(`https://www.fondant.kr/`, `_blank`);
         }}
         className={`border-white-so text-bold14 flex h-40 w-174 items-center justify-center rounded-4 border-1 text-white-solid`}
       >

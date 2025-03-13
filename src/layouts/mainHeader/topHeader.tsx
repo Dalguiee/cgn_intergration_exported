@@ -7,14 +7,21 @@ const TopHeader = () => {
       className={`flex h-48 w-full max-w-1560 items-center justify-end gap-10 max-lg:hidden`}
     >
       <div className='flex h-24 items-center justify-center gap-12'>
-        <button className='h-full'>
+        <button
+          onClick={() => {
+            window.open(`https://www.fondant.kr/`, `_blank`);
+          }}
+          className='h-full'
+        >
           <p className='text-regular14 text-grey-400'>퐁당</p>
         </button>
         <span className='separator'></span>
         <div className='h-full'>
-          <span className={`text-regular14 flex h-full text-grey-400`}>
-            나의 후원 보기
-          </span>
+          <button>
+            <span className={`text-regular14 flex h-full text-grey-400`}>
+              나의 후원 보기
+            </span>
+          </button>
         </div>
         <span className='separator'></span>
         <button

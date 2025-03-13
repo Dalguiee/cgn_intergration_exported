@@ -1,17 +1,24 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const MoBurgerSubMenu = ({ centerMenu, setBurger }) => {
+const MoBurgerSubMenu = ({
+  headerTopBannerAvailable,
+  centerMenu,
+  setBurger,
+}) => {
   const location = useLocation();
   const navigate = useNavigate();
 
   return (
     <section
-      className={`fixed top-120 z-20 flex h-full w-full flex-col items-start justify-start gap-8 overflow-y-scroll bg-white-solid pb-200 pt-16`}
+      style={{
+        transition: `0.15s`,
+      }}
+      className={`fixed ${headerTopBannerAvailable ? `top-[calc(88px+120px)]` : `top-120`} z-[80] flex h-full w-full flex-col items-start justify-start gap-8 overflow-y-scroll bg-white-solid pb-200 pt-16`}
     >
       {centerMenu?.map((menu, key) => {
         return (
-          <div key={key} className='px-24 border-b-1'>
+          <div key={key} className='border-b-1 px-24'>
             <div className={`w-full py-14`}>
               <span className={`text-bold18 text-grey-900`}>{menu?.text}</span>
             </div>

@@ -7,11 +7,13 @@ import { mockupData } from '@/db/mockup';
 // 컴포넌트
 import HomeCategoryList from '@/components/home/tidings/homeTidingsCategoryList';
 import Section4PcTopArticleSwiper from '@/components/home/tidings/homeTidingsPcTopArticleSwiper';
+import { useNavigate } from 'react-router-dom';
 
 /*
  *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 받는 데이터만 따로 받도록 퍼블리싱 되었습니다.
  */
 const HomeTidings = () => {
+  const navigate = useNavigate();
   const [findedMockupData, setfindedMockupData] = useState([]); //
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0); //
 
@@ -41,7 +43,12 @@ const HomeTidings = () => {
         className={`flex w-full justify-between px-16 pr-16 max-lg:mb-11 lg:hidden`}
       >
         <span className={`text-bold24 text-grey-900`}>소식</span>
-        <button className={`flex items-center justify-center`}>
+        <button
+          onClick={() => {
+            navigate(`/tidings/mission`);
+          }}
+          className={`flex items-center justify-center`}
+        >
           <span className={`text-regular12 text-grey-900`}>바로가기</span>
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
