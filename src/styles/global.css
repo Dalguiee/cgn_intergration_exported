@@ -217,6 +217,17 @@
     font-family: 'Pretendard';
   }
 
+  .random-hide-div {
+    transition:
+      opacity 0.5s ease-out,
+      visibility 0s 0.5s; /* opacity와 visibility에 transition을 적용 */
+  }
+
+  .hidden1 {
+    opacity: 0;
+    visibility: hidden; /* opacity가 0일 때 visibility를 hidden으로 설정 */
+  }
+
   a,
   button,
   input,
