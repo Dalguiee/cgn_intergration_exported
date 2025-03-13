@@ -56,7 +56,7 @@ const IntroduceVision = ({ setPopupOpen }) => {
             text={`CGN 브랜드 소개`}
             formMode={`mode1-r`}
             colorMode={`mode4`}
-            className={`!h-48 border-primary-500 text-primary-500 max-lg:!h-36`}
+            className={`!h-48 border-primary-500 text-primary-500 hover:text-primary-500 max-lg:!h-36`}
             onClick={() => {
               setPopupOpen(true);
             }}

@@ -26,7 +26,7 @@ const HomeLeftMainCampaign = props => {
         >
           {item?.tag?.map((tag, key) => {
             if (tag?.id === 1 || tag?.id === 3) {
-              return <TagIcon key={key} id={tag?.id} mode={'mode3'} />;
+              return <TagIcon key={key} id={tag?.id} mode={'mode1'} />;
             }
           })}
           <p

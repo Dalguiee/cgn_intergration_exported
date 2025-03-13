@@ -9,7 +9,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea_selected.png`,
-    position: ` absolute left-411 top-162 max-lg:top-[30%] max-lg:left-[49%]`,
+    position: ` absolute left-429 top-162 max-lg:top-[30%] max-lg:left-[49%]`,
   },
   {
     id: 1,
@@ -25,7 +25,7 @@ const mapData = [
     rightSide: true,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/japan.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/japan_selected.png`,
-    position: `absolute left-482 top-146 max-lg:top-[32.2%] max-lg:left-[53.1%]`,
+    position: `absolute left-502 top-146 max-lg:top-[32.2%] max-lg:left-[53.1%]`,
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/taiwan.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/taiwan_selected.png`,
-    position: `absolute left-382 top-210 max-lg:top-[40.1%] max-lg:left-[46.8%]`,
+    position: `absolute left-406 top-210 max-lg:top-[40.1%] max-lg:left-[46.8%]`,
   },
   {
     id: 4,
@@ -41,10 +41,11 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/thailand.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/thailand_selected.png`,
-    position: `absolute left-325 top-229 max-lg:top-[45.7%] max-lg:left-[39.5%]`,
+    position: `absolute left-340 top-229 max-lg:top-[45.7%] max-lg:left-[39.5%]`,
   },
   {
     id: 5,
+    longText: true,
     name: `인도네시아`,
     rightSide: true,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/indonesia.png`,
@@ -53,6 +54,7 @@ const mapData = [
   },
   {
     id: 6,
+    longText: true,
     name: ` 프랑스`,
     rightSide: true,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/france.png`,
@@ -68,7 +70,7 @@ const MapIcon = ({
   return mapData?.map((item, idx) => (
     <div
       key={idx}
-      className={`${item?.position} ${item?.rightSide ? `flex-row-reverse` : ``} flex h-66 w-120 items-end justify-center gap-2 max-lg:h-[8%] max-lg:w-[5%] max-lg:gap-0`}
+      className={`${item?.position} ${item?.rightSide ? `flex-row-reverse` : ``} flex h-66 ${item?.longText ? `w-120` : `w-80`} items-end justify-center gap-2 max-lg:h-[8%] max-lg:w-[5%] max-lg:gap-0`}
     >
       <div
         className={`max-lg:hidden ${selectedCategoryArticleId === item?.id ? `h-66` : `h-44`}`}

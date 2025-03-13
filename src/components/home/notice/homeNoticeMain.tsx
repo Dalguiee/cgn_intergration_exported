@@ -24,7 +24,7 @@ const HomeNoticeMain = () => {
           <div
             className={`w-full bg-white-solid px-24 max-lg:mb-16 max-lg:border-b-1 max-lg:border-grey-200 max-lg:px-0`}
           >
-            {noticeData.map((item, key) => (
+            {noticeData?.slice(0, 5)?.map?.((item, key) => (
               <button
                 onClick={() => {
                   navigate(

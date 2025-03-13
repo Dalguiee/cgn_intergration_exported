@@ -10,6 +10,9 @@ const categoryName = [
     value: `전체`,
   },
   { id: 1, value: `후원` },
+  { id: 2, value: `기부금 영수증` },
+  { id: 3, value: `드림온 안테나` },
+  { id: 4, value: `기타` },
 ];
 
 // 컴포넌트

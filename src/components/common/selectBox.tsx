@@ -65,7 +65,7 @@ const SelectBox = ({
             className={`${open ? '' : ''} pointer-events-none flex w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4 ${height ? `h-${height}` : 'h-62'}`}
           >
             <button
-              className={`hover:text-bold18 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start`}
+              className={`hover:text-bold18 max-lg:text-bold14 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start`}
             >
               {selectedItem?.text ? selectedItem?.text : defaultValue}
             </button>
@@ -81,7 +81,7 @@ const SelectBox = ({
                     setOpen(false);
                     setSelectedItem(item);
                   }}
-                  className={`text-regular18 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12 hover:bg-primary-50`}
+                  className={`text-regular18 max-lg:text-regular14 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12 hover:bg-primary-50`}
                 >
                   <span
                   // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}

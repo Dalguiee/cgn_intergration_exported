@@ -17,13 +17,20 @@ const TopHeader = () => {
         </button>
         <span className='separator'></span>
         <div className='h-full'>
-          <button>
+          <button
+            onClick={() => {
+              window.open(
+                `https://mrmweb.hsit.co.kr/v2/Member/MemberLogin.aspx`,
+                `_blank`
+              );
+            }}
+          >
             <span className={`text-regular14 flex h-full text-grey-400`}>
               나의 후원 보기
             </span>
           </button>
         </div>
-        <span className='separator'></span>
+        {/* <span className='separator'></span>
         <button
           className={`group flex items-center justify-center`}
           onClick={() => {
@@ -36,7 +43,7 @@ const TopHeader = () => {
             src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/orange_tri.svg`}
             alt=''
           />
-        </button>
+        </button> */}
       </div>
     </div>
   );

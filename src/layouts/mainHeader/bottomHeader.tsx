@@ -77,12 +77,15 @@ const BottomHeader = ({
         </div>
         <div className={`flex items-center justify-center gap-12`}>
           <button
-            className={`${burger ? 'hidden' : ''} text-regular14 max-lg:text-bold14 h-40 w-89 rounded-4 border-1 border-grey-900 text-grey-900 max-lg:h-32 max-lg:w-67`}
+            onClick={() => {
+              window.open(`https://www.fondant.kr/live`, `_blank`);
+            }}
+            className={`${burger ? 'hidden' : ''} text-bold14 max-lg:text-bold14 h-40 w-91 rounded-4 border-1 border-grey-900 text-grey-900 max-lg:h-32 max-lg:w-67`}
           >
             On-Air
           </button>
           <button
-            className={`${burger ? 'hidden' : ''} text-regular14 max-lg:text-bold14 h-40 w-89 rounded-4 bg-primary-500 text-white-solid max-lg:h-32 max-lg:w-67`}
+            className={`${burger ? 'hidden' : ''} text-bold14 max-lg:text-bold14 h-40 w-96 rounded-4 bg-primary-500 text-white-solid max-lg:h-32 max-lg:w-67`}
           >
             후원하기
           </button>

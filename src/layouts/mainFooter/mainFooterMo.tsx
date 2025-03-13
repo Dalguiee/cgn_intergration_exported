@@ -43,21 +43,18 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
             navigate(`/policy/terms`);
           }}
         >
-          <button
-            className={``}
-            onClick={() => {
-              navigate(`/policy/terms`);
-            }}
-          >
-            <span className={`text-regular14 text-grey-900`}>이용 약관</span>
-          </button>
+          <span className={`text-regular14 text-grey-900`}>이용 약관</span>
         </button>
-        <span className={`text-regular14 px-12 py-4 text-grey-900`}>
-          개인정보 처리방침
-        </span>
-        <span className={`text-regular14 px-12 py-4 text-grey-900`}>
-          이메일무단수집거부
-        </span>
+        <button
+          onClick={() => {
+            navigate(`/policy/privacy`);
+          }}
+          className={`px-12 py-4`}
+        >
+          <span className={`text-regular14 text-grey-900`}>
+            개인정보 처리방침
+          </span>
+        </button>
       </div>
       <div className={`flex w-full items-center justify-between px-12`}>
         <div className={`flex items-center justify-center gap-8`}>

@@ -271,7 +271,7 @@ const IntroduceWorldwideContext = ({
         className={`z-10 flex w-full max-w-1200 flex-shrink-0 flex-col items-start justify-start rounded-16 pb-160 max-lg:px-16 max-lg:pb-96`}
       >
         <div
-          className={`flex w-full flex-col items-start justify-start overflow-hidden rounded-16 bg-white-solid`}
+          className={`flex w-full flex-col items-start justify-start overflow-hidden rounded-16 bg-white-solid shadow-sm`}
         >
           <div
             className={`flex w-full flex-col items-start justify-start gap-40 bg-primary-50 px-40 pb-40 pt-40 max-lg:gap-24 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
