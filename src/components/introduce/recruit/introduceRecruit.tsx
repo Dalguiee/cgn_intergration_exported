@@ -5,6 +5,7 @@ import HTMLReactParser from 'html-react-parser';
 // 데이터
 import { recruitData } from '@/db/mockup';
 import RecruitCard from './recruitCard';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const textData = [
   {
@@ -30,6 +31,7 @@ const textData = [
 ];
 
 const IntroduceRecruit = () => {
+  const mobile = ResponsiveScanner(`(max-width: 1024px)`);
   const [whileItem, setWhileItem] = useState([]);
   const [endedItem, setEndedItem] = useState([]);
 
@@ -52,7 +54,7 @@ const IntroduceRecruit = () => {
       >
         <img
           className={`w-full object-cover max-lg:h-275`}
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/recruit_banner.png`}
+          src={`${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/introduce/mo_recruit_banner.png` : `${import.meta.env.VITE_PUBLIC_URL}images/introduce/recruit_banner.png`} `}
           width={1200}
           height={540}
           alt=''

@@ -106,11 +106,18 @@ const CategoryList = ({
             ref={el => (scrollObjects.current[idx] = el)}
             onClick={() => {
               setSelectedCategoryArticleId(item?.id);
-              console.log(scrollObjects?.current[idx].offsetLeft);
-              scrollObjects?.current[idx]?.scrollIntoView({
+              const objLeft = scrollObjects?.current[idx].offsetLeft;
+              console.log(objLeft);
+
+              // scrollObjects?.current[idx]?.scrollIntoView({
+              //   behavior: 'smooth',
+              //   block: 'nearest',
+              //   inline: 'start',
+              // });
+
+              scrollContainer?.current?.scrollTo({
                 behavior: 'smooth',
-                block: 'nearest',
-                inline: 'start',
+                left: objLeft - 16,
               });
             }}
             key={item?.id}

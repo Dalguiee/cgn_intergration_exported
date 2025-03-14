@@ -125,7 +125,7 @@ const PcMainVisual = props => {
         <div className='random-hide-div absolute left-[80.2%] top-[29.3%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
         <div className='random-hide-div absolute left-[14.8%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
         <div className='random-hide-div absolute left-[19.9%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
-        <div className='random-hide-div absolute left-[25%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
+        <div className='ranlut-hide-div absolute left-[25%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
         <div className='random-hide-div absolute left-[39.9%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
         <div className='random-hide-div absolute left-[45%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>
         <div className='random-hide-div absolute left-[50%] top-[40.4%] aspect-square w-[5.2%] bg-[#FF6B00]'></div>

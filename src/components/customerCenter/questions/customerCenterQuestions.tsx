@@ -129,7 +129,7 @@ const CustomerCenterQuestions = () => {
                           className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-center py-24 max-lg:py-16`}
                         >
                           <span
-                            className={`text-regular16 max-lg:text-bold12 text-grey-500`}
+                            className={`text-bold16 max-lg:text-bold12 text-grey-900`}
                           >
                             {listTypeFind(item?.category)?.value
                               ? listTypeFind(item?.category)?.value

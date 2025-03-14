@@ -34,14 +34,14 @@ const centerMenu = [
         text: '기념일 후원',
         link: '/introducesupport/anniversary',
       },
-      {
-        text: '교회/기업 후원',
-        link: '/introducesupport/unstructed1',
-      },
-      {
-        text: '유산 후원',
-        link: '/introducesupport/unstructed2',
-      },
+      // {
+      //   text: '교회/기업 후원',
+      //   link: '/introducesupport/unstructed1',
+      // },
+      // {
+      //   text: '유산 후원',
+      //   link: '/introducesupport/unstructed2',
+      // },
       {
         text: '해외지사 후원',
         link: '/introducesupport/overseas',
@@ -102,14 +102,14 @@ const centerMenu = [
         text: '보도 자료',
         link: '/tidings/broadcast',
       },
-      {
-        text: '외부 소식',
-        link: '/support/unstructed1',
-      },
-      {
-        text: '매거진',
-        link: '/support/unstructed2',
-      },
+      // {
+      //   text: '외부 소식',
+      //   link: '/support/unstructed1',
+      // },
+      // {
+      //   text: '매거진',
+      //   link: '/support/unstructed2',
+      // },
     ],
   },
   {
@@ -118,14 +118,14 @@ const centerMenu = [
     path: `/activity/`,
     link: '/activity',
     subMenu: [
-      {
-        text: '중보기도 신청',
-        link: '/activity/intercessoryprayer',
-      },
-      {
-        text: '자원봉사단 신청',
-        link: '/activity/serviceteam',
-      },
+      // {
+      //   text: '중보기도 신청',
+      //   link: '/activity/intercessoryprayer',
+      // },
+      // {
+      //   text: '자원봉사단 신청',
+      //   link: '/activity/serviceteam',
+      // },
       {
         text: '행사/견학 신청',
         link: '/activity/visit',
@@ -160,10 +160,11 @@ const centerMenu = [
 
 // 하얀 헤더 배경 pathname 리스트
 const whiteModeList = [
-  `/customercenter/questions`,
-  `/subscribepayment`,
-  `/mediacenter/description`,
   `/home`,
+  `/subscribepayment`,
+  `/customercenter/questions`,
+  `/customercenter/notice`,
+  `/mediacenter/description`,
   `/customercenter/notice/detail`,
 ];
 

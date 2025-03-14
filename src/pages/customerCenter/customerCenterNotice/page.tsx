@@ -8,7 +8,7 @@ import CustomerCenterCategoryList from '@/components/customerCenter/customerCent
 
 const CustomerCenterNoticePage = () => {
   return (
-    <section className={`bg-primary-50`}>
+    <section>
       <ThemeHeader />
       <CustomerCenterCategoryList />
       <CustomerCenterNotice />
