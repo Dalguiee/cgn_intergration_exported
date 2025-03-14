@@ -16,14 +16,14 @@ const branchesList = [
       { title: 'Swift Code', detail: 'NARAUS6L090' },
     ],
     website: 'www.cgnfoundation.com',
-    donate: 'https://tithe.ly/give_new/www/#/tithely/give-one-time/7446562',
+    donate: '//tithe.ly/give_new/www/#/tithely/give-one-time/7446562',
   },
   {
     name: 'JAPAN',
     data: [{ title: 'Email', detail: 'japan.cgnfamily@gmail.com' }],
     website: 'japan.cgntv.net',
     donate:
-      'https://secure.telecomcredit.co.jp/inetcredit/secure/manual-order.pl?clientip=95680',
+      '//secure.telecomcredit.co.jp/inetcredit/secure/manual-order.pl?clientip=95680',
   },
   {
     name: 'INDONESIA',
@@ -59,7 +59,7 @@ const branchesList = [
       { title: 'Swift Code', detail: 'UWCBTWTP' },
     ],
     website: 'chinese.cgntv.net',
-    donate: 'https://cgntv.eoffering.org.tw/',
+    donate: '//cgntv.eoffering.org.tw/',
   },
   {
     name: 'THAILAND',
@@ -176,7 +176,7 @@ const IntroducesupportOverseas = () => {
                 { title: 'Bank Code', detail: 'KOEXKRSE' },
               ]}
               website='www.cgntv.net'
-              donate='https://mrmweb.hsit.co.kr/v2/Member/MemberJoin.aspx?action=join&server=7kOXiyc9Ff6n5QWUwZDJyQ=='
+              donate='//mrmweb.hsit.co.kr/v2/Member/MemberJoin.aspx?action=join&server=7kOXiyc9Ff6n5QWUwZDJyQ=='
             />
             <div className='text-bold32 max-lg:text-bold24 mb-24 mt-60 w-full max-lg:mt-40'>
               BRANCHES

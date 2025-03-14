@@ -142,12 +142,12 @@ const RecruitDetail = () => {
                 <tbody>
                   {currentData?.details?.map((obj, key) => (
                     <tr
-                      className={`h-400 border-b-1 border-grey-900`}
+                      className={`min-h-182 border-b-1 border-grey-900`}
                       key={key}
                     >
                       <td className={`border-r-1 border-grey-900`}>
                         <div
-                          className={`flex flex-col items-center justify-center px-24`}
+                          className={`flex flex-col items-center justify-center px-24 py-69`}
                         >
                           {obj?.center?.map((centerItem, centerIdx) => (
                             <span
@@ -161,7 +161,7 @@ const RecruitDetail = () => {
                       </td>
                       <td className={`border-r-1 border-grey-900`}>
                         <div
-                          className={`flex flex-col items-center justify-center px-24`}
+                          className={`flex flex-col items-center justify-center px-24 py-69`}
                         >
                           <span className={`text-regular16 text-grey-900`}>
                             {obj?.workType}
@@ -182,7 +182,7 @@ const RecruitDetail = () => {
                       </td>
                       <td>
                         <div
-                          className={`flex flex-col items-center justify-center px-24`}
+                          className={`flex flex-col items-center justify-center px-24 py-69`}
                         >
                           <span className={`text-regular16 text-grey-900`}>
                             {obj?.qualifications}

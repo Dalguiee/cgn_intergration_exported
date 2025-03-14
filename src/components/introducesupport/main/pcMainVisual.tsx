@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const PcMainVisual = props => {
+  const navigate = useNavigate();
   const { setSupportTab } = props;
 
   //두번째 애니메이션
@@ -171,6 +173,9 @@ const PcMainVisual = props => {
         {/* 후원하기 Footer */}
         <div className='absolute bottom-0 flex aspect-[1920_/_112] w-full items-center justify-center bg-[rgba(255,_255,_255,_0.3)]'>
           <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+            }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/btn_support1.svg)`,
@@ -179,6 +184,9 @@ const PcMainVisual = props => {
             정기후원
           </button>
           <button
+            onClick={() => {
+              navigate(`/subscribepayment`);
+            }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/btn_support2.svg)`,
@@ -187,6 +195,9 @@ const PcMainVisual = props => {
             증액후원
           </button>
           <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+            }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/btn_support3.svg)`,

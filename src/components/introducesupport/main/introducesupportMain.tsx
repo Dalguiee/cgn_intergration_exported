@@ -14,8 +14,11 @@ import PcTabGlobal from '@/components/introducesupport/main/pcTabGlobal';
 import MoTabBroadcastPlatform from '@/components/introducesupport/main/moTabBroadcastPlatform';
 import MoTabContents from '@/components/introducesupport/main/moTabContents';
 import MoTabGlobal from '@/components/introducesupport/main/moTabGlobal';
+import { useNavigate } from 'react-router-dom';
 
 const IntroducesupportMain = () => {
+  const navigate = useNavigate();
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   //현재 후원하기 탭 상태
@@ -125,13 +128,28 @@ const IntroducesupportMain = () => {
           className='fixed bottom-0 z-10 hidden h-88 w-full justify-center bg-white-solid pt-16 max-lg:flex'
           data-comment='후원페이지 FOOTER'
         >
-          <button className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'>
+          <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+            }}
+            className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+          >
             정기후원
           </button>
-          <button className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'>
+          <button
+            onClick={() => {
+              navigate(`/subscribepayment`);
+            }}
+            className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+          >
             증액후원
           </button>
-          <button className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'>
+          <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+            }}
+            className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+          >
             일시후원
           </button>
         </div>

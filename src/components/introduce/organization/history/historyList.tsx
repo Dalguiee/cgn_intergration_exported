@@ -12,9 +12,10 @@ const HistoryList = ({
   const [animateToggle, setAnimateToggle] = useState(false);
 
   // 애니메이션 토글 함수
-  const animating = () => {
+  const animating = id => {
     setAnimateToggle(true);
     const animateTimeout = setTimeout(() => {
+      setSelectedDataIdx(id);
       setAnimateToggle(false);
     }, 800);
     return () => clearTimeout(animateTimeout);
@@ -34,8 +35,7 @@ const HistoryList = ({
             <button
               key={key}
               onClick={() => {
-                setSelectedDataIdx(item?.id);
-                animating();
+                animating(item?.id);
               }}
             >
               <p
@@ -66,7 +66,7 @@ const HistoryList = ({
             key={key}
           >
             <p
-              className={`text-bold16 max-lg:text-bold14 flex w-88 items-center justify-start text-grey-500 max-lg:w-39 max-lg:flex-shrink-0`}
+              className={`text-bold16 max-lg:text-bold14 flex w-88 flex-shrink-0 items-center justify-start text-grey-500 max-lg:w-39 max-lg:flex-shrink-0`}
             >
               <span className={`text-bold24 max-lg:text-bold14 text-grey-900`}>
                 {item?.time}
