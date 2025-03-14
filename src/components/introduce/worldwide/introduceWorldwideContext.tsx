@@ -157,11 +157,11 @@ const contextData = [
     ],
     mainText: `CGN Thai는 아세안 복음 네트워크를 위해 방콕에 터를 잡았습니다. 기독교인이 1%에도 못 미치는 불교국가에서 CCT, EFT, 침례교단 등 태국 내 교단들과 긴밀한 협력 체제를 구축하며 SNS 플랫폼을 통하여 자체 제작한 양질의 콘텐츠를 보급하고 있습니다. CGN Thai가 제작한 콘텐츠를 보고 예수님을 모르는 사람들이 예수님을 알게 되고 영접하는 역사가 계속 일어나고 있습니다.`,
     programs: [
-      `리빙라이프 - 1년 365일 말씀묵상 프로그램`,
-      `리뷰바이블 - 성경말씀과 크리스천의 문화와 생활에 대해 리뷰 하는 복음증거 프로그램`,
-      `I Believe Jesus - 간증 프로그램`,
-      `Just A Minute - 1~2분 내로 축약한 메시지`,
-      `God Night Good Night - 저녁 시간 신앙 에세이를 나누는 팟캐스트 프로그램`,
+      `리빙라이프: 1년 365일 말씀묵상 프로그램`,
+      `리뷰바이블: 성경말씀과 크리스천의 문화와 생활에 대해 리뷰 하는 복음증거 프로그램`,
+      `I Believe Jesus: 간증 프로그램`,
+      `Just A Minute: 1~2분 내로 축약한 메시지`,
+      `God Night Good Night: 저녁 시간 신앙 에세이를 나누는 팟캐스트 프로그램`,
     ],
     locationData: [
       {
@@ -194,10 +194,10 @@ const contextData = [
     mainText: `CGN 인도네시아는 2014년 9월 세계 최대의 무슬림 인구를 가진 인도네시아 자카르타에 설립 되었습니다. 2014년 4월 인도네시아 위성방송인 MNC Vision과 업무 협약을 맺고, 9월부터 LIFE 채널을 통해 현지어 방송을 시작했습니다. <즐거운 주일학교>, <God Toon>, <Bible Study> 등의 프로그램을 제작하여 인도네시아 교회의 영적 성장과 선교적 비전을 이룰 수 있도록 돕고 있습니다. 또한 미디어 아카데미와 다양한 세미나 등을 통해 현지인 미디어 사역자들을 세우고 있습니다.`,
     programs: [
       `즐거운 주일학교(Sekolah Minggu Gembira)`,
-      `God Toon : 갓툰 인도네시아어 더빙`,
-      `Bible Study : 성경공부 프로그램`,
-      `내 인생을 바꾼 한 말씀 : 인도네시아 리더십 간증 프로그램`,
-      `워십댄스 : 청소년을 위한 댄스 프로그램`,
+      `God Toon: 갓툰 인도네시아어 더빙`,
+      `Bible Study: 성경공부 프로그램`,
+      `내 인생을 바꾼 한 말씀: 인도네시아 리더십 간증 프로그램`,
+      `워십댄스: 청소년을 위한 댄스 프로그램`,
     ],
     locationData: [
       {
@@ -294,7 +294,7 @@ const IntroduceWorldwideContext = ({
                 ))}
               </p>
             </div>
-            <div>
+            <div className={`lg:pr-20`}>
               <p
                 className={`text-regular18 max-lg:text-regular14 text-grey-500`}
               >
@@ -347,7 +347,11 @@ const IntroduceWorldwideContext = ({
                     {item?.name}
                   </span>
                   {item?.name === '홈페이지' ? (
-                    <a href={item?.value}>
+                    <a
+                      href={item?.value}
+                      rel='noopener noreferrer'
+                      target='_blank'
+                    >
                       <span
                         className={`text-regular18 max-lg:text-regular14 text-grey-500 underline underline-offset-4`}
                       >

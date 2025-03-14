@@ -71,7 +71,12 @@ const SubscribePayment = ({ setPopupOpen }) => {
               <button
                 key={key}
                 onClick={() => {
-                  setSelectedPrice(item);
+                  setWritedPrice(``);
+                  if (selectedPrice?.id === item?.id) {
+                    setSelectedPrice({});
+                  } else {
+                    setSelectedPrice(item);
+                  }
                 }}
                 className={`${item?.id === selectedPrice?.id ? 'text-bold24 max-lg:text-bold16 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 max-lg:text-regular16 text-grey-900'} h-full w-full rounded-8 bg-grey-100 max-lg:rounded-4`}
               >
@@ -89,6 +94,9 @@ const SubscribePayment = ({ setPopupOpen }) => {
             className={`w-full`}
             inputText={writedPrice}
             setInputText={setWritedPrice}
+            onChange={() => {
+              setSelectedPrice({});
+            }}
           />
         </div>
         {/* 이름 */}
@@ -152,7 +160,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
               alt=''
             />
           </button>
-          <span className={`text-regular14 text-grey-900`}>
+          <span className={`text-regular16 text-grey-900`}>
             개인정보 처리방침 동의
           </span>
           <button
@@ -160,7 +168,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
               setPopupOpen(true);
             }}
           >
-            <span className={`text-bold14 text-grey-900`}>[전문보기]</span>
+            <span className={`text-bold16 text-grey-900`}>[전문보기]</span>
           </button>
         </div>
         {/* 신청하기 버튼 */}

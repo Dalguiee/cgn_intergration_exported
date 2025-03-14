@@ -12,6 +12,7 @@ const DefaultInput = ({
   inputText = '',
   setInputText,
   className = ``,
+  onChange = () => {},
 }) => {
   const [pwMode, setPwMode] = useState(false); // 비밀번호 보여주기 유무
 
@@ -34,7 +35,7 @@ const DefaultInput = ({
         type={`${pwMode ? 'password' : 'text'}`}
         name={`findKeyword`}
         maxLength={maxLength}
-        onChange={e => setInputText(e.target.value)}
+        onChange={e => (setInputText(e.target.value), onChange())}
         placeholder={placeholder}
         value={inputText}
       />

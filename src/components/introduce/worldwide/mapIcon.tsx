@@ -70,7 +70,7 @@ const MapIcon = ({
   return mapData?.map((item, idx) => (
     <div
       key={idx}
-      className={`${item?.position} ${item?.rightSide ? `flex-row-reverse` : ``} flex h-66 ${item?.longText ? `w-120` : `w-80`} items-end justify-center gap-2 max-lg:h-[8%] max-lg:w-[5%] max-lg:gap-0`}
+      className={`${item?.id === 0 ? `pointer-events-none select-none` : ``} ${item?.position} ${item?.rightSide ? `flex-row-reverse` : ``} flex h-66 ${item?.longText ? `w-120` : `w-80`} items-end justify-center gap-2 max-lg:h-[8%] max-lg:w-[5%] max-lg:gap-0`}
     >
       <div
         className={`max-lg:hidden ${selectedCategoryArticleId === item?.id ? `h-66` : `h-44`}`}

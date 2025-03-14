@@ -9,7 +9,7 @@ import ResponsiveScanner from '@/components/common/responsiveScanner';
 const IntroduceWorldwide = () => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
 
-  const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
+  const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(1);
 
   return (
     <section

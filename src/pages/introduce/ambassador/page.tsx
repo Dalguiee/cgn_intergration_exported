@@ -7,7 +7,7 @@ import IntroduceAmbassador from '@/components/introduce/ambassador/introduceAmba
 
 const IntroduceAmbassadorPage = () => {
   return (
-    <section>
+    <section className={`bg-primary-50`}>
       <ThemeHeader />
       <IntroduceAmbassador />
     </section>

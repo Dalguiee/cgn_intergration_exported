@@ -97,12 +97,12 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
           </div>
         </div>
 
-        <div className={`flex w-full px-40`}>
+        <div className={`flex w-full px-40 max-lg:px-16`}>
           <span className={`h-1 w-full border-t-3 border-grey-900`}></span>
         </div>
 
         <div
-          className={`mb-20 mr-5 mt-20 overflow-y-scroll pb-40 pl-40 pr-35 pt-40 max-lg:pl-16 max-lg:pr-11`}
+          className={`mb-20 mr-5 mt-20 flex flex-col items-start justify-start gap-60 overflow-y-scroll pb-40 pl-40 pr-35 pt-40 max-lg:pl-16 max-lg:pr-11`}
         >
           <div className={`w-full`}>
             <div className={`mb-24`}>
@@ -181,7 +181,7 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
                 <span
                   className={`text-regular14 max-lg:text-regular12 text-grey-900`}
                 >
-                  가로형
+                  세로형
                 </span>
               </div>
             </div>
@@ -218,7 +218,7 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
                     className={`flex flex-col items-center justify-start gap-9 max-lg:w-114`}
                   >
                     <div
-                      className={`flex w-full flex-col items-start justify-center`}
+                      className={`flex w-full flex-col items-center justify-center max-lg:items-start`}
                     >
                       <p className={`text-regular12 text-grey-900`}>
                         {item?.colorType}
@@ -259,7 +259,7 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
                 className={`text-regular16 max-lg:text-regular14 text-grey-500`}
               >
                 CGN은 복음이 필요한 모두를 향해 친근하고 따뜻하게 다가가며
-                담대하게 복음을 전합니다.-
+                담대하게 복음을 전합니다.
                 <br />
                 CGN의 색상 표현은 매뉴얼에 명시된 Pantone Color를 표준으로
                 합니다. 전용 색상은 CGN의 이미지를 전달하는 중요한 수단이므로

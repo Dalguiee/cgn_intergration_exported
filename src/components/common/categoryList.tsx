@@ -56,7 +56,7 @@ const CategoryList = ({
       id: 4,
       path: `/introduce/worldwide`,
       tags: [
-        { id: 0, type: '한국' },
+        // { id: 0, type: '한국' },
         { id: 1, type: '미주' },
         { id: 2, type: '일본' },
         { id: 3, type: '대만' },

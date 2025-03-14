@@ -47,7 +47,7 @@ const colorModeData = [
   {
     id: 3,
     mode: 'mode3',
-    className: `bg-white-solid hover:text-grey-500 disabled:border-grey-400 disabled:text-grey-300 border-1 border-grey-900 text-grey-900`,
+    className: `bg-white-solid hover:text-grey-700 hover:border-grey-700 disabled:border-grey-400 disabled:text-grey-300 border-1 border-grey-900 text-grey-900`,
   },
   {
     id: 4,

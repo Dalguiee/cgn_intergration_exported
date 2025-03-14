@@ -80,7 +80,7 @@ const RecruitDetail = () => {
           <div
             className={`text-regular14 ml-40 flex w-fit items-center justify-center gap-8 whitespace-nowrap text-grey-900 max-lg:ml-0`}
           >
-            <span className={`max-lg:text-bold14 max-lg:w-72`}>
+            <span className={`text-bold14 max-lg:w-72`}>
               {currentData?.recruitType}
             </span>
             <span
@@ -209,7 +209,7 @@ const RecruitDetail = () => {
                       <span className={`text-bold14 text-grey-900`}>부서</span>
                     </div>
                     <div
-                      className={`flex items-center justify-center px-24 py-8`}
+                      className={`flex items-center justify-center bg-white-solid px-24 py-8`}
                     >
                       {item?.center?.map((centerObj, centerIdx) => (
                         <span
@@ -230,7 +230,7 @@ const RecruitDetail = () => {
                       </span>
                     </div>
                     <div
-                      className={`flex flex-col items-center justify-center px-24 py-8`}
+                      className={`flex flex-col items-center justify-center bg-white-solid px-24 py-8`}
                     >
                       <span className={`text-regular14 text-grey-900`}>
                         {item?.workType}
@@ -246,7 +246,7 @@ const RecruitDetail = () => {
                       </span>
                     </div>
                     <div
-                      className={`flex flex-col items-center justify-center px-24 py-8`}
+                      className={`flex flex-col items-center justify-center bg-white-solid px-24 py-8`}
                     >
                       <span className={`text-regular14 text-grey-900`}>
                         {item?.amount}명
@@ -262,7 +262,7 @@ const RecruitDetail = () => {
                       </span>
                     </div>
                     <div
-                      className={`flex flex-col items-center justify-center px-24 py-8`}
+                      className={`flex flex-col items-center justify-center bg-white-solid px-24 py-8`}
                     >
                       <span className={`text-regular14 text-grey-900`}>
                         {item?.qualifications}

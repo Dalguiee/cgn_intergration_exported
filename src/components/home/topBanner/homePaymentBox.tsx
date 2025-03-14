@@ -32,7 +32,7 @@ const HomePaymentBox = () => {
 
   useEffect(() => {
     if (selectedSubscribes?.value === 3) {
-      navigate(`/subscribepayment`);
+      navigate(`/subscribepayment`, { state: { selectedPrice } });
     }
   }, [selectedSubscribes]);
 
@@ -76,7 +76,14 @@ const HomePaymentBox = () => {
             colorMode='mode1'
             className={`w-full`}
             onClick={() => {
-              navigate(`/subscribepayment`, { state: { selectedPrice } });
+              if (selectedSubscribes?.value === 3) {
+                navigate(`/subscribepayment`, { state: { selectedPrice } });
+              } else if (
+                selectedSubscribes?.value === 2 ||
+                selectedSubscribes?.value === 1
+              ) {
+                window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+              }
             }}
           />
         </div>

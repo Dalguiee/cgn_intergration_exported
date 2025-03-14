@@ -132,7 +132,7 @@ const TidingsDetail = () => {
             </span>
           </div>
           <span
-            className={`text-regular14 ml-40 w-fit whitespace-nowrap text-grey-400`}
+            className={`text-regular14 w-fit whitespace-nowrap text-grey-400 lg:ml-40`}
           >
             {currentData?.startDate}
           </span>
@@ -145,12 +145,14 @@ const TidingsDetail = () => {
           </div>
           <div className={`mb-16 max-lg:mt-16`}>
             <div className={`mb-16 max-lg:mt-16`}>
-              <span className={`text-bold24 text-grey-500`}>
+              <span className={`text-bold24 max-lg:text-bold18 text-grey-500`}>
                 {currentData?.subTitle}
               </span>
             </div>
             <div>
-              <span className={`text-regular18 text-grey-500`}>
+              <span
+                className={`text-regular18 max-lg:text-regular16 text-grey-500`}
+              >
                 {currentData?.content}
               </span>
             </div>
@@ -226,7 +228,9 @@ const TidingsDetail = () => {
             }}
             className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-32 max-lg:mt-16 max-lg:h-52 max-lg:w-full`}
           >
-            <span className={`text-bold24 text-white-solid`}>목록</span>
+            <span className={`text-bold24 max-lg:text-bold18 text-white-solid`}>
+              목록
+            </span>
           </button>
         </div>
       </div>

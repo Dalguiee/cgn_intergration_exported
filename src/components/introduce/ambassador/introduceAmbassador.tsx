@@ -7,9 +7,6 @@ const IntroduceAmbassador = () => {
     <section
       className={`flex w-full flex-col items-center justify-start gap-40 px-16 pb-160 max-lg:gap-0 max-lg:pb-120 max-lg:pt-24`}
     >
-      <span
-        className={`h-1 w-12 border-t-3 border-grey-900 max-lg:hidden`}
-      ></span>
       <div className={`w-full max-w-1200 max-lg:mb-24`}>
         <p
           className={`text-bold60 max-lg:text-bold24 mb-24 text-grey-900 max-lg:mb-16`}
@@ -20,19 +17,21 @@ const IntroduceAmbassador = () => {
         <p className={`text-bold40 max-lg:text-bold16 text-grey-900`}>
           홍보대사는 더 많은 사람들이 CGN의 비전에 동참할 수 있도록 인도하는
           <br className={`max-lg:hidden`} />
-          &nbsp;비저너리 역할을 하고 있습니다.
+          <span className={`lg:hidden`}>&nbsp;</span>비저너리 역할을 하고
+          있습니다.
         </p>
       </div>
+      <span
+        className={`h-1 w-12 border-t-3 border-grey-900 max-lg:hidden`}
+      ></span>
+
       <img
         src={`${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/ambassador/mo_choi.png` : `${import.meta.env.VITE_PUBLIC_URL}images/ambassador/choi.png`} `}
         width={1200}
         height={713}
-        className={`h-713 w-full max-w-1200 object-cover max-lg:mb-40 max-lg:h-458`}
+        className={`h-713 w-full max-w-1200 object-cover max-lg:mb-40 max-lg:h-306`}
         alt=''
       />
-      <span
-        className={`h-1 w-12 border-t-1 border-grey-900 max-lg:hidden`}
-      ></span>
       <div
         className={`flex w-full max-w-1200 items-start justify-between max-lg:flex-col`}
       >

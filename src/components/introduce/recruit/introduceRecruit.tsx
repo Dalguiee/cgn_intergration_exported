@@ -51,7 +51,7 @@ const IntroduceRecruit = () => {
         className={`flex w-full max-w-1200 flex-col items-center justify-start gap-60 pb-120 pt-40 max-lg:pb-60 max-lg:pt-0`}
       >
         <img
-          className={`w-full object-cover`}
+          className={`w-full object-cover max-lg:h-275`}
           src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/recruit_banner.png`}
           width={1200}
           height={540}

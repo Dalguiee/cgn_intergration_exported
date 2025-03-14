@@ -87,7 +87,7 @@ const ActivityVisit = () => {
                     {parse(item?.title)}
                   </p>
                   <p
-                    className={`${item?.moText1 ? `max-lg:hidden` : ``} ${item?.exception2 ? `text-regular18 max-lg:text-regular14 mb-24 text-grey-500` : `text-bold24 text-grey-900`} ${item?.reverse ? `mb-24` : ``} max-lg:text-regular14`}
+                    className={`${item?.moText1 ? `max-lg:hidden` : ``} ${item?.exception ? `max-lg:text-bold16` : ``} ${item?.exception2 ? `text-regular18 max-lg:text-regular14 mb-24 text-grey-500` : `text-bold24 text-grey-900`} ${item?.reverse ? `mb-24` : ``}`}
                   >
                     {parse(item?.text)}
                   </p>

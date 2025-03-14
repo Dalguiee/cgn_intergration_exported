@@ -36,6 +36,10 @@ const CustomerCenterQuestions = () => {
       value: 1,
     },
     { id: 1, text: '후원', value: 2 },
+    { id: 1, text: '후원', value: 3 },
+    { id: 1, text: '후원', value: 4 },
+    { id: 1, text: '후원', value: 5 },
+    { id: 1, text: '후원', value: 6 },
   ];
 
   const [listCategory, setListCategory] = useState([]);

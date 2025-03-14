@@ -21,7 +21,7 @@ const BottomHeader = ({
           onClick={() => {
             navigate('/');
           }}
-          className='h-36 w-76'
+          className={`h-36 w-76`}
         >
           <img
             className={`${burger ? 'hidden' : ''} h-full w-full`}
@@ -66,7 +66,7 @@ const BottomHeader = ({
                       navigate(subMenu?.link);
                       setDepthActive(false);
                     }}
-                    className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold16' : 'text-regular16'} text-nowrap text-primary-100`}
+                    className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold16 text-white-solid' : 'text-regular16 text-primary-200'} text-nowrap hover:text-primary-100`}
                   >
                     {subMenu?.text}
                   </button>

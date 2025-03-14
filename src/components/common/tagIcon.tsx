@@ -64,7 +64,7 @@ const pcTagTypes = [
   {
     id: 12,
     text: '후원영상',
-    className: 'bg-secondary-pink text-white-solid',
+    className: 'bg-secondary-blue text-white-solid',
   },
   {
     id: 13,
