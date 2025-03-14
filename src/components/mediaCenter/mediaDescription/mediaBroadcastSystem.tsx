@@ -43,7 +43,7 @@ const cableData = [
   },
 ];
 
-const MediaDescriptionSection4 = ({ mobile }) => {
+const MediaBroadcastSystem = ({ mobile }) => {
   return (
     <section
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
@@ -188,4 +188,4 @@ const MediaDescriptionSection4 = ({ mobile }) => {
   );
 };
 
-export default MediaDescriptionSection4;
+export default MediaBroadcastSystem;

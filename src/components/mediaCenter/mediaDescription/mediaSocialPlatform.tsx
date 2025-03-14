@@ -41,7 +41,7 @@ const linkData = [
   },
 ];
 
-const MediaDescriptionSection5 = () => {
+const MediaSocialPlatform = () => {
   return (
     <section
       className={`flex w-full flex-col items-center justify-start bg-secondary-blue pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
@@ -106,4 +106,4 @@ const MediaDescriptionSection5 = () => {
   );
 };
 
-export default MediaDescriptionSection5;
+export default MediaSocialPlatform;

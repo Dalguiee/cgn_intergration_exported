@@ -4,7 +4,7 @@ import React from 'react';
 // 컴포넌트
 import MediaDescriptionSection2Card from './mediaDescriptionSection2Card';
 
-const MediaDescriptionSection2 = () => {
+const MediaAboutFondant = () => {
   return (
     <section
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:pb-60 max-lg:pt-60`}
@@ -25,4 +25,4 @@ const MediaDescriptionSection2 = () => {
   );
 };
 
-export default MediaDescriptionSection2;
+export default MediaAboutFondant;

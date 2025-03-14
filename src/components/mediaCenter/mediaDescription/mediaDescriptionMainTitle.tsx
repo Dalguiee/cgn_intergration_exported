@@ -1,7 +1,7 @@
 // 훅
 import React from 'react';
 
-const MediaDescriptionSection1 = ({ mobile }) => {
+const MediaDescriptionMainTitle = ({ mobile }) => {
   return (
     <section
       className={`relative flex h-851 w-full flex-col items-center justify-start max-lg:h-779`}
@@ -50,4 +50,4 @@ const MediaDescriptionSection1 = ({ mobile }) => {
   );
 };
 
-export default MediaDescriptionSection1;
+export default MediaDescriptionMainTitle;
