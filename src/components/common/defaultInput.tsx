@@ -9,6 +9,7 @@ const DefaultInput = ({
   textClearBtn = false,
   paymentMode = false,
   maxLength = undefined,
+  numberMode = false,
   inputText = '',
   setInputText,
   className = ``,
@@ -32,7 +33,9 @@ const DefaultInput = ({
     >
       <input
         className={`text-regular16 max-lg:text-regular14 w-full text-grey-900`}
-        type={`${pwMode ? 'password' : 'text'}`}
+        type={`${pwMode ? 'password' : ''}${numberMode ? `number` : ``}`}
+        // oninput={`${numberMode ? `this.value = this.value.replace(/[^0-9]/g, '')` : ``}`}
+        inputMode={`${numberMode ? `numeric` : ``}`}
         name={`findKeyword`}
         maxLength={maxLength}
         onChange={e => (setInputText(e.target.value), onChange())}

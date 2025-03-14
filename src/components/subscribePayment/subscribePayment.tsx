@@ -89,6 +89,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
         <div className={`w-full`}>
           <DefaultInput
             searchBtn={false}
+            numberMode={true}
             placeholder={`직접 입력`}
             paymentMode={true}
             className={`w-full`}
@@ -126,6 +127,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             <DefaultInput
               searchBtn={false}
               placeholder={``}
+              numberMode={true}
               maxLength={4}
               className={`w-full`}
               inputText={writedMiddlePhoneNumber}
@@ -135,6 +137,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             <DefaultInput
               searchBtn={false}
               placeholder={``}
+              numberMode={true}
               maxLength={4}
               className={`w-full`}
               inputText={writedLastPhoneNumber}
