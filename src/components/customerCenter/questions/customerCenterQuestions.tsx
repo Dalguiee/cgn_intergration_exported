@@ -36,10 +36,9 @@ const CustomerCenterQuestions = () => {
       value: 1,
     },
     { id: 1, text: '후원', value: 2 },
-    { id: 1, text: '후원', value: 3 },
-    { id: 1, text: '후원', value: 4 },
-    { id: 1, text: '후원', value: 5 },
-    { id: 1, text: '후원', value: 6 },
+    { id: 1, text: '기부금 영수증', value: 3 },
+    { id: 1, text: '드림온 안테나', value: 4 },
+    { id: 1, text: '기타', value: 5 },
   ];
 
   const [listCategory, setListCategory] = useState([]);

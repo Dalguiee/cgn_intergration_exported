@@ -60,7 +60,7 @@ const CustomerCenterNoticeDetail = () => {
             {currentData?.title}
           </span>
           <span
-            className={`text-regular14 ml-40 w-fit whitespace-nowrap text-grey-400`}
+            className={`text-regular14 ml-40 w-fit whitespace-nowrap text-grey-400 max-lg:ml-0`}
           >
             {currentData?.date}
           </span>
@@ -70,12 +70,12 @@ const CustomerCenterNoticeDetail = () => {
         >
           <div className={`mb-16 max-lg:mt-16`}>
             <div className={`mb-16 max-lg:mt-16`}>
-              <span className={`text-bold24 text-grey-500`}>
+              <span className={`text-bold24 text-grey-700`}>
                 {currentData?.subTitle}
               </span>
             </div>
             <div>
-              <p className={`text-regular18 whitespace-pre-line text-grey-500`}>
+              <p className={`text-regular18 whitespace-pre-line text-grey-700`}>
                 <span>{currentData?.text}</span>
               </p>
             </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 
 // 컴포넌트
-import MediaDescriptionSection2Card from './mediaDescriptionSection2Card';
+import MediaAboutFondantCard from './mediaAboutFondantCard';
 
 const MediaAboutFondant = () => {
   return (
@@ -18,7 +18,7 @@ const MediaAboutFondant = () => {
         <div
           className={`flex w-full flex-wrap items-center justify-center gap-20 max-lg:px-16`}
         >
-          <MediaDescriptionSection2Card />
+          <MediaAboutFondantCard />
         </div>
       </div>
     </section>

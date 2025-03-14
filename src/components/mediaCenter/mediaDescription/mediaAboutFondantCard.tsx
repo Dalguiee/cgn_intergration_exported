@@ -43,7 +43,7 @@ const mediaCardData = [
   },
 ];
 
-const MediaDescriptionSection2Card = () => {
+const MediaAboutFondantCard = () => {
   return mediaCardData?.map((item, idx) => (
     <div
       className={`flex h-500 w-590 flex-col items-center justify-between rounded-16 bg-secondary-blue px-32 pb-63 pt-60 max-lg:h-fit max-lg:rounded-8 max-lg:px-32 max-lg:py-24`}
@@ -70,4 +70,4 @@ const MediaDescriptionSection2Card = () => {
   ));
 };
 
-export default MediaDescriptionSection2Card;
+export default MediaAboutFondantCard;

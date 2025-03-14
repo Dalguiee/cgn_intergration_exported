@@ -69,13 +69,16 @@ const CustomerCenterNotice = () => {
               {findedMockupData
                 ?.slice(listStartNum, listEndNum)
                 ?.map((item, key) => (
-                  <tr key={key} className={`h-80 border-b-2 border-grey-200`}>
+                  <tr
+                    key={key}
+                    className={`h-80 border-b-2 border-grey-200 max-lg:h-56`}
+                  >
                     <td>
                       <div className={`flex items-center justify-center`}>
                         <span
                           className={`text-regular16 max-lg:text-regular12 text-grey-500`}
                         >
-                          {item?.id}
+                          {item?.id + 1}
                         </span>
                       </div>
                     </td>

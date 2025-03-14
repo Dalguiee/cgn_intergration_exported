@@ -122,6 +122,7 @@ const MediaBroadcastSystem = ({ mobile }) => {
               className={`text-bold32 max-lg:text-bold18 text-center text-white-solid`}
             >
               CGN은 2개의 위성을 사용하여
+              <span className={`max-lg:hidden`}>&nbsp;</span>
               <br className={`lg:hidden`} />
               <span className={`text-primary-500`}>
                 전 세계 150여 개국에 방송을 송출
