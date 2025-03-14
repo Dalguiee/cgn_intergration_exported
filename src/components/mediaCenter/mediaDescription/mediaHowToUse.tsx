@@ -43,6 +43,12 @@ const MediaHowToUse = () => {
                 colorMode={`mode2`}
                 playStoreMode={true}
                 text={`플레이 스토어로 이동`}
+                onClick={() => {
+                  window.open(
+                    `https://play.google.com/store/apps/details?id=com.cgntv.app`,
+                    '_blank'
+                  );
+                }}
               />
               <StyledButtons
                 className={`w-300 max-lg:h-48 max-lg:gap-8`}
@@ -50,6 +56,12 @@ const MediaHowToUse = () => {
                 colorMode={`mode2`}
                 appStoreMode={true}
                 text={`앱 스토어로 이동`}
+                onClick={() => {
+                  window.open(
+                    `https://apps.apple.com/kr/app/%ED%90%81%EB%8B%B9-fondant/id1530311937`,
+                    '_blank'
+                  );
+                }}
               />
             </div>
           </div>
@@ -83,6 +95,9 @@ const MediaHowToUse = () => {
                 formMode={`mode1-r`}
                 colorMode={`mode2`}
                 text={`퐁당 바로가기`}
+                onClick={() => {
+                  window.open('https://www.fondant.kr', '_blank');
+                }}
               />
             </div>
           </div>

@@ -10,15 +10,15 @@ const linkData = [
     data: [
       {
         title: `CGN 공식 유튜브`,
-        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
+        link: `https://www.youtube.com/@cgn`,
       },
       {
         title: `CGN 공식 인스타그램`,
-        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
+        link: `https://www.instagram.com/cgn_korea?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==`,
       },
       {
         title: `CGN 공식 카카오채널`,
-        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
+        link: `http://pf.kakao.com/_xlWBad`,
       },
     ],
   },
@@ -27,15 +27,15 @@ const linkData = [
     data: [
       {
         title: `Fondant 공식 유튜브`,
-        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
+        link: `https://www.youtube.com/@fondantott`,
       },
       {
         title: `Fondant 공식 인스타그램`,
-        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
+        link: `https://www.instagram.com/fondant_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==`,
       },
       {
         title: `Fondant 공식 카카오채널`,
-        link: `https://www.youtube.com/channel/UC9Q4n4l8Z1YK5J7ZP7eJ1OQ`,
+        link: `http://pf.kakao.com/_xnIInb`,
       },
     ],
   },

@@ -1,14 +1,17 @@
 // 훅
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
-import { useNavigate } from 'react-router-dom';
+
 const MainFooterPc = ({ linkData, selectedLand, setSelectedLand }) => {
   const navigate = useNavigate();
 
   return (
-    <footer className='flex h-fit w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 py-70 max-lg:hidden'>
+    <footer
+      className={`flex h-fit w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 py-70 max-lg:hidden`}
+    >
       <div
         className={`flex h-96 w-full max-w-1560 items-center justify-between`}
       >
