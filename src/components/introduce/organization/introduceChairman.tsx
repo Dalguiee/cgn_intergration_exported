@@ -18,7 +18,7 @@ const IntroduceChairman = () => {
       >
         <div
           style={{
-            backgroundImage: `url(${mobile ? `` : `/public/images/introduce/chairman.png`} )`,
+            backgroundImage: `url(${mobile ? `` : `${import.meta.env.VITE_PUBLIC_URL}images/introduce/chairman.png`} )`,
           }}
           className={`flex w-full items-start justify-center gap-26 bg-cover bg-center bg-no-repeat max-lg:flex-col-reverse max-lg:items-center max-lg:gap-24 lg:h-708`}
         >

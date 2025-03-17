@@ -60,7 +60,7 @@ const IntroduceCEO = () => {
               <div className={`py-10 pl-161 max-lg:py-0 max-lg:pl-16`}>
                 <img
                   className={`object-1cover h-60 w-172 max-lg:h-32 max-lg:w-92`}
-                  src={`/public/images/introduce/ceo_signature.png`}
+                  src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/ceo_signature.png`}
                   width={172}
                   height={60}
                   alt=''
