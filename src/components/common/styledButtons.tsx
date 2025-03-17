@@ -65,7 +65,6 @@ const StyledButtons = ({
   playStoreMode = false,
   appStoreMode = false,
   downloadMode = false,
-  downloadItem = null,
   children = null,
   onClick = () => {},
 }) => {

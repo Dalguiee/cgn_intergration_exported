@@ -7,7 +7,7 @@ const HomeCampaignCard = ({ item }) => {
   return (
     <div
       onClick={() => {
-        navigate(`/tidings/${item?.category}/detail?articleId=${item?.id}`);
+        navigate(`/news/${item?.category}/detail?articleId=${item?.id}`);
       }}
       className={`h-fit w-full max-w-352 max-lg:min-h-179 max-lg:max-w-[unset]`}
     >

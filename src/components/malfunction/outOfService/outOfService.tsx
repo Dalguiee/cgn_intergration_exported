@@ -1,6 +1,9 @@
-import StyledButtons from '@/components/common/styledButtons';
-import React, { useEffect, useState } from 'react';
+// 훅
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// 컴포넌트
+import StyledButtons from '@/components/common/styledButtons';
 
 const OutOfService = () => {
   const navigate = useNavigate();
@@ -14,7 +17,7 @@ const OutOfService = () => {
       >
         <img
           className={`h-100 w-100 object-cover max-lg:h-60 max-lg:w-60`}
-          src={`/public/images/logo/outofservice.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/outofservice.png`}
           width={100}
           height={100}
           alt=''

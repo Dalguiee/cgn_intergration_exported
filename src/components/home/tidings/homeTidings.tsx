@@ -45,7 +45,7 @@ const HomeTidings = () => {
         <span className={`text-bold24 text-grey-900`}>소식</span>
         <button
           onClick={() => {
-            navigate(`/tidings/mission`);
+            navigate(`/news/cgnStory`);
           }}
           className={`flex items-center justify-center`}
         >

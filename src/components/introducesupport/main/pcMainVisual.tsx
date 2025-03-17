@@ -110,7 +110,7 @@ const PcMainVisual = props => {
       <div
         className='absolute top-0 aspect-[2100_/_960] w-full bg-cover bg-top bg-repeat'
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_main_bg.jpg)`,
+          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_main_bg.jpg)`,
         }}
       >
         {/* 히든 되는 박스들 */}
@@ -174,33 +174,33 @@ const PcMainVisual = props => {
         <div className='absolute bottom-0 flex aspect-[1920_/_112] w-full items-center justify-center bg-[rgba(255,_255,_255,_0.3)]'>
           <button
             onClick={() => {
-              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+              window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
             }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
-              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/btn_support1.svg)`,
+              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/btn_support1.svg)`,
             }}
           >
             정기후원
           </button>
           <button
             onClick={() => {
-              navigate(`/subscribepayment`);
+              window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
             }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
-              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/btn_support2.svg)`,
+              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/btn_support2.svg)`,
             }}
           >
             증액후원
           </button>
           <button
             onClick={() => {
-              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+              window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
             }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
-              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/btn_support3.svg)`,
+              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/btn_support3.svg)`,
             }}
           >
             일시후원
@@ -214,7 +214,7 @@ const PcMainVisual = props => {
         initial='hidden'
         animate='visible'
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_main_bg2.jpg)`,
+          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_main_bg2.jpg)`,
           pointerEvents: `${afterAni ? 'none' : 'initial'}`,
         }}
       ></motion.div>
@@ -226,7 +226,7 @@ const PcMainVisual = props => {
         animate={afterAni ? 'fadeOut' : 'fadeIn'}
       >
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/white_cgn_logo.svg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/white_cgn_logo.svg`}
           alt=''
           className='h-full w-full'
         />

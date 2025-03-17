@@ -16,7 +16,7 @@ const Checkbox = props => {
         onChange={handleChange}
       />
       <div
-        className={`${className && className} flex h-32 w-32 cursor-pointer items-center justify-center rounded-4 border border-[black] bg-white-solid`}
+        className={`${className && className} flex h-24 w-24 cursor-pointer items-center justify-center rounded-4 border border-[black] bg-white-solid`}
       >
         {isChecked && (
           <img
@@ -26,7 +26,7 @@ const Checkbox = props => {
           />
         )}
       </div>
-      {label && <div className='text-regular14 ml-8'>{label}</div>}
+      {label && <div className='text-regular16 ml-8'>{label}</div>}
     </label>
   );
 };

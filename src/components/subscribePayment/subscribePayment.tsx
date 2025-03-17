@@ -9,9 +9,9 @@ import { useLocation } from 'react-router-dom';
 
 // 데이터
 const priceData = [
-  { id: 0, text: '+10,000원', value: 1 },
-  { id: 1, text: '+30,000원', value: 2 },
-  { id: 2, text: '+50,000원', value: 3 },
+  { id: 0, text: '+5,000원', value: 1 },
+  { id: 1, text: '+10,000원', value: 2 },
+  { id: 2, text: '+30,000원', value: 3 },
 ];
 
 const phoneNumberData = [
@@ -128,7 +128,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
               searchBtn={false}
               placeholder={``}
               numberMode={true}
-              maxLength={4}
+              maxlength={4}
               className={`w-full`}
               inputText={writedMiddlePhoneNumber}
               setInputText={setWritedMiddlePhoneNumber}
@@ -138,7 +138,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
               searchBtn={false}
               placeholder={``}
               numberMode={true}
-              maxLength={4}
+              maxlength={4}
               className={`w-full`}
               inputText={writedLastPhoneNumber}
               setInputText={setWritedLastPhoneNumber}
@@ -153,7 +153,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             onClick={() => {
               setAgree(!agree);
             }}
-            className={`flex h-32 w-32 items-center justify-center rounded-4 border-1 border-grey-900 bg-white-solid`}
+            className={`flex h-24 w-24 items-center justify-center rounded-4 border-1 border-grey-900 bg-white-solid`}
           >
             <img
               src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/check_grey_900.svg`}

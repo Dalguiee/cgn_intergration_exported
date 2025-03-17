@@ -69,95 +69,91 @@ export default function MainRouter() {
       <Route path='/*' element={<DefaultLayer />}>
         {/* 홈 */}
         <Route path='home' element={<HomePage />}></Route>
-        <Route
-          path='subscribepayment'
-          element={<SubscribePaymentPage />}
-        ></Route>
 
-        {/* 후원 */}
+        {/* 증액후원 */}
+        <Route path='increase' element={<SubscribePaymentPage />}></Route>
+
+        {/* 후원안내 */}
         <Route
-          path='introducesupport/main'
+          path='donation/mediaMission'
           element={<IntroducesupportPage />}
         ></Route>
         <Route
-          path='introducesupport/anniversary'
+          path='donation/anniversary'
           element={<IntroducesupportAnniversaryPage />}
         ></Route>
         <Route
-          path='introducesupport/overseas'
+          path='donation/global'
           element={<IntroducesupportOverseasPage />}
         ></Route>
         <Route
-          path='introducesupport/report'
+          path='donation/report'
           element={<IntroducesupportReportPage />}
-        ></Route>
-
-        {/* 소식 */}
-        <Route
-          path='tidings/campaign'
-          element={<TidingsCampaignPage />}
-        ></Route>
-        <Route path='tidings/mission' element={<TidingsMissionPage />}></Route>
-        <Route path='tidings/support' element={<TidingsSupportPage />}></Route>
-        <Route
-          path='tidings/broadcast'
-          element={<TidingsBroadcastPage />}
-        ></Route>
-        <Route
-          path='tidings/:subDepth/detail'
-          element={<TidingsDetailPage />}
         ></Route>
 
         {/* 소개 */}
         <Route
-          path='introduce/vision'
+          path='about-us/missionVision'
           element={<IntroduceVisionPage />}
         ></Route>
         <Route
-          path='introduce/organization'
+          path='about-us/organization'
           element={<IntroduceOrganizationPage />}
         ></Route>
         <Route
-          path='introduce/organization/:subDepth'
+          path='about-us/organization/:subDepth'
           element={<IntroduceOrganizationPage />}
         ></Route>
         <Route
-          path='introduce/worldwide'
+          path='about-us/branch'
           element={<IntroduceWorldwidePage />}
         ></Route>
         <Route
-          path='introduce/ambassador'
+          path='about-us/ambassador'
           element={<IntroduceAmbassadorPage />}
         ></Route>
         <Route
-          path='introduce/recruit'
+          path='about-us/recruit'
           element={<IntroduceRecruitPage />}
         ></Route>
         <Route
-          path='introduce/recruit/detail'
+          path='about-us/recruit/detail'
           element={<RecruitDetailPage />}
         ></Route>
 
+        {/* 소식 */}
+        <Route
+          path='news/campaignEvent'
+          element={<TidingsCampaignPage />}
+        ></Route>
+        <Route path='news/cgnStory' element={<TidingsMissionPage />}></Route>
+        <Route path='news/supporter' element={<TidingsSupportPage />}></Route>
+        <Route path='news/press' element={<TidingsBroadcastPage />}></Route>
+        <Route
+          path='news/:subDepth/detail'
+          element={<TidingsDetailPage />}
+        ></Route>
+
         {/* 참여 */}
-        <Route path='activity/visit' element={<ActivityVisitPage />}></Route>
+        <Route path='participate/event' element={<ActivityVisitPage />}></Route>
 
         {/* 시청안내 */}
         <Route
-          path='mediacenter/description'
+          path='media/description'
           element={<MediaDescriptionPage />}
         ></Route>
 
         {/* 고객센터 */}
         <Route
-          path='customercenter/notice'
+          path='customer/notice'
           element={<CustomerCenterNoticePage />}
         ></Route>
         <Route
-          path='customercenter/questions'
+          path='customer/faq'
           element={<CustomerCenterQuestionsPage />}
         ></Route>
         <Route
-          path='customercenter/notice/detail'
+          path='customer/notice/detail'
           element={<CustomerCenterNoticeDetailPage />}
         ></Route>
 
@@ -168,7 +164,8 @@ export default function MainRouter() {
         <Route path='maintenance' element={<MaintenancePage />}></Route>
 
         {/* 잘못된 접근 */}
-        <Route path='outofservice' element={<OutOfServicePage />}></Route>
+        {/* <Route path='outofservice' element={<OutOfServicePage />}></Route> */}
+        <Route path='*' element={<OutOfServicePage />}></Route>
       </Route>
     </Routes>
   );

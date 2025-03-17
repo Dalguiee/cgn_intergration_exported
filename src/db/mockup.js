@@ -2,12 +2,12 @@ export const mockupData = [
   {
     id: 1,
     type: `캠페인/이벤트`,
-    category: `campaign`,
-    path: `/tidings/campaign`,
+    category: `campaignEvent`,
+    path: `/news/campaignEvent`,
     data: [
       {
         id: 1,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -29,7 +29,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -51,7 +51,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '캠페인', id: 2, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -73,7 +73,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '캠페인', id: 2, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -95,7 +95,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -117,7 +117,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -139,7 +139,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -161,7 +161,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -183,7 +183,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        category: `campaign`,
+        category: `campaignEvent`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -208,12 +208,12 @@ export const mockupData = [
   {
     id: 2,
     type: `선교 스토리`,
-    category: `mission`,
-    path: `/tidings/mission`,
+    category: `cgnStory`,
+    path: `/news/cgnStory`,
     data: [
       {
         id: 1,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -233,7 +233,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -252,7 +252,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -271,7 +271,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -290,7 +290,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -309,7 +309,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -328,7 +328,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -347,7 +347,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -366,7 +366,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -385,7 +385,7 @@ export const mockupData = [
       },
       {
         id: 10,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -404,7 +404,7 @@ export const mockupData = [
       },
       {
         id: 11,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -423,7 +423,7 @@ export const mockupData = [
       },
       {
         id: 12,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -442,7 +442,7 @@ export const mockupData = [
       },
       {
         id: 13,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -461,7 +461,7 @@ export const mockupData = [
       },
       {
         id: 14,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -480,7 +480,7 @@ export const mockupData = [
       },
       {
         id: 15,
-        category: `mission`,
+        category: `cgnStory`,
         tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -502,12 +502,12 @@ export const mockupData = [
   {
     id: 3,
     type: `후원 스토리`,
-    category: `support`,
-    path: `/tidings/support`,
+    category: `supporter`,
+    path: `/news/supporter`,
     data: [
       {
         id: 1,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원', id: 11, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -526,7 +526,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원', id: 11, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -545,7 +545,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원', id: 11, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -564,7 +564,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원', id: 11, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -583,7 +583,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -602,7 +602,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -621,7 +621,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -640,7 +640,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -659,7 +659,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        category: `support`,
+        category: `supporter`,
         tag: [{ text: '후원영상', id: 12, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -681,12 +681,12 @@ export const mockupData = [
   {
     id: 4,
     type: `보도 자료`,
-    category: `broadcast`,
-    path: `/tidings/broadcast`,
+    category: `press`,
+    path: `/news/press`,
     data: [
       {
         id: 1,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -706,7 +706,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -726,7 +726,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -746,7 +746,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -766,7 +766,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -786,7 +786,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -806,7 +806,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -826,7 +826,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -846,7 +846,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        category: `broadcast`,
+        category: `press`,
         tag: [{ text: '보도 자료', id: 13, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [

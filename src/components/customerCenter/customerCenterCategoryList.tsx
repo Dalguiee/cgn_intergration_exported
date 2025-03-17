@@ -7,12 +7,12 @@ const tabListData = [
   {
     id: 0,
     name: `공지사항`,
-    path: `/customercenter/notice`,
+    path: `/customer/notice`,
   },
   {
     id: 1,
     name: `자주 묻는 질문`,
-    path: `/customercenter/questions`,
+    path: `/customer/faq`,
   },
 ];
 

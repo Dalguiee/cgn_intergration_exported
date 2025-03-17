@@ -429,7 +429,7 @@ const RecruitDetail = () => {
         >
           <button
             onClick={() => {
-              navigate(`/introduce/recruit`);
+              navigate(`/about-us/recruit`);
             }}
             className={`mt-60 flex h-64 w-full max-w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-60 max-lg:mt-0 max-lg:h-52`}
           >

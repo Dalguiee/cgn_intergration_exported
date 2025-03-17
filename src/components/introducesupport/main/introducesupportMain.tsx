@@ -130,7 +130,7 @@ const IntroducesupportMain = () => {
         >
           <button
             onClick={() => {
-              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+              window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
             }}
             className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
           >
@@ -138,7 +138,7 @@ const IntroducesupportMain = () => {
           </button>
           <button
             onClick={() => {
-              navigate(`/subscribepayment`);
+              window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
             }}
             className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
           >
@@ -146,7 +146,7 @@ const IntroducesupportMain = () => {
           </button>
           <button
             onClick={() => {
-              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+              window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
             }}
             className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
           >

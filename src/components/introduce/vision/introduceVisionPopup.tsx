@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 
 // 컴포넌트
 import ResponsiveScanner from '@/components/common/responsiveScanner';
+
 const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
   useEffect(() => {
@@ -12,6 +13,17 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
       document.body.style.overflow = 'auto';
     }
   }, [popupOpen]);
+
+  // 로고파일 다운로드
+  const documentDownload = () => {
+    const url = `${import.meta.env.VITE_PUBLIC_URL}data/logo.zip`;
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'logo.zip'; // 다운로드할 파일 이름
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
 
   const colorData = [
     {
@@ -88,6 +100,9 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
               </p>
             </div>
             <div
+              onClick={() => {
+                documentDownload();
+              }}
               className={`flex h-40 w-113 items-center justify-center rounded-4 bg-grey-900`}
             >
               <span className={`text-regular14 text-white-solid`}>
@@ -264,7 +279,7 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
                 CGN의 색상 표현은 매뉴얼에 명시된 Pantone Color를 표준으로
                 합니다. 전용 색상은 CGN의 이미지를 전달하는 중요한 수단이므로
                 지정된
-                <br />
+                <br className={`max-lg:hidden`} />
                 색상을 지속적으로 정확하게 사용하여야 합니다.
               </p>
             </div>

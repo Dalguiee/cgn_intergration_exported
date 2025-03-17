@@ -30,14 +30,14 @@ const MainFooterPc = ({ linkData, selectedLand, setSelectedLand }) => {
             <div className={`flex h-48 gap-40`}>
               <button
                 onClick={() => {
-                  navigate(`/customercenter/notice`);
+                  navigate(`/customer/notice`);
                 }}
               >
                 <span className={`text-bold14`}>공지사항</span>
               </button>
               <button
                 onClick={() => {
-                  navigate(`/customercenter/questions`);
+                  navigate(`/customer/faq`);
                 }}
               >
                 <span className={`text-bold14`}>FAQ</span>
@@ -76,7 +76,7 @@ const MainFooterPc = ({ linkData, selectedLand, setSelectedLand }) => {
             </span>
             <span className='h-12 w-1 border-1 border-grey-200'></span>
             <span className={`text-regular14 text-grey-900`}>
-              (재) 온누리 선교재단
+              (재)온누리 선교재단
             </span>
             <span className='h-12 w-1 border-1 border-grey-200'></span>
             <span className={`text-regular14 text-grey-900`}>

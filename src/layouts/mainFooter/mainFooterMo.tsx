@@ -56,9 +56,12 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
           </span>
         </button>
       </div>
-      <div className={`flex w-full items-center justify-between px-12`}>
+      <div
+        className={`flex w-full flex-wrap items-center justify-between gap-y-12 px-12`}
+      >
         <div className={`flex items-center justify-center gap-8`}>
           <button
+            className={`flex-shrink-0`}
             onClick={() => {
               window.open(`https://www.fondant.kr`, `_blank`);
             }}
@@ -72,6 +75,7 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
             />
           </button>
           <button
+            className={`flex-shrink-0`}
             onClick={() => {
               window.open(`https://www.youtube.com/@cgn`, `_blank`);
             }}
@@ -85,7 +89,9 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
             />
           </button>
         </div>
-        <div className={`ml-32 flex w-217 items-center justify-between`}>
+        <div
+          className={`flex w-full min-w-150 max-w-217 items-center justify-between`}
+        >
           <SelectBox
             selectedItem={selectedLand}
             setSelectedItem={setSelectedLand}
@@ -128,7 +134,7 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
       </div>
       <div className={`w-full px-12`}>
         <span className={`text-regular12 text-grey-500`}>
-          Copyright (C) CGN. All right reserved.
+          CopyrightⓒCGN. All Reserved.
         </span>
       </div>
     </footer>

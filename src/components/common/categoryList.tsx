@@ -16,7 +16,7 @@ const CategoryList = ({
   const tabListData = [
     {
       id: 0,
-      path: `/introduce/organization`,
+      path: `/about-us/organization`,
       tags: [
         { id: 0, type: '이사장 인사' },
         { id: 1, type: '대표 인사' },
@@ -27,7 +27,7 @@ const CategoryList = ({
     },
     {
       id: 1,
-      path: `/tidings/campaign`,
+      path: `/news/campaignEvent`,
       tags: [
         { id: 1, type: '진행중' },
         { id: 3, type: '종료' },
@@ -35,7 +35,7 @@ const CategoryList = ({
     },
     {
       id: 2,
-      path: `/tidings/mission`,
+      path: `/news/cgnStory`,
       tags: [
         { id: 14, type: 'CGN 소식' },
         { id: 9, type: '해외지사' },
@@ -46,7 +46,7 @@ const CategoryList = ({
     },
     {
       id: 3,
-      path: `/tidings/support`,
+      path: `/news/supporter`,
       tags: [
         { id: 11, type: '후원' },
         { id: 12, type: '후원영상' },
@@ -54,7 +54,7 @@ const CategoryList = ({
     },
     {
       id: 4,
-      path: `/introduce/worldwide`,
+      path: `/about-us/branch`,
       tags: [
         // { id: 0, type: '한국' },
         { id: 1, type: '미주' },
@@ -85,7 +85,7 @@ const CategoryList = ({
         id: 0,
         type: '전체',
       };
-      if (location?.pathname?.includes(`/tidings/`)) {
+      if (location?.pathname?.includes(`/news/`)) {
         setCategoryTags([totalTag, ...tagDataFind?.[0]?.tags]);
       } else {
         setCategoryTags([...tagDataFind?.[0]?.tags]);
@@ -107,14 +107,6 @@ const CategoryList = ({
             onClick={() => {
               setSelectedCategoryArticleId(item?.id);
               const objLeft = scrollObjects?.current[idx].offsetLeft;
-              console.log(objLeft);
-
-              // scrollObjects?.current[idx]?.scrollIntoView({
-              //   behavior: 'smooth',
-              //   block: 'nearest',
-              //   inline: 'start',
-              // });
-
               scrollContainer?.current?.scrollTo({
                 behavior: 'smooth',
                 left: objLeft - 16,

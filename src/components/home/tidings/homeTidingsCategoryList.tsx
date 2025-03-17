@@ -56,7 +56,7 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
           className='w-139'
           arrowMode={true}
           onClick={() => {
-            navigate(`/tidings/mission`);
+            navigate(`/news/mission`);
           }}
         />
       </div>

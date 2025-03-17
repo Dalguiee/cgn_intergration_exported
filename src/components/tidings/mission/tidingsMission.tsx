@@ -60,10 +60,10 @@ const TidingsMission = () => {
 
   /* 현재 선교스토리 혹은 후원중 어느 페이지로 분기되었는지 사용할 String state 지정 */
   useEffect(() => {
-    if (location?.pathname?.includes('/tidings/mission')) {
-      setPageMode('mission');
-    } else if (location?.pathname?.includes('/tidings/support')) {
-      setPageMode('support');
+    if (location?.pathname?.includes('/news/cgnStory')) {
+      setPageMode('cgnStory');
+    } else if (location?.pathname?.includes('/news/supporter')) {
+      setPageMode('supporter');
     }
   }, [location]);
 
@@ -144,7 +144,7 @@ const TidingsMission = () => {
                   <button
                     onClick={() => {
                       navigate(
-                        `${`/tidings/${pageMode}/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
+                        `${`/news/${pageMode}/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
                       );
                     }}
                   >
@@ -237,7 +237,7 @@ const TidingsMission = () => {
                 }}
                 onClick={() => {
                   navigate(
-                    `${`/tidings/${pageMode}/detail?articleId=${data?.id}`}`
+                    `${`/news/${pageMode}/detail?articleId=${data?.id}`}`
                   );
                 }}
                 className={`relative z-20 flex h-80 w-full items-center justify-between px-24 py-24`}

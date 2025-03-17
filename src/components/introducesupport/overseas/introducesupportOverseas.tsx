@@ -117,19 +117,19 @@ const IntroducesupportOverseas = () => {
     <div className='flex w-full flex-col items-center bg-primary-50 pb-160 max-lg:pb-46'>
       <div className='w-full max-w-1232 px-16'>
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_oberseas_map.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_oberseas_map.png`}
           alt=''
           className='w-full max-lg:hidden'
         />
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_oberseas_map.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_oberseas_map.png`}
           alt=''
           className='ml-[-16px] hidden min-w-[calc(100%+32px)] max-lg:block'
         />
         <div className='w-full pt-120 max-lg:pt-0'>
           <div
             style={{
-              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_oberseas_bg.png)`,
+              backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_oberseas_bg.png)`,
             }}
             className={`mb-120 aspect-[1200/570] w-full max-w-1200 bg-cover bg-no-repeat pe-30 pt-60 max-lg:mb-60 max-lg:bg-none max-lg:pe-0`}
           >

@@ -23,100 +23,100 @@ const centerMenu = [
   {
     key: 0,
     text: '후원안내',
-    path: '/introducesupport/',
-    link: '/introducesupport',
+    path: '/donation/',
+    link: '/donation/mediaMission',
     subMenu: [
       {
         text: '미디어선교 후원',
-        link: '/introducesupport/main',
+        link: '/donation/mediaMission',
       },
       {
         text: '기념일 후원',
-        link: '/introducesupport/anniversary',
+        link: '/donation/anniversary',
       },
       // {
       //   text: '교회/기업 후원',
-      //   link: '/introducesupport/unstructed1',
+      //   link: '/donation/legacy',
       // },
       // {
       //   text: '유산 후원',
-      //   link: '/introducesupport/unstructed2',
+      //   link: '/donation/unknown',
       // },
       {
         text: '해외지사 후원',
-        link: '/introducesupport/overseas',
+        link: '/donation/global',
       },
       {
-        text: '후원내역보고',
-        link: '/introducesupport/report',
+        text: '후원내역 보고',
+        link: '/donation/report',
       },
     ],
   },
   {
     key: 1,
     text: '소개',
-    path: '/introduce/',
-    link: '/introduce/vision',
+    path: '/about-us/',
+    link: '/about-us/missionVision',
     subMenu: [
       {
         text: '미션&비전',
-        link: '/introduce/vision',
+        link: '/about-us/missionVision',
       },
       {
         text: '기관 소개',
-        link: '/introduce/organization',
+        link: '/about-us/organization',
       },
       {
         text: '해외지사 소개',
-        link: '/introduce/worldwide',
+        link: '/about-us/branch',
       },
       {
-        text: '홍보 대사',
-        link: '/introduce/ambassador',
+        text: '홍보대사',
+        link: '/about-us/ambassador',
       },
       {
         text: '채용',
-        link: '/introduce/recruit',
+        link: '/about-us/recruit',
       },
     ],
   },
   {
     key: 2,
     text: '소식',
-    path: `/tidings/`,
-    link: '/tidings/campaign',
+    path: `/news/`,
+    link: '/news/campaignEvent',
     subMenu: [
       {
         text: '캠페인/이벤트',
-        link: '/tidings/campaign',
+        link: '/news/campaignEvent',
       },
       {
         text: '선교 스토리',
-        link: '/tidings/mission',
+        link: '/news/cgnStory',
       },
       {
         text: '후원 스토리',
-        link: '/tidings/support',
+        link: '/news/supporter',
       },
       {
         text: '보도 자료',
-        link: '/tidings/broadcast',
+        link: '/news/press',
       },
       // {
       //   text: '외부 소식',
-      //   link: '/support/unstructed1',
+      //   link: '/news/partner',
       // },
       // {
       //   text: '매거진',
-      //   link: '/support/unstructed2',
+      //   link: '/news/magazine',
       // },
     ],
   },
   {
     key: 3,
     text: '참여',
-    path: `/activity/`,
-    link: '/activity',
+    path: `/participate/`,
+    link: '/participate/event',
     subMenu: [
       // {
       //   text: '중보기도 신청',
@@ -128,31 +128,31 @@ const centerMenu = [
       // },
       {
         text: '행사/견학 신청',
-        link: '/activity/visit',
+        link: '/participate/event',
       },
     ],
   },
   {
     key: 4,
-    text: '시청 안내',
-    path: '/mediacenter/',
-    link: '/mediacenter/description',
+    text: '시청안내',
+    path: '/media/',
+    link: '/media/description',
     subMenu: [
       {
         text: '퐁당 웹/앱/스마트TV',
-        link: '/mediacenter/description',
+        link: '/media/description',
       },
       {
         text: '케이블/IPTV',
-        link: '/mediacenter/description',
+        link: '/media/description',
       },
       {
         text: '위성',
-        link: '/mediacenter/description',
+        link: '/media/description',
       },
       {
         text: '소셜&오픈 플랫폼',
-        link: '/mediacenter/description',
+        link: '/media/description',
       },
     ],
   },

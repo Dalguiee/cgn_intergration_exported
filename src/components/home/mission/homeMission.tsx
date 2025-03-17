@@ -3,21 +3,23 @@ import React from 'react';
 
 // 컴포넌트
 import HomeTextBox from '@/components/home/mission/homeTextBox';
+import { useNavigate } from 'react-router-dom';
 
 const HomeMission = ({ mobile }) => {
+  const navigate = useNavigate();
   const buttonData = [
     {
       id: 1,
       text: `선교 미디어 사역`,
       className: `bg-primary-500`,
       blackArrow: true,
-      link: `/`,
+      link: `/donation/mediaMission`,
     },
     {
       id: 2,
       text: `후원 내역 보고`,
       className: `bg-secondary-blue`,
-      link: `/`,
+      link: `/donation/report`,
     },
   ];
   return (
@@ -49,6 +51,9 @@ const HomeMission = ({ mobile }) => {
 
           {buttonData?.map((item, key) => (
             <button
+              onClick={() => {
+                navigate(item?.link);
+              }}
               key={key}
               className={`flex h-120 w-440 items-center justify-between rounded-16 max-lg:rounded-8 ${item?.className} px-40 py-40 max-lg:h-60 max-lg:w-full max-lg:px-24 max-lg:py-16`}
             >

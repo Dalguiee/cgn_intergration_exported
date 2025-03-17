@@ -220,12 +220,12 @@ const IntroducesupportAnniversary = () => {
       {/* 메인 배너 */}
       <div className='w-full'>
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_anniversary_banner.jpg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_anniversary_banner.jpg`}
           alt=''
           className='hidden w-full lg:block'
         />
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_anniversary_banner.jpg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_anniversary_banner.jpg`}
           alt=''
           className='hidden w-full max-lg:block'
         />
@@ -246,12 +246,12 @@ const IntroducesupportAnniversary = () => {
       {/* 기념일 후원 소개 영역 */}
       <div className='relative flex w-full flex-col items-center bg-[#FFF3F3] px-16 pb-120 pt-16 max-lg:pb-60'>
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_deco1.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_deco1.png`}
           alt=''
           className='absolute top-122 w-full max-w-989 max-lg:hidden'
         />
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_deco1.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_deco1.png`}
           alt=''
           className='absolute top-75 hidden w-full max-w-336 max-lg:block'
         />
@@ -260,7 +260,7 @@ const IntroducesupportAnniversary = () => {
             감사함으로 가득한 오늘
           </div>
           <div className='text-bold48 max-lg:text-bold24'>
-            선교 후원으로 더<br className='hidden max-lg:block' />
+            선교 후원으로 더 <br className='hidden max-lg:block' />
             특별하게 기념하세요
           </div>
         </div>
@@ -272,7 +272,7 @@ const IntroducesupportAnniversary = () => {
                 key={index}
               >
                 <img
-                  src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/${item.img}`}
+                  src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/${item.img}`}
                   alt=''
                   className='mb-40 aspect-square w-full max-w-300 max-lg:mb-0 max-lg:max-w-120'
                 />
@@ -298,12 +298,12 @@ const IntroducesupportAnniversary = () => {
       {/* 기념일 후원 슬라이드 영역 */}
       <div className='relative flex w-full flex-col items-center bg-white-solid px-16 max-lg:px-0'>
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_deco2.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_deco2.png`}
           alt=''
           className='absolute top-110 w-full max-w-985 max-lg:hidden'
         />
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_deco2.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_deco2.png`}
           alt=''
           className='absolute top-90 ml-20 hidden w-full max-w-336 max-lg:block'
         />
@@ -312,7 +312,7 @@ const IntroducesupportAnniversary = () => {
             나만의 오늘을 더욱 의미 있게 기억할 수 있도록
           </div>
           <div className='text-bold48 max-lg:text-bold24'>
-            감사의 마음을 담아
+            감사의 마음을 담아<span className={`max-lg:hidden`}>&nbsp;</span>
             <br className='hidden max-lg:block' />
             후원해 주세요
           </div>
@@ -323,7 +323,7 @@ const IntroducesupportAnniversary = () => {
               내가 만든 나만의 기념일
             </span>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_anniversary_text_deco.png`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_anniversary_text_deco.png`}
               alt=''
               className='w-546 max-lg:hidden'
             />
@@ -348,12 +348,12 @@ const IntroducesupportAnniversary = () => {
                       style={{ background: item.color }}
                     >
                       <img
-                        src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/${item.img}`}
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/${item.img}`}
                         alt=''
                         className='w-[60%] max-w-683 max-lg:hidden'
                       />
                       <img
-                        src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_${item.img}`}
+                        src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_${item.img}`}
                         alt=''
                         className='hidden w-full max-w-360 max-lg:block'
                       />
@@ -379,13 +379,13 @@ const IntroducesupportAnniversary = () => {
             </Swiper>
             <button
               style={{
-                backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_slide_btn.svg)`,
+                backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/anniversary_slide_btn.svg)`,
               }}
               className={`swiper-btn-prev absolute left-[-120px] top-180 z-10 h-60 w-60 bg-cover bg-no-repeat max-lg:left-8 max-lg:h-40 max-lg:w-40`}
             ></button>
             <button
               style={{
-                backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_slide_btn.svg)`,
+                backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/anniversary_slide_btn.svg)`,
               }}
               className={`swiper-btn-next absolute right-[-120px] top-180 z-10 h-60 w-60 rotate-180 transform bg-cover bg-no-repeat max-lg:right-8 max-lg:h-40 max-lg:w-40`}
             ></button>
@@ -395,12 +395,12 @@ const IntroducesupportAnniversary = () => {
       {/* 기념일 후원 증서, 굿즈 */}
       <div className='relative flex w-full flex-col items-center bg-white-solid px-16 pb-160 max-lg:px-0 max-lg:pb-0'>
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_deco3.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_deco3.png`}
           alt=''
           className='absolute top-58 w-full max-w-984 max-lg:hidden'
         />
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_deco3.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_deco3.png`}
           alt=''
           className='absolute top-81 hidden w-full max-w-361 max-lg:block'
         />
@@ -419,7 +419,7 @@ const IntroducesupportAnniversary = () => {
               기념일 후원증서 & 굿즈
             </span>
             <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/pc_anniversary_text_deco.png`}
+              src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/pc_anniversary_text_deco.png`}
               alt=''
               className='w-546 max-lg:hidden'
             />
@@ -427,7 +427,7 @@ const IntroducesupportAnniversary = () => {
           <div className='relative flex w-full max-w-1200 gap-24 max-lg:flex-col'>
             <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
               <img
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_goods1.png`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/anniversary_goods1.png`}
                 alt=''
                 className='mb-40 h-336 w-336 max-lg:mb-0 max-lg:ml-8 max-lg:h-120 max-lg:w-120'
               />
@@ -441,15 +441,18 @@ const IntroducesupportAnniversary = () => {
                 <div className='text-regular18 max-lg:text-regular12 flex max-w-400 flex-wrap justify-center text-center text-grey-500 max-lg:justify-start max-lg:text-start'>
                   <span className='mr-6 max-lg:mr-4'>기념일 후원 완료 후</span>
                   <span className='mr-6 max-lg:mr-4'>
-                    증서를 신청하신 분들께 우편으로
+                    증서를 신청하신 분들께
+                    <span className={`max-lg:hidden`}>&nbsp;우편으로</span>
                   </span>
-                  <span className='mr-6 max-lg:mr-4'>보내드립니다.</span>
+                  <span className='mr-6 max-lg:mr-4'>
+                    <span className={`lg:hidden`}>우편으로</span> 보내드립니다.
+                  </span>
                 </div>
               </div>
             </div>
             <div className='flex h-632 w-1/2 flex-col items-center rounded-16 bg-white-solid pt-40 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:flex-row-reverse max-lg:justify-between max-lg:pb-24 max-lg:pe-24 max-lg:ps-24 max-lg:pt-24'>
               <img
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/anniversary_goods2.png`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/anniversary_goods2.png`}
                 alt=''
                 className='mb-40 h-336 w-336 max-lg:mb-0 max-lg:ml-8 max-lg:h-120 max-lg:w-120'
               />
@@ -463,9 +466,13 @@ const IntroducesupportAnniversary = () => {
                 <div className='text-regular18 max-lg:text-regular12 flex max-w-400 flex-wrap justify-center text-center text-grey-500 max-lg:justify-start max-lg:text-start'>
                   <span className='mr-6 max-lg:mr-4'>정기 3만원 이상 또는</span>
                   <span className='mr-6 max-lg:mr-4'>
-                    일시 10만원 이상 후원하신 분들께
+                    일시 10만원 이상 후원하신
+                    <span className={`max-lg:hidden`}>&nbsp;분들께</span>
                   </span>
-                  <span className='mr-6 max-lg:mr-4'>굿즈를 보내드립니다.</span>
+                  <span className='mr-6 max-lg:mr-4'>
+                    <span className={`lg:hidden`}>분들께</span> 굿즈를
+                    보내드립니다.
+                  </span>
                 </div>
               </div>
             </div>
@@ -509,7 +516,7 @@ const IntroducesupportAnniversary = () => {
               <div className='flex w-full gap-12'>
                 <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
-                    defaultValue='년도 선택'
+                    defaultValue='선택'
                     listData={dateYearOption}
                     selectedItem={dateYear}
                     setSelectedItem={setDateYear}
@@ -521,7 +528,7 @@ const IntroducesupportAnniversary = () => {
                 </div>
                 <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
-                    defaultValue='월 선택'
+                    defaultValue='선택'
                     listData={dateMonthOption}
                     selectedItem={dateMonth}
                     setSelectedItem={setDateMonth}
@@ -533,7 +540,7 @@ const IntroducesupportAnniversary = () => {
                 </div>
                 <div className='flex w-1/3 items-center max-lg:items-end'>
                   <SelectBox
-                    defaultValue='일 선택'
+                    defaultValue='선택'
                     listData={dateDayOption}
                     selectedItem={dateDay}
                     setSelectedItem={setDateDay}
@@ -555,7 +562,9 @@ const IntroducesupportAnniversary = () => {
                   <DefaultInput
                     placeholder=''
                     searchBtn={false}
+                    numberMode={true}
                     inputText={phoneNum1}
+                    maxlength={3}
                     setInputText={setPhoneNum1}
                     className='w-full'
                   />
@@ -565,7 +574,9 @@ const IntroducesupportAnniversary = () => {
                   <DefaultInput
                     placeholder=''
                     searchBtn={false}
+                    numberMode={true}
                     inputText={phoneNum2}
+                    maxlength={4}
                     setInputText={setPhoneNum2}
                     className='w-full'
                   />
@@ -575,7 +586,9 @@ const IntroducesupportAnniversary = () => {
                   <DefaultInput
                     placeholder=''
                     searchBtn={false}
+                    numberMode={true}
                     inputText={phoneNum3}
+                    maxlength={4}
                     setInputText={setPhoneNum3}
                     className='w-full'
                   />
@@ -602,7 +615,7 @@ const IntroducesupportAnniversary = () => {
           <div className='flex h-800 w-1/2 flex-col items-center rounded-16 bg-white-solid px-120 pt-80 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] max-lg:h-auto max-lg:w-full max-lg:rounded-0 max-lg:px-40 max-lg:pb-60'>
             <div className='flex flex-col items-center max-lg:max-w-393'>
               <img
-                src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/oath_title.svg`}
+                src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/oath_title.svg`}
                 alt=''
                 className='mb-60 h-86 w-269 max-lg:h-64 max-lg:w-200'
               />
@@ -636,11 +649,14 @@ const IntroducesupportAnniversary = () => {
                 </div>
                 <div className='ml-12 shrink-0'>일</div>
               </div>
-              <div className='text-regular18 max-lg:text-regular14 mb-60 text-gray-500 max-lg:w-full lg:whitespace-nowrap'>
+              <div className='text-regular18 max-lg:text-regular14 mb-60 text-center text-gray-500 max-lg:w-full lg:whitespace-nowrap'>
                 <div className='flex justify-end'>
                   <div className='w-112'>{name && name}</div>
                   <div className='whitespace-nowrap'>후원자님의 </div>
-                  <div className='w-112'>{anniversary && anniversary}</div>
+                  <div className='w-112'>
+                    <span>&nbsp;</span>
+                    {anniversary && anniversary}
+                  </div>
                   <div className='whitespace-nowrap'> 을(를)</div>
                 </div>
                 <div>
@@ -648,13 +664,16 @@ const IntroducesupportAnniversary = () => {
                   <br />
                   <br />
                   후원자님의 귀한 후원을 통해 복음이 필요한 곳마다
+                  <span>&nbsp;</span>
                   <br className='max-lg:hidden' />
+                  <br className={`lg:hidden`} />
                   하나님의 사랑이 전해지길 소망합니다.
                   <br />
                   <br />
-                  소중하고 특별한 날,
+                  소중하고 특별한 날,<span className={``}>&nbsp;</span>
                   <br className='max-lg:hidden' />
-                  하나님의 은혜가 충만하시길 기도합니다.
+                  하나님의 은혜가 충만하시길 <br className={`lg:hidden`} />
+                  기도합니다.
                 </div>
               </div>
               <img
@@ -700,7 +719,7 @@ const IntroducesupportAnniversary = () => {
                 <SwiperSlide key={index}>
                   <div className={`flex w-full flex-col items-center`}>
                     <img
-                      src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/${item.img}`}
+                      src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/${item.img}`}
                       alt=''
                       className='mb-12 w-full'
                     />

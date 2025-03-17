@@ -6,7 +6,7 @@ const MoTabGlobal = props => {
     <div
       className='relative flex h-820 w-full flex-col items-center justify-center bg-[#E9E7E4] bg-center bg-no-repeat'
       style={{
-        backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/moTabGlobal_bg.jpg)`,
+        backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/moTabGlobal_bg.jpg)`,
         backgroundSize: `auto 100%`,
       }}
     >
@@ -15,7 +15,7 @@ const MoTabGlobal = props => {
         onClick={() => setSupportTab(null)}
       >
         <img
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/close.svg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/close.svg`}
           alt=''
           className='h-24 w-24'
         />
@@ -41,13 +41,28 @@ const MoTabGlobal = props => {
           </span>
         </div>
         <div className='flex gap-4'>
-          <button className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'>
+          <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
+            }}
+            className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+          >
             정기후원
           </button>
-          <button className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'>
+          <button
+            onClick={() => {
+              window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
+            }}
+            className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+          >
             증액후원
           </button>
-          <button className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'>
+          <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
+            }}
+            className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+          >
             일시후원
           </button>
         </div>

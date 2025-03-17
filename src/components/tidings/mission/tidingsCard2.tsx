@@ -12,7 +12,7 @@ const TidingsCard2 = ({ item, pageMode }) => {
       data-aos='fade-up'
       style={{ boxShadow: `0 0 30px 1px #ececec` }}
       onClick={() => {
-        navigator(`/tidings/${pageMode}/detail?articleId=${item.id}`);
+        navigator(`/news/${pageMode}/detail?articleId=${item.id}`);
       }}
       className={`flex min-h-550 w-full flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm max-lg:min-h-378 max-lg:w-full lg:max-w-560`}
     >

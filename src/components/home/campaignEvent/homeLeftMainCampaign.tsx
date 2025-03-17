@@ -15,7 +15,7 @@ const HomeLeftMainCampaign = props => {
         <button
           data-under-dark-gradient
           onClick={() => {
-            navigate(`/tidings/${item?.category}/detail?articleId=${item?.id}`);
+            navigate(`/news/${item?.category}/detail?articleId=${item?.id}`);
           }}
           key={key}
           style={{

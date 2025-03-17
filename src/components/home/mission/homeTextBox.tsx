@@ -20,7 +20,9 @@ const HomeTextBox = () => {
         >
           다양한 플랫폼과 콘텐츠를 통해
           <br className={`max-lg:hidden`} />
-          &nbsp;24시간 ‘순수복음’을 전합니다
+          <span className={`max-lg:hidden`}>&nbsp;&nbsp;</span>
+          <span className={`lg:hidden`}>&nbsp;</span>24시간 ‘순수복음’을
+          전합니다
         </p>
       </div>
       <div className={`flex flex-col items-start justify-center`}>
@@ -34,7 +36,9 @@ const HomeTextBox = () => {
         >
           6개 해외지사, 현지 맞춤 콘텐츠, 글로벌 서비스로
           <br className={`max-lg:hidden`} />
-          &nbsp;‘어디서나 모두에게’ 다가갑니다
+          <span className={`max-lg:hidden`}>&nbsp;&nbsp;</span>
+          <span className={`lg:hidden`}>&nbsp;</span>‘어디서나 모두에게’
+          다가갑니다
         </p>
       </div>
       <div className={`flex flex-col items-start justify-center`}>
@@ -48,7 +52,8 @@ const HomeTextBox = () => {
         >
           후원자, 교회, 선교사 등 다양한 동역자들과 ‘함께’
           <br className={`max-lg:hidden`} />
-          &nbsp;선교합니다
+          <span className={`max-lg:hidden`}>&nbsp;&nbsp;</span>
+          <span className={`lg:hidden`}>&nbsp;</span>선교합니다
         </p>
       </div>
     </div>

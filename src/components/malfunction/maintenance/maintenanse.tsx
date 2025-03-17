@@ -35,7 +35,7 @@ const Maintenance = () => {
       >
         <img
           className={`h-70 w-200 object-cover max-lg:h-42 max-lg:w-120`}
-          src={`/public/images/logo/cgn_logo_malfunction.png`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/cgn_logo_malfunction.png`}
           width={200}
           height={70}
           alt=''
@@ -47,8 +47,9 @@ const Maintenance = () => {
           </p>
           <p className={`text-regular18 max-lg:text-regular16 text-grey-500`}>
             이용에 불편을 드려 죄송합니다. <br />
-            현재 사이트 리뉴얼 중이므로 접속이 원활하지 않습니다. <br />
-            빠른 시일 내 작업을 완료하고 <br className={`lg:hidden`} />
+            현재 사이트 리뉴얼 중이므로 <br className={`lg:hidden`} />
+            접속이 원활하지 않습니다. <br /> 빠른 시일 내 작업을 완료하고
+            <br className={`lg:hidden`} />
             새로운 모습으로 찾아 뵙겠습니다.
           </p>
         </div>
@@ -67,7 +68,9 @@ const Maintenance = () => {
               <span>{String(startDate?.hour).padStart(2, `0`)}:</span>
               <span>{String(startDate?.minute).padStart(2, `0`)}</span>
             </div>
-            <span>&nbsp;~&nbsp;</span>
+            <span className={`text-regular24 max-lg:text-regular16`}>
+              &nbsp;~&nbsp;
+            </span>
             <div
               className={`text-regular24 max-lg:text-regular16 flex items-center justify-start`}
             >

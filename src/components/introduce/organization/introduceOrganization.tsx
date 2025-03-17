@@ -1,62 +1,55 @@
 // 훅
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 // 컴포넌트
-import CategoryList from '@/components/common/categoryList';
 import IntroduceChairman from '@/components/introduce/organization/introduceChairman';
 import IntroduceCEO from '@/components/introduce/organization/introduceCEO';
 import IntroduceFollowers from '@/components/introduce/organization/introduceFollowers';
 import IntroduceDirections from '@/components/introduce/organization/introduceDirections';
 import IntroduceHistory from '@/components/introduce/organization/history/introduceHistory';
 import IntroduceThemeHeader from '@/components/introduce/organization/introduceThemeHeader';
-import { useNavigate, useParams } from 'react-router-dom';
+import IntroduceOrganizationCategoryList from '@/components/introduce/organization/introduceOrganizationCategoryList';
 
 const IntroduceOrganization = () => {
   const navigate = useNavigate();
-  const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
   const { subDepth } = useParams();
 
   // 재 라우팅 영역, categoryList 의 state id 에 따라 라우팅 합니다.
   useEffect(() => {
-    switch (selectedCategoryArticleId) {
-      case 0:
-        navigate('/introduce/organization/chairman');
+    switch (subDepth) {
+      case `chairman`:
+        navigate('/about-us/organization/chairman');
         break;
-      case 1:
-        navigate('/introduce/organization/ceo');
+      case `ceo`:
+        navigate('/about-us/organization/ceo');
         break;
-      case 2:
-        navigate('/introduce/organization/followers');
+      case `people`:
+        navigate('/about-us/organization/people');
         break;
-      case 3:
-        navigate('/introduce/organization/history');
+      case `history`:
+        navigate('/about-us/organization/history');
         break;
-      case 4:
-        navigate('/introduce/organization/directions');
+      case `location`:
+        navigate('/about-us/organization/location');
         break;
       default:
-        navigate('/introduce/organization/chairman');
+        navigate('/about-us/organization/chairman');
     }
-  }, [location?.pathname, selectedCategoryArticleId]);
+  }, [location?.pathname]);
 
   return (
     <>
-      <IntroduceThemeHeader
-        className={`lg:hidden`}
-        selectedCategoryArticleId={selectedCategoryArticleId}
-      />
+      <IntroduceThemeHeader className={`lg:hidden`} />
       <div className={`w-full max-lg:mb-24`}>
-        <CategoryList
-          selectedCategoryArticleId={selectedCategoryArticleId}
-          setSelectedCategoryArticleId={setSelectedCategoryArticleId}
-        />
+        <IntroduceOrganizationCategoryList />
       </div>
       <section className={`flex flex-col items-center justify-start`}>
         {subDepth === `chairman` ? <IntroduceChairman /> : ''}
         {subDepth === `ceo` ? <IntroduceCEO /> : ''}
-        {subDepth === `followers` ? <IntroduceFollowers /> : ''}
+        {subDepth === `people` ? <IntroduceFollowers /> : ''}
         {subDepth === `history` ? <IntroduceHistory /> : ''}
-        {subDepth === `directions` ? <IntroduceDirections /> : ''}
+        {subDepth === `location` ? <IntroduceDirections /> : ''}
       </section>
     </>
   );

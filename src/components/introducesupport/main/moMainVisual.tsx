@@ -35,7 +35,7 @@ const MoMainVisual = props => {
     >
       <motion.div
         style={{
-          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_bg.jpg)`,
+          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_bg.jpg)`,
         }}
         className={`flex w-full flex-col items-center bg-cover bg-top bg-repeat pb-120 pt-60`}
         initial='hidden'
@@ -53,7 +53,7 @@ const MoMainVisual = props => {
           onClick={() => setSupportTab(1)}
         >
           <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_sponsor1.jpg`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor1.jpg`}
             alt=''
             className='h-full w-full'
           />
@@ -69,7 +69,7 @@ const MoMainVisual = props => {
           onClick={() => setSupportTab(2)}
         >
           <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_sponsor2.jpg`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor2.jpg`}
             alt=''
             className='h-full w-full'
           />
@@ -85,7 +85,7 @@ const MoMainVisual = props => {
           onClick={() => setSupportTab(3)}
         >
           <img
-            src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/mo_main_sponsor3.jpg`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor3.jpg`}
             alt=''
             className='h-full w-full'
           />

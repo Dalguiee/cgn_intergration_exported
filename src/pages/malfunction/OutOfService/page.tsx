@@ -3,7 +3,7 @@ import React from 'react';
 
 const OutOfServicePage = () => {
   return (
-    <section>
+    <section className={`bg-primary-50`}>
       <OutOfService />
     </section>
   );

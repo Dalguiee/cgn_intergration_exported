@@ -17,9 +17,9 @@ const subscribesData = [
   { id: 2, text: '증액후원', value: 3 },
 ];
 const priceData = [
-  { id: 0, text: '10,000원', value: 1 },
-  { id: 1, text: '30,000원', value: 2 },
-  { id: 2, text: '50,000원', value: 3 },
+  { id: 0, text: '5,000원', value: 1 },
+  { id: 1, text: '10,000원', value: 2 },
+  { id: 2, text: '30,000원', value: 3 },
   { id: 3, text: '기타', value: 4 },
 ];
 
@@ -32,7 +32,10 @@ const HomePaymentBox = () => {
 
   useEffect(() => {
     if (selectedSubscribes?.value === 3) {
-      navigate(`/subscribepayment`, { state: { selectedPrice } });
+      window.open(
+        `https://cgndev.onflou.co.kr/increase?selectedId=${selectedPrice?.value}`,
+        `_blank`
+      );
     }
   }, [selectedSubscribes]);
 
@@ -77,12 +80,14 @@ const HomePaymentBox = () => {
             className={`w-full`}
             onClick={() => {
               if (selectedSubscribes?.value === 3) {
-                navigate(`/subscribepayment`, { state: { selectedPrice } });
-              } else if (
-                selectedSubscribes?.value === 2 ||
-                selectedSubscribes?.value === 1
-              ) {
-                window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+                window.open(
+                  `https://cgndev.onflou.co.kr/increase?selectedId=${selectedPrice?.value}`,
+                  `_blank`
+                );
+              } else if (selectedSubscribes?.value === 1) {
+                window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
+              } else if (selectedSubscribes?.value === 2) {
+                window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
               }
             }}
           />

@@ -27,9 +27,7 @@ const HomeNoticeMain = () => {
             {noticeData?.slice(0, 5)?.map?.((item, key) => (
               <button
                 onClick={() => {
-                  navigate(
-                    `/customercenter/notice/detail?articleId=${item?.id}`
-                  );
+                  navigate(`/customer/notice/detail?articleId=${item?.id}`);
                 }}
                 key={key}
                 className={`flex h-84 w-full items-center justify-between border-t-1 ${key === 0 ? 'lg:border-none' : ''} border-grey-200 max-lg:h-56`}
@@ -65,7 +63,7 @@ const HomeNoticeMain = () => {
             </span>
             <button
               onClick={() => {
-                navigate(`/introduce/recruit`);
+                navigate(`/about-us/recruit`);
               }}
               className={`text-bold16 max-lg:text-bold14 flex h-54 w-162 items-center justify-center rounded-8 border-1 border-white-solid text-white-solid max-lg:h-40 max-lg:w-130 max-lg:rounded-8`}
             >

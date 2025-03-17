@@ -7,15 +7,15 @@ const BranchesCard = props => {
       className={`relative w-[calc(50%-30px)] rounded-16 bg-white-solid pb-24 pl-32 pt-24 drop-shadow-[0_10px_20px_rgba(0,0,0,0.07)] ${donate ? 'pb-88' : ''} pe-24 max-lg:w-full`}
     >
       <img
-        src={`${import.meta.env.VITE_PUBLIC_URL}images/introducesupport/branches_card_bar.png`}
+        src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/branches_card_bar.png`}
         alt=''
         className='absolute left-0 h-155 w-20 max-lg:w-14'
       />
       <div className='text-bold24 max-lg:text-bold18 mb-24'>{name}</div>
       {data?.map((item, index) => {
         return (
-          <div className='flex' key={index}>
-            <div className='text-bold14 max-lg:text-bold12 w-120 shrink-0 max-lg:w-110'>
+          <div className='flex max-lg:gap-8' key={index}>
+            <div className='text-bold14 max-lg:text-bold14 w-120 shrink-0 max-lg:w-110'>
               {item.title}
             </div>
             <div className='text-regular16 max-lg:text-regular14 whitespace-pre-wrap text-gray-500'>
@@ -25,8 +25,8 @@ const BranchesCard = props => {
         );
       })}
       {website && (
-        <div className='flex'>
-          <div className='text-bold14 max-lg:text-bold12 w-120 max-lg:w-110'>
+        <div className='flex max-lg:gap-8'>
+          <div className='text-bold14 max-lg:text-bold14 w-120 max-lg:w-110'>
             Website
           </div>
           <a

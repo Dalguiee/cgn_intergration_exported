@@ -11,7 +11,7 @@ const HomeTidingsCard = ({ item, pageMode }) => {
     <button
       // data-aos='fade-up'
       onClick={() => {
-        navigator(`/tidings/${pageMode}/detail?articleId=${item?.id}`);
+        navigator(`/news/${pageMode}/detail?articleId=${item?.id}`);
       }}
       className={`flex min-h-550 w-full flex-col items-center justify-start overflow-hidden rounded-16 shadow-sm max-lg:min-h-309 max-lg:w-full max-lg:rounded-8 lg:max-w-560`}
     >

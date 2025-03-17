@@ -9,7 +9,7 @@ const TidingsCard = ({ item }) => {
   return (
     <button
       onClick={() => {
-        navigator(`/tidings/campaign/detail?articleId=${item?.id}`);
+        navigator(`/news/campaignEvent/detail?articleId=${item?.id}`);
       }}
       style={{ boxShadow: `0 0 30px 1px #ececec` }}
       className={`flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16`}

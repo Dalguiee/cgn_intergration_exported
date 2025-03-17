@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // const [inputText, setInputText] = useState(''); 부모에서 props 전송필요, 검색용 String
 const DefaultInput = ({
@@ -8,14 +8,15 @@ const DefaultInput = ({
   pwdBtn = false,
   textClearBtn = false,
   paymentMode = false,
-  maxLength = undefined,
   numberMode = false,
   inputText = '',
   setInputText,
   className = ``,
+  maxlength = 999,
   onChange = () => {},
 }) => {
   const [pwMode, setPwMode] = useState(false); // 비밀번호 보여주기 유무
+  const inputBox = useRef();
 
   // 검색 찾기
   const handleSearching = () => {
@@ -27,18 +28,32 @@ const DefaultInput = ({
     setPwMode(!pwMode);
   };
 
+  // 텍스트 숫자로 바꾸는 함수
+  const numberChanging = value => {
+    const numberValue = value.replace(/[^0-9]/g, '');
+    setInputText(numberValue);
+  };
+
   return (
     <div
       className={`${className && className} flex h-56 w-320 items-center justify-between gap-8 rounded-8 bg-white-solid pl-16 pr-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:w-full`}
     >
       <input
+        ref={inputBox}
         className={`text-regular16 max-lg:text-regular14 w-full text-grey-900`}
-        type={`${pwMode ? 'password' : ''}${numberMode ? `number` : ``}`}
-        // oninput={`${numberMode ? `this.value = this.value.replace(/[^0-9]/g, '')` : ``}`}
+        type={`${pwMode ? 'password' : ''}`}
         inputMode={`${numberMode ? `numeric` : ``}`}
+        maxlength={maxlength}
         name={`findKeyword`}
-        maxLength={maxLength}
-        onChange={e => (setInputText(e.target.value), onChange())}
+        onChange={e => {
+          if (numberMode) {
+            numberChanging(e.target.value);
+            onChange();
+          } else {
+            setInputText(e.target.value);
+            onChange();
+          }
+        }}
         placeholder={placeholder}
         value={inputText}
       />

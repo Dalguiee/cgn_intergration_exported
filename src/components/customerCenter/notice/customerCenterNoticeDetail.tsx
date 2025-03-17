@@ -148,7 +148,7 @@ const CustomerCenterNoticeDetail = () => {
         >
           <button
             onClick={() => {
-              navigate(`/customercenter/notice`);
+              navigate(`/customer/notice`);
             }}
             className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-32 max-lg:mt-16 max-lg:h-52 max-lg:w-full`}
           >

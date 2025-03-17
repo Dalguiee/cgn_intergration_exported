@@ -85,6 +85,9 @@ const BottomHeader = ({
             On-Air
           </button>
           <button
+            onClick={() => {
+              window.open(`https://online.mrm.or.kr/DhDGO0b`, `_blank`);
+            }}
             className={`${burger ? 'hidden' : ''} text-bold14 max-lg:text-bold14 h-40 w-96 rounded-4 bg-primary-500 text-white-solid max-lg:h-32 max-lg:w-67`}
           >
             후원하기

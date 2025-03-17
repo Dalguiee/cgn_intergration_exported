@@ -61,16 +61,16 @@ const TidingsDetail = () => {
   useEffect(() => {
     if (location.pathname) {
       switch (location.pathname) {
-        case '/tidings/campaign/detail':
+        case '/news/campaignEvent/detail':
           setAllData(mockupData[0]);
           break;
-        case '/tidings/mission/detail':
+        case '/news/cgnStory/detail':
           setAllData(mockupData[1]);
           break;
-        case '/tidings/support/detail':
+        case '/news/supporter/detail':
           setAllData(mockupData[2]);
           break;
-        case '/tidings/broadcast/detail':
+        case '/news/press/detail':
           setAllData(mockupData[3]);
           break;
         default:
@@ -169,7 +169,7 @@ const TidingsDetail = () => {
               className={`flex items-center justify-start`}
               onClick={() => {
                 navigate(
-                  `/tidings/${subDepth}/detail?articleId=${beforeData?.id}`
+                  `/news/${subDepth}/detail?articleId=${beforeData?.id}`
                 );
               }}
             >
@@ -198,7 +198,7 @@ const TidingsDetail = () => {
                 className={`flex items-center justify-start`}
                 onClick={() => {
                   navigate(
-                    `/tidings/${subDepth}/detail?articleId=${afterData?.id}`
+                    `/news/${subDepth}/detail?articleId=${afterData?.id}`
                   );
                 }}
               >
@@ -224,7 +224,7 @@ const TidingsDetail = () => {
         >
           <button
             onClick={() => {
-              navigate(`/tidings/${subDepth}`);
+              navigate(`/news/${subDepth}`);
             }}
             className={`mt-60 flex h-64 w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-32 max-lg:mt-16 max-lg:h-52 max-lg:w-full`}
           >

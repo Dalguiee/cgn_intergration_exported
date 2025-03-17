@@ -11,7 +11,6 @@ const SelectBox = ({
   upMode = false,
   className = '',
   height = '',
-  selectedColor = 'primary-500',
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
@@ -65,7 +64,7 @@ const SelectBox = ({
             className={`${open ? '' : ''} pointer-events-none flex w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4 ${height ? `h-${height}` : 'h-62'}`}
           >
             <button
-              className={`hover:text-bold18 max-lg:text-bold14 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start`}
+              className={`hover:text-bold18 max-lg:text-bold14 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start text-grey-900`}
             >
               {selectedItem?.text ? selectedItem?.text : defaultValue}
             </button>

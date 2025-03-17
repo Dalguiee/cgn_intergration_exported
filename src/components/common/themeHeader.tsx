@@ -10,82 +10,83 @@ const ThemeHeader = ({ className = `` }) => {
 
   // tidigns 페이지의 타이틀과 서브타이틀을 분기하는 데이터 입니다.
   const currentPageData = [
+    // 후원안내
     {
-      path: 'introducesupport/overseas',
+      path: 'donation/global',
       title: '해외지사 후원',
       subTitle: 'Please join CGN’s media mission to spread His love and Word.',
     },
     {
-      path: 'introducesupport/report',
+      path: 'donation/report',
       title: '후원내역 보고',
       subTitle: '소중한 후원금 사용 내역을 확인해 보세요',
     },
+
+    // 소개
     {
-      path: 'introduce/vision',
+      path: 'about-us/missionVision',
       title: '미션&비전',
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN',
     },
     {
-      path: 'introduce/organization',
+      path: 'about-us/organization',
       title: '기관 소개',
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN을 소개합니다.',
     },
     {
-      path: 'introduce/worldwide',
+      path: 'about-us/branch',
       title: '해외지사 소개',
       subTitle: 'CGN의 해외지사를 소개합니다.',
     },
     {
-      path: 'introduce/recruit',
-      title: '채용',
-      subTitle: 'CGN에서 함께할 인재를 찾습니다.',
-    },
-    {
-      path: 'introduce/ambassador',
+      path: 'about-us/ambassador',
       title: '홍보대사',
       subTitle: 'CGN의 홍보대사를 소개합니다.',
     },
     {
-      path: 'introduce/recruit',
+      path: 'about-us/recruit',
       title: '채용',
       subTitle: 'CGN에서 함께할 인재를 찾습니다.',
     },
 
+    // 소식
     {
-      path: 'tidings/campaign',
+      path: 'news/campaignEvent',
       title: '캠페인/이벤트',
       subTitle: 'CGN의 캠페인/이벤트를 확인해 보세요.',
     },
     {
-      path: 'tidings/mission',
+      path: 'news/cgnStory',
       title: '선교 스토리',
       subTitle: 'CGN의 선교 소식을 확인해 보세요.',
     },
     {
-      path: 'tidings/support',
+      path: 'news/supporter',
       title: '후원 스토리',
       subTitle: 'CGN의 후원 소식을 확인해 보세요.',
     },
     {
-      path: 'tidings/broadcast',
+      path: 'news/press',
       title: '보도 자료',
       subTitle: 'CGN의 보도 자료를 확인해 보세요.',
     },
 
+    // 참여
     {
-      path: 'activity/visit',
+      path: 'participate/event',
       title: '행사/견학 신청',
       subTitle: '행사와 견학 신청을 안내합니다.',
     },
 
+    // 시청안내
     {
-      path: 'mediacenter/description',
+      path: 'media/description',
       title: `퐁당 웹/앱/스마트TV`,
       subTitle: '기독 OTT, 퐁당',
     },
 
     {
-      path: 'customercenter/',
+      path: 'customer/',
       title: '고객 센터',
       subTitle:
         'CGN에 관련된 다양한 공지사항과 자주 묻는 질문들을 확인해 보세요.',
