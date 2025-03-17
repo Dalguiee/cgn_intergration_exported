@@ -112,6 +112,10 @@ export default function MainRouter() {
           element={<IntroduceVisionPage />}
         ></Route>
         <Route
+          path='introduce/organization'
+          element={<IntroduceOrganizationPage />}
+        ></Route>
+        <Route
           path='introduce/organization/:subDepth'
           element={<IntroduceOrganizationPage />}
         ></Route>

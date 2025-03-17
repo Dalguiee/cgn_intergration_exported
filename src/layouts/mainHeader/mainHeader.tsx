@@ -64,7 +64,7 @@ const centerMenu = [
       },
       {
         text: '기관 소개',
-        link: '/introduce/organization/chairman',
+        link: '/introduce/organization',
       },
       {
         text: '해외지사 소개',
