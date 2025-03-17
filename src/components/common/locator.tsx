@@ -180,7 +180,7 @@ const Locator = ({ className = `` }) => {
         pageData?.map(data => {
           if (data === 'media') {
             pathPiece = data;
-            data = '시청 안내';
+            data = '시청안내';
             pathStack = 'media/description';
           }
           if (data === 'description') {

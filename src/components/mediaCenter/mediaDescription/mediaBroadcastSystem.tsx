@@ -152,7 +152,7 @@ const MediaBroadcastSystem = ({ mobile }) => {
                 <span
                   className={`text-bold24 max-lg:text-bold14 text-grey-900`}
                 >
-                  미수
+                  미주
                 </span>
               </div>
               <div

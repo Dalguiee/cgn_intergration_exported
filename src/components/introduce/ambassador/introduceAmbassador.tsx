@@ -39,7 +39,7 @@ const IntroduceAmbassador = () => {
           <p
             className={`text-bold32 max-lg:text-bold18 text-grey-900 max-lg:mb-12 max-lg:text-primary-500`}
           >
-            골츠 선수 최경주
+            골프 선수 최경주
           </p>
         </div>
         <div>
