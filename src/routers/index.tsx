@@ -34,6 +34,8 @@ import CustomerCenterQuestionsPage from '@/pages/customerCenter/customerCenterQu
 // 시청 안내
 import MediaDescriptionPage from '@/pages/mediaCenter/mediaDescription/page';
 import PolicyPage from '@/pages/policy/page';
+import MaintenancePage from '@/pages/malfunction/maintenance/page';
+import OutOfServicePage from '@/pages/malfunction/OutOfService/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -161,6 +163,12 @@ export default function MainRouter() {
 
         {/* 이용 약관 */}
         <Route path='policy/:subDepth' element={<PolicyPage />}></Route>
+
+        {/* 점검중 */}
+        <Route path='maintenance' element={<MaintenancePage />}></Route>
+
+        {/* 잘못된 접근 */}
+        <Route path='outofservice' element={<OutOfServicePage />}></Route>
       </Route>
     </Routes>
   );
