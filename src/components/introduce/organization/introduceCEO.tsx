@@ -51,11 +51,11 @@ const IntroduceCEO = () => {
             <div className={`flex items-center justify-start`}>
               <div className={`text-white-solid`}>
                 <p
-                  className={`text-bold24 max-lg:text-bold14 text-white-solid`}
+                  className={`text-regular24 max-lg:text-regular14 text-white-solid`}
                 >
                   CGN 대표
                 </p>
-                <p className={`text-regular24 max-lg:text-regular14`}>전진국</p>
+                <p className={`text-bold24 max-lg:text-bold14`}>전진국</p>
               </div>
               <div className={`py-10 pl-161 max-lg:py-0 max-lg:pl-16`}>
                 <img
@@ -116,12 +116,14 @@ const IntroduceCEO = () => {
             변화하는 미디어 환경 속에서 인터넷, 유튜브, 모바일, IPTV, 드림온
             플러스(인터넷 셋톱박스), 기독 OTT ‘퐁당(Fondant)’ 등 다양한 플랫폼을
             활용해 복음을 전해 왔습니다. <br />
+            <br />
             또한, AI와 데이터 기반 콘텐츠 전략을 도입해 보다 효과적이고 이용자
             친화적인 미디어 선교를 실현해 나가고 있습니다. <br />
             아울러 CGN의 6개 해외 지사(미국, 일본, 대만, 태국, 인도네시아,
             프랑스)는 현지 선교사 및 교회 공동체와 협력해 맞춤형 콘텐츠를
             제작하며 복음 확산에 힘쓰고 있습니다.
           </p>
+          <br />
           <p
             className={`text-regular18 max-lg:text-regular14 line-clamp-4 text-grey-500 max-lg:line-clamp-none`}
           >
@@ -138,6 +140,7 @@ const IntroduceCEO = () => {
             more)하는’ 미디어 선교의 선봉으로서 맡겨진 사명에 최선을
             다하겠습니다.
           </p>
+          <br />
           <p
             className={`text-regular18 max-lg:text-regular14 line-clamp-4 text-grey-500 max-lg:line-clamp-none`}
           >

@@ -63,7 +63,7 @@ const HomeNoticeMain = () => {
             </span>
             <button
               onClick={() => {
-                navigate(`/about-us/recruit`);
+                navigate(`/about/recruit`);
               }}
               className={`text-bold16 max-lg:text-bold14 flex h-54 w-162 items-center justify-center rounded-8 border-1 border-white-solid text-white-solid max-lg:h-40 max-lg:w-130 max-lg:rounded-8`}
             >

@@ -57,7 +57,7 @@ const HomeCampaignEventHeader = ({
             colorMode='mode3'
             arrowMode={true}
             onClick={() => {
-              navigate(`/news/campaignEvent`);
+              navigate(`/news/campaign`);
             }}
           />
         </div>

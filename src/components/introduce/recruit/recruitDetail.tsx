@@ -39,6 +39,17 @@ const RecruitDetail = () => {
   const queryData = Object.fromEntries(querySearch);
   const [currentData, setCurrentData] = useState([]);
 
+  // 제출양식 다운로드
+  const documentDownload = () => {
+    const url = `${import.meta.env.VITE_PUBLIC_URL}data/recruit_data.hwp`;
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'CGN_new_resume_form_2023.hwp'; // 다운로드할 파일 이름
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   // query 추적하여 기사 load
   useEffect(() => {
     const result = recruitData?.filter(
@@ -56,7 +67,7 @@ const RecruitDetail = () => {
       <div className='w-full max-w-1200'>
         {/* 상단 헤더 */}
         <div
-          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-8 max-lg:border-b-1 max-lg:border-t-0 max-lg:border-b-grey-100 max-lg:px-0 max-lg:py-16`}
+          className={`flex items-center justify-between border-b-1 border-t-3 border-grey-900 px-4 py-24 max-lg:flex-col max-lg:items-start max-lg:gap-8 max-lg:border-b-1 max-lg:border-t-0 max-lg:border-b-grey-100 max-lg:px-0 max-lg:pb-16 max-lg:pt-24`}
         >
           <div className={`flex justify-center gap-16`}>
             {currentData?.tag?.map((obj, key) => {
@@ -114,6 +125,9 @@ const RecruitDetail = () => {
                 colorMode={`mode3`}
                 className={`w-197 max-lg:w-153`}
                 downloadMode={true}
+                onClick={() => {
+                  documentDownload();
+                }}
               />
             </div>
             {/* 테이블 영역 pc */}
@@ -142,12 +156,12 @@ const RecruitDetail = () => {
                 <tbody>
                   {currentData?.details?.map((obj, key) => (
                     <tr
-                      className={`min-h-182 border-b-1 border-grey-900`}
+                      className={`min-h-182 border-b-1 border-grey-900 bg-white-solid`}
                       key={key}
                     >
                       <td className={`border-r-1 border-grey-900`}>
                         <div
-                          className={`flex flex-col items-center justify-center px-24 py-69`}
+                          className={`flex flex-col items-center justify-center px-24 py-36`}
                         >
                           {obj?.center?.map((centerItem, centerIdx) => (
                             <span
@@ -161,7 +175,7 @@ const RecruitDetail = () => {
                       </td>
                       <td className={`border-r-1 border-grey-900`}>
                         <div
-                          className={`flex flex-col items-center justify-center px-24 py-69`}
+                          className={`flex flex-col items-center justify-center px-24 py-36`}
                         >
                           <span className={`text-regular16 text-grey-900`}>
                             {obj?.workType}
@@ -182,7 +196,7 @@ const RecruitDetail = () => {
                       </td>
                       <td>
                         <div
-                          className={`flex flex-col items-center justify-center px-24 py-69`}
+                          className={`flex flex-col items-center justify-center px-24 py-36`}
                         >
                           <span className={`text-regular16 text-grey-900`}>
                             {obj?.qualifications}
@@ -425,11 +439,11 @@ const RecruitDetail = () => {
 
         {/* 돌아가기 버튼영역 */}
         <div
-          className={`flex w-full items-start justify-center max-lg:justify-center`}
+          className={`flex w-full items-start justify-center max-lg:mt-24 max-lg:justify-center`}
         >
           <button
             onClick={() => {
-              navigate(`/about-us/recruit`);
+              navigate(`/about/recruit`);
             }}
             className={`mt-60 flex h-64 w-full max-w-300 items-center justify-center rounded-8 bg-primary-500 max-lg:mb-60 max-lg:mt-0 max-lg:h-52`}
           >

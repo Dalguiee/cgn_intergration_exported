@@ -44,7 +44,7 @@ const MainFooterPc = ({ linkData, selectedLand, setSelectedLand }) => {
               </button>
               <button
                 onClick={() => {
-                  navigate(`/introduce/recruit`);
+                  navigate(`/about/recruit`);
                 }}
               >
                 <span className={`text-bold14`}>채용</span>

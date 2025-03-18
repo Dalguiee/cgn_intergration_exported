@@ -16,7 +16,7 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
         <button
           className={`px-12 py-4`}
           onClick={() => {
-            navigate(`/customercenter/notice`);
+            navigate(`/customer/notice`);
           }}
         >
           <span className={`text-bold14 text-grey-900`}>공지사항</span>
@@ -24,7 +24,7 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
         <button
           className={`px-12 py-4`}
           onClick={() => {
-            navigate(`/customercenter/questions`);
+            navigate(`/customer/faq`);
           }}
         >
           <span className={`text-bold14 text-grey-900`}>FAQ</span>
@@ -32,7 +32,7 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
         <button
           className={`px-12 py-4`}
           onClick={() => {
-            navigate(`/introduce/recruit`);
+            navigate(`/about/recruit`);
           }}
         >
           <span className={`text-bold14 text-grey-900`}>채용</span>

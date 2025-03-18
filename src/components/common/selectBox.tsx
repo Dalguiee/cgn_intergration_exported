@@ -11,6 +11,7 @@ const SelectBox = ({
   upMode = false,
   className = '',
   height = '',
+  setClickScan,
 }) => {
   // 열고 닫음 상태를 조정하는 boolean 입니다
   const [open, setOpen] = useState(false);
@@ -79,6 +80,7 @@ const SelectBox = ({
                   onClick={() => {
                     setOpen(false);
                     setSelectedItem(item);
+                    setClickScan(true);
                   }}
                   className={`text-regular18 max-lg:text-regular14 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12 hover:bg-primary-50`}
                 >

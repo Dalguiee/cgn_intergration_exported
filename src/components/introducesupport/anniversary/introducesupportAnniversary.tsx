@@ -442,10 +442,9 @@ const IntroducesupportAnniversary = () => {
                   <span className='mr-6 max-lg:mr-4'>기념일 후원 완료 후</span>
                   <span className='mr-6 max-lg:mr-4'>
                     증서를 신청하신 분들께
-                    <span className={`max-lg:hidden`}>&nbsp;우편으로</span>
                   </span>
                   <span className='mr-6 max-lg:mr-4'>
-                    <span className={`lg:hidden`}>우편으로</span> 보내드립니다.
+                    우편으로 보내드립니다.
                   </span>
                 </div>
               </div>
@@ -467,11 +466,9 @@ const IntroducesupportAnniversary = () => {
                   <span className='mr-6 max-lg:mr-4'>정기 3만원 이상 또는</span>
                   <span className='mr-6 max-lg:mr-4'>
                     일시 10만원 이상 후원하신
-                    <span className={`max-lg:hidden`}>&nbsp;분들께</span>
                   </span>
                   <span className='mr-6 max-lg:mr-4'>
-                    <span className={`lg:hidden`}>분들께</span> 굿즈를
-                    보내드립니다.
+                    분들께 굿즈를 보내드립니다.
                   </span>
                 </div>
               </div>
@@ -487,17 +484,18 @@ const IntroducesupportAnniversary = () => {
               기념일 후원증서를 신청하세요!
             </div>
             <div className='mb-24 flex gap-12 max-lg:w-full max-lg:flex-col'>
-              <div className='flex w-1/2 flex-col max-lg:w-full'>
+              <div className='flex w-full max-w-233 flex-col max-lg:w-full max-lg:max-w-[unset]'>
                 <div className='text-regular14 mb-8 ml-4'>성명</div>
                 <DefaultInput
                   placeholder=''
+                  maxlength={5}
                   searchBtn={false}
                   inputText={name}
                   setInputText={setName}
                   className='w-full'
                 />
               </div>
-              <div className='flex w-1/2 flex-col max-lg:w-full'>
+              <div className='flex w-full max-w-233 flex-col max-lg:w-full max-lg:max-w-[unset]'>
                 <div className='text-regular14 mb-8 ml-4'>
                   기념일 명칭{' '}
                   <span className='text-regular12'>(10자 이내)</span>
@@ -505,6 +503,7 @@ const IntroducesupportAnniversary = () => {
                 <DefaultInput
                   placeholder='예: 첫돌, 결혼기념일, 두번째 생일'
                   searchBtn={false}
+                  maxlength={10}
                   inputText={anniversary}
                   setInputText={setAnniversary}
                   className='w-full'
@@ -522,7 +521,6 @@ const IntroducesupportAnniversary = () => {
                     setSelectedItem={setDateYear}
                     className='w-full'
                     height='56'
-                    selectedColor='[black]'
                   />
                   <span className='text-regular14 ml-12 shrink-0'>년</span>
                 </div>
@@ -534,7 +532,6 @@ const IntroducesupportAnniversary = () => {
                     setSelectedItem={setDateMonth}
                     className='w-full'
                     height='56'
-                    selectedColor='[black]'
                   />
                   <span className='text-regular14 ml-12 shrink-0'>월</span>
                 </div>
@@ -546,7 +543,6 @@ const IntroducesupportAnniversary = () => {
                     setSelectedItem={setDateDay}
                     className='w-full'
                     height='56'
-                    selectedColor='[black]'
                   />
                   <span className='text-regular14 ml-12 shrink-0'>일</span>
                 </div>
@@ -557,8 +553,8 @@ const IntroducesupportAnniversary = () => {
                 연락처{' '}
                 <span className='text-regular12 ml-8'>(예: 010-***-***)</span>
               </div>
-              <div className='flex w-full items-center gap-12'>
-                <div className='flex w-1/3'>
+              <div className='flex w-full items-center justify-between gap-12'>
+                <div className='flex w-full max-w-[33.3%] items-center max-lg:w-1/3'>
                   <DefaultInput
                     placeholder=''
                     searchBtn={false}
@@ -569,8 +565,8 @@ const IntroducesupportAnniversary = () => {
                     className='w-full'
                   />
                 </div>
-                <span className='text-regular14 shrink-0'>-</span>
-                <div className='flex w-1/3'>
+                <span className='text-regular14'>-</span>
+                <div className='flex w-full max-w-[33.3%] items-center max-lg:w-1/3'>
                   <DefaultInput
                     placeholder=''
                     searchBtn={false}
@@ -581,8 +577,8 @@ const IntroducesupportAnniversary = () => {
                     className='w-full'
                   />
                 </div>
-                <span className='text-regular14 shrink-0'>-</span>
-                <div className='flex w-1/3'>
+                <span className='text-regular14'>-</span>
+                <div className='flex w-full max-w-[33.3%] items-center max-lg:w-1/3'>
                   <DefaultInput
                     placeholder=''
                     searchBtn={false}
@@ -650,14 +646,17 @@ const IntroducesupportAnniversary = () => {
                 <div className='ml-12 shrink-0'>일</div>
               </div>
               <div className='text-regular18 max-lg:text-regular14 mb-60 text-center text-gray-500 max-lg:w-full lg:whitespace-nowrap'>
-                <div className='flex justify-end'>
-                  <div className='w-112'>{name && name}</div>
-                  <div className='whitespace-nowrap'>후원자님의 </div>
-                  <div className='w-112'>
+                <div className='flex flex-col items-center justify-start'>
+                  <div className=''>
+                    {name && name}
+                    <span className='whitespace-nowrap'> 후원자님의 </span>
+                  </div>
+
+                  <div className=''>
                     <span>&nbsp;</span>
                     {anniversary && anniversary}
+                    <span className='whitespace-nowrap'> 을(를)</span>
                   </div>
-                  <div className='whitespace-nowrap'> 을(를)</div>
                 </div>
                 <div>
                   ‘기특하데이' 선교 후원으로 기념해 주셔서 감사합니다.

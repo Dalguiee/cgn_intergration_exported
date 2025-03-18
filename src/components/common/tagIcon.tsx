@@ -54,7 +54,7 @@ const pcTagTypes = [
   {
     id: 10,
     text: '기타',
-    className: 'bg-grey-200 text-white-solid',
+    className: 'bg-grey-200 text-grey-900',
   },
   {
     id: 11,

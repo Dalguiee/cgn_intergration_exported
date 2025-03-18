@@ -29,7 +29,7 @@ const HomeNoticeHeader = () => {
           colorMode='mode3'
           arrowMode={true}
           onClick={() => {
-            navigate(`/customercenter/notice`);
+            navigate(`/customer/notice`);
           }}
         />
       </div>

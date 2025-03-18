@@ -99,7 +99,7 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
                 Brand Identity
               </p>
             </div>
-            <div
+            <button
               onClick={() => {
                 documentDownload();
               }}
@@ -108,7 +108,7 @@ const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
               <span className={`text-regular14 text-white-solid`}>
                 CI 다운로드
               </span>
-            </div>
+            </button>
           </div>
         </div>
 

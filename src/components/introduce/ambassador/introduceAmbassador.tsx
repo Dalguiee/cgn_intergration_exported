@@ -21,10 +21,6 @@ const IntroduceAmbassador = () => {
           있습니다.
         </p>
       </div>
-      <span
-        className={`h-1 w-12 border-t-3 border-grey-900 max-lg:hidden`}
-      ></span>
-
       <img
         src={`${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/ambassador/mo_choi.png` : `${import.meta.env.VITE_PUBLIC_URL}images/ambassador/choi.png`} `}
         width={1200}

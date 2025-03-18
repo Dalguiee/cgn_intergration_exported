@@ -9,7 +9,7 @@ const RecruitCard = ({ item = [] }) => {
   return (
     <button
       onClick={() => {
-        navigate(`/about-us/recruit/detail?articleId=${item?.id}`);
+        navigate(`/about/recruit/detail?articleId=${item?.id}`);
       }}
       className={`flex h-188 w-full flex-col items-start justify-start gap-24 rounded-16 bg-grey-50 px-32 py-24 max-lg:h-156 max-lg:gap-0 max-lg:px-24`}
     >

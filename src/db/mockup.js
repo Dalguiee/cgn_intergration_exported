@@ -2,12 +2,12 @@ export const mockupData = [
   {
     id: 1,
     type: `캠페인/이벤트`,
-    category: `campaignEvent`,
-    path: `/news/campaignEvent`,
+    category: `campaign`,
+    path: `/news/campaign`,
     data: [
       {
         id: 1,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -29,7 +29,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -51,7 +51,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '캠페인', id: 2, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -73,7 +73,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '캠페인', id: 2, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -95,7 +95,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -117,7 +117,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '종료', id: 3, mode: 'mode1' },
@@ -139,7 +139,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -161,7 +161,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -183,7 +183,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        category: `campaignEvent`,
+        category: `campaign`,
         tag: [
           { text: '이벤트', id: 7, mode: 'mode1' },
           { text: '진행중', id: 1, mode: 'mode1' },
@@ -208,12 +208,12 @@ export const mockupData = [
   {
     id: 2,
     type: `선교 스토리`,
-    category: `cgnStory`,
-    path: `/news/cgnStory`,
+    category: `story`,
+    path: `/news/story`,
     data: [
       {
         id: 1,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -233,7 +233,7 @@ export const mockupData = [
       },
       {
         id: 2,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -252,7 +252,7 @@ export const mockupData = [
       },
       {
         id: 3,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -271,7 +271,7 @@ export const mockupData = [
       },
       {
         id: 4,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -290,7 +290,7 @@ export const mockupData = [
       },
       {
         id: 5,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -309,7 +309,7 @@ export const mockupData = [
       },
       {
         id: 6,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '해외지사', id: 9, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -328,7 +328,7 @@ export const mockupData = [
       },
       {
         id: 7,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -347,7 +347,7 @@ export const mockupData = [
       },
       {
         id: 8,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -366,7 +366,7 @@ export const mockupData = [
       },
       {
         id: 9,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '선교지', id: 5, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -385,7 +385,7 @@ export const mockupData = [
       },
       {
         id: 10,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -404,7 +404,7 @@ export const mockupData = [
       },
       {
         id: 11,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -423,7 +423,7 @@ export const mockupData = [
       },
       {
         id: 12,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '선교사 기도', id: 4, mode: 'mode2' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -442,7 +442,7 @@ export const mockupData = [
       },
       {
         id: 13,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -461,7 +461,7 @@ export const mockupData = [
       },
       {
         id: 14,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [
@@ -480,7 +480,7 @@ export const mockupData = [
       },
       {
         id: 15,
-        category: `cgnStory`,
+        category: `story`,
         tag: [{ text: '기타', id: 10, mode: 'mode1' }],
         src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
         contentSrc: [

@@ -59,7 +59,6 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
 
   useEffect(() => {
     const oneDayCheck = () => {
-      console.log('쿠키감지작동');
       if (document.cookie.match('oneDay')) {
         setPopupOpen(false);
       } else {

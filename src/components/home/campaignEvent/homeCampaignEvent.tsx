@@ -8,11 +8,13 @@ import { mockupData } from '@/db/mockup';
 import HomeCampaignEventHeader from '@/components/home/campaignEvent/homeCampaignEventHeader';
 import HomeLeftMainCampaign from '@/components/home/campaignEvent/homeLeftMainCampaign';
 import HomeCampaignCard from '@/components/home/campaignEvent/homeCampaignCard';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const HomeCampaignEvent = () => {
   const campaignData = mockupData?.[0]?.data;
   const [startNum, setStartNum] = useState(0);
   const [endNum, setEndNum] = useState(4);
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
 
   const pagingNext = () => {
     if (endNum < campaignData?.length) {
@@ -64,7 +66,7 @@ const HomeCampaignEvent = () => {
           className={`grid h-full w-full max-w-728 grid-cols-2 grid-rows-2 gap-24 max-lg:w-full max-lg:max-w-[unset] max-lg:grid-rows-1 max-lg:gap-12`}
         >
           {campaignData
-            ?.slice(startNum, endNum)
+            ?.slice(mobile ? 0 : startNum, mobile ? 2 : endNum)
             ?.map((item, idx) => (
               <HomeCampaignCard item={item} key={idx}></HomeCampaignCard>
             ))}

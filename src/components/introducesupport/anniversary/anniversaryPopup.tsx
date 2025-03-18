@@ -24,7 +24,7 @@ const AnniversaryPopup = props => {
   }, []);
 
   return (
-    <div className='fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.6)] max-lg:px-10'>
+    <div className='fixed top-0 z-[100] flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.6)] max-lg:px-10'>
       <div
         ref={modalRef}
         className='max-lg:min-h-auto flex h-auto min-h-586 w-600 flex-col justify-between rounded-8 bg-white-solid px-16 pb-24 pt-16 max-lg:rounded-0 max-lg:pb-40'

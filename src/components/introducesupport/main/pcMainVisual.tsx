@@ -1,9 +1,13 @@
+// 훅
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+
+// 컴포넌트
+import ScrollTopScanner from '@/components/common/scrollTopScanner';
 
 const PcMainVisual = props => {
-  const navigate = useNavigate();
+  const scrollTop = ScrollTopScanner();
+
   const { setSupportTab } = props;
 
   //두번째 애니메이션
@@ -171,7 +175,9 @@ const PcMainVisual = props => {
           }}
         ></button>
         {/* 후원하기 Footer */}
-        <div className='absolute bottom-0 flex aspect-[1920_/_112] w-full items-center justify-center bg-[rgba(255,_255,_255,_0.3)]'>
+        <div
+          className={`${scrollTop ? `fixed` : `absolute`} bottom-0 flex aspect-[1920_/_112] w-full items-center justify-center bg-[rgba(255,_255,_255,_0.3)]`}
+        >
           <button
             onClick={() => {
               window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
@@ -185,7 +191,7 @@ const PcMainVisual = props => {
           </button>
           <button
             onClick={() => {
-              window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
+              window.open(`https://cgndev.onflou.co.kr/offermore`, `_blank`);
             }}
             className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{

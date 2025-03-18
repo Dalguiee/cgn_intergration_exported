@@ -6,7 +6,6 @@ import TagIcon from '@/components/common/tagIcon';
 
 const HomeLeftMainCampaign = props => {
   const navigate = useNavigate();
-  console.log(props.campaignData);
   return (
     <div
       className={`flex aspect-[792/660] h-full max-h-660 w-full max-w-792 items-center justify-center max-lg:aspect-[360/300] max-lg:max-h-[unset] max-lg:max-w-[unset]`}

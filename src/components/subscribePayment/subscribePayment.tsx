@@ -9,23 +9,22 @@ import { useLocation } from 'react-router-dom';
 
 // 데이터
 const priceData = [
-  { id: 0, text: '+5,000원', value: 1 },
-  { id: 1, text: '+10,000원', value: 2 },
-  { id: 2, text: '+30,000원', value: 3 },
+  { id: 0, text: '+5,000원' },
+  { id: 1, text: '+10,000원' },
+  { id: 2, text: '+30,000원' },
 ];
 
 const phoneNumberData = [
-  { id: 0, text: '010', value: 1 },
-  { id: 0, text: '019', value: 1 },
-  { id: 0, text: '017', value: 1 },
-  { id: 0, text: '018', value: 1 },
+  { id: 0, text: '010' },
+  { id: 1, text: '019' },
+  { id: 2, text: '017' },
+  { id: 3, text: '018' },
 ];
 
 const SubscribePayment = ({ setPopupOpen }) => {
   const location = useLocation();
-
-  // 홈에서 선택된 데이터 가져옴
-  const state = location.state;
+  const querySearch = new URLSearchParams(location?.search);
+  const queryData = Object.fromEntries(querySearch);
 
   // 금액입력
   const [selectedPrice, setSelectedPrice] = useState({});
@@ -42,11 +41,14 @@ const SubscribePayment = ({ setPopupOpen }) => {
   // 동의
   const [agree, setAgree] = useState(false);
 
-  useEffect(() => {
-    if (state) {
-      setSelectedPrice(state?.selectedPrice);
-    }
-  }, [location?.state, location?.pathname]);
+  // useEffect(() => {
+  //   if (queryData) {
+  //     const beforeSelectedPrice = priceData?.find(
+  //       item => item?.id === Number(queryData?.selectedId)
+  //     );
+  //     setSelectedPrice(beforeSelectedPrice);
+  //   }
+  // }, [location?.pathname]);
 
   return (
     <section

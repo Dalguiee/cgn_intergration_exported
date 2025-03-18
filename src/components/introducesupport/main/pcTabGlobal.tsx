@@ -30,7 +30,7 @@ const PcTabGlobal = props => {
       </button>
       <button
         onClick={() => {
-          window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
+          window.open(`https://cgndev.onflou.co.kr/offermore`, `_blank`);
         }}
         className='absolute left-[46.6%] top-[35.1%] aspect-[130_/_64] w-[6.8%] text-[0]'
       >

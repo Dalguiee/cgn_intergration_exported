@@ -14,31 +14,31 @@ const IntroduceOrganizationCategoryList = ({}) => {
     {
       id: 0,
       params: `chairman`,
-      link: `/about-us/organization/chairman`,
+      link: `/about/organization/chairman`,
       type: '이사장 인사',
     },
     {
       id: 1,
       params: `ceo`,
-      link: '/about-us/organization/ceo',
+      link: '/about/organization/ceo',
       type: '대표 인사',
     },
     {
       id: 2,
       params: `people`,
-      link: '/about-us/organization/people',
+      link: '/about/organization/people',
       type: '섬기는 분들',
     },
     {
       id: 3,
       params: `history`,
-      link: '/about-us/organization/history',
+      link: '/about/organization/history',
       type: '연혁',
     },
     {
       id: 4,
       params: `location`,
-      link: '/about-us/organization/location',
+      link: '/about/organization/location',
       type: '오시는 길',
     },
   ];

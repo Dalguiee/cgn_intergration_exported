@@ -24,39 +24,39 @@ const ThemeHeader = ({ className = `` }) => {
 
     // 소개
     {
-      path: 'about-us/missionVision',
+      path: 'about/mission',
       title: '미션&비전',
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN',
     },
     {
-      path: 'about-us/organization',
+      path: 'about/organization',
       title: '기관 소개',
       subTitle: '하나님의 사랑과 복음을 전하는 통로 CGN을 소개합니다.',
     },
     {
-      path: 'about-us/branch',
+      path: 'about/branch',
       title: '해외지사 소개',
       subTitle: 'CGN의 해외지사를 소개합니다.',
     },
     {
-      path: 'about-us/ambassador',
+      path: 'about/ambassador',
       title: '홍보대사',
       subTitle: 'CGN의 홍보대사를 소개합니다.',
     },
     {
-      path: 'about-us/recruit',
+      path: 'about/recruit',
       title: '채용',
       subTitle: 'CGN에서 함께할 인재를 찾습니다.',
     },
 
     // 소식
     {
-      path: 'news/campaignEvent',
+      path: 'news/campaign',
       title: '캠페인/이벤트',
       subTitle: 'CGN의 캠페인/이벤트를 확인해 보세요.',
     },
     {
-      path: 'news/cgnStory',
+      path: 'news/story',
       title: '선교 스토리',
       subTitle: 'CGN의 선교 소식을 확인해 보세요.',
     },

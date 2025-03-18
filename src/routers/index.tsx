@@ -72,13 +72,10 @@ export default function MainRouter() {
         <Route path='home' element={<HomePage />}></Route>
 
         {/* 증액후원 */}
-        <Route path='increase' element={<SubscribePaymentPage />}></Route>
+        <Route path='offermore' element={<SubscribePaymentPage />}></Route>
 
         {/* 후원안내 */}
-        <Route
-          path='donation/mediaMission'
-          element={<IntroducesupportPage />}
-        ></Route>
+        <Route path='donation/media' element={<IntroducesupportPage />}></Route>
         <Route
           path='donation/anniversary'
           element={<IntroducesupportAnniversaryPage />}
@@ -93,41 +90,29 @@ export default function MainRouter() {
         ></Route>
 
         {/* 소개 */}
+        <Route path='about/mission' element={<IntroduceVisionPage />}></Route>
         <Route
-          path='about-us/missionVision'
-          element={<IntroduceVisionPage />}
-        ></Route>
-        <Route
-          path='about-us/organization'
+          path='about/organization'
           element={<IntroduceOrganizationPage />}
         ></Route>
         <Route
-          path='about-us/organization/:subDepth'
+          path='about/organization/:subDepth'
           element={<IntroduceOrganizationPage />}
         ></Route>
+        <Route path='about/branch' element={<IntroduceWorldwidePage />}></Route>
         <Route
-          path='about-us/branch'
-          element={<IntroduceWorldwidePage />}
-        ></Route>
-        <Route
-          path='about-us/ambassador'
+          path='about/ambassador'
           element={<IntroduceAmbassadorPage />}
         ></Route>
+        <Route path='about/recruit' element={<IntroduceRecruitPage />}></Route>
         <Route
-          path='about-us/recruit'
-          element={<IntroduceRecruitPage />}
-        ></Route>
-        <Route
-          path='about-us/recruit/detail'
+          path='about/recruit/detail'
           element={<RecruitDetailPage />}
         ></Route>
 
         {/* 소식 */}
-        <Route
-          path='news/campaignEvent'
-          element={<TidingsCampaignPage />}
-        ></Route>
-        <Route path='news/cgnStory' element={<TidingsMissionPage />}></Route>
+        <Route path='news/campaign' element={<TidingsCampaignPage />}></Route>
+        <Route path='news/story' element={<TidingsMissionPage />}></Route>
         <Route path='news/supporter' element={<TidingsSupportPage />}></Route>
         <Route path='news/press' element={<TidingsBroadcastPage />}></Route>
         <Route
@@ -139,10 +124,7 @@ export default function MainRouter() {
         <Route path='participate/event' element={<ActivityVisitPage />}></Route>
 
         {/* 시청안내 */}
-        <Route
-          path='media/description'
-          element={<MediaDescriptionPage />}
-        ></Route>
+        <Route path='media/guide' element={<MediaDescriptionPage />}></Route>
 
         {/* 고객센터 */}
         <Route

@@ -41,71 +41,71 @@ const Locator = ({ className = `` }) => {
     }
 
     // 소개
-    if (location?.pathname?.includes('/about-us/')) {
+    if (location?.pathname?.includes('/about/')) {
       setChangedPathName(
         pageData?.map(data => {
-          if (data === 'about-us') {
+          if (data === 'about') {
             pathPiece = data;
             data = '소개';
-            pathStack = 'about-us/missionVision';
+            pathStack = 'about/mission';
           }
-          if (data === 'missionVision') {
+          if (data === 'mission') {
             pathPiece = data;
             data = '미션&비전';
-            pathStack = 'about-us/missionVision';
+            pathStack = 'about/mission';
           }
           if (data === 'organization') {
             pathPiece = data;
             data = '기관 소개';
-            pathStack = 'about-us/organization/chairman';
+            pathStack = 'about/organization/chairman';
           }
           if (data === 'chairman') {
             pathPiece = data;
             data = `이사장 인사`;
-            pathStack = 'about-us/organization/chairman';
+            pathStack = 'about/organization/chairman';
           }
           if (data === 'ceo') {
             pathPiece = data;
             data = `대표 인사`;
-            pathStack = 'about-us/organization/ceo';
+            pathStack = 'about/organization/ceo';
           }
           if (data === `people`) {
             pathPiece = data;
             data = `섬기는 분들`;
-            pathStack = 'about-us/organization/people';
+            pathStack = 'about/organization/people';
           }
           if (data === `history`) {
             pathPiece = data;
             data = `연혁`;
-            pathStack = 'about-us/organization/history';
+            pathStack = 'about/organization/history';
           }
           if (data === `location`) {
             pathPiece = data;
             data = `오시는 길`;
-            pathStack = 'about-us/organization/location';
+            pathStack = 'about/organization/location';
           }
 
           if (data === 'branch') {
             pathPiece = data;
             data = '해외지사 소개';
-            pathStack = 'about-us/branch';
+            pathStack = 'about/branch';
           }
           if (data === 'ambassador') {
             pathPiece = data;
             data = '홍보대사';
-            pathStack = 'about-us/ambassador';
+            pathStack = 'about/ambassador';
           }
 
           if (data === 'recruit') {
             pathPiece = data;
             data = '채용';
-            pathStack = 'about-us/recruit';
+            pathStack = 'about/recruit';
           }
 
           if (data === 'detail') {
             pathPiece = `recruit`;
             data = '';
-            pathStack = `about-us/recruit`;
+            pathStack = `about/recruit`;
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };
@@ -120,17 +120,17 @@ const Locator = ({ className = `` }) => {
           if (data === 'news') {
             pathPiece = data;
             data = '소식';
-            pathStack = 'news/campaignEvent';
+            pathStack = 'news/campaign';
           }
-          if (data === 'campaignEvent') {
+          if (data === 'campaign') {
             pathPiece = data;
             data = '캠페인/이벤트';
-            pathStack = 'news/campaignEvent';
+            pathStack = 'news/campaign';
           }
-          if (data === 'cgnStory') {
+          if (data === 'story') {
             pathPiece = data;
             data = '선교스토리';
-            pathStack = 'news/cgnStory';
+            pathStack = 'news/story';
           }
           if (data === 'supporter') {
             pathPiece = data;

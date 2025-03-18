@@ -23,14 +23,14 @@ const MainHeaderTopBanner = ({
 
   // 쿠키에서 하루치 expired 쿠키 검색
   useEffect(() => {
-    const oneDayCheck = () => {
-      if (document.cookie.match('oneDayBanner')) {
-        setHeaderTopBannerAvailable(false);
-      } else {
-        setHeaderTopBannerAvailable(true);
-      }
-    };
-    oneDayCheck();
+    // const oneDayCheck = () => {
+    //   if (document.cookie.match('oneDayBanner')) {
+    //     setHeaderTopBannerAvailable(false);
+    //   } else {
+    //     setHeaderTopBannerAvailable(true);
+    //   }
+    // };
+    // oneDayCheck();
   }, [location?.pathname]);
 
   return (

@@ -19,22 +19,22 @@ const IntroduceOrganization = () => {
   useEffect(() => {
     switch (subDepth) {
       case `chairman`:
-        navigate('/about-us/organization/chairman');
+        navigate('/about/organization/chairman');
         break;
       case `ceo`:
-        navigate('/about-us/organization/ceo');
+        navigate('/about/organization/ceo');
         break;
       case `people`:
-        navigate('/about-us/organization/people');
+        navigate('/about/organization/people');
         break;
       case `history`:
-        navigate('/about-us/organization/history');
+        navigate('/about/organization/history');
         break;
       case `location`:
-        navigate('/about-us/organization/location');
+        navigate('/about/organization/location');
         break;
       default:
-        navigate('/about-us/organization/chairman');
+        navigate('/about/organization/chairman');
     }
   }, [location?.pathname]);
 

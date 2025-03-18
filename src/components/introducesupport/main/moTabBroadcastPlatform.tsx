@@ -55,7 +55,7 @@ const MoTabBroadcastPlatform = props => {
           </button>
           <button
             onClick={() => {
-              window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
+              window.open(`https://cgndev.onflou.co.kr/offermore`, `_blank`);
             }}
             className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
           >

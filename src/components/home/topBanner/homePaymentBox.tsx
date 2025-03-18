@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
 import StyledButtons from '@/components/common/styledButtons';
-import { useNavigate } from 'react-router-dom';
 
 // 데이터
 const subscribesData = [
@@ -13,31 +12,40 @@ const subscribesData = [
     text: '정기후원',
     value: 1,
   },
-  { id: 1, text: '일시후원', value: 2 },
-  { id: 2, text: '증액후원', value: 3 },
+  { id: 1, text: '일시후원' },
+  { id: 2, text: '증액후원' },
 ];
 const priceData = [
-  { id: 0, text: '5,000원', value: 1 },
-  { id: 1, text: '10,000원', value: 2 },
-  { id: 2, text: '30,000원', value: 3 },
-  { id: 3, text: '기타', value: 4 },
+  { id: 0, text: '10,000원' },
+  { id: 1, text: '30,000원' },
+  { id: 2, text: '50,000원' },
+  { id: 3, text: '기타' },
 ];
 
 const HomePaymentBox = () => {
-  const navigate = useNavigate();
   // select box 와 송신하는 state
   const [selectedSubscribes, setselectedSubscribes] = useState([]);
   // 버튼항목과 송신하는 state
   const [selectedPrice, setSelectedPrice] = useState({});
 
+  const [clickScan, setClickScan] = useState(false);
+
   useEffect(() => {
-    if (selectedSubscribes?.value === 3) {
+    if (clickScan) {
+      setClickScan(false);
+    }
+  }, [clickScan]);
+
+  useEffect(() => {
+    if (selectedSubscribes?.id === 2) {
       window.open(
-        `https://cgndev.onflou.co.kr/increase?selectedId=${selectedPrice?.value}`,
+        `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
         `_blank`
       );
     }
-  }, [selectedSubscribes]);
+    console.log(selectedSubscribes?.id);
+    // setselectedSubscribes([]);
+  }, [selectedSubscribes, clickScan]);
 
   return (
     <div
@@ -54,6 +62,7 @@ const HomePaymentBox = () => {
           selectedItem={selectedSubscribes}
           setSelectedItem={setselectedSubscribes}
           className='w-full max-w-290 max-lg:min-w-full'
+          setClickScan={setClickScan}
         />
         <div
           className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:h-48 max-lg:min-w-full max-lg:gap-5`}
@@ -79,14 +88,14 @@ const HomePaymentBox = () => {
             colorMode='mode1'
             className={`w-full`}
             onClick={() => {
-              if (selectedSubscribes?.value === 3) {
+              if (selectedSubscribes?.id === 2) {
                 window.open(
-                  `https://cgndev.onflou.co.kr/increase?selectedId=${selectedPrice?.value}`,
+                  `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
                   `_blank`
                 );
-              } else if (selectedSubscribes?.value === 1) {
+              } else if (selectedSubscribes?.id === 0) {
                 window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
-              } else if (selectedSubscribes?.value === 2) {
+              } else if (selectedSubscribes?.id === 1) {
                 window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
               }
             }}

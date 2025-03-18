@@ -16,7 +16,7 @@ const CategoryList = ({
   const tabListData = [
     {
       id: 0,
-      path: `/about-us/organization`,
+      path: `/about/organization`,
       tags: [
         { id: 0, type: '이사장 인사' },
         { id: 1, type: '대표 인사' },
@@ -27,7 +27,7 @@ const CategoryList = ({
     },
     {
       id: 1,
-      path: `/news/campaignEvent`,
+      path: `/news/campaign`,
       tags: [
         { id: 1, type: '진행중' },
         { id: 3, type: '종료' },
@@ -35,7 +35,7 @@ const CategoryList = ({
     },
     {
       id: 2,
-      path: `/news/cgnStory`,
+      path: `/news/story`,
       tags: [
         { id: 14, type: 'CGN 소식' },
         { id: 9, type: '해외지사' },
@@ -54,7 +54,7 @@ const CategoryList = ({
     },
     {
       id: 4,
-      path: `/about-us/branch`,
+      path: `/about/branch`,
       tags: [
         // { id: 0, type: '한국' },
         { id: 1, type: '미주' },

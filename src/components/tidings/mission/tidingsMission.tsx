@@ -60,8 +60,8 @@ const TidingsMission = () => {
 
   /* 현재 선교스토리 혹은 후원중 어느 페이지로 분기되었는지 사용할 String state 지정 */
   useEffect(() => {
-    if (location?.pathname?.includes('/news/cgnStory')) {
-      setPageMode('cgnStory');
+    if (location?.pathname?.includes('/news/story')) {
+      setPageMode('story');
     } else if (location?.pathname?.includes('/news/supporter')) {
       setPageMode('supporter');
     }
@@ -226,7 +226,7 @@ const TidingsMission = () => {
               style={{ top: `${bgBoxPositon}px`, transition: `0.25s` }}
               className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm`}
             ></div>
-            {findedMockupData?.map((data, key) => (
+            {findedMockupData?.slice(0, 7)?.map((data, key) => (
               <button
                 ref={el => {
                   listAll.current[key] = el;

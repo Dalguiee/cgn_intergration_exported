@@ -10,7 +10,7 @@ const TidingsBroadcastCard = ({ item }) => {
   return (
     <button
       onClick={() => {
-        navigate(`/tidings/broadcast/detail?articleId=${item?.id}`);
+        navigate(`/news/press/detail?articleId=${item?.id}`);
       }}
       className={`mb-40 flex items-start justify-center gap-40 border-t-3 border-grey-900 pl-4 pt-43 max-lg:mb-0 max-lg:h-141 max-lg:gap-8 max-lg:border-t-0 max-lg:px-16 max-lg:py-16`}
     >

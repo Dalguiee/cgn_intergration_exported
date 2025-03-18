@@ -24,11 +24,11 @@ const centerMenu = [
     key: 0,
     text: '후원안내',
     path: '/donation/',
-    link: '/donation/mediaMission',
+    link: '/donation/media',
     subMenu: [
       {
         text: '미디어선교 후원',
-        link: '/donation/mediaMission',
+        link: '/donation/media',
       },
       {
         text: '기념일 후원',
@@ -55,28 +55,28 @@ const centerMenu = [
   {
     key: 1,
     text: '소개',
-    path: '/about-us/',
-    link: '/about-us/missionVision',
+    path: '/about/',
+    link: '/about/mission',
     subMenu: [
       {
         text: '미션&비전',
-        link: '/about-us/missionVision',
+        link: '/about/mission',
       },
       {
         text: '기관 소개',
-        link: '/about-us/organization',
+        link: '/about/organization',
       },
       {
         text: '해외지사 소개',
-        link: '/about-us/branch',
+        link: '/about/branch',
       },
       {
         text: '홍보대사',
-        link: '/about-us/ambassador',
+        link: '/about/ambassador',
       },
       {
         text: '채용',
-        link: '/about-us/recruit',
+        link: '/about/recruit',
       },
     ],
   },
@@ -84,15 +84,15 @@ const centerMenu = [
     key: 2,
     text: '소식',
     path: `/news/`,
-    link: '/news/campaignEvent',
+    link: '/news/campaign',
     subMenu: [
       {
         text: '캠페인/이벤트',
-        link: '/news/campaignEvent',
+        link: '/news/campaign',
       },
       {
         text: '선교 스토리',
-        link: '/news/cgnStory',
+        link: '/news/story',
       },
       {
         text: '후원 스토리',
@@ -136,23 +136,23 @@ const centerMenu = [
     key: 4,
     text: '시청안내',
     path: '/media/',
-    link: '/media/description',
+    link: '/media/guide',
     subMenu: [
       {
         text: '퐁당 웹/앱/스마트TV',
-        link: '/media/description?action=1',
+        link: '/media/guide?action=1',
       },
       {
         text: '케이블/IPTV',
-        link: '/media/description?action=2',
+        link: '/media/guide?action=2',
       },
       {
         text: '위성',
-        link: '/media/description?action=3',
+        link: '/media/guide?action=3',
       },
       {
         text: '소셜&오픈 플랫폼',
-        link: '/media/description?action=4',
+        link: '/media/guide?action=4',
       },
     ],
   },
@@ -161,11 +161,11 @@ const centerMenu = [
 // 하얀 헤더 배경 pathname 리스트
 const whiteModeList = [
   `/home`,
-  `/subscribepayment`,
-  `/customercenter/questions`,
-  `/customercenter/notice`,
-  `/mediacenter/description`,
-  `/customercenter/notice/detail`,
+  `/offermore`,
+  `/customer/faq`,
+  `/customer/notice`,
+  `/media/guide`,
+  `/customer/notice/detail`,
 ];
 
 const MainHeader = () => {

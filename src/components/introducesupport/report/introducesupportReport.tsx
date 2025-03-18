@@ -6,7 +6,12 @@ import SelectBox from '@/components/common/selectBox';
 
 //후원내역 보고 페이지
 const IntroducesupportReport = () => {
-  const [dateYear, setDateYear] = useState({ text: '' });
+  const [dateYear, setDateYear] = useState({
+    id: 7,
+    text: '2023',
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/donation/report_2023.jpg`,
+    value: 8,
+  });
   const dateYearOption = [
     {
       id: 7,

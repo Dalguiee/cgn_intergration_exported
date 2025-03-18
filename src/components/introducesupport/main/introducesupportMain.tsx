@@ -14,11 +14,8 @@ import PcTabGlobal from '@/components/introducesupport/main/pcTabGlobal';
 import MoTabBroadcastPlatform from '@/components/introducesupport/main/moTabBroadcastPlatform';
 import MoTabContents from '@/components/introducesupport/main/moTabContents';
 import MoTabGlobal from '@/components/introducesupport/main/moTabGlobal';
-import { useNavigate } from 'react-router-dom';
 
 const IntroducesupportMain = () => {
-  const navigate = useNavigate();
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   //현재 후원하기 탭 상태
@@ -138,7 +135,7 @@ const IntroducesupportMain = () => {
           </button>
           <button
             onClick={() => {
-              window.open(`https://cgndev.onflou.co.kr/increase`, `_blank`);
+              window.open(`https://cgndev.onflou.co.kr/offermore`, `_blank`);
             }}
             className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
           >

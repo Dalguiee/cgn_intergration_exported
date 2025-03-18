@@ -93,7 +93,7 @@ const IntroduceRecruit = () => {
         </div>
       </div>
       <div
-        className={`flex w-full flex-col items-center justify-start bg-white-solid pb-120 pt-120 max-lg:pt-60`}
+        className={`flex w-full flex-col items-center justify-start bg-white-solid pb-120 pt-120 max-lg:px-16 max-lg:pt-60`}
       >
         <div
           className={`flex w-full max-w-1200 flex-col items-center justify-start`}

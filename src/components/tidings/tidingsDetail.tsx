@@ -64,7 +64,7 @@ const TidingsDetail = () => {
         case '/news/campaignEvent/detail':
           setAllData(mockupData[0]);
           break;
-        case '/news/cgnStory/detail':
+        case '/news/story/detail':
           setAllData(mockupData[1]);
           break;
         case '/news/supporter/detail':
@@ -106,7 +106,7 @@ const TidingsDetail = () => {
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:mb-20 max-lg:px-20 max-lg:py-0`}
+      className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:px-20 max-lg:py-0`}
     >
       <div className='w-full max-w-1200'>
         <div
@@ -127,7 +127,7 @@ const TidingsDetail = () => {
                 );
               }
             })}
-            <span className={`text-bold24 text-grey-900`}>
+            <span className={`text-bold24 line-clamp-2 text-grey-900`}>
               {currentData?.detailTitle}
             </span>
           </div>
