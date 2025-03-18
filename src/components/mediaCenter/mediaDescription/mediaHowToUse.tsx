@@ -4,9 +4,12 @@ import React from 'react';
 // 컴포넌트
 import StyledButtons from '@/components/common/styledButtons';
 
-const MediaHowToUse = () => {
+const MediaHowToUse = ({ sections }) => {
   return (
     <section
+      ref={el => {
+        sections.current[2] = el;
+      }}
       className={`flex w-full flex-col items-center justify-start bg-grey-50 pb-129 pt-100 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div className={`w-full max-w-1200`}>

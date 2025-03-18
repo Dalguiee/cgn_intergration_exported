@@ -1,9 +1,12 @@
 // 훅
 import React from 'react';
 
-const MediaDescriptionMainTitle = ({ mobile }) => {
+const MediaDescriptionMainTitle = ({ mobile, sections }) => {
   return (
     <section
+      ref={el => {
+        sections.current[0] = el;
+      }}
       className={`relative flex h-851 w-full flex-col items-center justify-start max-lg:h-779`}
     >
       <div
@@ -35,13 +38,16 @@ const MediaDescriptionMainTitle = ({ mobile }) => {
         </h2>
         <p className={`text-regular24 max-lg:text-regular16 text-grey-500`}>
           국내 최초 기독 OTT 퐁당(fondant)은
+          <span className={`max-lg:hidden`}>&nbsp;</span>
           <br className={`lg:hidden`} />
-          앱, 웹, 스마트TV를 통해
+          앱, 웹, 스마트TV를 통해<span className={`lg:hidden`}>&nbsp;</span>
           <br className={`max-lg:hidden`} />
           다양한 콘텐츠와 서비스를
+          <span className={`max-lg:hidden`}>&nbsp;</span>
           <br className={`lg:hidden`} />전 세계에 무료로 제공 중이며
+          <span className={`lg:hidden`}>&nbsp;</span>
           <br className={`max-lg:hidden`} />
-          성도와 교회가
+          성도와 교회가<span className={`max-lg:hidden`}>&nbsp;</span>
           <br className={`lg:hidden`} />
           사용할 수 있는 크리스천 일상 플랫폼입니다.
         </p>

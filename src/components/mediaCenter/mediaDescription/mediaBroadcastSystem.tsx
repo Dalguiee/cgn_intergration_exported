@@ -43,9 +43,12 @@ const cableData = [
   },
 ];
 
-const MediaBroadcastSystem = ({ mobile }) => {
+const MediaBroadcastSystem = ({ mobile, sections }) => {
   return (
     <section
+      ref={el => {
+        sections.current[3] = el;
+      }}
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div
@@ -130,6 +133,7 @@ const MediaBroadcastSystem = ({ mobile }) => {
               하고 있습니다.
               <br />
               수신기와 안테나만 설치하면
+              <span className={`max-lg:hidden`}>&nbsp;</span>
               <br className={`lg:hidden`} />
               월비용 부담 없이 방송 시청이 가능합니다.
             </p>

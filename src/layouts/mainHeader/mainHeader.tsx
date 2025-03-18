@@ -140,19 +140,19 @@ const centerMenu = [
     subMenu: [
       {
         text: '퐁당 웹/앱/스마트TV',
-        link: '/media/description',
+        link: '/media/description?action=1',
       },
       {
         text: '케이블/IPTV',
-        link: '/media/description',
+        link: '/media/description?action=2',
       },
       {
         text: '위성',
-        link: '/media/description',
+        link: '/media/description?action=3',
       },
       {
         text: '소셜&오픈 플랫폼',
-        link: '/media/description',
+        link: '/media/description?action=4',
       },
     ],
   },

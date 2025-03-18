@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 
 const IntersectionObserverScanner = (threshold = 0.1) => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const intersectionRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -17,12 +17,12 @@ const IntersectionObserverScanner = (threshold = 0.1) => {
       { threshold }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (intersectionRef?.current) observer.observe(intersectionRef?.current);
 
     return () => observer.disconnect();
   }, [threshold]);
 
-  return { ref, isVisible };
+  return { intersectionRef, isVisible };
 };
 
 export default IntersectionObserverScanner;

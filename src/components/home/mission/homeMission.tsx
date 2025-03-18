@@ -1,12 +1,22 @@
 // 훅
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // 컴포넌트
 import HomeTextBox from '@/components/home/mission/homeTextBox';
-import { useNavigate } from 'react-router-dom';
+import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
+
+// 모션변수
+const fadeUpX = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } },
+};
 
 const HomeMission = ({ mobile }) => {
   const navigate = useNavigate();
+  const { intersectionRef, isVisible } = IntersectionObserverScanner();
+
   const buttonData = [
     {
       id: 1,
@@ -24,6 +34,7 @@ const HomeMission = ({ mobile }) => {
   ];
   return (
     <section
+      ref={intersectionRef}
       className={`flex h-840 w-full items-start justify-center px-16 max-lg:h-682 max-lg:px-0 lg:pb-80 lg:pt-160`}
     >
       <div
@@ -35,7 +46,7 @@ const HomeMission = ({ mobile }) => {
           }}
           className={`flex h-full w-676 items-center justify-center bg-cover bg-center bg-no-repeat max-lg:hidden`}
         >
-          <HomeTextBox />
+          <HomeTextBox isVisible={isVisible} />
         </div>
         <div
           style={{
@@ -46,14 +57,17 @@ const HomeMission = ({ mobile }) => {
           <div
             className={`flex w-full items-center justify-center rounded-8 bg-secondary-brown_bg_2 px-38 py-40 lg:hidden`}
           >
-            <HomeTextBox />
+            <HomeTextBox isVisible={isVisible} />
           </div>
 
           {buttonData?.map((item, key) => (
-            <button
+            <motion.button
+              style={{ transition: `1.3s` }}
               onClick={() => {
                 navigate(item?.link);
               }}
+              variants={mobile ? `` : fadeUpX}
+              animate={isVisible ? `animate` : `hidden`}
               key={key}
               className={`flex h-120 w-440 items-center justify-between rounded-16 max-lg:rounded-8 ${item?.className} px-40 py-40 max-lg:h-60 max-lg:w-full max-lg:px-24 max-lg:py-16`}
             >
@@ -69,7 +83,7 @@ const HomeMission = ({ mobile }) => {
                 height={32}
                 alt=''
               />
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>

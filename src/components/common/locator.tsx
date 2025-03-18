@@ -129,12 +129,12 @@ const Locator = ({ className = `` }) => {
           }
           if (data === 'cgnStory') {
             pathPiece = data;
-            data = '선교캠페인';
+            data = '선교스토리';
             pathStack = 'news/cgnStory';
           }
           if (data === 'supporter') {
             pathPiece = data;
-            data = `후원스토리`;
+            data = `후원 스토리`;
             pathStack = `news/supporter`;
           }
           if (data === 'press') {

@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import HTMLReactParser from 'html-react-parser';
 import { motion } from 'framer-motion';
 
+// 모션변수
+const contentVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const HistoryList = ({
   selectedDataIdx,
   setSelectedDataIdx,
@@ -19,12 +25,6 @@ const HistoryList = ({
       setAnimateToggle(false);
     }, 800);
     return () => clearTimeout(animateTimeout);
-  };
-
-  // framer 설정
-  const contentVariants = {
-    initial: { opacity: 0, y: 100 },
-    animate: { opacity: animateToggle ? 0 : 1, y: animateToggle ? 100 : 0 },
   };
 
   return (
@@ -58,8 +58,7 @@ const HistoryList = ({
       >
         {historyData?.[selectedDataIdx]?.map((item, key) => (
           <motion.div
-            initial={`initial`}
-            animate={`animate`}
+            animate={animateToggle ? `hidden` : `visible`}
             variants={contentVariants}
             transition={{ duration: 0.5, ease: 'easeOut' }}
             className={`flex items-start justify-start`}

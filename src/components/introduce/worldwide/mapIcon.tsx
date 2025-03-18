@@ -9,7 +9,7 @@ const mapData = [
     rightSide: false,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea.png`,
     selectedSrc: `${import.meta.env.VITE_PUBLIC_URL}images/worldwide/korea_selected.png`,
-    position: ` absolute left-429 top-162 max-lg:top-[30%] max-lg:left-[49%]`,
+    position: ` absolute left-429 top-162 max-lg:top-[32%] max-lg:left-[49.3%]`,
   },
   {
     id: 1,

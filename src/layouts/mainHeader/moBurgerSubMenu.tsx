@@ -18,7 +18,7 @@ const MoBurgerSubMenu = ({
     >
       {centerMenu?.map((menu, key) => {
         return (
-          <div key={key} className='border-b-1 px-24'>
+          <div key={key} className='w-full border-b-1 px-24'>
             <div className={`w-full py-14`}>
               <span className={`text-bold18 text-grey-900`}>{menu?.text}</span>
             </div>

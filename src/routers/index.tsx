@@ -68,6 +68,7 @@ export default function MainRouter() {
     <Routes>
       <Route path='/*' element={<DefaultLayer />}>
         {/* 홈 */}
+        <Route path='' element={<HomePage />}></Route>
         <Route path='home' element={<HomePage />}></Route>
 
         {/* 증액후원 */}

@@ -210,7 +210,7 @@ const contextData = [
       },
       {
         name: `홈페이지`,
-        value: `cgnindonesia.com`,
+        value: `https://www.cgnindonesia.com`,
       },
     ],
   },
@@ -327,7 +327,7 @@ const IntroduceWorldwideContext = ({
             ></span>
           </div>
           <div
-            className={`flex flex-col items-start justify-start px-40 pb-60 pt-40 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
+            className={`flex w-full flex-col items-start justify-start px-40 pb-60 pt-40 max-lg:px-16 max-lg:pb-24 max-lg:pt-24`}
           >
             {selectedCategoryArticleId === 2 ? (
               <p
@@ -338,29 +338,32 @@ const IntroduceWorldwideContext = ({
             ) : (
               ``
             )}
-            <div className={`flex flex-col items-start justify-start gap-8`}>
+            <div
+              className={`flex w-full flex-col items-start justify-start gap-8`}
+            >
               {contextFind?.locationData?.map((item, idx) => (
                 <p key={idx} className={`flex items-start justify-start`}>
                   <span
-                    className={`text-bold18 max-lg:text-bold14 w-120 flex-shrink-0 text-grey-900 max-lg:w-72`}
+                    className={`text-bold18 max-lg:text-bold14 inline-block w-[120px] flex-shrink-0 flex-grow-0 text-grey-900 max-lg:w-[72px]`}
                   >
                     {item?.name}
                   </span>
                   {item?.name === '홈페이지' ? (
-                    <a
-                      href={item?.value}
-                      rel='noopener noreferrer'
-                      target='_blank'
+                    <button
+                      className={`flex-shrink-1 break-all text-start`}
+                      onClick={() => {
+                        window.open(item?.value, '_blank');
+                      }}
                     >
                       <span
                         className={`text-regular18 max-lg:text-regular14 text-grey-500 underline underline-offset-4`}
                       >
                         {HTMLReactParser(item?.value)}
                       </span>
-                    </a>
+                    </button>
                   ) : (
                     <span
-                      className={`text-regular18 max-lg:text-regular14 text-grey-500`}
+                      className={`text-regular18 max-lg:text-regular14 text-wrap text-grey-500`}
                     >
                       {HTMLReactParser(item?.value)}
                     </span>

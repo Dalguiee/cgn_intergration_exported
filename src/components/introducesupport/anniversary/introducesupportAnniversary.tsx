@@ -183,7 +183,7 @@ import IntersectionObserverScanner from '@/components/common/intersectionObserve
 
 // 기념일 후원 페이지
 const IntroducesupportAnniversary = () => {
-  const { ref, isVisible } = IntersectionObserverScanner();
+  const { intersectionRef, isVisible } = IntersectionObserverScanner();
   const scrollTopStatus = ScrollTopScanner();
   // 후원증서 신청
   const [name, setName] = useState(''); // 이름
@@ -743,7 +743,7 @@ const IntroducesupportAnniversary = () => {
         </div>
       </div>
       <button
-        ref={ref}
+        ref={intersectionRef}
         onClick={() => {
           window.open(
             `https://online.mrm.or.kr/yVGkJ95/?utm_source=%EA%B8%B0%ED%8A%B9%ED%95%98%EB%8D%B0%EC%9D%B4`,

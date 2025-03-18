@@ -274,8 +274,18 @@
     @apply h-12 w-1 border-r-1 border-grey-200;
   }
 
+  /* 선교 미션 스크롤 애니메이션 */
   [data-comment='text_scroll_box'] {
     animation: txt 100s linear infinite;
+  }
+
+  @keyframes txt {
+    0% {
+      transform: translateX(70%);
+    }
+    100% {
+      transform: translateX(-70%);
+    }
   }
 
   ::-webkit-scrollbar {
@@ -296,15 +306,6 @@
     border: 1px solid transparent;
     background-clip: padding-box; /* 내부 색상 유지 */
     @apply bg-grey-100;
-  }
-
-  @keyframes txt {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-500%);
-    }
   }
 }
 
