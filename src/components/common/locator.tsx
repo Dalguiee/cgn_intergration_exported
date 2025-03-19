@@ -181,12 +181,12 @@ const Locator = ({ className = `` }) => {
           if (data === 'media') {
             pathPiece = data;
             data = '시청안내';
-            pathStack = 'media/description';
+            pathStack = 'media/guide';
           }
-          if (data === 'description') {
+          if (data === 'guide') {
             pathPiece = data;
             data = '퐁당 웹/앱/스마트TV';
-            pathStack = 'media/description';
+            pathStack = 'media/guide';
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

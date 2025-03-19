@@ -18,7 +18,7 @@ const MoBurgerSubMenu = ({
     >
       {centerMenu?.map((menu, key) => {
         return (
-          <div key={key} className='w-full border-b-1 px-24'>
+          <div key={key} className='w-full px-24 border-b-1'>
             <div className={`w-full py-14`}>
               <span className={`text-bold18 text-grey-900`}>{menu?.text}</span>
             </div>
@@ -29,7 +29,11 @@ const MoBurgerSubMenu = ({
                 <div key={key} className={`h-32 w-115`}>
                   <button
                     onClick={() => {
-                      navigate(subMenu?.link);
+                      navigate(
+                        subMenu?.query
+                          ? `${subMenu?.link}?${subMenu?.query}`
+                          : `${subMenu?.link}`
+                      );
                       setBurger(false);
                     }}
                     className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold14 text-primary-900' : 'text-regular14 text-grey-600'}`}

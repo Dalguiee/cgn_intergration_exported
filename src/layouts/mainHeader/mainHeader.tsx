@@ -137,22 +137,27 @@ const centerMenu = [
     text: '시청안내',
     path: '/media/',
     link: '/media/guide',
+    query: `action=0`,
     subMenu: [
       {
         text: '퐁당 웹/앱/스마트TV',
-        link: '/media/guide?action=1',
+        link: '/media/guide',
+        query: `action=1`,
       },
       {
         text: '케이블/IPTV',
-        link: '/media/guide?action=2',
+        link: '/media/guide',
+        query: `action=2`,
       },
       {
         text: '위성',
-        link: '/media/guide?action=3',
+        link: '/media/guide',
+        query: `action=3`,
       },
       {
         text: '소셜&오픈 플랫폼',
-        link: '/media/guide?action=4',
+        link: '/media/guide',
+        query: `action=4`,
       },
     ],
   },

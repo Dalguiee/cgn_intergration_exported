@@ -3,7 +3,14 @@ import React from 'react';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import {
+  FreeMode,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Autoplay,
+  A11y,
+} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,13 +19,20 @@ import 'swiper/css/scrollbar';
 const HomeFondantContentsSwiper = ({ mediaData }) => {
   return (
     <Swiper
-      data-main-swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      data-main-fondant-swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       className={`h-full w-full select-none overflow-visible`}
       loop={true}
+      navigation={true}
       // loopAdditionalSlides={10}
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+      }}
+      speed={3000}
+      freeMode={true}
       spaceBetween={8}
       slidesPerView={`auto`}
       onSlideChange={() => {}}

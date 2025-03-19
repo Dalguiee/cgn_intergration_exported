@@ -47,6 +47,11 @@ const BottomHeader = ({
               <button
                 onClick={() => {
                   navigate(menu?.link);
+                  navigate(
+                    menu?.query
+                      ? `${menu?.link}?${menu?.query}`
+                      : `${menu?.link}`
+                  );
                 }}
               >
                 <span
@@ -64,7 +69,11 @@ const BottomHeader = ({
                     style={{ transition: `0.5s` }}
                     key={key}
                     onClick={() => {
-                      navigate(subMenu?.link);
+                      navigate(
+                        subMenu?.query
+                          ? `${subMenu?.link}?${subMenu?.query}`
+                          : `${subMenu?.link}`
+                      );
                       setDepthActive(false);
                     }}
                     className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold16 text-white-solid' : 'text-regular16 text-primary-200'} text-nowrap hover:text-primary-100`}

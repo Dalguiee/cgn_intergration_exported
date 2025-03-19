@@ -271,7 +271,7 @@
 
 @layer utilities {
   .separator {
-    @apply h-12 w-1 border-r-1 border-grey-200;
+    @apply w-1 h-12 border-r-1 border-grey-200;
   }
 
   /* 선교 미션 스크롤 애니메이션 */
@@ -410,6 +410,10 @@
   opacity: 1;
 }
 
+[data-main-fondant-swiper] .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
 /* div::-webkit-scrollbar {
   height: 0px;
   width: 0px;
@@ -419,6 +423,30 @@
 /* body {
   touch-action: manipulation;
 } */
+
+/* 메인 퐁탕컨텐츠 스와이퍼 설정 */
+[data-main-fondant-swiper] .swiper-button-next {
+  right: 3%;
+  @apply text-white-solid;
+}
+[data-main-fondant-swiper] .swiper-button-next::after {
+  opacity: 0.75;
+  content: url(/public/images/icon/slide_arrow_right.svg);
+  @apply max-lg:hidden;
+}
+
+[data-main-fondant-swiper] .swiper-button-prev {
+  left: -6%;
+  @apply text-white-solid;
+}
+[data-main-fondant-swiper] .swiper-button-prev::after {
+  opacity: 0.75;
+  content: url(/public/images/icon/slide_arrow_left.svg);
+  @apply max-lg:hidden;
+}
+[data-main-fondant-swiper] .swiper-button-disabled {
+  opacity: 0.1;
+}
 
 @media (max-width: 360px) {
   [data-recruit-vision-box] {

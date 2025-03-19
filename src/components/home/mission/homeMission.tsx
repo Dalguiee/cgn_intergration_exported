@@ -52,7 +52,7 @@ const HomeMission = ({ mobile }) => {
           style={{
             backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/mission_main_bg.png)`,
           }}
-          className={`flex h-full w-884 flex-col items-center justify-center gap-24 bg-cover bg-fixed bg-[100%] bg-no-repeat max-lg:gap-12 max-lg:bg-[40%] max-lg:px-12`}
+          className={`flex h-full w-884 flex-col items-center justify-center gap-24 bg-cover bg-[70%] bg-no-repeat max-lg:gap-12 max-lg:bg-[40%] max-lg:px-12`}
         >
           <div
             className={`flex w-full items-center justify-center rounded-8 bg-secondary-brown_bg_2 px-38 py-40 lg:hidden`}
