@@ -80,7 +80,7 @@ const ThemeHeader = ({ className = `` }) => {
 
     // 시청안내
     {
-      path: 'media/description',
+      path: 'media/guide',
       title: `퐁당 웹/앱/스마트TV`,
       subTitle: '기독 OTT, 퐁당',
     },
