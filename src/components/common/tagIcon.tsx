@@ -101,14 +101,14 @@ const tagMode = [
   },
 ];
 
-const TagIcon = ({ id = 1, text = '', mode = 'mode1' }) => {
+const TagIcon = ({ id = 1, text = '', mode = 'mode1', className = `` }) => {
   const tagFind = pcTagTypes?.find(tag => tag?.id === id);
   const modeFind = tagMode?.find(obj => obj?.mode === mode);
 
   return (
     <>
       <span
-        className={`tag-btn flex-shrink-0 ${modeFind && modeFind?.className} ${tagFind && tagFind?.className} flex items-center justify-center rounded-4`}
+        className={`tag-btn flex-shrink-0 ${className && className} ${modeFind && modeFind?.className} ${tagFind && tagFind?.className} flex items-center justify-center rounded-4`}
       >
         {text?.length ? text : tagFind?.text}
       </span>
