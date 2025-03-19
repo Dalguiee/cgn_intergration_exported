@@ -8,11 +8,17 @@ import { mockupData } from '@/db/mockup';
 // 컴포넌트
 import TidingsBroadcastCard from '@/components/tidings/broadcast/tidingsBroadcastCard';
 import DefaultInput from '@/components/common/defaultInput';
+import Pagination from '@/components/common/pagination';
+import NoSearchResult from '@/components/common/noSearchResult';
 
 const TidingsBroadcast = () => {
   const location = useLocation();
   const [findedMockupData, setFindedMockupData] = useState([]); // 목업데이터
   const [searchText, setSearchText] = useState(''); // 검색어 텍스트
+
+  // 컨텐츠 항목 10개들이 시작 및 종료 설정, 초기숫자가 나오는 리스트 갯수 index, 페이지네이션 가운데항목에서 event 걸림
+  const [listStartNum, setListStartNum] = useState(0);
+  const [listEndNum, setListEndNum] = useState(10);
 
   // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
   const mockupExport = mockupData.filter(item => {
@@ -23,7 +29,7 @@ const TidingsBroadcast = () => {
   // init
   useEffect(() => {
     setFindedMockupData(mockupExportedData);
-  }, [location]);
+  }, [location?.pathname]);
 
   return (
     <section
@@ -41,10 +47,23 @@ const TidingsBroadcast = () => {
             setInputText={setSearchText}
           />
         </div>
-        {findedMockupData?.map((item, key) => (
-          <TidingsBroadcastCard key={key} item={item} />
-        ))}
+        {findedMockupData?.length > 0 ? (
+          findedMockupData
+            ?.slice(listStartNum, listEndNum)
+            ?.map((item, key, all) => (
+              <TidingsBroadcastCard key={key} item={item} idx={key} all={all} />
+            ))
+        ) : (
+          <NoSearchResult />
+        )}
       </div>
+      <Pagination
+        className={`${findedMockupData?.length > 0 ? `` : `hidden`}`}
+        listData={findedMockupData}
+        setListStartNum={setListStartNum}
+        setListEndNum={setListEndNum}
+        bucketNumber={5}
+      />
     </section>
   );
 };

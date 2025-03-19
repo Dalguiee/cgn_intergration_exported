@@ -46,12 +46,12 @@ const cableData = [
 const MediaBroadcastSystem = ({ mobile, sections }) => {
   return (
     <section
-      ref={el => {
-        sections.current[3] = el;
-      }}
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div
+        ref={el => {
+          sections.current[1] = el;
+        }}
         className={`flex w-full max-w-1200 flex-col items-center justify-start`}
       >
         <p
@@ -106,6 +106,9 @@ const MediaBroadcastSystem = ({ mobile, sections }) => {
       </div>
 
       <div
+        ref={el => {
+          sections.current[2] = el;
+        }}
         className={`mt-120 flex w-full max-w-1200 flex-col items-center justify-start max-lg:mt-60`}
       >
         <p

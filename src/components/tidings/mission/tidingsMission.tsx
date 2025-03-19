@@ -220,13 +220,13 @@ const TidingsMission = () => {
           {/* 텍스트 애니메이션 하단 오른쪽 리스트 구역입니다 */}
           <div
             ref={contentBox}
-            className={`relative flex w-full max-w-616 flex-col items-center justify-start gap-16`}
+            className={`relative flex h-656 w-full flex-col items-center justify-start gap-16 overflow-y-scroll`}
           >
             <div
               style={{ top: `${bgBoxPositon}px`, transition: `0.25s` }}
               className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm`}
             ></div>
-            {findedMockupData?.slice(0, 7)?.map((data, key) => (
+            {findedMockupData?.map((data, key) => (
               <button
                 ref={el => {
                   listAll.current[key] = el;

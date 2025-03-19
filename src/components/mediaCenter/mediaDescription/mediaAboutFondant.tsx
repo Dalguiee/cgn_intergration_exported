@@ -4,12 +4,9 @@ import React from 'react';
 // 컴포넌트
 import MediaAboutFondantCard from './mediaAboutFondantCard';
 
-const MediaAboutFondant = ({ sections }) => {
+const MediaAboutFondant = () => {
   return (
     <section
-      ref={el => {
-        sections.current[1] = el;
-      }}
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:pb-60 max-lg:pt-60`}
     >
       <div className={`w-full max-w-1200`}>

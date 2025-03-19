@@ -45,7 +45,7 @@ const MediaSocialPlatform = ({ sections }) => {
   return (
     <section
       ref={el => {
-        sections.current[4] = el;
+        sections.current[3] = el;
       }}
       className={`flex w-full flex-col items-center justify-start bg-secondary-blue pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >

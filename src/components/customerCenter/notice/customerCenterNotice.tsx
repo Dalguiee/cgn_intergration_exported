@@ -14,7 +14,7 @@ const CustomerCenterNotice = () => {
   const navigate = useNavigate();
   const [findedMockupData, setFindedMockupData] = useState([]); // 목업데이터
   const [searchText, setSearchText] = useState(''); // 검색어 텍스트
-  // 컨텐츠 항목 10개들이 시작 및 종료 index, 페이지네이션 가운데항목에서 event 걸림
+  // 컨텐츠 항목 10개들이 시작 및 종료 설정, 초기숫자가 나오는 리스트 갯수 index, 페이지네이션 가운데항목에서 event 걸림
   const [listStartNum, setListStartNum] = useState(0);
   const [listEndNum, setListEndNum] = useState(10);
 
@@ -89,7 +89,7 @@ const CustomerCenterNotice = () => {
                         <button
                           onClick={() => {
                             navigate(
-                              `/customercenter/notice/detail?articleId=${item?.id}`
+                              `/customer/notice/detail?articleId=${item?.id}`
                             );
                           }}
                         >
@@ -120,6 +120,7 @@ const CustomerCenterNotice = () => {
           listData={findedMockupData}
           setListStartNum={setListStartNum}
           setListEndNum={setListEndNum}
+          bucketNumber={3}
         />
       </div>
     </section>
