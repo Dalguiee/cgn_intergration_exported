@@ -5,6 +5,7 @@ const Pagination = ({
   setListStartNum,
   setListEndNum,
   className = ``,
+  // 해당 props 가 리스트의 갯수를 지정합니다
   bucketNumber = 10,
 }) => {
   // 좌우 페이징용 객체 slice 저장용 state 항상 10개 단위로 움직입니다.
@@ -72,6 +73,7 @@ const Pagination = ({
                 setListStartNum(newPage * bucketNumber);
                 setListEndNum((newPage + 1) * bucketNumber);
                 setHighlight(newPage);
+                window?.scrollTo(0, 0);
               }}
             >
               <span

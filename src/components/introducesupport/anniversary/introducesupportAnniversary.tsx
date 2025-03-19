@@ -488,7 +488,7 @@ const IntroducesupportAnniversary = () => {
                 <div className='text-regular14 mb-8 ml-4'>성명</div>
                 <DefaultInput
                   placeholder=''
-                  maxlength={5}
+                  maxlength={10}
                   searchBtn={false}
                   inputText={name}
                   setInputText={setName}

@@ -54,8 +54,11 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
     >
       {mediaData?.map((item, key) => (
         <SwiperSlide
+          onClick={() => {
+            window.open(`https://www.fondant.kr/`, `_blank`);
+          }}
           // style={{ backgroundImage: `url(${item?.src})` }}
-          className={`aspect-[350/544] !w-350 bg-cover bg-center bg-no-repeat max-lg:aspect-[106/136] max-lg:!h-136 max-lg:!w-106`}
+          className={`aspect-[350/544] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[106/136] max-lg:!h-136 max-lg:!w-106`}
           key={key}
         >
           <div

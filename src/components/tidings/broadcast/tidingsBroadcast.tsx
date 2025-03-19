@@ -18,7 +18,7 @@ const TidingsBroadcast = () => {
 
   // 컨텐츠 항목 10개들이 시작 및 종료 설정, 초기숫자가 나오는 리스트 갯수 index, 페이지네이션 가운데항목에서 event 걸림
   const [listStartNum, setListStartNum] = useState(0);
-  const [listEndNum, setListEndNum] = useState(10);
+  const [listEndNum, setListEndNum] = useState(5);
 
   // 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다.
   const mockupExport = mockupData.filter(item => {
@@ -28,7 +28,8 @@ const TidingsBroadcast = () => {
 
   // init
   useEffect(() => {
-    setFindedMockupData(mockupExportedData);
+    // setFindedMockupData(mockupExportedData);
+    setFindedMockupData([]);
   }, [location?.pathname]);
 
   return (

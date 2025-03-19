@@ -271,7 +271,7 @@
 
 @layer utilities {
   .separator {
-    @apply w-1 h-12 border-r-1 border-grey-200;
+    @apply h-12 w-1 border-r-1 border-grey-200;
   }
 
   /* 선교 미션 스크롤 애니메이션 */
@@ -287,26 +287,32 @@
       transform: translateX(-70%);
     }
   }
+}
 
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
+/* 스크롤바 설정 */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-  /* body::-webkit-scrollbar-track {
+/* body::-webkit-scrollbar-track {
     @apply bg-grey-300;
   } */
 
-  ::-webkit-scrollbar-track {
-    border-radius: 4px;
-    @apply bg-grey-200;
-  }
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+  @apply bg-grey-200;
+}
 
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    border: 1px solid transparent;
-    background-clip: padding-box; /* 내부 색상 유지 */
-    @apply bg-grey-100;
-  }
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  @apply bg-grey-100;
+}
+
+/* 선교미션 하단 오른쪽 스크롤 간격 */
+[data-tidings-mission-container]::-webkit-scrollbar-track {
+  margin: 24px 0;
 }
 
 /* 메인 탑배너 스와이퍼 설정 */
@@ -454,6 +460,7 @@
   }
 }
 
+/* input 스타일 수정 */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

@@ -9,13 +9,14 @@ const HomeCampaignCard = ({ item }) => {
       onClick={() => {
         navigate(`/news/${item?.category}/detail?articleId=${item?.id}`);
       }}
-      className={`h-fit w-full max-w-352 max-lg:min-h-179 max-lg:max-w-[unset]`}
+      className={`h-fit w-full max-w-352 rounded-16 max-lg:min-h-179 max-lg:max-w-[unset]`}
     >
       <button
         style={{
           backgroundImage: `url("${item?.src}")`,
+          transition: `1s`,
         }}
-        className={`flex aspect-[352/240] h-full max-h-240 w-full items-start justify-start rounded-8 bg-cover bg-center bg-no-repeat px-12 py-12 max-lg:aspect-[175/119] max-lg:h-fit max-lg:w-full`}
+        className={`flex aspect-[352/240] h-full max-h-240 w-full items-start justify-start rounded-16 bg-cover bg-center bg-no-repeat px-12 py-12 hover:scale-110 hover:bg-contain max-lg:aspect-[175/119] max-lg:h-fit max-lg:w-full max-lg:rounded-8`}
       >
         {item?.tag?.map((tag, key) => {
           if (tag?.id === 1 || tag?.id === 3) {

@@ -30,7 +30,7 @@ const BranchesCard = props => {
             Website
           </div>
           <a
-            href={`https://${website}`}
+            href={`${website}`}
             className='text-regular16 max-lg:text-regular14 text-gray-500 underline underline-offset-2'
             target='_blank'
             rel='noopener noreferrer'

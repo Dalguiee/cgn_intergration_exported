@@ -55,7 +55,7 @@ const MediaBroadcastSystem = ({ mobile, sections }) => {
         className={`flex w-full max-w-1200 flex-col items-center justify-start`}
       >
         <p
-          className={`text-bold32 max-lg:text-bold24 mb-40 w-full text-grey-900 max-lg:mb-24 max-lg:text-center`}
+          className={`text-bold48 max-lg:text-bold24 mb-40 w-full text-center text-grey-900 max-lg:mb-24 max-lg:text-center`}
         >
           케이블/IPTV
         </p>
@@ -112,7 +112,7 @@ const MediaBroadcastSystem = ({ mobile, sections }) => {
         className={`mt-120 flex w-full max-w-1200 flex-col items-center justify-start max-lg:mt-60`}
       >
         <p
-          className={`text-bold32 max-lg:text-bold24 mb-40 w-full max-lg:mb-24 max-lg:text-center`}
+          className={`text-bold48 max-lg:text-bold24 mb-40 w-full text-center max-lg:mb-24 max-lg:text-center`}
         >
           위성
         </p>

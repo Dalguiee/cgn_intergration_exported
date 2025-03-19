@@ -57,7 +57,7 @@ export default function MainRouter() {
     window?.addEventListener('popstate', scrollRetore);
 
     return () => window?.removeEventListener('popstate', scrollRetore);
-  }, [window?.PopStateEvent]);
+  }, [window?.PopStateEvent, location?.pathname]);
 
   // 페이지 변환시 맨 위로
   useEffect(() => {

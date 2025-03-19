@@ -120,7 +120,7 @@ const CustomerCenterNotice = () => {
           listData={findedMockupData}
           setListStartNum={setListStartNum}
           setListEndNum={setListEndNum}
-          bucketNumber={3}
+          bucketNumber={10}
         />
       </div>
     </section>

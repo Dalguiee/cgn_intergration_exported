@@ -15,13 +15,13 @@ const branchesList = [
       },
       { title: 'Swift Code', detail: 'NARAUS6L090' },
     ],
-    website: 'www.cgnfoundation.com',
+    website: 'https://www.cgnfoundation.com',
     donate: '//tithe.ly/give_new/www/#/tithely/give-one-time/7446562',
   },
   {
     name: 'JAPAN',
     data: [{ title: 'Email', detail: 'japan.cgnfamily@gmail.com' }],
-    website: 'japan.cgntv.net',
+    website: 'http://japan.cgntv.net',
     donate:
       '//secure.telecomcredit.co.jp/inetcredit/secure/manual-order.pl?clientip=95680',
   },
@@ -37,7 +37,7 @@ const branchesList = [
       },
       { title: 'Swift Code', detail: 'HNBNIDJA' },
     ],
-    website: 'www.cgnindonesia.com',
+    website: 'https://www.cgnindonesia.com',
     donate: '',
   },
   {
@@ -58,7 +58,7 @@ const branchesList = [
       },
       { title: 'Swift Code', detail: 'UWCBTWTP' },
     ],
-    website: 'chinese.cgntv.net',
+    website: 'http://chinese.cgntv.net',
     donate: '//cgntv.eoffering.org.tw/',
   },
   {
@@ -79,7 +79,7 @@ const branchesList = [
       },
       { title: 'Swift Code', detail: 'SICOTHBK' },
     ],
-    website: 'cgnthai.net',
+    website: 'https://cgnthai.net',
     donate: '',
   },
   {

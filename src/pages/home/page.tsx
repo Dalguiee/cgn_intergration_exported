@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // 컴포넌트
 import TopBanner from '@/components/home/topBanner/homeTopBanner';

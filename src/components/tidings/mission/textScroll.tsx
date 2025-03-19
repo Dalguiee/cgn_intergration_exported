@@ -15,7 +15,7 @@ const TextScroll = () => {
         className={`flex items-center justify-center gap-34`}
       >
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -25,7 +25,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -35,7 +35,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -45,7 +45,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -55,7 +55,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -65,7 +65,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -75,7 +75,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -85,7 +85,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -95,7 +95,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -105,7 +105,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -115,7 +115,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -125,7 +125,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -135,7 +135,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -145,7 +145,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -155,7 +155,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -165,7 +165,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -175,7 +175,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -185,7 +185,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -195,7 +195,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -205,7 +205,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -215,7 +215,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>
@@ -225,7 +225,7 @@ const TextScroll = () => {
           alt=''
         />
         <span className={`text-bold78 text-nowrap text-grey-900`}>
-          {location.pathname.includes('/tidings/mission')
+          {location.pathname.includes('/news/story')
             ? `CGN Mission Story`
             : `CGN Supporter Story`}
         </span>

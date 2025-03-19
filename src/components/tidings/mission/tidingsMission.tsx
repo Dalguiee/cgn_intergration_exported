@@ -220,11 +220,16 @@ const TidingsMission = () => {
           {/* 텍스트 애니메이션 하단 오른쪽 리스트 구역입니다 */}
           <div
             ref={contentBox}
-            className={`relative flex h-656 w-full flex-col items-center justify-start gap-16 overflow-y-scroll`}
+            data-tidings-mission-container
+            className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-scroll`}
           >
             <div
-              style={{ top: `${bgBoxPositon}px`, transition: `0.25s` }}
-              className={`absolute left-0 z-10 h-80 w-full rounded-16 bg-white-solid shadow-sm`}
+              style={{
+                top: `${bgBoxPositon}px`,
+                transition: `0.25s`,
+                boxShadow: `0 0 30px 1px #ececec`,
+              }}
+              className={`absolute left-0 z-10 h-80 w-[calc(100%-16px)] rounded-16 bg-white-solid`}
             ></div>
             {findedMockupData?.map((data, key) => (
               <button
@@ -240,7 +245,7 @@ const TidingsMission = () => {
                     `${`/news/${pageMode}/detail?articleId=${data?.id}`}`
                   );
                 }}
-                className={`relative z-20 flex h-80 w-full items-center justify-between px-24 py-24`}
+                className={`relative z-20 flex h-80 w-[calc(100%-16px)] items-center justify-between px-24 py-24`}
                 key={data?.id}
               >
                 <div className={`flex items-center justify-center gap-16`}>
