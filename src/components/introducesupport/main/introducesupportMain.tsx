@@ -128,7 +128,7 @@ const IntroducesupportMain = () => {
       </section>
       {!supportTab && (
         <div
-          className={`${mobile ? `` : `hidden`} ${isVisible ? `flex` : `fixed bottom-0 max-lg:flex`} z-10 h-88 w-full justify-center bg-white-solid pt-16`}
+          className={`${mobile ? `` : `hidden`} ${isVisible ? `absolute bottom-0 flex translate-y-[100%] transform` : `fixed max-lg:flex`} bottom-0 z-10 h-88 w-full justify-center bg-white-solid pt-16`}
           data-comment='후원페이지 FOOTER 플로팅'
         >
           <button
