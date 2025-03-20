@@ -48,7 +48,10 @@ const IntroduceRecruit = () => {
   }, []);
 
   return (
-    <section className={`flex w-full flex-col items-center justify-start`}>
+    <section
+      data-aos='fade-up'
+      className={`flex w-full flex-col items-center justify-start`}
+    >
       <div
         className={`flex w-full max-w-1200 flex-col items-center justify-start gap-60 pb-120 pt-40 max-lg:pb-60 max-lg:pt-0`}
       >

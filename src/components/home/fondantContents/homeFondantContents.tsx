@@ -11,7 +11,7 @@ const HomeFondantContents = () => {
       style={{
         backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/bg/section3_bg.png)`,
       }}
-      className={`flex h-906 w-full flex-col items-start justify-center overflow-hidden bg-cover bg-center bg-no-repeat pr-16 max-lg:h-300 lg:pl-180`}
+      className={`flex h-906 w-full flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat pr-16 max-lg:h-300 lg:pl-180`}
     >
       {/* 컨텐츠 헤더 */}
       <div

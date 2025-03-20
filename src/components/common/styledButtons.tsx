@@ -77,7 +77,7 @@ const StyledButtons = ({
       onClick={() => {
         onClick();
       }}
-      className={`${className} flex items-center justify-center gap-8 text-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
+      className={`${className} flex items-center justify-center gap-8 whitespace-nowrap ${downloadMode ? `rounded-4` : `rounded-8`} max-lg:gap-4 ${formModeObj && formModeObj?.className} ${colorModeObj && colorModeObj?.className}`}
     >
       <img
         src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/play_store.svg`}

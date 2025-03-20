@@ -7,6 +7,7 @@ import StyledButtons from '@/components/common/styledButtons';
 const MediaHowToUse = () => {
   return (
     <section
+      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start bg-grey-50 pb-129 pt-100 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div className={`w-full max-w-1200`}>

@@ -55,7 +55,7 @@ const BottomHeader = ({
                 }}
               >
                 <span
-                  className={`${location.pathname.includes(menu?.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18 text-nowrap`}
+                  className={`${location.pathname.includes(menu?.path) ? 'text-primary-500' : 'text-grey-900'} text-bold18 whitespace-nowrap`}
                 >
                   {menu?.text}
                 </span>
@@ -76,7 +76,7 @@ const BottomHeader = ({
                       );
                       setDepthActive(false);
                     }}
-                    className={`${location?.pathname?.includes(subMenu?.link) ? 'text-bold16 text-white-solid' : 'text-regular16 text-primary-200'} text-nowrap hover:text-primary-100`}
+                    className={` ${location?.pathname?.includes(subMenu?.link) ? (location?.search?.includes(subMenu?.query) ? `text-bold16 text-white-solid` : `text-regular16 text-primary-200`) : 'text-regular16 text-primary-200'} whitespace-nowrap hover:text-primary-100`}
                   >
                     {subMenu?.text}
                   </button>

@@ -17,6 +17,18 @@ const HomePage = () => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
   const [popupOpen, setPopupOpen] = useState(false);
 
+  // 저장된 스크롤 위치로 이동
+  useEffect(() => {
+    const scrollRestore = () => {
+      const savedScrollY = sessionStorage.getItem('scrollY');
+      if (savedScrollY !== null) {
+        window.scrollTo(0, parseInt(savedScrollY, 10));
+      }
+      sessionStorage.removeItem('scrollY');
+    };
+    scrollRestore();
+  }, [location?.pathname]);
+
   return (
     <section>
       <Popup popupOpen={popupOpen} setPopupOpen={setPopupOpen} />
@@ -25,16 +37,16 @@ const HomePage = () => {
       <HomeFondantContents />
       <HomeTidings />
       <section
-        className={`overflow-x-scroll bg-secondary-brown_bg_2 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
+        className={`h-fit overflow-x-scroll bg-secondary-brown_bg_2 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
         <HomeTowPartedBanner mobile={mobile} />
       </section>
       <HomeMission mobile={mobile} />
-      <section className={`pb-80 max-lg:pb-12 max-lg:pt-60`}>
+      <section className={`h-fit pb-80 max-lg:pb-12 max-lg:pt-60`}>
         <HomeOnePartedBanner mobile={mobile} />
       </section>
       <section
-        className={`overflow-x-scroll pb-120 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
+        className={`h-fit overflow-x-scroll pb-120 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
         <HomeTowPartedBanner mobile={mobile} />
       </section>

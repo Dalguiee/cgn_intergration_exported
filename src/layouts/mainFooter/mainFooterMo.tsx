@@ -10,7 +10,7 @@ const MainFooterMo = ({ linkData, selectedLand, setSelectedLand }) => {
 
   return (
     <footer
-      className={`hidden w-full flex-col items-center justify-center gap-24 bg-grey-50 px-16 py-32 max-lg:flex`}
+      className={`relative z-[70] hidden w-full flex-col items-center justify-center gap-24 bg-grey-50 px-16 py-32 max-lg:flex`}
     >
       <div className={`flex w-full flex-wrap items-start justify-start gap-4`}>
         <button

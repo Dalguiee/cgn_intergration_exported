@@ -10,7 +10,7 @@ const MainFooterPc = ({ linkData, selectedLand, setSelectedLand }) => {
 
   return (
     <footer
-      className={`flex h-fit w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 py-70 max-lg:hidden`}
+      className={`relative z-[70] flex h-fit w-full items-center justify-center border-t-1 border-grey-200 bg-white-solid px-20 py-70 max-lg:hidden`}
     >
       <div
         className={`flex h-96 w-full max-w-1560 items-center justify-between`}

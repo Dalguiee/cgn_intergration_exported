@@ -68,6 +68,13 @@ const ActivityVisit = () => {
         >
           {oddDatas?.map((item, key) => (
             <div
+              data-aos={
+                item?.exception
+                  ? `fade-left`
+                  : item?.reverse
+                    ? `fade-up`
+                    : `fade-right`
+              }
               key={key}
               className={`flex w-full items-end justify-start gap-16 max-lg:flex-col max-lg:items-center`}
             >

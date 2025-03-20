@@ -216,7 +216,7 @@ const IntroducesupportAnniversary = () => {
   const [popup, setPopup] = useState(false);
 
   return (
-    <div className='w-full'>
+    <div className='relative w-full'>
       {/* 메인 배너 */}
       <div className='w-full'>
         <img
@@ -230,7 +230,6 @@ const IntroducesupportAnniversary = () => {
           className='hidden w-full max-lg:block'
         />
       </div>
-
       <button
         onClick={() => {
           window.open(
@@ -239,7 +238,7 @@ const IntroducesupportAnniversary = () => {
           );
         }}
         style={{ transition: `0.5s` }}
-        className={`${isVisible ? `hidden` : `block`} ${scrollTopStatus ? `` : `fixed bottom-0`} text-bold24 z-[70] h-64 w-full bg-secondary-pink text-white-solid`}
+        className={` ${scrollTopStatus ? `` : isVisible ? `absolute bottom-0` : `fixed bottom-0`} text-bold24 z-[70] h-64 w-full bg-secondary-pink text-white-solid`}
       >
         기념일 후원하기
       </button>
@@ -741,20 +740,7 @@ const IntroducesupportAnniversary = () => {
           문의 02-796-2243
         </div>
       </div>
-      <button
-        ref={intersectionRef}
-        onClick={() => {
-          window.open(
-            `https://online.mrm.or.kr/yVGkJ95/?utm_source=%EA%B8%B0%ED%8A%B9%ED%95%98%EB%8D%B0%EC%9D%B4`,
-            `_blank`
-          );
-        }}
-        style={{ transition: `0.5s` }}
-        className={`text-bold24 z-[70] h-64 w-full bg-secondary-pink text-white-solid`}
-      >
-        기념일 후원하기
-      </button>
-
+      <div data-comment='하단 플로팅 앵커' ref={intersectionRef}></div>
       {/* 전문보기 팝업 */}
       {popup && <AnniversaryPopup isOpen={setPopup} />}
     </div>

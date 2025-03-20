@@ -25,30 +25,37 @@ const centerMenu = [
     text: '후원안내',
     path: '/donation/',
     link: '/donation/media',
+    query: ``,
     subMenu: [
       {
         text: '미디어선교 후원',
         link: '/donation/media',
+        query: ``,
       },
       {
         text: '기념일 후원',
         link: '/donation/anniversary',
+        query: ``,
       },
       // {
       //   text: '교회/기업 후원',
       //   link: '/donation/legacy',
+      //   query: ``
       // },
       // {
       //   text: '유산 후원',
       //   link: '/donation/unknown',
+      //   query: ``
       // },
       {
         text: '해외지사 후원',
         link: '/donation/global',
+        query: ``,
       },
       {
         text: '후원내역 보고',
         link: '/donation/report',
+        query: ``,
       },
     ],
   },
@@ -57,26 +64,32 @@ const centerMenu = [
     text: '소개',
     path: '/about/',
     link: '/about/mission',
+    query: ``,
     subMenu: [
       {
         text: '미션&비전',
         link: '/about/mission',
+        query: ``,
       },
       {
         text: '기관 소개',
         link: '/about/organization',
+        query: ``,
       },
       {
         text: '해외지사 소개',
         link: '/about/branch',
+        query: ``,
       },
       {
         text: '홍보대사',
         link: '/about/ambassador',
+        query: ``,
       },
       {
         text: '채용',
         link: '/about/recruit',
+        query: ``,
       },
     ],
   },
@@ -85,30 +98,37 @@ const centerMenu = [
     text: '소식',
     path: `/news/`,
     link: '/news/campaign',
+    query: ``,
     subMenu: [
       {
         text: '캠페인/이벤트',
         link: '/news/campaign',
+        query: ``,
       },
       {
         text: '선교 스토리',
         link: '/news/story',
+        query: ``,
       },
       {
         text: '후원 스토리',
         link: '/news/supporter',
+        query: ``,
       },
       {
         text: '보도 자료',
         link: '/news/press',
+        query: ``,
       },
       // {
       //   text: '외부 소식',
       //   link: '/news/partner',
+      //   query: ``
       // },
       // {
       //   text: '매거진',
       //   link: '/news/magazine',
+      //   query: ``
       // },
     ],
   },
@@ -117,18 +137,22 @@ const centerMenu = [
     text: '참여',
     path: `/participate/`,
     link: '/participate/event',
+    query: ``,
     subMenu: [
       // {
       //   text: '중보기도 신청',
       //   link: '/activity/intercessoryprayer',
+      //   query: ``
       // },
       // {
       //   text: '자원봉사단 신청',
       //   link: '/activity/serviceteam',
+      //   query: ``
       // },
       {
         text: '행사/견학 신청',
         link: '/participate/event',
+        query: ``,
       },
     ],
   },
@@ -201,6 +225,18 @@ const MainHeader = () => {
       setBurger(false);
     }
   }, [mobile]);
+
+  // 스크롤시 2depth 닫기
+  useEffect(() => {
+    const depthClose = () => {
+      setDepthActive(false);
+    };
+
+    window.addEventListener(`scroll`, depthClose);
+    return () => {
+      window.removeEventListener(`scroll`, depthClose);
+    };
+  }, [location?.pathname]);
 
   // 버거 visible 유무
   useEffect(() => {

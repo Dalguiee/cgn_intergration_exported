@@ -64,6 +64,7 @@ const HomeMission = ({ mobile }) => {
             <motion.button
               style={{ transition: `1.3s` }}
               onClick={() => {
+                sessionStorage.setItem('scrollY', window.scrollY.toString());
                 navigate(item?.link);
               }}
               variants={mobile ? `` : fadeUpX}

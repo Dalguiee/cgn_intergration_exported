@@ -15,7 +15,13 @@ import MoTabBroadcastPlatform from '@/components/introducesupport/main/moTabBroa
 import MoTabContents from '@/components/introducesupport/main/moTabContents';
 import MoTabGlobal from '@/components/introducesupport/main/moTabGlobal';
 
+// 컴포넌트
+import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
+
 const IntroducesupportMain = () => {
+  const { intersectionRef, isVisible } = IntersectionObserverScanner();
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   //현재 후원하기 탭 상태
@@ -122,8 +128,8 @@ const IntroducesupportMain = () => {
       </section>
       {!supportTab && (
         <div
-          className='fixed bottom-0 z-10 hidden h-88 w-full justify-center bg-white-solid pt-16 max-lg:flex'
-          data-comment='후원페이지 FOOTER'
+          className={`${mobile ? `` : `hidden`} ${isVisible ? `flex` : `fixed bottom-0 max-lg:flex`} z-10 h-88 w-full justify-center bg-white-solid pt-16`}
+          data-comment='후원페이지 FOOTER 플로팅'
         >
           <button
             onClick={() => {
@@ -151,6 +157,8 @@ const IntroducesupportMain = () => {
           </button>
         </div>
       )}
+      {/* 후원하기 Footer Anchor */}
+      <div data-comment='하단 플로팅 앵커' ref={intersectionRef}></div>
     </>
   );
 };

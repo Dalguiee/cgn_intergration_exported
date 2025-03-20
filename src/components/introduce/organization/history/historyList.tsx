@@ -53,17 +53,14 @@ const HistoryList = ({
           ))}
         </div>
       </div>
-      <div
+      <motion.div
+        animate={animateToggle ? `hidden` : `visible`}
+        variants={contentVariants}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`ml-240 flex w-full flex-col items-start justify-start gap-24 px-66 pt-15 max-lg:ml-24 max-lg:px-0 max-lg:py-6`}
       >
         {historyData?.[selectedDataIdx]?.map((item, key) => (
-          <motion.div
-            animate={animateToggle ? `hidden` : `visible`}
-            variants={contentVariants}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className={`flex items-start justify-start`}
-            key={key}
-          >
+          <div className={`flex items-start justify-start`} key={key}>
             <p
               className={`text-bold16 max-lg:text-bold14 flex w-88 flex-shrink-0 items-center justify-start text-grey-500 max-lg:w-39 max-lg:flex-shrink-0`}
             >
@@ -77,9 +74,9 @@ const HistoryList = ({
             >
               {HTMLReactParser(item?.text)}
             </p>
-          </motion.div>
+          </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -57,11 +57,11 @@ const HomeCampaignEvent = () => {
       <div
         className={`flex w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:flex-col max-lg:gap-12`}
       >
-        {/* 왼쪽 및 반응형 위쪽 */}
+        {/* 왼쪽 빅 컨텐츠 및 반응형 위쪽 */}
         <HomeLeftMainCampaign
           campaignData={campaignData}
         ></HomeLeftMainCampaign>
-        {/* 오른쪽 및 반응형 아래쪽 */}
+        {/* 오른쪽 스몰 컨텐츠 및 반응형 아래쪽 */}
         <div
           className={`grid h-full w-full max-w-728 grid-cols-2 grid-rows-2 gap-24 max-lg:w-full max-lg:max-w-[unset] max-lg:grid-rows-1 max-lg:gap-12`}
         >

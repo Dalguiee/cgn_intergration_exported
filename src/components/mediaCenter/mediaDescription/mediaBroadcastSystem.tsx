@@ -49,6 +49,7 @@ const MediaBroadcastSystem = ({ mobile, sections }) => {
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div
+        data-aos='fade-up'
         ref={el => {
           sections.current[1] = el;
         }}
@@ -106,6 +107,7 @@ const MediaBroadcastSystem = ({ mobile, sections }) => {
       </div>
 
       <div
+        data-aos='fade-up'
         ref={el => {
           sections.current[2] = el;
         }}

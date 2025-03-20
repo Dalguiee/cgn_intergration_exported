@@ -96,7 +96,7 @@ const CustomerCenterNoticeDetail = () => {
                 );
               }}
             >
-              <span className={`text-bold16 text-nowrap text-grey-900`}>
+              <span className={`text-bold16 whitespace-nowrap text-grey-900`}>
                 이전 글
               </span>
               <span
@@ -106,7 +106,7 @@ const CustomerCenterNoticeDetail = () => {
               </span>
             </button>
             <span
-              className={`text-regular14 text-nowrap text-grey-400 max-lg:hidden`}
+              className={`text-regular14 whitespace-nowrap text-grey-400 max-lg:hidden`}
             >
               {beforeData?.date}
             </span>
@@ -125,7 +125,7 @@ const CustomerCenterNoticeDetail = () => {
                   );
                 }}
               >
-                <span className={`text-bold16 text-nowrap text-grey-900`}>
+                <span className={`text-bold16 whitespace-nowrap text-grey-900`}>
                   다음 글
                 </span>
                 <span
@@ -135,7 +135,7 @@ const CustomerCenterNoticeDetail = () => {
                 </span>
               </button>
               <span
-                className={`text-regular14 text-nowrap text-grey-400 max-lg:hidden`}
+                className={`text-regular14 whitespace-nowrap text-grey-400 max-lg:hidden`}
               >
                 {afterData?.date}
               </span>

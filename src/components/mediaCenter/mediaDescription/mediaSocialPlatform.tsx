@@ -50,6 +50,7 @@ const MediaSocialPlatform = ({ sections }) => {
       className={`flex w-full flex-col items-center justify-start bg-secondary-blue pb-120 pt-120 max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
     >
       <div
+        data-aos='fade-up'
         className={`flex w-full max-w-1200 flex-col items-center justify-start`}
       >
         <div className={`mb-40 text-center max-lg:mb-24`}>

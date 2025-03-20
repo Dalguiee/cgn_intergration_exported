@@ -5,6 +5,7 @@ const IntroduceAmbassador = () => {
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
   return (
     <section
+      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start gap-40 px-16 pb-160 max-lg:gap-0 max-lg:pb-120 max-lg:pt-24`}
     >
       <div className={`w-full max-w-1200 max-lg:mb-24`}>

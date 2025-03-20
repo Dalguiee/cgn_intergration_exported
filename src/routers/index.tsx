@@ -60,9 +60,9 @@ export default function MainRouter() {
   }, [window?.PopStateEvent, location?.pathname]);
 
   // 페이지 변환시 맨 위로
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location?.pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [location?.pathname]);
 
   return (
     <Routes>

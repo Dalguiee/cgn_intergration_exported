@@ -78,7 +78,7 @@ const MapIcon = ({
         <div
           className={`flex h-16 min-w-27 items-center justify-center rounded-4 bg-grey-900 px-4`}
         >
-          <span className={`text-bold10 text-nowrap text-white-solid`}>
+          <span className={`text-bold10 whitespace-nowrap text-white-solid`}>
             {item?.name}
           </span>
         </div>

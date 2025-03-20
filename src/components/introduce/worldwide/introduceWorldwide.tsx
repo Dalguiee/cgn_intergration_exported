@@ -13,6 +13,7 @@ const IntroduceWorldwide = () => {
 
   return (
     <section
+      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start overflow-hidden bg-primary-50`}
     >
       <div

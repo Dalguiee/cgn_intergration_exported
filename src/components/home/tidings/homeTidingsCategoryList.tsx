@@ -42,7 +42,7 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
               setSelectedCategoryArticleId(item?.id);
             }}
             key={item?.id}
-            className={`${item?.id === 1 ? `hidden` : ``} flex-shrink-0 px-24 max-lg:px-18 ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} max-lg:text-regular14 h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 bg-white-solid text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+            className={`${item?.id === 1 ? `hidden` : ``} flex-shrink-0 px-24 max-lg:px-18 ${item?.id == highlight ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} max-lg:text-regular14 h-48 min-w-120 whitespace-nowrap rounded-999 border-1 border-grey-200 bg-white-solid text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.type}
           </button>
@@ -56,6 +56,7 @@ const HomeCategoryList = ({ setSelectedCategoryArticleId }) => {
           className='w-139'
           arrowMode={true}
           onClick={() => {
+            sessionStorage.setItem('scrollY', window.scrollY.toString());
             navigate(`/news/story`);
           }}
         />

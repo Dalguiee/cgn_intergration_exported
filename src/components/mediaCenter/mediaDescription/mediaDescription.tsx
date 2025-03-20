@@ -41,8 +41,8 @@ const MediaDescription = () => {
   return (
     <section ref={motherSection} className={`w-full`}>
       <MediaDescriptionMainTitle sections={sections} mobile={mobile} />
-      <MediaAboutFondant sections={sections} />
-      <MediaHowToUse sections={sections} />
+      <MediaAboutFondant />
+      <MediaHowToUse />
       <MediaBroadcastSystem sections={sections} mobile={mobile} />
       <MediaSocialPlatform sections={sections} />
     </section>

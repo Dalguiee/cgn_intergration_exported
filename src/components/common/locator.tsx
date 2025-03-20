@@ -23,7 +23,7 @@ const Locator = ({ className = `` }) => {
           if (data === 'donation') {
             pathPiece = data;
             data = '후원안내';
-            pathStack = 'donation/mediaMission';
+            pathStack = 'donation/media';
           }
           if (data === 'global') {
             pathPiece = data;

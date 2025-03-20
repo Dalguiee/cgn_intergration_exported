@@ -221,7 +221,7 @@ const TidingsMission = () => {
           <div
             ref={contentBox}
             data-tidings-mission-container
-            className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-scroll`}
+            className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-auto`}
           >
             <div
               style={{

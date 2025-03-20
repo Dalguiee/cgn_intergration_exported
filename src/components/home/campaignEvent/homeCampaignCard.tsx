@@ -12,13 +12,13 @@ const HomeCampaignCard = ({ item }) => {
       className={`h-fit w-full max-w-352 rounded-16 max-lg:min-h-179 max-lg:max-w-[unset]`}
     >
       <button
-        className={`relative flex aspect-[352/240] h-full max-h-240 w-full items-start justify-start overflow-hidden rounded-16 max-lg:aspect-[175/119] max-lg:h-fit max-lg:w-full max-lg:rounded-8`}
+        className={`relative flex aspect-[352/240] w-full items-start justify-start overflow-hidden rounded-16 max-lg:aspect-[175/119] max-lg:h-fit max-lg:w-full max-lg:rounded-8`}
       >
         <div
           className={`absolute h-full w-full bg-cover bg-center bg-no-repeat hover:scale-110`}
           style={{
             backgroundImage: `url("${item?.src}")`,
-            transition: `1s`,
+            transition: `0.8s`,
           }}
         ></div>
         {item?.tag?.map((tag, key) => {
@@ -27,7 +27,7 @@ const HomeCampaignCard = ({ item }) => {
               <TagIcon
                 key={key}
                 id={tag?.id}
-                className={`z-[1] ml-12 mt-16`}
+                className={`z-[1] ml-12 mt-16 max-lg:ml-8 max-lg:mt-8`}
                 mode={'mode1'}
               />
             );

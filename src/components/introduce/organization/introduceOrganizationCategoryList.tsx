@@ -63,7 +63,7 @@ const IntroduceOrganizationCategoryList = ({}) => {
               });
             }}
             key={item?.id}
-            className={`bg-white-solid ${item?.params == subDepth ? 'text-bold16 max-lg:text-bold14 border-primary-400 text-primary-500' : 'text-regular16 max-lg:text-regular14'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+            className={`bg-white-solid ${item?.params == subDepth ? 'text-bold16 max-lg:text-bold14 border-primary-400 text-primary-500' : 'text-regular16 max-lg:text-regular14'} h-48 min-w-120 whitespace-nowrap rounded-999 border-1 border-grey-200 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.type}
           </button>

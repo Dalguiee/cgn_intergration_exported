@@ -51,6 +51,7 @@ const HomeNoticeMain = () => {
             ))}
           </div>
           <div
+            data-aos='fade-up'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/recruit_banner.png)`,
             }}

@@ -28,24 +28,16 @@ const HomePaymentBox = () => {
   // 버튼항목과 송신하는 state
   const [selectedPrice, setSelectedPrice] = useState({});
 
-  const [clickScan, setClickScan] = useState(false);
-
-  useEffect(() => {
-    if (clickScan) {
-      setClickScan(false);
-    }
-  }, [clickScan]);
-
   useEffect(() => {
     if (selectedSubscribes?.id === 2) {
       window.open(
         `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
         `_blank`
       );
+      setselectedSubscribes(subscribesData?.[0]);
     }
-    console.log(selectedSubscribes?.id);
     // setselectedSubscribes([]);
-  }, [selectedSubscribes, clickScan]);
+  }, [selectedSubscribes]);
 
   return (
     <div
@@ -62,7 +54,6 @@ const HomePaymentBox = () => {
           selectedItem={selectedSubscribes}
           setSelectedItem={setselectedSubscribes}
           className='w-full max-w-290 max-lg:min-w-full'
-          setClickScan={setClickScan}
         />
         <div
           className={`flex h-64 w-full max-w-874 items-center justify-center gap-8 max-lg:h-48 max-lg:min-w-full max-lg:gap-5`}

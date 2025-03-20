@@ -17,6 +17,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
+import HomeTobBannerContext from './homeTobBannerContext';
 
 // 데이터
 export const paymentMockupData = [
@@ -94,26 +96,7 @@ const HomeTopBanner = ({ mobile }) => {
               className={`flex w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-36px)] max-lg:justify-end lg:pt-200`}
               key={key}
             >
-              <div
-                className={`w-full max-w-1560 px-16 max-lg:mb-40 max-lg:pl-24`}
-              >
-                <div
-                  className={`flex flex-col items-start justify-start lg:mb-200`}
-                >
-                  <span
-                    className={`text-bold78 max-lg:text-bold32 mb-12 text-white-solid max-lg:mb-8`}
-                  >
-                    {obj?.title}
-                    <br />
-                    {obj?.depthTitle !== '' ? obj?.depthTitle : ''}
-                  </span>
-                  <span
-                    className={`text-regular32 max-lg:text-regular16 text-grey-50`}
-                  >
-                    {obj?.subTitle}
-                  </span>
-                </div>
-              </div>
+              <HomeTobBannerContext obj={obj} />
             </SwiperSlide>
           ))}
         </Swiper>

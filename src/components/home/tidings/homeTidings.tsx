@@ -37,7 +37,7 @@ const HomeTidings = () => {
 
   return (
     <section
-      className={`flex h-890 flex-col items-start justify-center gap-40 overflow-hidden bg-secondary-brown_bg_2 pl-180 max-lg:h-496 max-lg:gap-0 max-lg:pl-0 max-lg:pt-60 lg:pr-16`}
+      className={`flex h-890 flex-col items-center justify-center gap-40 overflow-hidden bg-secondary-brown_bg_2 pl-180 max-lg:h-496 max-lg:gap-0 max-lg:pl-0 max-lg:pt-60 lg:pr-16`}
     >
       <div
         className={`flex w-full justify-between px-16 pr-16 max-lg:mb-11 lg:hidden`}
@@ -45,6 +45,7 @@ const HomeTidings = () => {
         <span className={`text-bold24 text-grey-900`}>소식</span>
         <button
           onClick={() => {
+            sessionStorage.setItem('scrollY', window.scrollY.toString());
             navigate(`/news/story`);
           }}
           className={`flex items-center justify-center`}
@@ -56,7 +57,7 @@ const HomeTidings = () => {
           />
         </button>
       </div>
-      <div className={`w-full overflow-visible`}>
+      <div className={`w-full max-w-1560 overflow-visible`}>
         <HomeCategoryList
           setSelectedCategoryArticleId={setSelectedCategoryArticleId}
         />

@@ -33,7 +33,7 @@ const PolicyCategoryList = () => {
               navigate(item?.path);
             }}
             key={idx}
-            className={`bg-white-solid ${location?.pathname?.includes(item?.path) ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 text-nowrap rounded-999 border-1 border-grey-200 px-24 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
+            className={`bg-white-solid ${location?.pathname?.includes(item?.path) ? 'text-bold16 border-primary-400 text-primary-500' : 'text-regular16'} h-48 min-w-120 whitespace-nowrap rounded-999 border-1 border-grey-200 px-24 text-grey-300 max-lg:h-36 max-lg:min-w-96 max-lg:px-12`}
           >
             {item?.name}
           </button>

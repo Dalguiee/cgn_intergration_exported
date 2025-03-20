@@ -89,17 +89,13 @@ const IntroduceCEO = () => {
           className={`flex h-608 w-full max-w-1200 flex-col items-start justify-start bg-cover bg-center bg-no-repeat pr-227 max-lg:h-fit max-lg:max-h-[unset] max-lg:!bg-[url()] max-lg:px-0 max-lg:pb-0 max-lg:pt-0`}
         >
           <div className={`mb-40`}>
-            <p
-              className={`text-bold40 max-lg:text-bold24 line-clamp-1 text-grey-900 max-lg:line-clamp-none`}
-            >
+            <p className={`text-bold40 max-lg:text-bold24 text-grey-900`}>
               안녕하세요.
               <span className={`max-lg:hidden`}>&nbsp;</span>
               <br className={`lg:hidden`} />
               CGN 대표 전진국 입니다.
             </p>
-            <p
-              className={`text-bold18 max-lg:text-bold16 mt-12 line-clamp-3 text-grey-900 max-lg:line-clamp-none`}
-            >
+            <p className={`text-bold18 max-lg:text-bold16 mt-12 text-grey-900`}>
               CGN이 하나님의 은혜 가운데 20주년을 맞이했습니다.
               <br />
               지난 20년 동안 CGN을 통해 전 세계 곳곳에 복음이 전해졌으며,
@@ -108,9 +104,7 @@ const IntroduceCEO = () => {
               주신 하나님께 모든 영광을 올려드립니다.
             </p>
           </div>
-          <p
-            className={`text-regular18 max-lg:text-regular14 text-grey-500 max-lg:line-clamp-none`}
-          >
+          <p className={`text-regular18 max-lg:text-regular14 text-grey-500`}>
             2005년, ‘온 세상을 위한 복음의 통로’라는 미션 아래 위성방송을 시작한
             CGN은 <br />
             변화하는 미디어 환경 속에서 인터넷, 유튜브, 모바일, IPTV, 드림온
@@ -124,26 +118,20 @@ const IntroduceCEO = () => {
             제작하며 복음 확산에 힘쓰고 있습니다.
           </p>
           <br />
-          <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-4 text-grey-500 max-lg:line-clamp-none`}
-          >
+          <p className={`text-regular18 max-lg:text-regular14 text-grey-500`}>
             이 모든 여정은 하나님의 인도하심과 더불어 CGN을 사랑하고 기도해
             주시는 여러분의 헌신과 후원이 있었기에 가능했습니다. <br />
             100% 후원으로 운영되는 CGN이 지속 가능한 선교 방송으로 나아갈 수
             있도록 함께해 주신 후원자님들, 협력 교회, 그리고 동역자 여러분께
             진심으로 감사드립니다. <br />
           </p>
-          <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-4 text-grey-500 max-lg:line-clamp-none`}
-          >
+          <p className={`text-regular18 max-lg:text-regular14 text-grey-500`}>
             성년이 된 CGN은 단순한 미디어 기관을 넘어 ‘선교의 내일을 더(+,
             more)하는’ 미디어 선교의 선봉으로서 맡겨진 사명에 최선을
             다하겠습니다.
           </p>
           <br />
-          <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-4 text-grey-500 max-lg:line-clamp-none`}
-          >
+          <p className={`text-regular18 max-lg:text-regular14 text-grey-500`}>
             건강한 영성과 끊임없는 혁신을 바탕으로 더욱 견고한 미디어선교
             플랫폼을 구축하고, 세상 끝까지 복음을 전하는 도구가 되겠습니다.{' '}
             <br />

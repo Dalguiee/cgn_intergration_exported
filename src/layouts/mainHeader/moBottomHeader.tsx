@@ -14,7 +14,7 @@ const MoBottomHeader = () => {
       <button
         onClick={() => {
           window.open(
-            `https://mrmweb.hsit.co.kr/v2/Member/MemberLogin.aspx`,
+            `https://mrmweb.hsit.co.kr/v2/?server=7kOXiyc9Ff6n5QWUwZDJyQ==&action=info`,
             `_blank`
           );
         }}

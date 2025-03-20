@@ -28,8 +28,8 @@ const TidingsBroadcast = () => {
 
   // init
   useEffect(() => {
-    // setFindedMockupData(mockupExportedData);
-    setFindedMockupData([]);
+    setFindedMockupData(mockupExportedData);
+    // setFindedMockupData([]);
   }, [location?.pathname]);
 
   return (

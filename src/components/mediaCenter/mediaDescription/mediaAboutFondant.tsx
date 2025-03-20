@@ -7,6 +7,7 @@ import MediaAboutFondantCard from './mediaAboutFondantCard';
 const MediaAboutFondant = () => {
   return (
     <section
+      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start pb-120 pt-120 max-lg:pb-60 max-lg:pt-60`}
     >
       <div className={`w-full max-w-1200`}>

@@ -29,6 +29,7 @@ const HomeNoticeHeader = () => {
           colorMode='mode3'
           arrowMode={true}
           onClick={() => {
+            sessionStorage.setItem('scrollY', window.scrollY.toString());
             navigate(`/customer/notice`);
           }}
         />
