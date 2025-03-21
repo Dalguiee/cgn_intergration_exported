@@ -487,7 +487,7 @@ const IntroducesupportAnniversary = () => {
             <div className='text-bold32 max-lg:text-bold24 mb-60 max-lg:mb-40'>
               기념일 후원증서를 신청하세요!
             </div>
-            <div className='mb-24 flex gap-12 max-lg:w-full max-lg:flex-col'>
+            <div className='mb-24 flex w-full gap-12 max-lg:w-full max-lg:flex-col'>
               <div className='flex w-full max-w-233 flex-col max-lg:w-full max-lg:max-w-[unset]'>
                 <div className='text-regular14 mb-8 ml-4'>성명</div>
                 <DefaultInput

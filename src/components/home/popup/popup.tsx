@@ -71,8 +71,8 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
   return (
     <>
       <div
-        style={{ boxShadow: `0 0 8px 0px #969696` }}
-        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-[50%] top-[50%] z-[110] h-fit w-full max-w-600 translate-x-[-50%] translate-y-[-50%] transform overflow-hidden max-lg:w-full max-lg:max-w-345`}
+        style={{ boxShadow: `0 0 10px 0px rgba(0, 0, 0, 0.25)` }}
+        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-[50%] top-[50%] z-[110] h-fit w-full max-w-458 translate-x-[-50%] translate-y-[-50%] transform overflow-hidden max-lg:w-full max-lg:max-w-345`}
       >
         <Swiper
           data-popup-swiper
@@ -109,14 +109,14 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
               style={{
                 backgroundImage: `${mobile ? `url(${obj?.moSrc})` : `url(${obj?.src})`}`,
               }}
-              className={`h-497 w-full bg-cover bg-center bg-no-repeat max-lg:h-292`}
+              className={`h-390 w-full bg-cover bg-center bg-no-repeat max-lg:h-292`}
               key={key}
             ></SwiperSlide>
           ))}
         </Swiper>
 
         <div
-          className={`flex w-full items-center justify-between bg-white-solid px-16 pb-20 pt-36 max-lg:px-12 max-lg:py-12`}
+          className={`flex w-full items-center justify-between bg-white-solid px-16 py-20 max-lg:px-12 max-lg:py-12`}
         >
           <button
             onClick={() => {

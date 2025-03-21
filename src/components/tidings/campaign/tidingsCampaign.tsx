@@ -49,7 +49,7 @@ const TidingsCampaign = () => {
       />
       <section
         data-aos='fade-up'
-        className={`flex w-full items-center justify-center px-20 pb-0 pb-160 pt-80 max-lg:mb-20 max-lg:mt-24 max-lg:pb-0 max-lg:pt-0`}
+        className={`flex w-full items-center justify-center px-20 pb-160 pt-80 max-lg:mt-24 max-lg:pb-20 max-lg:pt-0`}
       >
         <div
           className={`grid w-1200 max-w-1560 grid-cols-3 flex-wrap items-start justify-center gap-24 max-lg:grid-cols-1`}

@@ -13,26 +13,6 @@ const BottomHeader = ({
   const location = useLocation();
   const [languageActiveIdx, setLanguageActiveIdx] = useState(0); // 활성화된 언어 인덱스
 
-  // 터치인식을 위한 ref
-  const depthBox = useRef();
-
-  // 헤더 depth 터치 스크립트
-  useEffect(() => {
-    function handleOutsideClick(event) {
-      if (depthBox?.current?.contains(event?.target)) {
-        setDepthActive(true);
-      } else {
-        setDepthActive(false);
-      }
-    }
-
-    document.addEventListener('touchstart', handleOutsideClick);
-
-    return () => {
-      document.removeEventListener('touchstart', handleOutsideClick);
-    };
-  }, []);
-
   return (
     <div
       className={`relative z-[80] flex h-80 w-full max-w-1560 flex-col items-center justify-center max-lg:h-56 max-lg:w-full`}
@@ -53,10 +33,6 @@ const BottomHeader = ({
           />
         </button>
         <div
-          ref={depthBox}
-          onMouseEnter={() => {
-            setDepthActive(true);
-          }}
           style={{ transition: `0.5s` }}
           className={`${depthActive ? `lg:gap-90 xl:gap-120` : `lg:gap-60 xl:gap-80`} absolute right-[50%] flex translate-x-[50%] transform items-center justify-between max-lg:hidden max-lg:gap-50`}
         >
@@ -66,6 +42,9 @@ const BottomHeader = ({
               className={`relative flex items-center justify-center`}
             >
               <button
+                onMouseEnter={() => {
+                  setDepthActive(true);
+                }}
                 onClick={() => {
                   navigate(menu?.link);
                   navigate(
@@ -73,6 +52,7 @@ const BottomHeader = ({
                       ? `${menu?.link}?${menu?.query}`
                       : `${menu?.link}`
                   );
+                  setDepthActive(prev => !prev);
                 }}
               >
                 <span

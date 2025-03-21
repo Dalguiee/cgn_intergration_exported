@@ -418,7 +418,7 @@
 
 /* 메인 퐁당컨텐츠 스와이퍼 */
 [data-main-fondant-swiper] .swiper-wrapper {
-  /* transition-timing-function: linear !important; */
+  transition-timing-function: linear !important;
 }
 
 /* 메인 소식 컨텐츠 스와이퍼 */
@@ -482,22 +482,22 @@
 /* 메인 퐁탕컨텐츠 스와이퍼 설정 */
 [data-main-fondant-swiper] .swiper-button-next {
   right: 3%;
-  @apply text-white-solid;
+  @apply bg-cover bg-center bg-no-repeat text-white-solid max-lg:bg-[url(/public/images/icon/slide_arrow_right.svg)];
 }
 [data-main-fondant-swiper] .swiper-button-next::after {
   opacity: 0.75;
   content: url(/public/images/icon/slide_arrow_right.svg);
-  @apply max-lg:hidden;
+  @apply max-lg:content-[""];
 }
 
 [data-main-fondant-swiper] .swiper-button-prev {
-  left: -6%;
-  @apply text-white-solid;
+  left: 3%;
+  @apply bg-cover bg-center bg-no-repeat text-white-solid max-lg:left-[0%] max-lg:bg-[url(/public/images/icon/slide_arrow_left.svg)];
 }
 [data-main-fondant-swiper] .swiper-button-prev::after {
   opacity: 0.75;
   content: url(/public/images/icon/slide_arrow_left.svg);
-  @apply max-lg:hidden;
+  @apply max-lg:content-[""];
 }
 [data-main-fondant-swiper] .swiper-button-disabled {
   opacity: 0.1;

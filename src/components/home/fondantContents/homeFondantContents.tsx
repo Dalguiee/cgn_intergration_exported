@@ -30,7 +30,7 @@ const HomeFondantContents = () => {
 
         <StyledButtons
           text='퐁당 바로가기'
-          className='w-139 max-lg:w-81 max-lg:border-none max-lg:bg-transparent max-lg:px-0'
+          className='w-143 max-lg:w-81 max-lg:border-none max-lg:bg-transparent max-lg:px-0'
           formMode='mode2-r'
           colorMode='mode3'
           onClick={() => {

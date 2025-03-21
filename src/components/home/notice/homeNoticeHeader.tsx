@@ -24,7 +24,7 @@ const HomeNoticeHeader = () => {
       <div>
         <StyledButtons
           text='바로가기'
-          className='w-112 max-lg:w-fit max-lg:!gap-0 max-lg:border-none max-lg:px-0'
+          className='w-116 max-lg:w-fit max-lg:!gap-0 max-lg:border-none max-lg:px-0'
           formMode='mode2-r'
           colorMode='mode3'
           arrowMode={true}

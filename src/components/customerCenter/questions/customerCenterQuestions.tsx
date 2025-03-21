@@ -19,6 +19,7 @@ const categoryName = [
 import DefaultInput from '@/components/common/defaultInput';
 import Pagination from '@/components/common/pagination';
 import SelectBox from '@/components/common/selectBox';
+import NoSearchResult from '@/components/common/noSearchResult';
 
 const CustomerCenterQuestions = () => {
   const location = useLocation();
@@ -50,7 +51,6 @@ const CustomerCenterQuestions = () => {
 
   // init 및 selectBox 통한 데이터 필터링
   useEffect(() => {
-    console.log(listCategory?.id);
     if (listCategory?.id === 0) {
       setFindedMockupData(questionsData);
     } else {
@@ -59,6 +59,7 @@ const CustomerCenterQuestions = () => {
       );
       setFindedMockupData(filteredData);
     }
+    // setFindedMockupData([]);
   }, [location, listCategory]);
 
   // 맨 위로 스크롤 올림
@@ -73,7 +74,7 @@ const CustomerCenterQuestions = () => {
     >
       <div className={`w-full max-w-1200`}>
         <div
-          className={`flex w-full items-start justify-between pb-24 pt-80 max-lg:mt-24 max-lg:gap-8 max-lg:py-10`}
+          className={`flex w-full items-start justify-between border-b-3 border-grey-900 pb-24 pt-80 max-lg:mt-24 max-lg:gap-8 max-lg:border-b-1 max-lg:py-16`}
         >
           <SelectBox
             listData={listData}
@@ -89,109 +90,117 @@ const CustomerCenterQuestions = () => {
             className={`max-lg:w-full max-lg:rounded-4`}
           />
         </div>
-        <div
-          className={`mb-60 w-full border-t-3 border-grey-900 max-lg:border-t-1`}
-        >
-          <table className={`w-full table-fixed`}>
-            <colgroup>
-              <col className={`w-80 max-lg:w-24`} />
-              <col className={`w-full`} />
-            </colgroup>
-            <thead className={`border-b-2 border-grey-200 max-lg:hidden`}>
-              <tr className={`h-80`}>
-                <th>
-                  <div>
-                    <span className={`text-bold18 text-grey-900`}>구분</span>
-                  </div>
-                </th>
-                <th>
-                  <div>
-                    <span className={`text-bold18 text-grey-900`}>제목</span>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {findedMockupData
-                ?.slice(listStartNum, listEndNum)
-                ?.map((item, idx) => (
-                  <>
-                    <tr
-                      style={{ transition: `0.5s` }}
-                      onClick={() => {
-                        if (listOpen === idx) {
-                          setListOpen(null);
-                        } else {
-                          setListOpen(idx);
-                        }
-                      }}
-                      key={idx}
-                      className={`h-fit cursor-pointer`}
-                    >
-                      <td>
-                        <div
+        {findedMockupData.length > 0 ? (
+          <>
+            <div className={`mb-60 w-full`}>
+              <table className={`w-full table-fixed`}>
+                <colgroup>
+                  <col className={`w-80 max-lg:w-32`} />
+                  <col className={`w-full`} />
+                </colgroup>
+                <thead className={`border-b-2 border-grey-200 max-lg:hidden`}>
+                  <tr className={`h-80`}>
+                    <th>
+                      <div>
+                        <span className={`text-bold18 text-grey-900`}>
+                          구분
+                        </span>
+                      </div>
+                    </th>
+                    <th>
+                      <div>
+                        <span className={`text-bold18 text-grey-900`}>
+                          제목
+                        </span>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {findedMockupData
+                    ?.slice(listStartNum, listEndNum)
+                    ?.map((item, idx) => (
+                      <>
+                        <tr
                           style={{ transition: `0.5s` }}
-                          className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-center py-24 max-lg:py-16`}
+                          onClick={() => {
+                            if (listOpen === idx) {
+                              setListOpen(null);
+                            } else {
+                              setListOpen(idx);
+                            }
+                          }}
+                          key={idx}
+                          className={`h-fit cursor-pointer`}
                         >
-                          <span
-                            className={`text-bold16 max-lg:text-bold12 text-grey-900`}
-                          >
-                            {listTypeFind(item?.category)?.value
-                              ? listTypeFind(item?.category)?.value
-                              : `전체`}
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
+                          <td>
+                            <div
+                              style={{ transition: `0.5s` }}
+                              className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-center py-16 max-lg:py-12 lg:px-13`}
+                            >
+                              <span
+                                className={`text-bold16 max-lg:text-bold12 line-clamp-2 text-center text-grey-500`}
+                              >
+                                {listTypeFind(item?.category)?.value
+                                  ? listTypeFind(item?.category)?.value
+                                  : `전체전체전체`}
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div
+                              style={{ transition: `0.5s` }}
+                              className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-between py-24 pl-40 pr-24 max-lg:py-16 max-lg:pl-16 max-lg:pr-0`}
+                            >
+                              <span
+                                className={`text-regular16 line-clamp-1 text-grey-900`}
+                              >
+                                {item?.title}
+                              </span>
+                              <img
+                                width={32}
+                                height={32}
+                                style={{ transition: `0.5s` }}
+                                className={`${listOpen === idx ? `rotate-[-180deg]` : `rotate-0`} pointer-events-none h-32 w-32 transform select-none object-contain max-lg:h-24 max-lg:w-24`}
+                                src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
+                                alt=''
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                        <tr
                           style={{ transition: `0.5s` }}
-                          className={`${listOpen === idx ? `mt-16` : ``} flex w-full items-center justify-between py-24 pl-40 pr-24 max-lg:py-16 max-lg:pl-16 max-lg:pr-0`}
+                          className={`${listOpen === idx ? `` : `pointer-events-none select-none`} h-fit border-b-2 border-grey-100`}
                         >
-                          <span
-                            className={`text-regular16 line-clamp-1 text-grey-900`}
-                          >
-                            {item?.title}
-                          </span>
-                          <img
-                            width={32}
-                            height={32}
-                            style={{ transition: `0.5s` }}
-                            className={`${listOpen === idx ? `rotate-[-180deg]` : `rotate-0`} pointer-events-none h-32 w-32 transform select-none object-contain max-lg:h-24 max-lg:w-24`}
-                            src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_under_grey900.svg`}
-                            alt=''
-                          />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr
-                      style={{ transition: `0.5s` }}
-                      className={`${listOpen === idx ? `` : `pointer-events-none select-none`} h-fit border-b-2 border-grey-100`}
-                    >
-                      <td colSpan={2}>
-                        <div
-                          style={{ transition: `0.5s` }}
-                          className={`${listOpen === idx ? `py-40 max-lg:mb-16 max-lg:py-24` : `pointer-events-none h-0 select-none py-0`} flex w-full items-center justify-start overflow-hidden bg-grey-50 pl-120 scrollbar-hide max-lg:px-16`}
-                        >
-                          <span
-                            style={{ transition: `0.5s` }}
-                            className={`${listOpen === idx ? `opacity-100` : `pointer-events-none select-none opacity-0`} text-regular16 max-lg:text-regular14 whitespace-pre-line text-grey-900 max-lg:text-grey-500`}
-                          >
-                            {item?.text}
-                          </span>
-                        </div>
-                      </td>
-                    </tr>
-                  </>
-                ))}
-            </tbody>
-          </table>
-        </div>
-        <Pagination
-          listData={findedMockupData}
-          setListStartNum={setListStartNum}
-          setListEndNum={setListEndNum}
-          className={`max-lg:hidden`}
-        />
+                          <td colSpan={2}>
+                            <div
+                              style={{ transition: `0.5s` }}
+                              className={`${listOpen === idx ? `py-40 max-lg:mb-16 max-lg:py-24` : `pointer-events-none h-0 select-none py-0`} flex w-full items-center justify-start overflow-hidden bg-grey-50 pl-120 scrollbar-hide max-lg:px-16`}
+                            >
+                              <span
+                                style={{ transition: `0.5s` }}
+                                className={`${listOpen === idx ? `opacity-100` : `pointer-events-none select-none opacity-0`} text-regular16 max-lg:text-regular14 whitespace-pre-line text-grey-900 max-lg:text-grey-500`}
+                              >
+                                {item?.text}
+                              </span>
+                            </div>
+                          </td>
+                        </tr>
+                      </>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+            <Pagination
+              listData={findedMockupData}
+              setListStartNum={setListStartNum}
+              setListEndNum={setListEndNum}
+              className={`max-lg:hidden`}
+            />
+          </>
+        ) : (
+          <NoSearchResult />
+        )}
       </div>
     </section>
   );

@@ -22,16 +22,17 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
       data-main-fondant-swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       className={`h-full w-full select-none overflow-visible`}
-      loop={true}
+      // loop={true}
       navigation={true}
-      // loopAdditionalSlides={10}
+      // slidesPerGroup={15}
+      loopAdditionalSlides={20}
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
       autoplay={{
-        delay: 1000,
+        delay: 0,
         disableOnInteraction: false,
       }}
-      speed={2000}
+      speed={1300}
       // freeMode={true}
       spaceBetween={8}
       slidesPerView={`auto`}

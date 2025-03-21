@@ -95,7 +95,7 @@ const StyledButtons = ({
       />
       <span>{text === '' ? '빈 값을 가져옴' : text}</span>
       <img
-        className={`${arrowMode ? '' : 'hidden'} h-24 w-24 max-lg:h-16 max-lg:w-16`}
+        className={`${arrowMode ? '' : 'hidden'} h-16 w-16`}
         src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
         width={24}
         height={24}

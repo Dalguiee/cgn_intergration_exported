@@ -72,7 +72,7 @@ const HomeTidings = () => {
               text='소식 바로가기'
               formMode='mode2-r'
               colorMode='mode3'
-              className={`w-139 max-lg:w-fit max-lg:border-none max-lg:bg-transparent max-lg:px-0`}
+              className={`w-143 max-lg:w-fit max-lg:border-none max-lg:bg-transparent max-lg:px-0`}
               arrowMode={true}
               onClick={() => {
                 sessionStorage.setItem('scrollY', window.scrollY.toString());

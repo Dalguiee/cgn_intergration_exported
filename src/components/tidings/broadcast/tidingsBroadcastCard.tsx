@@ -15,7 +15,7 @@ const TidingsBroadcastCard = ({ item, idx, all }) => {
       onClick={() => {
         navigate(`/news/press/detail?articleId=${item?.id}`);
       }}
-      className={`${idx === all?.length - 1 ? `mb-60 border-b-3 border-grey-900 pb-40` : ``} ${mobile ? `border-b-0` : ``} mb-40 flex items-start justify-center gap-40 border-t-3 border-grey-900 pl-4 pt-40 max-lg:mb-0 max-lg:h-141 max-lg:gap-8 max-lg:border-t-0 max-lg:px-16 max-lg:py-16`}
+      className={`${idx === all?.length - 1 ? `mb-60 border-b-3 border-grey-900 pb-40` : ``} ${mobile ? `border-none` : ``} mb-40 flex items-start justify-center gap-40 border-t-3 border-grey-900 pl-4 pt-40 max-lg:mb-0 max-lg:h-141 max-lg:gap-8 max-lg:border-t-0 max-lg:px-16 max-lg:py-16`}
     >
       <div className={`w-full`}>
         <div className={`mb-16 max-lg:mb-8`}>

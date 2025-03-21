@@ -54,14 +54,14 @@ const SelectBox = ({
       className={`relative z-10 flex cursor-pointer items-center justify-center max-lg:h-48 ${widthFull ? '!w-full' : ''} ${className && className} ${height ? `h-${height}` : 'h-62'}`}
     >
       <div
-        className={`${open ? `h-fit` : 'h-full'} absolute left-0 ${upMode ? `bottom-0` : `top-0`} flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 outline-grey-200 max-lg:rounded-4`}
+        className={`${open ? `h-fit` : 'h-full'} absolute left-0 ${upMode ? `bottom-0` : `top-0`} flex w-full items-center justify-center rounded-8 bg-white-solid outline outline-1 outline-offset-[-1px] outline-grey-200 max-lg:rounded-4`}
       >
         <ul
           ref={selectOpenBox}
           className={`${open ? `h-fit` : 'h-full'} flex w-full ${upMode ? `flex-col-reverse` : `flex-col`} items-start justify-start overflow-y-hidden`}
         >
           <li
-            className={`${open ? '' : ''} pointer-events-none flex w-full items-center justify-start rounded-8 px-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:rounded-4 ${height ? `h-${height}` : 'h-62'}`}
+            className={`${open ? '' : ''} pointer-events-none flex w-full items-center justify-start rounded-8 border-1 border-grey-200 px-12 max-lg:h-48 max-lg:rounded-4 ${height ? `h-${height}` : 'h-62'}`}
           >
             <button
               className={`hover:text-bold18 max-lg:text-bold14 text-regular18 max-lg:text-regular14 flex h-full w-full cursor-pointer select-none items-center justify-start text-grey-900`}
@@ -69,11 +69,11 @@ const SelectBox = ({
               {selectedItem?.text ? selectedItem?.text : defaultValue}
             </button>
           </li>
-          <li className='max-h-300 w-full overflow-auto' data-custom-scroll>
+          <li className='max-h-310 w-full overflow-auto' data-custom-scroll>
             {listData?.map((item, key) => (
               <div
                 key={key}
-                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full select-none items-center justify-start pt-1 max-lg:h-48`}
+                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full select-none items-center justify-start max-lg:h-48`}
               >
                 <button
                   onClick={() => {

@@ -51,7 +51,7 @@ const HomeCampaignEventHeader = ({
         </div>
         <div className={`ml-24`}>
           <StyledButtons
-            className='w-112 max-lg:w-58 max-lg:border-none max-lg:bg-transparent max-lg:px-0'
+            className='w-116 max-lg:w-58 max-lg:border-none max-lg:bg-transparent max-lg:px-0'
             text='전체보기'
             formMode='mode2-r'
             colorMode='mode3'
