@@ -79,6 +79,11 @@ const TidingsDetail = () => {
     }
   }, [queryData]);
 
+  // 맨 위로 스크롤 올림
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // 데이터 셋팅
   useEffect(() => {
     if (allData) {

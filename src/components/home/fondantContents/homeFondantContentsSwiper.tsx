@@ -28,11 +28,11 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
       // scrollbar={{ draggable: true }}
       // pagination={{ clickable: true }}
       autoplay={{
-        delay: 0,
+        delay: 1000,
         disableOnInteraction: false,
       }}
-      speed={3000}
-      freeMode={true}
+      speed={2000}
+      // freeMode={true}
       spaceBetween={8}
       slidesPerView={`auto`}
       onSlideChange={() => {}}

@@ -61,6 +61,11 @@ const CustomerCenterQuestions = () => {
     }
   }, [location, listCategory]);
 
+  // 맨 위로 스크롤 올림
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section
       data-aos='fade-up'

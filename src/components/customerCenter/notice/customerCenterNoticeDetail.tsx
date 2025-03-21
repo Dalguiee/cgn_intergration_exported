@@ -48,6 +48,11 @@ const CustomerCenterNoticeDetail = () => {
     });
   }, [queryData?.articleId]);
 
+  // 맨 위로 스크롤 올림
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section
       className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:mb-20 max-lg:px-20 max-lg:py-0`}

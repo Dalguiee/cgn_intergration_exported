@@ -14,14 +14,31 @@ import 'swiper/css/scrollbar';
 
 // 컴포넌트
 import HomeTidingsCard from '@/components/home/tidings/homeTidingsCard';
+import { useEffect, useRef } from 'react';
 
 const HomeTidingsPcTopArticleSwiper = ({
   pageMode = ``,
   findedMockupData = [],
+  prevButtonRef,
+  nextButtonRef,
 }) => {
+  const swiperRef = useRef();
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      const swiperInstance = swiperRef?.current?.swiper;
+      swiperInstance.params.navigation.prevEl = prevButtonRef?.current;
+      swiperInstance.params.navigation.nextEl = nextButtonRef?.current;
+      swiperInstance?.navigation?.init();
+      swiperInstance?.navigation?.update();
+    }
+  }, []);
+
   return (
     <Swiper
-      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+      ref={swiperRef}
+      data-home-tidings-swiper
+      modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y, Navigation]}
       className={`h-full w-full select-none overflow-visible`}
       loop={true}
       // autoplay={{
@@ -31,6 +48,10 @@ const HomeTidingsPcTopArticleSwiper = ({
       // freeMode={true}
       // loopAdditionalSlides={5}
       // centeredSlides={true}
+      navigation={{
+        prevEl: prevButtonRef?.current,
+        nextEl: nextButtonRef?.current,
+      }}
       spaceBetween={12}
       slidesPerView={'auto'}
       onSlideChange={() => {}}
