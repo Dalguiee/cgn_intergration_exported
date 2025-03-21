@@ -11,6 +11,8 @@ const HomeCategoryList = ({
 }) => {
   const location = useLocation();
   const [categoryTags, setCategoryTags] = useState([]);
+
+  // 좌우 자동스크롤 위한 ref
   const scrollContainer = useRef();
   const scrollObjects = useRef([]);
 

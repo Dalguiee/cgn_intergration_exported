@@ -17,7 +17,6 @@ import HomeTidingsCard from '@/components/home/tidings/homeTidingsCard';
 import { useEffect, useRef } from 'react';
 
 const HomeTidingsPcTopArticleSwiper = ({
-  pageMode = ``,
   findedMockupData = [],
   prevButtonRef,
   nextButtonRef,

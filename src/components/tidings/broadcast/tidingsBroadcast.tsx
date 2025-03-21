@@ -10,6 +10,7 @@ import TidingsBroadcastCard from '@/components/tidings/broadcast/tidingsBroadcas
 import DefaultInput from '@/components/common/defaultInput';
 import Pagination from '@/components/common/pagination';
 import NoSearchResult from '@/components/common/noSearchResult';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const TidingsBroadcast = () => {
   const location = useLocation();
@@ -25,6 +26,8 @@ const TidingsBroadcast = () => {
     return location.pathname.includes(item?.path);
   });
   const mockupExportedData = mockupExport?.[0]?.data;
+
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
 
   // init
   useEffect(() => {
@@ -50,7 +53,7 @@ const TidingsBroadcast = () => {
         </div>
         {findedMockupData?.length > 0 ? (
           findedMockupData
-            ?.slice(listStartNum, listEndNum)
+            ?.slice(mobile ? 0 : listStartNum, mobile ? 999 : listEndNum)
             ?.map((item, key, all) => (
               <TidingsBroadcastCard key={key} item={item} idx={key} all={all} />
             ))
@@ -59,7 +62,7 @@ const TidingsBroadcast = () => {
         )}
       </div>
       <Pagination
-        className={`${findedMockupData?.length > 0 ? `` : `hidden`}`}
+        className={`${mobile ? `hidden` : ``} ${findedMockupData?.length > 0 ? `` : `hidden`}`}
         listData={findedMockupData}
         setListStartNum={setListStartNum}
         setListEndNum={setListEndNum}

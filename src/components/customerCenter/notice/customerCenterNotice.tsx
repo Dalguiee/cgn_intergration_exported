@@ -8,10 +8,12 @@ import { noticeData } from '@/db/mockup';
 // 컴포넌트
 import DefaultInput from '@/components/common/defaultInput';
 import Pagination from '@/components/common/pagination';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const CustomerCenterNotice = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
   const [findedMockupData, setFindedMockupData] = useState([]); // 목업데이터
   const [searchText, setSearchText] = useState(''); // 검색어 텍스트
   // 컨텐츠 항목 10개들이 시작 및 종료 설정, 초기숫자가 나오는 리스트 갯수 index, 페이지네이션 가운데항목에서 event 걸림
@@ -72,7 +74,7 @@ const CustomerCenterNotice = () => {
             </thead>
             <tbody>
               {findedMockupData
-                ?.slice(listStartNum, listEndNum)
+                ?.slice(mobile ? 0 : listStartNum, mobile ? 999 : listEndNum)
                 ?.map((item, key) => (
                   <tr
                     key={key}

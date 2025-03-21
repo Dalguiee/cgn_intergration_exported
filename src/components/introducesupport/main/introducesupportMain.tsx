@@ -34,7 +34,7 @@ const IntroducesupportMain = () => {
   }, []);
 
   return (
-    <>
+    <section className={`relative`}>
       <section
         className={`flex h-fit w-full flex-col items-center justify-start`}
         data-comment='후원페이지'
@@ -128,8 +128,8 @@ const IntroducesupportMain = () => {
       </section>
       {!supportTab && (
         <div
-          className={`${mobile ? `` : `hidden`} ${isVisible ? `absolute bottom-0 flex translate-y-[100%] transform` : `fixed max-lg:flex`} bottom-0 z-10 h-88 w-full justify-center bg-white-solid pt-16`}
-          data-comment='후원페이지 FOOTER 플로팅'
+          className={`${mobile ? `flex max-lg:flex` : `hidden`} ${isVisible ? `absolute bottom-0 flex max-lg:flex` : `fixed flex max-lg:flex`} bottom-0 z-10 h-88 w-full justify-center bg-white-solid pt-16`}
+          data-comment='후원페이지 FOOTER 플로팅 MO'
         >
           <button
             onClick={() => {
@@ -159,7 +159,7 @@ const IntroducesupportMain = () => {
       )}
       {/* 후원하기 Footer Anchor */}
       <div data-comment='하단 플로팅 앵커' ref={intersectionRef}></div>
-    </>
+    </section>
   );
 };
 

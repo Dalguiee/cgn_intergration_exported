@@ -66,7 +66,7 @@ const HomeCampaignEvent = () => {
           className={`grid h-full w-full max-w-728 grid-cols-2 grid-rows-2 gap-24 max-lg:w-full max-lg:max-w-[unset] max-lg:grid-rows-1 max-lg:gap-12`}
         >
           {campaignData
-            ?.slice(mobile ? 0 : startNum, mobile ? 2 : endNum)
+            ?.slice(startNum, endNum)
             ?.map((item, idx) => (
               <HomeCampaignCard item={item} key={idx}></HomeCampaignCard>
             ))}

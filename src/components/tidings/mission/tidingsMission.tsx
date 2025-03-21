@@ -115,7 +115,7 @@ const TidingsMission = () => {
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
       <section
-        className={`flex w-full flex-col items-center justify-center pb-160 pt-32 max-lg:mb-20 max-lg:mt-24 max-lg:px-20 max-lg:pb-0 max-lg:pt-0`}
+        className={`flex w-full flex-col items-center justify-center overflow-hidden pb-160 pt-32 max-lg:mb-20 max-lg:mt-24 max-lg:px-20 max-lg:pb-0 max-lg:pt-0`}
       >
         <MoTopArticleList
           findedMockupData={findedMockupData}
@@ -123,7 +123,7 @@ const TidingsMission = () => {
         />
 
         <div
-          className={`flex w-full flex-wrap items-start justify-center gap-24 overflow-visible max-lg:hidden`}
+          className={`flex w-full max-w-1560 flex-wrap items-start justify-center overflow-visible max-lg:hidden`}
         >
           <PcTopArticleSwiper
             pageMode={pageMode}

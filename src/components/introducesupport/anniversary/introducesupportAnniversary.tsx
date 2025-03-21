@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -214,6 +214,11 @@ const IntroducesupportAnniversary = () => {
   const [policyCheck, setPolicyCheck] = useState(false);
 
   const [popup, setPopup] = useState(false);
+
+  // 페이지 최상단 이동
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='relative w-full'>

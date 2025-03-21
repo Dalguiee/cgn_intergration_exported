@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import MoTopHeader from './moTopHeader';
 
@@ -12,6 +12,26 @@ const BottomHeader = ({
   const navigate = useNavigate();
   const location = useLocation();
   const [languageActiveIdx, setLanguageActiveIdx] = useState(0); // 활성화된 언어 인덱스
+
+  // 터치인식을 위한 ref
+  const depthBox = useRef();
+
+  // 헤더 depth 터치 스크립트
+  useEffect(() => {
+    function handleOutsideClick(event) {
+      if (depthBox?.current?.contains(event?.target)) {
+        setDepthActive(true);
+      } else {
+        setDepthActive(false);
+      }
+    }
+
+    document.addEventListener('touchstart', handleOutsideClick);
+
+    return () => {
+      document.removeEventListener('touchstart', handleOutsideClick);
+    };
+  }, []);
 
   return (
     <div
@@ -33,6 +53,7 @@ const BottomHeader = ({
           />
         </button>
         <div
+          ref={depthBox}
           onMouseEnter={() => {
             setDepthActive(true);
           }}

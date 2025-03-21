@@ -42,10 +42,10 @@ const HomeTidings = () => {
 
   return (
     <section
-      className={`flex h-890 flex-col items-center justify-center gap-40 overflow-hidden bg-secondary-brown_bg_2 pl-180 max-lg:h-496 max-lg:gap-0 max-lg:pl-0 max-lg:pt-60 lg:pr-16`}
+      className={`flex h-890 flex-col items-center justify-center gap-40 overflow-hidden bg-secondary-brown_bg_2 px-16 max-lg:h-496 max-lg:gap-0 max-lg:px-0 max-lg:pt-60`}
     >
       <div
-        className={`flex w-full max-w-1560 justify-between px-16 pr-16 max-lg:mb-11`}
+        className={`flex w-full max-w-1560 justify-between max-lg:mb-11 max-lg:px-16`}
       >
         <div className={`flex items-center justify-start gap-24`}>
           <span
@@ -80,20 +80,6 @@ const HomeTidings = () => {
               }}
             />
           </div>
-
-          {/* <button
-            onClick={() => {
-              sessionStorage.setItem('scrollY', window.scrollY.toString());
-              navigate(`/news/story`);
-            }}
-            className={`flex items-center justify-center`}
-          >
-            <span className={`text-regular12 text-grey-900`}>바로가기</span>
-            <img
-              src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey700.svg`}
-              alt=''
-            />
-          </button> */}
         </div>
       </div>
       <div className={`w-full max-w-1560 overflow-visible lg:hidden`}>
@@ -104,7 +90,7 @@ const HomeTidings = () => {
       </div>
 
       <div
-        className={`w-full overflow-visible max-lg:mb-20 max-lg:px-0 max-lg:pb-0 max-lg:pl-16 max-lg:pt-0`}
+        className={`w-full max-w-1560 overflow-visible max-lg:mb-20 max-lg:px-0 max-lg:pb-0 max-lg:pl-16 max-lg:pt-0`}
       >
         <Section4PcTopArticleSwiper
           findedMockupData={findedMockupData}

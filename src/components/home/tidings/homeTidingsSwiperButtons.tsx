@@ -8,7 +8,7 @@ const HomeTidingsSwiperButtons = ({ prevButtonRef, nextButtonRef }) => {
         ref={prevButtonRef}
       >
         <img
-          src={`/public/images/icon/arrow_left_grey900.svg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg`}
           width={24}
           height={24}
           alt=''
@@ -19,7 +19,7 @@ const HomeTidingsSwiperButtons = ({ prevButtonRef, nextButtonRef }) => {
         ref={nextButtonRef}
       >
         <img
-          src={`/public/images/icon/arrow_right_grey900.svg`}
+          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_grey900.svg`}
           width={24}
           height={24}
           alt=''

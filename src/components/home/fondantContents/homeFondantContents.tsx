@@ -11,11 +11,11 @@ const HomeFondantContents = () => {
       style={{
         backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/bg/section3_bg.png)`,
       }}
-      className={`flex h-906 w-full flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat pr-16 max-lg:h-300 lg:pl-180`}
+      className={`flex h-906 w-full flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat px-16 pr-16 max-lg:h-300 max-lg:px-0`}
     >
       {/* 컨텐츠 헤더 */}
       <div
-        className={`mb-40 flex w-full max-w-1560 items-end justify-between max-lg:mb-12 max-lg:pl-16`}
+        className={`mb-40 flex w-full max-w-1560 items-end justify-between max-lg:mb-12 max-lg:px-16`}
       >
         <div className={`flex flex-col items-start justify-start`}>
           <span
@@ -40,7 +40,7 @@ const HomeFondantContents = () => {
         />
       </div>
       {/* 슬라이딩 컨텐츠 */}
-      <div className={`w-full overflow-visible max-lg:pl-16`}>
+      <div className={`w-full max-w-1560 overflow-visible max-lg:pl-16`}>
         <HomeFondantContentsSwiper mediaData={mediaData} />
       </div>
     </div>
