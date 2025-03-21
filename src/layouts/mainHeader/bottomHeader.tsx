@@ -1,6 +1,9 @@
+// 훅
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import MoTopHeader from './moTopHeader';
+
+// 컴포넌트
+import MoTopHeader from '@/layouts/mainHeader/moTopHeader';
 
 const BottomHeader = ({
   centerMenu,
