@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import MoTopHeader from './moTopHeader';
 
@@ -33,8 +33,11 @@ const BottomHeader = ({
           />
         </button>
         <div
+          onMouseEnter={() => {
+            setDepthActive(true);
+          }}
           style={{ transition: `0.5s` }}
-          className={`${depthActive ? `lg:gap-90 xl:gap-120` : `lg:gap-60 xl:gap-80`} absolute right-[50%] flex translate-x-[50%] transform items-center justify-between max-lg:hidden max-lg:gap-50`}
+          className={`${depthActive ? `lg:gap-90 xl:gap-120` : `lg:gap-60 xl:gap-80`} absolute right-[50%] flex h-full translate-x-[50%] transform items-center justify-between max-lg:hidden max-lg:gap-50`}
         >
           {centerMenu?.map((menu, index) => (
             <div
@@ -42,9 +45,6 @@ const BottomHeader = ({
               className={`relative flex items-center justify-center`}
             >
               <button
-                onMouseEnter={() => {
-                  setDepthActive(true);
-                }}
                 onClick={() => {
                   navigate(menu?.link);
                   navigate(
