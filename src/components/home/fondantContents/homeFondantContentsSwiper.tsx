@@ -22,8 +22,8 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
       data-main-fondant-swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       className={`h-full w-full select-none overflow-visible`}
-      // loop={true}
-      navigation={true}
+      loop={true}
+      // navigation={true}
       // slidesPerGroup={15}
       loopAdditionalSlides={20}
       // scrollbar={{ draggable: true }}
