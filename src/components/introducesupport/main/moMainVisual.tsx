@@ -37,7 +37,7 @@ const MoMainVisual = props => {
         style={{
           backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_bg.jpg)`,
         }}
-        className={`flex w-full flex-col items-center bg-cover bg-top bg-repeat pb-120 pt-60`}
+        className={`flex w-full flex-col items-center bg-cover bg-top bg-repeat pb-180 pt-60`}
         initial='hidden'
         animate='visible'
         variants={containerVariants}

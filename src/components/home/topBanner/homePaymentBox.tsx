@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 // 컴포넌트
 import SelectBox from '@/components/common/selectBox';
 import StyledButtons from '@/components/common/styledButtons';
+import { useNavigate } from 'react-router-dom';
 
 // 데이터
 const subscribesData = [
@@ -23,6 +24,7 @@ const priceData = [
 ];
 
 const HomePaymentBox = () => {
+  const navigate = useNavigate();
   // select box 와 송신하는 state
   const [selectedSubscribes, setselectedSubscribes] = useState([]);
   // 버튼항목과 송신하는 state
@@ -30,11 +32,13 @@ const HomePaymentBox = () => {
 
   useEffect(() => {
     if (selectedSubscribes?.id === 2) {
-      window.open(
-        `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
-        `_blank`
-      );
-      setselectedSubscribes(subscribesData?.[0]);
+      sessionStorage.setItem('scrollY', window.scrollY.toString());
+      navigate(`offermore`);
+      // window.open(
+      //   `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
+      //   `_blank`
+      // );
+      // setselectedSubscribes(subscribesData?.[0]);
     }
     // setselectedSubscribes([]);
   }, [selectedSubscribes]);

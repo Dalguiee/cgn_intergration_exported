@@ -40,14 +40,17 @@ const HomeMission = ({ mobile }) => {
       <div
         className={`flex h-600 w-full max-w-1560 items-center justify-center overflow-hidden rounded-16 max-lg:h-full max-lg:rounded-0`}
       >
-        <div
+        <motion.div
+          variants={fadeUpX}
+          initial={`hidden`}
+          animate={isVisible ? `visible` : `hidden`}
           style={{
             backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/mission_context_bg.png)`,
           }}
           className={`flex h-full w-676 items-center justify-center bg-cover bg-center bg-no-repeat max-lg:hidden`}
         >
           <HomeTextBox isVisible={isVisible} />
-        </div>
+        </motion.div>
         <div
           style={{
             backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/home/mission_main_bg.png)`,

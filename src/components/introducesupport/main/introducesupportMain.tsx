@@ -128,14 +128,14 @@ const IntroducesupportMain = () => {
       </section>
       {!supportTab && (
         <div
-          className={`${mobile ? `flex max-lg:flex` : `hidden`} ${isVisible ? `absolute bottom-0 flex max-lg:flex` : `fixed flex max-lg:flex`} bottom-0 z-10 h-88 w-full justify-center bg-white-solid pt-16`}
+          className={`${mobile ? `flex max-lg:flex` : `hidden`} ${isVisible ? `absolute bottom-0 flex max-lg:flex` : `fixed flex max-lg:flex`} bottom-0 z-10 h-88 w-full justify-center bg-primary-300 pt-16`}
           data-comment='후원페이지 FOOTER 플로팅 MO'
         >
           <button
             onClick={() => {
               window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
             }}
-            className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+            className='text-bold16 me-8 h-40 w-full max-w-101 rounded-4 border-1 border-grey-900 bg-white-solid text-grey-900'
           >
             정기후원
           </button>
@@ -143,7 +143,7 @@ const IntroducesupportMain = () => {
             onClick={() => {
               window.open(`https://cgndev.onflou.co.kr/offermore`, `_blank`);
             }}
-            className='text-bold14 me-4 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+            className='text-bold16 me-8 h-40 w-full max-w-101 rounded-4 border-1 border-grey-900 bg-white-solid text-grey-900'
           >
             증액후원
           </button>
@@ -151,7 +151,7 @@ const IntroducesupportMain = () => {
             onClick={() => {
               window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
             }}
-            className='text-bold14 h-40 w-80 rounded-4 bg-primary-500 text-white-solid'
+            className='text-bold16 h-40 w-full max-w-101 rounded-4 border-1 border-grey-900 bg-white-solid text-grey-900'
           >
             일시후원
           </button>

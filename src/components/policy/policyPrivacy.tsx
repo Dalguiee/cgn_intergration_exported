@@ -239,6 +239,16 @@ const PolicyPrivacy = () => {
         방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고
         있는지 알려 드립니다.
       </p>
+      <p
+        className={`text-regular18 max-lg:text-regular16 mb-24 text-grey-500 max-lg:mb-8`}
+      >
+        회사는 개인정보처리방침을 개정하는 경우 웹사이트 공지사항을 통하여
+        공지할 것입니다
+        <div className='br'>
+          이 개인정보처리방침은 2018년 12월 12일부터 적용됩니다.
+        </div>
+      </p>
+
       <div className={`flex flex-col items-start justify-start gap-40`}>
         {data?.map((item, idx) => (
           <div key={idx}>

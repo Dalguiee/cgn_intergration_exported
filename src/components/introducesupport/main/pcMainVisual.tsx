@@ -184,7 +184,7 @@ const PcMainVisual = props => {
             onClick={() => {
               window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
             }}
-            className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
+            className='me-[0.8%] aspect-[110_/_60] w-[5.7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/btn_support1.svg)`,
             }}
@@ -195,7 +195,7 @@ const PcMainVisual = props => {
             onClick={() => {
               window.open(`https://cgndev.onflou.co.kr/offermore`, `_blank`);
             }}
-            className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
+            className='me-[0.8%] aspect-[110_/_60] w-[5.7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/btn_support2.svg)`,
             }}
@@ -206,7 +206,7 @@ const PcMainVisual = props => {
             onClick={() => {
               window.open(`https://online.mrm.or.kr/YGoCXF0`, `_blank`);
             }}
-            className='me-[0.8%] aspect-[130_/_64] w-[7%] bg-cover bg-center bg-no-repeat text-[0]'
+            className='me-[0.8%] aspect-[110_/_60] w-[5.7%] bg-cover bg-center bg-no-repeat text-[0]'
             style={{
               backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/donation/btn_support3.svg)`,
             }}

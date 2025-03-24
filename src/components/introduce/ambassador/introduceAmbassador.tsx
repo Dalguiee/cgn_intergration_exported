@@ -10,12 +10,12 @@ const IntroduceAmbassador = () => {
     >
       <div className={`w-full max-w-1200 max-lg:mb-24`}>
         <p
-          className={`text-bold60 max-lg:text-bold24 mb-24 text-grey-900 max-lg:mb-16`}
+          className={`text-bold40 max-lg:text-bold24 mb-24 text-grey-900 max-lg:mb-16`}
         >
           CGN을 알리는 비저너리
           <br className={`lg:hidden`} /> (Visionary)
         </p>
-        <p className={`text-bold40 max-lg:text-bold16 text-grey-900`}>
+        <p className={`text-bold32 max-lg:text-bold16 text-grey-900`}>
           홍보대사는 더 많은 사람들이 CGN의 비전에 동참할 수 있도록 인도하는
           <br className={`max-lg:hidden`} />
           <span className={`lg:hidden`}>&nbsp;</span>비저너리 역할을 하고

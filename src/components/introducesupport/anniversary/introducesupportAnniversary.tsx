@@ -180,6 +180,7 @@ import AnniversaryPopup from '@/components/introducesupport/anniversary/annivers
 // import AnniversaryFixedButton from './anniversaryFixedButton';
 import ScrollTopScanner from '@/components/common/scrollTopScanner';
 import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
+import CompleteBox from '@/components/common/completeBox';
 
 // 기념일 후원 페이지
 const IntroducesupportAnniversary = () => {
@@ -212,8 +213,10 @@ const IntroducesupportAnniversary = () => {
 
   //개인정보 처리방침 동의
   const [policyCheck, setPolicyCheck] = useState(false);
-
   const [popup, setPopup] = useState(false);
+
+  // 완료 팝업, 추후 false 로 기본값 바꾸기
+  const [completePopup, setCompletePopup] = useState(true);
 
   // 페이지 최상단 이동
   useEffect(() => {
@@ -488,7 +491,7 @@ const IntroducesupportAnniversary = () => {
               기념일 후원증서를 신청하세요!
             </div>
             <div className='mb-24 flex w-full gap-12 max-lg:w-full max-lg:flex-col'>
-              <div className='flex w-full max-w-233 flex-col max-lg:w-full max-lg:max-w-[unset]'>
+              <div className='flex w-full max-w-223 flex-col max-lg:w-full max-lg:max-w-[unset]'>
                 <div className='text-regular14 mb-8 ml-4'>성명</div>
                 <DefaultInput
                   placeholder=''
@@ -499,7 +502,7 @@ const IntroducesupportAnniversary = () => {
                   className='w-full'
                 />
               </div>
-              <div className='flex w-full max-w-233 flex-col max-lg:w-full max-lg:max-w-[unset]'>
+              <div className='flex w-full max-w-243 flex-col max-lg:w-full max-lg:max-w-[unset]'>
                 <div className='text-regular14 mb-8 ml-4'>
                   기념일 명칭{' '}
                   <span className='text-regular12'>(10자 이내)</span>
@@ -608,7 +611,9 @@ const IntroducesupportAnniversary = () => {
                 [전문보기]
               </button>
             </div>
-            <button className='text-bold24 max-lg:text-bold18 flex h-64 w-full items-center justify-center rounded-8 bg-gray-900 text-white-solid'>
+            <button
+              className={`${policyCheck ? `bg-gray-900 text-white-solid` : `pointer-events-none select-none bg-grey-400 text-grey-300`} text-bold24 max-lg:text-bold18 flex h-64 w-full items-center justify-center rounded-8`}
+            >
               증서 신청하기
             </button>
           </div>
@@ -748,6 +753,13 @@ const IntroducesupportAnniversary = () => {
       <div data-comment='하단 플로팅 앵커' ref={intersectionRef}></div>
       {/* 전문보기 팝업 */}
       {popup && <AnniversaryPopup isOpen={setPopup} />}
+      <CompleteBox
+        completePopup={completePopup}
+        setCompletePopup={setCompletePopup}
+      >
+        중도 기도 신청이 완료되었습니다.
+        <br />온 마음을 다해 기도하겠습니다.
+      </CompleteBox>
     </div>
   );
 };
