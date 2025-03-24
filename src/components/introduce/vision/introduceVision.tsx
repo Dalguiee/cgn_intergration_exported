@@ -1,10 +1,23 @@
 // 훅
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // 컴포넌트
 import StyledButtons from '@/components/common/styledButtons';
+import IntroduceVisionValuesCard from './introduceVisionValuesCard';
+import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
 
-const IntroduceVision = ({ popupOpen, setPopupOpen }) => {
+// 모션변수
+const staggerSetting = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.7 },
+  },
+};
+
+const IntroduceVision = ({ setPopupOpen }) => {
+  const { intersectionRef, isVisible } = IntersectionObserverScanner();
+
   const missionsData = [
     { id: 1, title: `MISSION`, text: `온 세상을 위한`, subText: `복음의 통로` },
     {
@@ -132,6 +145,7 @@ const IntroduceVision = ({ popupOpen, setPopupOpen }) => {
 
       {/* 하단영역 */}
       <div
+        ref={intersectionRef}
         className={`flex w-full flex-col items-center justify-start bg-white-solid pb-160 pt-120 max-lg:pb-68 max-lg:pt-40`}
       >
         <div
@@ -142,33 +156,20 @@ const IntroduceVision = ({ popupOpen, setPopupOpen }) => {
           >
             CORE VALUES
           </p>
-          <div className={`flex flex-wrap items-center justify-center gap-24`}>
+          <motion.div
+            initial='hidden'
+            animate={isVisible ? `visible` : `hidden`}
+            variants={staggerSetting}
+            className={`flex flex-wrap items-center justify-center gap-24`}
+          >
             {valuesData?.map((item, key) => (
-              <div
+              <IntroduceVisionValuesCard
+                item={item}
                 key={key}
-                className={`flex h-384 w-384 flex-col items-center justify-start rounded-999 bg-primary-100 pt-70 max-lg:h-160 max-lg:w-160 max-lg:pt-20`}
-              >
-                <img
-                  className={`mb-11 h-100 w-100 max-lg:mb-4 max-lg:h-60 max-lg:w-60`}
-                  src={`${item?.src}`}
-                  width={100}
-                  height={100}
-                  alt=''
-                />
-                <p
-                  className={`text-bold40 max-lg:text-bold16 mb-23 line-clamp-1 text-grey-900 max-lg:mb-0`}
-                >
-                  {item?.text}{' '}
-                  <span className={`text-primary-500`}>{item?.pointText}</span>
-                </p>
-                <p
-                  className={`text-regular18 max-lg:text-regular12 line-clamp-1 text-grey-500`}
-                >
-                  {item?.subText}
-                </p>
-              </div>
+                isVisible={isVisible}
+              />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

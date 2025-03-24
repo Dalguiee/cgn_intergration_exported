@@ -33,14 +33,8 @@ const HomePaymentBox = () => {
   useEffect(() => {
     if (selectedSubscribes?.id === 2) {
       sessionStorage.setItem('scrollY', window.scrollY.toString());
-      navigate(`offermore`);
-      // window.open(
-      //   `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
-      //   `_blank`
-      // );
-      // setselectedSubscribes(subscribesData?.[0]);
+      navigate(`/offermore`);
     }
-    // setselectedSubscribes([]);
   }, [selectedSubscribes]);
 
   return (
@@ -84,10 +78,8 @@ const HomePaymentBox = () => {
             className={`w-full`}
             onClick={() => {
               if (selectedSubscribes?.id === 2) {
-                window.open(
-                  `https://cgndev.onflou.co.kr/offermore?selectedId=${selectedPrice?.id}`,
-                  `_blank`
-                );
+                sessionStorage.setItem('scrollY', window.scrollY.toString());
+                navigate(`/offermore`);
               } else if (selectedSubscribes?.id === 0) {
                 window.open(`https://online.mrm.or.kr/cXfOQDm`, `_blank`);
               } else if (selectedSubscribes?.id === 1) {

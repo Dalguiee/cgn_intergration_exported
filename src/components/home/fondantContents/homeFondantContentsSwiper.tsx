@@ -32,7 +32,7 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
         delay: 0,
         disableOnInteraction: false,
       }}
-      speed={1300}
+      speed={2500}
       // freeMode={true}
       spaceBetween={8}
       slidesPerView={`auto`}

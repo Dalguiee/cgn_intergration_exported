@@ -612,7 +612,7 @@ const IntroducesupportAnniversary = () => {
               </button>
             </div>
             <button
-              className={`${policyCheck ? `bg-gray-900 text-white-solid` : `pointer-events-none select-none bg-grey-400 text-grey-300`} text-bold24 max-lg:text-bold18 flex h-64 w-full items-center justify-center rounded-8`}
+              className={`${policyCheck && name !== `` && anniversary !== `` && dateYear?.text !== `` && dateMonth?.text !== `` && dateDay?.text !== `` && phoneNum1 !== `` && phoneNum2 !== `` && phoneNum3 !== `` ? `bg-gray-900 text-white-solid` : `pointer-events-none select-none bg-grey-400 text-grey-300`} text-bold24 max-lg:text-bold18 flex h-64 w-full items-center justify-center rounded-8`}
             >
               증서 신청하기
             </button>
@@ -753,12 +753,12 @@ const IntroducesupportAnniversary = () => {
       <div data-comment='하단 플로팅 앵커' ref={intersectionRef}></div>
       {/* 전문보기 팝업 */}
       {popup && <AnniversaryPopup isOpen={setPopup} />}
+      {/* 후원 신청 완료 팝업 */}
       <CompleteBox
         completePopup={completePopup}
         setCompletePopup={setCompletePopup}
       >
-        중도 기도 신청이 완료되었습니다.
-        <br />온 마음을 다해 기도하겠습니다.
+        후원 증서 신청이 완료되었습니다.
       </CompleteBox>
     </div>
   );

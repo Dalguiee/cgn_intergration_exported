@@ -5,6 +5,44 @@ import { AnimatePresence, motion } from 'framer-motion';
 // 컴포넌트
 import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
 
+// 모션변수
+const rotating = {
+  hidden: { rotate: 0, x: `-300%` },
+  visible: {
+    x: [`-300%`, `120%`],
+    rotate: 360,
+    transition: {
+      rotate: { duration: 15, repeat: Infinity, ease: 'linear' },
+      x: { duration: 13, repeat: Infinity, ease: 'easeInOut' },
+    },
+  },
+};
+
+const rotatingReverse = {
+  hidden: { rotate: 0 },
+  visible: {
+    rotate: -360,
+    transition: { duration: 23, repeat: Infinity, ease: 'easeInOut' },
+  },
+};
+
+const floating = {
+  hidden: { y: `70%`, rotate: 0 },
+  visible: {
+    opacity: 1,
+    rotate: 360,
+    y: ['70%', `-130%`, '70%'],
+    transition: {
+      y: { duration: 10, repeat: Infinity, ease: 'easeInOut' },
+      rotate: {
+        duration: 17,
+        repeat: Infinity,
+        ease: 'linear',
+      },
+    },
+  },
+};
+
 const staggerSetting = {
   hidden: { opacity: 0, y: -100 },
   visible: {
@@ -16,7 +54,11 @@ const staggerSetting = {
 
 const fadeUpY = {
   hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: 'easeOut' },
+  },
 };
 
 const MediaDescriptionMainTitle = ({ mobile, sections }) => {
@@ -35,17 +77,48 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
         className={`relative flex h-851 w-full flex-col items-center justify-start max-lg:h-779`}
       >
         <div
-          className={`absolute left-0 top-0 z-10 h-460 w-full bg-cover bg-center bg-no-repeat max-lg:h-423`}
+          className={`absolute left-0 top-0 z-10 h-460 w-full overflow-hidden bg-cover bg-center bg-no-repeat max-lg:h-423`}
           style={{
             backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/mo_title_background.png` : `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_background.png`})`,
           }}
-        ></div>
+        >
+          <motion.img
+            className={`absolute right-[-3%] top-[-24%] w-[24%] select-none object-contain max-lg:top-[-13%] max-lg:w-[44%] lg:hidden`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_1.png`}
+            alt=''
+            initial={`hidden`}
+            animate={isVisible ? `visible` : `hidden`}
+            variants={rotating}
+            width={665}
+            height={327}
+          />
+          <motion.img
+            className={`absolute bottom-[-10%] left-[-30%] w-[67%] select-none object-contain max-lg:left-[-20%] max-lg:w-[113%]`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_2.png`}
+            alt=''
+            initial={`hidden`}
+            animate={isVisible ? `visible` : `hidden`}
+            variants={rotatingReverse}
+            width={537}
+            height={264}
+          />
+          <motion.img
+            className={`absolute bottom-[-10%] left-[49%] hidden w-[18%] select-none object-contain max-lg:left-[67%] max-lg:hidden max-lg:w-[38%]`}
+            src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_3.png`}
+            alt=''
+            // initial={`hidden`}
+            // animate={isVisible ? `visible` : `hidden`}
+            // variants={floating}
+            width={337}
+            height={166}
+          />
+        </div>
         <motion.img
           variants={fadeUpY}
-          className={`z-20 mt-54 h-50 w-226 object-cover max-lg:mt-60 max-lg:h-35 max-lg:w-160`}
+          className={`z-20 mt-54 h-54 w-225 object-contain max-lg:mt-60 max-lg:h-35 max-lg:w-160`}
           src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/fondant_logo.png`}
-          width={226}
-          height={50}
+          width={225}
+          height={54}
           alt=''
         />
         <motion.img
