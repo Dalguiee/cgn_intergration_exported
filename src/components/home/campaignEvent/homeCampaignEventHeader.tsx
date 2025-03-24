@@ -10,6 +10,7 @@ const HomeCampaignEventHeader = ({
   campaignLengthData,
   startNum,
   endNum,
+  switchingAnimate,
 }) => {
   const navigate = useNavigate();
   return (
@@ -25,7 +26,7 @@ const HomeCampaignEventHeader = ({
             onClick={() => {
               pagingPrev();
             }}
-            className={`${startNum > 0 ? '' : 'pointer-events-none border-grey-200'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200 max-lg:h-36 max-lg:w-36`}
+            className={`${switchingAnimate ? `pointer-events-none select-none` : ``} ${startNum > 0 ? '' : 'pointer-events-none border-grey-200'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200 max-lg:h-36 max-lg:w-36`}
           >
             <img
               src={`${startNum > 0 ? `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey900.svg` : `${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_grey200.svg`} `}
@@ -38,7 +39,7 @@ const HomeCampaignEventHeader = ({
             onClick={() => {
               pagingNext();
             }}
-            className={`${endNum < campaignLengthData ? '' : 'pointer-events-none border-grey-200'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200 max-lg:h-36 max-lg:w-36`}
+            className={`${switchingAnimate ? `pointer-events-none select-none` : ``} ${endNum < campaignLengthData ? '' : 'pointer-events-none border-grey-200'} flex h-40 w-40 items-center justify-center rounded-999 border-1 border-grey-200 max-lg:h-36 max-lg:w-36`}
           >
             <img
               className={`h-24 w-24`}

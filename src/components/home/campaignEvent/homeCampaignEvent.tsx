@@ -75,6 +75,7 @@ const HomeCampaignEvent = () => {
         pagingNext={pagingNext}
         pagingPrev={pagingPrev}
         campaignLengthData={campaignData?.length}
+        switchingAnimate={switchingAnimate}
       />
       {/* 컨텐츠 */}
       <motion.div
