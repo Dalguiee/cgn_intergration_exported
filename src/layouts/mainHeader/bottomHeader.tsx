@@ -25,10 +25,10 @@ const BottomHeader = ({
           onClick={() => {
             navigate('/');
           }}
-          className={`h-36 w-76`}
+          className={`h-36 w-76 max-lg:h-31 max-lg:w-64`}
         >
           <img
-            className={`${burger ? 'hidden' : ''} h-full w-full`}
+            className={`${burger ? 'hidden' : ''} h-full w-full object-contain`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/logo/main_logo.png`}
             alt=''
             width='36px'

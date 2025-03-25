@@ -73,7 +73,7 @@ const Pagination = ({
                 setListStartNum(newPage * bucketNumber);
                 setListEndNum((newPage + 1) * bucketNumber);
                 setHighlight(newPage);
-                window?.scrollTo(0, 0);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
               <span

@@ -257,13 +257,13 @@ const MainHeader = () => {
         style={{
           transition: `0.15s`,
         }}
-        className={`${headerTopBannerAvailable ? `h-[calc(128px+140px)] max-lg:h-[calc(58px+88px)]` : `h-[calc(128px)] max-lg:h-[calc(58px)]`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} ${scrollTopStatus ? `` : `relative`} w-full`}
+        className={`${headerTopBannerAvailable ? `h-[calc(128px+140px)] max-lg:h-[calc(58px+88px)]` : `h-[calc(128px)] max-lg:h-[calc(58px)]`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} ${scrollTopStatus ? `` : `relative !h-0`} w-full`}
       ></div>
       <header
         style={{
           transition: `0.15s`,
         }}
-        className={`${burger ? 'max-lg:bg-primary-500' : ''} ${scrollTopStatus ? (headerTopBannerAvailable ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc(0px)]`) : ``} ${headerTopBannerAvailable ? (scrollDirection ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc((-128px)+(-140px))] max-lg:top-[(-58px)+(-88px)]`) : scrollDirection ? `top-[calc(0px)]` : `top-[calc((-128px))] max-lg:top-[(-58px)]`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} fixed z-[80] flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-20 max-lg:px-20`}
+        className={`${burger ? 'max-lg:bg-primary-500' : ''} ${scrollTopStatus ? (headerTopBannerAvailable ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc(0px)]`) : ``} ${headerTopBannerAvailable ? (scrollDirection ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc((-128px)+(-140px))] max-lg:top-[(-58px)+(-88px)]`) : scrollDirection ? `top-[calc(0px)]` : `top-[calc((-128px))] max-lg:top-[(-58px)]`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} fixed z-[80] flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-20 max-lg:px-24`}
         data-comment='메인헤더'
       >
         <TopHeader />

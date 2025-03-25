@@ -8,10 +8,14 @@ import HomeFondantContents from '@/components/home/fondantContents/homeFondantCo
 import HomeTidings from '@/components/home/tidings/homeTidings';
 import HomeMission from '@/components/home/mission/homeMission';
 import HomeNoticeMain from '@/components/home/notice/homeNoticeMain';
-import HomeTowPartedBanner from '@/components/home/middleBanner/homeTowPartedBanner';
+import HomeTwoPartedBanner from '@/components/home/middleBanner/homeTwoPartedBanner';
 import HomeOnePartedBanner from '@/components/home/middleBanner/homeOnePartedBanner';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
 import Popup from '@/components/home/popup/popup';
+
+// 데이터
+import { homeTwoPartedBannersDataUpper } from '@/db/mockup';
+import { homeTowPartedBannersDataUnder } from '@/db/mockup';
 
 const HomePage = () => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
@@ -39,7 +43,10 @@ const HomePage = () => {
       <section
         className={`h-fit overflow-x-scroll bg-secondary-brown_bg_2 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
-        <HomeTowPartedBanner mobile={mobile} />
+        <HomeTwoPartedBanner
+          item={homeTwoPartedBannersDataUpper}
+          mobile={mobile}
+        />
       </section>
       <HomeMission mobile={mobile} />
       <section className={`h-fit pb-80 max-lg:pb-12 max-lg:pt-60`}>
@@ -48,7 +55,10 @@ const HomePage = () => {
       <section
         className={`h-fit overflow-x-scroll pb-120 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
-        <HomeTowPartedBanner mobile={mobile} />
+        <HomeTwoPartedBanner
+          item={homeTowPartedBannersDataUnder}
+          mobile={mobile}
+        />
       </section>
       <HomeNoticeMain />
     </section>

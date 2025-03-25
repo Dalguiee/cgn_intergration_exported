@@ -43,7 +43,7 @@ const DefaultInput = ({
         className={`text-regular16 max-lg:text-regular14 w-full text-grey-900`}
         type={`${pwMode ? 'password' : ''}`}
         inputMode={`${numberMode ? `numeric` : ``}`}
-        maxlength={maxlength}
+        maxLength={maxlength}
         name={`findKeyword`}
         onChange={e => {
           if (numberMode) {

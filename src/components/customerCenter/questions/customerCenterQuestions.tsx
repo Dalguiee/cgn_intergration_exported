@@ -64,7 +64,7 @@ const CustomerCenterQuestions = () => {
 
   // 맨 위로 스크롤 올림
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (

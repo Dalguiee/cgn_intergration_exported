@@ -6,18 +6,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
 
 // 모션변수
-const rotating = {
-  hidden: { rotate: 0, x: `-300%` },
-  visible: {
-    x: [`-300%`, `120%`],
-    rotate: 360,
-    transition: {
-      rotate: { duration: 15, repeat: Infinity, ease: 'linear' },
-      x: { duration: 13, repeat: Infinity, ease: 'easeInOut' },
-    },
-  },
-};
-
 const rotatingReverse = {
   hidden: { rotate: 0 },
   visible: {
@@ -27,18 +15,18 @@ const rotatingReverse = {
 };
 
 const floating = {
-  hidden: { y: `70%`, rotate: 0 },
+  hidden: { y: `0%`, rotate: 0 },
   visible: {
     opacity: 1,
-    rotate: 360,
-    y: ['70%', `-130%`, '70%'],
+    rotate: -360,
+    y: ['0%', `70%`, '0%'],
     transition: {
-      y: { duration: 10, repeat: Infinity, ease: 'easeInOut' },
       rotate: {
-        duration: 17,
+        duration: 320,
         repeat: Infinity,
         ease: 'linear',
       },
+      y: { duration: 102, repeat: Infinity, ease: 'easeInOut' },
     },
   },
 };
@@ -52,7 +40,7 @@ const staggerSetting = {
   },
 };
 
-const fadeUpY = {
+const fadeUp = {
   hidden: { opacity: 0, y: -100 },
   visible: {
     opacity: 1,
@@ -83,12 +71,12 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
           }}
         >
           <motion.img
-            className={`absolute right-[-3%] top-[-24%] w-[24%] select-none object-contain max-lg:top-[-13%] max-lg:w-[44%] lg:hidden`}
+            className={`absolute right-[-3%] top-[-32%] w-[32%] select-none object-contain max-lg:right-[-59%] max-lg:top-[-28%] max-lg:w-[100%]`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_1.png`}
             alt=''
             initial={`hidden`}
             animate={isVisible ? `visible` : `hidden`}
-            variants={rotating}
+            variants={floating}
             width={665}
             height={327}
           />
@@ -114,7 +102,7 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
           />
         </div>
         <motion.img
-          variants={fadeUpY}
+          variants={fadeUp}
           className={`z-20 mt-54 h-54 w-225 object-contain max-lg:mt-60 max-lg:h-35 max-lg:w-160`}
           src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/fondant_logo.png`}
           width={225}
@@ -122,7 +110,7 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
           alt=''
         />
         <motion.img
-          variants={fadeUpY}
+          variants={fadeUp}
           className={`z-20 mt-36 h-529 w-257 object-cover max-lg:mt-25 max-lg:h-407 max-lg:w-200`}
           src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_phone.png`}
           width={257}

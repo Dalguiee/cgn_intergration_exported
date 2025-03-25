@@ -1635,16 +1635,33 @@ export const mediaData = [
   },
 ];
 
-export const homeTowPartedBannersData = [
+export const homeTwoPartedBannersDataUpper = [
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_1.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_1.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/middle_banner_conference.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_middle_banner_conference.png`,
+    link: `https://fondantmc.com/`,
   },
   {
     id: 1,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/banner_2.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_banner_2.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/middle_banner_20gen.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_middle_banner_20gen.png`,
+    link: `https://www.fondant.kr/series/00090228-6888-9ab2-d5b1-cf7c0200001d?category=episode`,
+  },
+];
+
+export const homeTowPartedBannersDataUnder = [
+  {
+    id: 0,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/middle_banner_duranno.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_middle_banner_duranno.png`,
+    link: `https://www.duranno.com/sl/`,
+  },
+  {
+    id: 1,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/middle_banner_bible.png`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_middle_banner_bible.png`,
+    link: `https://event1.cgntv.net/2025/biblereading/index_pc.html`,
   },
 ];
 

@@ -59,31 +59,16 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
             window.open(`https://www.fondant.kr/`, `_blank`);
           }}
           // style={{ backgroundImage: `url(${item?.src})` }}
-          className={`aspect-[350/544] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[106/136] max-lg:!h-136 max-lg:!w-106`}
+          className={`aspect-[350/502] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[150/215] max-lg:!w-150`}
           key={key}
         >
-          <div
-            key={key}
-            className={`max-h-516 w-full max-w-350 flex-shrink-0 max-lg:max-h-136 max-lg:max-w-106`}
-          >
-            <img
-              className={`aspect-[350/448] h-full max-h-448 w-full rounded-16 object-cover max-lg:aspect-[106/136] max-lg:rounded-8`}
-              src={item?.src}
-              width={350}
-              height={448}
-              alt=''
-            />
-            <div
-              className={`flex flex-col items-start justify-center py-16 max-lg:hidden`}
-            >
-              {/* <p className={`text-regular14 text-grey-400`}>{item?.subtitle}</p> */}
-              <p
-                className={`text-bold24 line-clamp-1 text-grey-900 max-lg:hidden`}
-              >
-                {item?.title}
-              </p>
-            </div>
-          </div>
+          <img
+            className={`h-full w-full rounded-16 object-cover first-letter:w-full max-lg:rounded-8`}
+            src={item?.src}
+            width={350}
+            height={502}
+            alt=''
+          />
         </SwiperSlide>
       ))}
     </Swiper>

@@ -56,7 +56,7 @@ const oddDatas = [
 // 페이지 최상단 이동
 const ActivityVisit = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (

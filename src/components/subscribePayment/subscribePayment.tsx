@@ -50,6 +50,11 @@ const SubscribePayment = ({ setPopupOpen }) => {
   //   }
   // }, [location?.pathname]);
 
+  // 최상단 이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <section
       className={`flex w-full flex-col items-center justify-start max-lg:px-16`}
@@ -179,13 +184,10 @@ const SubscribePayment = ({ setPopupOpen }) => {
         {/* 신청하기 버튼 */}
         <div className={`mt-16 w-full`}>
           <StyledButtons
-            className={`${agree ? `` : `!bg-primary-600 !text-grey-300`} w-full`}
+            className={`${agree && (writedPrice !== `` || selectedPrice?.id !== undefined) && writedName !== `` && writedMiddlePhoneNumber !== `` && writedLastPhoneNumber !== `` ? `` : `pointer-events-none !bg-primary-600 !text-grey-300`} w-full`}
             formMode={`mode1`}
             colorMode={`mode1`}
             text='증액후원 신청하기'
-            onClick={() => {
-              agree ? alert('동의 감지') : alert(`동의 안함`);
-            }}
           />
         </div>
       </section>

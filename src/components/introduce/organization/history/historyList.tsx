@@ -34,6 +34,7 @@ const HistoryList = ({
           {historyDataYears?.map((item, key) => (
             <button
               key={key}
+              className={`${animateToggle ? `pointer-events-none select-none` : ``}`}
               onClick={() => {
                 animating(item?.id);
               }}
@@ -56,7 +57,7 @@ const HistoryList = ({
       <motion.div
         animate={animateToggle ? `hidden` : `visible`}
         variants={contentVariants}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
         className={`ml-240 flex w-full flex-col items-start justify-start gap-24 px-66 pt-15 max-lg:ml-24 max-lg:px-0 max-lg:py-6`}
       >
         {historyData?.[selectedDataIdx]?.map((item, key) => (

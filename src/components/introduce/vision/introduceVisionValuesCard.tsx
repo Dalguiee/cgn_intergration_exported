@@ -7,11 +7,10 @@ const fadeUpY = {
   visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
 };
 
-const IntroduceVisionValuesCard = ({ item, key }) => {
+const IntroduceVisionValuesCard = ({ item }) => {
   return (
     <motion.div
       variants={fadeUpY}
-      key={key}
       className={`flex h-384 w-384 flex-col items-center justify-start rounded-999 bg-primary-100 pt-70 max-lg:h-160 max-lg:w-160 max-lg:pt-20`}
     >
       <img

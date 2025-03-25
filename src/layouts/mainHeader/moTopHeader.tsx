@@ -37,15 +37,15 @@ const MoTopHeader = ({
         }}
         className={`hidden h-32 w-32 items-center justify-center px-6 max-lg:block`}
       >
-        <div className={`flex flex-col items-end justify-center gap-4`}>
+        <div className={`flex flex-col items-end justify-center gap-5`}>
           <span
-            className={`w-full rounded-10 transition ${burger ? 'translate-y-3 rotate-[-45deg] transform border-white-solid' : ''} border-t-3 border-grey-900`}
+            className={`${burger ? 'translate-y-3 rotate-[-45deg] transform border-white-solid' : ''} w-full rounded-999 border-t-2 border-grey-900 transition`}
           ></span>
           <span
-            className={`w-[50%] rounded-10 border-t-3 ${burger ? 'hidden' : ''} border-grey-900`}
+            className={`${burger ? 'hidden' : ''} w-[65%] rounded-999 border-t-2 border-grey-900`}
           ></span>
           <span
-            className={`w-full rounded-10 border-t-3 ${burger ? 'translate-y-[-4px] rotate-[45deg] transform border-white-solid' : ''} border-grey-900`}
+            className={`${burger ? 'translate-y-[-4px] rotate-[45deg] transform border-white-solid' : ''} w-full rounded-999 border-t-2 border-grey-900`}
           ></span>
         </div>
       </button>

@@ -1,5 +1,5 @@
 // 훅
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 // 컴포넌트
@@ -9,6 +9,11 @@ import PolicyPrivacy from './policyPrivacy';
 
 const Policy = () => {
   const { subDepth } = useParams();
+
+  // 상단이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   return (
     <section className={`flex w-full flex-col items-center justify-start`}>

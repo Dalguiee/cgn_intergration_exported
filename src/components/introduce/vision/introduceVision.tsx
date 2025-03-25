@@ -31,21 +31,21 @@ const IntroduceVision = ({ setPopupOpen }) => {
   const valuesData = [
     {
       id: 1,
-      src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/introduce_vision_values_icon_1.svg`,
+      src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/introduce_vision_values_icon_1.png`,
       text: `진리를 위한`,
       pointText: `용기`,
       subText: `Courage`,
     },
     {
       id: 2,
-      src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/introduce_vision_values_icon_2.svg`,
+      src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/introduce_vision_values_icon_2.png`,
       text: `복음을 위한`,
       pointText: `창의`,
       subText: `Creativity`,
     },
     {
       id: 3,
-      src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/introduce_vision_values_icon_3.svg`,
+      src: `${import.meta.env.VITE_PUBLIC_URL}images/introduce/introduce_vision_values_icon_3.png`,
       text: `선교를 위한`,
       pointText: `협력`,
       subText: `Collaboration`,

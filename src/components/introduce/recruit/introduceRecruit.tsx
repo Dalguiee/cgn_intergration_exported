@@ -47,6 +47,11 @@ const IntroduceRecruit = () => {
     setEndedItem(filteredEndedItem);
   }, []);
 
+  // 상단이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <section
       data-aos='fade-up'

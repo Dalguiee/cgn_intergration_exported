@@ -54,8 +54,8 @@ const TidingsCampaign = () => {
         <div
           className={`grid w-1200 max-w-1560 grid-cols-3 flex-wrap items-start justify-center gap-24 max-lg:grid-cols-1`}
         >
-          {findedMockupData?.map(item => (
-            <TidingsCard key={item?.id} item={item} />
+          {findedMockupData?.map((item, idx) => (
+            <TidingsCard key={idx} item={item} />
           ))}
         </div>
       </section>

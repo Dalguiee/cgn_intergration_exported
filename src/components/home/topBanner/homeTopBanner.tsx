@@ -3,6 +3,7 @@ import React from 'react';
 
 // 컴포넌트
 import HomePaymentBox from '@/components/home/topBanner/homePaymentBox';
+import HomeTobBannerContext from './homeTobBannerContext';
 
 // 스와이퍼 모듈
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,42 +18,53 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import IntersectionObserverScanner from '@/components/common/intersectionObserverScanner';
-import HomeTobBannerContext from './homeTobBannerContext';
 
 // 데이터
 export const paymentMockupData = [
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/main_renewal.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_main_renewal.jpg`,
+    title: `CGN 홈페이지`,
+    depthTitle: `리뉴얼 오픈`,
+    subTitle: `CGN 개국 20주년, 선교의 내일을 더하다`,
+    link: ``,
   },
   {
     id: 1,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/main_family.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_main_family.jpg`,
+    title: `대대손손`,
+    depthTitle: `대대선교`,
+    subTitle: `CGN 개국 20주년 후원 캠페인`,
+    link: ``,
   },
   {
     id: 2,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/main_fondant.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_main_fondant.jpg`,
+    title: `CGN의 모든 콘텐츠는`,
+    depthTitle: `퐁당에서 즐기세요!`,
+    subTitle: `큐티, 영화, 다큐 등 다양한 기독 콘텐츠`,
+    link: `https://www.fondant.kr/`,
   },
   {
     id: 3,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/bg/main_first_section_bg.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/bg/mo_main_first_section_bg.png`,
-    title: `세상에 없는 가치와`,
-    depthTitle: `감동을 담다`,
-    subTitle: `CGN이 세상에 없는 가치와 감동을 전합니다.`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/main_fondant_conference.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_main_fondant_conference.jpg`,
+    title: `2025`,
+    depthTitle: `퐁당미디어콘퍼런스`,
+    subTitle: `참가신청 안내`,
+    link: `https://fondantmc.com/`,
+  },
+  {
+    id: 4,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/home/main_old.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_main_old.jpg`,
+    title: `구 홈페이지`,
+    depthTitle: `방문하기`,
+    subTitle: `추억의 과거 콘텐츠 바로가기`,
+    link: `https://event1.cgntv.net/old/home.html`,
   },
 ];
 
@@ -90,10 +102,13 @@ const HomeTopBanner = ({ mobile }) => {
         >
           {paymentMockupData?.map((obj, key) => (
             <SwiperSlide
+              onClick={() => {
+                window.open(obj?.link, '_blank');
+              }}
               style={{
                 backgroundImage: ` ${mobile ? `url(${obj?.moSrc})` : `url(${obj?.src})`} `,
               }}
-              className={`flex w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-36px)] max-lg:justify-end lg:pt-200`}
+              className={`flex w-full cursor-pointer flex-col items-center justify-start bg-cover bg-center bg-no-repeat max-lg:h-[calc(100%-36px)] max-lg:justify-end lg:pt-200`}
               key={key}
             >
               <HomeTobBannerContext obj={obj} />

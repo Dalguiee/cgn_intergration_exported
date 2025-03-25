@@ -2,8 +2,7 @@
 import React from 'react';
 
 // 컴포넌트
-import parse from 'html-react-parser';
-import ResponsiveScanner from '@/components/common/responsiveScanner';
+import IntroduceFollwersCard from './introduceFollwersCard';
 
 //데이터
 const oddDatas = [
@@ -53,76 +52,15 @@ const oddDatas = [
 ];
 
 const IntroduceFollowers = () => {
-  const mobile = ResponsiveScanner(`(max-width: 1024px)`);
-
   return (
     <div
-      data-aos='fade-up'
       className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-60 max-lg:px-16 max-lg:pb-60 max-lg:pt-0`}
     >
       <div
         className={`flex w-full max-w-1200 flex-col items-center justify-start gap-160 max-lg:gap-60`}
       >
         {oddDatas?.map((item, key) => (
-          <div
-            key={key}
-            className={`flex w-full items-end justify-start gap-16 max-lg:flex-col max-lg:items-center`}
-          >
-            <div
-              key={key}
-              className={`${item?.exception ? `flex-col-reverse` : ``} ${item?.reverse ? `flex-row-reverse` : ``} flex w-full items-start justify-center gap-60 max-lg:flex-col max-lg:items-center max-lg:gap-0`}
-            >
-              <img
-                className={`h-400 w-600 rounded-16 object-cover max-lg:h-full max-lg:max-h-240 max-lg:w-full max-lg:max-w-361`}
-                src={item?.src}
-                width={600}
-                height={400}
-                alt=''
-              />
-              {item?.exception ? (
-                <img
-                  className={`mt-24 h-592 w-454 rounded-16 max-lg:h-full max-lg:max-h-240 max-lg:w-full max-lg:max-w-361 lg:hidden`}
-                  src={mobile ? item?.exceptionMoSrc : item?.exceptionSrc}
-                  width={454}
-                  height={592}
-                  alt=''
-                />
-              ) : (
-                ''
-              )}
-
-              <div
-                className={`w-full max-lg:mt-40 max-lg:max-w-361 ${item?.exception ? `max-w-600 max-lg:max-w-361` : ``}`}
-              >
-                <p
-                  className={`text-bold48 max-lg:text-bold24 mb-40 text-grey-900 max-lg:mb-8`}
-                >
-                  {parse(item?.title)}
-                </p>
-                <p
-                  className={`text-bold24 max-lg:text-bold16 mb-24 text-grey-900`}
-                >
-                  {parse(item?.subTitle)}
-                </p>
-                <p
-                  className={`text-regular18 max-lg:text-regular14 text-grey-500`}
-                >
-                  {parse(item?.text)}
-                </p>
-              </div>
-            </div>
-            {item?.exception ? (
-              <img
-                className={`h-full max-h-592 w-full max-w-454 rounded-16 object-cover max-lg:hidden max-lg:h-full max-lg:max-h-240 max-lg:w-full max-lg:max-w-361`}
-                src={mobile ? item?.exceptionMoSrc : item?.exceptionSrc}
-                width={454}
-                height={592}
-                alt=''
-              />
-            ) : (
-              ''
-            )}
-          </div>
+          <IntroduceFollwersCard key={key} item={item} />
         ))}
       </div>
     </div>

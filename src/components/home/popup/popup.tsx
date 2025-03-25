@@ -17,33 +17,33 @@ import ResponsiveScanner from '@/components/common/responsiveScanner';
 const popupData = [
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
   },
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
   },
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
   },
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
   },
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
   },
   {
     id: 0,
-    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
-    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.png`,
+    src: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
+    moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/popup/test_content.jpg`,
   },
 ];
 
@@ -72,7 +72,7 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
     <>
       <div
         style={{ boxShadow: `0 0 10px 0px rgba(0, 0, 0, 0.25)` }}
-        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-[50%] top-[50%] z-[110] h-fit w-full max-w-458 translate-x-[-50%] translate-y-[-50%] transform overflow-hidden max-lg:w-full max-lg:max-w-345`}
+        className={`${popupOpen ? `` : `pointer-events-none hidden select-none`} fixed left-[50%] top-[50%] z-[110] h-fit w-full max-w-458 translate-x-[-50%] translate-y-[-50%] transform overflow-hidden bg-white-solid max-lg:w-full max-lg:max-w-345`}
       >
         <Swiper
           data-popup-swiper
@@ -85,7 +85,7 @@ const Popup = ({ popupOpen, setPopupOpen }) => {
           // loopAdditionalSlides={10}
           // scrollbar={{ draggable: true }}
           pagination={{ clickable: true }}
-          spaceBetween={12}
+          spaceBetween={0}
           slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={swiper => console.log(swiper)}

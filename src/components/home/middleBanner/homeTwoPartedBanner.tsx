@@ -1,10 +1,7 @@
 // 훅
 import React from 'react';
 
-// 데이터
-import { homeTowPartedBannersData } from '@/db/mockup';
-
-const HomeTowPartedBanner = ({ mobile }) => {
+const HomeTwoPartedBanner = ({ item = [], mobile }) => {
   return (
     <div
       data-aos='fade-up'
@@ -13,8 +10,11 @@ const HomeTowPartedBanner = ({ mobile }) => {
       <div
         className={`flex aspect-[1560/200] w-full max-w-1560 items-center justify-start gap-24 max-lg:aspect-[587/92] max-md:h-92 max-md:w-fit max-md:justify-start max-md:gap-12 lg:mx-auto`}
       >
-        {homeTowPartedBannersData?.slice(0, 2)?.map((item, key) => (
+        {item?.map((item, key) => (
           <button
+            onClick={() => {
+              window.open(item?.link, `_blank`);
+            }}
             key={key}
             style={{
               backgroundImage: `${mobile ? `url(${item?.moSrc})` : `url(${item?.src})`} `,
@@ -27,4 +27,4 @@ const HomeTowPartedBanner = ({ mobile }) => {
   );
 };
 
-export default HomeTowPartedBanner;
+export default HomeTwoPartedBanner;

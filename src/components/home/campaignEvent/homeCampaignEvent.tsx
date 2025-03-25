@@ -1,5 +1,5 @@
 // 훅
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 // 데이터
@@ -22,8 +22,9 @@ const HomeCampaignEvent = () => {
   const [startNum, setStartNum] = useState(0);
   const [endNum, setEndNum] = useState(5);
 
+  // 애니메이션 상태 state
   const [switchingAnimate, setSwitchingAnimate] = useState(false);
-
+  //  효과 시간 설정
   const animationDuration = 400;
 
   const animating = () => {
@@ -33,6 +34,7 @@ const HomeCampaignEvent = () => {
     return () => clearTimeout(animateSwitchingInit);
   };
 
+  // 페이지 다음 이전 계산
   const pagingNext = () => {
     setSwitchingAnimate(true);
     animating();
@@ -82,13 +84,13 @@ const HomeCampaignEvent = () => {
         initial={`hidden`}
         animate={switchingAnimate ? `hidden` : `visible`}
         variants={fadeUpY}
-        transition={{ duration: 0.3, ease: 'easeOut' }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
         className={`flex w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:flex-col max-lg:gap-12`}
       >
         {/* 왼쪽 빅 컨텐츠 및 반응형 위쪽 */}
         {campaignData?.slice(startNum, endNum)?.map((item, idx) => {
           if (idx === 0) {
-            return <HomeLeftMainCampaign firstItem={item} />;
+            return <HomeLeftMainCampaign key={idx} firstItem={item} />;
           }
         })}
         {/* 오른쪽 스몰 컨텐츠 및 반응형 아래쪽 */}
@@ -97,7 +99,7 @@ const HomeCampaignEvent = () => {
         >
           {campaignData?.slice(startNum, endNum)?.map((item, idx) => {
             if (idx !== 0) {
-              return <HomeCampaignCard item={item} />;
+              return <HomeCampaignCard key={idx} item={item} />;
             }
           })}
         </div>
