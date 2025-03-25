@@ -7,7 +7,7 @@ const fadeUpY = {
   visible: { opacity: 1, y: 0, transition: { duration: 1, ease: 'easeOut' } },
 };
 
-const IntroduceVisionValuesCard = ({ item, key, isVisible }) => {
+const IntroduceVisionValuesCard = ({ item, key }) => {
   return (
     <motion.div
       variants={fadeUpY}

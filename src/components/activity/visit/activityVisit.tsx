@@ -1,8 +1,8 @@
 // 훅
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // 컴포넌트
-import ActivityVisitCard from './activityVisitCard';
+import ActivityVisitCard from '@/components/activity/visit/activityVisitCard';
 
 // 데이터
 const oddDatas = [
@@ -53,7 +53,12 @@ const oddDatas = [
   },
 ];
 
+// 페이지 최상단 이동
 const ActivityVisit = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className={`w-full flex-col items-center justify-start`}>
       <div

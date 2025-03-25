@@ -1,7 +1,7 @@
 // 훅
 import React from 'react';
-import { motion } from 'framer-motion';
 import parse from 'html-react-parser';
+import { motion } from 'framer-motion';
 
 // 컴포넌트
 import ResponsiveScanner from '@/components/common/responsiveScanner';

@@ -163,11 +163,7 @@ const IntroduceVision = ({ setPopupOpen }) => {
             className={`flex flex-wrap items-center justify-center gap-24`}
           >
             {valuesData?.map((item, key) => (
-              <IntroduceVisionValuesCard
-                item={item}
-                key={key}
-                isVisible={isVisible}
-              />
+              <IntroduceVisionValuesCard item={item} key={key} />
             ))}
           </motion.div>
         </div>
