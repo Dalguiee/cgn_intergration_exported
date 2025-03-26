@@ -1,5 +1,5 @@
 // 훅
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 // 컴포넌트
@@ -17,6 +17,10 @@ const staggerSetting = {
 
 const IntroduceVision = ({ setPopupOpen }) => {
   const { intersectionRef, isVisible } = IntersectionObserverScanner();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: `smooth` });
+  }, []);
 
   const missionsData = [
     { id: 1, title: `MISSION`, text: `온 세상을 위한`, subText: `복음의 통로` },

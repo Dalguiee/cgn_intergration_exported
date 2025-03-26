@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import HTMLReactParser from 'html-react-parser';
 import { motion } from 'framer-motion';
 
@@ -27,58 +27,108 @@ const HistoryList = ({
     return () => clearTimeout(animateTimeout);
   };
 
+  const [pagePercent, setPagePercent] = useState(0);
+  const scrollBox = useRef();
+  const yearsButtonsContainer = useRef();
+  const yearsButtons = useRef([]);
+
+  useEffect(() => {
+    const scrollFunc = () => {
+      console.log(historyDataYears?.length);
+      const scrollBoxRect = scrollBox?.current.getBoundingClientRect();
+      const percentCalc = Math.floor(
+        (scrollBoxRect.top / scrollBoxRect.height) * -20
+      );
+      if (percentCalc < 0) {
+        console.log('스크롤 준비');
+      } else if (percentCalc > -1 && percentCalc < 20) {
+        setPagePercent(percentCalc);
+        const hightV = yearsButtons?.current[percentCalc]?.offsetTop;
+        yearsButtonsContainer?.current?.scrollTo({
+          behavior: 'smooth',
+          top: hightV - 120,
+        });
+
+        console.log('스크롤중');
+      } else if (percentCalc > 90) {
+        console.log('스크롤 끝남');
+      }
+      console.log(percentCalc);
+    };
+
+    window.addEventListener('scroll', scrollFunc);
+    return () => {
+      window.removeEventListener('scroll', scrollFunc);
+    };
+  }, []);
+
   return (
-    <div className={`flex w-full items-start justify-start`}>
-      <div className={`h-fit w-full max-w-181 max-lg:max-w-76`}>
-        <div className={`flex flex-col items-end justify-start`}>
-          {historyDataYears?.map((item, key) => (
-            <button
-              key={key}
-              className={`${animateToggle ? `pointer-events-none select-none` : ``}`}
-              onClick={() => {
-                animating(item?.id);
-              }}
-            >
-              <p
-                className={`text-regular78 max-lg:text-regular32 ${selectedDataIdx === item?.id ? 'text-grey-900' : 'text-grey-200'} flex items-center justify-end`}
+    <section ref={scrollBox} className={`h-[2000vh]`}>
+      <div
+        style={{ transition: `1s` }}
+        className={`sticky top-0 flex w-full items-start justify-start overflow-visible`}
+      >
+        <div
+          className={`h-fit w-full max-w-181 overflow-visible max-lg:max-w-76`}
+        >
+          <div
+            ref={yearsButtonsContainer}
+            className={`flex h-[100vh] flex-col items-end justify-start overflow-visible overflow-y-scroll scrollbar-hide`}
+          >
+            {historyDataYears?.map((item, key) => (
+              <button
+                ref={el => {
+                  yearsButtons.current[key] = el;
+                }}
                 key={key}
+                className={`${animateToggle ? `pointer-events-none select-none` : ``}`}
+                onClick={() => {
+                  animating(item?.id);
+                }}
+              >
+                <p
+                  className={`text-regular78 max-lg:text-regular32 ${pagePercent === item?.id ? 'text-grey-900' : 'text-grey-200'} flex items-center justify-end`}
+                  key={key}
+                >
+                  <span
+                    className={`${pagePercent === item?.id ? 'block' : 'hidden'}`}
+                  >
+                    {item?.frontNum}
+                  </span>
+                  {item?.year}
+                </p>
+              </button>
+            ))}
+          </div>
+        </div>
+        <motion.div
+          animate={animateToggle ? `hidden` : `visible`}
+          variants={contentVariants}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          className={`ml-240 mt-120 flex w-full flex-col items-start justify-start gap-24 overflow-y-auto px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:px-0 max-lg:py-6`}
+        >
+          {historyData?.[pagePercent]?.map((item, key) => (
+            <div className={`flex items-start justify-start`} key={key}>
+              <p
+                className={`text-bold16 max-lg:text-bold14 flex w-88 flex-shrink-0 items-center justify-start text-grey-500 max-lg:w-39 max-lg:flex-shrink-0`}
               >
                 <span
-                  className={`${selectedDataIdx === item?.id ? 'block' : 'hidden'}`}
+                  className={`text-bold24 max-lg:text-bold14 text-grey-900`}
                 >
-                  {item?.frontNum}
+                  {item?.time}
                 </span>
-                {item?.year}
+                월
               </p>
-            </button>
+              <p
+                className={`text-regular18 max-lg:text-regular14 flex items-center justify-start text-grey-500`}
+              >
+                {HTMLReactParser(item?.text)}
+              </p>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
-      <motion.div
-        animate={animateToggle ? `hidden` : `visible`}
-        variants={contentVariants}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className={`ml-240 flex w-full flex-col items-start justify-start gap-24 px-66 pt-15 max-lg:ml-24 max-lg:px-0 max-lg:py-6`}
-      >
-        {historyData?.[selectedDataIdx]?.map((item, key) => (
-          <div className={`flex items-start justify-start`} key={key}>
-            <p
-              className={`text-bold16 max-lg:text-bold14 flex w-88 flex-shrink-0 items-center justify-start text-grey-500 max-lg:w-39 max-lg:flex-shrink-0`}
-            >
-              <span className={`text-bold24 max-lg:text-bold14 text-grey-900`}>
-                {item?.time}
-              </span>
-              월
-            </p>
-            <p
-              className={`text-regular18 max-lg:text-regular14 flex items-center justify-start text-grey-500`}
-            >
-              {HTMLReactParser(item?.text)}
-            </p>
-          </div>
-        ))}
-      </motion.div>
-    </div>
+    </section>
   );
 };
 

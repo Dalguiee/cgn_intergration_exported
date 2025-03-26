@@ -19,7 +19,7 @@ const HomeLeftMainCampaign = ({ firstItem }) => {
       initial={`hidden`}
       animate={`visible`}
       variants={fadeUpY}
-      className={`flex aspect-[792/660] w-full items-center justify-center max-lg:aspect-[360/300]`}
+      className={`flex h-full w-[59.42%] shrink-0 items-center justify-center max-lg:h-245 max-lg:w-full`}
     >
       <button
         data-under-dark-gradient

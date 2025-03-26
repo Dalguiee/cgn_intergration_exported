@@ -40,7 +40,7 @@ const HomeTobBannerContext = ({ obj }) => {
       >
         <motion.span
           variants={FadeLeft}
-          className={`text-bold78 max-lg:text-bold32 mb-12 text-white-solid max-lg:mb-8`}
+          className={`text-bold78 max-lg:text-bold32 pointer-events-none mb-12 select-none text-white-solid max-lg:mb-8`}
         >
           {obj?.title}
           <br />
@@ -48,7 +48,7 @@ const HomeTobBannerContext = ({ obj }) => {
         </motion.span>
         <motion.span
           variants={FadeLeft}
-          className={`text-regular32 max-lg:text-regular16 text-grey-50`}
+          className={`text-regular32 max-lg:text-regular16 pointer-events-none select-none text-grey-50`}
         >
           {obj?.subTitle}
         </motion.span>

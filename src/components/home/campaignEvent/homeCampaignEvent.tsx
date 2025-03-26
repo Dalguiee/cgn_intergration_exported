@@ -68,7 +68,7 @@ const HomeCampaignEvent = () => {
 
   return (
     <main
-      className={`flex h-1004 w-full flex-col items-center justify-center gap-40 px-16 max-lg:h-fit max-lg:gap-0 max-lg:pb-60 max-lg:pt-60`}
+      className={`flex h-fit w-full flex-col items-center justify-center gap-40 px-16 py-120 max-lg:gap-0 max-lg:py-60`}
     >
       {/* 컨텐츠 헤더 */}
       <HomeCampaignEventHeader
@@ -85,7 +85,7 @@ const HomeCampaignEvent = () => {
         animate={switchingAnimate ? `hidden` : `visible`}
         variants={fadeUpY}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className={`flex w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:flex-col max-lg:gap-12`}
+        className={`flex h-575 w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:h-627 max-lg:flex-col max-lg:gap-12`}
       >
         {/* 왼쪽 빅 컨텐츠 및 반응형 위쪽 */}
         {campaignData?.slice(startNum, endNum)?.map((item, idx) => {

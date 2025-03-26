@@ -71,7 +71,7 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
           }}
         >
           <motion.img
-            className={`absolute right-[-3%] top-[-32%] w-[32%] select-none object-contain max-lg:right-[-59%] max-lg:top-[-28%] max-lg:w-[100%]`}
+            className={`absolute right-[-3%] top-[-32%] w-[32%] select-none object-contain max-lg:right-[-59%] max-lg:top-[-28%] max-lg:w-[100rem]`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_1.png`}
             alt=''
             initial={`hidden`}
@@ -81,7 +81,7 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
             height={327}
           />
           <motion.img
-            className={`absolute bottom-[-10%] left-[-30%] w-[67%] select-none object-contain max-lg:left-[-20%] max-lg:w-[113%]`}
+            className={`absolute bottom-[-10%] left-[-30%] w-[67%] select-none object-contain max-lg:bottom-[10%] max-lg:left-[-20%] max-lg:w-[113%]`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_2.png`}
             alt=''
             initial={`hidden`}
@@ -90,16 +90,16 @@ const MediaDescriptionMainTitle = ({ mobile, sections }) => {
             width={537}
             height={264}
           />
-          <motion.img
+          {/* <motion.img
             className={`absolute bottom-[-10%] left-[49%] hidden w-[18%] select-none object-contain max-lg:left-[67%] max-lg:hidden max-lg:w-[38%]`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/title_animate_object_3.png`}
             alt=''
-            // initial={`hidden`}
-            // animate={isVisible ? `visible` : `hidden`}
-            // variants={floating}
+            initial={`hidden`}
+            animate={isVisible ? `visible` : `hidden`}
+            variants={floating}
             width={337}
             height={166}
-          />
+          /> */}
         </div>
         <motion.img
           variants={fadeUp}

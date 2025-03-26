@@ -58,7 +58,7 @@ const TidingsBroadcast = () => {
               <TidingsBroadcastCard key={key} item={item} idx={key} all={all} />
             ))
         ) : (
-          <NoSearchResult />
+          <NoSearchResult mode={`mode2`} />
         )}
       </div>
       <Pagination

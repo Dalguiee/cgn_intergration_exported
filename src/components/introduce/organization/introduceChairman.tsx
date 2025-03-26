@@ -112,7 +112,7 @@ const IntroduceChairman = () => {
             </p>
           </div>
           <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-2 indent-13 text-grey-500 max-lg:line-clamp-none max-lg:indent-4`}
+            className={`text-regular18 max-lg:text-regular14 line-clamp-2 text-grey-500 max-lg:line-clamp-none`}
           >
             수많은 콘텐츠가 범람하는 이 시대에, 진리를 전하는 미디어의 역할은
             더욱 절실해지고 있습니다. <br />
@@ -120,7 +120,7 @@ const IntroduceChairman = () => {
             사명은 앞으로 더욱 커질 것입니다.
           </p>
           <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-3 indent-13 text-grey-500 max-lg:line-clamp-none max-lg:indent-4`}
+            className={`text-regular18 max-lg:text-regular14 line-clamp-3 text-grey-500 max-lg:line-clamp-none`}
           >
             CGN은 복음을 효과적으로 전할 수 있는 최적의 플랫폼을 활용해야 한다는
             믿음 아래, 해외 지사를 꾸준히 설립해 왔습니다. <br />
@@ -130,7 +130,7 @@ const IntroduceChairman = () => {
             소명을 다하기 위해 최선을 다하겠습니다.
           </p>
           <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-3 indent-13 text-grey-500 max-lg:line-clamp-none max-lg:indent-4`}
+            className={`text-regular18 max-lg:text-regular14 line-clamp-3 text-grey-500 max-lg:line-clamp-none`}
           >
             지난 20년 동안 기도와 후원으로 함께해 주신 모든 분들께 진심으로
             감사드립니다. <br />

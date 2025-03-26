@@ -22,7 +22,7 @@ const HomeNoticeMain = () => {
           className={`flex h-fit min-h-420 w-full items-start justify-between gap-24 max-lg:h-fit max-lg:flex-col max-lg:gap-0 max-lg:px-16`}
         >
           <div
-            className={`w-full bg-white-solid px-24 max-lg:mb-16 max-lg:border-b-1 max-lg:border-grey-200 max-lg:px-0`}
+            className={`min-h-420 w-full bg-white-solid px-24 max-lg:mb-16 max-lg:min-h-[unset] max-lg:border-b-1 max-lg:border-grey-200 max-lg:px-0`}
           >
             {noticeData?.slice(0, 5)?.map?.((item, key) => (
               <button

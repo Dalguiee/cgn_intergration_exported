@@ -55,7 +55,7 @@ const MoMainVisual = props => {
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor1.jpg`}
             alt=''
-            className='h-full w-full'
+            className='h-full w-full object-cover'
           />
           <div className='text-bold18 absolute bottom-16 left-13 text-start text-white-solid'>
             방송&퐁당 플랫폼
@@ -71,7 +71,7 @@ const MoMainVisual = props => {
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor2.jpg`}
             alt=''
-            className='h-full w-full'
+            className='h-full w-full object-cover'
           />
           <div className='text-bold18 absolute bottom-16 left-13 text-start text-white-solid'>
             콘텐츠 제작
@@ -87,7 +87,7 @@ const MoMainVisual = props => {
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor3.jpg`}
             alt=''
-            className='h-full w-full'
+            className='h-full w-full object-cover'
           />
           <div className='text-bold18 absolute bottom-16 left-13 text-start text-white-solid'>
             퐁당 글로벌

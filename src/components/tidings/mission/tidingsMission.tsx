@@ -11,6 +11,7 @@ import TagIcon from '@/components/common/tagIcon';
 import TextScroll from '@/components/tidings/mission/textScroll';
 import PcTopArticleSwiper from '@/components/tidings/mission/pcTopArticleSwiper';
 import MoTopArticleList from '@/components/tidings/mission/moTopArticleList';
+import NoSearchResult from '@/components/common/noSearchResult';
 
 /*
  *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 받는 데이터만 따로 받도록 퍼블리싱 되었습니다.
@@ -47,6 +48,7 @@ const TidingsMission = () => {
   useEffect(() => {
     if (selectedCategoryArticleId === 0) {
       setfindedMockupData(mockupExportedData);
+      // setfindedMockupData([]);
     } else {
       setfindedMockupData(
         mockupExportedData?.filter(item => {
@@ -55,6 +57,7 @@ const TidingsMission = () => {
           );
         })
       );
+      // setfindedMockupData([]);
     }
   }, [selectedCategoryArticleId]);
 
@@ -107,172 +110,179 @@ const TidingsMission = () => {
     setPagingNum(0);
   }, [location]);
 
-  if (!findedMockupData) return <></>;
   return (
     <>
       <CategoryList
         selectedCategoryArticleId={selectedCategoryArticleId}
         setSelectedCategoryArticleId={setSelectedCategoryArticleId}
       />
-      <section
-        className={`flex w-full flex-col items-center justify-center overflow-hidden pb-160 pt-32 max-lg:mt-24 max-lg:px-20 max-lg:pb-0 max-lg:pb-20 max-lg:pt-0`}
-      >
-        <MoTopArticleList
-          findedMockupData={findedMockupData}
-          pageMode={pageMode}
-        />
-
-        <div
-          className={`flex w-full max-w-1560 flex-wrap items-start justify-center overflow-visible max-lg:hidden`}
+      {findedMockupData?.length <= 0 ? (
+        <NoSearchResult mode={`mode2`} />
+      ) : (
+        <section
+          className={`flex w-full flex-col items-center justify-center overflow-hidden pb-160 pt-32 max-lg:mt-24 max-lg:px-20 max-lg:pb-0 max-lg:pb-20 max-lg:pt-0`}
         >
-          <PcTopArticleSwiper
-            pageMode={pageMode}
+          <MoTopArticleList
             findedMockupData={findedMockupData}
+            pageMode={pageMode}
           />
-        </div>
-        <TextScroll />
-        <div
-          className={`flex w-full max-w-1200 items-start justify-center px-20 max-lg:hidden`}
-        >
-          {/* 텍스트 애니메이션 하단 왼쪽 구역입니다 */}
-          <div className={`sticky top-80 w-full`}>
-            {findedMockupData?.[pagingNum] ? (
-              <div className={`h-656 w-full max-w-560`}>
-                <div
-                  className={`rounded-br-16 rounded-tr-16 border-1 border-grey-400 bg-white-solid pr-32 pt-32`}
-                >
-                  <button
-                    onClick={() => {
-                      navigate(
-                        `${`/news/${pageMode}/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
-                      );
-                    }}
-                  >
-                    <img
-                      className={`w-full rounded-br-16 rounded-tr-16`}
-                      src={`${findedMockupData?.[pagingNum]?.src}`}
-                      alt=''
-                    />
-                  </button>
-                  <div
-                    className={`flex items-center justify-start gap-16 px-24 py-24`}
-                  >
-                    <button
-                      onClick={() => {
-                        pagingPrev();
-                      }}
-                    >
-                      <img
-                        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_rounded.svg`}
-                        alt=''
-                      />
-                    </button>
-                    <span className={`text-bold16 text-grey-900`}>
-                      {pagingNum !== null && pagingNum !== undefined
-                        ? pagingNum + 1
-                        : ''}
-                    </span>
-                    <span className={`text-regular16 text-grey-500`}>/</span>
-                    <span className={`text-regular16 text-grey-500`}>
-                      {findedMockupData?.length ? findedMockupData?.length : ''}
-                    </span>
-                    <button
-                      onClick={() => {
-                        pagingNext();
-                      }}
-                    >
-                      <img
-                        src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_rounded.svg`}
-                        alt=''
-                      />
-                    </button>
-                  </div>
-                </div>
-                <div
-                  className={`flex flex-col items-start justify-center gap-16 py-24`}
-                >
-                  <div className={`flex items-center justify-start gap-16`}>
-                    {findedMockupData?.[pagingNum]?.tag?.map((item, key) => (
-                      <TagIcon
-                        id={item.id}
-                        text={item.text}
-                        mode={item.mode}
-                        key={key}
-                      />
-                    ))}
-                    <span
-                      className={`text-regular14 line-clamp-1 max-w-65 text-grey-500`}
-                    >
-                      {findedMockupData?.[pagingNum]?.startDate}
-                    </span>
-                  </div>
-                  <div>
-                    <span className={`text-bold24 line-clamp-3 text-grey-900`}>
-                      {findedMockupData?.[pagingNum]?.title}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <></>
-            )}
-          </div>
-          {/* 텍스트 애니메이션 하단 오른쪽 리스트 구역입니다 */}
+
           <div
-            ref={contentBox}
-            data-tidings-mission-container
-            className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-auto`}
+            className={`flex w-full max-w-1560 flex-wrap items-start justify-center overflow-visible max-lg:hidden`}
           >
-            <div
-              style={{
-                top: `${bgBoxPositon}px`,
-                transition: `0.25s`,
-                boxShadow: `0 0 30px 1px #ececec`,
-              }}
-              className={`absolute left-0 z-10 h-80 w-[calc(100%-16px)] rounded-16 bg-white-solid`}
-            ></div>
-            {findedMockupData?.map((data, key) => (
-              <button
-                ref={el => {
-                  listAll.current[key] = el;
-                }}
-                onMouseEnter={e => {
-                  positionFind(e.target);
-                  setPagingNum(key);
-                }}
-                onClick={() => {
-                  navigate(
-                    `${`/news/${pageMode}/detail?articleId=${data?.id}`}`
-                  );
-                }}
-                className={`relative z-20 flex h-80 w-[calc(100%-16px)] items-center justify-between px-24 py-24`}
-                key={data?.id}
-              >
-                <div className={`flex items-center justify-center gap-16`}>
-                  {data?.tag
-                    .slice(0, 1)
-                    .map((item, key) => (
-                      <TagIcon
-                        mode={item?.mode}
-                        id={item?.id}
-                        key={key}
-                        text={item?.text}
-                      />
-                    ))}
-                  <span className={`text-bold18 line-clamp-1 text-grey-900`}>
-                    {data?.title}
-                  </span>
-                </div>
-                <span
-                  className={`text-regular14 ml-16 w-full max-w-65 overflow-hidden text-grey-400`}
-                >
-                  {data?.startDate}
-                </span>
-              </button>
-            ))}
+            <PcTopArticleSwiper
+              pageMode={pageMode}
+              findedMockupData={findedMockupData}
+            />
           </div>
-        </div>
-      </section>
+          <TextScroll />
+          <div
+            className={`flex w-full max-w-1200 items-start justify-center px-20 max-lg:hidden`}
+          >
+            {/* 텍스트 애니메이션 하단 왼쪽 구역입니다 */}
+            <div className={`sticky top-80 w-full`}>
+              {findedMockupData?.[pagingNum] ? (
+                <div className={`h-656 w-full max-w-560`}>
+                  <div
+                    className={`rounded-br-16 rounded-tr-16 border-1 border-grey-400 bg-white-solid pr-32 pt-32`}
+                  >
+                    <button
+                      onClick={() => {
+                        navigate(
+                          `${`/news/${pageMode}/detail?articleId=${findedMockupData?.[pagingNum]?.id}`}`
+                        );
+                      }}
+                    >
+                      <img
+                        className={`w-full rounded-br-16 rounded-tr-16`}
+                        src={`${findedMockupData?.[pagingNum]?.src}`}
+                        alt=''
+                      />
+                    </button>
+                    <div
+                      className={`flex items-center justify-start gap-16 px-24 py-24`}
+                    >
+                      <button
+                        onClick={() => {
+                          pagingPrev();
+                        }}
+                      >
+                        <img
+                          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_left_rounded.svg`}
+                          alt=''
+                        />
+                      </button>
+                      <span className={`text-bold16 text-grey-900`}>
+                        {pagingNum !== null && pagingNum !== undefined
+                          ? pagingNum + 1
+                          : ''}
+                      </span>
+                      <span className={`text-regular16 text-grey-500`}>/</span>
+                      <span className={`text-regular16 text-grey-500`}>
+                        {findedMockupData?.length
+                          ? findedMockupData?.length
+                          : ''}
+                      </span>
+                      <button
+                        onClick={() => {
+                          pagingNext();
+                        }}
+                      >
+                        <img
+                          src={`${import.meta.env.VITE_PUBLIC_URL}images/icon/arrow_right_rounded.svg`}
+                          alt=''
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className={`flex flex-col items-start justify-center gap-16 py-24`}
+                  >
+                    <div className={`flex items-center justify-start gap-16`}>
+                      {findedMockupData?.[pagingNum]?.tag?.map((item, key) => (
+                        <TagIcon
+                          id={item.id}
+                          text={item.text}
+                          mode={item.mode}
+                          key={key}
+                        />
+                      ))}
+                      <span
+                        className={`text-regular14 line-clamp-1 max-w-65 text-grey-500`}
+                      >
+                        {findedMockupData?.[pagingNum]?.startDate}
+                      </span>
+                    </div>
+                    <div>
+                      <span
+                        className={`text-bold24 line-clamp-3 text-grey-900`}
+                      >
+                        {findedMockupData?.[pagingNum]?.title}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <></>
+              )}
+            </div>
+            {/* 텍스트 애니메이션 하단 오른쪽 리스트 구역입니다 */}
+            <div
+              ref={contentBox}
+              data-tidings-mission-container
+              className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-auto`}
+            >
+              <div
+                style={{
+                  top: `${bgBoxPositon}px`,
+                  transition: `0.25s`,
+                  boxShadow: `0 0 30px 1px #ececec`,
+                }}
+                className={`absolute left-0 z-10 h-80 w-[calc(100%-16px)] rounded-16 bg-white-solid`}
+              ></div>
+              {findedMockupData?.map((data, key) => (
+                <button
+                  ref={el => {
+                    listAll.current[key] = el;
+                  }}
+                  onMouseEnter={e => {
+                    positionFind(e.target);
+                    setPagingNum(key);
+                  }}
+                  onClick={() => {
+                    navigate(
+                      `${`/news/${pageMode}/detail?articleId=${data?.id}`}`
+                    );
+                  }}
+                  className={`relative z-20 flex h-80 w-[calc(100%-16px)] items-center justify-between px-24 py-24`}
+                  key={data?.id}
+                >
+                  <div className={`flex items-center justify-center gap-16`}>
+                    {data?.tag
+                      .slice(0, 1)
+                      .map((item, key) => (
+                        <TagIcon
+                          mode={item?.mode}
+                          id={item?.id}
+                          key={key}
+                          text={item?.text}
+                        />
+                      ))}
+                    <span className={`text-bold18 line-clamp-1 text-grey-900`}>
+                      {data?.title}
+                    </span>
+                  </div>
+                  <span
+                    className={`text-regular14 ml-16 w-full max-w-65 overflow-hidden text-grey-400`}
+                  >
+                    {data?.startDate}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 };

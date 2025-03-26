@@ -15,29 +15,30 @@ const PcTopArticleSwiper = ({ pageMode, findedMockupData }) => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={`w-full overflow-visible px-56 pb-40`}
       spaceBetween={64}
-      slidesPerView={
-        findedMockupData && findedMockupData?.length < 3 ? 2 : undefined
-      }
+      slidesPerView={`auto`}
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
       breakpoints={{
         640: {
-          slidesPerView: 1,
+          // slidesPerView: 1,
           spaceBetween: 16,
         },
         768: {
-          slidesPerView: 2,
+          // slidesPerView: 2,
           spaceBetween: 32,
         },
         1024: {
-          slidesPerView:
-            findedMockupData && findedMockupData?.length >= 3 ? 3 : 1,
+          // slidesPerView:
+          //   findedMockupData && findedMockupData?.length >= 3 ? 3 : 1,
           spaceBetween: 64,
         },
       }}
     >
       {findedMockupData?.map((item, key) => (
-        <SwiperSlide className={`flex items-center justify-center`} key={key}>
+        <SwiperSlide
+          className={`flex w-560 items-center justify-center`}
+          key={key}
+        >
           <TidingsCard2 pageMode={pageMode} key={item?.id} item={item} />
         </SwiperSlide>
       ))}

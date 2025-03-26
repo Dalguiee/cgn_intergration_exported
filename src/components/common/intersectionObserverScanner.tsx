@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 
 const IntersectionObserverScanner = (
-  threshold = 0.1,
-  oneStepActive = false
+  oneStepActive = false,
+  threshold = 0.1
 ) => {
   const [isVisible, setIsVisible] = useState(false);
   const intersectionRef = useRef(null);

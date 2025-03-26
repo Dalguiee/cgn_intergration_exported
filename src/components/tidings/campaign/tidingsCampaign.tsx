@@ -8,6 +8,7 @@ import CategoryList from '@/components/common/categoryList';
 
 // 데이터
 import { mockupData } from '@/db/mockup';
+import NoSearchResult from '@/components/common/noSearchResult';
 
 const TidingsCampaign = () => {
   const location = useLocation();
@@ -29,6 +30,7 @@ const TidingsCampaign = () => {
   useEffect(() => {
     if (selectedCategoryArticleId === 0) {
       setfindedMockupData(mockupExportedData);
+      // setfindedMockupData([]);
     } else {
       setfindedMockupData(
         mockupExportedData.filter(item => {
@@ -37,10 +39,10 @@ const TidingsCampaign = () => {
           );
         })
       );
+      // setfindedMockupData([]);
     }
   }, [selectedCategoryArticleId]);
 
-  if (!findedMockupData) return <></>;
   return (
     <>
       <CategoryList
@@ -49,15 +51,21 @@ const TidingsCampaign = () => {
       />
       <section
         data-aos='fade-up'
-        className={`flex w-full items-center justify-center px-20 pb-160 pt-80 max-lg:mt-24 max-lg:pb-20 max-lg:pt-0`}
+        className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-80 max-lg:mt-24 max-lg:pb-20 max-lg:pt-0`}
       >
-        <div
-          className={`grid w-1200 max-w-1560 grid-cols-3 flex-wrap items-start justify-center gap-24 max-lg:grid-cols-1`}
-        >
-          {findedMockupData?.map((item, idx) => (
-            <TidingsCard key={idx} item={item} />
-          ))}
-        </div>
+        {findedMockupData?.length <= 0 ? (
+          <div className={`w-full`}>
+            <NoSearchResult mode={`mode2`} />
+          </div>
+        ) : (
+          <div
+            className={`grid w-1200 max-w-1560 grid-cols-3 flex-wrap items-start justify-center gap-24 max-lg:grid-cols-1`}
+          >
+            {findedMockupData?.map((item, idx) => (
+              <TidingsCard key={idx} item={item} />
+            ))}
+          </div>
+        )}
       </section>
     </>
   );

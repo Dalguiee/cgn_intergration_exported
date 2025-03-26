@@ -80,6 +80,7 @@ const HomeTopBanner = ({ mobile }) => {
           className={`h-full w-full`}
           navigation={true}
           // scrollbar={{ draggable: true }}
+          loop={true}
           speed={mobile ? 500 : 1300}
           pagination={{ clickable: true }}
           spaceBetween={24}
