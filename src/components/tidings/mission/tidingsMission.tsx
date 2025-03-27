@@ -128,7 +128,7 @@ const TidingsMission = () => {
           />
 
           <div
-            className={`flex w-full max-w-1560 flex-wrap items-start justify-center overflow-visible max-lg:hidden`}
+            className={`flex w-full flex-wrap items-start justify-center overflow-visible max-lg:hidden lg:px-56`}
           >
             <PcTopArticleSwiper
               pageMode={pageMode}

@@ -13,7 +13,7 @@ const PcTopArticleSwiper = ({ pageMode, findedMockupData }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      className={`w-full overflow-visible px-56 pb-40`}
+      className={`w-full overflow-visible pb-40`}
       spaceBetween={64}
       slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
