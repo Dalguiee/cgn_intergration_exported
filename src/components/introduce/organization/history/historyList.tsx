@@ -4,9 +4,9 @@ import HTMLReactParser from 'html-react-parser';
 import { motion } from 'framer-motion';
 
 // 모션변수
-const contentVariants = {
+const sliding = {
   hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0 },
+  visible: { opacity: 1, y: 0, transition: { opacity: { duration: 0.2 } } },
 };
 
 const HistoryList = ({
@@ -37,23 +37,16 @@ const HistoryList = ({
       console.log(historyDataYears?.length);
       const scrollBoxRect = scrollBox?.current.getBoundingClientRect();
       const percentCalc = Math.floor(
-        (scrollBoxRect.top / scrollBoxRect.height) * -20
+        (scrollBoxRect.top / scrollBoxRect.height) * -historyDataYears?.length
       );
-      if (percentCalc < 0) {
-        console.log('스크롤 준비');
-      } else if (percentCalc > -1 && percentCalc < 20) {
+      if (percentCalc > -1 && percentCalc < historyDataYears?.length) {
         setPagePercent(percentCalc);
         const hightV = yearsButtons?.current[percentCalc]?.offsetTop;
         yearsButtonsContainer?.current?.scrollTo({
           behavior: 'smooth',
           top: hightV - 120,
         });
-
-        console.log('스크롤중');
-      } else if (percentCalc > 90) {
-        console.log('스크롤 끝남');
       }
-      console.log(percentCalc);
     };
 
     window.addEventListener('scroll', scrollFunc);
@@ -61,6 +54,13 @@ const HistoryList = ({
       window.removeEventListener('scroll', scrollFunc);
     };
   }, []);
+
+  useEffect(() => {
+    setAnimateToggle(true);
+    const interval = setTimeout(() => {
+      setAnimateToggle(false);
+    }, 100);
+  }, [pagePercent]);
 
   return (
     <section ref={scrollBox} className={`h-[2000vh]`}>
@@ -73,37 +73,37 @@ const HistoryList = ({
         >
           <div
             ref={yearsButtonsContainer}
-            className={`flex h-[100vh] flex-col items-end justify-start overflow-visible overflow-y-scroll scrollbar-hide`}
+            className={`pointer-events-none flex h-[100vh] select-none flex-col items-end justify-start overflow-visible overflow-y-scroll scrollbar-hide`}
           >
             {historyDataYears?.map((item, key) => (
-              <button
+              <div
                 ref={el => {
                   yearsButtons.current[key] = el;
                 }}
                 key={key}
                 className={`${animateToggle ? `pointer-events-none select-none` : ``}`}
-                onClick={() => {
-                  animating(item?.id);
-                }}
+                // onClick={() => {
+                //   animating(item?.id);
+                // }}
               >
                 <p
                   className={`text-regular78 max-lg:text-regular32 ${pagePercent === item?.id ? 'text-grey-900' : 'text-grey-200'} flex items-center justify-end`}
                   key={key}
                 >
-                  <span
+                  <motion.span
                     className={`${pagePercent === item?.id ? 'block' : 'hidden'}`}
                   >
                     {item?.frontNum}
-                  </span>
+                  </motion.span>
                   {item?.year}
                 </p>
-              </button>
+              </div>
             ))}
           </div>
         </div>
         <motion.div
           animate={animateToggle ? `hidden` : `visible`}
-          variants={contentVariants}
+          variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           className={`ml-240 mt-120 flex w-full flex-col items-start justify-start gap-24 overflow-y-auto px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:px-0 max-lg:py-6`}
         >

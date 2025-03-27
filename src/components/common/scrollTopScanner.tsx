@@ -7,6 +7,7 @@ const ScrollTopScanner = () => {
 
     return () => window.removeEventListener(`scroll`, callback);
   };
+
   const getSnapshot = () => {
     return !(window.scrollY > 0);
   };

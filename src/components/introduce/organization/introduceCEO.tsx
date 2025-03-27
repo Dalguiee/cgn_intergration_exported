@@ -11,7 +11,7 @@ const IntroduceCEO = () => {
           className={`flex w-full max-w-1200 gap-80 max-lg:flex-col max-lg:items-center max-lg:gap-40`}
         >
           <img
-            className={`h-full max-h-550 w-full max-w-480 object-cover max-lg:max-w-361`}
+            className={`h-550 w-full max-w-480 object-cover max-lg:h-381 max-lg:max-w-361`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/introduce/CEO.png`}
             width={480}
             height={550}

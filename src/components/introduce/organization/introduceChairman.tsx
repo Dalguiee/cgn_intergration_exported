@@ -138,7 +138,7 @@ const IntroduceChairman = () => {
             부탁드립니다.
           </p>
           <p
-            className={`text-regular18 max-lg:text-regular14 line-clamp-3 indent-13 text-grey-500 max-lg:line-clamp-none max-lg:indent-4`}
+            className={`text-regular18 max-lg:text-regular14 line-clamp-3 text-grey-500 max-lg:line-clamp-none`}
           >
             모든 영광을 하나님께 올려드립니다.
           </p>
