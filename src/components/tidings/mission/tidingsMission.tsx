@@ -9,9 +9,9 @@ import { mockupData } from '@/db/mockup';
 import CategoryList from '@/components/common/categoryList';
 import TagIcon from '@/components/common/tagIcon';
 import TextScroll from '@/components/tidings/mission/textScroll';
-import PcTopArticleSwiper from '@/components/tidings/mission/pcTopArticleSwiper';
 import MoTopArticleList from '@/components/tidings/mission/moTopArticleList';
 import NoSearchResult from '@/components/common/noSearchResult';
+import TidingsCard2 from '@/components/tidings/mission/tidingsCard2';
 
 /*
  *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 받는 데이터만 따로 받도록 퍼블리싱 되었습니다.
@@ -120,7 +120,7 @@ const TidingsMission = () => {
         <NoSearchResult mode={`mode2`} />
       ) : (
         <section
-          className={`flex w-full flex-col items-center justify-center overflow-hidden pb-160 pt-32 max-lg:mt-24 max-lg:px-20 max-lg:pb-0 max-lg:pb-20 max-lg:pt-0`}
+          className={`flex w-full flex-col items-center justify-center overflow-hidden pb-160 pt-32 max-lg:mt-24 max-lg:px-16 max-lg:pb-20 max-lg:pt-0`}
         >
           <MoTopArticleList
             findedMockupData={findedMockupData}
@@ -128,12 +128,13 @@ const TidingsMission = () => {
           />
 
           <div
-            className={`flex w-full flex-wrap items-start justify-center overflow-visible max-lg:hidden lg:px-56`}
+            className={`flex w-full max-w-1920 items-start justify-between gap-[3%] overflow-visible max-lg:hidden lg:px-56`}
           >
-            <PcTopArticleSwiper
-              pageMode={pageMode}
-              findedMockupData={findedMockupData}
-            />
+            {findedMockupData
+              ?.slice(0, 3)
+              ?.map((item, key) => (
+                <TidingsCard2 pageMode={pageMode} key={key} item={item} />
+              ))}
           </div>
           <TextScroll />
           <div

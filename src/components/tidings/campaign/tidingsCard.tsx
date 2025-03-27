@@ -15,9 +15,9 @@ const TidingsCard = ({ item }) => {
       className={`flex w-full flex-col items-center justify-start rounded-16 bg-white-solid px-16 pb-40 pt-16 max-lg:pb-24`}
     >
       <img
-        className='aspect-[352/240] h-full w-full rounded-8 object-cover max-lg:aspect-[329/224]'
+        className='aspect-[352/240] w-full rounded-8 object-cover max-lg:aspect-[329/224]'
         src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`}
-        width={`352px`}
+        width={`329px`}
         height={`240px`}
         alt='메인카드이미지'
       />

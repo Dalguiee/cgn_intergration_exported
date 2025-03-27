@@ -111,7 +111,7 @@ const TidingsDetail = () => {
 
   return (
     <section
-      className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:px-20 max-lg:py-0`}
+      className={`flex w-full flex-col items-center justify-center px-20 pb-160 pt-40 max-lg:px-16 max-lg:py-0`}
     >
       <div className='w-full max-w-1200'>
         <div
