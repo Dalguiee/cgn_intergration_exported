@@ -15,7 +15,7 @@ const PcTopArticleSwiper = ({ pageMode, findedMockupData }) => {
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       className={`w-full overflow-visible px-56 pb-40`}
       spaceBetween={64}
-      slidesPerView={`auto`}
+      slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={swiper => console.log(swiper)}
       breakpoints={{
@@ -34,7 +34,7 @@ const PcTopArticleSwiper = ({ pageMode, findedMockupData }) => {
         },
       }}
     >
-      {findedMockupData?.map((item, key) => (
+      {findedMockupData?.slice(0, 3)?.map((item, key) => (
         <SwiperSlide
           className={`flex w-560 items-center justify-center`}
           key={key}

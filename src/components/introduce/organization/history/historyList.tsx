@@ -110,7 +110,7 @@ const HistoryList = ({
           animate={animateToggle ? `hidden` : `visible`}
           variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className={`ml-240 mt-120 flex h-[calc(100vh-120px)] w-full flex-col items-start justify-start gap-24 overflow-y-auto px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:h-[calc(100vh-60px)] max-lg:px-0 max-lg:py-6 max-lg:pr-16`}
+          className={`ml-240 mt-120 flex h-[calc(100vh-120px)] w-full flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:h-[calc(100vh-60px)] max-lg:px-0 max-lg:py-6 max-lg:pr-16`}
         >
           {historyData?.[pagePercent]?.map((item, key) => (
             <div
