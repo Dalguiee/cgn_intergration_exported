@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 // 모션변수
 const sliding = {
   hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, transition: { opacity: { duration: 0.2 } } },
+  visible: { opacity: 1, y: 0, transition: { opacity: { duration: 0.8 } } },
 };
 
 const HistoryList = ({
@@ -31,7 +31,9 @@ const HistoryList = ({
   const scrollBox = useRef();
   const yearsButtonsContainer = useRef();
   const yearsButtons = useRef([]);
+  const scrollContentBox = useRef();
 
+  // 스크롤링 계산에 따른 애니메이팅 및 데이터 교환 핵심기능
   useEffect(() => {
     const scrollFunc = () => {
       console.log(historyDataYears?.length);
@@ -57,9 +59,11 @@ const HistoryList = ({
 
   useEffect(() => {
     setAnimateToggle(true);
+    scrollContentBox?.current?.scrollTo(0, 0);
     const interval = setTimeout(() => {
       setAnimateToggle(false);
     }, 100);
+    return () => clearTimeout(interval);
   }, [pagePercent]);
 
   return (
@@ -102,13 +106,17 @@ const HistoryList = ({
           </div>
         </div>
         <motion.div
+          ref={scrollContentBox}
           animate={animateToggle ? `hidden` : `visible`}
           variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className={`ml-240 mt-120 flex w-full flex-col items-start justify-start gap-24 overflow-y-auto px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:px-0 max-lg:py-6`}
+          className={`ml-240 mt-120 flex h-[calc(100vh-120px)] w-full flex-col items-start justify-start gap-24 overflow-y-auto px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:h-[calc(100vh-60px)] max-lg:px-0 max-lg:py-6 max-lg:pr-16`}
         >
           {historyData?.[pagePercent]?.map((item, key) => (
-            <div className={`flex items-start justify-start`} key={key}>
+            <div
+              className={`flex w-full min-w-647 items-start justify-start max-lg:min-w-[unset]`}
+              key={key}
+            >
               <p
                 className={`text-bold16 max-lg:text-bold14 flex w-88 flex-shrink-0 items-center justify-start text-grey-500 max-lg:w-39 max-lg:flex-shrink-0`}
               >
