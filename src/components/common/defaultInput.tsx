@@ -36,7 +36,7 @@ const DefaultInput = ({
 
   return (
     <div
-      className={`${className && className} flex h-56 w-320 items-center justify-between gap-8 rounded-8 bg-white-solid pl-16 pr-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:w-full`}
+      className={`${className && className} flex h-56 w-320 items-center justify-between gap-8 rounded-8 bg-white-solid pl-16 pr-12 outline outline-1 outline-grey-200 max-lg:h-48 max-lg:w-full max-lg:rounded-4`}
     >
       <input
         ref={inputBox}

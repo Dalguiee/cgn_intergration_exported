@@ -50,7 +50,10 @@ const MoMainVisual = props => {
         <motion.button
           className='aspect-320/180 relative mb-24 w-[calc(100%_-_80px)]'
           variants={itemVariants}
-          onClick={() => setSupportTab(1)}
+          onClick={() => {
+            setSupportTab(1);
+            scrollTo(0, 0);
+          }}
         >
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor1.jpg`}
@@ -66,7 +69,10 @@ const MoMainVisual = props => {
         <motion.button
           className='aspect-320/180 relative mb-24 w-[calc(100%_-_80px)]'
           variants={itemVariants}
-          onClick={() => setSupportTab(2)}
+          onClick={() => {
+            setSupportTab(2);
+            scrollTo(0, 0);
+          }}
         >
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor2.jpg`}
@@ -82,7 +88,10 @@ const MoMainVisual = props => {
         <motion.button
           className='aspect-320/180 relative w-[calc(100%_-_80px)]'
           variants={itemVariants}
-          onClick={() => setSupportTab(3)}
+          onClick={() => {
+            setSupportTab(3);
+            scrollTo(0, 0);
+          }}
         >
           <img
             src={`${import.meta.env.VITE_PUBLIC_URL}images/donation/mo_main_sponsor3.jpg`}

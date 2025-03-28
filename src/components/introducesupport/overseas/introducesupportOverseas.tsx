@@ -175,7 +175,7 @@ const IntroducesupportOverseas = () => {
                 },
                 { title: 'Bank Code', detail: 'KOEXKRSE' },
               ]}
-              website='https://cgnkorea.net'
+              website='https://www.cgnkorea.net/'
               donate='//mrmweb.hsit.co.kr/v2/Member/MemberJoin.aspx?action=join&server=7kOXiyc9Ff6n5QWUwZDJyQ=='
             />
             <div className='text-bold32 max-lg:text-bold24 mb-24 mt-60 w-full max-lg:mt-40'>

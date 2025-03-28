@@ -80,7 +80,7 @@ const IntroduceCEO = () => {
         </div>
       </div>
       <div
-        className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120 max-lg:h-fit max-lg:max-h-[unset] max-lg:bg-white-solid max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
+        className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120 max-lg:h-fit max-lg:max-h-[unset] max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
       >
         <div
           style={{

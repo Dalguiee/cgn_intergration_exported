@@ -190,7 +190,7 @@ const centerMenu = [
 // 하얀 헤더 배경 pathname 리스트
 const whiteModeList = [
   `/home`,
-  `/offermore`,
+  // `/offermore`,
   `/customer/faq`,
   `/customer/notice`,
   `/media/guide`,

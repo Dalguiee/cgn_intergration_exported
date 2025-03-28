@@ -9,7 +9,7 @@ const SubscribePaymentPage = () => {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
-    <section>
+    <section className={`bg-primary-50`}>
       <SubscribePayment setPopupOpen={setPopupOpen} />
       <SubscribePaymentPopup
         popupOpen={popupOpen}

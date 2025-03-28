@@ -29,23 +29,27 @@ const IntroduceDirections = () => {
   return (
     <section data-aos='fade-up' className={`w-full`}>
       <div
-        style={{
-          backgroundImage: `url(${import.meta.env.VITE_PUBLIC_URL}images/introduce/directions_background.png)`,
-        }}
-        className={`mt-80 h-843 w-full bg-cover bg-center bg-no-repeat pt-600 max-lg:mt-0 max-lg:h-275 max-lg:px-16 max-lg:pt-220`}
+        className={`relative mt-80 flex aspect-[1920/1100] w-full flex-col items-center justify-end px-20 max-lg:mt-0 max-lg:aspect-[393/420] max-lg:px-16`}
       >
         <div
-          className={`mx-auto h-500 w-full max-w-1200 flex-shrink-0 rounded-16 bg-white-solid shadow-lg max-lg:h-200 max-lg:w-full`}
+          style={{
+            backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/introduce/mo_directions_background.png` : `${import.meta.env.VITE_PUBLIC_URL}images/introduce/directions_background.png`} )`,
+          }}
+          className={`absolute left-0 top-0 aspect-[1920/843] w-full bg-cover bg-center bg-no-repeat max-lg:aspect-[393/275]`}
+        ></div>
+        <div
+          className={`relative z-10 aspect-[1200/500] w-full max-w-1200 rounded-16 bg-white-solid shadow-lg max-lg:aspect-[361/200]`}
         ></div>
       </div>
+
       <div
-        className={`mb-160 flex h-947 w-full flex-col items-center justify-start pt-377 max-lg:mb-120 max-lg:h-fit max-lg:px-16 max-lg:pt-185`}
+        className={`mb-160 mt-103 flex h-947 w-full flex-col items-center justify-start max-lg:mb-120 max-lg:mt-40 max-lg:h-fit max-lg:px-16`}
       >
         <div
           style={{
             backgroundImage: `url(${mobile ? `` : `${import.meta.env.VITE_PUBLIC_URL}images/introduce/directions_content_background.png`} )`,
           }}
-          className={`flex h-570 w-full max-w-1200 flex-shrink-0 flex-col bg-cover bg-center bg-no-repeat pt-70 max-lg:h-296 max-lg:max-w-361 max-lg:justify-end max-lg:pt-0`}
+          className={`h-570 w-full max-w-1200 flex-shrink-0 flex-col bg-cover bg-center bg-no-repeat pt-70 max-lg:h-296 max-lg:max-w-361 max-lg:pt-0`}
         >
           <p
             className={`text-bold40 max-lg:text-bold24 mb-24 text-grey-900 max-lg:mb-16`}

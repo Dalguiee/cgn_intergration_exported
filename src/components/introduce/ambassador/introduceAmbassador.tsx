@@ -26,7 +26,7 @@ const IntroduceAmbassador = () => {
         src={`${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/ambassador/mo_choi.png` : `${import.meta.env.VITE_PUBLIC_URL}images/ambassador/choi.png`} `}
         width={1200}
         height={713}
-        className={`h-713 w-full max-w-1200 object-cover max-lg:mb-40 max-lg:h-306`}
+        className={`h-713 w-full max-w-1200 object-cover max-lg:mb-40 max-lg:aspect-[361/306] max-lg:h-[unset]`}
         alt=''
       />
       <div

@@ -105,7 +105,7 @@ const MediaHowToUse = () => {
         </div>
 
         <div
-          className={`mx-auto mt-24 flex h-181 max-w-384 flex-col items-center justify-between rounded-16 bg-white-solid px-24 py-40 text-center max-lg:mt-16 max-lg:h-172`}
+          className={`mx-auto mt-24 flex h-181 max-w-384 flex-col items-center justify-between rounded-16 bg-white-solid px-24 py-40 text-center max-lg:mt-16 max-lg:h-172 max-lg:max-w-[unset]`}
         >
           <p className={`text-bold24 max-lg:text-bold18 text-grey-900`}>
             스마트TV

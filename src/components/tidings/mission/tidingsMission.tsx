@@ -209,7 +209,7 @@ const TidingsMission = () => {
                         />
                       ))}
                       <span
-                        className={`text-regular14 line-clamp-1 max-w-65 text-grey-500`}
+                        className={`text-regular14 line-clamp-1 flex-shrink-0 text-grey-500`}
                       >
                         {findedMockupData?.[pagingNum]?.startDate}
                       </span>
@@ -274,7 +274,7 @@ const TidingsMission = () => {
                     </span>
                   </div>
                   <span
-                    className={`text-regular14 ml-16 w-full max-w-65 overflow-hidden text-grey-400`}
+                    className={`text-regular14 ml-16 flex-shrink-0 overflow-hidden text-grey-400`}
                   >
                     {data?.startDate}
                   </span>

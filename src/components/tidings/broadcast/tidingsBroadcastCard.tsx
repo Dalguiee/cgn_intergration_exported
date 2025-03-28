@@ -40,7 +40,7 @@ const TidingsBroadcastCard = ({ item, idx, all }) => {
         </div>
 
         <div className={`text-left max-lg:hidden`}>
-          <p className={`text-regular18 w-full text-grey-500`}>
+          <p className={`text-regular18 line-clamp-6 w-full text-grey-500`}>
             {item?.content}
           </p>
         </div>

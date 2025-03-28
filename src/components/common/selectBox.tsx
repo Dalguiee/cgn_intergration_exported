@@ -73,14 +73,14 @@ const SelectBox = ({
             {listData?.map((item, key) => (
               <div
                 key={key}
-                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full select-none items-center justify-start max-lg:h-48`}
+                className={`${open ? '' : 'hidden h-0'} ${height ? `h-${height}` : 'h-62'} flex w-full select-none items-center justify-center max-lg:h-48`}
               >
                 <button
                   onClick={() => {
                     setOpen(false);
                     setSelectedItem(item);
                   }}
-                  className={`text-regular18 max-lg:text-regular14 max-lg:text-regular14 flex h-full w-full items-center justify-start px-12 hover:bg-primary-50`}
+                  className={`text-regular18 max-lg:text-regular14 max-lg:text-regular14 flex h-full w-[calc(100%-2px)] items-center justify-start px-12 hover:bg-primary-50`}
                 >
                   <span
                   // className={`${selectedItem?.id === item?.id ? 'text-primary-500' : ''}`}

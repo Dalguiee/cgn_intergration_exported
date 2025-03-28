@@ -1731,7 +1731,7 @@ const IntroduceHistory = () => {
         style={{
           backgroundImage: `url(${mobile ? `` : `${import.meta.env.VITE_PUBLIC_URL}images/introduce/history_background.png`})`,
         }}
-        className={`flex h-1230 w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat pt-457 max-lg:mb-24 max-lg:mt-24 max-lg:h-fit max-lg:gap-40 max-lg:pt-0`}
+        className={`flex h-1230 w-full flex-col items-center justify-start bg-cover bg-center bg-no-repeat pt-457 max-lg:mb-24 max-lg:mt-24 max-lg:h-fit max-lg:gap-40 max-lg:pr-16 max-lg:pt-0`}
       >
         <div
           className={`flex flex-col items-center justify-start gap-40 max-lg:w-full max-lg:items-start max-lg:gap-8`}
