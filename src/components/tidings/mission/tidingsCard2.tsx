@@ -16,7 +16,7 @@ const TidingsCard2 = ({ item, pageMode }) => {
       onClick={() => {
         navigator(`/news/${pageMode}/detail?articleId=${item.id}`);
       }}
-      className={`flex h-full w-full flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm`}
+      className={`flex h-full w-full max-w-560 flex-col items-center justify-start rounded-16 bg-white-solid shadow-sm`}
     >
       <img
         className='aspect-[560/382] w-full rounded-tl-16 rounded-tr-16 object-cover object-top max-lg:aspect-[unset]'

@@ -128,7 +128,7 @@ const TidingsMission = () => {
           />
 
           <div
-            className={`flex w-full max-w-1920 items-start justify-between gap-[3%] overflow-visible max-lg:hidden lg:px-56`}
+            className={`flex w-full max-w-1920 items-start justify-center gap-[3%] overflow-visible max-lg:hidden lg:px-56`}
           >
             {findedMockupData
               ?.slice(0, 3)

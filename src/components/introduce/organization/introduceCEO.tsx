@@ -3,7 +3,7 @@ import React from 'react';
 
 const IntroduceCEO = () => {
   return (
-    <section data-aos='fade-up' className={`w-full max-lg:pb-120`}>
+    <section data-aos='fade-up' className={`w-full`}>
       <div
         className={`mt-80 flex h-fit w-full flex-col items-center justify-center bg-secondary-brown px-16 pb-52 pt-61 max-lg:mt-0 max-lg:justify-start max-lg:px-16 max-lg:pb-40 max-lg:pt-16`}
       >
@@ -80,7 +80,7 @@ const IntroduceCEO = () => {
         </div>
       </div>
       <div
-        className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120 max-lg:bg-white-solid max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
+        className={`flex h-full max-h-850 w-full flex-col items-center justify-start pb-160 pt-120 max-lg:h-fit max-lg:max-h-[unset] max-lg:bg-white-solid max-lg:px-16 max-lg:pb-60 max-lg:pt-60`}
       >
         <div
           style={{
@@ -99,14 +99,17 @@ const IntroduceCEO = () => {
               CGN이 하나님의 은혜 가운데 20주년을 맞이했습니다.
               <br />
               지난 20년 동안 CGN을 통해 전 세계 곳곳에 복음이 전해졌으며,
-              <br />
+              <br className={`max-lg:hidden`} />
+              <span className={`lg:hidden`}>&nbsp;</span>
               선교사님들과 한인 디아스포라가 영적으로 힘을 얻을 수 있도록 인도해
               주신 하나님께 모든 영광을 올려드립니다.
             </p>
           </div>
           <p className={`text-regular18 max-lg:text-regular14 text-grey-500`}>
             2005년, ‘온 세상을 위한 복음의 통로’라는 미션 아래 위성방송을 시작한
-            CGN은 <br />
+            CGN은
+            <br className={`max-lg:hidden`} />
+            <span className={`lg:hidden`}>&nbsp;</span>
             변화하는 미디어 환경 속에서 인터넷, 유튜브, 모바일, IPTV, 드림온
             플러스(인터넷 셋톱박스), 기독 OTT ‘퐁당(Fondant)’ 등 다양한 플랫폼을
             활용해 복음을 전해 왔습니다. <br />
