@@ -9,10 +9,10 @@ const HomeCampaignCard = ({ item }) => {
       onClick={() => {
         navigate(`/news/${item?.category}/detail?articleId=${item?.id}`);
       }}
-      className={`h-full rounded-16 max-lg:min-h-179 max-lg:max-w-[unset]`}
+      className={`h-full rounded-16`}
     >
       <button
-        className={`relative flex h-[70%] w-full items-start justify-start overflow-hidden rounded-16 px-12 py-16 max-lg:h-119 max-lg:rounded-8 max-lg:px-8 max-lg:py-8`}
+        className={`relative flex h-[70%] w-full items-start justify-start overflow-hidden rounded-16 px-12 py-16 max-lg:aspect-[175/119] max-lg:h-[unset] max-lg:w-full max-lg:rounded-8 max-lg:px-8 max-lg:py-8`}
       >
         <div
           className={`absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat hover:scale-110`}

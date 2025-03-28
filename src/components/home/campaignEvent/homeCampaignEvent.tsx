@@ -85,7 +85,7 @@ const HomeCampaignEvent = () => {
         animate={switchingAnimate ? `hidden` : `visible`}
         variants={fadeUpY}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className={`flex h-612 w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:h-627 max-lg:flex-col max-lg:gap-12`}
+        className={`flex h-612 w-full max-w-1560 flex-shrink-0 items-center justify-between gap-40 max-lg:h-fit max-lg:flex-col max-lg:gap-12`}
       >
         {/* 왼쪽 빅 컨텐츠 및 반응형 위쪽 */}
         {campaignData?.slice(startNum, endNum)?.map((item, idx) => {
