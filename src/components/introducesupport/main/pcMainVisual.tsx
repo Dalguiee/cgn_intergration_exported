@@ -13,6 +13,7 @@ const fadeLogoAni = {
     transition: {
       duration: 0.8,
       delay: 0.7,
+      ease: `easeInOut`,
     },
   },
   fadeOut: {
@@ -21,6 +22,7 @@ const fadeLogoAni = {
     scale: 1,
     transition: {
       duration: 0.5,
+      ease: `easeInOut`,
     },
   },
 };
@@ -34,6 +36,7 @@ const fadeTextAni = {
     transition: {
       duration: 0.8,
       delay: 0.7,
+      ease: `easeInOut`,
     },
   },
   fadeOut: {
@@ -42,6 +45,7 @@ const fadeTextAni = {
     scale: 1,
     transition: {
       duration: 0.5,
+      ease: `easeInOut`,
     },
   },
 };
@@ -53,6 +57,7 @@ const fadeImg = {
     transition: {
       duration: 1,
       delay: 1.7,
+      ease: `easeInOut`,
     },
   },
 };
@@ -160,6 +165,7 @@ const PcMainVisual = props => {
             className='absolute left-[15%] top-[29.5%] aspect-square w-[20%]'
             onClick={() => {
               setSupportTab(1);
+              window.scrollTo(0, 0);
             }}
           ></button>
           {/* 콘텐츠 제작 후원하기 */}
@@ -167,6 +173,7 @@ const PcMainVisual = props => {
             className='absolute left-[40%] top-[29.5%] aspect-square w-[20%]'
             onClick={() => {
               setSupportTab(2);
+              window.scrollTo(0, 0);
             }}
           ></button>
           {/* 퐁당 글로번 후원하기 */}
@@ -174,6 +181,7 @@ const PcMainVisual = props => {
             className='absolute left-[65.2%] top-[29.5%] aspect-square w-[20%]'
             onClick={() => {
               setSupportTab(3);
+              window.scrollTo(0, 0);
             }}
           ></button>
         </div>

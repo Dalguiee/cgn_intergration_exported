@@ -12,7 +12,7 @@ const MoTabBroadcastPlatform = props => {
       }}
     >
       <button
-        className='fixed right-16 top-80 flex h-40 w-40 items-center justify-center rounded-60 bg-white-solid'
+        className='fixed right-16 top-[50%] flex h-40 w-40 items-center justify-center rounded-60 bg-white-solid'
         onClick={() => setSupportTab(null)}
       >
         <img
@@ -30,7 +30,7 @@ const MoTabBroadcastPlatform = props => {
             <br />
             <span className='text-bold16'>
               CGN은 TV방송, OTT플랫폼 ‘퐁당', 유튜브
-            </span>{' '}
+            </span>
             등
             <br />
             사용자의 편의에 맞춰 다양한 플랫폼으로

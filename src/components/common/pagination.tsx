@@ -67,6 +67,7 @@ const Pagination = ({
           ?.slice(pagingCategoryStartNum, pagingCategoryEndNum)
           ?.map((_, idx) => (
             <button
+              key={idx}
               className={`${highlight === pagingCategoryStartNum + idx ? `bg-primary-500` : ``} flex h-40 w-40 items-center justify-center rounded-999`}
               onClick={() => {
                 const newPage = pagingCategoryStartNum + idx;

@@ -30,7 +30,7 @@ const fadeRight = {
   visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } },
 };
 
-const IntroduceFollwersCard = ({ item, key }) => {
+const IntroduceFollwersCard = ({ item }) => {
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
   const { intersectionRef, isVisible } = IntersectionObserverScanner();
 
@@ -40,11 +40,9 @@ const IntroduceFollwersCard = ({ item, key }) => {
       initial={`hidden`}
       animate={isVisible ? `visible` : `hidden`}
       variants={staggerSetting}
-      key={key}
       className={`flex w-full items-end justify-start gap-16 max-lg:flex-col max-lg:items-center`}
     >
       <div
-        key={key}
         className={`${item?.exception ? `flex-col-reverse` : ``} ${item?.reverse ? `flex-row-reverse` : ``} flex w-full items-start justify-center gap-60 max-lg:flex-col max-lg:items-center max-lg:gap-0`}
       >
         <motion.img

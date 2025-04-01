@@ -30,7 +30,7 @@ const fadeRight = {
   visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } },
 };
 
-const ActivityVisitCard = ({ item, key }) => {
+const ActivityVisitCard = ({ item }) => {
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
   const { intersectionRef, isVisible } = IntersectionObserverScanner();
 
@@ -43,7 +43,6 @@ const ActivityVisitCard = ({ item, key }) => {
       className={`flex w-full items-end justify-start gap-16 max-lg:flex-col max-lg:items-center`}
     >
       <div
-        key={key}
         className={`${item?.exception ? `flex-col-reverse` : ``} ${item?.exception2 ? `max-lg:flex-col-reverse` : `max-lg:flex-col`} ${item?.reverse ? `flex-row-reverse` : ``} flex w-full items-start justify-center gap-40 max-lg:items-center max-lg:gap-0`}
       >
         <motion.img

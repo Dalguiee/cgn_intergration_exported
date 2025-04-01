@@ -11,7 +11,7 @@ const MoTabGlobal = props => {
       }}
     >
       <button
-        className='fixed right-16 top-80 flex h-40 w-40 items-center justify-center rounded-60 bg-white-solid'
+        className='fixed right-16 top-[50%] flex h-40 w-40 items-center justify-center rounded-60 bg-white-solid'
         onClick={() => setSupportTab(null)}
       >
         <img

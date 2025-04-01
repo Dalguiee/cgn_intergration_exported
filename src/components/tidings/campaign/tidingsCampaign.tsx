@@ -19,6 +19,7 @@ const TidingsCampaign = () => {
   const mockupExport = mockupData.filter(item => {
     return item?.path?.includes(location?.pathname);
   });
+
   const mockupExportedData = mockupExport?.[0]?.data;
 
   // 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다.

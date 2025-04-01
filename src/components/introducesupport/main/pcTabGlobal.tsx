@@ -11,7 +11,7 @@ const PcTabGlobal = props => {
       }}
     >
       <button
-        className='fixed right-16 top-160 flex h-60 w-60 items-center justify-center rounded-60 bg-white-solid'
+        className='fixed right-16 top-[50%] flex h-60 w-60 items-center justify-center rounded-60 bg-white-solid'
         onClick={() => setSupportTab(null)}
       >
         <img

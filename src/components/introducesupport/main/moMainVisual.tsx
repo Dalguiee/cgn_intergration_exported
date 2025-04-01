@@ -52,7 +52,7 @@ const MoMainVisual = props => {
           variants={itemVariants}
           onClick={() => {
             setSupportTab(1);
-            scrollTo(0, 0);
+            window.scrollTo(0, 0);
           }}
         >
           <img
@@ -71,7 +71,7 @@ const MoMainVisual = props => {
           variants={itemVariants}
           onClick={() => {
             setSupportTab(2);
-            scrollTo(0, 0);
+            window.scrollTo(0, 0);
           }}
         >
           <img
@@ -90,7 +90,7 @@ const MoMainVisual = props => {
           variants={itemVariants}
           onClick={() => {
             setSupportTab(3);
-            scrollTo(0, 0);
+            window.scrollTo(0, 0);
           }}
         >
           <img

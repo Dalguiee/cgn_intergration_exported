@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 // 컴포넌트
 import Checkbox from '@/components/common/checkBox';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
+import ScrollDirectionScanner from '@/components/common/scrollDirectionScanner';
 
 const MainHeaderTopBanner = ({
   headerTopBannerAvailable,
@@ -12,10 +13,12 @@ const MainHeaderTopBanner = ({
 }) => {
   const location = useLocation();
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
+  const scrollDirection = ScrollDirectionScanner();
+
   const [isChecked, setIsChecked] = useState(false);
 
   // 배터 하루동안 보지않기
-  const setOneDayBannerDelay = () => {
+  const setOneDayBannerDelay = (): void => {
     const popDay = new Date();
     popDay.setHours(popDay.getHours() + 12);
     document.cookie = `event=${`oneDayBanner`}; expires=${popDay.toUTCString()}`;
@@ -23,14 +26,14 @@ const MainHeaderTopBanner = ({
 
   // 쿠키에서 하루치 expired 쿠키 검색
   useEffect(() => {
-    // const oneDayCheck = () => {
-    //   if (document.cookie.match('oneDayBanner')) {
-    //     setHeaderTopBannerAvailable(false);
-    //   } else {
-    //     setHeaderTopBannerAvailable(true);
-    //   }
-    // };
-    // oneDayCheck();
+    const oneDayCheck = () => {
+      if (document.cookie.match('oneDayBanner')) {
+        setHeaderTopBannerAvailable(false);
+      } else {
+        setHeaderTopBannerAvailable(true);
+      }
+    };
+    oneDayCheck();
   }, [location?.pathname]);
 
   return (
@@ -39,7 +42,7 @@ const MainHeaderTopBanner = ({
         transition: `0.15s`,
         backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/banner/mo_content_1.png` : `${import.meta.env.VITE_PUBLIC_URL}images/banner/content_1.png`} `,
       }}
-      className={`${headerTopBannerAvailable ? `top-0` : `top-[calc(-140px)] max-lg:top-[-88px]`} fixed z-[81] flex h-140 w-full flex-col items-end justify-end bg-primary-500 bg-cover bg-center bg-no-repeat pb-20 max-lg:h-88 max-lg:bg-contain max-lg:pb-12 max-lg:pt-8 lg:px-360`}
+      className={`${headerTopBannerAvailable ? `top-0` : `top-[calc(-140px)] max-lg:top-[-88px]`} ${scrollDirection ? `` : `top-[calc(-140px)] max-lg:top-[-88px]`} fixed z-[81] flex h-140 w-full flex-col items-end justify-end bg-primary-500 bg-contain bg-center bg-no-repeat pb-20 max-lg:h-88 max-lg:pb-12 max-lg:pt-8 lg:px-360`}
     >
       <div
         className={`flex items-center justify-start max-lg:mr-8 max-lg:flex-col max-lg:items-end`}

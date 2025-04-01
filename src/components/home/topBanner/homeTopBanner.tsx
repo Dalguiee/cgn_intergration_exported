@@ -28,7 +28,7 @@ export const paymentMockupData = [
     title: `CGN 홈페이지`,
     depthTitle: `리뉴얼 오픈`,
     subTitle: `CGN 개국 20주년, 선교의 내일을 더하다`,
-    link: ``,
+    link: `https://www.cgnkorea.net/`,
   },
   {
     id: 1,

@@ -1,5 +1,5 @@
 // 훅
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 // 데이터
@@ -9,6 +9,7 @@ import { mockupData } from '@/db/mockup';
 import HomeCampaignEventHeader from '@/components/home/campaignEvent/homeCampaignEventHeader';
 import HomeLeftMainCampaign from '@/components/home/campaignEvent/homeLeftMainCampaign';
 import HomeCampaignCard from '@/components/home/campaignEvent/homeCampaignCard';
+import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 // 모션 변수
 const fadeUpY = {
@@ -18,9 +19,10 @@ const fadeUpY = {
 
 const HomeCampaignEvent = () => {
   const campaignData = mockupData?.[0]?.data;
+  const mobile = ResponsiveScanner(`(max-width:1024px)`);
 
   const [startNum, setStartNum] = useState(0);
-  const [endNum, setEndNum] = useState(5);
+  const [endNum, setEndNum] = useState(mobile ? 3 : 5);
 
   // 애니메이션 상태 state
   const [switchingAnimate, setSwitchingAnimate] = useState(false);
@@ -40,31 +42,61 @@ const HomeCampaignEvent = () => {
     animating();
     const animateSwitchingInit = setTimeout(() => {
       if (endNum < campaignData?.length) {
-        setStartNum(item => {
-          return item + 5;
-        });
-        setEndNum(item => {
-          return item + 5;
-        });
+        if (mobile) {
+          setStartNum(item => {
+            return item + 3;
+          });
+          setEndNum(item => {
+            return item + 3;
+          });
+        } else {
+          setStartNum(item => {
+            return item + 5;
+          });
+          setEndNum(item => {
+            return item + 5;
+          });
+        }
       }
     }, animationDuration);
     return () => clearTimeout(animateSwitchingInit);
   };
+
   const pagingPrev = () => {
     setSwitchingAnimate(true);
     animating();
     const animateSwitchingInit = setTimeout(() => {
       if (startNum > 0) {
-        setStartNum(item => {
-          return item - 5;
-        });
-        setEndNum(item => {
-          return item - 5;
-        });
+        if (mobile) {
+          setStartNum(item => {
+            return item - 3;
+          });
+          setEndNum(item => {
+            return item - 3;
+          });
+        } else {
+          setStartNum(item => {
+            return item - 5;
+          });
+          setEndNum(item => {
+            return item - 5;
+          });
+        }
       }
     }, animationDuration);
     return () => clearTimeout(animateSwitchingInit);
   };
+
+  // 모바일 웹 초기값 init
+  useEffect(() => {
+    if (mobile) {
+      setStartNum(0);
+      setEndNum(3);
+    } else {
+      setStartNum(0);
+      setEndNum(5);
+    }
+  }, [mobile]);
 
   return (
     <main

@@ -36,7 +36,6 @@ const HistoryList = ({
   // 스크롤링 계산에 따른 애니메이팅 및 데이터 교환 핵심기능
   useEffect(() => {
     const scrollFunc = () => {
-      console.log(historyDataYears?.length);
       const scrollBoxRect = scrollBox?.current.getBoundingClientRect();
       const percentCalc = Math.floor(
         (scrollBoxRect.top / scrollBoxRect.height) * -historyDataYears?.length
@@ -67,17 +66,21 @@ const HistoryList = ({
   }, [pagePercent]);
 
   return (
-    <section ref={scrollBox} className={`h-[2000vh]`}>
+    <section
+      ref={scrollBox}
+      className={`w-full`}
+      style={{ height: `${historyDataYears?.length}00vh` }}
+    >
       <div
         style={{ transition: `1s` }}
-        className={`sticky top-0 flex w-full items-start justify-start overflow-visible`}
+        className={`sticky top-0 flex w-full items-start justify-between overflow-visible`}
       >
         <div
           className={`h-fit w-full max-w-181 overflow-visible max-lg:max-w-76`}
         >
           <div
             ref={yearsButtonsContainer}
-            className={`pointer-events-none flex h-[100vh] select-none flex-col items-end justify-start overflow-visible overflow-y-scroll scrollbar-hide`}
+            className={`pointer-events-none flex h-[100vh] select-none flex-col items-end justify-start overflow-y-scroll scrollbar-hide max-lg:justify-center`}
           >
             {historyDataYears?.map((item, key) => (
               <div
@@ -110,7 +113,7 @@ const HistoryList = ({
           animate={animateToggle ? `hidden` : `visible`}
           variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className={`ml-240 mt-120 flex h-[calc(100vh-120px)] w-full flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden px-66 pt-15 max-lg:ml-24 max-lg:mt-60 max-lg:h-[calc(100vh-60px)] max-lg:px-0 max-lg:py-6 max-lg:pr-16`}
+          className={`mt-120 flex h-[calc(100vh-120px)] w-full max-w-700 flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden pt-15 scrollbar-hide max-lg:ml-24 max-lg:mt-60 max-lg:h-[calc(100vh-60px)] max-lg:px-0 max-lg:py-6 max-lg:pr-16`}
         >
           {historyData?.[pagePercent]?.map((item, key) => (
             <div

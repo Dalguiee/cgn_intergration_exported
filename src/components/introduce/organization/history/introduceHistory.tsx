@@ -1765,10 +1765,10 @@ const IntroduceHistory = () => {
         <HistoryList
           selectedDataIdx={topSelectedDataIdx}
           setSelectedDataIdx={setTopSelectedDataIdx}
-          historyDataYears={totalDataYears}
-          historyData={totalHistoryData}
+          historyDataYears={topHistoryDataYears}
+          historyData={topHistoryData}
         />
-        {/* <HistoryList
+        <HistoryList
           selectedDataIdx={middleSelectedDataIdx}
           setSelectedDataIdx={setMiddleSelectedDataIdx}
           historyDataYears={middleHistoryDataYears}
@@ -1779,7 +1779,7 @@ const IntroduceHistory = () => {
           setSelectedDataIdx={setBottomSelectedDataIdx}
           historyDataYears={bottomHistoryDataYears}
           historyData={bottomHistoryData}
-        /> */}
+        />
       </section>
     </section>
   );
