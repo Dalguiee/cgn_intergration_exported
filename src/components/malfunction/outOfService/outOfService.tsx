@@ -49,7 +49,7 @@ const OutOfService = () => {
             formMode={`mode1`}
             colorMode={`mode1`}
             onClick={() => {
-              navigate(`/home`);
+              navigate(`/`);
             }}
           />
         </div>

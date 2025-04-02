@@ -250,7 +250,7 @@ const Locator = ({ className = `` }) => {
       <div className={`flex w-1560 items-center justify-start gap-6`}>
         <button
           onClick={() => {
-            navigation('/home');
+            navigation('/');
           }}
         >
           <img

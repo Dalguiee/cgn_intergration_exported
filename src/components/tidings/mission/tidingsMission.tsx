@@ -231,15 +231,15 @@ const TidingsMission = () => {
             <div
               ref={contentBox}
               data-tidings-mission-container
-              className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-auto`}
+              className={`relative flex h-656 w-full flex-col items-start justify-start gap-16 overflow-y-auto py-10`}
             >
               <div
                 style={{
                   top: `${bgBoxPositon}px`,
                   transition: `0.25s`,
-                  boxShadow: `0 0 30px 1px #ececec`,
+                  boxShadow: `0 0 10px 1px #ececec`,
                 }}
-                className={`absolute left-0 z-10 h-80 w-[calc(100%-16px)] rounded-16 bg-white-solid`}
+                className={`absolute left-[50%] z-10 h-80 w-[calc(100%-16px)] translate-x-[-50%] transform rounded-16 bg-white-solid`}
               ></div>
               {findedMockupData?.map((data, key) => (
                 <button

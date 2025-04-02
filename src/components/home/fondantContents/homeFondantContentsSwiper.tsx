@@ -39,13 +39,13 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
       onSlideChange={() => {}}
       onSwiper={swiper => {}}
       breakpoints={{
-        640: {
+        440: {
           // slidesPerView: 1,
-          spaceBetween: 8,
+          spaceBetween: 12,
         },
         768: {
           // slidesPerView: 2,
-          spaceBetween: 8,
+          spaceBetween: 16,
         },
         1024: {
           // slidesPerView: 4,
@@ -59,7 +59,7 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
             window.open(`https://www.fondant.kr/`, `_blank`);
           }}
           // style={{ backgroundImage: `url(${item?.src})` }}
-          className={`aspect-[350/502] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[150/215] max-lg:!w-150`}
+          className={`aspect-[350/502] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[150/215] max-lg:!w-[39.8%]`}
           key={key}
         >
           <img

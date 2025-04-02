@@ -189,8 +189,6 @@ const centerMenu = [
 
 // 하얀 헤더 배경 pathname 리스트
 const whiteModeList = [
-  `/home`,
-  // `/offermore`,
   `/customer/faq`,
   `/customer/notice`,
   `/media/guide`,
@@ -217,6 +215,9 @@ const MainHeader = () => {
         setWhiteMode(true);
       }
     });
+    if (location?.pathname === `/`) {
+      setWhiteMode(true);
+    }
   }, [location?.pathname]);
 
   // 2depth 활성화

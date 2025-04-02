@@ -30,7 +30,7 @@ const HomeFondantContents = () => {
   return (
     <div
       ref={intersectionRef}
-      className={`relative flex h-906 w-full flex-col items-center justify-center overflow-hidden px-16 pr-16 max-lg:h-379 max-lg:px-0`}
+      className={`relative flex h-906 w-full flex-col items-center justify-center overflow-hidden px-16 pr-16 max-lg:h-fit max-lg:px-0 max-lg:py-60`}
     >
       <div
         style={{

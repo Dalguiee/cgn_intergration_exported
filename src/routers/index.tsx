@@ -39,14 +39,6 @@ import OutOfServicePage from '@/pages/malfunction/OutOfService/page';
 
 export default function MainRouter() {
   const location = useLocation();
-  const navigate = useNavigate();
-
-  // 홈으로 바인딩
-  useEffect(() => {
-    if (location?.pathname === `` || location.pathname === `/`) {
-      navigate(`/home`);
-    }
-  }, [location?.pathname]);
 
   // 팝업에 의한 스크롤 잠김 풀기
   useEffect(() => {
@@ -64,7 +56,6 @@ export default function MainRouter() {
       <Route path='/*' element={<DefaultLayer />}>
         {/* 홈 */}
         <Route path='' element={<HomePage />}></Route>
-        <Route path='home' element={<HomePage />}></Route>
 
         {/* 증액후원 */}
         <Route path='offermore' element={<SubscribePaymentPage />}></Route>
