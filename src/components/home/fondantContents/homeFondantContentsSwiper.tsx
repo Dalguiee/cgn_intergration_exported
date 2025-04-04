@@ -59,7 +59,7 @@ const HomeFondantContentsSwiper = ({ mediaData }) => {
             window.open(`https://www.fondant.kr/`, `_blank`);
           }}
           // style={{ backgroundImage: `url(${item?.src})` }}
-          className={`aspect-[350/502] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[150/215] max-lg:!w-[39.8%]`}
+          className={`aspect-[350/502] !w-350 cursor-pointer bg-cover bg-center bg-no-repeat max-lg:aspect-[150/215] max-lg:!w-250 max-md:!w-[39.8%]`}
           key={key}
         >
           <img

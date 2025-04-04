@@ -32,6 +32,7 @@ const textData = [
 
 const IntroduceRecruit = () => {
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
+  const foldBreakpoint = ResponsiveScanner(`(max-width: 360px)`);
   const [whileItem, setWhileItem] = useState([]);
   const [endedItem, setEndedItem] = useState([]);
 
@@ -71,10 +72,11 @@ const IntroduceRecruit = () => {
           인재상
         </span>
         <div
-          data-recruit-vision-box
-          className={`flex h-360 w-full max-w-1200 items-center justify-center gap-120 max-lg:max-w-455 max-lg:flex-wrap max-lg:gap-24`}
+          className={`flex w-full max-w-1200 items-center justify-center gap-120 max-lg:h-fit max-lg:max-w-455 max-lg:flex-wrap max-lg:gap-24 lg:h-360`}
         >
-          <span className={`text-bold32 absolute text-grey-900 lg:hidden`}>
+          <span
+            className={`text-bold32 absolute text-grey-900 lg:hidden ${foldBreakpoint ? `hidden` : ``}`}
+          >
             인재상
           </span>
 

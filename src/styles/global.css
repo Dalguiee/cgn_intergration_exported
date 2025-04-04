@@ -503,12 +503,6 @@
   opacity: 0.1;
 }
 
-@media (max-width: 360px) {
-  [data-recruit-vision-box] {
-    display: none;
-  }
-}
-
 /* input 스타일 수정 */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
