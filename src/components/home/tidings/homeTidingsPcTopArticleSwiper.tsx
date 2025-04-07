@@ -24,13 +24,11 @@ const HomeTidingsPcTopArticleSwiper = ({
   const swiperRef = useRef();
 
   useEffect(() => {
-    if (swiperRef.current) {
-      const swiperInstance = swiperRef?.current?.swiper;
-      swiperInstance.params.navigation.prevEl = prevButtonRef?.current;
-      swiperInstance.params.navigation.nextEl = nextButtonRef?.current;
-      swiperInstance?.navigation?.init();
-      swiperInstance?.navigation?.update();
-    }
+    const swiperInstance = swiperRef?.current?.swiper;
+    swiperInstance.params.navigation.prevEl = prevButtonRef?.current;
+    swiperInstance.params.navigation.nextEl = nextButtonRef?.current;
+    swiperInstance?.navigation?.init();
+    swiperInstance?.navigation?.update();
   }, []);
 
   return (
@@ -40,6 +38,7 @@ const HomeTidingsPcTopArticleSwiper = ({
       modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y, Navigation]}
       className={`h-full w-full select-none overflow-visible`}
       loop={true}
+      // loopAdditionalSlides={10}
       // autoplay={{
       //   delay: 1000,
       //   disableOnInteraction: false,

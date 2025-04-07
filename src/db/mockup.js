@@ -1640,6 +1640,7 @@ export const homeTwoPartedBannersDataUpper = [
     id: 0,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/home/middle_banner_conference.png`,
     moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_middle_banner_conference.png`,
+    title: `2025<br>퐁당 미디어 콘퍼런스<br>참가신청`,
     link: `https://fondantmc.com/`,
   },
   {

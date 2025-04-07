@@ -32,7 +32,7 @@ const textData = [
 
 const IntroduceRecruit = () => {
   const mobile = ResponsiveScanner(`(max-width: 1024px)`);
-  const foldBreakpoint = ResponsiveScanner(`(max-width: 360px)`);
+  const foldBreakpoint = ResponsiveScanner(`(max-width: 375px)`);
   const [whileItem, setWhileItem] = useState([]);
   const [endedItem, setEndedItem] = useState([]);
 
@@ -68,11 +68,13 @@ const IntroduceRecruit = () => {
           height={540}
           alt=''
         />
-        <span className={`text-bold40 text-grey-900 max-lg:hidden`}>
+        <span
+          className={`text-bold40 text-grey-900 lg:block ${foldBreakpoint ? `text-bold32 block` : `hidden`}`}
+        >
           인재상
         </span>
         <div
-          className={`flex w-full max-w-1200 items-center justify-center gap-120 max-lg:h-fit max-lg:max-w-455 max-lg:flex-wrap max-lg:gap-24 lg:h-360`}
+          className={`flex w-full max-w-1200 items-center justify-center gap-120 max-lg:h-fit max-lg:max-w-455 max-lg:flex-wrap max-lg:gap-24 max-lg:px-16 lg:h-360`}
         >
           <span
             className={`text-bold32 absolute text-grey-900 lg:hidden ${foldBreakpoint ? `hidden` : ``}`}

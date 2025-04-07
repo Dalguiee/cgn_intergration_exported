@@ -41,7 +41,7 @@ const HomePage = () => {
       <HomeFondantContents />
       <HomeTidings />
       <section
-        className={`h-fit overflow-x-scroll bg-secondary-brown_bg_2 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
+        className={`h-fit w-full overflow-x-scroll bg-secondary-brown_bg_2 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
         <HomeTwoPartedBanner
           item={homeTwoPartedBannersDataUpper}
@@ -53,7 +53,7 @@ const HomePage = () => {
         <HomeOnePartedBanner mobile={mobile} />
       </section>
       <section
-        className={`h-fit overflow-x-scroll pb-120 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
+        className={`h-fit w-full overflow-x-scroll pb-120 scrollbar-hide max-lg:px-16 max-lg:pb-60`}
       >
         <HomeTwoPartedBanner
           item={homeTowPartedBannersDataUnder}

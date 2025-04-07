@@ -6,12 +6,13 @@ import DefaultInput from '@/components/common/defaultInput';
 import SelectBox from '../common/selectBox';
 import StyledButtons from '../common/styledButtons';
 import { useLocation } from 'react-router-dom';
+import CompleteBox from '../common/completeBox';
 
 // 데이터
 const priceData = [
-  { id: 0, text: '+5,000원' },
-  { id: 1, text: '+10,000원' },
-  { id: 2, text: '+30,000원' },
+  { id: 0, text: '+5,000원', value: `5000` },
+  { id: 1, text: '+10,000원', value: `10000` },
+  { id: 2, text: '+30,000원', value: `30000` },
 ];
 
 const phoneNumberData = [
@@ -25,6 +26,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
   const location = useLocation();
   const querySearch = new URLSearchParams(location?.search);
   const queryData = Object.fromEntries(querySearch);
+  const [completePopup, setCompletePopup] = useState(true);
 
   // 금액입력
   const [selectedPrice, setSelectedPrice] = useState({});
@@ -55,6 +57,11 @@ const SubscribePayment = ({ setPopupOpen }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  // 가격 천단위 따옴표 추가
+  const formatNumberWithQuotes = num => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   return (
     <section
       className={`flex w-full flex-col items-center justify-start max-lg:px-16`}
@@ -78,11 +85,12 @@ const SubscribePayment = ({ setPopupOpen }) => {
               <button
                 key={key}
                 onClick={() => {
-                  setWritedPrice(``);
                   if (selectedPrice?.id === item?.id) {
                     setSelectedPrice({});
+                    setWritedPrice(``);
                   } else {
                     setSelectedPrice(item);
+                    setWritedPrice(item?.value);
                   }
                 }}
                 className={`${item?.id === selectedPrice?.id ? 'text-bold24 max-lg:text-bold16 border-1 border-primary-500 bg-transparent text-primary-500' : 'text-regular24 max-lg:text-regular16 text-grey-900'} h-full w-full rounded-8 bg-grey-100 max-lg:rounded-4`}
@@ -100,7 +108,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
             placeholder={`직접 입력`}
             paymentMode={true}
             className={`w-full`}
-            inputText={writedPrice}
+            inputText={formatNumberWithQuotes(writedPrice)}
             setInputText={setWritedPrice}
             onChange={() => {
               setSelectedPrice({});
@@ -191,6 +199,14 @@ const SubscribePayment = ({ setPopupOpen }) => {
           />
         </div>
       </section>
+      <CompleteBox
+        completePopup={completePopup}
+        setCompletePopup={setCompletePopup}
+      >
+        증액후원신청이 완료되었습니다.
+        <br />
+        후원자님 고맙습니다.
+      </CompleteBox>
     </section>
   );
 };

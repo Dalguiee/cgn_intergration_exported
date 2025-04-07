@@ -164,6 +164,7 @@ const RecruitDetail = () => {
                       className={`min-h-182 border-b-1 border-grey-900 bg-white-solid`}
                       key={key}
                     >
+                      {/* 부서 */}
                       <td className={`border-r-1 border-grey-900`}>
                         <div
                           className={`flex flex-col items-center justify-center px-24 py-36`}
@@ -178,6 +179,7 @@ const RecruitDetail = () => {
                           ))}
                         </div>
                       </td>
+                      {/* 담당업무 */}
                       <td className={`border-r-1 border-grey-900`}>
                         <div
                           className={`flex flex-col items-center justify-center px-24 py-36`}
@@ -187,6 +189,7 @@ const RecruitDetail = () => {
                           </span>
                         </div>
                       </td>
+                      {/* 모집인원 */}
                       <td className={`border-r-1 border-grey-900`}>
                         <div
                           className={`flex items-center justify-center px-24`}
@@ -199,9 +202,10 @@ const RecruitDetail = () => {
                           </span>
                         </div>
                       </td>
+                      {/* 자격요건 */}
                       <td>
                         <div
-                          className={`flex flex-col items-center justify-center px-24 py-36`}
+                          className={`flex flex-col items-start justify-center px-24 py-36`}
                         >
                           <span className={`text-regular16 text-grey-900`}>
                             {obj?.qualifications}
@@ -249,7 +253,7 @@ const RecruitDetail = () => {
                       </span>
                     </div>
                     <div
-                      className={`flex flex-col items-center justify-center bg-white-solid px-24 py-8`}
+                      className={`flex flex-col items-center justify-center bg-white-solid px-24 py-8 text-center`}
                     >
                       <span className={`text-regular14 text-grey-900`}>
                         {item?.workType}
@@ -281,7 +285,7 @@ const RecruitDetail = () => {
                       </span>
                     </div>
                     <div
-                      className={`flex flex-col items-center justify-center bg-white-solid px-24 py-8`}
+                      className={`flex flex-col items-start justify-center bg-white-solid px-24 py-8`}
                     >
                       <span className={`text-regular14 text-grey-900`}>
                         {item?.qualifications}
