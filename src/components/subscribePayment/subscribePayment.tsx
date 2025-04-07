@@ -203,7 +203,7 @@ const SubscribePayment = ({ setPopupOpen }) => {
         completePopup={completePopup}
         setCompletePopup={setCompletePopup}
       >
-        증액후원신청이 완료되었습니다.
+        증액 후원 신청이 완료되었습니다.
         <br />
         후원자님 고맙습니다.
       </CompleteBox>
