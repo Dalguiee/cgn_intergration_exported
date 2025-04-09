@@ -7,6 +7,7 @@ import TagIcon from '@/components/common/tagIcon';
 // 미션 및 후원에 사용되는 유형2의 컨텐츠 카드 컴포넌트 입니다
 const HomeTidingsCard = ({ item, pageMode }) => {
   const navigator = useNavigate();
+
   return (
     <button
       // data-aos='fade-up'
@@ -18,10 +19,10 @@ const HomeTidingsCard = ({ item, pageMode }) => {
       <div className={`h-fit w-fit overflow-hidden`}>
         <img
           style={{ transition: `0.8s` }}
-          className={`min-h-382 w-full rounded-tl-16 rounded-tr-16 object-cover object-top hover:scale-110 max-lg:aspect-[361/24] max-lg:min-h-189 max-lg:rounded-tl-8 max-lg:rounded-tr-8`}
-          src={`${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small_top_rounded.png`}
-          width={361}
-          height={246}
+          className={`aspect-[560/382] w-full rounded-tl-16 rounded-tr-16 object-cover object-top hover:scale-110 max-lg:aspect-[278/189] max-lg:rounded-tl-8 max-lg:rounded-tr-8`}
+          src={item?.src}
+          width={560}
+          height={382}
           alt='메인카드이미지'
         />
       </div>

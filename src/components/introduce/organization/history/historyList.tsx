@@ -73,7 +73,7 @@ const HistoryList = ({
     >
       <div
         style={{ transition: `1s` }}
-        className={`sticky top-0 flex w-full items-start justify-between overflow-visible`}
+        className={`sticky left-0 top-0 flex w-full items-start justify-between overflow-visible`}
       >
         <div
           className={`h-fit w-full max-w-181 overflow-visible max-lg:max-w-76`}

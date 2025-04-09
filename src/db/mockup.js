@@ -807,7 +807,7 @@ export const mockupData = [
         id: 2,
         category: `story`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
-        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
@@ -826,7 +826,7 @@ export const mockupData = [
         id: 3,
         category: `story`,
         tag: [{ text: 'CGN 소식', id: 14, mode: 'mode2' }],
-        src: `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_small.png`,
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/media_card_content_4.png`,
         contentSrc: [
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,
           `${import.meta.env.VITE_PUBLIC_URL}images/tidings/card_content_big.png`,

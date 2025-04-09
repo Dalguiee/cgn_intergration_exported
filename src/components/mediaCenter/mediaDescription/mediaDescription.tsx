@@ -25,7 +25,7 @@ const MediaDescription = () => {
         const objTop = sections?.current[queryData?.action].offsetTop;
         window?.scrollTo({
           behavior: 'smooth',
-          top: `${Number(queryData?.action) === 0 ? `${objTop - 500}` : Number(queryData?.action) === 3 ? `${objTop}` : `${objTop - 50}`}`,
+          top: `${Number(queryData?.action) === 0 ? `${objTop - 700}` : Number(queryData?.action) === 3 ? `${objTop}` : `${objTop - 150}`}`,
         });
         // sections?.current?.[queryData?.action].scrollIntoView({
         //   behavior: 'smooth',

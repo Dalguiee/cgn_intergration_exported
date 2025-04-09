@@ -26,7 +26,7 @@ const HomeTidings = () => {
     if (selectedCategoryArticleId === 0) {
       let allData = [];
       mockupData?.map(item => {
-        // 캠페인 이벤트 데이터만 뺍니다
+        // 캠페인 이벤트를 제외한 데이터만 뺍니다
         if (item?.id !== 1) {
           allData = [...allData, ...item?.data];
         }
