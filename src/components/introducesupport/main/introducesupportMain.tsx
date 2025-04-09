@@ -22,16 +22,22 @@ import ResponsiveScanner from '@/components/common/responsiveScanner';
 const IntroducesupportMain = () => {
   const { intersectionRef, isVisible } = IntersectionObserverScanner();
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  //현재 후원하기 탭 상태
+  // 현재 후원하기 탭 상태
   const [supportTab, setSupportTab] = useState(null);
 
+  // 현재 후원하기 탭 상태에 따른 스크롤 방지
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    if (supportTab) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [supportTab]);
 
   return (
     <section className={`relative`}>
@@ -40,7 +46,7 @@ const IntroducesupportMain = () => {
         data-comment='후원페이지'
       >
         {/* 메인 비주얼 */}
-        {windowWidth >= 1024 ? (
+        {!mobile ? (
           <PcMainVisual setSupportTab={setSupportTab} />
         ) : (
           <MoMainVisual supportTab={supportTab} setSupportTab={setSupportTab} />
@@ -49,9 +55,9 @@ const IntroducesupportMain = () => {
         <AnimatePresence>
           {supportTab === 1 && (
             <>
-              {windowWidth >= 1024 ? (
+              {!mobile ? (
                 <motion.div
-                  className='absolute z-10 h-auto w-full'
+                  className='fixed left-0 top-0 z-[100] h-[100vh] w-[100vw] bg-white-solid'
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -75,9 +81,9 @@ const IntroducesupportMain = () => {
           {/* 콘텐트 제작 후원 */}
           {supportTab === 2 && (
             <>
-              {windowWidth >= 1024 ? (
+              {!mobile ? (
                 <motion.div
-                  className='absolute z-10 h-auto w-full'
+                  className='fixed left-0 top-0 z-[100] h-[100vh] w-[100vw] bg-white-solid'
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -101,9 +107,9 @@ const IntroducesupportMain = () => {
           {/* 퐁당 글로벌 후원 */}
           {supportTab === 3 && (
             <>
-              {windowWidth >= 1024 ? (
+              {!mobile ? (
                 <motion.div
-                  className='absolute z-10 h-auto w-full'
+                  className='fixed left-0 top-0 z-[100] h-[100vh] w-[100vw] bg-white-solid'
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}

@@ -16,8 +16,9 @@ const AnniversaryPopup = props => {
     };
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
+
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'unset';
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };

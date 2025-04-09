@@ -4,32 +4,32 @@ const formModeData = [
   {
     id: 1,
     mode: 'mode1',
-    className: `min-w-fit h-64 text-bold24 max-lg:h-52 max-lg:text-bold18 px-24 max-lg:px-16`,
+    className: `h-64 text-bold24 max-lg:h-52 max-lg:text-bold18 px-24 max-lg:px-16`,
   },
   {
     id: 2,
     mode: 'mode2',
-    className: `min-w-fit h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24 max-lg:px-16`,
+    className: `h-54 text-bold16 max-lg:h-40 max-lg:text-bold14 px-24 max-lg:px-16`,
   },
   {
     id: 3,
     mode: 'mode3',
-    className: `min-w-fit h-40 text-regular14 max-lg:h-32 max-lg:text-regular14`,
+    className: `h-40 text-regular14 max-lg:h-32 max-lg:text-regular14`,
   },
   {
     id: 4,
     mode: 'mode1-r',
-    className: `min-w-fit h-54 rounded-999 text-bold16 max-lg:h-36 max-lg:text-bold14 px-24 max-lg:px-12`,
+    className: `h-54 rounded-999 text-bold16 max-lg:h-36 max-lg:text-bold14 px-24 max-lg:px-12`,
   },
   {
     id: 5,
     mode: 'mode2-r',
-    className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
+    className: `h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
   },
   {
     id: 6,
     mode: 'mode3-r',
-    className: `min-w-fit h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
+    className: `h-40 rounded-999 text-bold14 max-lg:h-32 max-lg:text-regular12 px-24`,
   },
 ];
 

@@ -40,10 +40,10 @@ import OutOfServicePage from '@/pages/malfunction/OutOfService/page';
 export default function MainRouter() {
   const location = useLocation();
 
-  // 팝업에 의한 스크롤 잠김 풀기
+  // 뒤로가기의 경우 전역 스크롤 잠김 풀기
   useEffect(() => {
     const scrollRetore = () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'unset';
     };
 
     window?.addEventListener('popstate', scrollRetore);

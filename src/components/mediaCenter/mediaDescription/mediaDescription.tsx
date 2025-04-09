@@ -35,7 +35,10 @@ const MediaDescription = () => {
       }
     };
 
-    setTimeout(scrolling, 0);
+    const scrollingTiming = setTimeout(scrolling, 0);
+    return () => {
+      clearTimeout(scrollingTiming);
+    };
   }, [location?.pathname, queryData]);
 
   return (

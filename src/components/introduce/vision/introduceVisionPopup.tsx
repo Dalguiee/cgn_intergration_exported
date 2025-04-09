@@ -6,12 +6,18 @@ import ResponsiveScanner from '@/components/common/responsiveScanner';
 
 const IntroduceVisionPopup = ({ popupOpen, setPopupOpen }) => {
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
+
+  // 팝업 여부에 따른 스크롤 방지
   useEffect(() => {
     if (popupOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = 'unset';
     }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [popupOpen]);
 
   // 로고파일 다운로드
