@@ -1,12 +1,12 @@
 // 훅
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // 컴포넌트
 import DefaultInput from '@/components/common/defaultInput';
-import SelectBox from '../common/selectBox';
-import StyledButtons from '../common/styledButtons';
-import { useLocation } from 'react-router-dom';
-import CompleteBox from '../common/completeBox';
+import SelectBox from '@/components/common/selectBox';
+import StyledButtons from '@/components/common/styledButtons';
+import CompleteBox from '@/components/common/completeBox';
 
 // 데이터
 const priceData = [

@@ -168,6 +168,11 @@ const Locator = ({ className = `` }) => {
             data = '행사/견학 신청';
             pathStack = 'participate/event';
           }
+          if (data === 'prayer') {
+            pathPiece = data;
+            data = '중보기도 신청';
+            pathStack = 'participate/prayer';
+          }
 
           return { bPath: pathPiece, name: data, path: pathStack };
         })

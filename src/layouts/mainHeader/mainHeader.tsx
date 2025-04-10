@@ -139,11 +139,11 @@ const centerMenu = [
     link: '/participate/event',
     query: ``,
     subMenu: [
-      // {
-      //   text: '중보기도 신청',
-      //   link: '/activity/intercessoryprayer',
-      //   query: ``
-      // },
+      {
+        text: '중보기도 신청',
+        link: '/participate/prayer',
+        query: ``,
+      },
       // {
       //   text: '자원봉사단 신청',
       //   link: '/activity/serviceteam',
@@ -262,13 +262,13 @@ const MainHeader = () => {
         style={{
           transition: `0.15s`,
         }}
-        className={`${headerTopBannerAvailable ? `h-[calc(128px+140px)] max-lg:h-[calc(58px+88px)]` : `h-[calc(128px)] max-lg:h-[calc(58px)]`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} ${scrollTopStatus ? `` : `relative`} w-full`}
+        className={`${scrollTopStatus ? (headerTopBannerAvailable ? `h-[calc(128px+140px)] max-lg:h-[calc(58px+88px)]` : `h-[calc(128px)] max-lg:h-[calc(58px)]`) : `absolute`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} w-full`}
       ></div>
       <header
         style={{
           transition: `0.15s`,
         }}
-        className={`${burger ? 'max-lg:bg-primary-500' : ''} ${scrollTopStatus ? (headerTopBannerAvailable ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc(0px)]`) : ``} ${headerTopBannerAvailable ? (scrollDirection ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc((-128px)+(-140px))] max-lg:top-[(-58px)+(-88px)]`) : scrollDirection ? `top-[calc(0px)]` : `top-[calc((-128px))] max-lg:top-[(-58px)]`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} fixed z-[80] flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-20 max-lg:px-24`}
+        className={`${scrollTopStatus ? (headerTopBannerAvailable ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc(0px)]`) : ``} ${headerTopBannerAvailable ? (scrollDirection ? `top-[calc(140px)] max-lg:top-[calc(88px)]` : `top-[calc((-128px)+(-140px))] max-lg:top-[(-58px)+(-88px)]`) : scrollDirection ? `top-[calc(0px)]` : `top-[calc((-128px))] max-lg:top-[(-58px)]`} ${burger ? 'max-lg:bg-primary-500' : ''} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} fixed z-[80] flex h-fit w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-20 max-lg:px-24`}
         data-comment='메인헤더'
       >
         <TopHeader />

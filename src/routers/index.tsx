@@ -27,6 +27,7 @@ import IntroduceAmbassadorPage from '@/pages/introduce/ambassador/page';
 import RecruitDetailPage from '@/pages/introduce/recruitDetail/page';
 // 참여
 import ActivityVisitPage from '@/pages/activity/visit/page';
+import ParticipatePrayerPage from '@/pages/activity/prayer/page';
 // 고객센터
 import CustomerCenterNoticePage from '@/pages/customerCenter/customerCenterNotice/page';
 import CustomerCenterNoticeDetailPage from '@/pages/customerCenter/customerCenterNoticeDetail/page';
@@ -108,6 +109,10 @@ export default function MainRouter() {
 
         {/* 참여 */}
         <Route path='participate/event' element={<ActivityVisitPage />}></Route>
+        <Route
+          path='participate/prayer'
+          element={<ParticipatePrayerPage />}
+        ></Route>
 
         {/* 시청안내 */}
         <Route path='media/guide' element={<MediaDescriptionPage />}></Route>

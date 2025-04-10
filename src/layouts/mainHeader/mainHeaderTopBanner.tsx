@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import Checkbox from '@/components/common/checkBox';
 import ResponsiveScanner from '@/components/common/responsiveScanner';
 import ScrollDirectionScanner from '@/components/common/scrollDirectionScanner';
+import ScrollTopScanner from '@/components/common/scrollTopScanner';
 
 const MainHeaderTopBanner = ({
   headerTopBannerAvailable,
@@ -13,6 +14,7 @@ const MainHeaderTopBanner = ({
 }) => {
   const location = useLocation();
   const mobile = ResponsiveScanner(`(max-width:1024px)`);
+  const scrollTopStatus = ScrollTopScanner();
   const scrollDirection = ScrollDirectionScanner();
 
   const [isChecked, setIsChecked] = useState(false);
@@ -40,12 +42,17 @@ const MainHeaderTopBanner = ({
     <div
       style={{
         transition: `0.15s`,
-        backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/banner/mo_content_1.png` : `${import.meta.env.VITE_PUBLIC_URL}images/banner/content_1.png`} `,
       }}
-      className={`${headerTopBannerAvailable ? `top-0` : `top-[calc(-140px)] max-lg:top-[-88px]`} ${scrollDirection ? `` : `top-[calc(-140px)] max-lg:top-[-88px]`} fixed z-[81] flex h-140 w-full flex-col items-end justify-end bg-primary-500 bg-contain bg-center bg-no-repeat pb-20 max-lg:h-88 max-lg:pb-12 max-lg:pt-8 lg:px-360`}
+      className={`${headerTopBannerAvailable ? (scrollTopStatus ? `top-[calc(0px)]` : scrollDirection ? `top-[calc(0px)]` : `top-[calc(-140px)] max-lg:top-[-88px]`) : `top-[calc(-140px)] max-lg:top-[-88px]`} fixed z-[81] flex h-140 w-full flex-col items-end justify-end bg-primary-500 pb-20 max-lg:h-88 max-lg:pb-12 max-lg:pt-8 lg:px-360`}
     >
       <div
-        className={`flex items-center justify-start max-lg:mr-8 max-lg:flex-col max-lg:items-end`}
+        style={{
+          backgroundImage: `url(${mobile ? `${import.meta.env.VITE_PUBLIC_URL}images/banner/mo_content_1.png` : `${import.meta.env.VITE_PUBLIC_URL}images/banner/content_1.png`} `,
+        }}
+        className={`absolute left-[50%] top-0 z-[79] h-full w-full max-w-1920 translate-x-[-50%] bg-center bg-no-repeat max-lg:bg-contain lg:bg-cover`}
+      ></div>
+      <div
+        className={`z-[80] flex items-center justify-start max-lg:mr-8 max-lg:flex-col max-lg:items-end`}
       >
         <button
           onClick={() => {
