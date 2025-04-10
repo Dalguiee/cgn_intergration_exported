@@ -139,11 +139,11 @@ const centerMenu = [
     link: '/participate/event',
     query: ``,
     subMenu: [
-      {
-        text: '중보기도 신청',
-        link: '/participate/prayer',
-        query: ``,
-      },
+      // {
+      //   text: '중보기도 신청',
+      //   link: '/participate/prayer',
+      //   query: ``,
+      // },
       // {
       //   text: '자원봉사단 신청',
       //   link: '/activity/serviceteam',
