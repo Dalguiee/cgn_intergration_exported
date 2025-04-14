@@ -1640,7 +1640,8 @@ export const homeTwoPartedBannersDataUpper = [
     id: 0,
     src: `${import.meta.env.VITE_PUBLIC_URL}images/home/middle_banner_conference.png`,
     moSrc: `${import.meta.env.VITE_PUBLIC_URL}images/home/mo_middle_banner_conference.png`,
-    title: `2025<br>퐁당 미디어 콘퍼런스<br>참가신청`,
+    title: `2024 서울-인천 로잔대회`,
+    subTitle: `원수의 조롱을 받을 때 드리는 기도 (시편 70:1~5)`,
     link: `https://fondantmc.com/`,
   },
   {

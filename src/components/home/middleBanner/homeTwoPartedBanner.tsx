@@ -20,12 +20,17 @@ const HomeTwoPartedBanner = ({ item = [], mobile }) => {
             style={{
               backgroundImage: `${mobile ? `url(${item?.moSrc})` : `url(${item?.src})`} `,
             }}
-            className={`flex aspect-[768/200] w-1/2 flex-shrink-0 items-center justify-start rounded-16 bg-cover bg-center bg-no-repeat px-33 max-lg:w-568 max-lg:px-31 max-md:w-277 max-md:rounded-8 max-md:px-16`}
+            className={`flex aspect-[768/200] w-1/2 flex-shrink-0 flex-col items-start justify-center gap-4 rounded-16 bg-cover bg-center bg-no-repeat px-33 max-lg:w-568 max-lg:px-31 max-md:w-277 max-md:gap-2 max-md:rounded-8 max-md:px-16`}
           >
             <p
-              className={`text-bold32 max-md:text-bold12 line-clamp-3 w-full text-left text-white-solid`}
+              className={`text-bold32 max-md:text-bold18 line-clamp-1 w-full text-left text-white-solid`}
             >
               {item?.title ? HTMLReactParser(item?.title) : ``}
+            </p>
+            <p
+              className={`text-regular18 max-md:text-regular12 line-clamp-1 w-full text-left text-white-solid`}
+            >
+              {item?.subTitle ? HTMLReactParser(item?.subTitle) : ``}
             </p>
           </button>
         ))}
