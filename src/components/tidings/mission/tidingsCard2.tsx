@@ -11,7 +11,6 @@ const TidingsCard2 = ({ item, pageMode }) => {
   const cardBreakPoint = ResponsiveScanner(`(max-width:1800px)`);
   return (
     <button
-      data-aos='fade-up'
       style={{ boxShadow: `0 0 30px 1px #ececec` }}
       onClick={() => {
         navigator(`/news/${pageMode}/detail?articleId=${item.id}`);

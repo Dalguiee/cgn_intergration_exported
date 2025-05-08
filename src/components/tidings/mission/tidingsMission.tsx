@@ -1,6 +1,7 @@
 // 훅
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // 데이터
 import { mockupData } from '@/db/mockup';
@@ -12,6 +13,18 @@ import TextScroll from '@/components/tidings/mission/textScroll';
 import MoTopArticleList from '@/components/tidings/mission/moTopArticleList';
 import NoSearchResult from '@/components/common/noSearchResult';
 import TidingsCard2 from '@/components/tidings/mission/tidingsCard2';
+
+// 모션변수
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 /*
  *해당 페이지는 후원과 레이아웃이 같아 페이지 모드를 감지하여 받는 데이터만 따로 받도록 퍼블리싱 되었습니다.
@@ -32,36 +45,48 @@ const TidingsMission = () => {
   const [bgBoxPositon, setBgBoxPosition] = useState(0);
   const [selectedCategoryArticleId, setSelectedCategoryArticleId] = useState(0);
 
+  // 상단 카드의 애니메이션 토글 boolean
+  const [fadeUpState, setFadeUpState] = useState(false);
+
   /* 초기 데이터를 불러오고 페이지 경로에 따라 맞는 데이터를 부르는 부분입니다. */
   const mockupExport = mockupData.filter(item => {
     return item.path.includes(location.pathname);
   });
   const mockupExportedData = mockupExport?.[0]?.data;
 
-  /* 불러온 mockUp 데이터를 categorylist 에서 find 연동을 위하여 state 에 한번 넣습니다. */
+  /* 데이터 init 및 초기 애니메이션 */
   useEffect(() => {
     setfindedMockupData(mockupExportedData);
-  }, [location, selectedCategoryArticleId]);
+    setFadeUpState(true);
+    const cardInitTiming = setTimeout(() => {
+      setFadeUpState(false);
+    }, 300);
+    return () => clearTimeout(cardInitTiming);
+  }, [location]);
 
   /* tidings 헤더 아래에 존재하는 카테고리 버튼의 기능입니다. */
   /* category list 에서 selectedCategoryArticleId 를 state 를 통해 받으며, 카테고리에 따라 분류된 데이터를 state 에 update 합니다. */
   useEffect(() => {
-    if (selectedCategoryArticleId === 0) {
-      setfindedMockupData(mockupExportedData);
-      // setfindedMockupData([]);
-    } else {
-      setfindedMockupData(
-        mockupExportedData?.filter(item => {
-          return item?.tag?.some(
-            obj => obj?.id === Number(selectedCategoryArticleId)
-          );
-        })
-      );
-      // setfindedMockupData([]);
-    }
+    setFadeUpState(true);
+    const dataChangingInterval = setTimeout(() => {
+      if (selectedCategoryArticleId === 0) {
+        setFadeUpState(false);
+        setfindedMockupData(mockupExportedData);
+      } else {
+        setFadeUpState(false);
+        setfindedMockupData(
+          mockupExportedData?.filter(item => {
+            return item?.tag?.some(
+              obj => obj?.id === Number(selectedCategoryArticleId)
+            );
+          })
+        );
+      }
+    }, 600);
+    return () => clearTimeout(dataChangingInterval);
   }, [selectedCategoryArticleId]);
 
-  /* 현재 선교스토리 혹은 후원중 어느 페이지로 분기되었는지 사용할 String state 지정 */
+  /* 현재 선교스토리 혹은 후원스토리중 어느 페이지로 분기되었는지 사용할 String state 지정 */
   useEffect(() => {
     if (location?.pathname?.includes('/news/story')) {
       setPageMode('story');
@@ -127,7 +152,11 @@ const TidingsMission = () => {
             pageMode={pageMode}
           />
 
-          <div
+          <motion.div
+            initial='hidden'
+            animate={fadeUpState ? `hidden` : `visible`}
+            variants={fadeUp}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className={`flex w-full max-w-1920 items-start justify-center gap-[3%] overflow-visible max-lg:hidden lg:px-56`}
           >
             {findedMockupData
@@ -135,7 +164,7 @@ const TidingsMission = () => {
               ?.map((item, key) => (
                 <TidingsCard2 pageMode={pageMode} key={key} item={item} />
               ))}
-          </div>
+          </motion.div>
           <TextScroll />
           <div
             className={`flex w-full max-w-1200 items-start justify-center px-20 max-lg:hidden`}
