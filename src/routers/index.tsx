@@ -37,6 +37,7 @@ import MediaDescriptionPage from '@/pages/mediaCenter/mediaDescription/page';
 import PolicyPage from '@/pages/policy/page';
 import MaintenancePage from '@/pages/malfunction/maintenance/page';
 import OutOfServicePage from '@/pages/malfunction/OutOfService/page';
+import ParticipateVolunteerPage from '@/pages/activity/volunteer/page';
 
 export default function MainRouter() {
   const location = useLocation();
@@ -108,11 +109,15 @@ export default function MainRouter() {
         ></Route>
 
         {/* 참여 */}
-        <Route path='participate/event' element={<ActivityVisitPage />}></Route>
         <Route
           path='participate/prayer'
           element={<ParticipatePrayerPage />}
         ></Route>
+        <Route
+          path='participate/volunteer'
+          element={<ParticipateVolunteerPage />}
+        ></Route>
+        <Route path='participate/event' element={<ActivityVisitPage />}></Route>
 
         {/* 시청안내 */}
         <Route path='media/guide' element={<MediaDescriptionPage />}></Route>

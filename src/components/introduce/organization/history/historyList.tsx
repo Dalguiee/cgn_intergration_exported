@@ -16,24 +16,36 @@ const HistoryList = ({
   historyData,
 }) => {
   const [animateToggle, setAnimateToggle] = useState(false);
-
-  // 애니메이션 토글 함수
-  const animating = id => {
-    setAnimateToggle(true);
-    const animateTimeout = setTimeout(() => {
-      setSelectedDataIdx(id);
-      setAnimateToggle(false);
-    }, 800);
-    return () => clearTimeout(animateTimeout);
-  };
-
   const [pagePercent, setPagePercent] = useState(0);
   const scrollBox = useRef();
   const yearsButtonsContainer = useRef();
   const yearsButtons = useRef([]);
   const scrollContentBox = useRef();
 
-  // 스크롤링 계산에 따른 애니메이팅 및 데이터 교환 핵심기능
+  // 클릭 애니메이션 함수, 현재 클릭 미사용
+  // const animating = id => {
+  //   const element = yearsButtons.current[id];
+  //   if (!element) return;
+
+  //   const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+  //   window.scrollTo({
+  //     top: elementTop, // 필요한 보정값
+  //     behavior: 'smooth',
+  //   });
+
+  //   setAnimateToggle(true);
+
+  //   const animateTimeout = setTimeout(() => {
+  //     setAnimateToggle(false);
+  //     setPagePercent(id);
+  //     setSelectedDataIdx(id);
+  //   }, 800);
+
+  //   return () => clearTimeout(animateTimeout);
+  // };
+
+  // 스크롤링 계산에 따른 애니메이팅 좌표 계산
   useEffect(() => {
     const scrollFunc = () => {
       const scrollBoxRect = scrollBox?.current.getBoundingClientRect();
@@ -56,12 +68,13 @@ const HistoryList = ({
     };
   }, []);
 
+  // pagePercent 값에 따른 init
   useEffect(() => {
     setAnimateToggle(true);
-    scrollContentBox?.current?.scrollTo(0, 0);
+    // scrollContentBox?.current?.scrollTo(0, 0);
     const interval = setTimeout(() => {
       setAnimateToggle(false);
-    }, 100);
+    }, 200);
     return () => clearTimeout(interval);
   }, [pagePercent]);
 
@@ -69,7 +82,7 @@ const HistoryList = ({
     <section
       ref={scrollBox}
       className={`w-full`}
-      style={{ height: `${historyDataYears?.length}00vh` }}
+      style={{ height: `calc(${historyDataYears?.length}00vh)` }}
     >
       <div
         style={{ transition: `1s` }}
@@ -80,7 +93,7 @@ const HistoryList = ({
         >
           <div
             ref={yearsButtonsContainer}
-            className={`pointer-events-none flex h-[100vh] select-none flex-col items-end justify-start overflow-y-scroll scrollbar-hide max-lg:justify-center`}
+            className={`flex h-[100vh] select-none flex-col items-end justify-start overflow-y-scroll scrollbar-hide max-lg:justify-center`}
           >
             {historyDataYears?.map((item, key) => (
               <div
@@ -88,7 +101,8 @@ const HistoryList = ({
                   yearsButtons.current[key] = el;
                 }}
                 key={key}
-                className={`${animateToggle ? `pointer-events-none select-none` : ``}`}
+                // className={`${animateToggle ? `pointer-events-none select-none` : ``} cursor-pointer`}
+                className={`pointer-events-none select-none`}
                 // onClick={() => {
                 //   animating(item?.id);
                 // }}
@@ -113,7 +127,7 @@ const HistoryList = ({
           animate={animateToggle ? `hidden` : `visible`}
           variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className={`mt-120 flex h-[calc(100vh-120px)] w-full max-w-700 flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden pt-15 scrollbar-hide max-lg:ml-24 max-lg:mt-60 max-lg:h-[calc(100vh-60px)] max-lg:px-0 max-lg:py-6 max-lg:pr-16`}
+          className={`flex h-[100vh] w-full max-w-700 flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden pb-30 pt-130 scrollbar-hide max-lg:ml-24 max-lg:h-[100vh] max-lg:px-0 max-lg:pb-10 max-lg:pr-16 max-lg:pt-170`}
         >
           {historyData?.[pagePercent]?.map((item, key) => (
             <div

@@ -146,8 +146,8 @@ const centerMenu = [
       // },
       // {
       //   text: '자원봉사단 신청',
-      //   link: '/activity/serviceteam',
-      //   query: ``
+      //   link: '/participate/volunteer',
+      //   query: ``,
       // },
       {
         text: '행사/견학 신청',
