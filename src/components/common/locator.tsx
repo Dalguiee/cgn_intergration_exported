@@ -163,15 +163,20 @@ const Locator = ({ className = `` }) => {
             data = '참여';
             pathStack = 'participate/event';
           }
-          if (data === 'event') {
-            pathPiece = data;
-            data = '행사/견학 신청';
-            pathStack = 'participate/event';
-          }
           if (data === 'prayer') {
             pathPiece = data;
             data = '중보기도 신청';
             pathStack = 'participate/prayer';
+          }
+          if (data === 'volunteer') {
+            pathPiece = data;
+            data = '자원봉사단 신청';
+            pathStack = 'participate/volunteer';
+          }
+          if (data === 'event') {
+            pathPiece = data;
+            data = '행사/견학 신청';
+            pathStack = 'participate/event';
           }
 
           return { bPath: pathPiece, name: data, path: pathStack };

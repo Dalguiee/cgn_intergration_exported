@@ -73,14 +73,19 @@ const ThemeHeader = ({ className = `` }) => {
 
     // 참여
     {
-      path: 'participate/event',
-      title: '행사/견학 신청',
-      subTitle: '행사와 견학 신청을 안내합니다.',
-    },
-    {
       path: 'participate/prayer',
       title: '중보기도 신청',
       subTitle: 'CGN은 소중한 시청자, 후원자님을 위해 함께 기도합니다.',
+    },
+    {
+      path: 'participate/volunteer',
+      title: '자원봉사단 신청',
+      subTitle: 'CGN 사역을 함께 섬기실 분을 모집합니다.',
+    },
+    {
+      path: 'participate/event',
+      title: '행사/견학 신청',
+      subTitle: '행사와 견학 신청을 안내합니다.',
     },
 
     // 시청안내
