@@ -55,11 +55,6 @@ const HistoryList = ({
           (-historyDataYears?.length - 1)
       );
 
-      // 음수 감지시 0으로 초기화
-      if (pagePercent < 0) {
-        setPagePercent(0);
-      }
-
       if (percentCalc > -1 && percentCalc < historyDataYears?.length) {
         setPagePercent(percentCalc);
         const hightV = yearsButtons?.current[percentCalc]?.offsetTop;
@@ -80,10 +75,10 @@ const HistoryList = ({
   useEffect(() => {
     setAnimateToggle(true);
     // scrollContentBox?.current?.scrollTo(0, 0);
-    const interval = setTimeout(() => {
+    const aniInterval = setTimeout(() => {
       setAnimateToggle(false);
     }, 200);
-    return () => clearTimeout(interval);
+    return () => clearTimeout(aniInterval);
   }, [pagePercent]);
 
   return (
@@ -134,6 +129,7 @@ const HistoryList = ({
         </div>
         <motion.div
           ref={scrollContentBox}
+          initial={`visible`}
           animate={animateToggle ? `hidden` : `visible`}
           variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
