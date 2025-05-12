@@ -874,7 +874,7 @@ const IntroduceHistory = () => {
   return (
     <section
       data-aos='fade-up'
-      className={`flex w-full flex-col items-center justify-start max-lg:mb-120 max-lg:pl-16 max-lg:pr-0`}
+      className={`flex w-full flex-col items-center justify-start max-lg:mb-[-270px] max-lg:pl-16 max-lg:pr-0`}
     >
       <div
         style={{
@@ -909,21 +909,24 @@ const IntroduceHistory = () => {
         </div>
       </div>
       <section
-        className={`relative flex w-full max-w-1200 flex-col items-center justify-start gap-120 max-lg:gap-60 max-lg:pb-40 max-lg:pt-40`}
+        className={`relative flex w-full max-w-1200 flex-col items-center justify-start gap-120 max-lg:gap-60 max-lg:pb-0 max-lg:pt-40`}
       >
         <HistoryList
+          idx={0}
           selectedDataIdx={topSelectedDataIdx}
           setSelectedDataIdx={setTopSelectedDataIdx}
           historyDataYears={topHistoryDataYears}
           historyData={topHistoryData}
         />
         <HistoryList
+          idx={1}
           selectedDataIdx={middleSelectedDataIdx}
           setSelectedDataIdx={setMiddleSelectedDataIdx}
           historyDataYears={middleHistoryDataYears}
           historyData={middleHistoryData}
         />
         <HistoryList
+          idx={2}
           selectedDataIdx={bottomSelectedDataIdx}
           setSelectedDataIdx={setBottomSelectedDataIdx}
           historyDataYears={bottomHistoryDataYears}

@@ -10,6 +10,7 @@ const sliding = {
 };
 
 const HistoryList = ({
+  idx,
   selectedDataIdx,
   setSelectedDataIdx,
   historyDataYears,
@@ -22,7 +23,7 @@ const HistoryList = ({
   const yearsButtons = useRef([]);
   const scrollContentBox = useRef();
 
-  // 클릭 애니메이션 함수, 현재 클릭 미사용
+  // 클릭 이벤트 있을경우
   // const animating = id => {
   //   const element = yearsButtons.current[id];
   //   if (!element) return;
@@ -50,7 +51,8 @@ const HistoryList = ({
     const scrollFunc = () => {
       const scrollBoxRect = scrollBox?.current.getBoundingClientRect();
       const percentCalc = Math.floor(
-        (scrollBoxRect.top / scrollBoxRect.height) * -historyDataYears?.length
+        (scrollBoxRect.top / scrollBoxRect.height) *
+          (-historyDataYears?.length - 1)
       );
       if (percentCalc > -1 && percentCalc < historyDataYears?.length) {
         setPagePercent(percentCalc);
@@ -93,7 +95,7 @@ const HistoryList = ({
         >
           <div
             ref={yearsButtonsContainer}
-            className={`flex h-[100vh] select-none flex-col items-end justify-start overflow-y-scroll scrollbar-hide max-lg:justify-center`}
+            className={`flex h-[100vh] flex-col items-end justify-start overflow-y-scroll pb-25 pt-130 scrollbar-hide max-lg:pb-16 max-lg:pt-70`}
           >
             {historyDataYears?.map((item, key) => (
               <div
@@ -101,8 +103,10 @@ const HistoryList = ({
                   yearsButtons.current[key] = el;
                 }}
                 key={key}
+                // 클릭 이벤트 있을경우
                 // className={`${animateToggle ? `pointer-events-none select-none` : ``} cursor-pointer`}
                 className={`pointer-events-none select-none`}
+                // 클릭 이벤트 있을경우
                 // onClick={() => {
                 //   animating(item?.id);
                 // }}
@@ -127,7 +131,7 @@ const HistoryList = ({
           animate={animateToggle ? `hidden` : `visible`}
           variants={sliding}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className={`flex h-[100vh] w-full max-w-700 flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden pb-30 pt-130 scrollbar-hide max-lg:ml-24 max-lg:h-[100vh] max-lg:px-0 max-lg:pb-10 max-lg:pr-16 max-lg:pt-170`}
+          className={`flex h-[100vh] w-full max-w-700 flex-col items-start justify-start gap-24 overflow-y-auto overflow-x-hidden pb-25 pt-130 scrollbar-hide max-lg:ml-24 max-lg:h-[100vh] max-lg:px-0 max-lg:pb-16 max-lg:pr-16 max-lg:pt-70`}
         >
           {historyData?.[pagePercent]?.map((item, key) => (
             <div
