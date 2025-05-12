@@ -54,6 +54,12 @@ const HistoryList = ({
         (scrollBoxRect.top / scrollBoxRect.height) *
           (-historyDataYears?.length - 1)
       );
+
+      // 음수 감지시 0으로 초기화
+      if (pagePercent < 0) {
+        setPagePercent(0);
+      }
+
       if (percentCalc > -1 && percentCalc < historyDataYears?.length) {
         setPagePercent(percentCalc);
         const hightV = yearsButtons?.current[percentCalc]?.offsetTop;
