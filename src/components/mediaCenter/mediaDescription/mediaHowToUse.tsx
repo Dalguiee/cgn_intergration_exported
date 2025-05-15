@@ -67,7 +67,7 @@ const MediaHowToUse = () => {
             </div>
           </div>
           <img
-            className={`h-370 w-373 object-cover max-lg:hidden`}
+            className={`h-370 w-373 object-cover will-change-transform max-lg:hidden`}
             src={`${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/fondant_app_logo.png`}
             width={373}
             height={370}

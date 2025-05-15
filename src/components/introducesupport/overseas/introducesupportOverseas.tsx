@@ -15,7 +15,7 @@ const branchesList = [
       },
       { title: 'Swift Code', detail: 'NARAUS6L090' },
     ],
-    website: 'https://www.cgnfoundation.com',
+    website: 'https://www.cgnamerica.net',
     donate: '//tithe.ly/give_new/www/#/tithely/give-one-time/7446562',
   },
   {

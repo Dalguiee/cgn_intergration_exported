@@ -109,7 +109,7 @@ const HomeTopBanner = ({ mobile }) => {
               style={{
                 backgroundImage: `${mobile ? `url(${obj?.moSrc})` : `url(${obj?.src})`}`,
               }}
-              className={`backface-hidden flex w-full transform-gpu cursor-pointer flex-col items-center justify-start bg-cover bg-center bg-no-repeat will-change-transform max-lg:h-[calc(100%-36px)] max-lg:justify-end lg:pt-200`}
+              className={`flex w-full cursor-pointer flex-col items-center justify-start bg-cover bg-center bg-no-repeat will-change-transform max-lg:h-[calc(100%-36px)] max-lg:justify-end lg:pt-200`}
               key={key}
             >
               <HomeTobBannerContext obj={obj} />
