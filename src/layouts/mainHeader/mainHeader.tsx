@@ -262,7 +262,7 @@ const MainHeader = () => {
         style={{
           transition: `0.15s`,
         }}
-        className={`${scrollTopStatus ? (headerTopBannerAvailable ? `h-[calc(128px+140px)] max-lg:h-[calc(58px+88px)]` : `h-[calc(128px)] max-lg:h-[calc(58px)]`) : `absolute`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} w-full`}
+        className={`${scrollTopStatus ? (headerTopBannerAvailable ? `h-[calc(128px+140px)] max-lg:h-[calc(58px+88px)]` : `h-[calc(128px)] max-lg:h-[calc(58px)]`) : `h-0`} ${whiteMode ? `bg-white-solid` : `bg-primary-50`} w-full`}
       ></div>
       <header
         style={{
