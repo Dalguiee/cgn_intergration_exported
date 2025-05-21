@@ -1,50 +1,168 @@
-# React + TypeScript + Vite
+### 최상위
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- tailwind.config.js - 테일윈드 선언 및 각종 스타일 기전선언
 
-Currently, two official plugins are available:
+### public 구조
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- data - 다운로드용 파일 폴더
+- images - 이미지 폴더
 
-## Expanding the ESLint configuration
+### src 구조
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- assets - 폰트용임
+- components - 퍼블리싱 컴포넌트들, 가장 중요하여 나열선언함
+  - activity - 참여
+    - prayer - 중보기도 신청
+    - visit - 행사/견학 신청
+    - volunteer - 자원봉사 신청
+  - common - 공통요소
+    - categoryList - 타이틀 하단 클릭을 통해 페이지 전환하는 버튼
+    - checkBox - 클릭시 체크가 만들어지는 체크박스 컴포넌트
+    - completeBox - submit 시 완료 팝업
+    - defaultInput - 커스텀 input 컴포넌트
+    - defaultTextArea - 커스텀 TextArea 컴포넌트
+    - intersectionObserverScanner - 화면감지 커스텀 훅
+    - locator - 현재위치 표시 컴포넌트
+    - noSearchResult - 결과없음 컴포넌트
+    - pagination - 게시물들 하단 페이지네이션 컴포넌트
+    - responsiveScanner - 반응형 감지 커스텀 훅
+    - scrollDirectionScanner - 스크롤 방향감지 커스텀 훅
+    - scrollTopScanner - 스크롤 최상단 감지 커스텀 훅
+    - selectBox - 선택형 상자 컴포넌트
+    - styledButtons - 커스텀 버튼 컴포넌트
+    - tagIcon - 게시물 태그 컴포넌트
+    - themeHeader - 서브타이틀 컴포넌트
+  - customerCenter - 고객센터
+    - notice - 공지사항
+      - customerCenterNotice - 공지사항 컨테이너
+      - customerCenterNoticeDetail - 공지사항 컨텐츠 디테일 페이지 컴포넌트
+    - questions - Q&A
+      - customerCenterQuestions - Q&A 컨테이너
+    - customerCenterCategoryList.tsx - 고객센터 분기버튼 컴포넌트
+  - home - 메인
+    - campaignEvent - 캠페인 이벤트 영역
+      - homeCampaignCard.tsx - 우측 영역카드
+      - homeCampaignEvent.tsx - 전체컨테이너
+      - homeCampaignEventHeader.tsx - 컨텐츠상단 헤더
+      - homeLeftMainCampaign.tsx - 좌측 컨텐츠
+    - fondantContents - 퐁당 컨텐츠 영역
+      - homeFondantContents.tsx - 컨테이너
+      - homeFondantContentsSwiper.tsx - 컨텐츠 슬라이더
+    - middleBanner - 중간 배너띠 컴포넌트 (import 는 home/page.tsx 에서 되어있음)
+      - homeOnePartedBanner.tsx - 통짜 하나 배너 컴포넌트
+      - homeTowPartedBanner.tsx - 두개짜리 배너 컴포넌트
+    - mission - 선교 미디어 CGN 영역
+      - homeMission.tsx - 컨테이너
+      - homeTextBox.tsx - 텍스트영역 컴포넌트
+    - notice - 공지사항 영역
+      - homeNoticeHeader.tsx - 컨텐츠 헤더 컴포넌트
+      - homeNoticeMain.tsx - 컨텐츠 영역 컴포넌트
+    - popup - 팝업
+      - popup.tsx - 팝업
+    - tidings - 소식 컨텐츠 영역
+      - homeTidings.tsx - 컨테이너
+      - homeTidingsCard.tsx - 컨테이너 컨텐츠 카드
+      - homeTidingsCategoryList.tsx - 컨텐츠 분기 버튼 컴포넌트
+      - homeTidingsPcTopArticleSwiper.tsx - 컨텐츠 슬라이더
+      - homeTidingsSwiperButton.tsx - 외부 pagination 분기 위한 컴포넌트
+    - topBanner - 메인 타이틀
+      - homePaymentBox.tsx - 후원상자영역 컴포넌트
+      - homeTopBannerContext.tsx - 타이틀 텍스트 컴포넌트
+      - homeTopBanner.tsx - 컨테이너
+  - introduce - 소개
+    - ambassador - 엠버서더
+      - introduceAmbassador.tsx - 엠버서더 컨텐츠 컴포넌트
+    - organization - 기관소개
+      - history - 연혁
+        - historyList.tsx - 스크롤 컨텐츠 컴포넌트
+        - introduceHistory.tsx - 연혁 컨테이너 컴포넌트
+      - introduceCEO.tsx - 이사장 인사 컴포넌트
+      - introduceChairman.tsx - 대표 인사 컴포넌트
+      - introduceDirections.tsx - 오시는 길 컴포넌트
+      - introduceFollowers.tsx - 섬기는 분들 컴포넌트
+      - introduceOrganization.tsx - 기관 소개 컨테이너
+      - introduceOrganizationCategoryList.tsx - 기관 소개 분기 버튼 컴포넌트
+      - introduceThemeHeader.tsx - 기관 소개 타이틀
+    - recruit - 채용
+      - introduceRecruit.tsx - 채용 컨테이너 컴포넌트
+      - recruitCard.tsx - 게시물 카드
+      - recruitDetail.tsx - 게시물 디테일
+    - vision - 미션&비전
+      - introduceVision.tsx - 미션&비전 컨테이너
+      - introduceVisionPopup.tsx - 미션 비전 브랜드 소개 팝업 컴포넌트
+      - introduceVisionValuessCard.tsx - 하단 애니메이션 색망요소 컴포넌트
+    - worldWide - 해외지사 소개
+      - introduceWorldWide.tsx - 해외지사 소개 컨테이너
+      - introduceWorldWideContext.tsx - 해외지사 컨텐츠
+      - mapIcon.tsx - 지도 호버링 요소 컴포넌트
+  - introducesupport - 후원안내
+    - anniversary - 기념일 후원
+      - anniversaryPopup.tsx - 완료팝업
+      - introducesupportAnniversary.tsx - 컨테이너
+    - main - 미디어선교 후원
+      - introducesupportMain.tsx - 컨테이너
+      - moMainVisual.tsx - 모바일 컨테이너 메인
+      - moTabBroadcastPlatform.tsx - 모바일 플랫폼 후원 후원창
+      - moTabContents.tsx - 모바일 콘텐츠 제작 후원창
+      - moTabGlobal.tsx - 모바일 글로벌 후원창
+      - pcMainVisual.tsx - pc 컨테이너 메인
+      - pcTabBroadcastPlatform.tsx - pc 플랫폼 후원창
+      - pcTabContents.tsx - pc 콘텐츠 후원창
+      - pcTabContext.tsx - pc 후원창 텍스트영역
+      - pcGlobal.tsx - pc 글로벌 후원창
+    - overseas - 해외지사 후원
+      - branchesCard.tsx - 나라별 카드 컴포넌트
+      - introducesupportOverseas.tsx - 컨테이너
+    - report - 후원내역 보고
+      - introducesupportReport.tsx - 컨테이너
+  - malfunction - outOfService 컴포넌트
+    - maintenanse.tsx - 점검중
+    - outOfService.tsx - 404 페이지
+  - mediaCenter\mediaDescription - 시청안내
+    - mediaAboutFondant.tsx - 퐁당 주요기능 섹션
+    - mediaAboutFondantCard.tsx - 퐁당 주요기능 섹션 카드
+    - mediaBroadcastSystem.tsx - 케이블 및 위성 섹션
+    - mediaDescription.tsx - 컨테이너
+    - mediaDescriptionMainTitle.tsx - 타이틀 영역
+    - mediaHowToUse.tsx - 이용방법 섹션
+    - mediaSocialPlatform.tsx - 소셜플랫폼 영역
+  - policy - 약관
+    - policy.tsx - 컨테이너
+    - policyCategoryList.tsx - 분기버튼 컴포넌트
+    - policyPrivacy.tsx - 개인정보 처리방침 컴포넌트
+    - policyTemrs.tsx - 이용약관 컴포넌트
+  - subscribePayment - 증액후원
+    - subscribePayment.tsx - 컨테이너
+    - subscribePaymentPopup.tsx - 완료팝업 컴포넌트
+  - tidings - 소식
+    - broadcast - 보도 자료
+      - tidingsBroadcast.tsx - 컨테이너
+      - tidingsBroadcastCard.tsx - 컨텐츠 카드
+    - campaign - 캠페인/이벤트
+      - tidingsCampaign.tsx - 컨테이너
+      - tidingsCard.tsx - 컨텐츠 카드
+    - mission - 선교스토리 + 후원스토리
+      - moTopArticleList.tsx - 모바일 컨텐츠 컨테이너
+      - pcTopArticleSwiper.tsx - pc 슬라이더
+      - textScroll.tsx - 중간 텍스트 애니메이션 컴포넌트
+      - tidingsCard2.tsx - 컨텐츠 카드
+      - tidingsMission.tsx - 컨테이너
+    - tidingsDetail.tsx - 컨텐츠 디테일
+- layouts
+  - mainFooter - 푸터
+    - mainFooter.tsx - 컨테이너
+    - mainFooterMo.tsx - 푸터 모바일 컴포넌트
+    - mainFooterPc.tsx - 푸터 pc 컴포넌트
+  - mainHeader.tsx - 헤더
+    - bottomHeader.tsx - 헤더 하단부 컴포넌트
+    - depthBackground.tsx - 호버 색망 컴포넌트
+    - mainHeader.tsx - 컨테이너
+    - mainHeaderTopBanner.tsx - 상단 배너
+    - moBottomHeader.tsx - 모바일 하단부 컴포넌트
+    - moBurgerSubMenu.tsx - 모바일 버거메뉴 컴포넌트
+    - moTopHeader.tsx - 모바일 헤더 상단부 컴포넌트
+    - topHeader.tsx - 헤더 상단부 컴포넌트
+  - defaultLayer.tsx - 중첩라우팅
+- pages - components 와 완전히 같은 폴더명에 page.tsx 로 페이지파일 구성됨
+- routers \ index.tsx - 라우팅 선언
+- styles \ global.css - 전역 css 파일, css 하나로 이거밖에 없음

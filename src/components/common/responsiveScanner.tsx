@@ -15,18 +15,4 @@ const ResponsiveScanner = query => {
   return useSyncExternalStore(subscribe, getSnapshot);
 };
 
-// 이전버전 참고용
-// const ResponsiveScanner = query => {
-//   const subscribe = callback => {
-//     window.addEventListener('resize', callback);
-
-//     return () => window.removeEventListener('resize', callback);
-//   };
-//   const getSnapshot = () => {
-//     return window.innerWidth <= 1024;
-//   };
-
-//   return useSyncExternalStore(subscribe, getSnapshot);
-// };
-
 export default ResponsiveScanner;

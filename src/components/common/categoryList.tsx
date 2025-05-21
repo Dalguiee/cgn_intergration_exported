@@ -85,6 +85,7 @@ const CategoryList = ({
         id: 0,
         type: '전체',
       };
+
       if (location?.pathname?.includes(`/news/`)) {
         setCategoryTags([totalTag, ...tagDataFind?.[0]?.tags]);
       } else {

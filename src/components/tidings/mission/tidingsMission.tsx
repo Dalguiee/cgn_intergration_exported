@@ -184,7 +184,7 @@ const TidingsMission = () => {
                       }}
                     >
                       <img
-                        className={`w-full rounded-br-16 rounded-tr-16`}
+                        className={`aspect-[528/360] w-full rounded-br-16 rounded-tr-16 object-cover object-[center]`}
                         src={`${findedMockupData?.[pagingNum]?.src}`}
                         alt=''
                       />

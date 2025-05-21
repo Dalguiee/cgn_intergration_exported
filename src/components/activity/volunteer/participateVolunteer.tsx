@@ -42,7 +42,7 @@ const ParticipateVolunteer = () => {
             <br className={`lg:hidden`} />
             미디어 사역에 참여하실 수 있습니다.
             <br />
-            CGN과 함께 할 수 있는 ’드림온핸즈’에 많은 관심 바랍니다.
+            CGN과 함께 할 수 있는 ‘드림온핸즈’에 많은 관심 바랍니다.
           </p>
         </div>
         <div

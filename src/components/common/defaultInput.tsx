@@ -1,5 +1,5 @@
 // 훅
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // const [inputText, setInputText] = useState(''); 부모에서 props 전송필요, 검색용 String
 const DefaultInput = ({
@@ -42,7 +42,7 @@ const DefaultInput = ({
         ref={inputBox}
         className={`text-regular16 max-lg:text-regular14 w-full text-grey-900`}
         type={`${pwMode ? 'password' : ''}`}
-        inputMode={`${numberMode ? `numeric` : ``}`}
+        inputMode={`${numberMode ? `numeric` : `text`}`}
         maxLength={maxlength}
         name={`findKeyword`}
         onChange={e => {
