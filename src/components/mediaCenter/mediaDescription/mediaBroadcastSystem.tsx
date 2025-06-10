@@ -39,6 +39,10 @@ const cableData = [
         src: `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/cable_icon_2_3.png`,
         value: `550번`,
       },
+      {
+        src: `${import.meta.env.VITE_PUBLIC_URL}images/mediacenter/cable_icon_2_4.png`,
+        value: `159번`,
+      },
     ],
   },
 ];
@@ -66,19 +70,19 @@ const MediaBroadcastSystem = ({ mobile, sections }) => {
           {cableData?.map((item, idx) => (
             <div
               key={idx}
-              className={`flex h-534 w-full flex-col items-center justify-center rounded-16 bg-grey-50 max-lg:h-336 max-lg:px-24`}
+              className={`flex h-600 w-full flex-col items-center justify-between rounded-16 bg-grey-50 py-80 max-lg:h-fit max-lg:px-24 max-lg:py-24`}
             >
               <div
-                className={`mb-60 flex w-full max-w-448 flex-col items-center justify-center gap-12 max-lg:mb-40`}
+                className={`flex min-h-244 w-full max-w-448 flex-col items-center justify-center gap-12 max-lg:mb-40 max-lg:min-h-[unset]`}
               >
                 {item?.data?.map((item, idx) => (
                   <div
                     key={idx}
-                    className={`flex h-52 w-full items-center justify-between rounded-12 bg-white-solid px-41 max-lg:h-44`}
+                    className={`flex h-52 w-full items-center justify-between rounded-41 bg-white-solid px-41 max-lg:h-44`}
                   >
                     <img
                       src={item?.src}
-                      className={`h-24 w-115 max-lg:h-16 max-lg:w-77`}
+                      className={`h-24 w-115 object-contain max-lg:h-16 max-lg:w-77`}
                       width={115}
                       height={24}
                       alt=''
