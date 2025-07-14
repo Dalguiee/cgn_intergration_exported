@@ -60,7 +60,9 @@ const ActivityVisit = () => {
   }, []);
 
   return (
-    <section className={`w-full flex-col items-center justify-start`}>
+    <section
+      className={`w-full flex-col items-center justify-start max-lg:overflow-x-hidden`}
+    >
       <div
         className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-0 max-lg:px-16 max-lg:pb-120 max-lg:pt-0`}
       >

@@ -54,7 +54,7 @@ const oddDatas = [
 const IntroduceFollowers = () => {
   return (
     <div
-      className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-60 max-lg:px-16 max-lg:pb-60 max-lg:pt-0`}
+      className={`flex w-full flex-col items-center justify-start pb-160 pt-80 max-lg:mb-60 max-lg:overflow-x-hidden max-lg:px-16 max-lg:pb-60 max-lg:pt-0`}
     >
       <div
         className={`flex w-full max-w-1200 flex-col items-center justify-start gap-160 max-lg:gap-60`}
