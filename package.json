@@ -1,4 +1,5 @@
 {
+  "homepage": "./",
   "name": "cgn_integration",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,8 @@
     "dev": "env-cmd -f .env vite",
     "build": "env-cmd -f stg.env vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
@@ -16,6 +18,7 @@
     "env-cmd": "^10.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "framer-motion": "^12.5.0",
+    "gh-pages": "^6.3.0",
     "html-react-parser": "^5.2.2",
     "js-cookie": "^3.0.5",
     "react": "^18.3.1",
