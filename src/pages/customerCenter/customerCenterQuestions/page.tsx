@@ -3,7 +3,7 @@ import React from 'react';
 
 // 컴포넌트
 import ThemeHeader from '@/components/common/themeHeader';
-import CustomerCenterCategoryList from '@/components/customerCenter/customerCentercategoryList';
+import CustomerCenterCategoryList from '@/components/customerCenter/customerCenterCategoryList';
 import CustomerCenterQuestions from '@/components/customerCenter/questions/customerCenterQuestions';
 
 const CustomerCenterQuestionsPage = () => {
