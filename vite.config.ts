@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc';
 import svgrPlugin from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: '/cgn_intergration_exported/',
+  base: '/',
   plugins: [react(), svgrPlugin()],
   resolve: {
     alias: [
